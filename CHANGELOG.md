@@ -1,5 +1,11 @@
 # Changelog
 
+## Events example 1.1.4 · 2026-10-25
+
+- Reviewed remaining venue/help/submission/saved/list sources and extracted one document shell, skip links, site footer, results/detail workspace and preview state. All 60 native routes remain; only three unique content fragments need authored page HTML.
+- Extracted eleven standard submission fields into registered input/textarea/select/label/hint partials backed by sample definitions. Retained native validation/reset, bespoke upload/permission controls and the existing back icon.
+- Preserved kit1.3.0, reference site, app CSS/browser runtime, all route-specific script/state/skip/filter differences and verbatim venue/help content. Added utility-page, field-escaping and native-control regression contracts, source guards and before/after evidence.
+
 ## Events example 1.1.3 · 2026-10-25
 
 - Replaced 54 individual event source documents with shared event-page/detail templates, preserving every native route. Index/search/saved previews reuse the same detail content.

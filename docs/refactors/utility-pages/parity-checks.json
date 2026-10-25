@@ -1,0 +1,45 @@
+{
+  "pages": 420,
+  "byteIdentical": 0,
+  "htmlDifferences": [],
+  "preservedInputs": 79,
+  "inputDifferences": [],
+  "runtimeDifferences": [],
+  "baselineCommit": "9ce80e0c683aa7732febbfd6e543674844f61f47",
+  "runtimeFiles": 12,
+  "screenshots": [
+    {
+      "name": "bumble-dark-help.png",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "name": "bumble-dark-submit.png",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "name": "bumble-dark-sunshine-theater.png",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "name": "phone-venue.png",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0
+    }
+  ],
+  "normalization": "HTMLParser event stream: element order, sorted decoded attributes and nonempty text stripped only at formatting edges. Browser parity and screenshots separately verify spacing."
+}

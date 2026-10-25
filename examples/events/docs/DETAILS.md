@@ -1,6 +1,6 @@
 # Individual event content and templates
 
-All 54 event documents now use `src/templates/event-page.html` and `event-detail.html`. Their native `<sample-id>.html` URLs are unchanged. `src/pages/` contains only the six non-event documents. The app builder renders all 60 routes before emitting the default app and six theme/mode examples; no browser renderer, new router or dependencies are involved.
+All 54 event documents use `src/templates/document.html`, `workspace.html` and `event-detail.html`. Their native `<sample-id>.html` URLs are unchanged. `src/pages/` contains only three unique venue/help/submission content fragments; six non-event routes are registered in `data/pages.json`. The app builder renders all 60 routes before emitting the default app and six theme/mode examples; no browser renderer, new router or dependencies are involved.
 
 ## Content ownership
 

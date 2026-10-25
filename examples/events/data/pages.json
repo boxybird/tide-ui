@@ -2,28 +2,43 @@
   "index": {
     "collection": "all",
     "selected": "high-desert-signal",
-    "currentNav": "find"
+    "currentNav": "find",
+    "documentTitle": "High Desert Signal · Burque",
+    "layout": "workspace"
   },
   "search": {
     "collection": "all",
     "selected": "high-desert-signal",
-    "currentNav": "find"
+    "currentNav": "find",
+    "documentTitle": "High Desert Signal · Burque",
+    "layout": "workspace"
   },
   "sunshine-theater": {
     "collection": "venue",
-    "currentNav": "find"
+    "currentNav": "find",
+    "documentTitle": "Sunshine Theater · Venue & upcoming sample events · Burque",
+    "layout": "workspace",
+    "source": "sunshine-theater.html"
   },
   "saved": {
     "collection": "saved",
     "selected": "ink-after-dark",
     "currentNav": "saved",
-    "secondaryNav": "submit"
+    "secondaryNav": "submit",
+    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Saved events · Burque",
+    "layout": "workspace"
   },
   "help": {
-    "secondaryNav": "submit"
+    "secondaryNav": "submit",
+    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Help & guidance · Burque",
+    "layout": "content",
+    "source": "help.html"
   },
   "submit": {
     "currentNav": "secondary",
-    "secondaryNav": "submit"
+    "secondaryNav": "submit",
+    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Add an event · Burque",
+    "layout": "content",
+    "source": "submit.html"
   }
 }

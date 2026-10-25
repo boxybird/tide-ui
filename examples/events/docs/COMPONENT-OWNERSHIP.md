@@ -1,4 +1,4 @@
-# App 1.1.3 ownership and integration
+# App 1.1.4 ownership and integration
 
 The kit remains Tide 1.3.0, consumed read-only. `consumer-manifest.json` registers the private `tide-app`, `tide-app-document`, `tide-lineup`, `tide-filter-drawer` and `tide-venue` families. No public component, token, color, radius, type scale or kit CSS changed.
 
@@ -12,7 +12,7 @@ The kit remains Tide 1.3.0, consumed read-only. `consumer-manifest.json` registe
 | Search matching and URL state | `search-core.js`, `event-search.js`, `filters.js`. Venue narrows before keyword/date/category matching. URL and one original GET form own applied state. |
 | Draft live count, commit, Reset, modal lifecycle | Existing `filters.js`. Draft count updates immediately; Show events/Enter applies to the feed through a real GET URL. Reset clears query/date/categories while retaining venue. Venue alone is context, not an active refinement. Escape cancels a draft and restores focus. |
 | Event selection and return | Existing native event URLs plus the narrow `event-navigation.js` enhancement. Scoped back links retain refinements. Explicit All events/Find events exits scope. Refresh/Back/modified clicks remain native. |
-| Header, filter and list HTML composition | Registered `src/templates/` partials, `tools/html_templates.py`, `data/events.json` and `data/pages.json`. Six non-event sources retain their unique content; event documents/details render from sample data and registered templates. Public component markup stays the same. |
+| Header, filter and list HTML composition | Registered `src/templates/` partials, `tools/html_templates.py`, `data/events.json` and `data/pages.json`. One shared document and workspace consume three unique venue/help/submission fragments; six non-event route contexts and native event details render through registered templates. Eleven submission fields share sample definitions and existing kit markup. Public component markup stays the same. |
 | Theme/mode examples | `tools/build.py` writes complete routes using only `data-theme`/`data-mode` changes. Page structure and behavior share source. Each theme has light and dark examples. |
 
 Desktop order stays app navigation/dialog → permanent lineup summary → isolated feed's month headings → cards. Month handoff works in both directions. Below the desktop breakpoint the summary retains its original behavior; phone uses natural document scrolling. Neither event pane receives a decorative outer border or clipping shell.
@@ -41,4 +41,4 @@ The unenhanced saved-page desktop placement is deliberately preserved as well. T
 
 The [template contract](TEMPLATES.md) defines include/value syntax, escaping, route context and collection ownership. Header links and active states, filter IDs/form associations, calendar IDs/jumps, selected-card status and native URLs remain stable across the extraction.
 
-Individual event content and presentation ownership now live in the [detail contract](DETAILS.md): `event-page.html`, `event-detail.html`, typed `detail-*.html` blocks and `tools/event_details.py` consume the canonical event records. All 54 event URLs remain unchanged; index/search/saved previews reuse the same content with their existing heading levels.
+Individual event content and presentation ownership now live in the [detail contract](DETAILS.md): `document.html`, `workspace.html`, `event-detail.html`, typed `detail-*.html` blocks and `tools/event_details.py` consume the canonical event records. All 54 event URLs remain unchanged; index/search/saved previews reuse the same content with their existing heading levels. The [page contract](PAGES.md) records document/script/skip/footer variants, shared workspace and native submission-field ownership.

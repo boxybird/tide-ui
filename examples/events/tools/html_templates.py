@@ -10,6 +10,7 @@ from pathlib import Path
 import re
 from template_engine import Html, expand, attribute
 from event_details import EventDetails
+from form_fields import FormFields
 
 ROOT = Path(__file__).resolve().parents[1]
 MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
@@ -29,6 +30,8 @@ class AppTemplates:
         self.detail_presentations = json.loads((ROOT/manifest['dataHome']['detailPresentations']).read_text(encoding='utf-8'))
         self.details = EventDetails(self.partial, self.detail_presentations)
         self.routes = json.loads((ROOT/manifest['dataHome']['routes']).read_text(encoding='utf-8'))
+        self.submission_fields = json.loads((ROOT/manifest['dataHome']['submissionFields']).read_text(encoding='utf-8'))
+        self.fields = FormFields(self.partial)
         self.by_id = {event['id']:event for event in self.events}
         if len(self.by_id) != len(self.events):
             raise ValueError('Sample event IDs must be unique')
@@ -43,9 +46,20 @@ class AppTemplates:
                 datetime.fromisoformat(event['start'])
             if event.get('endDate'):
                 date.fromisoformat(event['endDate'])
-        actual = {p.stem for p in (ROOT/'src/pages').glob('*.html')}
-        if actual != set(self.routes):
-            raise ValueError('Only explicitly registered non-event documents belong in src/pages; event documents use event-page.html')
+        for page in self.routes.values():
+            if page['layout'] not in ('workspace', 'content'):
+                raise ValueError('Unsupported app page layout')
+            if page.get('source') and not re.fullmatch(r'[a-z]+(?:-[a-z]+)*\.html', page['source']):
+                raise ValueError('Invalid app content source')
+            if page['layout']=='content' and not page.get('source'):
+                raise ValueError('Content pages need an explicit source')
+        actual = {p.name for p in (ROOT/'src/pages').glob('*.html')}
+        if actual != {page['source'] for page in self.routes.values() if page.get('source')}:
+            raise ValueError('Only registered unique content fragments belong in src/pages')
+        field_tokens = re.findall(r'{{(FIELD_[A-Z_]+)}}', (ROOT/'src/pages/submit.html').read_text(encoding='utf-8'))
+        expected_tokens = ['FIELD_'+key.replace('-', '_').upper() for key in self.submission_fields]
+        if sorted(field_tokens)!=sorted(expected_tokens) or any(key!=field['id'] for key, field in self.submission_fields.items()):
+            raise ValueError('Every submission field needs one unique content slot and matching ID')
 
     def partial(self, name, values):
         return Html(expand('{{> ' + name + '}}', values, self.templates))
@@ -130,11 +144,50 @@ class AppTemplates:
             values['DOCUMENT_TITLE'] = event['detail']['documentTitle']
         return values
 
+    def document_context(self, route, page, event):
+        collection = page.get('collection')
+        venue = collection=='venue'
+        saved = collection=='saved'
+        if event:
+            skips = [('event-detail', 'Skip to event', '')]
+        elif collection:
+            detail_target = 'venue-information' if venue else 'event-detail'
+            detail_label = 'Skip to venue details' if venue else 'Skip to event preview'
+            skips = [('results', 'Skip to results', ''), (detail_target, detail_label, ' tide-app__skip--detail')]
+        else:
+            skips = [('main-content', 'Skip to content', '')]
+        state_key = 'margin-aligned' if saved or not collection else 'app-release-1.1.0'
+        body_class = 'tide-app--venue tide tide-app' if venue else 'tide tide-app tide-app--event' if event else 'tide tide-app'
+        body_attributes = str(attribute('data-venue-scope', 'sunshine-theater')) if venue else ''
+        body_attributes += attribute('data-state-key', state_key)+attribute('class', body_class)
+        return {
+            'BODY_ATTRIBUTES':Html(body_attributes),
+            'VENUE_SCRIPT':self.partial('venue-script', {}) if collection and not saved else Html(''),
+            'SKIP_LINKS':Html(''.join(self.partial('skip-link', {'SKIP_TARGET':target, 'SKIP_LABEL':label, 'SKIP_MODIFIER':Html(modifier)}) for target, label, modifier in skips)),
+            'SITE_FOOTER':Html('') if route=='help' else self.partial('site-footer', {}),
+            'FILTER_DIALOG':self.partial('filter-dialog', {}) if collection and not saved else Html(''),
+        }
+
     def page(self, source):
         route = Path(source).stem
         values = self.context(route)
-        text = self.templates['event-page'] if route in self.by_id else (ROOT/'src/pages'/(route+'.html')).read_text(encoding='utf-8')
-        return expand(text, values, self.templates)
+        event = route in self.by_id
+        page = {'layout':'workspace', 'collection':'all'} if event else self.routes[route]
+        collection = page.get('collection')
+        saved = collection=='saved'
+        if not event:
+            values['DOCUMENT_TITLE'] = page['documentTitle']
+        if route=='submit':
+            values.update({'FIELD_'+key.replace('-', '_').upper():self.fields.render(field) for key, field in self.submission_fields.items()})
+            values['SUBMISSION_BACK_ICON'] = self.partial('detail-icon-back', {'ICON_EXTRA':Html(' fill="none" xmlns="http://www.w3.org/2000/svg"')})
+        content = Html(expand((ROOT/'src/pages'/page['source']).read_text(encoding='utf-8'), values, self.templates)) if page.get('source') else values['EVENT_DETAIL']
+        if page['layout']=='workspace':
+            content = self.partial('workspace', {
+                **values, 'WORKSPACE_DETAIL':content,
+                'WORKSPACE_RAIL':Html('') if saved else self.partial('filter-rail', values),
+                'WORKSPACE_FILTERS':Html('') if saved else self.partial('filters', values),
+            })
+        return self.partial('document', {**values, **self.document_context(route, page, event), 'PAGE_CONTENT':content})
 
     def pages(self):
         return {route+'.html':self.page(route) for route in sorted(set(self.by_id) | set(self.routes))}

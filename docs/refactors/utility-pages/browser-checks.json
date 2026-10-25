@@ -1,0 +1,305 @@
+{
+  "browser": "Windows in-app Chromium",
+  "baselineCommit": "9ce80e0c683aa7732febbfd6e543674844f61f47",
+  "propertiesPerElement": 55,
+  "cases": [
+    {
+      "name": "tide-light-sunshine-theater",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-light/sunshine-theater.html?preview-filters=open",
+      "nodes": 267,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tide-light-help",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-light/help.html?preview-filters=open",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tide-light-submit",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-light/submit.html?preview-filters=open",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tide-dark-sunshine-theater",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-dark/sunshine-theater.html?preview-filters=open",
+      "nodes": 267,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tide-dark-help",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-dark/help.html?preview-filters=open",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tide-dark-submit",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-dark/submit.html?preview-filters=open",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-light-sunshine-theater",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-light/sunshine-theater.html?preview-filters=open",
+      "nodes": 267,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-light-help",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-light/help.html?preview-filters=open",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-light-submit",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-light/submit.html?preview-filters=open",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-dark-sunshine-theater",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-dark/sunshine-theater.html?preview-filters=open",
+      "nodes": 267,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-dark-help",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-dark/help.html?preview-filters=open",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-dark-submit",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-dark/submit.html?preview-filters=open",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-light-sunshine-theater",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-light/sunshine-theater.html?preview-filters=open",
+      "nodes": 267,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-light-help",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-light/help.html?preview-filters=open",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-light-submit",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-light/submit.html?preview-filters=open",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-dark-sunshine-theater",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-dark/sunshine-theater.html?preview-filters=open",
+      "nodes": 267,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-dark-help",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-dark/help.html?preview-filters=open",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-dark-submit",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-dark/submit.html?preview-filters=open",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "phone-venue",
+      "width": 390,
+      "height": 844,
+      "path": "app/sunshine-theater.html",
+      "nodes": 263,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "phone-help",
+      "width": 390,
+      "height": 844,
+      "path": "app/help.html",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "phone-submit",
+      "width": 390,
+      "height": 844,
+      "path": "app/submit.html",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tablet-venue",
+      "width": 1024,
+      "height": 768,
+      "path": "app/sunshine-theater.html",
+      "nodes": 263,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "desktop-list",
+      "width": 1440,
+      "height": 900,
+      "path": "app/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "desktop-event",
+      "width": 1440,
+      "height": 900,
+      "path": "app/ink-after-dark.html?photo=original&preview-filters=open",
+      "nodes": 1216,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "desktop-saved",
+      "width": 1440,
+      "height": 900,
+      "path": "app/saved.html",
+      "nodes": 138,
+      "differences": [],
+      "overflow": false
+    }
+  ],
+  "flows": [
+    {
+      "noSubmit": true,
+      "optionalAccess": true,
+      "requiredName": true,
+      "test": "submission-native-initial"
+    },
+    {
+      "category": "Music",
+      "typeMismatch": true,
+      "test": "submission-email-validation",
+      "fieldValue": "Sample neighborhood show"
+    },
+    {
+      "category": "",
+      "description": "",
+      "email": "",
+      "url": "/events/app/submit.html",
+      "test": "submission-native-reset"
+    },
+    {
+      "test": "help-contents-jump",
+      "focus": "before-you-go",
+      "hash": "#before-you-go",
+      "scrollY": 880,
+      "target": 141
+    },
+    {
+      "test": "venue-live-draft",
+      "cardCount": 6,
+      "count": "1 matching event",
+      "query": "Signal"
+    },
+    {
+      "test": "venue-commit-one-result",
+      "cardCount": 1,
+      "guideVisible": true,
+      "url": "?venue=sunshine-theater&q=Signal"
+    },
+    {
+      "test": "venue-zero-results",
+      "count": 0,
+      "emptyVisible": true,
+      "guideVisible": true
+    },
+    {
+      "test": "venue-reset-retains-scope",
+      "count": "6 matching events",
+      "query": ""
+    },
+    {
+      "test": "tablet-drawer-one-form",
+      "count": "1 matching event",
+      "forms": 1,
+      "open": true
+    },
+    {
+      "test": "tablet-escape-rollback",
+      "focus": "Search and filters",
+      "forms": 1,
+      "open": false,
+      "query": ""
+    },
+    {
+      "test": "phone-venue-jump",
+      "focus": "venue-information",
+      "guideHeight": 1081.3333740234375,
+      "hash": "#venue-information",
+      "overflow": false
+    }
+  ],
+  "consoleWarningsOrErrors": [],
+  "limits": "Native Firefox/Safari, physical-device and screen-reader checks remain deferred."
+}

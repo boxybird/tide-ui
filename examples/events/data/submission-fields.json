@@ -1,0 +1,115 @@
+{
+  "event-name": {
+    "id": "event-name",
+    "name": "event-name",
+    "label": "Event name",
+    "control": "input",
+    "type": "text",
+    "required": true,
+    "maxlength": "80",
+    "hint": "Keep it clear and specific. Up to 80 characters."
+  },
+  "event-category": {
+    "id": "event-category",
+    "name": "category",
+    "label": "Category",
+    "control": "select",
+    "required": true,
+    "options": [
+      {
+        "label": "Choose a category",
+        "value": ""
+      },
+      {
+        "label": "Music"
+      },
+      {
+        "label": "Comedy"
+      },
+      {
+        "label": "Workshop"
+      },
+      {
+        "label": "Community"
+      }
+    ]
+  },
+  "description": {
+    "id": "description",
+    "name": "description",
+    "label": "Tell us about it",
+    "control": "textarea",
+    "required": true,
+    "hint": "What will people do, and what should they know before coming?"
+  },
+  "date": {
+    "id": "date",
+    "name": "date",
+    "label": "Date",
+    "control": "input",
+    "type": "date",
+    "required": true
+  },
+  "time": {
+    "id": "time",
+    "name": "time",
+    "label": "Start time",
+    "control": "input",
+    "type": "time",
+    "required": true,
+    "hint": "Times are local to Albuquerque."
+  },
+  "venue": {
+    "id": "venue",
+    "name": "venue",
+    "label": "Venue name",
+    "control": "input",
+    "type": "text",
+    "required": true
+  },
+  "address": {
+    "id": "address",
+    "name": "address",
+    "label": "Address",
+    "control": "input",
+    "type": "text",
+    "required": true,
+    "autocomplete": "street-address"
+  },
+  "price": {
+    "id": "price",
+    "name": "price",
+    "label": "Admission price",
+    "control": "input",
+    "type": "text",
+    "required": true,
+    "hint": "Use “Free” or the full price including fees."
+  },
+  "age": {
+    "id": "age",
+    "name": "age",
+    "label": "Age requirement",
+    "control": "input",
+    "type": "text",
+    "required": true,
+    "hint": "For example: All ages or 21+."
+  },
+  "access": {
+    "id": "access",
+    "name": "access",
+    "label": "Accessibility information",
+    "control": "textarea",
+    "optional": true,
+    "hint": "Describe confirmed access, seating and facilities. If unknown, say so."
+  },
+  "email": {
+    "id": "email",
+    "name": "email",
+    "label": "Organizer email",
+    "control": "input",
+    "type": "email",
+    "required": true,
+    "autocomplete": "email",
+    "hint": "For questions about your listing. Not displayed publicly."
+  }
+}

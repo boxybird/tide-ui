@@ -27,7 +27,7 @@ class DetailContracts(unittest.TestCase):
         pages=self.app.pages()
         self.assertEqual(set(pages), {slug+'.html' for slug in self.app.by_id} | {slug+'.html' for slug in self.app.routes})
         self.assertEqual(len(pages), 60)
-        self.assertEqual({p.stem for p in (ROOT/'src/pages').glob('*.html')}, set(self.app.routes))
+        self.assertEqual({p.name for p in (ROOT/'src/pages').glob('*.html')}, {page['source'] for page in self.app.routes.values() if page.get('source')})
 
     def test_each_event_has_one_page_title_and_stable_anchor_hierarchy(self):
         for slug in self.app.by_id:

@@ -113,9 +113,9 @@ def main():
             failures.append(str(p.relative_to(ROOT))+': historical app selector returned')
     for p in (app_source/'pages').glob('*.html'):
         source=p.read_text(encoding='utf-8')
-        if source.count('{{> header}}')!=1:
-            failures.append(str(p.relative_to(ROOT))+': use one shared app header')
-        if re.search(r'<(?:header|form|article|dialog|aside|section)\s+class="(?:tide-app__header|tide-app__search|tide-event-card\b|tide-filter-panel|tide-app__filter-rail|tide-event-hero\b|tide-event-details\b)',source):
+        if re.search(r'<!doctype|</?(?:html|head|body)\b|<script\b|{{> header}}',source,re.I):
+            failures.append(str(p.relative_to(ROOT))+': unique content belongs inside the shared document')
+        if re.search(r'<(?:header|form|article|dialog|aside|section|main|footer|div)\s+class="(?:tide-app__header|tide-app__search|tide-event-card\b|tide-filter-panel|tide-app__filter-rail|tide-event-hero\b|tide-event-details\b|tide-app__workspace|tide-app__preview-state|tide-app__site-footer|tide-field\b)',source):
             failures.append(str(p.relative_to(ROOT))+': duplicated shared app markup; use its partial')
     for cls in set(re.findall(r'\.(tide-[\w-]+(?:__[\w-]+)?)',appcss)):
         if any(cls==block or cls.startswith(block+'__') or cls.startswith(block+'--') for block in private) and not re.search(r'(?<![\w-])'+re.escape(cls)+r'(?![\w-])',usage):
