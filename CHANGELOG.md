@@ -1,5 +1,12 @@
 # Changelog
 
+## Events example 1.1.5 · 2026-10-25
+
+- Consolidated app-only storage/media/state/URL/count helpers and refinement counting, preserving URL/form ownership, session keys and deferred execution.
+- Removed the duplicate desktop month-jump listener; one navigation handler retains measured summary clearance, focus and pending-navigation cancellation.
+- Replaced the mixed media helper with an explicit preview home for accepted photo/inspection hooks and readiness. Kept preview parameters, guarded parent messages, native links, filters, resize/Back behavior and all kit/style/content inputs unchanged.
+- Registered and syntax-checked all runtime sources; added storage-denial, native-navigation, breakpoint, count/state and preview-message contracts plus responsive browser comparisons.
+
 ## Events example 1.1.4 · 2026-10-25
 
 - Reviewed remaining venue/help/submission/saved/list sources and extracted one document shell, skip links, site footer, results/detail workspace and preview state. All 60 native routes remain; only three unique content fragments need authored page HTML.

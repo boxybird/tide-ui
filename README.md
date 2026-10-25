@@ -2,7 +2,7 @@
 
 A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and three themes—Tide, Summer and Bumble—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
 
-Kit **1.3.0** · Events example **1.1.4** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Kit **1.3.0** · Events example **1.1.5** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
 ## Start
 
@@ -49,4 +49,4 @@ The complete earlier project is preserved at Git tag **`design-history/2026-10-2
 
 ## Verification
 
-`npm run check` validates generated output, HTML associations, component ownership, local references, theme parity, contrast and search behavior. It does not require old study directories. Venue and utility extraction is recorded in [page verification](docs/refactors/utility-pages/VERIFICATION.md). Individual event template extraction is recorded in [detail verification](docs/refactors/event-details/VERIFICATION.md). Shared app HTML extraction is recorded in [template verification](docs/refactors/app-html/VERIFICATION.md). App-only CSS cleanup is recorded in [refactor verification](docs/refactors/app-css/VERIFICATION.md). Browser observations and limits are recorded in [migration verification](docs/migration/VERIFICATION.md) and the kit's [compatibility contract](packages/tide/docs/COMPATIBILITY.md). Support targets current Chrome, Firefox and Safari; current visual evidence is Chromium on Windows. Native Firefox/Safari checks remain deferred, rather than reported as passing.
+`npm run check` validates generated output, HTML associations, component ownership, local references, theme parity, contrast and search behavior. It does not require old study directories. App JavaScript cleanup is recorded in [runtime verification](docs/refactors/app-javascript/VERIFICATION.md). Venue and utility extraction is recorded in [page verification](docs/refactors/utility-pages/VERIFICATION.md). Individual event template extraction is recorded in [detail verification](docs/refactors/event-details/VERIFICATION.md). Shared app HTML extraction is recorded in [template verification](docs/refactors/app-html/VERIFICATION.md). App-only CSS cleanup is recorded in [refactor verification](docs/refactors/app-css/VERIFICATION.md). Browser observations and limits are recorded in [migration verification](docs/migration/VERIFICATION.md) and the kit's [compatibility contract](packages/tide/docs/COMPATIBILITY.md). Support targets current Chrome, Firefox and Safari; current visual evidence is Chromium on Windows. Native Firefox/Safari checks remain deferred, rather than reported as passing.

@@ -1,8 +1,7 @@
 /* Host composition only. Venue identity is an exact context, not a keyword. */
 (() => {
   'use strict';
-  const params=new URLSearchParams(location.search);
-  const scope=params.get('venue')||document.body.dataset.venueScope;
+  const scope=TideApp.appliedState().venue;
   if(scope==='sunshine-theater'){
     document.body.dataset.venueScope=scope;
     document.getElementById('venue-scope').value=scope;
@@ -21,15 +20,5 @@
     document.getElementById('event-search-form').action='sunshine-theater.html';
     document.querySelectorAll('.tide-app__clear,.tide-app__all-events,.tide-app__filter-actions > a,#empty-results a').forEach(a=>a.href='sunshine-theater.html');
     document.querySelector('.tide-filter-panel__description').textContent='Narrow events at Sunshine Theater. Reset all keeps this venue selected.';
-  }
-  const results=document.getElementById('results');
-  if(params.has('inspect')&&matchMedia('(width >= 60rem)').matches){
-    document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>{
-      const card=results.querySelector('.tide-event-card--in-view');if(!card)return;
-      const summary=results.querySelector('.tide-lineup__summary').getBoundingClientRect().height;
-      const group=card.closest('.tide-event-group').querySelector('header').getBoundingClientRect().height;
-      const top=card.getBoundingClientRect().top-results.getBoundingClientRect().top+results.scrollTop-summary-group;
-      results.scrollTo({top:Math.max(0,top),behavior:'instant'});
-    }),{once:true});
   }
 })();

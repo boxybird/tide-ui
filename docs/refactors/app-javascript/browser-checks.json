@@ -1,0 +1,649 @@
+{
+  "browser": "Windows in-app Chromium",
+  "baselineCommit": "66ae1c7dedafbe8bc20a3e3bf95b59cb8d2cd389",
+  "propertiesPerElement": 55,
+  "cases": [
+    {
+      "name": "tide-light",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-light/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tide-dark",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/tide-dark/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-light",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-light/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "summer-dark",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/summer-dark/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-light",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-light/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "bumble-dark",
+      "width": 1440,
+      "height": 900,
+      "path": "themes/bumble-dark/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "path": "app/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "short",
+      "width": 1440,
+      "height": 640,
+      "path": "app/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "wide",
+      "width": 1920,
+      "height": 1080,
+      "path": "app/index.html?preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "tablet",
+      "width": 1024,
+      "height": 768,
+      "path": "app/index.html",
+      "nodes": 1184,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "portrait",
+      "width": 834,
+      "height": 1194,
+      "path": "app/index.html",
+      "nodes": 1184,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "phone-list",
+      "width": 390,
+      "height": 844,
+      "path": "app/index.html",
+      "nodes": 1184,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "phone-event",
+      "width": 390,
+      "height": 844,
+      "path": "app/ink-after-dark.html?photo=rough",
+      "nodes": 1212,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "small-phone",
+      "width": 320,
+      "height": 740,
+      "path": "app/index.html",
+      "nodes": 1184,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "one-result",
+      "width": 1440,
+      "height": 900,
+      "path": "app/search.html?q=imperfect&preview-filters=open",
+      "nodes": 1218,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "zero-results",
+      "width": 1440,
+      "height": 900,
+      "path": "app/search.html?q=zzzz-test&preview-filters=open",
+      "nodes": 1189,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "invalid-range",
+      "width": 1440,
+      "height": 900,
+      "path": "app/search.html?from=2026-11-20&to=2026-11-01&preview-filters=open",
+      "nodes": 1188,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "venue",
+      "width": 1440,
+      "height": 900,
+      "path": "app/sunshine-theater.html?preview-filters=open",
+      "nodes": 267,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "venue-zero",
+      "width": 1440,
+      "height": 900,
+      "path": "app/sunshine-theater.html?q=ink&preview-filters=open",
+      "nodes": 268,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "inspect",
+      "width": 1440,
+      "height": 900,
+      "path": "app/high-desert-signal.html?inspect=1&preview-filters=open",
+      "nodes": 1187,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "photo-original",
+      "width": 1440,
+      "height": 900,
+      "path": "app/ink-after-dark.html?photo=original&preview-filters=open",
+      "nodes": 1216,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "photo-rough",
+      "width": 1440,
+      "height": 900,
+      "path": "app/ink-after-dark.html?photo=rough&preview-filters=open",
+      "nodes": 1216,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "photo-none",
+      "width": 1440,
+      "height": 900,
+      "path": "app/ink-after-dark.html?photo=none&preview-filters=open",
+      "nodes": 1216,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "saved",
+      "width": 1440,
+      "height": 900,
+      "path": "app/saved.html",
+      "nodes": 138,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "help",
+      "width": 1440,
+      "height": 900,
+      "path": "app/help.html",
+      "nodes": 128,
+      "differences": [],
+      "overflow": false
+    },
+    {
+      "name": "submit",
+      "width": 1440,
+      "height": 900,
+      "path": "app/submit.html",
+      "nodes": 81,
+      "differences": [],
+      "overflow": false
+    }
+  ],
+  "interactions": [
+    {
+      "test": "desktop-month-jump",
+      "before": {
+        "focus": "month-title-2026-11",
+        "forms": 1,
+        "monthTop": 249,
+        "summaryBottom": 249,
+        "top": 3419.333251953125
+      },
+      "after": {
+        "focus": "month-title-2026-11",
+        "forms": 1,
+        "monthTop": 249,
+        "summaryBottom": 249,
+        "top": 3419.333251953125
+      },
+      "match": true
+    },
+    {
+      "test": "desktop-rail-close",
+      "before": {
+        "draft": "54 matching events",
+        "focus": "Show search and filters",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "rail": false,
+        "to": "",
+        "url": "/events/app/index.html?preview-filters=open",
+        "visible": 54
+      },
+      "after": {
+        "draft": "54 matching events",
+        "focus": "Show search and filters",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "rail": false,
+        "to": "",
+        "url": "/events/app/index.html?preview-filters=open",
+        "visible": 54
+      },
+      "match": true
+    },
+    {
+      "test": "desktop-live-inclusive-draft",
+      "before": {
+        "draft": "1 matching event",
+        "focus": null,
+        "forms": 1,
+        "from": "2026-11-12",
+        "invalid": "false",
+        "open": false,
+        "query": "imperfect",
+        "rail": true,
+        "to": "2026-11-12",
+        "url": "/events/app/index.html?preview-filters=open",
+        "visible": 54
+      },
+      "after": {
+        "draft": "1 matching event",
+        "focus": null,
+        "forms": 1,
+        "from": "2026-11-12",
+        "invalid": "false",
+        "open": false,
+        "query": "imperfect",
+        "rail": true,
+        "to": "2026-11-12",
+        "url": "/events/app/index.html?preview-filters=open",
+        "visible": 54
+      },
+      "match": true
+    },
+    {
+      "test": "desktop-enter-and-fetched-preview",
+      "before": {
+        "draft": "1 matching event",
+        "focus": null,
+        "forms": 1,
+        "from": "2026-11-12",
+        "invalid": "false",
+        "open": false,
+        "query": "imperfect",
+        "rail": true,
+        "to": "2026-11-12",
+        "url": "/events/app/search.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop",
+        "visible": 1
+      },
+      "after": {
+        "draft": "1 matching event",
+        "focus": null,
+        "forms": 1,
+        "from": "2026-11-12",
+        "invalid": "false",
+        "open": false,
+        "query": "imperfect",
+        "rail": true,
+        "to": "2026-11-12",
+        "url": "/events/app/search.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop",
+        "visible": 1
+      },
+      "match": true
+    },
+    {
+      "test": "preview-attendance-focus",
+      "before": {
+        "focus": "attendance",
+        "hash": "#attendance",
+        "titleLevel": "H2",
+        "top": 1638.6666259765625
+      },
+      "after": {
+        "focus": "attendance",
+        "hash": "#attendance",
+        "titleLevel": "H2",
+        "top": 1638.6666259765625
+      },
+      "match": true
+    },
+    {
+      "test": "smooth-native-event-selection",
+      "before": {
+        "title": "H1",
+        "top": 0,
+        "url": "/events/app/the-imperfect-print.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop"
+      },
+      "after": {
+        "title": "H1",
+        "top": 0,
+        "url": "/events/app/the-imperfect-print.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop"
+      },
+      "match": true
+    },
+    {
+      "test": "back-restores-preview-reading",
+      "before": {
+        "focus": "",
+        "title": "H2",
+        "top": 1590.6666259765625,
+        "url": "/events/app/search.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop#attendance"
+      },
+      "after": {
+        "focus": "",
+        "title": "H2",
+        "top": 1590.6666259765625,
+        "url": "/events/app/search.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop#attendance"
+      },
+      "match": true
+    },
+    {
+      "test": "reset-all-draft",
+      "before": {
+        "draft": "54 matching events",
+        "focus": null,
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "rail": true,
+        "to": "",
+        "url": "/events/app/search.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop",
+        "visible": 1
+      },
+      "after": {
+        "draft": "54 matching events",
+        "focus": null,
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "rail": true,
+        "to": "",
+        "url": "/events/app/search.html?q=imperfect&from=2026-11-12&to=2026-11-12&category=workshop",
+        "visible": 1
+      },
+      "match": true
+    },
+    {
+      "test": "invalid-draft-does-not-navigate",
+      "before": {
+        "draft": "Check the date range",
+        "focus": "event-to",
+        "forms": 1,
+        "from": "2026-11-20",
+        "invalid": "true",
+        "open": false,
+        "query": "",
+        "rail": true,
+        "to": "2026-11-01",
+        "url": "/events/app/search.html",
+        "visible": 54
+      },
+      "after": {
+        "draft": "Check the date range",
+        "focus": "event-to",
+        "forms": 1,
+        "from": "2026-11-20",
+        "invalid": "true",
+        "open": false,
+        "query": "",
+        "rail": true,
+        "to": "2026-11-01",
+        "url": "/events/app/search.html",
+        "visible": 54
+      },
+      "match": true
+    },
+    {
+      "test": "tablet-live-draft",
+      "before": {
+        "draft": "1 matching event",
+        "focus": "event-query",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": true,
+        "query": "Signal",
+        "to": "",
+        "url": "/events/app/index.html",
+        "visible": 54
+      },
+      "after": {
+        "draft": "1 matching event",
+        "focus": "event-query",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": true,
+        "query": "Signal",
+        "to": "",
+        "url": "/events/app/index.html",
+        "visible": 54
+      },
+      "match": true
+    },
+    {
+      "test": "tablet-focus-wrap-backwards",
+      "before": {
+        "focus": "Show 1 event",
+        "open": true
+      },
+      "after": {
+        "focus": "Show 1 event",
+        "open": true
+      },
+      "match": true
+    },
+    {
+      "test": "tablet-focus-wrap-forwards",
+      "before": {
+        "focus": "Cancel search and filter changes",
+        "open": true
+      },
+      "after": {
+        "focus": "Cancel search and filter changes",
+        "open": true
+      },
+      "match": true
+    },
+    {
+      "test": "tablet-escape-rolls-back",
+      "before": {
+        "draft": "54 matching events",
+        "focus": "Search and filters",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "to": "",
+        "url": "/events/app/index.html",
+        "visible": 54
+      },
+      "after": {
+        "draft": "54 matching events",
+        "focus": "Search and filters",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "to": "",
+        "url": "/events/app/index.html",
+        "visible": 54
+      },
+      "match": true
+    },
+    {
+      "test": "resize-open-tablet-to-desktop",
+      "before": {
+        "draft": "54 matching events",
+        "focus": null,
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "rail": true,
+        "to": "",
+        "url": "/events/app/index.html",
+        "visible": 54
+      },
+      "after": {
+        "draft": "54 matching events",
+        "focus": null,
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "",
+        "rail": true,
+        "to": "",
+        "url": "/events/app/index.html",
+        "visible": 54
+      },
+      "match": true
+    },
+    {
+      "test": "phone-enter-commit",
+      "before": {
+        "draft": "1 matching event",
+        "focus": "result-count",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "Signal",
+        "to": "",
+        "url": "/events/app/search.html?q=Signal",
+        "visible": 1
+      },
+      "after": {
+        "draft": "1 matching event",
+        "focus": "result-count",
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": false,
+        "query": "Signal",
+        "to": "",
+        "url": "/events/app/search.html?q=Signal",
+        "visible": 1
+      },
+      "match": true
+    },
+    {
+      "test": "phone-venue-zero",
+      "before": {
+        "empty": true,
+        "forms": 1,
+        "guide": true,
+        "title": "Sunshine Theater",
+        "visible": 0
+      },
+      "after": {
+        "empty": true,
+        "forms": 1,
+        "guide": true,
+        "title": "Sunshine Theater",
+        "visible": 0
+      },
+      "match": true
+    },
+    {
+      "test": "venue-reset-retains-context",
+      "before": {
+        "draft": "6 matching events",
+        "focus": null,
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": true,
+        "query": "",
+        "to": "",
+        "url": "/events/app/sunshine-theater.html?q=ink",
+        "visible": 0
+      },
+      "after": {
+        "draft": "6 matching events",
+        "focus": null,
+        "forms": 1,
+        "from": "",
+        "invalid": "false",
+        "open": true,
+        "query": "",
+        "to": "",
+        "url": "/events/app/sunshine-theater.html?q=ink",
+        "visible": 0
+      },
+      "match": true
+    }
+  ],
+  "desktopAlignment": {
+    "gutter": "10px",
+    "listBottom": 866,
+    "showBottom": 866,
+    "viewportHeight": 900
+  },
+  "consoleWarningsOrErrors": [],
+  "limits": "Native Firefox/Safari, physical-device and screen-reader checks remain deferred; reduced-motion and restricted-storage paths are covered by Node contracts."
+}

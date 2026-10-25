@@ -21,6 +21,8 @@ def build(check=False):
         if source.is_file():
             expected[OUT / 'runtime' / source.relative_to(ROOT / 'src/runtime')] = source.read_bytes()
     manifest = json.loads((ROOT/'consumer-manifest.json').read_text(encoding='utf-8'))
+    behavior_sources = [ROOT/name for name in manifest['behaviorHome']]
+    assert set(behavior_sources) == set((ROOT/'src/runtime/js').glob('*.js')), 'Register every app script in consumer-manifest.json, in execution order.'
     css_sources = [ROOT/name for name in manifest['styleHome']]
     assert set(css_sources) == set((ROOT/'src/styles').glob('*.css')), 'Register every app stylesheet in consumer-manifest.json, in cascade order.'
     css = '/* App composition only; generated from src/styles/. */\n' + '\n'.join(source.read_text(encoding='utf-8') for source in css_sources)

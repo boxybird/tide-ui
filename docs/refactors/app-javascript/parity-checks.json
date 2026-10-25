@@ -1,0 +1,46 @@
+{
+  "baselineCommit": "66ae1c7dedafbe8bc20a3e3bf95b59cb8d2cd389",
+  "pages": 420,
+  "unexpectedHtmlDifferences": [],
+  "allowedHtmlChanges": [
+    "Deferred app-runtime after search-core",
+    "media.js renamed to preview.js"
+  ],
+  "protectedFiles": 77,
+  "protectedDifferences": [],
+  "screenshots": [
+    {
+      "name": "desktop.png",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "name": "phone-event.png",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0
+    },
+    {
+      "name": "photo-original.png",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "name": "tablet.png",
+      "size": [
+        1009,
+        757
+      ],
+      "changedPixels": 0
+    }
+  ],
+  "desktopCaptureNote": "Initial raster pair differed by 41,231 pixels despite identical geometry/styles. Repeated at one fixed viewport using the same tab for the preserved/current app."
+}

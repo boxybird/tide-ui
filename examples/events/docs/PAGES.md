@@ -21,13 +21,13 @@ The remaining pages were reviewed for actual repetition. Every one of the 60 nat
 
 | Routes | Session key before the existing theme suffix | Scripts | Skip targets | Filter rail/dialog |
 | --- | --- | --- | --- | --- |
-| Individual events | `app-release-1.1.0` | Existing eight, including venue-context | Event detail | Yes |
-| Index/search | `app-release-1.1.0` | Existing eight | Results and event preview | Yes |
-| Sunshine Theater | `app-release-1.1.0` | Existing eight | Results and venue information | Yes |
-| Saved | `margin-aligned` | Existing seven, without venue-context | Results and event preview | No |
-| Help/submission | `margin-aligned` | Existing seven | Main content | No |
+| Individual events | `app-release-1.1.0` | Nine, including app-runtime and venue-context | Event detail | Yes |
+| Index/search | `app-release-1.1.0` | Nine, including app-runtime and venue-context | Results and event preview | Yes |
+| Sunshine Theater | `app-release-1.1.0` | Nine, including app-runtime and venue-context | Results and venue information | Yes |
+| Saved | `margin-aligned` | Eight, without venue-context | Results and event preview | No |
+| Help/submission | `margin-aligned` | Eight, without venue-context | Main content | No |
 
-Body classes, exact venue identity, active navigation, focused targets, script execution order, native URLs, sticky hierarchy, bounded scroll panes and responsive filter placement retain their prior behavior. The app stylesheet and browser runtime are unchanged.
+Body classes, exact venue identity, active navigation, focused targets, script execution order, native URLs, sticky hierarchy, bounded scroll panes and responsive filter placement retain their prior behavior. The app stylesheet is unchanged; JavaScript retains these contracts through the shared services documented in [runtime ownership](RUNTIME.md).
 
 ## Submission fields
 

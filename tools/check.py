@@ -135,6 +135,8 @@ def main():
     assert node,'Node.js is required for the sample search assertions'
     search=subprocess.run([node,str(ROOT/'examples/events/tools/test-search.cjs')],cwd=ROOT,capture_output=True,text=True)
     runs.append({'name':'sample-search-tests','pass':search.returncode==0,'output':(search.stdout+search.stderr).strip()})
+    runtime=subprocess.run([node,str(ROOT/'examples/events/tools/test-runtime.cjs')],cwd=ROOT,capture_output=True,text=True)
+    runs.append({'name':'app-runtime-contracts','pass':runtime.returncode==0,'output':(runtime.stdout+runtime.stderr).strip()})
     failures.extend(run['name']+' failed: '+run['output'] for run in runs if not run['pass'])
     report={'pass':not failures,'kitVersion':manifest['version'],'htmlFiles':len(pages),'localReferences':refs,'markdownReferences':markdown_refs,'themes':3,'modesPerTheme':2,'runs':runs,'failures':failures}
     out=ROOT/'build/reports';out.mkdir(parents=True,exist_ok=True)

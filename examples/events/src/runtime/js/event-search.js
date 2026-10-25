@@ -12,7 +12,7 @@
   const query = document.getElementById('event-query');
   const choices = [...results.querySelectorAll('input[name="category"]')];
   const cards = [...results.querySelectorAll('.tide-event-card')];
-  const state = TideSearch.read(new URLSearchParams(location.search), document.body.dataset.venueScope || '');
+  const state = TideApp.appliedState();
   const active = TideSearch.active(state);
   const encoded = TideSearch.serialize(state);
 
@@ -29,7 +29,7 @@
   window.addEventListener('pageshow', () => requestAnimationFrame(restoreControls));
 
   function validateDates() {
-    const invalid = Boolean(from.value && to.value && from.value > to.value);
+    const invalid = !TideSearch.validRange({ from: from.value, to: to.value });
     to.setCustomValidity(invalid ? 'Choose an end date on or after the start date.' : '');
     to.setAttribute('aria-invalid', String(invalid));
     error.hidden = !invalid;
@@ -47,9 +47,7 @@
       to.reportValidity();
       return;
     }
-    const next = new URL(form.action, location.href);
-    next.search = TideSearch.serialize(TideSearch.read(new URLSearchParams(new FormData(form))));
-    location.assign(next.href);
+    location.assign(TideApp.destination(form.action, TideApp.formState(form)).href);
   });
 
   const visible = cards.filter(card => {
@@ -61,8 +59,7 @@
     return !card.hidden;
   });
 
-  function count(number) { return number + (number === 1 ? ' event' : ' events'); }
-  const countLabel = count(visible.length) + (state.q ? ' for “' + state.q + '”' : '');
+  const countLabel = TideApp.eventCount(visible.length) + (state.q ? ' for “' + state.q + '”' : '');
   document.getElementById('result-count').textContent = countLabel;
   if (!document.body.classList.contains('tide-app--event') && active) {
     document.title = countLabel + ' · Burque';
@@ -72,7 +69,7 @@
   groups.forEach(group => {
     const total = group.querySelectorAll('.tide-event-card:not([hidden])').length;
     group.hidden = total === 0;
-    group.querySelector('.tide-event-group__count').textContent = count(total);
+    group.querySelector('.tide-event-group__count').textContent = TideApp.eventCount(total);
   });
   const months = groups.filter(group => !group.hidden);
   results.querySelectorAll('.tide-event-group__nav').forEach(nav => {
@@ -82,7 +79,7 @@
     });
   });
 
-  const filterCount = Number(Boolean(state.from || state.to)) + state.categories.length;
+  const filterCount = TideSearch.refinementCount(state);
   const summary = filters.querySelector('summary');
   summary.firstChild.textContent = filterCount ? 'Filters · ' + filterCount + ' ' : 'Filters ';
   results.querySelector('.tide-app__clear').hidden = !active;
@@ -112,8 +109,7 @@
 
   function contextLinks(detail) {
     if (!active && !state.venue) return;
-    const destination = new URL(state.venue ? 'sunshine-theater.html' : 'search.html', location.href);
-    destination.search = encoded;
+    const destination = TideApp.destination(state.venue ? 'sunshine-theater.html' : 'search.html', state);
     detail.querySelectorAll('a[aria-label="Back to all events"], a.tide-back-link').forEach(link => {
       link.href = destination.href;
       if (link.hasAttribute('aria-label')) link.setAttribute('aria-label', state.venue ? 'Back to venue' : 'Back to results');

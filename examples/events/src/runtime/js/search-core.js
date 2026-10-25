@@ -32,6 +32,10 @@ const TideSearch = (() => {
     return Boolean(state.q || state.from || state.to || state.categories.length);
   }
 
+  function refinementCount(state) {
+    return Number(Boolean(state.from || state.to)) + state.categories.length;
+  }
+
   function serialize(state) {
     const params = new URLSearchParams();
     if (state.venue) params.set('venue', state.venue);
@@ -53,7 +57,7 @@ const TideSearch = (() => {
     return words.every(word => text.includes(word));
   }
 
-  return Object.freeze({ normalize, read, validRange, active, serialize, matches });
+  return Object.freeze({ normalize, read, validRange, active, refinementCount, serialize, matches });
 })();
 
 // The same rules are exercised against the committed fixture in Node's test runner.

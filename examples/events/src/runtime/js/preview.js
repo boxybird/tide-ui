@@ -1,19 +1,21 @@
-/* Review fixture selection and mount timing only. Existing navigation owns the app. */
+/* Supported sample-photo/inspection hooks and post-mount transition readiness.
+   Historical message and storage identifiers remain a compatibility contract. */
 (() => {
   'use strict';
   const root=document.body;
-  const desktop=matchMedia('(min-width:75rem)');
-  const key='tide:reading-widths:photo:'+root.dataset.stateKey;
+  const desktop=TideApp.media('desktop');
+  const key=TideApp.keys.photo(root.dataset.stateKey);
   const modes=new Set(['original','rough','none']);
   const originals=new WeakMap();
   const asset=new URL('assets/organizer-upload.png',document.currentScript.src).href;
   let mode='rough';
-  try { const stored=sessionStorage.getItem(key);if(modes.has(stored))mode=stored; } catch {}
-  const requested=new URLSearchParams(location.search).get('photo');
+  const stored=TideApp.storage.get(key);if(modes.has(stored))mode=stored;
+  const params=new URLSearchParams(location.search);
+  const requested=params.get('photo');
   if(modes.has(requested))mode=requested;
 
   function applyPhoto() {
-    try { sessionStorage.setItem(key,mode); } catch {}
+    TideApp.storage.set(key,mode);
     const title=document.getElementById('event-title');
     if(title?.textContent.trim()!=='Ink After Dark')return;
     const hero=title.closest('.tide-event-hero');
@@ -35,5 +37,15 @@
   });
   window.addEventListener('tide:preview-ready',applyPhoto);
   desktop.addEventListener('change',ready);
+  const results=document.getElementById('results');
+  if(results&&params.has('inspect')&&TideApp.media('split').matches){
+    document.addEventListener('DOMContentLoaded',()=>requestAnimationFrame(()=>{
+      const card=results.querySelector('.tide-event-card--in-view');if(!card)return;
+      const summary=results.querySelector('.tide-lineup__summary').getBoundingClientRect().height;
+      const group=card.closest('.tide-event-group').querySelector('header').getBoundingClientRect().height;
+      const top=card.getBoundingClientRect().top-results.getBoundingClientRect().top+results.scrollTop-summary-group;
+      results.scrollTo({top:Math.max(0,top),behavior:'instant'});
+    }),{once:true});
+  }
   applyPhoto();ready();
 })();

@@ -1,4 +1,4 @@
-# App 1.1.4 ownership and integration
+# App 1.1.5 ownership and integration
 
 The kit remains Tide 1.3.0, consumed read-only. `consumer-manifest.json` registers the private `tide-app`, `tide-app-document`, `tide-lineup`, `tide-filter-drawer` and `tide-venue` families. No public component, token, color, radius, type scale or kit CSS changed.
 
@@ -33,11 +33,13 @@ Accepted contracts remain in the design-history tag under `tide-desktop-studies/
 | `filters.css` / `tide.app-filters` | Browse-first flyout placement, visual viewport allowance and small-screen control wrappers |
 | `venue.css` / `tide.app-venue` | Venue guide/context and fragment clearance; app review composition |
 
-Runtime-only modifiers are `tide-app--desktop`, `tide-app--drawer`, `tide-app--ready`, `tide-app__browse--filters-open` and `tide-app__browse--instant`. They describe mounted layouts and disclosure state, not visual themes. `tide-app--event` and `tide-app--venue` identify routes. `headings.js` measures `--tide-lineup-month-height`; `rail.js` measures `--tide-lineup-summary-height`; `filters.js` supplies desktop-only `--tide-app-scrollbar-gutter` and the drawer's visual-viewport inputs. `media.js` retains the original/rough/no-photo preview behavior.
+Runtime-only modifiers are `tide-app--desktop`, `tide-app--drawer`, `tide-app--ready`, `tide-app__browse--filters-open` and `tide-app__browse--instant`. They describe mounted layouts and disclosure state, not visual themes. `tide-app--event` and `tide-app--venue` identify routes. `headings.js` measures `--tide-lineup-month-height`; `rail.js` measures `--tide-lineup-summary-height`; `filters.js` supplies desktop-only `--tide-app-scrollbar-gutter` and the drawer's visual-viewport inputs. `preview.js` retains the original/rough/no-photo preview behavior.
 
-The single `data-state-key` preserves existing per-theme session preferences. Historical storage key strings and the parent photo-preview message are deliberately retained for compatibility; they are not CSS classes or layout variants. Native URLs, IDs, form association and sample content remain stable.
+The single `data-state-key` preserves existing per-theme session preferences. Historical storage key strings are centralized in `app-runtime.js`. Those keys and the parent photo-preview message are deliberately retained for compatibility; they are not CSS classes or layout variants. Native URLs, IDs, form association and sample content remain stable.
 
 The unenhanced saved-page desktop placement is deliberately preserved as well. This refactor does not redesign that sample's layout. Source checks reject historical study/shell selectors, unregistered stylesheet modules and unused private CSS classes.
+
+The [runtime contract](RUNTIME.md) records shared services, deferred script order, single-owner calendar navigation and accepted preview compatibility. App styles and kit inputs remain unchanged.
 
 The [template contract](TEMPLATES.md) defines include/value syntax, escaping, route context and collection ownership. Header links and active states, filter IDs/form associations, calendar IDs/jumps, selected-card status and native URLs remain stable across the extraction.
 

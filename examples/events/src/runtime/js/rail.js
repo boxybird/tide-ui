@@ -6,8 +6,8 @@
   const query=document.getElementById('event-search-form');
   const rail=document.getElementById('lineup-filters');
   if(!results||!query||!rail)return;
-  const desktop=matchMedia('(min-width: 75rem)');
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  const desktop=TideApp.media('desktop');
+  const reduced=TideApp.media('reducedMotion');
   const trigger=results.querySelector('.tide-app__filter-toggle');
   const close=rail.querySelector('.tide-app__filter-close');
   const intro=results.querySelector('.tide-app__intro');
@@ -20,14 +20,14 @@
   const actionMarker=document.createComment('Lineup original Apply position');
   const railMarker=document.createComment('Lineup original rail position');
   const resultsMarker=document.createComment('Lineup original results position');
-  const storageKey='tide:margin-filters:'+document.body.dataset.stateKey;
+  const storageKey=TideApp.keys.rail(document.body.dataset.stateKey);
   let desiredOpen=false,mounted=false,originalOpen=false,browser,clip,scroller,dock,observer,lastRailFocus;
-  try{desiredOpen=sessionStorage.getItem(storageKey)==='open';}catch{}
+  desiredOpen=TideApp.storage.get(storageKey)==='open';
   if(new URLSearchParams(location.search).get('preview-filters')==='open'){
     desiredOpen=true;
-    try{sessionStorage.setItem(storageKey,'open');}catch{}
+    TideApp.storage.set(storageKey,'open');
   }
-  const count=Number(Boolean(document.getElementById('event-from').value||document.getElementById('event-to').value))+filters.querySelectorAll('input[name="category"]:checked').length;
+  const count=TideSearch.refinementCount(TideApp.appliedState());
   badge.textContent='Filters · '+count;
 
   function returnIntro(){
@@ -40,7 +40,7 @@
   }
   function setOpen(next,{focus=false,persist=true,immediate=false}={}){
     desiredOpen=next;
-    if(persist)try{sessionStorage.setItem(storageKey,next?'open':'closed');}catch{}
+    if(persist)TideApp.storage.set(storageKey,next?'open':'closed');
     if(!mounted)return;
     if(!next&&(rail.contains(document.activeElement)||focus))trigger.focus({preventScroll:true});
     if(immediate)browser.classList.add('tide-app__browse--instant');
@@ -68,18 +68,6 @@
   document.addEventListener('invalid',event=>{
     if(mounted&&rail.contains(event.target)){filters.open=true;setOpen(true,{immediate:true});}
   },true);
-  results.addEventListener('click',event=>{
-    const link=event.target.closest?.('a.tide-event-group__jump');
-    if(!mounted||!link||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
-    const url=new URL(link.href);
-    if(url.origin!==location.origin||url.pathname!==location.pathname)return;
-    const group=document.getElementById(decodeURIComponent(url.hash.slice(1)));
-    if(!group||!results.contains(group))return;
-    event.preventDefault();
-    const top=group.getBoundingClientRect().top-results.getBoundingClientRect().top+results.scrollTop-results.clientTop-summary.getBoundingClientRect().height;
-    group.querySelector('.tide-event-group__title')?.focus({preventScroll:true});
-    results.scrollTo({top:Math.max(0,top),behavior:'auto'});
-  }); // Runs after the shared helper, which also cancels any pending event navigation.
   function place(){
     if(desktop.matches===mounted)return;
     const active=document.activeElement;

@@ -6,8 +6,8 @@
   const dialog=document.getElementById('responsive-filters');
   const form=document.getElementById('event-search-form');
   if(!dialog||!form||typeof dialog.showModal!=='function'||typeof TideSearch==='undefined')return;
-  const small=matchMedia('(width < 75rem)'),phone=matchMedia('(width < 48rem)');
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  const small=TideApp.media('drawer'),phone=TideApp.media('phone');
+  const reduced=TideApp.media('reducedMotion');
   const results=document.getElementById('results');
   const intro=results.querySelector('.tide-app__intro');
   const context=results.querySelector('.tide-app__filter-row');
@@ -19,8 +19,6 @@
   const apply=actions.querySelector('button[type="submit"]');
   const launcher=document.querySelector('.tide-filter-drawer__trigger');
   const query=document.getElementById('event-query');
-  
-  
   const nav=document.querySelector('.tide-app__nav');
   const body=dialog.querySelector('.tide-filter-panel__body');
   const footer=dialog.querySelector('.tide-filter-panel__footer');
@@ -29,15 +27,15 @@
   const reset=dialog.querySelector('[data-filter-reset]');
   const counter=dialog.querySelector('.tide-filter-panel__count');
   const statusRow=counter.parentElement;
-  const legacyClear=actions.querySelector('a');
+  const fallbackClear=actions.querySelector('a');
   const controls=[query,...fields.querySelectorAll('input')];
   const from=document.getElementById('event-from'),to=document.getElementById('event-to');
   const cards=[...results.querySelectorAll('.tide-event-card')];
   const slots=[form,context,launcher,fields,apply].map(node=>({node,marker:document.createComment('Browse first: original position')}));
   const applyText=apply.textContent,wasSecondary=apply.classList.contains('tide-button--secondary');
-  const applied=TideSearch.read(new URLSearchParams(location.search), document.body.dataset.venueScope || '');
-  const appliedCount=Number(Boolean(applied.from||applied.to))+applied.categories.length;
-  const returnKey='tide:app-release-1.1.0:applied';
+  const applied=TideApp.appliedState();
+  const appliedCount=TideSearch.refinementCount(applied);
+  const returnKey=TideApp.keys.appliedReturn;
   let mounted=false,desktopMounted=false,snapshot=null,committing=false,closing=false,exitAnimation=null;
   const gutterProperty='--tide-app-scrollbar-gutter';
   let gutterObserver=null,gutterFrame=0,pendingGutter=0,lastGutter=null;
@@ -94,13 +92,13 @@
     controls.forEach((input,index)=>{input.value=snapshot[index].value;input.checked=snapshot[index].checked;});
     to.dispatchEvent(new Event('input',{bubbles:true}));
   }
-  function state(){return TideSearch.read(new URLSearchParams(new FormData(form)));}
+  function state(){return TideApp.formState(form);}
   function update(){
     if(!mounted&&!desktopMounted)return;
     const next=state(),valid=TideSearch.validRange(next);
     const total=valid?cards.filter(card=>TideSearch.matches(card.dataset,next)).length:0;
-    counter.textContent=valid?total+' matching '+(total===1?'event':'events'):'Check the date range';
-    apply.textContent=valid?'Show '+total+' '+(total===1?'event':'events'):'Check dates';
+    counter.textContent=valid?TideApp.eventCount(total,'matching'):'Check the date range';
+    apply.textContent=valid?'Show '+TideApp.eventCount(total):'Check dates';
     reset.disabled=!TideSearch.active(next);
   }
   function mountDesktop(){
@@ -110,23 +108,18 @@
     // The desktop rail composition owns the dock. Restore these children
     // before it removes that dock at the next breakpoint.
     dock.prepend(statusRow);
-    
-    
     apply.classList.add('tide-button--full');
     apply.classList.remove('tide-button--secondary');
-    legacyClear.classList.add('tide-app__legacy-clear');
-    
+    fallbackClear.classList.add('tide-app__legacy-clear');
     desktopMounted=true;update();watchGutter();
   }
   function unmountDesktop(){
     if(!desktopMounted)return;
     stopWatchingGutter();
     footer.prepend(statusRow);
-    
-    
     apply.classList.remove('tide-button--full');
     apply.classList.toggle('tide-button--secondary',wasSecondary);
-    legacyClear.classList.remove('tide-app__legacy-clear');
+    fallbackClear.classList.remove('tide-app__legacy-clear');
     desktopMounted=false;
   }
   function closePanel(){
@@ -211,8 +204,8 @@
   form.addEventListener('submit',()=>{
     if(!mounted||!dialog.open)return;
     committing=true;closing=false;exitAnimation?.cancel();exitAnimation=null;
-    const next=new URL(form.action,location.href);next.search=TideSearch.serialize(state());
-    try{sessionStorage.setItem(returnKey,next.href);}catch{}
+    const next=TideApp.destination(form.action,state());
+    TideApp.storage.set(returnKey,next.href);
     dialog.close('apply');
   },true);
   small.addEventListener('change',()=>{
@@ -226,8 +219,8 @@
   window.addEventListener('pageshow',()=>{
     if(small.matches)requestAnimationFrame(()=>{mount();launcher.setAttribute('aria-expanded',String(dialog.open));update();});
     else requestAnimationFrame(()=>{mountDesktop();update();});
-    let returned=false;
-    try{returned=sessionStorage.getItem(returnKey)===location.href;if(returned)sessionStorage.removeItem(returnKey);}catch{}
+    const returned=TideApp.storage.get(returnKey)===location.href;
+    if(returned)TideApp.storage.remove(returnKey);
     if(returned&&small.matches)requestAnimationFrame(()=>{
       const count=document.getElementById('result-count');count.tabIndex=-1;count.focus({preventScroll:true});
       summary.scrollIntoView({block:'start',behavior:'instant'});

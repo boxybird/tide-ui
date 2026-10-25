@@ -5,9 +5,9 @@
   'use strict';
   const results = document.querySelector('#results');
   if (!results) return;
-  const desktop = matchMedia('(min-width: 60rem)');
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  const storageKey = 'tide:event-navigation:' + new URL('.', location.href).pathname;
+  const desktop = TideApp.media('split');
+  const reduceMotion = TideApp.media('reducedMotion');
+  const storageKey = TideApp.keys.navigation(new URL('.', location.href).pathname);
   let pending = null;
   let frame = 0;
   let returnPosition = null;
@@ -34,19 +34,17 @@
   }
 
   function rememberListPosition(url) {
-    try {
-      sessionStorage.setItem(storageKey, JSON.stringify({
-        path: url.pathname, top: results.scrollTop, at: Date.now()
-      }));
-    } catch { /* Storage is an optional enhancement, including on file: URLs. */ }
+    TideApp.storage.set(storageKey, JSON.stringify({
+      path: url.pathname, top: results.scrollTop, at: Date.now()
+    }));
   }
 
   function restoreListPosition() {
     if (!desktop.matches) return;
     try {
-      const saved = JSON.parse(sessionStorage.getItem(storageKey));
+      const saved = JSON.parse(TideApp.storage.get(storageKey));
       if (!saved || saved.path !== location.pathname) return;
-      sessionStorage.removeItem(storageKey);
+      TideApp.storage.remove(storageKey);
       if (Number.isFinite(saved.top) && Date.now() - saved.at < 60000) {
         results.scrollTo({ top: saved.top, behavior: 'instant' });
       }
@@ -79,7 +77,7 @@
 
   results.addEventListener('click', event => {
     const link = event.target.closest?.('a.tide-event-card__link, a.tide-event-group__jump');
-    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || link.hasAttribute('download') || (link.target && link.target !== '_self') || !desktop.matches) return;
+    if (!link || event.defaultPrevented || !TideApp.primaryClick(event) || link.hasAttribute('download') || (link.target && link.target !== '_self') || !desktop.matches) return;
     const url = new URL(link.href);
     if (url.origin !== location.origin || new URL('.', url).pathname !== new URL('.', location.href).pathname) return;
     if (link.classList.contains('tide-event-group__jump')) {
@@ -87,7 +85,11 @@
       if (!group || !results.contains(group) || url.pathname !== location.pathname) return;
       event.preventDefault();
       stopPendingNavigation();
-      const top = group.getBoundingClientRect().top - results.getBoundingClientRect().top + results.scrollTop - results.clientTop;
+      // One month-jump handler owns both tablet and desktop. The permanent
+      // desktop summary adds its measured clearance only while mounted.
+      const summary = document.body.classList.contains('tide-app--desktop')
+        ? results.querySelector('.tide-lineup__summary').getBoundingClientRect().height : 0;
+      const top = group.getBoundingClientRect().top - results.getBoundingClientRect().top + results.scrollTop - results.clientTop - summary;
       group.querySelector('.tide-event-group__title')?.focus({ preventScroll: true });
       results.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
       return;
