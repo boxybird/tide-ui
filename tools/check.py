@@ -106,9 +106,17 @@ def main():
     app_source=ROOT/'examples/events/src'
     usage='\n'.join(p.read_text(encoding='utf-8') for p in app_source.rglob('*') if p.suffix in ('.html','.js'))
     usage+=(ROOT/'examples/events/tools/build.py').read_text(encoding='utf-8')
+    # Template context can compose a class that is absent from literal markup.
+    usage+='\n'+' '.join(allclasses)
     for p in app_source.rglob('*'):
         if p.suffix in ('.html','.js','.css') and re.search(r'\btide-(?:[\w-]*study[\w-]*|shell(?:-document)?)(?:__[\w-]+)?\b',p.read_text(encoding='utf-8')):
             failures.append(str(p.relative_to(ROOT))+': historical app selector returned')
+    for p in (app_source/'pages').glob('*.html'):
+        source=p.read_text(encoding='utf-8')
+        if source.count('{{> header}}')!=1:
+            failures.append(str(p.relative_to(ROOT))+': use one shared app header')
+        if re.search(r'<(?:header|form|article|dialog|aside)\s+class="(?:tide-app__header|tide-app__search|tide-event-card\b|tide-filter-panel|tide-app__filter-rail)',source):
+            failures.append(str(p.relative_to(ROOT))+': duplicated shared app markup; use its partial')
     for cls in set(re.findall(r'\.(tide-[\w-]+(?:__[\w-]+)?)',appcss)):
         if any(cls==block or cls.startswith(block+'__') or cls.startswith(block+'--') for block in private) and not re.search(r'(?<![\w-])'+re.escape(cls)+r'(?![\w-])',usage):
             failures.append('Unused private app selector: '+cls)
@@ -121,6 +129,8 @@ def main():
     runs=[]
     tests=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=KIT,capture_output=True,text=True)
     runs.append({'name':'palette-and-contract-tests','pass':tests.returncode==0,'output':(tests.stdout+tests.stderr).strip()})
+    templates=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=ROOT/'examples/events',capture_output=True,text=True)
+    runs.append({'name':'app-template-contracts','pass':templates.returncode==0,'output':(templates.stdout+templates.stderr).strip()})
     node=shutil.which('node')
     assert node,'Node.js is required for the sample search assertions'
     search=subprocess.run([node,str(ROOT/'examples/events/tools/test-search.cjs')],cwd=ROOT,capture_output=True,text=True)

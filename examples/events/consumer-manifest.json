@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.2",
   "kitVersion": "1.3.0",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
@@ -28,8 +28,30 @@
     "src/runtime/js/venue-context.js"
   ],
   "contract": "docs/COMPONENT-OWNERSHIP.md",
-  "notes": "App-only composition refactor. Public kit sources are unchanged; study aliases and inactive comparison variants are removed.",
+  "notes": "Shared build-time header, filters and listing templates. Public kit and app CSS/browser runtime are unchanged.",
   "acceptedInputs": [
     "Sticky hierarchy and venue journey, integrated in App 1.1.0"
-  ]
+  ],
+  "templateHome": [
+    "src/templates/empty-results.html",
+    "src/templates/event-card.html",
+    "src/templates/event-list.html",
+    "src/templates/filter-dialog.html",
+    "src/templates/filter-rail.html",
+    "src/templates/filters.html",
+    "src/templates/header.html",
+    "src/templates/lineup-summary.html",
+    "src/templates/month-group.html",
+    "src/templates/month-jump.html",
+    "src/templates/month-nav.html",
+    "src/templates/results-footer.html",
+    "src/templates/results-intro.html",
+    "src/templates/summary-badge.html",
+    "src/templates/summary-kicker.html",
+    "src/templates/summary-toggle.html"
+  ],
+  "dataHome": {
+    "events": "data/event-list.json",
+    "routes": "data/pages.json"
+  }
 }

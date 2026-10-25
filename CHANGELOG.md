@@ -1,5 +1,11 @@
 # Changelog
 
+## Events example 1.1.2 · 2026-10-25
+
+- Extracted shared build-time app header, filters/rail/dialog, lineup summary, month groups, event card and empty/footer markup. All 60 routes consume named partials; unique event and content-page details remain local.
+- Added a canonical 54-card fixture and explicit non-event route contexts. All-events, Sunshine Theater and saved collections reuse the same card recipe and data.
+- Preserved kit1.3.0, all app CSS/browser runtime, public markup/content, native URLs and selected/scoped states. Added escaping/include/route contracts and source checks against duplicated shared markup.
+
 ## Events example 1.1.1 · 2026-10-25
 
 - Consolidated inherited app styles into five registered, ordered CSS modules and one generated app stylesheet. Removed inactive layout variants and study-era class aliases from all 60 authored pages and runtime helpers.

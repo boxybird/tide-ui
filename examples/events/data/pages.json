@@ -1,0 +1,29 @@
+{
+  "index": {
+    "collection": "all",
+    "selected": "high-desert-signal",
+    "currentNav": "find"
+  },
+  "search": {
+    "collection": "all",
+    "selected": "high-desert-signal",
+    "currentNav": "find"
+  },
+  "sunshine-theater": {
+    "collection": "venue",
+    "currentNav": "find"
+  },
+  "saved": {
+    "collection": "saved",
+    "selected": "ink-after-dark",
+    "currentNav": "saved",
+    "secondaryNav": "submit"
+  },
+  "help": {
+    "secondaryNav": "submit"
+  },
+  "submit": {
+    "currentNav": "secondary",
+    "secondaryNav": "submit"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "baselineCommit": "11563fe09b420bbf496781dac984ef7e9f28db1b",
+  "generatedPagesCompared": 420,
+  "semanticMarkupDifferences": 0,
+  "byteIdenticalPages": 21,
+  "normalization": "HTML entities decoded; attribute order and whitespace-only text ignored. Elements, attributes, nonempty text, native associations, event order and selected state compared.",
+  "kitInputsUnchanged": 59,
+  "appRuntimeFilesUnchanged": 12,
+  "oldAuthoredPageBytes": 5872914,
+  "newPagesPartialsAndCardDataBytes": 855661,
+  "sourceReductionPercent": 85.4,
+  "registeredTemplates": 16,
+  "canonicalCards": 54,
+  "screenshots": [
+    {
+      "case": "desktop",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "tablet",
+      "size": [
+        1009,
+        757
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "phone-list",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "phone-event",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "venue",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    }
+  ]
+}

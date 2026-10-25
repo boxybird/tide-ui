@@ -2,8 +2,8 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
 const core=require('../src/runtime/js/search-core.js');
-const html=fs.readFileSync(path.join(__dirname,'../src/pages/index.html'),'utf8');
-const cards=[...html.matchAll(/<article class="tide-event-card\b[^>]*>/g)].map(([tag])=>Object.fromEntries([...tag.matchAll(/data-([a-z]+)="([^"]*)"/g)].map(([,key,value])=>[key,value])));
+const manifest=JSON.parse(fs.readFileSync(path.join(__dirname,'../consumer-manifest.json'),'utf8'));
+const cards=JSON.parse(fs.readFileSync(path.resolve(__dirname,'..',manifest.dataHome.events),'utf8'));
 const state=query=>core.read(new URLSearchParams(query));
 const matching=query=>cards.filter(card=>core.matches(card,state(query)));
 let checks=0;function test(fn){fn();checks++;}
