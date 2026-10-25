@@ -2,6 +2,8 @@
 
 Accepted by the user on 2026-10-24. Required in the **next app release**, not a change to the approved Shared Filters baseline or its UI kit. Acceptance covers this layering correction only; the other pressure-test compositions remain under review.
 
+Integrated on 2026-10-25 in the separate [app1.1.0 successor](../app-release-1.1.0/README.md), private `tide-app-release__feed` owner. See its [verification](../app-release-1.1.0/qa/VERIFICATION.md) for actual Chromium handoffs/hit tests, all-theme review, short-height and responsive wrapping checks, and explicit testing limits. The original accepted source and frozen baseline are unchanged.
+
 ## Preserved implementation
 
 - Source: `../event-pressure-test/css/pressure.css`, `.tide-pressure__feed { isolation: isolate; }`.

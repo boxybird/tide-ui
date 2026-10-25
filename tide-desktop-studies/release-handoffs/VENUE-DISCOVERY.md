@@ -2,6 +2,8 @@
 
 Accepted by the user on 2026-10-24. Preserve the complete Sunshine Theater venue study and carry its page/navigation patterns into the **next app release**. This does not replace the approved Shared Filters baseline or authorize changes to its UI kit.
 
+Integrated on 2026-10-25 in the separate [app1.1.0 successor](../app-release-1.1.0/README.md). Its [ownership contract](../app-release-1.1.0/docs/COMPONENT-OWNERSHIP.md) maps the accepted composition to the private `tide-app-release` block. New [verification](../app-release-1.1.0/qa/VERIFICATION.md) covers all six modes, scoped search and native venue journeys on desktop/tablet/phone. Original study, approved baseline and UI kit remain unchanged.
+
 ## Preserved reference
 
 - Study: `../venue-discovery/`, version 0.1.0. Its source, generated pages, QA and archives are frozen. The historical README's pending-review wording is superseded by this acceptance record.
