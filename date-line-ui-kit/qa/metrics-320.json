@@ -1,0 +1,56 @@
+[
+  {
+    "page": "/frames/search.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/filters.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/saved.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/saved-empty.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/submit.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/review.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/received.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/states.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  },
+  {
+    "page": "/frames/no-results.html",
+    "scrollWidth": 320,
+    "unlabelled": 0,
+    "width": 320
+  }
+]

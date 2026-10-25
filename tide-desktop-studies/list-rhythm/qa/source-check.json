@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "htmlPages": 160,
+  "localReferences": 12355,
+  "unchangedComponentDocuments": 159,
+  "preserved": {
+    "desktopStudyFiles": 185,
+    "widthStudyFiles": 177,
+    "appFiles": 980,
+    "kitFiles": 180,
+    "refinementFiles": 177
+  },
+  "newKitComponents": 0,
+  "failures": []
+}

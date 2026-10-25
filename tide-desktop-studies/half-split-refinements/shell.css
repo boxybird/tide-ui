@@ -1,0 +1,92 @@
+/* App composition only. The kit, original Half Split and its components stay fixed. */
+@layer tide.shell {
+  @media (width >= 75rem) {
+    .tide-shell-document { scroll-padding-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6)); }
+    .tide-shell {
+      --tide-shell-panel-top: calc(var(--tide-app-header-block-size) + var(--tide-space-6));
+      --tide-shell-panel-height: max(0px, calc(100dvh - var(--tide-shell-panel-top) - var(--tide-space-6)));
+    }
+    .tide-shell .tide-study__header {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: var(--tide-z-navigation);
+      background: var(--tide-color-canvas);
+    }
+    .tide-shell .tide-study__tools, .tide-shell .tide-study__results {
+      inset-block-start: var(--tide-shell-panel-top);
+      max-block-size: var(--tide-shell-panel-height);
+      overscroll-behavior-y: contain;
+    }
+    /* MAIN spans the footer's row too. Its sticky children therefore stay in
+       place at the document end, without changing landmark semantics or scroll ownership. */
+    @supports (grid-template-columns: subgrid) and (grid-template-rows: subgrid) {
+      .tide-shell:has(.tide-study__tools:not([hidden])) {
+        --tide-shell-half: calc((100% - var(--tide-app-pane-gap)) / 2);
+        --tide-shell-feed: calc((var(--tide-shell-half) - var(--tide-app-pane-gap)) / 2);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, var(--tide-shell-feed))) minmax(0, 1fr);
+        grid-template-rows: var(--tide-app-header-block-size) auto auto;
+        gap: var(--tide-app-pane-gap);
+        align-content: start;
+        padding-inline: var(--tide-study-inset);
+      }
+      .tide-shell:has(.tide-study__tools:not([hidden])) .tide-study__header {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        margin-inline: calc(-1 * var(--tide-study-inset));
+        align-self: start;
+      }
+      .tide-shell:has(.tide-study__tools:not([hidden])) .tide-study__workspace {
+        grid-column: 1 / -1;
+        grid-row: 2 / 4;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        padding: 0;
+        margin: 0;
+      }
+      .tide-shell .tide-study__tools { grid-column: 1; grid-row: 1; }
+      .tide-shell .tide-study__results { grid-column: 2; grid-row: 1; }
+      .tide-shell .tide-study__detail, .tide-shell .tide-study__placeholder { grid-column: 3; grid-row: 1; }
+      .tide-shell:has(.tide-study__tools:not([hidden])) .tide-study__footer {
+        grid-column: 3;
+        grid-row: 3;
+        justify-self: stretch;
+        margin-inline: 0;
+        padding-inline: 0;
+      }
+    }
+    .tide-shell .tide-shell__rail {
+      display: grid;
+      grid-template-rows: minmax(0, 1fr) auto;
+      block-size: var(--tide-shell-panel-height);
+      overflow: hidden;
+    }
+    .tide-shell__filter-scroll {
+      min-block-size: 0;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+      scrollbar-width: thin;
+      scroll-padding-block: var(--tide-space-4);
+    }
+    .tide-shell__action-dock {
+      padding: var(--tide-space-4) var(--tide-layout-inset);
+      background: var(--tide-color-canvas);
+      border-block-start: var(--tide-border-hairline);
+    }
+    .tide-shell--pinned-search .tide-shell__search {
+      position: sticky;
+      inset-block-start: 0;
+      z-index: var(--tide-z-card-control);
+      background: var(--tide-color-canvas);
+      padding-block: var(--tide-space-3);
+    }
+    .tide-shell--pinned-search .tide-shell__filter-scroll {
+      scroll-padding-block-start: calc(var(--tide-shell-search-height, var(--tide-space-24)) + var(--tide-space-4));
+    }
+  }
+  @media print {
+    .tide-shell, .tide-shell .tide-study__workspace { display: block; padding: 0; }
+    .tide-shell .tide-study__header { position: static; }
+    .tide-shell .tide-shell__rail { display: none; }
+  }
+}

@@ -1,0 +1,21 @@
+python tools/build.py --check
+3 themes / 6 modes. 324 contrast checks passed. 87 generated files verified.
+
+python tools/check.py
+{
+  "pass": true,
+  "htmlFiles": 81,
+  "localReferences": 1270,
+  "screenTemplates": 11,
+  "registeredComponents": 18,
+  "browserScripts": 0,
+  "inlineStyles": 0,
+  "failures": []
+}
+
+python -m unittest discover -s tools -p test_*.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.486s
+
+OK

@@ -1,0 +1,44 @@
+/* Three sans serif refinements of the first family. */
+@layer themes {
+[data-study="01"] {
+  --font-title: 'Manrope'; --font-body: 'Manrope';
+  --surface-base: #111517; --surface-panel: #1a1f22;
+  --text-primary: #f0f1ed; --text-secondary: #b8bfc6; --text-label: #aab3ba; --text-tertiary: #939da6;
+  --accent: #edbd8b; --line-subtle: #343a3e; --line-strong: #4a5156;
+  --inset: 24px; --card-pad-y: 24px; --card-meta-gap: 16px; --card-separation: 0px;
+  --card-title-size: 24px; --detail-title-size: 36px; --story-title-size: 28px;
+  --title-weight: 580; --detail-title-leading: 40px;
+  --title-tracking: -0.032em; --detail-tracking: -0.04em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px; --section-title-size: 16px;
+  --detail-group-gap: 24px; --action-gap: 24px; --hero-bottom: 24px;
+  --action-radius: 12px; --texture-opacity: 0.24;
+}
+
+[data-study="02"] {
+  --font-title: 'DM Sans'; --font-body: 'DM Sans';
+  --surface-base: #101418; --surface-panel: #1a2026;
+  --text-primary: #f1f1ef; --text-secondary: #b7c0c9; --text-label: #aab7c3; --text-tertiary: #95a2ad;
+  --accent: #e8c2a5; --line-subtle: #343d46; --line-strong: #495663;
+  --inset: 24px; --card-pad-y: 24px; --card-meta-gap: 16px; --card-separation: 0px;
+  --card-title-size: 24px; --detail-title-size: 36px; --story-title-size: 28px;
+  --title-weight: 530; --detail-title-leading: 40px;
+  --title-tracking: -0.025em; --detail-tracking: -0.034em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px; --section-title-size: 16px;
+  --detail-group-gap: 24px; --action-gap: 24px; --hero-bottom: 24px;
+  --action-radius: 14px; --texture-opacity: 0.22;
+}
+
+[data-study="03"] {
+  --font-title: 'Instrument Sans'; --font-body: 'Instrument Sans';
+  --surface-base: #101214; --surface-panel: #191d20;
+  --text-primary: #ecefea; --text-secondary: #bac1c5; --text-label: #b0b9bd; --text-tertiary: #96a1a6;
+  --accent: #e8cbb2; --line-subtle: #343b3f; --line-strong: #4c585e;
+  --inset: 28px; --card-pad-y: 28px; --card-meta-gap: 20px; --card-separation: 0px;
+  --card-title-size: 24px; --detail-title-size: 36px; --story-title-size: 28px;
+  --title-weight: 530; --detail-title-leading: 40px;
+  --title-tracking: -0.025em; --detail-tracking: -0.035em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px; --section-title-size: 16px;
+  --detail-group-gap: 28px; --action-gap: 28px; --hero-bottom: 28px;
+  --action-radius: 10px; --texture-opacity: 0.18;
+}
+}

@@ -1,0 +1,28 @@
+/* Private composition: shared status/reset nodes dock in the desktop rail.
+   All dimensions, colors and control internals come from the existing kit. */
+@layer tide.unified-search {
+  @media (width >= 75rem) {
+    /* Match the visible column separation, including the native list gutter.
+       The zero fallback retains the approved spacing without measurement. */
+    .tide-feed-study {
+      --tide-shell-panel-height: max(0px, calc(100dvh - var(--tide-shell-panel-top) - var(--tide-app-pane-gap) - var(--tide-unified-search-scrollbar-gutter, 0px)));
+    }
+    /* The existing status-row margin and this inset use the same space token.
+       The dock remains bottom-anchored; only its scroll-area boundary moves. */
+    .tide-feed-study--lineup .tide-shell__action-dock { padding-block-start: var(--tide-space-4); }
+    .tide-unified-search__status-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--tide-space-2);
+      margin-block-end: var(--tide-space-4);
+    }
+    .tide-unified-search__count {
+      color: var(--tide-color-text-secondary);
+      font-size: var(--tide-font-size-caption);
+    }
+    .tide-unified-search__apply { inline-size: 100%; }
+    .tide-unified-search__legacy-clear { display: none; }
+  }
+}

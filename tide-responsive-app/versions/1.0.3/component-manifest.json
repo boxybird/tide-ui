@@ -1,0 +1,16 @@
+{
+  "name": "Tide responsive app compositions",
+  "version": "1.0.3",
+  "kitVersion": "1.0.1",
+  "kitManifest": "kit/component-manifest.json",
+  "layer": "tide.app",
+  "runtime": "HTML/CSS with one optional deferred desktop navigation helper",
+  "compositions": [
+    {"block": "tide-app", "purpose": "Contained app shell and responsive results/detail relationship", "elements": ["header", "nav", "nav-link", "workspace", "results", "intro", "search", "search-label", "filter-row", "filters", "filter-form", "result-heading", "selected", "result-footer", "detail", "attendance", "form-wrap", "form", "field-row", "site-footer", "skip"], "modifiers": ["event"], "states": ["aria-current on navigation", "open on native details", "data-preview on the paired card"]},
+    {"block": "tide-review", "purpose": "Review gallery only; not shipped as product UI", "elements": ["wrap", "header", "nav", "pair", "figure", "viewport", "notes"], "layer": "tide.review"}
+  ],
+  "routes": ["index.html", "ink-after-dark.html", "desert-frequencies.html", "the-late-set.html", "search.html", "saved.html", "submit.html"],
+  "viewportExamples": [{"name": "phone", "width": 390, "height": 844}, {"name": "portrait-tablet", "width": 834, "height": 1112}, {"name": "desktop", "width": 1440, "height": 1000}],
+  "preserved": ["Manrope", "type scale", "spacing scale", "44/48px controls", "2/4px corners", "touching cards", "semantic theme roles", "neutral callout borders"],
+  "extensionContract": "App compositions consume public kit tokens and components. New reusable components belong in the kit extension layer with fixtures and state coverage. Do not use theme names or private palette tokens in component CSS."
+}

@@ -1,0 +1,537 @@
+{
+  "date": "2026-10-22",
+  "browser": "Codex in-app Chromium",
+  "desktop": [
+    {
+      "detail": {
+        "bottom": 2434.59375,
+        "width": 532.6666870117188
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "390px 390px 532.667px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "width": 390
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/matched/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 876,
+        "width": 390
+      },
+      "viewport": [
+        1440,
+        900
+      ],
+      "browsingGroupWidth": 804
+    },
+    {
+      "detail": {
+        "bottom": 2362.59375,
+        "width": 668.3333740234375
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "322.167px 322.167px 668.333px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "width": 322.16668701171875
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/half-split/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 876,
+        "width": 322.16668701171875
+      },
+      "viewport": [
+        1440,
+        900
+      ],
+      "browsingGroupWidth": 668.3333740234375
+    },
+    {
+      "detail": {
+        "bottom": 2362.59375,
+        "width": 600.5
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "356.083px 356.083px 600.5px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "width": 356.0833435058594
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/midpoint/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 876,
+        "width": 356.0833435058594
+      },
+      "viewport": [
+        1440,
+        900
+      ],
+      "browsingGroupWidth": 736.1666870117188
+    }
+  ],
+  "ranges": [
+    {
+      "detail": {
+        "bottom": 2532.1875,
+        "width": 368.6666870117187
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "352px 352px 368.667px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 776,
+        "width": 352
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/matched/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 776,
+        "width": 352
+      },
+      "viewport": [
+        1200,
+        800
+      ],
+      "browsingGroupWidth": 728
+    },
+    {
+      "detail": {
+        "bottom": 2286.59375,
+        "width": 548.3333740234375
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "262.167px 262.167px 548.333px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 776,
+        "width": 262.16668701171875
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/half-split/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 776,
+        "width": 262.16668701171875
+      },
+      "viewport": [
+        1200,
+        800
+      ],
+      "browsingGroupWidth": 548.3333740234375
+    },
+    {
+      "detail": {
+        "bottom": 2406.59375,
+        "width": 458.5
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "307.083px 307.083px 458.5px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 776,
+        "width": 307.0833435058594
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/midpoint/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 776,
+        "width": 307.0833435058594
+      },
+      "viewport": [
+        1200,
+        800
+      ],
+      "browsingGroupWidth": 638.1666870117188
+    },
+    {
+      "detail": {
+        "bottom": 2542.59375,
+        "width": 980.6666870117188
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "390px 390px 980.667px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 1056,
+        "width": 390
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/matched/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 1021,
+        "width": 390
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "browsingGroupWidth": 804
+    },
+    {
+      "detail": {
+        "bottom": 2542.59375,
+        "width": 892.3333740234375
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "434.167px 434.167px 892.333px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 1056,
+        "width": 434.1666870117187
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/half-split/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 1021,
+        "width": 434.1666870117187
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "browsingGroupWidth": 892.3333740234374
+    },
+    {
+      "detail": {
+        "bottom": 2542.59375,
+        "width": 936.5
+      },
+      "detailOverflow": false,
+      "gap": "24px",
+      "grid": "412.083px 412.083px 936.5px",
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 1056,
+        "width": 412.0833435058594
+      },
+      "listOverflow": false,
+      "path": "/workbench-widths/midpoint/index.html",
+      "railOverflow": false,
+      "tools": {
+        "bottom": 1021,
+        "width": 412.0833435058594
+      },
+      "viewport": [
+        1920,
+        1080
+      ],
+      "browsingGroupWidth": 848.1666870117188
+    }
+  ],
+  "fallback": [
+    {
+      "target": "baseline",
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "target": "matched",
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "target": "half-split",
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "target": "midpoint",
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "target": "baseline",
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        1024,
+        768
+      ]
+    },
+    {
+      "target": "matched",
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        1024,
+        768
+      ]
+    },
+    {
+      "target": "half-split",
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        1024,
+        768
+      ]
+    },
+    {
+      "target": "midpoint",
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "filtersOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "horizontalOverflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px",
+      "viewport": [
+        1024,
+        768
+      ]
+    }
+  ],
+  "behavior": [
+    {
+      "railVisible": true,
+      "summary": "1 event\nSoonest first\nNovember 2026\n1 event\nWORKSHOP\nIn view\nThe Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents\n\nBarelas Print Studio\n\n12\nThu\nNov\n6:00 PM\n$30\nHave somethin",
+      "test": "date-and-category",
+      "title": "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents",
+      "url": "http://127.0.0.1:4187/workbench-widths/half-split/search.html?from=2026-11-12&to=2026-11-12&category=workshop",
+      "visibleCards": 1
+    },
+    {
+      "summary": "0 events for “no-such-evening”\nSoonest first\nNo events found.\n\nTry another search, a wider date range or fewer categories.\n\nClear search and filters\nHave something happening? Add an event.\nBack to all events\n\nEnd of the ",
+      "test": "no-results",
+      "url": "http://127.0.0.1:4187/workbench-widths/half-split/search.html?q=no-such-evening&from=2026-11-12&to=2026-11-12&category=workshop",
+      "visibleCards": 0
+    },
+    {
+      "from": "",
+      "query": "",
+      "selectedCategories": 0,
+      "summary": "48 events\nSoonest first\nOctober 2026\n16 events\nOct\nNov\nMUSIC\nDesert Frequencies\n",
+      "test": "clear-filters",
+      "url": "http://127.0.0.1:4187/workbench-widths/half-split/index.html",
+      "visibleCards": 48
+    },
+    {
+      "heroClientHeight": 832,
+      "heroPosition": "relative",
+      "heroScrollHeight": 832,
+      "horizontalOverflow": false,
+      "test": "long-title-smallest-desktop",
+      "title": "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+    },
+    {
+      "frames": [
+        {
+          "height": "1080px",
+          "scale": "matrix(0.692187, 0, 0, 0.692187, 0, 0)",
+          "width": "1920px"
+        },
+        {
+          "height": "1080px",
+          "scale": "matrix(0.692187, 0, 0, 0.692187, 0, 0)",
+          "width": "1920px"
+        },
+        {
+          "height": "1080px",
+          "scale": "matrix(0.692187, 0, 0, 0.692187, 0, 0)",
+          "width": "1920px"
+        }
+      ],
+      "horizontalOverflow": false,
+      "labels": [
+        "1920 × 1080 · live HTML",
+        "1920 × 1080 · live HTML",
+        "1920 × 1080 · live HTML"
+      ],
+      "selected": "1920,1080",
+      "test": "comparison-viewport-selector"
+    }
+  ],
+  "consoleWarningsAndErrors": []
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "study": "01",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "study": "01",
+    "kind": "event",
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "study": "02",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "study": "02",
+    "kind": "event",
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "study": "03",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "study": "03",
+    "kind": "event",
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "study": "01",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "study": "01",
+    "kind": "event",
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "study": "02",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "study": "02",
+    "kind": "event",
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "study": "03",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "study": "03",
+    "kind": "event",
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 430
+  }
+]

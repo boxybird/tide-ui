@@ -1,0 +1,115 @@
+{
+  "name": "Date Line",
+  "set": "Quiet Assembly",
+  "option": 1,
+  "selected": "2026-10-21",
+  "status": "Favorite layout foundation; Tide is the current favorite UI kit appearance",
+  "source": "../quiet-assembly/01-date-line.html",
+  "lock": "../date-line-in-practice/baseline-lock.json",
+  "instruction": "Favorite layout overall, across all previous samples. Preserve original pixels as the foundation for future iteration.",
+  "motion_preference": {
+    "direction": "Gather",
+    "status": "Leaning preference, not a replacement for the Date Line layout favorite",
+    "date": "2026-10-21"
+  },
+  "desktop_layout_preference": {
+    "name": "Contained / Margin Reveal",
+    "selected": "2026-10-23",
+    "aligned_refinement_approved": "2026-10-24",
+    "status": "Preferred desktop layout; user called Margin Reveal perfect",
+    "source": "../tide-desktop-studies/margin-reveal-aligned/demo/index.html",
+    "previous_source": "../tide-desktop-studies/margin-reveal-refined/demo/index.html",
+    "baseline": "../tide-desktop-studies/contained-margin-filters/demo/index.html",
+    "behavior": "Original 76rem constraint. Revealing the sidebar uses the wider header margin while the individual event stays fixed. Desktop date/category contents remain open without an inner Filters disclosure. Sidebar section wrappers share the header start line without duplicate start insets; control internal padding is retained. Tablet/mobile keep the native disclosure and original spacing.",
+    "previous_refinement": {
+      "name": "Lineup / Reading Widths / Contained",
+      "source": "../tide-desktop-studies/lineup-reading-widths/contained/index.html",
+      "status": "Preserved constrained foundation"
+    },
+    "previous_direction": {
+      "name": "Lineup / Sliding Filters / Left",
+      "source": "../tide-desktop-studies/lineup-sliding-filters/left/index.html",
+      "selected": "2026-10-23",
+      "status": "Preserved desktop foundation; selected over Between"
+    },
+    "current_comparison": "../tide-desktop-studies/margin-reveal-aligned/index.html",
+    "previous_comparison": "../tide-desktop-studies/margin-reveal-refined/index.html",
+    "comparison_winner": "Margin Reveal",
+    "responsive_filter_study": {
+      "source": "../tide-desktop-studies/margin-reveal-responsive-filters/index.html",
+      "date": "2026-10-24",
+      "status": "Tablet/mobile exploration; approved desktop remains frozen",
+      "baseline_feedback": "User likes it and says it works for now; preserve while exploring browse-first",
+      "behavior": "Search stays in list. Full-screen filter dialog on phone, right drawer on tablet; draft counts, Cancel restores, Reset affects draft, Show events applies via original GET form."
+    },
+    "browse_first_study": {
+      "source": "../tide-desktop-studies/margin-reveal-browse-first/index.html",
+      "date": "2026-10-24",
+      "status": "Exploration; no new winner selected",
+      "behavior": "Events lead on phone/tablet. A persistent header action opens the original search and filters in a left flyout. Existing GET rules, draft counts, Cancel, Reset and applied criteria remain. Approved desktop is frozen."
+    },
+    "search_behavior_preference": {
+      "name": "Margin Reveal / Unified search",
+      "approved_version": "1.0.2",
+      "kit_adoption_review": {
+        "source": "../tide-desktop-studies/kit-adoption-review/index.html",
+        "date": "2026-10-24",
+        "status": "Review documented; component extraction has not shipped",
+        "recommendation": "One reusable filter-panel layout with scrolling body and pinned footer; reuse existing controls and states. Keep matching/routing, modal lifecycle, responsive placement and desktop/native-gutter geometry host-owned. Preserve the approved prototype and its dependency inventories."
+      },
+      "preservation": "User approved and requested preservation on2026-10-24. All72 current files match the immutable1.0.2 release archive and checksum.",
+      "cross_browser_verification": "Firefox/Safari checks deferred at the user's explicit request. Existing browser evidence is Chromium; do not report Firefox/Safari as tested.",
+      "date": "2026-10-24",
+      "source": "../tide-desktop-studies/margin-reveal-unified-search/index.html",
+      "status": "User likes Browse First and prefers its tablet search interaction; explicitly requests consistency on desktop",
+      "spacing_refinement": "Version1.0.2: retain native scrollbars, measure the event list's actual occupied scrollbar gutter and add it to the24px base bottom gap for both desktop panels. Keep Reset all balanced and Show events aligned with the list. Remove measurement below75rem; tablet/mobile unchanged. Prior1.0.0/1.0.1 archives remain preserved.",
+      "behavior": "No separate query submit. Query, inclusive dates and categories share a live matching count, Reset all draft action and one pinned Show events GET submit. Feed changes on Show events or Enter. Desktop geometry and mobile/tablet flyout remain; previous releases and both kits are preserved."
+    },
+    "instruction": "Build desktop refinements from Margin Reveal. Preserve its selected original, Contained, Left, original Lineup, all study releases and the maintained UI kit.",
+    "current_approved_baseline": {
+      "name": "Shared Filters baseline",
+      "approved": "2026-10-24",
+      "kitVersion": "1.3.0",
+      "consumerVersion": "1.0.0",
+      "source": "../tide-desktop-studies/shared-filter-release/app/index.html",
+      "lock": "../tide-desktop-studies/locks/shared-filter-release-1.0.0.json",
+      "status": "Preserve all 283 release files; future experiments in sibling copies"
+    }
+  },
+  "ui_kit_preference": {
+    "name": "Tide",
+    "selected": "2026-10-22",
+    "status": "Current favorite UI kit appearance",
+    "source": "../date-line-kit-variations/tide/index.html",
+    "current_studies": "../tide-ui-kit-studies/index.html",
+    "preferences": [
+      "Square edges",
+      "Named semantic color roles for easy palette swaps",
+      "No colored left-hand borders on callouts or announcements"
+    ],
+    "new_palette_favorite": null,
+    "current_kit": "../tide-desktop-studies/shared-filter-release/kit/index.html",
+    "css_entry": "../tide-desktop-studies/shared-filter-release/kit/css/tide.css",
+    "theme_source": "../tide-desktop-studies/shared-filter-release/kit/tokens/themes.json",
+    "implementation": "BEM HTML; layered modern CSS; OKLCH themes, each with light/dark/system appearance support",
+    "themes": [
+      "Tide",
+      "Summer",
+      "Bumble"
+    ],
+    "theme_selection": "Tide remains favorite; other palettes are examples, no new favorite selected.",
+    "preserved_previous_kit": "../tide-responsive-app/kit/index.html",
+    "preserved_original_kit": "../tide-ui-kit/index.html",
+    "version": "1.3.0",
+    "adoption_release": {
+      "date": "2026-10-24",
+      "review": "../tide-desktop-studies/shared-filter-release/index.html",
+      "consumer": "../tide-desktop-studies/shared-filter-release/app/index.html",
+      "component": "tide-filter-panel",
+      "contract": "../tide-desktop-studies/shared-filter-release/kit/docs/SEARCH-FILTERS.md",
+      "status": "User-authorized additive release; approved prototype and frozen dependencies preserved"
+    },
+    "baseline_status": "User-approved and frozen, 2026-10-24; further kit work in a successor copy",
+    "baseline_lock": "../tide-desktop-studies/locks/shared-filter-release-1.0.0.json"
+  }
+}

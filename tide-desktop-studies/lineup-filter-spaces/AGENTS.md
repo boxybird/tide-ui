@@ -1,0 +1,3 @@
+# Lineup · Filter Spaces
+
+Isolated desktop interaction studies: Pocket (native nonmodal popover), Focus (native modal dialog), and Refine (temporary left-pane view). Preserve all earlier studies, releases, maintained app and kit. Original controls, form associations, card markup and search/navigation helpers remain shared. No new kit component is registered during this experiment. All new composition and behavior have private `tide-refine-study` classes. Below 75rem restore the approved Lineup's original controls, order and disclosure. Use Python `-B`; write evidence and releases only here. Preview through the existing port4187 server. Do not publish.

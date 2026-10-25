@@ -1,0 +1,4 @@
+/* The comparison canvas, separate from the protected app frames. */
+.baseline-link { display: inline-flex; align-items: center; gap: 8px; min-block-size: 44px; margin-block-start: 24px; font-size: 12px; text-decoration: none; border-block-end: 1px solid #9ca59d; }
+.study-caption .placement-link { display: inline-flex; align-items: center; gap: 8px; min-block-size: 36px; margin-block-start: 8px; font-size: 12px; }
+.notes-main h3 { font-size: 16px; margin-block-start: 28px; }

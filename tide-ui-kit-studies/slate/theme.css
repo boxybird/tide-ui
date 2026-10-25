@@ -1,0 +1,31 @@
+/* Semantic palette roles. Square geometry is shared by every Tide study. */
+:root {--color-surface-canvas:#191d21;--color-surface-card:#232a2f;--color-surface-raised:#2c353a;--color-surface-field:#1d2429;--color-text-primary:#edf0ef;--color-text-secondary:#bdc7c9;--color-text-label:#b1bdc0;--color-text-tertiary:#a2b0b5;--color-accent:#abc4d1;--color-on-accent:#16232b;--color-border-subtle:#3c484f;--color-border-strong:#53636c;--color-border-control:#7c919b;--color-selection-surface:#2b414e;--color-selection-border:#7597a8;--color-status-success:#b5d0b6;--color-status-success-surface:#1c302a;--color-status-success-border:#597866;--color-status-warning:#e2c58f;--color-status-warning-surface:#2e2b22;--color-status-warning-border:#86714b;--color-status-danger:#e2afb5;--color-status-danger-surface:#32272e;--color-status-danger-border:#8b626f;--color-photo-accent:#abc4d1;--corner-field:2px;--corner-action:2px;--corner-panel:4px;--corner-chip:2px;--corner-badge:2px;--corner-icon:2px;--theme-scheme:dark;--texture-strength:0.18;--icon-filter-default:none;--icon-filter-action:brightness(0);}
+
+html { background:var(--color-surface-canvas); color-scheme:var(--theme-scheme); scroll-behavior:auto !important; }
+body[data-study="01"] { --surface-base:var(--color-surface-canvas); --surface-panel:var(--color-surface-card); --text-primary:var(--color-text-primary); --text-secondary:var(--color-text-secondary); --text-label:var(--color-text-label); --text-tertiary:var(--color-text-tertiary); --accent:var(--color-accent); --line-subtle:var(--color-border-subtle); --line-strong:var(--color-border-strong); --action-radius:var(--corner-action); --texture-opacity:var(--texture-strength); }
+:root { --surface-raised:var(--color-surface-raised); --surface-field:var(--color-surface-field); --control-border:var(--color-border-control); --radius-control:var(--corner-action); --radius-panel:var(--corner-panel); --success:var(--color-status-success); --success-bg:var(--color-status-success-surface); --warning:var(--color-status-warning); --warning-bg:var(--color-status-warning-surface); --danger:var(--color-status-danger); --danger-bg:var(--color-status-danger-surface); --selected-bg:var(--color-selection-surface); --selected-line:var(--color-selection-border); --kit-switch-radius:var(--corner-field); }
+.btn:not(.secondary):not(.quiet):not(:disabled) { color:var(--color-on-accent); }
+.btn:not(.secondary):not(.quiet):not(:disabled) .icon { filter:var(--icon-filter-action); }
+.btn.secondary .icon,.icon { filter:var(--icon-filter-default); }
+.icon-btn.selected { background:var(--color-selection-surface); border-color:var(--color-selection-border); }
+.chip.selected,.chip:has(input:checked) { background:var(--color-selection-surface); border-color:var(--color-selection-border); }
+.field input:not([type=checkbox]):not([type=radio]):not([type=file]),.field select,.field textarea { border-radius:var(--corner-field); }
+.chip { border-radius:var(--corner-chip); }
+.icon-btn,.screen-study figcaption > a,.round-control { border-radius:var(--corner-icon); }
+.badge { border-radius:var(--corner-badge); }
+.badge.success { border-color:var(--color-status-success-border); }
+.badge.warning { border-color:var(--color-status-warning-border); }
+.badge.danger { border-color:var(--color-status-danger-border); }
+.notice,.upload-field,.swatch,input::file-selector-button { border-radius:var(--corner-field); }
+.toast-sample,.organizer { border-radius:var(--corner-action); }
+.doc-panel,.hero-card { border-radius:var(--corner-panel); }
+.skip-link { color:var(--color-on-accent); }
+/* The photograph is a distinct dark surface in every skin. Its crop, scrim and geometry stay fixed. */
+.event-hero { --surface-base:#111517; --text-primary:#f0f1ed; --text-secondary:#b8bfc6; --text-label:#aab3ba; --text-tertiary:#939da6; --accent:var(--color-photo-accent); color:var(--text-primary); }
+.event-hero .icon { filter:none; }
+.event-hero .primary-action { color:#211a27; }
+.event-hero .primary-action .icon { filter:brightness(0); }
+@media(prefers-contrast:more) { body[data-study="01"] { --texture-opacity:0; } }
+
+/* Callouts use a uniform neutral outline. Preserve the original text alignment. */
+.notice,.notice.error,.notice.success { border:1px solid var(--line-strong); padding-inline-start:calc(var(--space-4) + 2px); }

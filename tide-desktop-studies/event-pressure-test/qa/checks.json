@@ -1,0 +1,33 @@
+{
+  "pass": true,
+  "authoredEvents": 14,
+  "recoveryScenes": 6,
+  "htmlFiles": 74,
+  "localReferences": 5061,
+  "baselineFilesPreserved": 283,
+  "acceptedStickyFixFilesPreserved": 11,
+  "priorPreservation": {
+    "desktopStudyFiles": 185,
+    "widthStudyFiles": 177,
+    "appFiles": 980,
+    "kitFiles": 180,
+    "refinementFiles": 177,
+    "lineupFiles": 182,
+    "controlBarFiles": 176,
+    "filterSpaceFiles": 178,
+    "slidingFilterFiles": 123,
+    "readingWidthFiles": 188,
+    "containedWidthFiles": 182,
+    "marginRevealFiles": 73,
+    "marginRefinedFiles": 66,
+    "marginAlignedFiles": 66,
+    "responsiveFilterFiles": 73,
+    "browseFirstFiles": 75,
+    "originalFoundationFiles": 176,
+    "approvedPrototypeFiles": 72,
+    "approvedPrototypeArchiveSha256": "1f8226ef94f33fec68671b6f72ac9c0de87fdf2c94554714a95f506e344ac490"
+  },
+  "baseShellUnchanged": true,
+  "kitEdits": 0,
+  "failures": []
+}

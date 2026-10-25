@@ -1,0 +1,46 @@
+/* Gather's resting typography and geometry are inherited unchanged. */
+:root { --micro-ease:cubic-bezier(.16,1,.3,1); --micro-spring:linear(0,.45 12%,.87 25%,1.08 42%,.98 65%,1); --micro-shift:6px; }
+:root[data-strength="overdrive"] { --micro-shift:12px; }
+.event-card { --mx:0; --my:0; --hot-x:50%; --hot-y:50%; }
+.card-surface::after { content:''; position:absolute; inset:0; opacity:0; background:radial-gradient(ellipse at var(--hot-x) var(--hot-y),rgb(237 189 139 / .14),transparent 68%); transition:opacity 400ms; }
+.event-card::after { content:''; position:absolute; z-index:1; pointer-events:none; inset:0; border:1px solid rgb(237 189 139 / .42); opacity:0; transform:scaleX(.6); transition:opacity 280ms,transform 650ms var(--micro-spring); }
+.card-title,.event-card .category,.event-card .venue,.event-card .card-meta { transition:translate 650ms var(--micro-spring),color 260ms; }
+.event-card .date-day { display:inline-block; transition:translate 800ms var(--micro-spring),rotate 800ms var(--micro-spring); }
+.event-card.is-engaged .card-surface::after { opacity:1; }
+.event-card.is-engaged::after { opacity:1; transform:scaleX(1); }
+.event-card.is-engaged .card-title { translate:var(--micro-shift) -2px; color:var(--accent); }
+.event-card.is-engaged .category { translate:calc(var(--micro-shift) * .45) 0; }
+.event-card.is-engaged .venue { translate:calc(var(--micro-shift) * .7) 0; }
+.event-card.is-engaged .date-day { translate:0 -4px; rotate:-6deg; }
+.event-card.is-pressed .card-title { scale:.975; }
+.card-title { transform-origin:left center; transition:translate 650ms var(--micro-spring),color 260ms,scale 160ms ease-out; }
+.return-anchor { position:absolute; right:24px; top:calc(50% - 22px); z-index:4; width:44px; height:44px; border:1px solid rgb(237 189 139 / .42); border-radius:50%; display:grid; place-items:center; background:#202729; color:var(--accent); pointer-events:none; opacity:0; }
+.return-anchor .icon { width:20px; height:20px; }
+.is-returning .return-anchor { opacity:1; }
+.return-anchor::after,.round-control::after,.save-button::after { content:''; position:absolute; inset:-5px; border:1px solid currentColor; border-radius:50%; opacity:0; pointer-events:none; }
+.round-control { position:relative; transition:background 250ms, border-color 250ms,translate 500ms var(--micro-spring),scale 500ms var(--micro-spring); }
+.round-control .icon { transition:rotate 600ms var(--micro-spring),scale 500ms var(--micro-spring); }
+.round-control.is-engaged,.round-control:focus-visible { border-color:var(--accent); background:#40372e; scale:1.12; }
+[data-close].is-engaged .icon,[data-close]:focus-visible .icon { rotate:90deg; scale:.85; }
+.round-control:active { scale:.86; }
+.round-control.is-engaged::after { opacity:.4; scale:1.18; transition:scale 500ms var(--micro-spring),opacity 300ms; }
+.primary-action .icon { transition:translate 650ms var(--micro-spring); }
+.primary-action:focus-visible .icon,.primary-action:hover .icon { translate:8px 0; }
+.detail-cue:focus-visible .icon,.detail-cue:hover .icon { animation:cue-bob 850ms var(--micro-spring) 1; }
+@keyframes cue-bob { 40% { translate:0 8px; } 75% { translate:0 -3px; } }
+::view-transition-group(return-control) { z-index:10; overflow:visible; }
+::view-transition-old(return-control),::view-transition-new(return-control) { height:100%; mix-blend-mode:normal; }
+::view-transition-old(return-control) { animation:root-out calc(var(--travel-duration) * .4) calc(var(--travel-duration) * .3) both; }
+::view-transition-new(return-control) { animation:root-in calc(var(--travel-duration) * .45) calc(var(--travel-duration) * .3) both; }
+@media (prefers-reduced-motion:reduce) {
+ *,*::before,*::after { animation-duration:0s !important; transition-duration:0s !important; }
+ .event-card.is-engaged .card-title,.event-card.is-engaged .category,.event-card.is-engaged .venue,.event-card.is-engaged .date-day,.primary-action:hover .icon { translate:none; rotate:none; }
+ .round-control.is-engaged,.round-control:active { scale:1; }
+}
+
+/* A warm return token stays legible throughout the flight, then leaves no permanent UI. */
+.return-anchor { background:var(--accent); border-color:var(--accent); box-shadow:0 4px 24px #0005; }
+.return-anchor .icon { filter:brightness(0); }
+html[data-direction="close"][data-transition-phase="capturing"] [data-close] { background:var(--accent); border-color:var(--accent); }
+html[data-direction="close"][data-transition-phase="capturing"] [data-close] .icon { filter:brightness(0); }
+

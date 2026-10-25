@@ -1,0 +1,62 @@
+[
+  {
+    "cardFont": "24px",
+    "disclosure": true,
+    "headingMargin": "8px 0px 0px",
+    "jumpTarget": true,
+    "mode": "dark",
+    "outline": "solid",
+    "overflow": false,
+    "theme": "tide"
+  },
+  {
+    "cardFont": "24px",
+    "disclosure": true,
+    "headingMargin": "8px 0px 0px",
+    "jumpTarget": true,
+    "mode": "light",
+    "outline": "solid",
+    "overflow": false,
+    "theme": "tide"
+  },
+  {
+    "cardFont": "24px",
+    "disclosure": true,
+    "headingMargin": "8px 0px 0px",
+    "jumpTarget": true,
+    "mode": "dark",
+    "outline": "solid",
+    "overflow": false,
+    "theme": "summer"
+  },
+  {
+    "cardFont": "24px",
+    "disclosure": true,
+    "headingMargin": "8px 0px 0px",
+    "jumpTarget": true,
+    "mode": "light",
+    "outline": "solid",
+    "overflow": false,
+    "theme": "summer"
+  },
+  {
+    "cardFont": "24px",
+    "disclosure": true,
+    "headingMargin": "8px 0px 0px",
+    "jumpTarget": true,
+    "mode": "dark",
+    "outline": "solid",
+    "overflow": false,
+    "theme": "bumble"
+  },
+  {
+    "cardFont": "24px",
+    "disclosure": true,
+    "headingMargin": "8px 0px 0px",
+    "jumpTarget": true,
+    "mode": "light",
+    "outline": "solid",
+    "overflow": false,
+    "theme": "bumble"
+  }
+]

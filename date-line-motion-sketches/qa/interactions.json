@@ -1,0 +1,47 @@
+[
+  {
+    "duration": "480",
+    "mode": "gather",
+    "overflow": false,
+    "result": "native",
+    "title": "Ink After Dark",
+    "view": "event"
+  },
+  {
+    "focus": "View Ink After Dark",
+    "mode": "gather",
+    "result": "native",
+    "test": "return",
+    "view": "list"
+  },
+  {
+    "duration": "620",
+    "mode": "aperture",
+    "overflow": false,
+    "result": "native",
+    "title": "Ink After Dark",
+    "view": "event"
+  },
+  {
+    "focus": "View Ink After Dark",
+    "mode": "aperture",
+    "result": "native",
+    "test": "return",
+    "view": "list"
+  },
+  {
+    "duration": "560",
+    "mode": "shutter",
+    "overflow": false,
+    "result": "native",
+    "title": "Ink After Dark",
+    "view": "event"
+  },
+  {
+    "focus": "View Ink After Dark",
+    "mode": "shutter",
+    "result": "native",
+    "test": "return",
+    "view": "list"
+  }
+]

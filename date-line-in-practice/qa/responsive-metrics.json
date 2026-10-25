@@ -1,0 +1,120 @@
+[
+  {
+    "slug": "baseline",
+    "kind": "list",
+    "ads": [],
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "slug": "baseline",
+    "kind": "event",
+    "ads": [],
+    "clipped": [],
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "slug": "local-partner",
+    "kind": "list",
+    "ads": [
+      {
+        "height": 144,
+        "width": 320
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "slug": "local-partner",
+    "kind": "event",
+    "ads": [
+      {
+        "height": 144,
+        "width": 272
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "slug": "rough-upload",
+    "kind": "list",
+    "ads": [],
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "slug": "rough-upload",
+    "kind": "event",
+    "ads": [],
+    "clipped": [],
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 320
+  },
+  {
+    "slug": "baseline",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "slug": "baseline",
+    "kind": "event",
+    "clipped": [],
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "slug": "local-partner",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "slug": "local-partner",
+    "kind": "event",
+    "clipped": [],
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "slug": "rough-upload",
+    "kind": "list",
+    "clipped": [],
+    "height": 844,
+    "pageOverflow": false,
+    "width": 430
+  },
+  {
+    "slug": "rough-upload",
+    "kind": "event",
+    "clipped": [],
+    "height": 844,
+    "hero": 844,
+    "pageOverflow": false,
+    "width": 430
+  }
+]

@@ -1,0 +1,24 @@
+/* Review presentation only. Product layouts are in studies.css. */
+@layer tide.study-review {
+  .tide-study-review { padding: var(--tide-space-10) var(--tide-space-6) var(--tide-space-16); }
+  .tide-study-review__header, .tide-study-review__section-header { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: var(--tide-space-6); }
+  .tide-study-review__header { padding-block-end: var(--tide-space-8); border-block-end: var(--tide-border-hairline); }
+  .tide-study-review__header h1 { margin-block: var(--tide-space-3); font-size: var(--tide-font-size-event); line-height: var(--tide-leading-event); font-weight: var(--tide-font-weight-heading); letter-spacing: var(--tide-tracking-event); }
+  .tide-study-review__header p:not(.tide-eyebrow), .tide-study-review__section-header p:not(.tide-eyebrow) { max-inline-size: var(--tide-layout-reading); color: var(--tide-color-text-secondary); }
+  .tide-study-review__jump { display: flex; flex-wrap: wrap; gap: var(--tide-space-2); margin-block: var(--tide-space-6); }
+  .tide-study-review__badges { margin-block-start: var(--tide-space-7); }
+  .tide-study-review__toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: var(--tide-space-6); }
+  .tide-study-review__toolbar .tide-field { inline-size: 18rem; max-inline-size: 100%; }
+  .tide-study-review__toolbar > p { max-inline-size: var(--tide-layout-reading); color: var(--tide-color-text-secondary); }
+  .tide-study-review__note { margin-block-start: var(--tide-space-4); color: var(--tide-color-text-muted); font-size: var(--tide-font-size-caption); line-height: var(--tide-leading-caption); }
+  .tide-study-review__section { margin-block-start: var(--tide-space-16); scroll-margin-block-start: var(--tide-space-6); }
+  .tide-study-review__section-header h2 { margin-block: var(--tide-space-2) var(--tide-space-3); font-size: var(--tide-font-size-page); line-height: var(--tide-leading-page); font-weight: var(--tide-font-weight-heading); letter-spacing: var(--tide-tracking-title); }
+  .tide-study-review__figure { margin-block-start: var(--tide-space-6); }
+  .tide-study-review__figure figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--tide-space-3); margin-block-end: var(--tide-space-3); color: var(--tide-color-text-muted); font-size: var(--tide-font-size-caption); line-height: var(--tide-leading-caption); }
+  .tide-study-review__viewport { inline-size: 100%; block-size: calc(var(--tide-study-preview-height, 900px) * var(--tide-study-preview-scale, 1)); overflow: hidden; outline: var(--tide-border-hairline); }
+  .tide-study-review__viewport iframe { display: block; inline-size: var(--tide-study-preview-width, 1440px); block-size: var(--tide-study-preview-height, 900px); border: 0; transform: scale(var(--tide-study-preview-scale, 1)); transform-origin: top left; }
+  .tide-study-review__footer { display: grid; gap: var(--tide-space-4); margin-block-start: var(--tide-space-16); padding-block-start: var(--tide-space-6); border-block-start: var(--tide-border-hairline); color: var(--tide-color-text-secondary); }
+  .tide-study-review__footer nav { display: flex; flex-wrap: wrap; gap: var(--tide-space-5); }
+  .tide-study-review__footer a { display: inline-flex; align-items: center; min-block-size: var(--tide-size-target); }
+  @media (width >= 75rem) { .tide-study-review { padding-inline: var(--tide-space-12); } }
+}

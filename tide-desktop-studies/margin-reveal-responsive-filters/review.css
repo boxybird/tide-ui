@@ -1,0 +1,4 @@
+@layer tide.responsive-filters-review {
+  .tide-responsive-filters-review__viewport { inline-size: 100%; max-inline-size: calc(var(--review-width) * 1px); block-size: calc(var(--review-height) * var(--review-scale) * 1px); overflow: hidden; outline: var(--tide-border-hairline); }
+  .tide-responsive-filters-review__viewport iframe { display: block; inline-size: calc(var(--review-width) * 1px); block-size: calc(var(--review-height) * 1px); border: 0; transform: scale(var(--review-scale)); transform-origin: top left; }
+}

@@ -1,0 +1,9 @@
+from pathlib import Path
+import json
+p=Path('research/design-sets.json');d=json.loads(p.read_text(encoding='utf-8-sig'));d['updated']='2026-10-22'
+if not any(s.get('name')=='Date Line UI kit' for s in d['sets']): d['sets'].append({'name':'Date Line UI kit','date':'2026-10-22','description':'Static foundations, reusable components, nine companion screen/state layouts, and a prioritized coverage map. Returns to the selected Date Line and sets animation exploration aside.','path':'date-line-ui-kit/index.html','url':'http://127.0.0.1:4182/','status':'First UI kit pass for review. Original Date Line frames and foundation stylesheets preserved byte-for-byte.'})
+d['preferences']['current_constraint']='Set animation aside. Return to static Date Line and build a consistent UI kit with additional screens and real-world state coverage. Preserve all earlier studies.'
+d['preferences']['selected_direction']['next']='Review the Date Line UI kit; refine discovery and attendance handoff, then organizer submission/editing/cancellation.'
+p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n')
+p=Path('AGENTS.md');s=p.read_text();s+='\n- Current direction (2026-10-22): user says to set animations aside and return to static Date Line, a consistent UI kit and additional screens. Latest sibling: date-line-ui-kit/ (port4182). Keep it static HTML/CSS, preserve approved original and every motion experiment. Focus on reusable foundations/components and prioritized screen/state coverage.\n';p.write_text(s)
+p=Path('research/source-notes.txt');s=p.read_text();s+='\n2026-10-22 — Date Line UI kit 0.1: animation set aside. Original static Date Line frames/styles preserved. New reusable UI parts, nine companion screen/state fixtures and coverage map. Local port4182. Form labels, target size and color-use sources in date-line-ui-kit/README.md; no app/backend built.\n';p.write_text(s)

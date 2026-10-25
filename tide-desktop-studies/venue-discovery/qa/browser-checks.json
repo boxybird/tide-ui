@@ -1,0 +1,263 @@
+{
+  "date": "2026-10-24",
+  "browser": "Connected Chromium on Windows",
+  "checks": [
+    {
+      "name": "Venue selection retains identity, six cards and return destination",
+      "after": {
+        "back": "http://127.0.0.1:4187/venue-discovery/app/sunshine-theater.html?venue=sunshine-theater",
+        "count": "6 events",
+        "title": "Sunday in Stereo",
+        "url": "http://127.0.0.1:4187/venue-discovery/app/sunday-in-stereo.html?venue=sunshine-theater",
+        "venue": "sunshine-theater",
+        "visible": [
+          "sunshine-theater",
+          "sunshine-theater",
+          "sunshine-theater",
+          "sunshine-theater",
+          "sunshine-theater",
+          "sunshine-theater"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "name": "Keyword matches elsewhere do not escape venue; zero results retain venue guide",
+      "after": {
+        "count": "0 events for “ink”",
+        "empty": true,
+        "guide": true,
+        "url": "?venue=sunshine-theater&q=ink",
+        "visible": 0,
+        "venue": "sunshine-theater"
+      },
+      "pass": true
+    },
+    {
+      "name": "Reset and apply retain Sunshine Theater and restore six events",
+      "after": {
+        "count": "6 events",
+        "query": "",
+        "url": "?venue=sunshine-theater",
+        "venue": "sunshine-theater",
+        "visible": 6
+      },
+      "pass": true
+    },
+    {
+      "name": "Exact date produces one venue event and hides redundant month jumps",
+      "after": {
+        "count": "1 event",
+        "navHidden": true,
+        "scope": "sunshine-theater",
+        "titles": [
+          "High Desert Signal"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "name": "Refresh retains venue and date filter",
+      "after": {
+        "count": "1 event",
+        "from": "2026-10-30",
+        "scope": "sunshine-theater"
+      },
+      "pass": true
+    },
+    {
+      "name": "Explicit Find events exits venue scope",
+      "after": {
+        "cards": 54,
+        "count": "54 events",
+        "scope": ""
+      },
+      "pass": true
+    },
+    {
+      "name": "Linked event venue opens the Sunshine Theater guide",
+      "pass": true
+    },
+    {
+      "name": "Phone venue-details jump lands below header and focuses destination",
+      "after": {
+        "count": "6 events",
+        "focus": "venue-information",
+        "hash": "#venue-information",
+        "headerBottom": 97,
+        "top": 121
+      },
+      "pass": true
+    },
+    {
+      "name": "Phone drawer applies one result within the same venue",
+      "after": {
+        "count": "1 event for “Signal”",
+        "open": false,
+        "url": "?venue=sunshine-theater&q=Signal",
+        "venue": "sunshine-theater"
+      },
+      "pass": true
+    },
+    {
+      "name": "Phone selected event is full-screen and returns to the filtered venue",
+      "after": {
+        "back": "http://127.0.0.1:4187/venue-discovery/app/sunshine-theater.html?venue=sunshine-theater&q=Signal",
+        "h1": "High Desert Signal",
+        "listVisible": false,
+        "url": "?venue=sunshine-theater&q=Signal"
+      },
+      "pass": true
+    },
+    {
+      "name": "Desktop preserves native gutter allowance, Show alignment and accepted feed isolation",
+      "after": {
+        "bottomGap": 34,
+        "gap": 24.000030517578125,
+        "gutter": 10,
+        "height": 900,
+        "isolation": "isolate",
+        "listBottom": 866,
+        "overflow": false,
+        "showBottom": 866,
+        "width": 1440
+      },
+      "pass": true
+    },
+    {
+      "name": "Month handoff keeps the summary above outgoing October",
+      "after": {
+        "november": {
+          "bottom": 309,
+          "height": 60,
+          "left": 328,
+          "right": 690.3333435058594,
+          "top": 249,
+          "width": 362.3333435058594,
+          "x": 328,
+          "y": 249
+        },
+        "october": {
+          "bottom": 218.33334350585935,
+          "height": 60,
+          "left": 328,
+          "right": 690.3333435058594,
+          "top": 158.33334350585938,
+          "width": 362.3333435058594,
+          "x": 328,
+          "y": 158.33334350585938
+        },
+        "outgoingCrossesSummary": true,
+        "scroll": 459.3333435058594,
+        "summaryBottom": 249,
+        "summaryOnTop": true,
+        "summaryTop": 117
+      },
+      "pass": true
+    }
+  ],
+  "responsive": [
+    {
+      "dialogOpen": false,
+      "guide": {
+        "bottom": 2877.0001220703125,
+        "height": 1061.3333740234375,
+        "left": 0,
+        "right": 374.6666870117187,
+        "top": 1815.666748046875,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 1815.666748046875
+      },
+      "h1": [
+        {
+          "rect": {
+            "bottom": 181,
+            "height": 36,
+            "left": 24,
+            "right": 350.66668701171875,
+            "top": 145,
+            "width": 326.66668701171875,
+            "x": 24,
+            "y": 145
+          },
+          "text": "Sunshine Theater"
+        }
+      ],
+      "height": 844,
+      "overflow": false,
+      "visible": 6,
+      "width": 390
+    },
+    {
+      "dialogOpen": false,
+      "guide": {
+        "bottom": 3033.0001220703125,
+        "height": 1197.3333740234375,
+        "left": 0,
+        "right": 304.66668701171875,
+        "top": 1835.666748046875,
+        "width": 304.66668701171875,
+        "x": 0,
+        "y": 1835.666748046875
+      },
+      "h1": [
+        {
+          "rect": {
+            "bottom": 181,
+            "height": 36,
+            "left": 24,
+            "right": 280.66668701171875,
+            "top": 145,
+            "width": 256.66668701171875,
+            "x": 24,
+            "y": 145
+          },
+          "text": "Sunshine Theater"
+        }
+      ],
+      "height": 740,
+      "overflow": false,
+      "visible": 6,
+      "width": 320
+    },
+    {
+      "dialogOpen": false,
+      "guide": {
+        "bottom": 1066.3333740234375,
+        "height": 945.3333740234376,
+        "left": 438,
+        "right": 984.6666870117188,
+        "top": 121,
+        "width": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "h1": [
+        {
+          "rect": {
+            "bottom": 205,
+            "height": 36,
+            "left": 48,
+            "right": 380,
+            "top": 169,
+            "width": 332,
+            "x": 48,
+            "y": 169
+          },
+          "text": "Sunshine Theater"
+        }
+      ],
+      "height": 768,
+      "overflow": false,
+      "visible": 6,
+      "width": 1024
+    }
+  ],
+  "deferred": [
+    "Firefox",
+    "Safari",
+    "Physical devices",
+    "Screen readers"
+  ]
+}

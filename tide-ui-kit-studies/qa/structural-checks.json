@@ -1,0 +1,60 @@
+{
+  "html_files": 52,
+  "local_references": 996,
+  "scripts": 0,
+  "errors": [],
+  "contrast": {
+    "tide": {
+      "primary": 15.94,
+      "secondary": 10.06,
+      "tertiary": 7.45,
+      "accent": 10.53,
+      "onAccent": 9.81,
+      "fieldBorder": 4.19,
+      "success": 8.41,
+      "warning": 8.5,
+      "danger": 7.53
+    },
+    "mist": {
+      "primary": 13.04,
+      "secondary": 5.98,
+      "tertiary": 4.75,
+      "accent": 5.62,
+      "onAccent": 6.12,
+      "fieldBorder": 3.51,
+      "success": 5.9,
+      "warning": 5.38,
+      "danger": 5.76
+    },
+    "slate": {
+      "primary": 14.78,
+      "secondary": 9.83,
+      "tertiary": 7.6,
+      "accent": 9.32,
+      "onAccent": 8.82,
+      "fieldBorder": 4.77,
+      "success": 8.41,
+      "warning": 8.5,
+      "danger": 7.53
+    },
+    "deep": {
+      "primary": 16.18,
+      "secondary": 10.47,
+      "tertiary": 7.83,
+      "accent": 9.75,
+      "onAccent": 8.36,
+      "fieldBorder": 4.65,
+      "success": 8.41,
+      "warning": 8.5,
+      "danger": 7.53
+    }
+  },
+  "shared_css_preserved": {
+    "screens.css": true,
+    "themes.css": true,
+    "cards.css": true,
+    "fonts.css": true,
+    "ui.css": true,
+    "gallery.css": true
+  }
+}

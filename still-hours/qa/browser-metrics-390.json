@@ -1,0 +1,650 @@
+[
+  {
+    "study": "01",
+    "kind": "list",
+    "cards": [
+      {
+        "bottom": 356.6666717529297,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 184
+      },
+      {
+        "bottom": 529.3333587646484,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 356.66668701171875
+      },
+      {
+        "bottom": 702.6667175292969,
+        "height": 173.33334350585938,
+        "width": 390,
+        "x": 0,
+        "y": 529.3333740234375
+      }
+    ],
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 75.82292175292969,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 702,
+        "height": 172,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 530
+      }
+    ],
+    "width": 390
+  },
+  {
+    "study": "01",
+    "kind": "event",
+    "action": {
+      "bottom": 744,
+      "height": 48,
+      "width": 163.9166717529297,
+      "x": 202.08334350585935,
+      "y": 696
+    },
+    "categoryY": 390.6666870117187,
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Events",
+        "width": 94.57292175292967,
+        "x": 24,
+        "y": 20
+      },
+      {
+        "bottom": 744,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 163.9166717529297,
+        "x": 202.08334350585935,
+        "y": 696
+      },
+      {
+        "bottom": 824,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 780
+      },
+      {
+        "bottom": 2159.33349609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 135.9791717529297,
+        "x": 24,
+        "y": 2115.33349609375
+      }
+    ],
+    "titleY": 418.6666870117187,
+    "width": 390
+  },
+  {
+    "study": "02",
+    "kind": "list",
+    "cards": [
+      {
+        "bottom": 356.6666717529297,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 184
+      },
+      {
+        "bottom": 529.3333587646484,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 356.66668701171875
+      },
+      {
+        "bottom": 702.6667175292969,
+        "height": 173.33334350585938,
+        "width": 390,
+        "x": 0,
+        "y": 529.3333740234375
+      }
+    ],
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 75.82292175292969,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 702,
+        "height": 172,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 530
+      }
+    ],
+    "width": 390
+  },
+  {
+    "study": "02",
+    "kind": "event",
+    "action": {
+      "bottom": 744,
+      "height": 48,
+      "width": 163.9166717529297,
+      "x": 202.08334350585935,
+      "y": 696
+    },
+    "categoryY": 390.6666870117187,
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Events",
+        "width": 94.57292175292967,
+        "x": 24,
+        "y": 20
+      },
+      {
+        "bottom": 744,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 163.9166717529297,
+        "x": 202.08334350585935,
+        "y": 696
+      },
+      {
+        "bottom": 824,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 780
+      },
+      {
+        "bottom": 2159.33349609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 135.9791717529297,
+        "x": 24,
+        "y": 2115.33349609375
+      }
+    ],
+    "titleY": 418.6666870117187,
+    "width": 390
+  },
+  {
+    "study": "03",
+    "kind": "list",
+    "cards": [
+      {
+        "bottom": 364.6666717529297,
+        "height": 180.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 184
+      },
+      {
+        "bottom": 545.3333587646484,
+        "height": 180.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 364.6666870117187
+      },
+      {
+        "bottom": 726.6667175292969,
+        "height": 181.33334350585935,
+        "width": 390,
+        "x": 0,
+        "y": 545.3333740234375
+      }
+    ],
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 79.26042175292969,
+        "x": 28,
+        "y": 16
+      },
+      {
+        "bottom": 726,
+        "height": 180,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 546
+      }
+    ],
+    "width": 390
+  },
+  {
+    "study": "03",
+    "kind": "event",
+    "action": {
+      "bottom": 744,
+      "height": 48,
+      "width": 163.96875,
+      "x": 198.03125,
+      "y": 696
+    },
+    "categoryY": 390.6666870117187,
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Events",
+        "width": 94.5,
+        "x": 28,
+        "y": 20
+      },
+      {
+        "bottom": 744,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 163.96875,
+        "x": 198.03125,
+        "y": 696
+      },
+      {
+        "bottom": 824,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 334,
+        "x": 28,
+        "y": 780
+      },
+      {
+        "bottom": 2159.33349609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 133.0104217529297,
+        "x": 28,
+        "y": 2115.33349609375
+      }
+    ],
+    "titleY": 418.6666870117187,
+    "width": 390
+  },
+  {
+    "study": "04",
+    "kind": "list",
+    "cards": [
+      {
+        "bottom": 356.6666717529297,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 184
+      },
+      {
+        "bottom": 529.3333587646484,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 356.66668701171875
+      },
+      {
+        "bottom": 702.6667175292969,
+        "height": 173.33334350585938,
+        "width": 390,
+        "x": 0,
+        "y": 529.3333740234375
+      }
+    ],
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 77.69792175292969,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 702,
+        "height": 172,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 530
+      }
+    ],
+    "width": 390
+  },
+  {
+    "study": "04",
+    "kind": "event",
+    "action": {
+      "bottom": 744,
+      "height": 48,
+      "width": 162.5416717529297,
+      "x": 203.45834350585935,
+      "y": 696
+    },
+    "categoryY": 390.6666870117187,
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Events",
+        "width": 93.60417175292967,
+        "x": 24,
+        "y": 20
+      },
+      {
+        "bottom": 744,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 162.5416717529297,
+        "x": 203.45834350585935,
+        "y": 696
+      },
+      {
+        "bottom": 824,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 780
+      },
+      {
+        "bottom": 2159.33349609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 131.64584350585938,
+        "x": 24,
+        "y": 2115.33349609375
+      }
+    ],
+    "titleY": 418.6666870117187,
+    "width": 390
+  },
+  {
+    "study": "05",
+    "kind": "list",
+    "cards": [
+      {
+        "bottom": 356.6666717529297,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 184
+      },
+      {
+        "bottom": 529.3333587646484,
+        "height": 172.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 356.66668701171875
+      },
+      {
+        "bottom": 702.6667175292969,
+        "height": 173.33334350585938,
+        "width": 390,
+        "x": 0,
+        "y": 529.3333740234375
+      }
+    ],
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 73.16667175292969,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 702,
+        "height": 172,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 530
+      }
+    ],
+    "width": 390
+  },
+  {
+    "study": "05",
+    "kind": "event",
+    "action": {
+      "bottom": 744,
+      "height": 48,
+      "width": 155.36459350585938,
+      "x": 210.6354217529297,
+      "y": 696
+    },
+    "categoryY": 390.6666870117187,
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Events",
+        "width": 90.58333587646484,
+        "x": 24,
+        "y": 20
+      },
+      {
+        "bottom": 744,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 155.36459350585938,
+        "x": 210.6354217529297,
+        "y": 696
+      },
+      {
+        "bottom": 824,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 780
+      },
+      {
+        "bottom": 2163.33349609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 123.34375,
+        "x": 24,
+        "y": 2119.33349609375
+      }
+    ],
+    "titleY": 418.6666870117187,
+    "width": 390
+  },
+  {
+    "study": "06",
+    "kind": "list",
+    "cards": [
+      {
+        "bottom": 364.6666717529297,
+        "height": 180.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 184
+      },
+      {
+        "bottom": 545.3333587646484,
+        "height": 180.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 364.6666870117187
+      },
+      {
+        "bottom": 726.6667175292969,
+        "height": 181.33334350585935,
+        "width": 390,
+        "x": 0,
+        "y": 545.3333740234375
+      }
+    ],
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 75.82292175292969,
+        "x": 28,
+        "y": 16
+      },
+      {
+        "bottom": 726,
+        "height": 180,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 546
+      }
+    ],
+    "width": 390
+  },
+  {
+    "study": "06",
+    "kind": "event",
+    "action": {
+      "bottom": 744,
+      "height": 48,
+      "width": 163.9166717529297,
+      "x": 198.08334350585935,
+      "y": 696
+    },
+    "categoryY": 382.6666870117187,
+    "client": 390,
+    "clipped": [],
+    "fonts": [],
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Events",
+        "width": 94.57292175292967,
+        "x": 28,
+        "y": 20
+      },
+      {
+        "bottom": 744,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 163.9166717529297,
+        "x": 198.08334350585935,
+        "y": 696
+      },
+      {
+        "bottom": 824,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 334,
+        "x": 28,
+        "y": 780
+      },
+      {
+        "bottom": 2183.33349609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 135.9791717529297,
+        "x": 28,
+        "y": 2139.33349609375
+      }
+    ],
+    "titleY": 410.6666870117187,
+    "width": 390
+  }
+]

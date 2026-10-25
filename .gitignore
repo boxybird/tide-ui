@@ -1,0 +1,54 @@
+# JavaScript dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/install-state.gz
+.pnp.*
+
+# Python bytecode, virtual environments, and tool caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment settings (keep shareable examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Runtime logs and temporary files
+*.log
+*.pid
+*.pid.lock
+*.tmp
+*.swp
+*.swo
+*~
+
+# Test coverage and disposable tool caches
+coverage/
+.nyc_output/
+.cache/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+
+# Operating-system metadata and local editor settings
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+
+# Keep source, lockfiles, release dist/ directories, ZIP archives,
+# screenshots, and QA evidence versioned for the preserved studies.

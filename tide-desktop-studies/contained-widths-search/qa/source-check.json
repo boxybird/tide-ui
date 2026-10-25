@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "htmlPages": 160,
+  "localReferences": 13002,
+  "unchangedComponentDocuments": 159,
+  "preserved": {
+    "desktopStudyFiles": 185,
+    "widthStudyFiles": 177,
+    "appFiles": 980,
+    "kitFiles": 180,
+    "refinementFiles": 177,
+    "lineupFiles": 182,
+    "controlBarFiles": 176,
+    "filterSpaceFiles": 178,
+    "slidingFilterFiles": 123,
+    "readingWidthFiles": 188
+  },
+  "newKitComponents": 0,
+  "adapterChange": "Session namespace plus explicit gallery initial-open hint. Original focus and disclosure behavior retained. Search layout selects existing normal/icon button modifiers.",
+  "failures": []
+}

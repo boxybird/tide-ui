@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-theme="tide" data-mode="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search and filters · Tide adoption review</title>
+  <link rel="stylesheet" href="../base/kit/css/tide.css">
+</head>
+<body class="tide">
+<a class="tide-skip-link" href="#review">Skip to the review</a>
+<main class="tide-content-page" id="review">
+  <header class="tide-content-page__header">
+    <p class="tide-eyebrow">Tide / Adoption review</p>
+    <h1 class="tide-content-page__title">Search and filters.</h1>
+    <p class="tide-content-page__lead">Reuse the controls we have. Give the scrolling panel and its pinned actions a shared home, with a precise interaction contract.</p>
+    <div class="tide-content-page__meta"><span class="tide-badge">9 decisions</span><span class="tide-badge">1 proposed block</span><span class="tide-badge">0 new primitives</span><time datetime="2026-10-24">October 24, 2026</time></div>
+  </header>
+  <div class="tide-content-page__layout">
+    <nav class="tide-content-page__contents" aria-labelledby="contents-title">
+      <h2 class="tide-content-page__contents-title" id="contents-title">In this review</h2>
+      <ul><li><a href="#recommendation">Recommendation</a></li><li><a href="#decisions">Ownership map</a></li><li><a href="#panel">Panel contract</a></li><li><a href="#interaction">State and actions</a></li><li><a href="#html">HTML specimen</a></li><li><a href="#host">App-owned behavior</a></li><li><a href="#release">Adoption sequence</a></li><li><a href="#evidence">Evidence and limits</a></li></ul>
+    </nav>
+    <article class="tide-prose tide-content-page__body" aria-label="Search and filter adoption review">
+        <h2 id="recommendation">What should return to the kit</h2>
+        <p><strong>Document the combined refinement form, live draft count, action semantics and applied context. Extract one reusable panel layout when implementation begins.</strong> Existing Field, Fieldset, Choice, Button, Badge, Result summary, Empty state and disclosure already cover the individual controls and states.</p>
+        <p>This records the decisions. It does not ship new component CSS or change the approved prototype. The proposed <code>tide-filter-panel</code> name is a candidate API, separate from the shipped component manifest.</p>
+        <p>The approved Unified Search 1.0.2 and its dependencies remain fixed. This companion documentation uses the existing Prose and Content page components. The kit's exact file inventory is also locked, so the review lives beside the studies until a versioned adoption incorporates it.</p>
+        <h2 id="decisions">The ownership map</h2>
+        <div class="tide-prose__table-wrap" role="region" aria-label="Search and filter ownership decisions" tabindex="0">
+          <table><caption>Each discovery has a component, composition or host responsibility.</caption><thead><tr><th scope="col">Pattern</th><th scope="col">Kit decision</th><th scope="col">Host responsibility</th></tr></thead><tbody>{{DECISIONS}}</tbody></table>
+        </div>
+        <p><a href="decisions.json">Read the machine-readable review register</a>. Its proposed source homes are future work, not files that have already been implemented.</p>
+        <h2 id="panel">One panel block, with a footer</h2>
+        <p><code>tide-filter-panel</code> is justified because the kit has no shared structure for an independently scrolling form body and an always-reachable action area. A native disclosure only reveals content; the additive Panel example does not provide this layout.</p>
+        <p>The proposed block has an optional <code>__header</code>, <code>__title</code>, <code>__description</code>, scrolling <code>__body</code> and non-scrolling <code>__footer</code>. Its <code>__status-row</code> holds Reset all and a <code>__count</code>; the existing full-width Button supplies Show events. These are panel elements, rather than separate live-count, reset-button and action-dock components.</p>
+        <ul>
+          <li>The body uses a zero-minimum grid track and native overflow. The footer stays outside that scrolling area.</li>
+          <li>The footer consumes existing space 4 above and below the status row, preserving the approved 16px balance. Its row can wrap with long wording or enlarged text.</li>
+          <li>Reuse existing semantic color, type, target, radius, border and spacing tokens. Keep neutral dividers and the square control treatment.</li>
+          <li>Give the count its own panel element using the existing secondary-text role. The existing Caption uses a muted role, so substituting it blindly would change the approved appearance.</li>
+          <li>The host supplies native dialog or labelled aside semantics and the available height. The kit supplies inner layout, not a 75rem breakpoint, column widths or a global viewport calculation.</li>
+        </ul>
+        <p>Proposed source homes: <code>css/filter-panel.css</code> in the existing <code>tide.components.extensions</code> layer, shared <code>templates/filter-panel.html</code>, and a frame generated from that source in every theme and mode. Public names, optional presentation variants and any local inputs must be registered when those files actually ship.</p>
+        <h2 id="interaction">The interaction contract</h2>
+        <p><strong>This is a live count with deliberate apply.</strong> Typing and changing filters preview the draft. The event feed and applied URL change on Show events or Enter. Calling it automatic live-result search would promise a different behavior.</p>
+        <div class="tide-prose__table-wrap" role="region" aria-label="Search and filter state contract" tabindex="0">
+          <table><caption>Draft state and applied state are distinct.</caption><thead><tr><th scope="col">State</th><th scope="col">Visible behavior</th><th scope="col">Rule</th></tr></thead><tbody>{{STATES}}</tbody></table>
+        </div>
+        <h3 id="announcements">Counts and announcements</h3>
+        <p>Keep one polite, atomic draft status in the panel. Update its text and the submit label together without moving focus on each edit. The applied Result summary remains the authority for the feed. Avoid making every field, badge, button and container a competing live region. Status messages should be available to assistive technology without taking focus, following <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html">W3C's status-message guidance</a>.</p>
+        <h3 id="dialog-behavior">Modal and desktop behavior</h3>
+        <p>The flyout uses native <code>dialog</code> and <code>showModal()</code>. It needs a meaningful title, an initial focus target inside it, contained Tab/Shift+Tab navigation and focus restoration on dismissal. Preserve Cancel/Escape/backdrop rollback before closing. Do not add positive tabindex values or simulate a dialog with an unlabelled div. See the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/">W3C dialog pattern</a>.</p>
+        <p>The desktop rail is non-modal. Its Close action hides the rail and retains the draft; it is not Cancel. An open small-screen modal rolls back before the desktop host is restored. Preserve one live control set through this change; cloning forms creates duplicate IDs, ambiguous form ownership and divergent values.</p>
+        <h2 id="html">The form can use existing classes</h2>
+        <p>A standalone search Field needs no new control and no empty second column from <code>tide-search-line</code>. Keep that existing two-part composition available for other screens that really have an adjacent submit action.</p>
+        <p>This specimen defines form semantics using shipped classes. Its footer is deliberately unstyled as a panel: that layout is the proposed extraction. The host computes matches and handles the GET route; this is not a working search service.</p>
+        <pre role="region" aria-label="Combined search and filter HTML specimen" tabindex="0"><code>{{EXAMPLE}}</code></pre>
+        <p><a href="examples/combined-form.html.txt" download>Download the HTML specimen</a>. An externally positioned submit uses <code>form</code> to retain the same owner. An input outside that form needs its own association; a fieldset's <code>form</code> attribute does not automatically associate every child. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/form">MDN's form-owner reference</a>.</p>
+        <h2 id="host">What stays in the app</h2>
+        <p>Matching words, inclusive Albuquerque dates, OR categories, event data, GET destinations, preview selection and history/reading-position restoration remain host behavior. The kit documents how that behavior meets its controls; CSS does not pretend to supply matching or routing.</p>
+        <p>Margin Reveal, the fixed event-detail position, header alignment, independently bounded desktop panels, the 75rem breakpoint and the 24px plus native-gutter clearance stay in the app shell. The measured scrollbar width is a runtime value, not a theme palette or spacing token. Keep native scrollbars and remove the measurement below desktop as the approved implementation does.</p>
+        <p>Motion timing, visual-viewport/keyboard positioning and responsive node orchestration also stay host-owned. Future asynchronous matching would need a separately specified pending, failure and stale-response contract; the approved local count is synchronous. Do not invent those as already-shipped states.</p>
+        <h2 id="release">A controlled adoption sequence</h2>
+        <ol>
+          <li>Keep the approved prototype, original kit and current dependency files pinned. This review is additive documentation only.</li>
+          <li>Implement the one panel block and the shared form specimen in an additive kit release. Register CSS, HTML, elements, states and integration behavior in the existing manifest and component documentation.</li>
+          <li>Generate the same specimen in Tide, Summer and Bumble, each light and dark. Cover default, checked, disabled Reset, focus, invalid dates, one/zero counts, long copy, enlarged text, short heights and native scrolling.</li>
+          <li>Use an unfrozen successor app consumer to adopt that shared source. Remove the corresponding private panel, row, count and full-width-button styles; keep the host controller and column geometry. Do not maintain parallel kit/app implementations.</li>
+          <li>Compare before/after geometry and states, run palette/ownership/markup checks, and record keyboard, assistive-technology and browser evidence. Preserve this prototype rather than using it as a migration target.</li>
+        </ol>
+        <p>There are no new global type, space, radius, color or motion primitives in this recommendation. Native disclosure, Field errors, neutral Badge and Empty state already have homes. The next implementation should consolidate them, not create alternate families.</p>
+        <h2 id="evidence">Evidence and limits</h2>
+        <p>The review is grounded in the approved <a href="http://127.0.0.1:4187/margin-reveal-unified-search/demo/index.html">Unified Search 1.0.2 prototype</a>, its controller/styles, the existing component registry and the kit's <a href="../base/kit/docs/ADOPTION.md">adoption rules</a>. Its archive contains 72 preserved files. The original 180 maintained-kit files also remain unchanged.</p>
+        <p>Existing browser evidence is Chromium. Firefox/Safari testing remains deferred at the user's request; physical keyboard/device and screen-reader verification remain adoption work. This review does not claim those checks passed.</p>
+        <p><a href="qa/preservation.json">Preservation and source checks</a> · <a href="qa/kit-checks.json">Kit checks in an isolated verification copy</a> · <a href="README.md">Scope and maintenance notes</a></p>
+    </article>
+  </div>
+  <footer class="tide-content-page__footer">
+    <nav class="tide-content-page__footer-links" aria-label="Related kit documentation"><a href="../base/kit/index.html">Back to the UI kit</a><a href="../base/kit/docs/COMPONENTS.md">Existing components</a><a href="decisions.json">Review register</a><a href="http://127.0.0.1:4187/margin-reveal-unified-search/demo/index.html">Approved prototype</a></nav>
+    <p>Review recorded. Component extraction and public API registration have not shipped.</p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,68 @@
+[
+  {
+    "page": "01-list",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "01-event",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "search",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "filters",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "saved",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "saved-empty",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "submit",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "review",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "received",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "states",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  },
+  {
+    "page": "no-results",
+    "sameText": true,
+    "sameElementCount": true,
+    "differences": []
+  }
+]

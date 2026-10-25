@@ -1,0 +1,14 @@
+{
+  "gather": {
+    "event_difference_bounds": null
+  },
+  "aperture": {
+    "event_difference_bounds": null
+  },
+  "shutter": {
+    "event_difference_bounds": null
+  },
+  "list": {
+    "difference_bounds": null
+  }
+}

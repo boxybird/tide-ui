@@ -1,0 +1,448 @@
+{
+  "version": "1.2.1",
+  "classConvention": "BEM with tide- prefix",
+  "runtime": "HTML and CSS; native browser behavior only",
+  "componentSource": "templates/library.html#components",
+  "screenSource": "templates/frames/",
+  "components": [
+    {
+      "name": "Button",
+      "block": "tide-button",
+      "variants": [
+        "secondary",
+        "quiet",
+        "full",
+        "icon",
+        "plan"
+      ],
+      "states": [
+        "focus-visible",
+        "hover",
+        "active",
+        "disabled"
+      ],
+      "roles": [
+        "accent",
+        "on-accent",
+        "accent-state-target",
+        "accent-hover",
+        "focus",
+        "border-control"
+      ],
+      "fixture": "search.html"
+    },
+    {
+      "name": "Icon button",
+      "block": "tide-icon-button",
+      "variants": [
+        "selected",
+        "focus-sample"
+      ],
+      "states": [
+        "focus-visible",
+        "aria-pressed"
+      ],
+      "roles": [
+        "text-primary",
+        "selected-text",
+        "selected-surface",
+        "selected-border",
+        "focus"
+      ],
+      "fixture": "library"
+    },
+    {
+      "name": "Field",
+      "block": "tide-field",
+      "elements": [
+        "label",
+        "control",
+        "hint",
+        "error"
+      ],
+      "states": [
+        "focus-visible",
+        "disabled",
+        "aria-invalid",
+        "required"
+      ],
+      "roles": [
+        "field",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "status-danger-text",
+        "border-control",
+        "focus"
+      ],
+      "fixture": "submit.html"
+    },
+    {
+      "name": "Native choice",
+      "block": "tide-choice",
+      "states": [
+        "checked",
+        "focus-visible"
+      ],
+      "roles": [
+        "accent",
+        "focus"
+      ],
+      "fixture": "filters.html"
+    },
+    {
+      "name": "Filter chip",
+      "block": "tide-chip",
+      "variants": [
+        "selected"
+      ],
+      "states": [
+        "checked",
+        "focus-visible"
+      ],
+      "roles": [
+        "text-secondary",
+        "selected-text",
+        "selected-surface",
+        "selected-border",
+        "border-control"
+      ],
+      "fixture": "filters.html"
+    },
+    {
+      "name": "Badge",
+      "block": "tide-badge",
+      "variants": [
+        "success",
+        "warning",
+        "danger"
+      ],
+      "states": [
+        "static status text",
+        "neutral In view label inside an event-card status slot"
+      ],
+      "roles": [
+        "text-secondary",
+        "status-success-text",
+        "status-warning-text",
+        "status-danger-text"
+      ],
+      "fixture": "states.html"
+    },
+    {
+      "name": "Notice",
+      "block": "tide-notice",
+      "variants": [
+        "error",
+        "success"
+      ],
+      "states": [
+        "explicit wording; uniform neutral border"
+      ],
+      "roles": [
+        "surface",
+        "text-primary",
+        "text-secondary",
+        "border-strong"
+      ],
+      "fixture": "states.html"
+    },
+    {
+      "name": "Toast specimen",
+      "block": "tide-toast",
+      "states": [
+        "static message and link"
+      ],
+      "roles": [
+        "raised",
+        "text-primary",
+        "accent"
+      ],
+      "fixture": "library"
+    },
+    {
+      "name": "Organizer",
+      "block": "tide-organizer",
+      "states": [
+        "contact link"
+      ],
+      "roles": [
+        "text-primary",
+        "text-secondary",
+        "border-subtle",
+        "accent"
+      ],
+      "fixture": "library"
+    },
+    {
+      "name": "Sponsored placement",
+      "block": "tide-partner",
+      "elements": [
+        "label"
+      ],
+      "states": [
+        "explicit sponsored wording"
+      ],
+      "roles": [
+        "canvas",
+        "text-primary",
+        "text-secondary",
+        "text-muted"
+      ],
+      "fixture": "library"
+    },
+    {
+      "name": "Event card",
+      "block": "tide-event-card",
+      "elements": [
+        "link",
+        "content",
+        "copy",
+        "heading",
+        "save",
+        "title",
+        "venue",
+        "meta",
+        "separator",
+        "price",
+        "status"
+      ],
+      "variants": ["in-view"],
+      "states": [
+        "hover",
+        "focus-visible",
+        "long title wrap",
+        "in-view preview, with neutral badge; distinct from aria-current=page"
+      ],
+      "roles": [
+        "surface",
+        "text-primary",
+        "text-secondary",
+        "text-label",
+        "accent",
+        "border-subtle"
+      ],
+      "fixture": "01-list.html"
+    },
+    {
+      "name": "Prominent date",
+      "block": "tide-date",
+      "elements": [
+        "day",
+        "parts"
+      ],
+      "states": [
+        "full accessible time label"
+      ],
+      "roles": [
+        "accent",
+        "text-secondary"
+      ],
+      "fixture": "01-list.html"
+    },
+    {
+      "name": "Empty state",
+      "block": "tide-empty",
+      "states": [
+        "no results",
+        "no saved events"
+      ],
+      "roles": [
+        "text-primary",
+        "text-secondary",
+        "accent"
+      ],
+      "fixture": "saved-empty.html"
+    },
+    {
+      "name": "Missing photo",
+      "block": "tide-fallback",
+      "elements": [
+        "label"
+      ],
+      "states": [
+        "no image"
+      ],
+      "roles": [
+        "surface",
+        "text-primary",
+        "text-muted"
+      ],
+      "fixture": "review.html"
+    },
+    {
+      "name": "File field",
+      "block": "tide-upload",
+      "states": [
+        "native optional file choice"
+      ],
+      "roles": [
+        "raised",
+        "text-primary",
+        "text-secondary",
+        "border-control"
+      ],
+      "fixture": "submit.html"
+    },
+    {
+      "name": "Photographic event opening",
+      "block": "tide-event-hero",
+      "elements": [
+        "photo",
+        "scrim",
+        "toolbar",
+        "content",
+        "intro",
+        "facts",
+        "admission",
+        "cue",
+        "title"
+      ],
+      "states": [
+        "full viewport",
+        "short viewport"
+      ],
+      "roles": [
+        "photo-canvas",
+        "photo-text-primary",
+        "photo-text-secondary",
+        "photo-text-muted",
+        "photo-accent",
+        "on-photo-accent"
+      ],
+      "fixture": "01-event.html"
+    },
+    {
+      "name": "Expandable disclosure",
+      "block": "tide-expandable",
+      "elements": ["summary", "icon", "body"],
+      "states": ["closed", "open", "focus-visible"],
+      "roles": ["text-secondary", "border-control", "focus"],
+      "source": "css/patterns.css",
+      "styleOwnership": "kit",
+      "fixture": "app-patterns.html",
+      "behavior": "Native details/summary. Enter or Space toggles; Tab reaches revealed controls. Do not simulate aria-expanded or duplicate the native role."
+    },
+    {
+      "name": "Calendar event group",
+      "block": "tide-event-group",
+      "elements": ["header", "title", "count", "nav", "jump"],
+      "variants": ["sticky"],
+      "states": ["one/many events", "multiple months", "hidden empty group", "focus-visible jump"],
+      "roles": ["canvas", "text-secondary", "text-muted", "accent", "border-subtle", "focus"],
+      "source": "css/patterns.css",
+      "styleOwnership": "kit",
+      "fixture": "app-patterns.html",
+      "behavior": "Real fragment links and unique heading IDs. Host updates counts/hidden state; desktop list-only scrolling and target focus belong to the host navigation helper."
+    },
+    {
+      "name": "Event details",
+      "block": "tide-event-details",
+      "elements": [
+        "lead",
+        "section",
+        "title",
+        "section-title"
+      ],
+      "states": [
+        "scrolling rich detail"
+      ],
+      "roles": [
+        "canvas",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "accent"
+      ],
+      "fixture": "01-event.html"
+    },
+    {
+      "name": "Prose",
+      "block": "tide-prose",
+      "elements": ["table-wrap", "exclude"],
+      "variants": [],
+      "states": ["ordinary rich HTML", "link hover/visited/focus-visible", "nested lists", "wide-table and code scrolling", "embedded-component exclusion", "long unbroken content"],
+      "roles": ["text-primary", "text-secondary", "accent", "accent-hover", "surface", "border-subtle", "focus"],
+      "source": "css/content.css",
+      "htmlSource": "templates/frames/prose.html",
+      "fixture": "prose.html",
+      "styleOwnership": "kit",
+      "contract": "docs/CONTENT.md#prose",
+      "behavior": "Native HTML. Host owns a valid heading outline, safe rich HTML, meaningful links, alt text and table headers. Wide scroll regions have visible captions, accessible names and keyboard access."
+    },
+    {
+      "name": "Additive panel",
+      "block": "tide-panel",
+      "elements": [
+        "title",
+        "description"
+      ],
+      "states": [
+        "extension example"
+      ],
+      "roles": [
+        "surface",
+        "text-primary",
+        "text-secondary",
+        "border-subtle"
+      ],
+      "fixture": "extensions/index.html"
+    }
+  ],
+  "supportingBlocks": [
+    {"block":"tide-back-link","source":"css/components.css","purpose":"Back navigation with icon"},
+    {"block":"tide-brand","source":"css/components.css","purpose":"Wordmark navigation"},
+    {"block":"tide-caption","source":"css/base.css","purpose":"Secondary caption typography"},
+    {"block":"tide-disclosure","source":"css/components.css","purpose":"Event-detail disclosure copy; not an interactive disclosure"},
+    {"block":"tide-event-list","source":"css/layout.css","purpose":"Touching event-card stack"},
+    {"block":"tide-eyebrow","source":"css/base.css","purpose":"Small category/context label"},
+    {"block":"tide-fieldset","source":"css/components.css","purpose":"Native labelled field grouping"},
+    {"block":"tide-icon","source":"css/base.css","purpose":"Decorative icon dimensions"},
+    {"block":"tide-inclusions","source":"css/components.css","purpose":"Event inclusion list"},
+    {"block":"tide-link","source":"css/base.css","purpose":"Inline text navigation"},
+    {"block":"tide-photo-control","source":"css/components.css","purpose":"Action on photographic reading context"},
+    {"block":"tide-place","source":"css/components.css","purpose":"Venue text within event details"},
+    {"block":"tide-schedule","source":"css/components.css","purpose":"Event time/description pairs"},
+    {"block":"tide-search-line","source":"css/layout.css","purpose":"Search input and submit action row"},
+    {"block":"tide-sr-only","source":"css/utilities.css","purpose":"Visually hidden accessible text"},
+    {"block":"tide-skip-link","source":"css/utilities.css","purpose":"Focus-revealed native link to main content"}
+  ],
+  "compositionContracts": {
+    "tide-content-page": {
+      "elements": ["header", "title", "lead", "meta", "layout", "contents", "contents-title", "body", "footer", "footer-links"],
+      "source": "css/content.css",
+      "htmlSource": "templates/content/help.html",
+      "fixture": "help.html",
+      "styleOwnership": "kit",
+      "contract": "docs/CONTENT.md#content-page",
+      "behavior": "Optional native contents links sit above the body on small screens and alongside it on wide screens. Sticky only with sufficient viewport height. Host supplies routes, heading IDs, updated date, and public footer destinations."
+    },
+    "tide-results": {
+      "elements": ["count","order"],
+      "source": "css/patterns.css",
+      "styleOwnership": "kit",
+      "behavior": "Host supplies accurate singular/plural wording. Use a polite status for dynamically updated counts; sorting text is not a fake control."
+    }
+  },
+  "patterns": [
+    {"name":"Long-form content page","uses":["tide-content-page","tide-prose","tide-eyebrow","tide-skip-link"],"contract":"docs/CONTENT.md#content-page"},
+    {"name":"Selected preview","uses":["tide-event-card","tide-badge"],"contract":"docs/ADOPTION.md#selected-preview"},
+    {"name":"Calendar feed","uses":["tide-event-group","tide-event-list","tide-event-card","tide-results"],"contract":"docs/ADOPTION.md#calendar-feed"},
+    {"name":"Search and filter form","uses":["tide-expandable","tide-field","tide-fieldset","tide-choice","tide-button","tide-empty"],"contract":"docs/ADOPTION.md#search-and-filters"}
+  ],
+  "compositions": [
+    "tide-content-page",
+    "tide-screen",
+    "tide-stack",
+    "tide-row",
+    "tide-split",
+    "tide-appbar",
+    "tide-page-intro",
+    "tide-page-body",
+    "tide-form-section",
+    "tide-form-actions",
+    "tide-results",
+    "tide-summary",
+    "tide-screen-footer"
+  ]
+}

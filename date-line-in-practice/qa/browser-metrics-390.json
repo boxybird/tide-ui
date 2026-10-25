@@ -1,0 +1,592 @@
+[
+  {
+    "slug": "baseline",
+    "kind": "list",
+    "ads": [],
+    "cards": [
+      {
+        "bottom": 324,
+        "height": 184,
+        "width": 390,
+        "x": 0,
+        "y": 140
+      },
+      {
+        "bottom": 508.6666717529297,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 324
+      },
+      {
+        "bottom": 693.3333587646484,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 508.6666870117187
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 105.32292175292967,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 693.3333435058594,
+        "height": 184,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 509.3333435058594
+      }
+    ],
+    "width": 390
+  },
+  {
+    "slug": "baseline",
+    "kind": "event",
+    "ads": [],
+    "clipped": [],
+    "detailsY": 844,
+    "foreground": [
+      {
+        "bottom": 64,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 44,
+        "selector": "event-toolbar",
+        "width": 350,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 444,
+        "color": "rgb(237, 189, 139)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 16,
+        "selector": "category",
+        "width": 342,
+        "x": 24,
+        "y": 428
+      },
+      {
+        "bottom": 492,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 40,
+        "selector": "H1",
+        "width": 342,
+        "x": 24,
+        "y": 452
+      },
+      {
+        "bottom": 524,
+        "color": "rgb(184, 191, 198)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 24,
+        "selector": "subtitle",
+        "width": 342,
+        "x": 24,
+        "y": 500
+      },
+      {
+        "bottom": 644,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 96,
+        "selector": "event-facts",
+        "width": 342,
+        "x": 24,
+        "y": 548
+      },
+      {
+        "bottom": 696,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 32,
+        "selector": "admission",
+        "width": 342,
+        "x": 24,
+        "y": 664
+      },
+      {
+        "bottom": 768,
+        "color": "rgb(33, 26, 19)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 48,
+        "selector": "primary-action",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "color": "rgb(184, 191, 198)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 44,
+        "selector": "detail-cue",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      }
+    ],
+    "height": 844,
+    "hero": {
+      "bottom": 844,
+      "height": 844,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "overflow": false,
+    "photo": "../assets/images/ink-after-dark.png",
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Back to the event list",
+        "width": 44,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 768,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      },
+      {
+        "bottom": 2154.52099609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 134.64584350585938,
+        "x": 24,
+        "y": 2110.52099609375
+      }
+    ],
+    "width": 390
+  },
+  {
+    "slug": "local-partner",
+    "kind": "list",
+    "ads": [
+      {
+        "bottom": 652.6666870117188,
+        "height": 144,
+        "width": 390,
+        "x": 0,
+        "y": 508.6666870117187
+      }
+    ],
+    "cards": [
+      {
+        "bottom": 324,
+        "height": 184,
+        "width": 390,
+        "x": 0,
+        "y": 140
+      },
+      {
+        "bottom": 508.6666717529297,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 324
+      },
+      {
+        "bottom": 837.3333587646484,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 652.6666870117188
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 105.32292175292967,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 632.6666870117188,
+        "height": 44,
+        "label": "Find your evening cup",
+        "width": 342,
+        "x": 24,
+        "y": 588.6666870117188
+      },
+      {
+        "bottom": 837.3333740234375,
+        "height": 184,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 653.3333740234375
+      }
+    ],
+    "width": 390
+  },
+  {
+    "slug": "local-partner",
+    "kind": "event",
+    "ads": [
+      {
+        "bottom": 1247.1875,
+        "height": 144,
+        "width": 342,
+        "x": 24,
+        "y": 1103.1875
+      }
+    ],
+    "clipped": [],
+    "detailsY": 844,
+    "foreground": [
+      {
+        "bottom": 64,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 44,
+        "selector": "event-toolbar",
+        "width": 350,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 444,
+        "color": "rgb(237, 189, 139)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 16,
+        "selector": "category",
+        "width": 342,
+        "x": 24,
+        "y": 428
+      },
+      {
+        "bottom": 492,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 40,
+        "selector": "H1",
+        "width": 342,
+        "x": 24,
+        "y": 452
+      },
+      {
+        "bottom": 524,
+        "color": "rgb(184, 191, 198)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 24,
+        "selector": "subtitle",
+        "width": 342,
+        "x": 24,
+        "y": 500
+      },
+      {
+        "bottom": 644,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 96,
+        "selector": "event-facts",
+        "width": 342,
+        "x": 24,
+        "y": 548
+      },
+      {
+        "bottom": 696,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 32,
+        "selector": "admission",
+        "width": 342,
+        "x": 24,
+        "y": 664
+      },
+      {
+        "bottom": 768,
+        "color": "rgb(33, 26, 19)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 48,
+        "selector": "primary-action",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "color": "rgb(184, 191, 198)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 44,
+        "selector": "detail-cue",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      }
+    ],
+    "height": 844,
+    "hero": {
+      "bottom": 844,
+      "height": 844,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "overflow": false,
+    "photo": "../assets/images/ink-after-dark.png",
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Back to the event list",
+        "width": 44,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 768,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      },
+      {
+        "bottom": 1230.5208740234375,
+        "height": 44,
+        "label": "Find your evening cup",
+        "width": 308.66668701171875,
+        "x": 40.66666793823242,
+        "y": 1186.5208740234375
+      },
+      {
+        "bottom": 2330.52099609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 134.64584350585938,
+        "x": 24,
+        "y": 2286.52099609375
+      }
+    ],
+    "width": 390
+  },
+  {
+    "slug": "rough-upload",
+    "kind": "list",
+    "ads": [],
+    "cards": [
+      {
+        "bottom": 324,
+        "height": 184,
+        "width": 390,
+        "x": 0,
+        "y": 140
+      },
+      {
+        "bottom": 508.6666717529297,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 324
+      },
+      {
+        "bottom": 693.3333587646484,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 508.6666870117187
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 105.32292175292967,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 693.3333435058594,
+        "height": 184,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 509.3333435058594
+      }
+    ],
+    "width": 390
+  },
+  {
+    "slug": "rough-upload",
+    "kind": "event",
+    "ads": [],
+    "clipped": [],
+    "detailsY": 844,
+    "foreground": [
+      {
+        "bottom": 64,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 44,
+        "selector": "event-toolbar",
+        "width": 350,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 444,
+        "color": "rgb(237, 189, 139)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 16,
+        "selector": "category",
+        "width": 342,
+        "x": 24,
+        "y": 428
+      },
+      {
+        "bottom": 492,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 40,
+        "selector": "H1",
+        "width": 342,
+        "x": 24,
+        "y": 452
+      },
+      {
+        "bottom": 524,
+        "color": "rgb(184, 191, 198)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 24,
+        "selector": "subtitle",
+        "width": 342,
+        "x": 24,
+        "y": 500
+      },
+      {
+        "bottom": 644,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 96,
+        "selector": "event-facts",
+        "width": 342,
+        "x": 24,
+        "y": 548
+      },
+      {
+        "bottom": 696,
+        "color": "rgb(240, 241, 237)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 32,
+        "selector": "admission",
+        "width": 342,
+        "x": 24,
+        "y": 664
+      },
+      {
+        "bottom": 768,
+        "color": "rgb(33, 26, 19)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 48,
+        "selector": "primary-action",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "color": "rgb(184, 191, 198)",
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "height": 44,
+        "selector": "detail-cue",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      }
+    ],
+    "height": 844,
+    "hero": {
+      "bottom": 844,
+      "height": 844,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "overflow": false,
+    "photo": "../assets/images/organizer-upload.png",
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Back to the event list",
+        "width": 44,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 768,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      },
+      {
+        "bottom": 2186.52099609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 134.64584350585938,
+        "x": 24,
+        "y": 2142.52099609375
+      }
+    ],
+    "width": 390
+  }
+]

@@ -1,0 +1,49 @@
+/* Three date treatments over the Quiet Studies foundation.
+   Full-screen event anatomy is shared with the first set. */
+@layer layout {
+  .event-list { gap: 0; }
+}
+@layer components {
+  /* Extend the brand link's hit area without moving the original wordmark. */
+  .brand { min-block-size: 44px; margin-block: -8px; align-items: center; }
+  .event-card + .event-card { border-block-start: 1px solid var(--line-subtle); }
+  .card-meta { min-block-size: 24px; }
+  .event-date { color: var(--accent); font-variant-numeric: lining-nums tabular-nums; }
+  .date-day { display: block; font-weight: 500; letter-spacing: -.04em; }
+  .date-small { display: block; color: var(--text-secondary); font-weight: 400; letter-spacing: .02em; }
+  .date-small > span { display: block; }
+
+  /* 01: retain the original left edge and reading order in the card. */
+  [data-layout="line"] .event-date { display: inline-flex; align-items: center; gap: 8px; }
+  [data-layout="line"] .date-day { font-size: 26px; line-height: 32px; }
+  [data-layout="line"] .date-small { font-size: 11px; line-height: 14px; }
+  [data-layout="line"] .card-meta { column-gap: 16px; }
+  [data-layout="line"] .meta-separator { block-size: 16px; }
+
+  /* 02: a right-hand date, with enough room reserved for real title wrapping. */
+  [data-layout="corner"] .card-copy { padding-inline-end: 72px; }
+  [data-layout="corner"] .date-corner { position: absolute; inset: var(--card-pad-y) var(--inset) auto auto; inline-size: 56px; text-align: center; }
+  [data-layout="corner"] .date-day { font-size: 32px; line-height: 36px; }
+  [data-layout="corner"] .date-small { font-size: 10px; line-height: 16px; }
+  [data-layout="corner"] .card-meta .save-mark { margin-inline-start: auto; }
+
+  /* 03: the larger date is a signpost, not a competing display headline. */
+  [data-layout="rail"] .event-card { display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; }
+  [data-layout="rail"] .date-rail { margin-block-start: 28px; }
+  [data-layout="rail"] .date-day { font-size: 32px; line-height: 36px; }
+  [data-layout="rail"] .date-small { margin-block-start: 4px; font-size: 11px; line-height: 14px; }
+}
+@layer states {
+  @media (max-width: 350px) {
+    [data-layout="line"] .card-meta { column-gap: 12px; }
+    [data-layout="rail"] .event-card { column-gap: 12px; }
+  }
+  @media (max-height: 700px) {
+    /* The normal-height photo matches Quiet Studies. On short phones, anchor
+       a reliable text surface to the same 40svh clear-photo padding. */
+    .hero-content {
+      --photo-reserve: 40vh; --photo-reserve: 40svh;
+      background: linear-gradient(180deg, transparent 0 calc(var(--photo-reserve) - 80px), rgb(8 12 14 / .70) calc(var(--photo-reserve) - 24px), rgb(8 12 14 / .86) var(--photo-reserve), var(--surface-base) 100%);
+    }
+  }
+}

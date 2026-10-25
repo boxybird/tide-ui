@@ -1,0 +1,29 @@
+[
+  {
+    "height": 740,
+    "overflow": false,
+    "state": "list",
+    "width": 320
+  },
+  {
+    "height": 740,
+    "hero": 740,
+    "overflow": false,
+    "result": "direct",
+    "state": "event",
+    "width": 320
+  },
+  {
+    "height": 932,
+    "overflow": false,
+    "state": "list",
+    "width": 430
+  },
+  {
+    "height": 932,
+    "hero": 932,
+    "overflow": false,
+    "state": "event",
+    "width": 430
+  }
+]

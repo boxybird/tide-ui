@@ -1,0 +1,32 @@
+/* Private compositions for this study. Kit internals and tokens are unchanged. */
+@layer tide.pressure {
+  /* Calendar headers and cards share a local stacking context beneath the
+     persistent lineup summary. Outgoing months can slide upward, but cannot
+     paint over the count or its filter control. No extra scroll container. */
+  .tide-pressure__feed { isolation: isolate; }
+  .tide-pressure__card-heading { flex-wrap: wrap; justify-content: flex-start; gap: var(--tide-space-2); }
+  .tide-pressure__card-heading > .tide-event-card__status { margin-inline-start: auto; }
+  .tide-pressure__detail-message { padding-block-end: var(--tide-space-6); }
+  .tide-pressure__feed-message { margin: var(--tide-space-4) var(--tide-layout-inset); }
+  .tide-pressure__fallback { gap: var(--tide-space-4); min-block-size: 100svh; }
+  .tide-pressure__fallback-nav { margin-block-end: auto; }
+  .tide-pressure__fallback-title {
+    margin-block-start: var(--tide-space-2);
+    font-size: var(--tide-font-size-event);
+    line-height: var(--tide-leading-event);
+    font-weight: var(--tide-font-weight-heading);
+    letter-spacing: var(--tide-tracking-event);
+    overflow-wrap: anywhere;
+  }
+  .tide-pressure__state { min-block-size: 50svh; }
+  .tide-pressure__state-title {
+    font-size: var(--tide-font-size-page);
+    line-height: var(--tide-leading-page);
+    font-weight: var(--tide-font-weight-heading);
+    letter-spacing: var(--tide-tracking-title);
+  }
+  .tide-pressure__state .tide-button { align-self: flex-start; }
+  @media (width >= 60rem) {
+    .tide-pressure__fallback { min-block-size: calc(100svh - var(--tide-app-header-block-size) - var(--tide-space-6)); }
+  }
+}

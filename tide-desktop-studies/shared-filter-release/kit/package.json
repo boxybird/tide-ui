@@ -1,0 +1,12 @@
+{
+  "name": "tide-html-css-kit",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Themeable BEM HTML/CSS reference kit. No runtime dependencies.",
+  "scripts": {
+    "dev": "node server.cjs",
+    "build": "python tools/build.py",
+    "check": "python tools/build.py --check && python tools/check.py",
+    "test": "python -m unittest discover -s tools -p test_*.py"
+  }
+}

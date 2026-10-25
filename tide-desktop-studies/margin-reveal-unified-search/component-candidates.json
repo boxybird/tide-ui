@@ -1,0 +1,14 @@
+{
+  "name": "Unified responsive search and filter actions",
+  "status": "Selected interaction direction; private app composition pending kit adoption",
+  "block": "tide-unified-search",
+  "html": "tools/build.py; unchanged original query/filter/dialog nodes",
+  "css": "unified-search.css",
+  "behavior": "unified-search.js",
+  "runtimeInputs": {"--tide-unified-search-scrollbar-gutter": "Desktop-only measured native list gutter in CSS px; zero fallback; removed below75rem"},
+  "documentation": "README.md",
+  "shellDependencies": ["../margin-reveal-responsive-filters/responsive-filters.css", "../margin-reveal-browse-first/browse-flyout.css"],
+  "reuses": ["TideSearch matching and serialization", "Field", "Fieldset", "Choice", "Button", "Badge", "Native disclosure fallback", "Original desktop action dock", "Browse First modal shell"],
+  "states": ["initial 48", "draft query", "draft dates/categories", "one match", "zero matches", "invalid dates", "reset draft", "applied GET", "cancel mobile draft", "responsive node restoration", "desktop occupied scrollbar gutter", "zero occupied gutter"],
+  "adoptionRequirements": ["Shared responsive placement contract", "All-theme/mode specimens", "Physical-device and assistive-technology testing", "Remove app-only equivalents when adopted"]
+}

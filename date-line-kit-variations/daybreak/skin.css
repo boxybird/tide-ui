@@ -1,0 +1,28 @@
+/* Paint-only skin. No type, spacing, sizing or component markup changes. */
+:root {--skin-canvas:#f3f0f7;--skin-panel:#fffaf4;--skin-raised:#ffffff;--skin-field:#ffffff;--skin-primary:#242230;--skin-secondary:#5b5668;--skin-label:#655b71;--skin-tertiary:#6d6379;--skin-accent:#6541a5;--skin-on-accent:#fffdf8;--skin-subtle:#d5cedd;--skin-strong:#b4aabd;--skin-control:#82788e;--skin-selected:#e8def6;--skin-selected-line:#9274ba;--skin-success:#32664b;--skin-success-bg:#e7f0e9;--skin-success-line:#86a891;--skin-warning:#7a5420;--skin-warning-bg:#f4ecd8;--skin-warning-line:#ac925e;--skin-danger:#953d4e;--skin-danger-bg:#f9e5e8;--skin-danger-line:#c48b99;--skin-hero-accent:#d5b9f5;--skin-scheme:light;--skin-texture:0.035;--skin-field-radius:8px;--skin-action-radius:12px;--skin-panel-radius:16px;--skin-chip-radius:24px;--skin-badge-radius:6px;--skin-icon-radius:999px;--skin-icon:brightness(.18);--skin-action-icon:brightness(0) invert(1);}
+
+html { background:var(--skin-canvas); color-scheme:var(--skin-scheme); scroll-behavior:auto !important; }
+body[data-study="01"] { --surface-base:var(--skin-canvas); --surface-panel:var(--skin-panel); --text-primary:var(--skin-primary); --text-secondary:var(--skin-secondary); --text-label:var(--skin-label); --text-tertiary:var(--skin-tertiary); --accent:var(--skin-accent); --line-subtle:var(--skin-subtle); --line-strong:var(--skin-strong); --action-radius:var(--skin-action-radius); --texture-opacity:var(--skin-texture); }
+:root { --surface-raised:var(--skin-raised); --surface-field:var(--skin-field); --control-border:var(--skin-control); --radius-control:var(--skin-action-radius); --radius-panel:var(--skin-panel-radius); --success:var(--skin-success); --success-bg:var(--skin-success-bg); --warning:var(--skin-warning); --warning-bg:var(--skin-warning-bg); --danger:var(--skin-danger); --danger-bg:var(--skin-danger-bg); --selected-bg:var(--skin-selected); --selected-line:var(--skin-selected-line); --kit-switch-radius:var(--skin-field-radius); }
+.btn:not(.secondary):not(.quiet):not(:disabled) { color:var(--skin-on-accent); }
+.btn:not(.secondary):not(.quiet):not(:disabled) .icon { filter:var(--skin-action-icon); }
+.btn.secondary .icon,.icon { filter:var(--skin-icon); }
+.icon-btn.selected { background:var(--skin-selected); border-color:var(--skin-selected-line); }
+.chip.selected,.chip:has(input:checked) { background:var(--skin-selected); border-color:var(--skin-selected-line); }
+.field input:not([type=checkbox]):not([type=radio]):not([type=file]),.field select,.field textarea { border-radius:var(--skin-field-radius); }
+.chip { border-radius:var(--skin-chip-radius); }
+.icon-btn,.screen-study figcaption > a,.round-control { border-radius:var(--skin-icon-radius); }
+.badge { border-radius:var(--skin-badge-radius); }
+.badge.success { border-color:var(--skin-success-line); }
+.badge.warning { border-color:var(--skin-warning-line); }
+.badge.danger { border-color:var(--skin-danger-line); }
+.notice,.upload-field,.swatch,input::file-selector-button { border-radius:var(--skin-field-radius); }
+.toast-sample,.organizer { border-radius:var(--skin-action-radius); }
+.doc-panel,.hero-card { border-radius:var(--skin-panel-radius); }
+.skip-link { color:var(--skin-on-accent); }
+/* The photograph is a distinct dark surface in every skin. Its crop, scrim and geometry stay fixed. */
+.event-hero { --surface-base:#111517; --text-primary:#f0f1ed; --text-secondary:#b8bfc6; --text-label:#aab3ba; --text-tertiary:#939da6; --accent:var(--skin-hero-accent); color:var(--text-primary); }
+.event-hero .icon { filter:none; }
+.event-hero .primary-action { color:#211a27; }
+.event-hero .primary-action .icon { filter:brightness(0); }
+@media(prefers-contrast:more) { body[data-study="01"] { --texture-opacity:0; } }

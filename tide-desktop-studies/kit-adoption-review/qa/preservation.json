@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "date": "2026-10-24",
+  "scope": "Companion adoption documentation; no component release",
+  "prototypeVersion": "1.0.2",
+  "prototypeFilesPreserved": 72,
+  "prototypeArchiveSha256": "1f8226ef94f33fec68671b6f72ac9c0de87fdf2c94554714a95f506e344ac490",
+  "kitFilesPreserved": 180,
+  "appFilesPreserved": 980,
+  "precedingDependencyChainPreserved": true,
+  "decisions": 9,
+  "stateRows": 12,
+  "proposedNewBlocks": [
+    "tide-filter-panel"
+  ],
+  "newComponentsShipped": 0,
+  "runtimeChanges": 0,
+  "kitChecksPass": true,
+  "failures": []
+}

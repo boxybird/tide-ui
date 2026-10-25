@@ -1,0 +1,47 @@
+<div class="tide-doc-grid">
+  <article class="tide-doc-panel">
+    <h{{PANEL_LEVEL}}>Filter disclosure</h{{PANEL_LEVEL}}>
+    <p class="tide-caption">Native open, closed and keyboard behavior. Fields and actions reuse the existing kit.</p>
+    <details class="tide-expandable" open>
+      <summary class="tide-expandable__summary">Filters {{DISCLOSURE_ICON}}</summary>
+      <form class="tide-expandable__body" action="{{FRAMES}}search.html" method="get">
+        <fieldset class="tide-fieldset tide-stack">
+          <legend class="tide-fieldset__legend">When</legend>
+          <p class="tide-field__hint" id="adopted-date-hint">Both dates are included. Dates are local to the event.</p>
+          <div class="tide-field"><label class="tide-field__label" for="adopted-from">From</label><input class="tide-field__control" id="adopted-from" name="from" type="date" aria-describedby="adopted-date-hint"></div>
+          <div class="tide-field"><label class="tide-field__label" for="adopted-through">Through</label><input class="tide-field__control" id="adopted-through" name="to" type="date" aria-describedby="adopted-date-hint"></div>
+        </fieldset>
+        <fieldset class="tide-fieldset"><legend class="tide-fieldset__legend">Category</legend>
+          <label class="tide-choice"><input name="category" value="music" type="checkbox"> Music</label>
+          <label class="tide-choice"><input name="category" value="comedy" type="checkbox"> Comedy</label>
+          <label class="tide-choice"><input name="category" value="workshop" type="checkbox"> Workshops</label>
+        </fieldset>
+        <div class="tide-row"><a class="tide-button tide-button--secondary" href="{{FRAMES}}search.html">View search specimen</a><button class="tide-button tide-button--quiet" type="reset">Clear fields</button></div>
+        <p class="tide-field__hint">Layout specimen. Matching and date validation belong to the app; these native fields and reset work here.</p>
+      </form>
+    </details>
+  </article>
+  <article class="tide-doc-panel">
+    <h{{PANEL_LEVEL}}>Calendar groups &amp; selected preview</h{{PANEL_LEVEL}}>
+    <p class="tide-caption">The existing neutral badge says “In view”. The optional card modifier supplies its outline.</p>
+    <div class="tide-results"><p class="tide-results__count">2 events</p><span class="tide-results__order">Soonest first</span></div>
+    <div class="tide-event-list">
+      <section class="tide-event-group tide-event-group--sticky" id="adopted-october" aria-labelledby="adopted-october-title" tabindex="-1">
+        <header class="tide-event-group__header"><h{{GROUP_LEVEL}} class="tide-event-group__title" id="adopted-october-title" tabindex="-1">October 2026 <span class="tide-event-group__count">1 event</span></h{{GROUP_LEVEL}}><nav class="tide-event-group__nav" aria-label="Example month navigation"><a class="tide-event-group__jump" href="#adopted-october" aria-label="Jump to October example">Oct</a><a class="tide-event-group__jump" href="#adopted-november" aria-label="Jump to November example">Nov</a></nav></header>
+        <article class="tide-event-card tide-event-card--in-view" aria-labelledby="adopted-ink-title">
+          <a class="tide-event-card__link" href="{{FRAMES}}01-event.html" aria-label="View Ink After Dark specimen"></a>
+          <div class="tide-event-card__content"><div class="tide-event-card__copy"><div class="tide-event-card__heading"><span class="tide-eyebrow">Workshop</span><span class="tide-badge tide-event-card__status">In view</span></div><h{{CARD_LEVEL}} class="tide-event-card__title" id="adopted-ink-title">Ink After Dark</h{{CARD_LEVEL}}><p class="tide-event-card__venue">Barelas Print Studio</p></div>
+          <div class="tide-event-card__meta"><time class="tide-date" datetime="2026-10-24" aria-label="Saturday, October 24, 2026"><span class="tide-date__day" aria-hidden="true">24</span><span class="tide-date__parts" aria-hidden="true"><span>Sat</span><span>Oct</span></span></time><span class="tide-event-card__separator" aria-hidden="true"></span><time datetime="2026-10-24T18:00:00-06:00">6:00 PM</time><span class="tide-event-card__separator" aria-hidden="true"></span><span class="tide-event-card__price">$32</span></div></div>
+        </article>
+      </section>
+      <section class="tide-event-group" id="adopted-november" aria-labelledby="adopted-november-title" tabindex="-1">
+        <header class="tide-event-group__header"><h{{GROUP_LEVEL}} class="tide-event-group__title" id="adopted-november-title" tabindex="-1">November 2026 <span class="tide-event-group__count">1 event</span></h{{GROUP_LEVEL}}></header>
+        <article class="tide-event-card" aria-labelledby="adopted-sunday-title">
+          <a class="tide-event-card__link" href="{{FRAMES}}01-event.html" aria-label="Open full-screen event layout specimen"></a>
+          <div class="tide-event-card__content"><div class="tide-event-card__copy"><div class="tide-event-card__heading"><span class="tide-eyebrow">Workshop</span><span class="tide-badge tide-event-card__status" hidden>In view</span></div><h{{CARD_LEVEL}} class="tide-event-card__title" id="adopted-sunday-title">First Sunday Print Exchange</h{{CARD_LEVEL}}><p class="tide-event-card__venue">Barelas Print Studio</p></div>
+          <div class="tide-event-card__meta"><time class="tide-date" datetime="2026-11-01" aria-label="Sunday, November 1, 2026"><span class="tide-date__day" aria-hidden="true">1</span><span class="tide-date__parts" aria-hidden="true"><span>Sun</span><span>Nov</span></span></time><span class="tide-event-card__separator" aria-hidden="true"></span><time datetime="2026-11-01T11:00:00-07:00">11:00 AM</time><span class="tide-event-card__separator" aria-hidden="true"></span><span class="tide-event-card__price">Free</span></div></div>
+        </article>
+      </section>
+    </div>
+  </article>
+</div>

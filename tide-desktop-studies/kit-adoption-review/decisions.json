@@ -1,0 +1,118 @@
+{
+  "title": "Search and filters — adoption review",
+  "date": "2026-10-24",
+  "status": "Review recorded; extraction not yet shipped",
+  "kitVersion": "1.2.1",
+  "prototypeVersion": "1.0.2",
+  "prototype": "tide-desktop-studies/margin-reveal-unified-search",
+  "prototypeArchiveSha256": "1f8226ef94f33fec68671b6f72ac9c0de87fdf2c94554714a95f506e344ac490",
+  "newBlockCandidates": ["tide-filter-panel"],
+  "newPrimitives": 0,
+  "runtimeChangesShipped": false,
+  "decisions": [
+    {
+      "id": "combined-form",
+      "pattern": "One combined search and filter form",
+      "decision": "Document a composition",
+      "reuse": ["tide-field", "tide-fieldset", "tide-choice", "tide-button"],
+      "contract": "One form owner and one live set of query/date/category controls. One Show events submit applies all choices; Enter uses the same form. A standalone Field needs no two-column Search line wrapper.",
+      "kitHome": "Search/filter composition contract and shared HTML specimen",
+      "hostOwns": "Matching data, GET routes, query serialization and responsive node placement",
+      "currentSources": ["tide-responsive-app/kit/css/layout.css", "tide-responsive-app/kit/css/components.css", "tide-desktop-studies/margin-reveal-unified-search/unified-search.js"]
+    },
+    {
+      "id": "panel-shell",
+      "pattern": "Scrollable filter panel with pinned actions",
+      "decision": "Extract one new layout block",
+      "reuse": ["tide-button", "tide-field", "tide-fieldset", "tide-choice"],
+      "contract": "Proposed tide-filter-panel owns an optional header, independently scrolling body and non-scrolling footer. Count, Reset all and full-width submit belong in that footer. Desktop and modal presentations share the shell's inner layout.",
+      "kitHome": "Proposed css/filter-panel.css in tide.components.extensions; shared templates/filter-panel.html; all-theme fixtures",
+      "hostOwns": "Native aside/dialog host, placement, dimensions, breakpoint, opening/closing and draft snapshot",
+      "currentSources": ["tide-desktop-studies/margin-reveal-responsive-filters/responsive-filters.css", "tide-desktop-studies/margin-reveal-unified-search/unified-search.css"]
+    },
+    {
+      "id": "draft-count",
+      "pattern": "Live draft match count and Show N events",
+      "decision": "Document behavior; use panel elements",
+      "reuse": ["tide-button", "tide-results"],
+      "contract": "The panel count previews the draft; the feed count describes applied results. Update one polite atomic draft status without moving focus. The submit label and count agree, including zero and singular wording.",
+      "kitHome": "Proposed filter-panel count/status-row elements; existing applied Result summary",
+      "hostOwns": "Calculating matches, pluralization, validation and applying results",
+      "currentSources": ["tide-responsive-app/js/search-core.js", "tide-responsive-app/js/event-search.js", "tide-desktop-studies/margin-reveal-unified-search/unified-search.js"]
+    },
+    {
+      "id": "reset-cancel-clear",
+      "pattern": "Reset all, Cancel and Clear all",
+      "decision": "Document distinct actions",
+      "reuse": ["tide-button", "tide-link"],
+      "contract": "Reset all edits the draft to empty choices and does not navigate. Modal Cancel/Escape/backdrop restores opening values. Clear all removes applied URL criteria. Closing the desktop rail retains its draft.",
+      "kitHome": "Search/filter state and action contract",
+      "hostOwns": "Snapshot, rollback, applied URL, focus restoration and desktop disclosure state",
+      "currentSources": ["tide-desktop-studies/margin-reveal-unified-search/unified-search.js", "tide-desktop-studies/contained-margin-filters/slide-adapter.js", "tide-responsive-app/js/event-search.js"]
+    },
+    {
+      "id": "launcher",
+      "pattern": "Search and filters launcher",
+      "decision": "Reuse Button",
+      "reuse": ["tide-button", "tide-icon", "tide-sr-only"],
+      "contract": "Reuse quiet/icon Button. Keep an accessible name when the text label is hidden. Expose dialog relationship and expanded state while enhanced. Avoid a new special search-button block.",
+      "kitHome": "Button integration example",
+      "hostOwns": "Header placement, icon/text breakpoint, applied-state wording and dialog activation",
+      "currentSources": ["tide-desktop-studies/margin-reveal-browse-first/tools/build.py", "tide-desktop-studies/margin-reveal-browse-first/browse-flyout.css"]
+    },
+    {
+      "id": "applied-context",
+      "pattern": "Applied criteria and result context",
+      "decision": "Reuse Badge, Link and Result summary",
+      "reuse": ["tide-badge", "tide-link", "tide-results"],
+      "contract": "Keep the applied query visible in result wording and the date/category context available after closing the panel. A descriptive category badge is text, not a removable chip or toggle.",
+      "kitHome": "Applied-context composition example",
+      "hostOwns": "Which criteria are active, count grouping and clear-all destination",
+      "currentSources": ["tide-desktop-studies/margin-reveal-unified-search/unified-search.js", "tide-responsive-app/kit/css/patterns.css"]
+    },
+    {
+      "id": "recovery",
+      "pattern": "Invalid dates, one result and no results",
+      "decision": "Reuse existing states",
+      "reuse": ["tide-field", "tide-empty", "tide-notice", "tide-button", "tide-link", "tide-event-group"],
+      "contract": "Preserve invalid entries, attach the date explanation to its field and block invalid submission. Zero matches is valid and leads to an Empty state with a recovery link. Month counts and jumps reflect applied matches.",
+      "kitHome": "Field/Empty/Calendar integration examples and state matrix",
+      "hostOwns": "Date/category rules, hidden cards/groups, recovery URLs and preview selection",
+      "currentSources": ["tide-responsive-app/js/search-core.js", "tide-responsive-app/js/event-search.js", "tide-responsive-app/kit/docs/ADOPTION.md"]
+    },
+    {
+      "id": "modal-contract",
+      "pattern": "Modal focus and responsive restoration",
+      "decision": "Document host integration",
+      "reuse": ["tide-expandable", "tide-button", "tide-field"],
+      "contract": "Use native dialog/showModal for the flyout and native details/summary for fallback. Name the dialog, place focus inside it, contain keyboard navigation and restore focus on dismissal. Reuse controls instead of cloning them at breakpoints.",
+      "kitHome": "Filter-panel semantics and host checklist",
+      "hostOwns": "Dialog lifecycle, native inertness, initial/return focus, snapshot rollback, reduced motion and visual-viewport handling",
+      "currentSources": ["tide-desktop-studies/margin-reveal-unified-search/unified-search.js", "tide-desktop-studies/margin-reveal-responsive-filters/responsive-filters.css"]
+    },
+    {
+      "id": "app-geometry",
+      "pattern": "Margin Reveal, panel heights and native scrollbar compensation",
+      "decision": "Keep app-owned",
+      "reuse": [],
+      "contract": "Keep the 75rem breakpoint, wider header margin, fixed detail position, shared viewport fit and 24px plus measured gutter rule in the app shell. A measured browser gutter is runtime geometry, not a theme token.",
+      "kitHome": "Documented exclusion from kit API",
+      "hostOwns": "All desktop column geometry and native scrollbar measurement/cleanup",
+      "currentSources": ["tide-desktop-studies/margin-reveal-unified-search/unified-search.css", "tide-desktop-studies/margin-reveal-unified-search/unified-search.js", "tide-desktop-studies/contained-margin-filters/margin-filters.css"]
+    }
+  ],
+  "states": [
+    ["Clean", "All 48 events; Reset all disabled; Show 48 events", "Applied feed and URL remain unchanged while editing."],
+    ["Draft", "Query, dates or categories change the preview count", "No navigation, automatic submission or feed replacement."],
+    ["One match", "1 matching event; Show 1 event", "Correct singular wording in both places."],
+    ["Zero matches", "0 matching events; Show 0 events remains available", "Submission uses the existing no-results recovery state."],
+    ["Invalid range", "Check the date range; Check dates", "Keep entered values, explain the error and block submission."],
+    ["Reset draft", "Query, dates and categories clear together", "Do not use native type=reset when the desired target differs from the form's initial URL values."],
+    ["Cancel modal", "Close, Escape or backdrop restores opening values", "Restore the opening snapshot, which may itself be an unsubmitted draft."],
+    ["Close desktop rail", "Hide the rail and retain the draft", "Hiding the non-modal rail is not the modal Cancel action."],
+    ["Apply / Enter", "One GET form submits all current choices", "Host updates result count, calendar context and preview together."],
+    ["Clear applied", "A real link removes applied criteria", "Distinct from Reset all's unsaved draft edit."],
+    ["Resize", "Restore the same live controls in their new host", "An open modal rolls back before desktop restoration; no duplicate IDs or submissions."],
+    ["Refresh / Back", "Applied URL and reading context are retained", "Host owns history, focus and scroll restoration."]
+  ]
+}

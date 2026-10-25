@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "htmlFiles": 61,
+  "localReferences": 4935,
+  "globalEvents": 54,
+  "venueSampleEvents": 6,
+  "baselineFilesPreserved": 283,
+  "acceptedStickyFixFilesPreserved": 11,
+  "baseHostUnchanged": true,
+  "kitEdits": 0,
+  "failures": []
+}

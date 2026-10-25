@@ -1,0 +1,106 @@
+/* Six related readings of the same design. Values are semantic tokens, not
+ * one-off component overrides. Type sizes are optically adjusted for each face.
+ * Shared layout/scale live in screens.css. Font files and licenses are local. */
+
+@layer themes {
+/* 01 — Manrope: balanced, open counters, gently warm. */
+[data-study="01"] {
+  --font-title: 'Manrope'; --font-body: 'Manrope';
+  --surface-base: #111517; --surface-panel: #1a1f22;
+  --text-primary: #f0f1ed; --text-secondary: #b8bfc6;
+  --text-label: #aab3ba; --text-tertiary: #939da6;
+  --accent: #edbd8b; --line-subtle: #343a3e; --line-strong: #4a5156;
+  --inset: 24px; --card-pad-y: 24px; --card-meta-gap: 16px;
+  --card-title-size: 24px; --detail-title-size: 36px; --story-title-size: 28px;
+  --title-weight: 580; --detail-title-leading: 40px;
+  --title-tracking: -.032em; --detail-tracking: -.04em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px;
+  --section-title-size: 16px; --detail-group-gap: 24px;
+  --action-gap: 24px; --action-radius: 12px; --texture-opacity: .24;
+}
+
+/* 02 — Source Sans: a smaller x-height needs a larger nominal optical size. */
+[data-study="02"] {
+  --font-title: 'Source Sans 3'; --font-body: 'Source Sans 3';
+  --surface-base: #131617; --surface-panel: #1b2021;
+  --text-primary: #f3f0e9; --text-secondary: #bfc3bf;
+  --text-label: #b3bab5; --text-tertiary: #969f9b;
+  --accent: #e1c4a0; --line-subtle: #353c3a; --line-strong: #505a56;
+  --inset: 24px; --card-pad-y: 24px; --card-meta-gap: 16px;
+  --card-title-size: 26px; --detail-title-size: 38px; --story-title-size: 30px;
+  --title-weight: 570; --detail-title-leading: 40px;
+  --title-tracking: -.018em; --detail-tracking: -.025em;
+  --body-size: 16px; --meta-size: 16px; --subtitle-size: 18px;
+  --section-title-size: 18px; --detail-group-gap: 24px;
+  --action-gap: 24px; --action-radius: 10px; --texture-opacity: .20;
+  --label-size: 12px; --label-tracking: .115em;
+  --body-leading: 1.5;
+}
+
+/* 03 — Newsreader is confined to event names and story headings. */
+[data-study="03"] {
+  --font-title: 'Newsreader'; --font-body: 'DM Sans';
+  --surface-base: #151514; --surface-panel: #211f1c;
+  --text-primary: #f3efe6; --text-secondary: #c0bcb3;
+  --text-label: #b7afa1; --text-tertiary: #9e998f;
+  --accent: #e8c394; --line-subtle: #3f3a31; --line-strong: #5a5245;
+  --inset: 24px; --card-pad-y: 24px; --card-meta-gap: 20px;
+  --card-title-size: 28px; --detail-title-size: 40px; --story-title-size: 32px;
+  --title-weight: 480; --detail-title-leading: 44px;
+  --title-tracking: -.012em; --detail-tracking: -.024em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px;
+  --section-title-size: 16px; --detail-group-gap: 24px;
+  --action-gap: 24px; --action-radius: 8px; --texture-opacity: .18;
+}
+
+/* 04 — DM Sans uses lighter weight to keep its large x-height calm. */
+[data-study="04"] {
+  --font-title: 'DM Sans'; --font-body: 'DM Sans';
+  --surface-base: #101418; --surface-panel: #1a2026;
+  --text-primary: #f1f1ef; --text-secondary: #b7c0c9;
+  --text-label: #aab7c3; --text-tertiary: #95a2ad;
+  --accent: #e8c2a5; --line-subtle: #343d46; --line-strong: #495663;
+  --inset: 24px; --card-pad-y: 24px; --card-meta-gap: 16px;
+  --card-title-size: 24px; --detail-title-size: 36px; --story-title-size: 28px;
+  --title-weight: 530; --detail-title-leading: 40px;
+  --title-tracking: -.025em; --detail-tracking: -.034em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px;
+  --section-title-size: 16px; --detail-group-gap: 24px;
+  --action-gap: 24px; --action-radius: 14px; --texture-opacity: .22;
+}
+
+/* 05 — Plex is proportional for reading, mono only for the category label. */
+[data-study="05"] {
+  --font-title: 'IBM Plex Sans'; --font-body: 'IBM Plex Sans';
+  --font-label: 'IBM Plex Mono'; --label-size: 11px; --label-weight: 400;
+  --label-tracking: .08em;
+  --surface-base: #121616; --surface-panel: #1b2221;
+  --text-primary: #eef1eb; --text-secondary: #b6c1bb;
+  --text-label: #b0c0b6; --text-tertiary: #93a29b;
+  --accent: #dcccaa; --line-subtle: #35423e; --line-strong: #50615a;
+  --inset: 20px; --card-pad-y: 20px; --card-meta-gap: 16px;
+  --card-title-size: 25px; --detail-title-size: 36px; --story-title-size: 28px;
+  --title-weight: 550; --detail-title-leading: 40px;
+  --title-tracking: -.02em; --detail-tracking: -.028em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px;
+  --section-title-size: 16px; --detail-group-gap: 24px;
+  --action-gap: 24px; --action-radius: 6px; --texture-opacity: .22;
+}
+
+/* 06 — Instrument Sans keeps the weight modest; spacing adds composure. */
+[data-study="06"] {
+  --font-title: 'Instrument Sans'; --font-body: 'Instrument Sans';
+  --surface-base: #101214; --surface-panel: #191d20;
+  --text-primary: #ecefea; --text-secondary: #bac1c5;
+  --text-label: #b0b9bd; --text-tertiary: #96a1a6;
+  --accent: #e8cbb2; --line-subtle: #343b3f; --line-strong: #4c585e;
+  --inset: 28px; --card-pad-y: 28px; --card-meta-gap: 20px;
+  --card-title-size: 24px; --detail-title-size: 36px; --story-title-size: 28px;
+  --title-weight: 530; --detail-title-leading: 40px;
+  --title-tracking: -.025em; --detail-tracking: -.035em;
+  --body-size: 14px; --meta-size: 14px; --subtitle-size: 16px;
+  --section-title-size: 16px; --detail-group-gap: 28px;
+  --action-gap: 28px; --action-radius: 10px; --texture-opacity: .18;
+  --hero-bottom: 28px;
+}
+}

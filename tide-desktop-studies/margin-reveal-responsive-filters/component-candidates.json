@@ -1,0 +1,13 @@
+{
+  "name": "Responsive filter dialog",
+  "status": "App experiment; awaiting selection before maintained-kit adoption",
+  "block": "tide-responsive-filters",
+  "html": "tools/build.py: LAUNCHER and DIALOG; original form controls are moved, not cloned",
+  "css": "responsive-filters.css",
+  "behavior": "responsive-filters.js",
+  "documentation": "README.md",
+  "reuses": ["Field", "Fieldset", "Choice", "Button", "Icon", "Badge", "Native disclosure fallback"],
+  "states": ["closed", "open with applied values", "draft", "zero matches", "invalid dates", "reset draft", "cancelled", "submitted", "desktop restoration"],
+  "breakpoints": {"fullScreen": "width <48rem", "drawer": "48rem <=width <75rem", "approvedDesktop": "width >=75rem"},
+  "adoptionRequirements": ["User selects the pattern", "Shared shell and state contract", "All six theme/mode specimens", "Keyboard, focus, screen-reader and device verification", "Remove duplicated app-owned styling"]
+}

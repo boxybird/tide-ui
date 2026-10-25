@@ -1,0 +1,1759 @@
+{
+  "pass": true,
+  "date": "2026-10-24",
+  "browser": "In-app Chromium; responsive desktop/tablet/phone verification. Physical-device, assistive-technology and Firefox/Safari checks remain adoption work.",
+  "checks": {
+    "liveDesktopCount": true,
+    "singleDesktopSubmit": true,
+    "oneResult": true,
+    "resetIsDraft": true,
+    "zeroResults": true,
+    "resetRecovery": true,
+    "inclusiveDateAndCategory": true,
+    "orCategories": true,
+    "invalidDates": true,
+    "enterSubmits": true,
+    "tabletLiveCount": true,
+    "tabletCancelRestoresQuery": true,
+    "openDrawerResizeRestores": true,
+    "phoneLiveCountAndApply": true,
+    "phoneEventBack": true,
+    "shortViewportActionVisible": true,
+    "desktopGeometryIdentical": true,
+    "oneControlAndStatusAcrossSizes": true
+  },
+  "evidence": {
+    "desktopDraftOne": {
+      "active": "event-query",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "48 events",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 93.09375,
+        "x": 186.90625,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/index.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "desktopAppliedOne": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "1 event for “ink after dark”",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 93.09375,
+        "x": 186.90625,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=ink+after+dark",
+      "visibleCards": 1,
+      "width": 1440
+    },
+    "desktopResetDraft": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 48 events",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2107.2604064941406,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": -138.33334350585938
+      },
+      "feed": "1 event for “ink after dark”",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "48 matching events",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": true,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 108.75,
+        "x": 171.25,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=ink+after+dark",
+      "visibleCards": 1,
+      "width": 1440
+    },
+    "desktopZeroDraft": {
+      "active": "event-query",
+      "apply": "Show 0 events",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2174.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": -71
+      },
+      "feed": "1 event for “ink after dark”",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "0 matching events",
+      "overflow": false,
+      "query": "zzzz no such gathering",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 102.03125,
+        "x": 177.96875,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=ink+after+dark",
+      "visibleCards": 1,
+      "width": 1440
+    },
+    "desktopZeroApplied": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 0 events",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "feed": "0 events for “zzzz no such gathering”",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "0 matching events",
+      "overflow": false,
+      "query": "zzzz no such gathering",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 102.03125,
+        "x": 177.96875,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=zzzz+no+such+gathering",
+      "visibleCards": 0,
+      "width": 1440
+    },
+    "desktopRecovery": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 48 events",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "48 events",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "48 matching events",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": true,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 108.75,
+        "x": 171.25,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "desktopDateCategoryOne": {
+      "active": "",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [
+        "music"
+      ],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "48 events",
+      "from": "2026-11-01",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 93.09375,
+        "x": 186.90625,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "2026-11-01",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "desktopCategoryOr": {
+      "active": "",
+      "apply": "Show 2 events",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [
+        "music",
+        "workshop"
+      ],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2261.260416984558,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 15.666666984558104
+      },
+      "feed": "48 events",
+      "from": "2026-11-01",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "2 matching events",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 101.55208587646484,
+        "x": 178.4479217529297,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "2026-11-01",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "desktopInvalid": {
+      "active": "event-to",
+      "apply": "Check dates",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [
+        "music",
+        "workshop"
+      ],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2349.2604217529297,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 103.66667175292967
+      },
+      "feed": "48 events",
+      "from": "2026-11-01",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "Choose an end date on or after the start date.",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "Check the date range",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 118.83333587646484,
+        "x": 161.1666717529297,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "2026-10-31",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "desktopInvalidBlocked": {
+      "active": "event-to",
+      "apply": "Check dates",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [
+        "music",
+        "workshop"
+      ],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2033.9270782470703,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": -211.6666717529297
+      },
+      "feed": "48 events",
+      "from": "2026-11-01",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "Choose an end date on or after the start date.",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "Check the date range",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 118.83333587646484,
+        "x": 161.1666717529297,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "2026-10-31",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "desktopEnter": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2326.59375,
+        "h": 2209.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "1 event for “desert frequencies”",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "desert frequencies",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 93.09375,
+        "x": 186.90625,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=desert+frequencies",
+      "visibleCards": 1,
+      "width": 1440
+    },
+    "resizeTabletClosed": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": null,
+      "event": {
+        "bottom": 2246.59375,
+        "h": 2125.59375,
+        "w": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "feed": "1 event for “desert frequencies”",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "height": 768,
+      "invalid": "",
+      "list": {
+        "bottom": 744,
+        "h": 623,
+        "w": 390,
+        "x": 24,
+        "y": 121
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "desert frequencies",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=desert+frequencies",
+      "visibleCards": 1,
+      "width": 1024
+    },
+    "tabletOpen": {
+      "active": "responsive-filter-title",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 744,
+        "h": 48,
+        "w": 336,
+        "x": 24,
+        "y": 696
+      },
+      "categories": [],
+      "dialog": true,
+      "dock": null,
+      "event": {
+        "bottom": 2246.59375,
+        "h": 2125.59375,
+        "w": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "feed": "1 event for “desert frequencies”",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "height": 768,
+      "invalid": "",
+      "list": {
+        "bottom": 744,
+        "h": 623,
+        "w": 390,
+        "x": 24,
+        "y": 121
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "desert frequencies",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 668,
+        "h": 24,
+        "w": 93.09375,
+        "x": 266.90625,
+        "y": 644
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=desert+frequencies",
+      "visibleCards": 1,
+      "width": 1024
+    },
+    "tabletDraft": {
+      "active": "event-query",
+      "apply": "Show 5 events",
+      "applyRect": {
+        "bottom": 744,
+        "h": 48,
+        "w": 336,
+        "x": 24,
+        "y": 696
+      },
+      "categories": [],
+      "dialog": true,
+      "dock": null,
+      "event": {
+        "bottom": 2246.59375,
+        "h": 2125.59375,
+        "w": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "feed": "1 event for “desert frequencies”",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "height": 768,
+      "invalid": "",
+      "list": {
+        "bottom": 744,
+        "h": 623,
+        "w": 390,
+        "x": 24,
+        "y": 121
+      },
+      "matches": "5 matching events",
+      "overflow": false,
+      "query": "ink",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 668,
+        "h": 24,
+        "w": 101.64583587646484,
+        "x": 258.35418701171875,
+        "y": 644
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=desert+frequencies",
+      "visibleCards": 1,
+      "width": 1024
+    },
+    "tabletCancelled": {
+      "active": "Search & filters",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": null,
+      "event": {
+        "bottom": 2246.59375,
+        "h": 2125.59375,
+        "w": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "feed": "1 event for “desert frequencies”",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "height": 768,
+      "invalid": "",
+      "list": {
+        "bottom": 744,
+        "h": 623,
+        "w": 390,
+        "x": 24,
+        "y": 121
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "desert frequencies",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=desert+frequencies",
+      "visibleCards": 1,
+      "width": 1024
+    },
+    "openTabletToDesktop": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2326.59375,
+        "h": 2209.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "1 event for “desert frequencies”",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "desert frequencies",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 93.09375,
+        "x": 186.90625,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=desert+frequencies",
+      "visibleCards": 1,
+      "width": 1440
+    },
+    "phoneDraftOne": {
+      "active": "event-query",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 820,
+        "h": 48,
+        "w": 294.66668701171875,
+        "x": 24,
+        "y": 772
+      },
+      "categories": [],
+      "dialog": true,
+      "dock": null,
+      "event": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "feed": "1 event for “desert frequencies”",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "height": 844,
+      "invalid": "",
+      "list": {
+        "bottom": 766.3333740234375,
+        "h": 669.3333740234375,
+        "w": 374.6666870117187,
+        "x": 0,
+        "y": 97
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 744,
+        "h": 24,
+        "w": 93.09375,
+        "x": 225.5729217529297,
+        "y": 720
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=desert+frequencies",
+      "visibleCards": 1,
+      "width": 390
+    },
+    "phoneAppliedOne": {
+      "active": "result-count",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": null,
+      "event": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "feed": "1 event for “ink after dark”",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "height": 844,
+      "invalid": "",
+      "list": {
+        "bottom": 766.3333740234375,
+        "h": 669.3333740234375,
+        "w": 374.6666870117187,
+        "x": 0,
+        "y": 97
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=ink+after+dark",
+      "visibleCards": 1,
+      "width": 390
+    },
+    "phoneEvent": {
+      "active": "Skip to event\n      BURQUE.\n      Search",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": null,
+      "event": {
+        "bottom": 2539.1875,
+        "h": 2539.1875,
+        "w": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "feed": "1 event for “ink after dark”",
+      "from": "",
+      "header": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "height": 844,
+      "invalid": "",
+      "list": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/ink-after-dark.html?q=ink+after+dark",
+      "visibleCards": 1,
+      "width": 390
+    },
+    "phoneBack": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": null,
+      "event": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "feed": "1 event for “ink after dark”",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "height": 844,
+      "invalid": "",
+      "list": {
+        "bottom": 755.6667098999023,
+        "h": 669.3333740234375,
+        "w": 374.6666870117187,
+        "x": 0,
+        "y": 86.33333587646484
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/search.html?q=ink+after+dark",
+      "visibleCards": 1,
+      "width": 390
+    },
+    "shortDesktop": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 48 events",
+      "applyRect": {
+        "bottom": 552,
+        "h": 48,
+        "w": 232,
+        "x": 32,
+        "y": 504
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 552.0000152587891,
+        "h": 136.6666717529297,
+        "w": 256,
+        "x": 32,
+        "y": 415.3333435058594
+      },
+      "event": {
+        "bottom": 2174.59375,
+        "h": 2057.59375,
+        "w": 548.3333740234375,
+        "x": 604.3333740234375,
+        "y": 117
+      },
+      "feed": "48 events",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1184.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 600,
+      "invalid": "",
+      "list": {
+        "bottom": 552,
+        "h": 435,
+        "w": 268.3333435058594,
+        "x": 312,
+        "y": 117
+      },
+      "matches": "48 matching events",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 552,
+        "h": 435,
+        "w": 256,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": true,
+      "status": {
+        "bottom": 476,
+        "h": 24,
+        "w": 108.75,
+        "x": 155.25,
+        "y": 452
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/index.html",
+      "visibleCards": 48,
+      "width": 1200
+    },
+    "desktopGeometry": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Show 48 events",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "48 events",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "48 matching events",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": true,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 108.75,
+        "x": 171.25,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/index.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "originalDesktopGeometry": {
+      "active": "Skip to resultsSkip to event preview\n   ",
+      "apply": "Apply filters",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 120.22917175292967,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 72.66667175292969,
+        "w": 272,
+        "x": 32,
+        "y": 779.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "48 events",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "",
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "querySubmitHidden": false,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-browse-first/demo/index.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "desktopProof": {
+      "active": "event-query",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 852,
+        "h": 48,
+        "w": 248,
+        "x": 32,
+        "y": 804
+      },
+      "categories": [],
+      "dialog": false,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "h": 136.6666717529297,
+        "w": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "h": 2245.59375,
+        "w": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "feed": "48 events",
+      "from": "",
+      "header": {
+        "bottom": 93,
+        "h": 93,
+        "w": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "height": 900,
+      "invalid": "",
+      "list": {
+        "bottom": 852,
+        "h": 735,
+        "w": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 852,
+        "h": 735,
+        "w": 272,
+        "x": 32,
+        "y": 117
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 776,
+        "h": 24,
+        "w": 93.09375,
+        "x": 186.90625,
+        "y": 752
+      },
+      "statusCount": 1,
+      "statusParent": "tide-shell__action-dock",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/index.html",
+      "visibleCards": 48,
+      "width": 1440
+    },
+    "tabletProof": {
+      "active": "event-query",
+      "apply": "Show 1 event",
+      "applyRect": {
+        "bottom": 744,
+        "h": 48,
+        "w": 336,
+        "x": 24,
+        "y": 696
+      },
+      "categories": [],
+      "dialog": true,
+      "dock": null,
+      "event": {
+        "bottom": 2282.59375,
+        "h": 2161.59375,
+        "w": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "feed": "48 events",
+      "from": "",
+      "header": {
+        "bottom": 97,
+        "h": 97,
+        "w": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "height": 768,
+      "invalid": "",
+      "list": {
+        "bottom": 744,
+        "h": 623,
+        "w": 390,
+        "x": 24,
+        "y": 121
+      },
+      "matches": "1 matching event",
+      "overflow": false,
+      "query": "ink after dark",
+      "queryCount": 1,
+      "querySubmitHidden": true,
+      "rail": {
+        "bottom": 0,
+        "h": 0,
+        "w": 0,
+        "x": 0,
+        "y": 0
+      },
+      "resetDisabled": false,
+      "status": {
+        "bottom": 668,
+        "h": 24,
+        "w": 93.09375,
+        "x": 266.90625,
+        "y": 644
+      },
+      "statusCount": 1,
+      "statusParent": "tide-responsive-filters__footer",
+      "to": "",
+      "url": "http://127.0.0.1:4187/margin-reveal-unified-search/demo/index.html",
+      "visibleCards": 48,
+      "width": 1024
+    }
+  }
+}

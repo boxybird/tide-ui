@@ -1,0 +1,32 @@
+[
+  {
+    "study": "01",
+    "categoryY": 266.9270935058594,
+    "clipped": [],
+    "height": 667,
+    "hero": 682.9271240234375,
+    "pageOverflow": false,
+    "scrim": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 186.933px, rgba(8, 12, 14, 0.7) 242.933px, rgba(8, 12, 14, 0.86) 40svh, rgb(17, 21, 23) 100%)",
+    "width": 390
+  },
+  {
+    "study": "02",
+    "categoryY": 266.9270935058594,
+    "clipped": [],
+    "height": 667,
+    "hero": 682.9271240234375,
+    "pageOverflow": false,
+    "scrim": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 186.933px, rgba(8, 12, 14, 0.7) 242.933px, rgba(8, 12, 14, 0.86) 40svh, rgb(16, 20, 24) 100%)",
+    "width": 390
+  },
+  {
+    "study": "03",
+    "categoryY": 266.9270935058594,
+    "clipped": [],
+    "height": 667,
+    "hero": 694.9271240234375,
+    "pageOverflow": false,
+    "scrim": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 186.933px, rgba(8, 12, 14, 0.7) 242.933px, rgba(8, 12, 14, 0.86) 40svh, rgb(16, 18, 20) 100%)",
+    "width": 390
+  }
+]

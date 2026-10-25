@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Date Line — real-world readiness review</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101517;--panel:#191f22;--text:#edf0ee;--muted:#b2baba;--line:#354044;--accent:#e6bf8d}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,sans-serif}main{max-width:1280px;margin:auto;padding:48px 24px 80px}h1{font-size:clamp(28px,4vw,44px);line-height:1.15;letter-spacing:-.03em;margin:12px 0 20px}h2{font-size:24px;margin:48px 0 16px}h3{font-size:18px;margin:24px 0 8px}p{max-width:88ch;margin:12px 0}a{color:var(--accent);text-underline-offset:4px}a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.eyebrow{color:var(--accent);font-size:12px;letter-spacing:.12em;text-transform:uppercase}.muted,figcaption{color:var(--muted)}.evidence{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:32px 0}figure{margin:0;min-width:0}figure img{display:block;width:100%;height:auto;border:1px solid var(--line)}figcaption{font-size:13px;line-height:1.5;padding-top:12px}figcaption strong{display:block;color:var(--text)}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:16px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}th:first-child,td:first-child{padding-left:0}td:first-child{width:20%;font-weight:600}li{margin:10px 0}ul,ol{padding-left:24px;max-width:95ch}.note{border-left:2px solid var(--accent);padding:8px 20px;margin:24px 0;background:var(--panel)}.back{display:inline-flex;align-items:center;min-height:44px}.sources{font-size:14px}@media(max-width:900px){.evidence{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:500px){main{padding:32px 20px 64px}.evidence{gap:16px}figcaption{font-size:12px}td,th{padding:12px 8px}td:first-child{width:28%}}
+  </style>
+</head>
+<body><main>
+  <a class="back" href="../index.html">Back to the preserved studies</a>
+  <p class="eyebrow">Date Line / Product readiness / 21 October 2026</p>
+  <h1>Keep the visual design. Give it dependable behavior.</h1>
+  <p>The approved Date Line and both practical studies remain unchanged. This review identifies the product states and small interactions that should surround the selected layout. Recommendations are proposed next work; they have not been added to the static prototype.</p>
+  <p class="muted">Scope: fresh browser captures at 390 × 844 of the current Local Partner list, event opening, event details and Rough Upload opening. User goal: discover a suitable local event, understand it, plan attendance and return without losing context.</p>
+
+  <section aria-labelledby="evidence-title">
+    <h2 id="evidence-title">What was inspected</h2>
+    <div class="evidence">
+      <figure><a href="01-list.png"><img src="01-list.png" alt="Current Date Line list with prominent dates, contiguous cards and a clearly labelled Morrow Coffee advertisement."></a><figcaption><strong>1. Scan the list — strong foundation</strong>Title, venue, date, time and price are easy to compare. Filtering, saved results and changed-event states remain unexplored.</figcaption></figure>
+      <figure><a href="02-event-opening.png"><img src="02-event-opening.png" alt="Ink After Dark full-screen event opening with date, time, venue, price and Plan this evening action."></a><figcaption><strong>2. Open the event — visually strong</strong>The full-screen opening works. In a live product, the primary action needs a truthful attendance destination. Save is currently a visual preview.</figcaption></figure>
+      <figure><a href="03-event-details.png"><img src="03-event-details-viewport.png" alt="Event details below the fold with introduction, a labelled advertisement, inclusions and the beginning of the schedule."></a><figcaption><strong>3. Read details — good depth</strong>Inclusions, schedule and preparation give this page purpose. Practical travel and organizer information need completion. Click for the full-page capture.</figcaption></figure>
+      <figure><a href="04-rough-photo.png"><img src="04-rough-photo.png" alt="The same readable event opening over an awkward organizer photograph showing mostly a blank wall."></a><figcaption><strong>4. Poor photo — readable stress case</strong>The scrim protects the facts. Missing images, text-heavy posters, wide photos and failed loading still need separate treatment.</figcaption></figure>
+    </div>
+  </section>
+
+  <h2>The practical work to prioritize</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Need</th><th>What to account for</th><th>Fit with Date Line</th></tr></thead>
+    <tbody>
+      <tr><td>Attend the event</td><td>Get tickets, RSVP, free walk-in or visit organizer. Show ticket destination, known fees and availability. Distinguish doors from start time. Include full address, directions, organizer/contact, age limits and factual access information.</td><td>Use the existing primary action. Put practical utilities and organizer information below the fold. Avoid publishing an unverified accessibility claim.</td></tr>
+      <tr><td>Event changes</td><td>Cancelled, postponed, rescheduled, sold out and ended. Recurring and multi-day events need clear occurrence dates and local timezone handling. Retain context for an existing shared link.</td><td>A compact text status appears only when relevant, with a matching explanation and action on the detail page. Cancellation must override ticket promotion.</td></tr>
+      <tr><td>Discovery</td><td>Date range, category, free/paid, neighborhood and search. Selected filters, clear all, result count, no matches and end of results. Keep a useful date default.</td><td>Start with a compact discovery control in the existing header. A sheet can contain the secondary choices. Keep ordinary cards unchanged.</td></tr>
+      <tr><td>Save and return</td><td>Saved/unsaved states, persistence, empty saved list, save failures, browser Back, deep links and refresh. Keep filters and scroll position on return.</td><td>Use the existing bookmark and Saved entry. Local saving can support the first release; sign-in becomes useful if cross-device sync is needed.</td></tr>
+      <tr><td>Imperfect content</td><td>No image, failed image, wide photo, poster with text, long title, long venue name, missing end time, free event and price range. Allow a focal point for uploaded photos.</td><td>Use the approved dark texture as the image fallback. Preserve typography and content order. Do not invent missing facts or turn every title into a fixed two-line crop.</td></tr>
+      <tr><td>Loading and recovery</td><td>First load, loading more, timeout, offline, retry, empty feed and deleted event. Keep already loaded results visible if a later fetch fails.</td><td>Reserve image and ad space to avoid page jumps. Use quiet static placeholders and local retry controls. Failed advertisements should not block events.</td></tr>
+      <tr><td>User submissions</td><td>Required fields, field errors, upload progress/failure, preview, draft, pending review, published and edit/cancel. Someone needs responsibility for duplicate reports, spam and stale listings.</td><td>This is a separate organizer flow. A small Report incorrect details link belongs below event details. Show a factual source or update time when useful.</td></tr>
+      <tr><td>Shared event pages</td><td>Stable URL for every event, native sharing with copy-link fallback, calendar export, useful link preview and event structured data kept in sync with visible facts.</td><td>Place Share, Add to calendar and Directions together below the opening. A shared link should work without visiting the feed first.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Microinteractions worth the attention</h2>
+  <ol>
+    <li><strong>Open and return as one continuous journey.</strong> Carry the event title or date from its card into the full-screen view; reveal the photo alongside it. Return to the same card, filters and scroll position, with sensible keyboard focus. Use ordinary navigation when View Transitions are unavailable.</li>
+    <li><strong>Make saving unmistakable.</strong> Immediate filled-bookmark state and a short “Saved” confirmation. A removal can offer Undo. If persistence fails, restore the previous state and explain the failure. Saving must not also open the event.</li>
+    <li><strong>Give every tap a quiet response.</strong> A small surface or foreground change on press, visible keyboard focus, and generous invisible hit areas around small icons. Keep the touching cards visually stable.</li>
+    <li><strong>Make filter changes legible.</strong> Show active choices and the new result count. Update smoothly while keeping the controls stable. No matches should offer a direct way to widen the date or clear filters.</li>
+    <li><strong>Confirm completed actions honestly.</strong> “Link copied” only after a successful copy. Cancelling a share sheet is ordinary behavior. Label calendar actions as adding or downloading an event; do not claim a calendar entry was saved when that cannot be verified.</li>
+    <li><strong>Let loading settle quietly.</strong> Keep image space and controls in place as an image appears. A failed image should resolve to the approved texture without a layout jump. Use a calm placeholder rather than an endlessly animated shimmer.</li>
+  </ol>
+  <p>Proposed starting motion tokens: 100–150 ms for press/save feedback and roughly 220–280 ms for navigation. These are design choices to test on a phone, not standards. Honor reduced-motion preferences and ensure navigation remains usable with motion disabled. Announce relevant feedback to assistive technology without moving focus.</p>
+
+  <h2>The next three focused studies</h2>
+  <ol>
+    <li><strong>Save, open, return.</strong> Demonstrate saved state, brief confirmation, correct Back behavior and the same list position. This is the smallest interaction slice with the most immediate payoff.</li>
+    <li><strong>Plans changed.</strong> Show the same event as sold out, rescheduled and cancelled, including the correct action and explanatory text.</li>
+    <li><strong>Information or connection missing.</strong> Show no photo, long content, no filter matches and a recoverable network failure.</li>
+  </ol>
+  <p>Keep each study separate from the approved baseline. Static HTML can show these state designs; a small isolated interactive demonstration is needed to judge timing, persistence and return behavior. Event reviews, social feeds and notification systems can wait until there is a clear user need.</p>
+
+  <h2>Accessibility and evidence limits</h2>
+  <p>The inspected views visibly maintain clear hierarchy and readable text over both sample photos. This run does not establish WCAG conformance. It did not test a screen reader, text enlargement, every image/background combination, live save requests, actual ticketing, real offline behavior or motion on a physical phone. Verify keyboard focus, focus return, accessible bookmark state, status announcements, reduced motion and responsive text during implementation. Use text alongside color for important event states.</p>
+  <p>The present files are deliberately static design studies. Unimplemented saved/search/booking behavior is a scope limit, not a regression. Research below informs recommendations and is separate from the fresh screenshot evidence.</p>
+
+  <h2>Primary references</h2>
+  <ul class="sources">
+    <li><a href="https://developers.google.com/search/docs/appearance/structured-data/event">Google Search Central: event data and cancellation/rescheduling</a> — supports preserving the event identity and updating its actual status. Search eligibility is not guaranteed.</li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API">MDN: View Transition API</a> — supports transitions between views and documents; use as a progressive enhancement.</li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share">MDN: native sharing</a> — device-dependent sharing, with a fallback needed when unavailable.</li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html">W3C: status messages</a> — relevant success, waiting and error feedback should be available to assistive technology.</li>
+    <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html">W3C: animation from interactions</a> — supports allowing people to disable nonessential motion.</li>
+  </ul>
+  <p class="muted">Reviewed using the Product Design audit workflow. Evidence files and per-step notes are stored beside this report in steps.json. No approved HTML/CSS, artwork or archive was altered.</p>
+</main></body></html>

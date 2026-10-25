@@ -1,0 +1,14 @@
+{
+  "name": "burque-refinement-fonts",
+  "private": true,
+  "description": "Build-time font provisioning only. The deliverable is static HTML/CSS with local assets.",
+  "dependencies": {
+    "@fontsource-variable/manrope": "latest",
+    "@fontsource-variable/source-sans-3": "latest",
+    "@fontsource-variable/newsreader": "latest",
+    "@fontsource-variable/dm-sans": "latest",
+    "@fontsource-variable/ibm-plex-sans": "latest",
+    "@fontsource/ibm-plex-mono": "latest",
+    "@fontsource-variable/instrument-sans": "latest"
+  }
+}

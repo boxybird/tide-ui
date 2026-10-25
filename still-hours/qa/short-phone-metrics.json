@@ -1,0 +1,68 @@
+[
+  {
+    "study": "01",
+    "categoryY": 214,
+    "clipped": [],
+    "cueBottom": 647.3333740234375,
+    "height": 667,
+    "hero": 667.3333740234375,
+    "pageOverflow": false,
+    "reserve": "32svh",
+    "width": 390
+  },
+  {
+    "study": "02",
+    "categoryY": 214,
+    "clipped": [],
+    "cueBottom": 647.3333740234375,
+    "height": 667,
+    "hero": 667.3333740234375,
+    "pageOverflow": false,
+    "reserve": "32svh",
+    "width": 390
+  },
+  {
+    "study": "03",
+    "categoryY": 214,
+    "clipped": [],
+    "cueBottom": 647.3333740234375,
+    "height": 667,
+    "hero": 667.3333740234375,
+    "pageOverflow": false,
+    "reserve": "32svh",
+    "width": 390
+  },
+  {
+    "study": "04",
+    "categoryY": 214,
+    "clipped": [],
+    "cueBottom": 647.3333740234375,
+    "height": 667,
+    "hero": 667.3333740234375,
+    "pageOverflow": false,
+    "reserve": "32svh",
+    "width": 390
+  },
+  {
+    "study": "05",
+    "categoryY": 214,
+    "clipped": [],
+    "cueBottom": 647.3333740234375,
+    "height": 667,
+    "hero": 667.3333740234375,
+    "pageOverflow": false,
+    "reserve": "32svh",
+    "width": 390
+  },
+  {
+    "study": "06",
+    "categoryY": 213.5416717529297,
+    "clipped": [],
+    "cueBottom": 654.875,
+    "height": 667,
+    "hero": 674.875,
+    "pageOverflow": false,
+    "reserve": "32svh",
+    "width": 390
+  }
+]

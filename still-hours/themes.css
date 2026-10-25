@@ -1,0 +1,80 @@
+/* Semantic optical refinements. Shared anatomy lives in screens.css. */
+@layer themes {
+/* 01 Sage — Fraunces + DM Sans */
+[data-study="01"] {
+  --font-title: 'Fraunces'; --font-body: 'DM Sans';
+  --surface-base: #1c1b18; --surface-panel: #24231f;
+  --text-primary: #ece8dc; --text-secondary: #c2bfb2;
+  --text-label: #b8bea7; --text-tertiary: #aaa799;
+  --accent: #c4cbb1; --line-subtle: #45463d;
+  --inset: 24px; --card-pad: 24px; --body-size: 14px;
+  --header-size: 40px; --card-title-size: 26px; --detail-title-size: 44px;
+  --detail-leading: 44px; --title-weight: 440;
+  --title-tracking: -0.025em; --detail-tracking: -0.03em; --softness: 20;
+}
+
+/* 02 Bookish — Lora + DM Sans */
+[data-study="02"] {
+  --font-title: 'Lora'; --font-body: 'DM Sans';
+  --surface-base: #1b1b19; --surface-panel: #232420;
+  --text-primary: #ede9dd; --text-secondary: #c2c0b6;
+  --text-label: #babeaa; --text-tertiary: #aaa99c;
+  --accent: #c6c8b4; --line-subtle: #42453c;
+  --inset: 24px; --card-pad: 24px; --body-size: 14px;
+  --header-size: 38px; --card-title-size: 25px; --detail-title-size: 42px;
+  --detail-leading: 44px; --title-weight: 400;
+  --title-tracking: -0.025em; --detail-tracking: -0.035em; --softness: 0;
+}
+
+/* 03 Soft Margin — Fraunces + Instrument Sans */
+[data-study="03"] {
+  --font-title: 'Fraunces'; --font-body: 'Instrument Sans';
+  --surface-base: #1d1c19; --surface-panel: #25241f;
+  --text-primary: #eee9de; --text-secondary: #c5c0b4;
+  --text-label: #bcbda9; --text-tertiary: #aca79b;
+  --accent: #c8c8b4; --line-subtle: #48483e;
+  --inset: 28px; --card-pad: 28px; --body-size: 14px;
+  --header-size: 40px; --card-title-size: 26px; --detail-title-size: 44px;
+  --detail-leading: 44px; --title-weight: 400;
+  --title-tracking: -0.02em; --detail-tracking: -0.025em; --softness: 35;
+}
+
+/* 04 Field Notes — Literata + IBM Plex Sans */
+[data-study="04"] {
+  --font-title: 'Literata'; --font-body: 'IBM Plex Sans';
+  --surface-base: #1a1d1b; --surface-panel: #222722;
+  --text-primary: #e9eade; --text-secondary: #bdc4b7;
+  --text-label: #b2c2ac; --text-tertiary: #9fae9e;
+  --accent: #bdcdb6; --line-subtle: #424e41;
+  --inset: 24px; --card-pad: 24px; --body-size: 14px;
+  --header-size: 38px; --card-title-size: 25px; --detail-title-size: 42px;
+  --detail-leading: 44px; --title-weight: 400;
+  --title-tracking: -0.03em; --detail-tracking: -0.04em; --softness: 0;
+}
+
+/* 05 Umber — Lora + Source Sans 3 */
+[data-study="05"] {
+  --font-title: 'Lora'; --font-body: 'Source Sans 3';
+  --surface-base: #211c19; --surface-panel: #29231f;
+  --text-primary: #f0e7db; --text-secondary: #c9bdb0;
+  --text-label: #c2b6a3; --text-tertiary: #b5a797;
+  --accent: #d0bdab; --line-subtle: #51473d;
+  --inset: 24px; --card-pad: 24px; --body-size: 16px;
+  --header-size: 38px; --card-title-size: 25px; --detail-title-size: 42px;
+  --detail-leading: 44px; --title-weight: 430;
+  --title-tracking: -0.025em; --detail-tracking: -0.035em; --softness: 0;
+}
+
+/* 06 Hushed — Fraunces + DM Sans */
+[data-study="06"] {
+  --font-title: 'Fraunces'; --font-body: 'DM Sans';
+  --surface-base: #1b1c1a; --surface-panel: #23251f;
+  --text-primary: #e9e8dc; --text-secondary: #bfc2b4;
+  --text-label: #b6bda8; --text-tertiary: #a5ac9c;
+  --accent: #c5c6b8; --line-subtle: #44493d;
+  --inset: 28px; --card-pad: 28px; --body-size: 14px;
+  --header-size: 40px; --card-title-size: 26px; --detail-title-size: 46px;
+  --detail-leading: 48px; --title-weight: 380;
+  --title-tracking: -0.02em; --detail-tracking: -0.035em; --softness: 45;
+}
+}

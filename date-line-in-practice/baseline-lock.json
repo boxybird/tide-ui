@@ -1,0 +1,115 @@
+{
+  "favorite": "Date Line",
+  "collection": "Quiet Assembly",
+  "option": 1,
+  "selected": "2026-10-21",
+  "scope": "Favorite layout overall, across all previous samples. Preserve original pixels as the foundation for future iteration.",
+  "originalPreview": "http://127.0.0.1:4177/01-date-line.html",
+  "files": [
+    {
+      "source": "../quiet-assembly/frames/01-list.html",
+      "copy": "source/approved-list.inc",
+      "sha256": "6e77370152303fa8583fe9a4270e39785b9e77aeba24743d4fb298cf85c101aa"
+    },
+    {
+      "source": "../quiet-assembly/frames/01-event.html",
+      "copy": "source/approved-event.inc",
+      "sha256": "54615384453f5f7b1910cbb787b6ea5cea45a05075481e4e60a1baf20060e6ac"
+    },
+    {
+      "source": "../quiet-assembly/screens.css",
+      "copy": "screens.css",
+      "sha256": "cc72641886c729ba13ec4558351d9b6116dc60d6e3efb8580b587e758f9d85a3"
+    },
+    {
+      "source": "../quiet-assembly/cards.css",
+      "copy": "cards.css",
+      "sha256": "ff816fedad7410e121cc74ae4f5e818cec86bc613687c4d011745dccb9d58de3"
+    },
+    {
+      "source": "../quiet-assembly/themes.css",
+      "copy": "themes.css",
+      "sha256": "98e5f0a491ebdf54c6e5ee419db5d97d7a0a1e56e7ffd507adf316049374bab1"
+    },
+    {
+      "source": "../quiet-assembly/fonts.css",
+      "copy": "fonts.css",
+      "sha256": "3b50d998cfc280dd27ff2d59aac54965aea92a09d83117a9825fad9cd0ca5413"
+    },
+    {
+      "source": "../quiet-assembly/gallery.css",
+      "copy": "gallery.css",
+      "sha256": "b874df06257e176a42d7c1da747aac40a552773daad40e58fc92dfd42b45fce8"
+    },
+    {
+      "source": "../quiet-assembly/assets/fonts/manrope-latin-wght-normal.woff2",
+      "copy": "assets/fonts/manrope-latin-wght-normal.woff2",
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+    },
+    {
+      "source": "../quiet-assembly/assets/images/ink-after-dark.png",
+      "copy": "assets/images/ink-after-dark.png",
+      "sha256": "20bae5fa06fc40a67fcae264ba4f252c8e40c408e5d1b4866e8b5e777e939672"
+    },
+    {
+      "source": "../quiet-assembly/assets/images/quiet-dots.png",
+      "copy": "assets/images/quiet-dots.png",
+      "sha256": "cf26af96dcb2975e3b5f38891aa30d3cc16693dc6bdc2d166a13d050c4da11cd"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/ArrowDownIcon.svg",
+      "copy": "assets/icons/ArrowDownIcon.svg",
+      "sha256": "cf10af6ea5de4100a70c8fea4c3c17d0a7b4774697557b19dae4bd8e7ffee08c"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/ArrowLeftIcon.svg",
+      "copy": "assets/icons/ArrowLeftIcon.svg",
+      "sha256": "919af95d5793526024cb190bdd056688f6c293dc99f20ca4a48ec1066666b7a4"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/ArrowRightIcon.svg",
+      "copy": "assets/icons/ArrowRightIcon.svg",
+      "sha256": "70086a7fb516436eb6f32b3b6f35117e31f5ce067de697ae39734d1baaa5c6b1"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/BookmarkIcon.svg",
+      "copy": "assets/icons/BookmarkIcon.svg",
+      "sha256": "1a64d8a58ce0a69a05c9659ab8be32def0e34e385359e1c9645830a41486f2e1"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/CalendarIcon.svg",
+      "copy": "assets/icons/CalendarIcon.svg",
+      "sha256": "e12d85cbaa5d4c6c474250cad197c32c09fe35450b33c8c2ce6969cc4c66ad54"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/CheckIcon.svg",
+      "copy": "assets/icons/CheckIcon.svg",
+      "sha256": "01922a388c6ea548d1ba92d61ecaf64db4957f203c1d78a5398ccda19a226840"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/ChevronDownIcon.svg",
+      "copy": "assets/icons/ChevronDownIcon.svg",
+      "sha256": "eb10f39e3a0e06d77a60ec82e7808d567cc82835cd019515d3fb02c713956726"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/ClockIcon.svg",
+      "copy": "assets/icons/ClockIcon.svg",
+      "sha256": "88c791fa0bd8be1c1963fb02de38fbe2d2c4c2adb247807f531c1695798232f6"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/Cross1Icon.svg",
+      "copy": "assets/icons/Cross1Icon.svg",
+      "sha256": "1660c57dfdceed60fbea1a911506eb67b2e7308c2359470b0c1ad1bd81db820d"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/ExternalLinkIcon.svg",
+      "copy": "assets/icons/ExternalLinkIcon.svg",
+      "sha256": "fd72fb53eaed039138ac7eef1b3de180038d5b27624ac94bfc1524d6a332bf06"
+    },
+    {
+      "source": "../quiet-assembly/assets/icons/SewingPinIcon.svg",
+      "copy": "assets/icons/SewingPinIcon.svg",
+      "sha256": "6f02b9dcfaee626f0ff6810f820c6a5a62b8f8419152e47a2e23f73f5470fd2e"
+    }
+  ]
+}

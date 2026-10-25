@@ -1,0 +1,32 @@
+[
+  {
+    "study": "01",
+    "reference": "01",
+    "event_pixel_equal": true,
+    "mean_channel_difference": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "02",
+    "reference": "04",
+    "event_pixel_equal": true,
+    "mean_channel_difference": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "03",
+    "reference": "06",
+    "event_pixel_equal": true,
+    "mean_channel_difference": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+]

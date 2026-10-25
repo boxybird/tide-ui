@@ -1,0 +1,12 @@
+{
+  "original_photo": {"file":"ink-after-dark.png","source":"Unchanged approved workshop photo from Quiet Assembly 01 Date Line."},
+  "texture": {"file":"quiet-dots.png","source":"Unchanged approved Date Line surface texture."},
+  "rough_upload": {
+    "file":"organizer-upload.png",
+    "width":1024,
+    "height":1536,
+    "tool":"Built-in image_gen; one generation call, no CLI",
+    "purpose":"Deliberately poor organizer-submitted-photo fixture. This is an illustrative generated photograph, not an actual organizer upload.",
+    "prompt":"Use case: photorealistic-natural.\nAsset type: deliberately poor organizer-submitted event photograph used behind a full-screen mobile event detail at 390×844 with object-fit: cover.\nPrimary request: Generate one portrait phone snapshot of a casual adult block-printmaking workshop in a modest local community studio. Make the technical defects painfully obvious, like an organizer hurriedly uploaded the first bad photo from an old phone, not like an artist intentionally making a beautiful image.\nScene: dull cluttered worktable with ink roller, block-print scraps, plain cups, cutting mats and ink stains; fragments of adult arms and hands near the table edges only. Much too much boring blank off-white wall and ceiling above the table. Crooked camera angle and careless framing. No identifiable faces.\nTechnical appearance: harsh direct on-camera phone flash blows out a patch of the wall and nearest objects; ugly greenish mixed indoor light; muddy noisy shadows; genuinely poor focus and smeared motion blur from a shaky camera; compression artifacts. Important: defects must be obvious in the TOP HALF because the lower half will receive a dark interface scrim. Cropped hands may be at the bottom edges. Ordinary banal surroundings, unflattering lighting, no beautiful subject isolation.\nPortrait orientation, 1024×1536 if possible. No text, letters, logos, watermarks, borders, or UI.\nAvoid cinematic lighting, polished editorial photography, retro aesthetic, intentional attractive film grain, dramatic storytelling, a carefully staged composition, perfect sharp detail or glossy studio imagery. This should look authentically technically bad while still visibly being a local printmaking workshop."
+  }
+}

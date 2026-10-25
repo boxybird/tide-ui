@@ -1,0 +1,386 @@
+{
+  "date": "2026-10-23",
+  "browser": "ChatGPT in-app browser / Chromium",
+  "desktop": {
+    "actual": {
+      "active": null,
+      "brand": {
+        "bottom": 68.16666793823242,
+        "clientHeight": 44,
+        "height": 44,
+        "right": 137.3229217529297,
+        "scrollHeight": 44,
+        "scrollTop": 0,
+        "width": 105.32292175292967,
+        "x": 32,
+        "y": 24.166667938232425
+      },
+      "browser": {
+        "bottom": 852,
+        "clientHeight": 735,
+        "height": 735,
+        "right": 700.3333740234375,
+        "scrollHeight": 735,
+        "scrollTop": 0,
+        "width": 668.3333740234375,
+        "x": 32,
+        "y": 117
+      },
+      "button": {
+        "bottom": 405,
+        "clientHeight": 47,
+        "height": 48,
+        "right": 270,
+        "scrollHeight": 47,
+        "scrollTop": 0,
+        "width": 214,
+        "x": 56,
+        "y": 357
+      },
+      "clientWidth": 1425,
+      "docWidth": 1425,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "clientHeight": 72,
+        "height": 72.66667175292969,
+        "right": 304,
+        "scrollHeight": 72,
+        "scrollTop": 0,
+        "width": 272,
+        "x": 32,
+        "y": 779.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "clientHeight": 2246,
+        "height": 2245.59375,
+        "right": 1320.3438110351562,
+        "scrollHeight": 2246,
+        "scrollTop": 0,
+        "width": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "field": {
+        "bottom": 345,
+        "clientHeight": 47,
+        "height": 48,
+        "right": 270,
+        "scrollHeight": 47,
+        "scrollTop": 0,
+        "width": 214,
+        "x": 56,
+        "y": 297
+      },
+      "header": {
+        "bottom": 93,
+        "clientHeight": 92,
+        "height": 93,
+        "right": 1424.666748046875,
+        "scrollHeight": 92,
+        "scrollTop": 0,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 852,
+        "clientHeight": 735,
+        "height": 735,
+        "right": 700.3333435058594,
+        "scrollHeight": 9463,
+        "scrollTop": 0,
+        "width": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "open": "true",
+      "rail": {
+        "bottom": 852,
+        "clientHeight": 735,
+        "height": 735,
+        "right": 304,
+        "scrollHeight": 735,
+        "scrollTop": 0,
+        "width": 272,
+        "x": 32,
+        "y": 117
+      },
+      "rootTop": 0,
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    "baseline": {
+      "state": "open",
+      "active": null,
+      "brand": {
+        "bottom": 68.16666793823242,
+        "clientHeight": 44,
+        "height": 44,
+        "right": 137.3229217529297,
+        "scrollHeight": 44,
+        "scrollTop": 0,
+        "width": 105.32292175292967,
+        "x": 32,
+        "y": 24.166667938232425
+      },
+      "browser": {
+        "bottom": 852,
+        "clientHeight": 735,
+        "height": 735,
+        "right": 700.3333740234375,
+        "scrollHeight": 735,
+        "scrollTop": 0,
+        "width": 668.3333740234375,
+        "x": 32,
+        "y": 117
+      },
+      "button": {
+        "bottom": 405,
+        "clientHeight": 47,
+        "height": 48,
+        "right": 270,
+        "scrollHeight": 47,
+        "scrollTop": 0,
+        "width": 214,
+        "x": 56,
+        "y": 357
+      },
+      "clientWidth": 1425,
+      "docWidth": 1425,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "clientHeight": 72,
+        "height": 72.66667175292969,
+        "right": 304,
+        "scrollHeight": 72,
+        "scrollTop": 0,
+        "width": 272,
+        "x": 32,
+        "y": 779.3333740234375
+      },
+      "event": {
+        "bottom": 2362.59375,
+        "clientHeight": 2246,
+        "height": 2245.59375,
+        "right": 1320.3438110351562,
+        "scrollHeight": 2246,
+        "scrollTop": 0,
+        "width": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "field": {
+        "bottom": 345,
+        "clientHeight": 47,
+        "height": 48,
+        "right": 270,
+        "scrollHeight": 47,
+        "scrollTop": 0,
+        "width": 214,
+        "x": 56,
+        "y": 297
+      },
+      "header": {
+        "bottom": 93,
+        "clientHeight": 92,
+        "height": 93,
+        "right": 1424.666748046875,
+        "scrollHeight": 92,
+        "scrollTop": 0,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 852,
+        "clientHeight": 735,
+        "height": 735,
+        "right": 700.3333435058594,
+        "scrollHeight": 9463,
+        "scrollTop": 0,
+        "width": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "open": "true",
+      "rail": {
+        "bottom": 852,
+        "clientHeight": 735,
+        "height": 735,
+        "right": 304,
+        "scrollHeight": 735,
+        "scrollTop": 0,
+        "width": 272,
+        "x": 32,
+        "y": 117
+      },
+      "rootTop": 0,
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    "differences": [],
+    "innerToggleCount": 0
+  },
+  "short": {
+    "active": null,
+    "brand": {
+      "bottom": 68.16666793823242,
+      "clientHeight": 44,
+      "height": 44,
+      "right": 137.3229217529297,
+      "scrollHeight": 44,
+      "scrollTop": 0,
+      "width": 105.32292175292967,
+      "x": 32,
+      "y": 24.166667938232425
+    },
+    "browser": {
+      "bottom": 552,
+      "clientHeight": 435,
+      "height": 435,
+      "right": 580.3333740234375,
+      "scrollHeight": 435,
+      "scrollTop": 0,
+      "width": 548.3333740234375,
+      "x": 32,
+      "y": 117
+    },
+    "button": {
+      "bottom": -128.33334350585938,
+      "clientHeight": 47,
+      "height": 48,
+      "right": 254,
+      "scrollHeight": 47,
+      "scrollTop": 0,
+      "width": 198,
+      "x": 56,
+      "y": -176.33334350585938
+    },
+    "clientWidth": 1185,
+    "docWidth": 1185,
+    "dock": {
+      "bottom": 552.0000152587891,
+      "clientHeight": 72,
+      "height": 72.66667175292969,
+      "right": 288,
+      "scrollHeight": 72,
+      "scrollTop": 0,
+      "width": 256,
+      "x": 32,
+      "y": 479.3333435058594
+    },
+    "event": {
+      "bottom": 2174.59375,
+      "clientHeight": 2058,
+      "height": 2057.59375,
+      "right": 1152.666748046875,
+      "scrollHeight": 2058,
+      "scrollTop": 0,
+      "width": 548.3333740234375,
+      "x": 604.3333740234375,
+      "y": 117
+    },
+    "field": {
+      "bottom": -188.33334350585935,
+      "clientHeight": 47,
+      "height": 48,
+      "right": 254,
+      "scrollHeight": 47,
+      "scrollTop": 0,
+      "width": 198,
+      "x": 56,
+      "y": -236.33334350585935
+    },
+    "header": {
+      "bottom": 93,
+      "clientHeight": 92,
+      "height": 93,
+      "right": 1184.666748046875,
+      "scrollHeight": 92,
+      "scrollTop": 0,
+      "width": 1184.666748046875,
+      "x": 0,
+      "y": 0
+    },
+    "list": {
+      "bottom": 552,
+      "clientHeight": 435,
+      "height": 435,
+      "right": 580.3333435058594,
+      "scrollHeight": 10404,
+      "scrollTop": 0,
+      "width": 268.3333435058594,
+      "x": 312,
+      "y": 117
+    },
+    "open": "true",
+    "rail": {
+      "bottom": 552,
+      "clientHeight": 435,
+      "height": 435,
+      "right": 288,
+      "scrollHeight": 435,
+      "scrollTop": 0,
+      "width": 256,
+      "x": 32,
+      "y": 117
+    },
+    "rootTop": 0,
+    "viewport": [
+      1200,
+      600
+    ]
+  },
+  "responsive": [
+    {
+      "initial": {
+        "focus": "SUMMARY",
+        "open": false,
+        "queries": 1,
+        "summaryDisplay": "flex",
+        "width": 1024,
+        "workshop": true
+      },
+      "opened": true,
+      "fieldVisible": true,
+      "closed": false
+    },
+    {
+      "initial": {
+        "focus": "SUMMARY",
+        "open": false,
+        "queries": 1,
+        "summaryDisplay": "flex",
+        "width": 390,
+        "workshop": true
+      },
+      "opened": true,
+      "fieldVisible": true,
+      "closed": false
+    }
+  ],
+  "restored": {
+    "focus": "BODY",
+    "open": true,
+    "queries": 1,
+    "summaryDisplay": "none",
+    "width": 1440
+  },
+  "applied": {
+    "cards": 1,
+    "open": true,
+    "queries": 1,
+    "summaryDisplay": "none",
+    "url": "http://127.0.0.1:4187/margin-reveal-refined/demo/search.html?q=Ink+After+Dark&from=2026-10-24&to=2026-10-24&category=workshop"
+  },
+  "cleared": {
+    "cards": 48,
+    "open": true,
+    "summaryDisplay": "none"
+  }
+}

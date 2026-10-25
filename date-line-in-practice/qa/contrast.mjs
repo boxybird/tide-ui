@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const rgb=c=>[1,3,5].map(i=>parseInt(c.slice(i,i+2),16));
+const lin=n=>{n/=255;return n<=.04045?n/12.92:((n+.055)/1.055)**2.4;};
+const lum=c=>{const[r,g,b]=Array.isArray(c)?c:rgb(c);return .2126*lin(r)+.7152*lin(g)+.0722*lin(b);};
+const ratio=(a,b)=>{const[hi,lo]=[lum(a),lum(b)].sort((a,b)=>b-a);return(hi+.05)/(lo+.05);};
+const metrics=JSON.parse(fs.readFileSync(path.join(root,'qa/browser-metrics-390.json'),'utf8'));
+const m=metrics.find(m=>m.slug==='rough-upload'&&m.kind==='event');
+const stops=[[0,.22],[.28,.03],[.38,.10],[.50,.80],[.62,.93],[.79,.98],[1,1]];
+const alpha=y=>{for(let i=1;i<stops.length;i++){if(y<=stops[i][0]){const[a0,v0]=stops[i-1],[a1,v1]=stops[i];return v0+(v1-v0)*(y-a0)/(a1-a0);}}return 1;};
+const composite=a=>[8,12,14].map(n=>255*(1-a)+n*a);
+const checks={cardPrimary:ratio('#f0f1ed','#1a1f22'),cardSecondary:ratio('#b8bfc6','#1a1f22'),cardLabel:ratio('#aab3ba','#1a1f22'),date:ratio('#edbd8b','#1a1f22'),footer:ratio('#939da6','#111517'),action:ratio('#211a13','#edbd8b'),photoFirstTextWorstWhite:ratio('#edbd8b',composite(alpha(m.foreground[1].y/m.hero.height))),shortPhotoFirstTextWorstWhite:ratio('#edbd8b',composite(.86)),adLabel:ratio('#aab3ba','#14191c'),adHeadline:ratio('#f0f1ed','#14191c'),adLink:ratio('#b8bfc6','#14191c')};
+const result={checks,minimum:Math.min(...Object.values(checks)),passed:Object.values(checks).every(n=>n>=4.5),note:'Selected Date Line tokens are locked by source hashes. Photo stress check assumes a white photographic pixel behind the first line.'};
+fs.writeFileSync(path.join(root,'qa/contrast-results.json'),JSON.stringify(result,null,2));
+console.log(`Contrast: ${result.passed?'PASS':'FAIL'}; ${Object.keys(checks).length} combinations; minimum ${result.minimum.toFixed(2)}:1`);
+if(!result.passed)process.exitCode=1;

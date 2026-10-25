@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "htmlFiles": 406,
+  "localReferences": 27132,
+  "browserScriptFiles": 3,
+  "browserScriptReferences": 1071,
+  "originalKitFilesVerified": 176,
+  "frozenBaselineFilesVerified": 263,
+  "originalKitStatus": "Verified against preserved sibling",
+  "preservedPrimitives": [
+    "type",
+    "space",
+    "radius",
+    "targets",
+    "theme inputs",
+    "font"
+  ],
+  "failures": [],
+  "kitVersion": "1.2.1",
+  "sharedBlocksVerified": 36
+}

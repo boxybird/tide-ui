@@ -1,0 +1,6 @@
+The workshop photograph and quiet dot texture are copied unchanged from the existing Burque Pocket Nights prototype.
+
+ink-after-dark.png: originally burque-pocket/public/images/workshop.png. Generated with the built-in Image Gen tool on2026-10-20 to resemble an ordinary user-submitted printmaking-workshop phone photo. Fictional scene, no UI baked into the asset.
+quiet-dots.png: originally burque-pocket/public/images/dots.png. Existing site-owned generated matte charcoal dot texture.
+
+No new photo was generated for the six refinements. All versions use identical image content and crop settings so typography and spacing can be compared fairly.

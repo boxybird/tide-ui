@@ -1,0 +1,311 @@
+[
+  {
+    "study": "01",
+    "kind": "list",
+    "cardGaps": [
+      0,
+      0.0000152587890625
+    ],
+    "cards": [
+      {
+        "bottom": 324,
+        "height": 184,
+        "width": 390,
+        "x": 0,
+        "y": 140
+      },
+      {
+        "bottom": 508.6666717529297,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 324
+      },
+      {
+        "bottom": 693.3333587646484,
+        "height": 184.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 508.6666870117187
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 105.32292175292967,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 693.3333435058594,
+        "height": 184,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 509.3333435058594
+      }
+    ],
+    "titleFont": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "width": 390
+  },
+  {
+    "study": "01",
+    "kind": "event",
+    "categoryY": 428,
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Back to the event list",
+        "width": 44,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 768,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      },
+      {
+        "bottom": 2154.52099609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 134.64584350585938,
+        "x": 24,
+        "y": 2110.52099609375
+      }
+    ],
+    "titleFont": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "width": 390
+  },
+  {
+    "study": "02",
+    "kind": "list",
+    "cardGaps": [
+      0,
+      0.0000152587890625
+    ],
+    "cards": [
+      {
+        "bottom": 316,
+        "height": 176,
+        "width": 390,
+        "x": 0,
+        "y": 140
+      },
+      {
+        "bottom": 492.6666717529297,
+        "height": 176.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 316
+      },
+      {
+        "bottom": 669.3333587646484,
+        "height": 176.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 492.6666870117187
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 102.57292175292967,
+        "x": 24,
+        "y": 16
+      },
+      {
+        "bottom": 669.3333435058594,
+        "height": 176,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 493.3333435058594
+      }
+    ],
+    "titleFont": "\"DM Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "width": 390
+  },
+  {
+    "study": "02",
+    "kind": "event",
+    "categoryY": 428,
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Back to the event list",
+        "width": 44,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 768,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 342,
+        "x": 24,
+        "y": 720
+      },
+      {
+        "bottom": 820,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 342,
+        "x": 24,
+        "y": 776
+      },
+      {
+        "bottom": 2154.52099609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 135.9791717529297,
+        "x": 24,
+        "y": 2110.52099609375
+      }
+    ],
+    "titleFont": "\"DM Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "width": 390
+  },
+  {
+    "study": "03",
+    "kind": "list",
+    "cardGaps": [
+      0,
+      0.0000152587890625
+    ],
+    "cards": [
+      {
+        "bottom": 328,
+        "height": 188,
+        "width": 390,
+        "x": 0,
+        "y": 140
+      },
+      {
+        "bottom": 516.6666717529297,
+        "height": 188.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 328
+      },
+      {
+        "bottom": 705.3333587646484,
+        "height": 188.6666717529297,
+        "width": 390,
+        "x": 0,
+        "y": 516.6666870117188
+      }
+    ],
+    "clipped": [],
+    "height": 844,
+    "overflow": false,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 60,
+        "height": 44,
+        "label": "Burque design study",
+        "width": 108.46875,
+        "x": 28,
+        "y": 16
+      },
+      {
+        "bottom": 705.3333740234375,
+        "height": 188,
+        "label": "View Ink After Dark",
+        "width": 390,
+        "x": 0,
+        "y": 517.3333740234375
+      }
+    ],
+    "titleFont": "\"Instrument Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "width": 390
+  },
+  {
+    "study": "03",
+    "kind": "event",
+    "categoryY": 416,
+    "clipped": [],
+    "detailsY": 844,
+    "height": 844,
+    "hero": 844,
+    "overflow": false,
+    "photoWidth": 1024,
+    "scripts": 0,
+    "targets": [
+      {
+        "bottom": 64,
+        "height": 44,
+        "label": "Back to the event list",
+        "width": 44,
+        "x": 20,
+        "y": 20
+      },
+      {
+        "bottom": 764,
+        "height": 48,
+        "label": "Plan this evening",
+        "width": 334,
+        "x": 28,
+        "y": 716
+      },
+      {
+        "bottom": 816,
+        "height": 44,
+        "label": "More about the workshop",
+        "width": 334,
+        "x": 28,
+        "y": 772
+      },
+      {
+        "bottom": 2154.52099609375,
+        "height": 44,
+        "label": "Back to the events",
+        "width": 133.0104217529297,
+        "x": 28,
+        "y": 2110.52099609375
+      }
+    ],
+    "titleFont": "\"Instrument Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "width": 390
+  }
+]

@@ -1,0 +1,5 @@
+# Workbench width comparisons
+
+This child study changes only desktop column proportions. Preserve every existing file in the parent study, its original 1.0.0 ZIP, the maintained app and the UI kit. Reuse the parent's exact Workbench generator, composition CSS, responsive adapter and comparison presentation. Add no kit component, primitive override or component selector. New CSS belongs in widths.css and applies only from 75rem while the original tools slot is visible. Below that threshold all three retain the approved mobile/tablet composition.
+
+Matched uses two columns of the existing feed width and the event gets the remainder. Half Split gives the browsing group (both tracks plus their internal gap) the same width as the event, with a central gutter between the halves. Midpoint averages Matched's fixed feed width and Half Split's gap-aware fluid feed width. Preserve bounded native scrolling and the right event's natural document flow. Run Python with -B, use tools/build.py and tools/check.py here, and save evidence only in this child study. Preview on the existing port4187 at /workbench-widths/index.html. Do not publish or run parent/app/kit writers.

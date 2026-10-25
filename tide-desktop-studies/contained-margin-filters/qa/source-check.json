@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "htmlPages": 54,
+  "localReferences": 4393,
+  "unchangedComponentDocuments": 53,
+  "preserved": {
+    "desktopStudyFiles": 185,
+    "widthStudyFiles": 177,
+    "appFiles": 980,
+    "kitFiles": 180,
+    "refinementFiles": 177,
+    "lineupFiles": 182,
+    "controlBarFiles": 176,
+    "filterSpaceFiles": 178,
+    "slidingFilterFiles": 123,
+    "readingWidthFiles": 188,
+    "containedWidthFiles": 182
+  },
+  "newKitComponents": 0,
+  "adapterChange": "Prior adapter with session namespace change only; all control/navigation behavior reused.",
+  "failures": []
+}

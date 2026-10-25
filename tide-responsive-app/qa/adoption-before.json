@@ -1,0 +1,251 @@
+{
+  "desktop": {
+    "badge": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0.666667px solid oklch(0.481401 0.034607 229.98)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "flex",
+      "font": "500 11px / 18px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "6px",
+      "height": 24,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "2px 8px",
+      "width": 53.80208587646485
+    },
+    "card": {
+      "background": "oklch(0.250281 0.026905 246.753)",
+      "border": "0px none oklch(0.956522 0.006626 160.074)",
+      "color": "oklch(0.956522 0.006626 160.074)",
+      "display": "block",
+      "font": "14px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 184,
+      "outline": "oklch(0.956522 0.006626 160.074) none 2.66667px",
+      "padding": "24px",
+      "width": 378.6666870117187
+    },
+    "count": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none oklch(0.809612 0.02094 204.395)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "block",
+      "font": "12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 20,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px",
+      "width": 54.14583587646485
+    },
+    "jump": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none oklch(0.817203 0.067506 184.021)",
+      "color": "oklch(0.817203 0.067506 184.021)",
+      "display": "flex",
+      "font": "12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 44,
+      "outline": "oklch(0.817203 0.067506 184.021) none 2.66667px",
+      "padding": "0px",
+      "width": 44
+    },
+    "month": {
+      "background": "oklch(0.201208 0.021769 251.836)",
+      "border": "",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "flex",
+      "font": "12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "12px",
+      "height": 44.66666793823242,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px 24px",
+      "width": 378.6666870117187
+    },
+    "monthTitle": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none oklch(0.809612 0.02094 204.395)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "block",
+      "font": "550 12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 36,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px",
+      "width": 77.96875
+    },
+    "overflow": false,
+    "selected": {
+      "background": "oklch(0.250281 0.026905 246.753)",
+      "border": "",
+      "color": "oklch(0.956522 0.006626 160.074)",
+      "display": "block",
+      "font": "14px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 188.6666717529297,
+      "outline": "oklch(0.591515 0.037092 223.067) solid 0.666667px",
+      "padding": "24px",
+      "width": 378.6666870117187
+    },
+    "summary": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0.666667px solid oklch(0.591515 0.037092 223.067)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "flex",
+      "font": "12px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "12px",
+      "height": 44,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px 12px",
+      "width": 330.66668701171875
+    },
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "open": {
+    "body": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none oklch(0.956522 0.006626 160.074)",
+      "color": "oklch(0.956522 0.006626 160.074)",
+      "display": "grid",
+      "font": "14px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "16px",
+      "height": 552,
+      "outline": "oklch(0.956522 0.006626 160.074) none 2.66667px",
+      "padding": "16px 0px",
+      "width": 330.66668701171875
+    },
+    "date": {
+      "background": "oklch(0.228613 0.02818 244.999)",
+      "border": "0.666667px solid oklch(0.591515 0.037092 223.067)",
+      "color": "oklch(0.956522 0.006626 160.074)",
+      "display": "block",
+      "font": "16px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 48,
+      "outline": "oklch(0.956522 0.006626 160.074) none 2.66667px",
+      "padding": "11px 12px",
+      "width": 330.66668701171875
+    },
+    "overflow": false,
+    "summary": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0.666667px solid oklch(0.591515 0.037092 223.067)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "flex",
+      "font": "12px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "12px",
+      "height": 44,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px 12px",
+      "width": 330.66668701171875
+    },
+    "viewport": [
+      1280,
+      720
+    ]
+  },
+  "phone": {
+    "badge": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0.666667px solid oklch(0.481401 0.034607 229.98)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "none",
+      "font": "500 11px / 18px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "6px",
+      "height": 0,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "2px 8px",
+      "width": 0
+    },
+    "card": {
+      "background": "oklch(0.250281 0.026905 246.753)",
+      "border": "0px none oklch(0.956522 0.006626 160.074)",
+      "color": "oklch(0.956522 0.006626 160.074)",
+      "display": "block",
+      "font": "14px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 184,
+      "outline": "oklch(0.956522 0.006626 160.074) none 2.66667px",
+      "padding": "24px",
+      "width": 304.66668701171875
+    },
+    "count": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none oklch(0.809612 0.02094 204.395)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "block",
+      "font": "12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 20,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px",
+      "width": 54.14583587646485
+    },
+    "jump": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none oklch(0.817203 0.067506 184.021)",
+      "color": "oklch(0.817203 0.067506 184.021)",
+      "display": "flex",
+      "font": "12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 44,
+      "outline": "oklch(0.817203 0.067506 184.021) none 2.66667px",
+      "padding": "0px",
+      "width": 44
+    },
+    "month": {
+      "background": "oklch(0.201208 0.021769 251.836)",
+      "border": "",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "flex",
+      "font": "12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "12px",
+      "height": 44.66666793823242,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px 24px",
+      "width": 304.66668701171875
+    },
+    "monthTitle": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px none oklch(0.809612 0.02094 204.395)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "block",
+      "font": "550 12px / 20px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 36,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px",
+      "width": 77.96875
+    },
+    "overflow": false,
+    "selected": {
+      "background": "oklch(0.250281 0.026905 246.753)",
+      "border": "",
+      "color": "oklch(0.956522 0.006626 160.074)",
+      "display": "block",
+      "font": "14px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "normal",
+      "height": 184.6666717529297,
+      "outline": "oklch(0.956522 0.006626 160.074) none 2.66667px",
+      "padding": "24px",
+      "width": 304.66668701171875
+    },
+    "summary": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0.666667px solid oklch(0.591515 0.037092 223.067)",
+      "color": "oklch(0.809612 0.02094 204.395)",
+      "display": "flex",
+      "font": "12px / 24px Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+      "gap": "12px",
+      "height": 44,
+      "outline": "oklch(0.809612 0.02094 204.395) none 2.66667px",
+      "padding": "0px 12px",
+      "width": 256.66668701171875
+    },
+    "viewport": [
+      320,
+      768
+    ]
+  }
+}

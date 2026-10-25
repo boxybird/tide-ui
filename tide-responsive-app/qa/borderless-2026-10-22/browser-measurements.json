@@ -1,0 +1,313 @@
+{
+  "before": {
+    ".tide-app__detail": {
+      "borders": [
+        "0.666667px",
+        "0.666667px",
+        "0.666667px",
+        "0.666667px"
+      ],
+      "bottom": 2190.322998046875,
+      "outline": "none",
+      "radius": "4px",
+      "viewport": 720,
+      "width": 706
+    },
+    ".tide-app__preview-state": {
+      "borders": [
+        "0.666667px",
+        "0.666667px",
+        "0.666667px",
+        "0.666667px"
+      ],
+      "bottom": 0,
+      "outline": "none",
+      "radius": "4px",
+      "viewport": 720,
+      "width": 0
+    },
+    ".tide-app__results": {
+      "borders": [
+        "0.666667px",
+        "0.666667px",
+        "0.666667px",
+        "0.666667px"
+      ],
+      "bottom": 696,
+      "outline": "none",
+      "radius": "4px",
+      "viewport": 720,
+      "width": 390
+    }
+  },
+  "after": [
+    {
+      "clientWidth": 1265,
+      "height": 720,
+      "pageWidth": 1265,
+      "panes": {
+        ".tide-app__detail": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 2188.98974609375,
+          "display": "block",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 706
+        },
+        ".tide-app__preview-state": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 0,
+          "display": "none",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 0
+        },
+        ".tide-app__results": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 696,
+          "display": "block",
+          "outline": "none",
+          "overflow": "auto",
+          "radius": "0px",
+          "width": 390
+        }
+      },
+      "path": "/index.html",
+      "width": 1280
+    },
+    {
+      "clientWidth": 1009,
+      "height": 768,
+      "pageWidth": 1009,
+      "panes": {
+        ".tide-app__detail": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 2278.59375,
+          "display": "block",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 546.6666870117188
+        },
+        ".tide-app__preview-state": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 0,
+          "display": "none",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 0
+        },
+        ".tide-app__results": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 744,
+          "display": "block",
+          "outline": "none",
+          "overflow": "auto",
+          "radius": "0px",
+          "width": 390
+        }
+      },
+      "path": "/index.html",
+      "width": 1024
+    },
+    {
+      "clientWidth": 819,
+      "height": 1112,
+      "pageWidth": 819,
+      "panes": {
+        ".tide-app__detail": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 0,
+          "display": "none",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 0
+        },
+        ".tide-app__preview-state": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 0,
+          "display": "none",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 0
+        },
+        ".tide-app__results": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 9633.33366394043,
+          "display": "block",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 672
+        }
+      },
+      "path": "/index.html",
+      "width": 834
+    },
+    {
+      "clientWidth": 375,
+      "height": 844,
+      "pageWidth": 375,
+      "panes": {
+        ".tide-app__detail": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 0,
+          "display": "none",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 0
+        },
+        ".tide-app__preview-state": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 0,
+          "display": "none",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 0
+        },
+        ".tide-app__results": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 9737.33366394043,
+          "display": "block",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 374.6666870117187
+        }
+      },
+      "path": "/index.html",
+      "width": 390
+    },
+    {
+      "clientWidth": 1265,
+      "height": 600,
+      "pageWidth": 1265,
+      "panes": {
+        ".tide-app__detail": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 2150.59375,
+          "display": "block",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 706
+        },
+        ".tide-app__preview-state": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 0,
+          "display": "none",
+          "outline": "none",
+          "overflow": "visible",
+          "radius": "0px",
+          "width": 0
+        },
+        ".tide-app__results": {
+          "borders": [
+            "0px",
+            "0px",
+            "0px",
+            "0px"
+          ],
+          "bottom": 576,
+          "display": "block",
+          "outline": "none",
+          "overflow": "auto",
+          "radius": "0px",
+          "width": 390
+        }
+      },
+      "path": "/index.html",
+      "width": 1280
+    }
+  ],
+  "mobileEvent": {
+    "borders": [
+      "0px",
+      "0px",
+      "0px",
+      "0px"
+    ],
+    "clientWidth": 375,
+    "pageWidth": 375,
+    "radius": "0px",
+    "width": 390
+  },
+  "allOuterBordersRemoved": true
+}

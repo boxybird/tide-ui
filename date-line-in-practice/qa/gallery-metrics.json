@@ -1,0 +1,122 @@
+[
+  {
+    "captionOverflow": [],
+    "client": 1425,
+    "frames": [
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      }
+    ],
+    "overflow": false,
+    "width": 1440
+  },
+  {
+    "captionOverflow": [],
+    "client": 945,
+    "frames": [
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      }
+    ],
+    "overflow": false,
+    "width": 960
+  },
+  {
+    "captionOverflow": [],
+    "client": 753,
+    "frames": [
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      }
+    ],
+    "overflow": false,
+    "width": 768
+  },
+  {
+    "captionOverflow": [],
+    "client": 421,
+    "frames": [
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      },
+      {
+        "height": 844,
+        "width": 390
+      }
+    ],
+    "overflow": false,
+    "width": 436
+  },
+  {
+    "captionOverflow": [],
+    "client": 305,
+    "frames": [
+      {
+        "height": 844,
+        "width": 304.66668701171875
+      },
+      {
+        "height": 844,
+        "width": 304.66668701171875
+      },
+      {
+        "height": 844,
+        "width": 304.66668701171875
+      },
+      {
+        "height": 844,
+        "width": 304.66668701171875
+      }
+    ],
+    "overflow": false,
+    "width": 320
+  }
+]

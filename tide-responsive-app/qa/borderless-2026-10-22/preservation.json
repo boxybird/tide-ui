@@ -1,0 +1,17 @@
+{
+  "unchangedKitCSS": [
+    "base.css",
+    "components.css",
+    "content.css",
+    "docs-navigation.css",
+    "docs.css",
+    "layout.css",
+    "patterns.css",
+    "reset.css",
+    "themes.css",
+    "tokens.css",
+    "utilities.css"
+  ],
+  "unchangedAppHTML": 406,
+  "pass": true
+}

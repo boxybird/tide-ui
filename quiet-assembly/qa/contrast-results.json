@@ -1,0 +1,44 @@
+[
+  {
+    "study": "01",
+    "checks": {
+      "primary": 14.65544523286461,
+      "secondary": 8.951459550399777,
+      "label": 7.81168741380273,
+      "date": 9.701193665588757,
+      "footer": 6.658691743705444,
+      "action": 10.028220770227975,
+      "photoEyebrowWorstWhite": 6.618573686410068,
+      "shortPhotoEyebrowWorstWhite": 7.986028350504193
+    },
+    "pass": true
+  },
+  {
+    "study": "02",
+    "checks": {
+      "primary": 14.523621710348525,
+      "secondary": 8.914027179157543,
+      "label": 8.033247908289379,
+      "date": 9.92651269704587,
+      "footer": 7.090271947984099,
+      "action": 10.387059114070363,
+      "photoEyebrowWorstWhite": 6.855405131852629,
+      "shortPhotoEyebrowWorstWhite": 8.271791224381184
+    },
+    "pass": true
+  },
+  {
+    "study": "03",
+    "checks": {
+      "primary": 14.622125476386946,
+      "secondary": 9.307457179286924,
+      "label": 8.498353921538735,
+      "date": 10.999268051093722,
+      "footer": 7.10262197807937,
+      "action": 11.14429163943488,
+      "photoEyebrowWorstWhite": 6.104884269337542,
+      "shortPhotoEyebrowWorstWhite": 8.874817479391268
+    },
+    "pass": true
+  }
+]

@@ -1,0 +1,8 @@
+/* Local Latin variable fonts, with their original OFL licenses. */
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('assets/fonts/fraunces-latin-full-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Lora'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('assets/fonts/lora-latin-wght-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Literata'; font-style: normal; font-weight: 200 900; font-display: swap; src: url('assets/fonts/literata-latin-standard-normal.woff2') format('woff2'); }
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 100 1000; font-display: swap; src: url('assets/fonts/dm-sans-latin-wght-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Instrument Sans'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('assets/fonts/instrument-sans-latin-wght-normal.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Sans'; font-style: normal; font-weight: 100 700; font-display: swap; src: url('assets/fonts/ibm-plex-sans-latin-wght-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 200 900; font-display: swap; src: url('assets/fonts/source-sans-3-latin-wght-normal.woff2') format('woff2'); }

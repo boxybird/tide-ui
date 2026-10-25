@@ -1,0 +1,86 @@
+[
+  {
+    "study": "01",
+    "name": "Soft Focus",
+    "checks": {
+      "title": 14.65544523286461,
+      "secondary": 8.951459550399777,
+      "label": 7.81168741380273,
+      "accent": 9.701193665588757,
+      "action": 10.028220770227975,
+      "photoEyebrowWorstWhite": 6.618573686410068
+    },
+    "pass": true,
+    "photoScrimAlphaAtFirstText": 0.807701421800948
+  },
+  {
+    "study": "02",
+    "name": "Humanist",
+    "checks": {
+      "title": 14.46994340746834,
+      "secondary": 9.233004643007822,
+      "label": 8.318544142246722,
+      "accent": 9.885044912401858,
+      "action": 10.316587934905645,
+      "photoEyebrowWorstWhite": 6.808894519176986
+    },
+    "pass": true,
+    "photoScrimAlphaAtFirstText": 0.807701421800948
+  },
+  {
+    "study": "03",
+    "name": "Warm Editorial",
+    "checks": {
+      "title": 14.325781133951441,
+      "secondary": 8.677988083661136,
+      "label": 7.562130236828203,
+      "accent": 9.914308011985373,
+      "action": 10.365476075237568,
+      "photoEyebrowWorstWhite": 6.711309780833338
+    },
+    "pass": true,
+    "photoScrimAlphaAtFirstText": 0.802567140600316
+  },
+  {
+    "study": "04",
+    "name": "Open Form",
+    "checks": {
+      "title": 14.523621710348525,
+      "secondary": 8.914027179157543,
+      "label": 8.033247908289379,
+      "accent": 9.92651269704587,
+      "action": 10.387059114070363,
+      "photoEyebrowWorstWhite": 6.855405131852629
+    },
+    "pass": true,
+    "photoScrimAlphaAtFirstText": 0.807701421800948
+  },
+  {
+    "study": "05",
+    "name": "Studio Notes",
+    "checks": {
+      "title": 14.195731864375109,
+      "secondary": 8.736547964844691,
+      "label": 8.525955086418657,
+      "accent": 10.221205987981286,
+      "action": 10.853190915446863,
+      "photoEyebrowWorstWhite": 7.163049702677059
+    },
+    "pass": true,
+    "photoScrimAlphaAtFirstText": 0.807701421800948
+  },
+  {
+    "study": "06",
+    "name": "Quiet Air",
+    "checks": {
+      "title": 14.622125476386946,
+      "secondary": 9.307457179286924,
+      "label": 8.498353921538735,
+      "accent": 10.999268051093722,
+      "action": 11.14429163943488,
+      "photoEyebrowWorstWhite": 6.104884269337542
+    },
+    "pass": true,
+    "photoScrimAlphaAtFirstText": 0.7585308056872038
+  }
+]

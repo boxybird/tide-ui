@@ -1,0 +1,266 @@
+[
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "01",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "01",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "02",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "02",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "03",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "03",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "04",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "04",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "05",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "05",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "06",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 764,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "06",
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "01",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "01",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "02",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "02",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "03",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "03",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "04",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "04",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "05",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 768,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "05",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "metaHeights": [
+      20,
+      20,
+      20
+    ],
+    "pageOverflow": false,
+    "state": "screen list-screen",
+    "study": "06",
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "ctaBottom": 764,
+    "hero": 844,
+    "metaHeights": [],
+    "pageOverflow": false,
+    "state": "screen event-screen",
+    "study": "06",
+    "width": 430
+  }
+]

@@ -1,0 +1,1486 @@
+{
+  "date": "2026-10-22",
+  "browser": "Codex in-app Chromium",
+  "frameChecks": [
+    {
+      "test": "pinned-apply-initial",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 807.927001953125,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": -1437.666748046875
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-apply/index.html",
+      "root": 1554.6666259765625,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "pinned-apply-filter-scroll",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 859.927001953125,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": -1385.666748046875
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-apply/index.html",
+      "root": 1502.6666259765625,
+      "search": {
+        "bottom": 163.6666717529297,
+        "height": 88,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 75.66667175292969
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "filterMax": 182,
+      "filterTop": 181.3333282470703,
+      "rootMax": 1555
+    },
+    {
+      "test": "steady-header-initial",
+      "apply": {
+        "bottom": 1005,
+        "height": 48,
+        "width": 264.16668701171875,
+        "x": 56,
+        "y": 957
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": null,
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "filterScroller": null,
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/steady-header/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "steady-header-at-document-end",
+      "apply": {
+        "bottom": 1005,
+        "height": 48,
+        "width": 264.16668701171875,
+        "x": 56,
+        "y": 957
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": null,
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 807.927001953125,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": -1437.666748046875
+      },
+      "filterScroller": null,
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/steady-header/index.html",
+      "root": 1554.6666259765625,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "pinned-search-initial",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-search/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 369,
+        "height": 112,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "pinned-search-filter-scroll",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-search/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 229,
+        "height": 112,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "applyCount": 1,
+      "filterTop": 205.3333282470703,
+      "searchCount": 1,
+      "searchPadding": "128px"
+    },
+    {
+      "test": "pinned-search-at-document-end",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 807.927001953125,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": -1437.666748046875
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-search/index.html",
+      "root": 1554.6666259765625,
+      "search": {
+        "bottom": 369,
+        "height": 112,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "steady-header-final-initial",
+      "apply": {
+        "bottom": 1005,
+        "height": 48,
+        "width": 264.16668701171875,
+        "x": 56,
+        "y": 957
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": null,
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "filterScroller": null,
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/steady-header/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "pinned-search-final-initial",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-search/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 369,
+        "height": 112,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "pinned-apply-final-initial",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-apply/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "pinned-apply-final-document-end",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 807.927001953125,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": -1437.666748046875
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-apply/index.html",
+      "root": 1554.6666259765625,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    }
+  ],
+  "desktopRanges": [
+    {
+      "viewport": {
+        "width": 1200,
+        "height": 700
+      },
+      "apply": {
+        "bottom": 1049,
+        "height": 48,
+        "width": 204.1666717529297,
+        "x": 56,
+        "y": 1001
+      },
+      "bodyGrid": "262.167px 262.167px 548.333px",
+      "dock": null,
+      "documentHeight": 2299,
+      "event": {
+        "bottom": 2206.59375,
+        "height": 2089.59375,
+        "width": 548.3333740234375,
+        "x": 604.3333740234375,
+        "y": 117
+      },
+      "filterScroller": null,
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1184.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 676,
+        "height": 559,
+        "width": 262.16668701171875,
+        "x": 318.16668701171875,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/steady-header/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 369,
+        "height": 88,
+        "width": 252.1666717529297,
+        "x": 32,
+        "y": 281
+      },
+      "tools": {
+        "bottom": 676,
+        "height": 559,
+        "width": 262.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "viewport": {
+        "width": 1200,
+        "height": 700
+      },
+      "apply": {
+        "bottom": 660,
+        "height": 48,
+        "width": 214.1666717529297,
+        "x": 56,
+        "y": 612
+      },
+      "bodyGrid": "262.167px 262.167px 548.333px",
+      "dock": {
+        "bottom": 676.0000457763672,
+        "height": 80.66667175292969,
+        "width": 262.16668701171875,
+        "x": 32,
+        "y": 595.3333740234375
+      },
+      "documentHeight": 2299,
+      "event": {
+        "bottom": 2206.59375,
+        "height": 2089.59375,
+        "width": 548.3333740234375,
+        "x": 604.3333740234375,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 595.3333435058594,
+        "height": 478.3333435058594,
+        "width": 262.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1184.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 676,
+        "height": 559,
+        "width": 262.16668701171875,
+        "x": 318.16668701171875,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-apply/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 369,
+        "height": 88,
+        "width": 252.1666717529297,
+        "x": 32,
+        "y": 281
+      },
+      "tools": {
+        "bottom": 676,
+        "height": 559,
+        "width": 262.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "viewport": {
+        "width": 1200,
+        "height": 700
+      },
+      "apply": {
+        "bottom": 660,
+        "height": 48,
+        "width": 214.1666717529297,
+        "x": 56,
+        "y": 612
+      },
+      "bodyGrid": "262.167px 262.167px 548.333px",
+      "dock": {
+        "bottom": 676.0000457763672,
+        "height": 80.66667175292969,
+        "width": 262.16668701171875,
+        "x": 32,
+        "y": 595.3333740234375
+      },
+      "documentHeight": 2299,
+      "event": {
+        "bottom": 2206.59375,
+        "height": 2089.59375,
+        "width": 548.3333740234375,
+        "x": 604.3333740234375,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 595.3333435058594,
+        "height": 478.3333435058594,
+        "width": 262.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1184.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 676,
+        "height": 559,
+        "width": 262.16668701171875,
+        "x": 318.16668701171875,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-search/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 393,
+        "height": 112,
+        "width": 252.1666717529297,
+        "x": 32,
+        "y": 281
+      },
+      "tools": {
+        "bottom": 676,
+        "height": 559,
+        "width": 262.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "apply": {
+        "bottom": 985,
+        "height": 48,
+        "width": 386.1666870117187,
+        "x": 72,
+        "y": 937
+      },
+      "bodyGrid": "434.167px 434.167px 892.333px",
+      "dock": null,
+      "documentHeight": 2635,
+      "event": {
+        "bottom": 2542.59375,
+        "height": 2425.59375,
+        "width": 892.3333740234375,
+        "x": 964.3333740234376,
+        "y": 117
+      },
+      "filterScroller": null,
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1904.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 1056,
+        "height": 939,
+        "width": 434.1666870117187,
+        "x": 506.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/steady-header/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 1021,
+        "height": 904,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 117
+      }
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "apply": {
+        "bottom": 1040,
+        "height": 48,
+        "width": 386.1666870117187,
+        "x": 72,
+        "y": 992
+      },
+      "bodyGrid": "434.167px 434.167px 892.333px",
+      "dock": {
+        "bottom": 1056.0000457763672,
+        "height": 80.66667175292969,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 975.3333740234376
+      },
+      "documentHeight": 2635,
+      "event": {
+        "bottom": 2542.59375,
+        "height": 2425.59375,
+        "width": 892.3333740234375,
+        "x": 964.3333740234376,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 975.3333740234376,
+        "height": 858.3333740234375,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1904.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 1056,
+        "height": 939,
+        "width": 434.1666870117187,
+        "x": 506.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-apply/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 345,
+        "height": 88,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 1056,
+        "height": 939,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 117
+      }
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "apply": {
+        "bottom": 1040,
+        "height": 48,
+        "width": 386.1666870117187,
+        "x": 72,
+        "y": 992
+      },
+      "bodyGrid": "434.167px 434.167px 892.333px",
+      "dock": {
+        "bottom": 1056.0000457763672,
+        "height": 80.66667175292969,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 975.3333740234376
+      },
+      "documentHeight": 2635,
+      "event": {
+        "bottom": 2542.59375,
+        "height": 2425.59375,
+        "width": 892.3333740234375,
+        "x": 964.3333740234376,
+        "y": 117
+      },
+      "filterScroller": {
+        "bottom": 975.3333740234376,
+        "height": 858.3333740234375,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1904.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 1056,
+        "height": 939,
+        "width": 434.1666870117187,
+        "x": 506.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-search/index.html",
+      "root": 0,
+      "search": {
+        "bottom": 369,
+        "height": 112,
+        "width": 424.1666870117187,
+        "x": 48,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 1056,
+        "height": 939,
+        "width": 434.1666870117187,
+        "x": 48,
+        "y": 117
+      }
+    }
+  ],
+  "fallback": [
+    {
+      "target": "baseline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px"
+    },
+    {
+      "target": "steady-header",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px"
+    },
+    {
+      "target": "pinned-apply",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px"
+    },
+    {
+      "target": "pinned-search",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "card": [
+        0,
+        550,
+        374.6666870117187,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        374.6666870117187,
+        92.66667175292967
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        0,
+        92.66667175292967,
+        374.6666870117187,
+        9644.6669921875
+      ],
+      "titleSize": "24px"
+    },
+    {
+      "target": "baseline",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px"
+    },
+    {
+      "target": "steady-header",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px"
+    },
+    {
+      "target": "pinned-apply",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px"
+    },
+    {
+      "target": "pinned-search",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "card": [
+        24,
+        574.3333740234375,
+        380,
+        184
+      ],
+      "docks": 0,
+      "filterOpen": false,
+      "header": [
+        0,
+        0,
+        1008.6666870117188,
+        93
+      ],
+      "overflow": false,
+      "railVisible": false,
+      "results": [
+        24,
+        117,
+        390,
+        627
+      ],
+      "titleSize": "24px"
+    }
+  ],
+  "behavior": [
+    {
+      "active": "event-to",
+      "errorVisible": true,
+      "fieldTop": 689,
+      "open": true,
+      "searchBottom": 369,
+      "test": "invalid-date-revealed",
+      "url": "http://127.0.0.1:4187/half-split-refinements/pinned-search/index.html"
+    },
+    {
+      "applyTop": 812,
+      "form": "event-search-form",
+      "summary": "1 event\nSoonest first\nNovember 2026\n1 event\nWORKSHOP\nIn view\nThe Art o",
+      "test": "one-result-date-category",
+      "url": "http://127.0.0.1:4187/half-split-refinements/pinned-search/search.html?from=2026-11-12&to=2026-11-12&category=workshop",
+      "visibleCards": 1
+    },
+    {
+      "headerTop": 0,
+      "summary": "0 events for “no-such-evening”\nSoonest first\nNo events found.\n\nTry another search, a wider date range or fewer categories.\n\nClear search and filters\nHave something happening? Add an event.\nBack to all",
+      "test": "empty-results",
+      "url": "http://127.0.0.1:4187/half-split-refinements/pinned-search/search.html?q=no-such-evening&from=2026-11-12&to=2026-11-12&category=workshop",
+      "visibleCards": 0
+    },
+    {
+      "categories": 0,
+      "from": "",
+      "query": "",
+      "summary": "48 events\nSoonest first\nOctobe",
+      "test": "clear-all"
+    },
+    {
+      "active": "event-query",
+      "dockCount": 0,
+      "filterOpen": false,
+      "from": "2026-11-12",
+      "query": "An unsubmitted draft",
+      "queryInResults": true,
+      "test": "resize-to-tablet"
+    },
+    {
+      "active": "event-query",
+      "applyCount": 1,
+      "dockCount": 1,
+      "form": "event-search-form",
+      "from": "2026-11-12",
+      "query": "An unsubmitted draft",
+      "queryCount": 1,
+      "test": "resize-to-desktop"
+    },
+    {
+      "activeTag": "SUMMARY",
+      "activeText": "Filters ",
+      "filterOpen": false,
+      "test": "action-focus-responsive-fallback"
+    },
+    {
+      "headerTop": 0,
+      "listTop": 3114.666748046875,
+      "panelTop": 117,
+      "root": 0,
+      "test": "switch-event-after-reading",
+      "title": "First Sunday Print Exchange",
+      "url": "http://127.0.0.1:4187/half-split-refinements/pinned-search/first-sunday-print-exchange.html"
+    },
+    {
+      "test": "back-restores-reading-point",
+      "apply": {
+        "bottom": 860,
+        "height": 48,
+        "width": 274.16668701171875,
+        "x": 56,
+        "y": 812
+      },
+      "bodyGrid": "322.167px 322.167px 668.333px",
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 80.66667175292969,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 795.3333740234375
+      },
+      "documentHeight": 2455,
+      "event": {
+        "bottom": 1139.927001953125,
+        "height": 2245.59375,
+        "width": 668.3333740234375,
+        "x": 724.3333740234375,
+        "y": -1105.666748046875
+      },
+      "filterScroller": {
+        "bottom": 795.3333740234375,
+        "height": 678.3333740234375,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "horizontalOverflow": false,
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 378.1666870117187,
+        "y": 117
+      },
+      "mainRows": "subgrid [] [] []",
+      "path": "/half-split-refinements/pinned-search/index.html",
+      "root": 1222.6666259765625,
+      "search": {
+        "bottom": 369,
+        "height": 112,
+        "width": 312.16668701171875,
+        "x": 32,
+        "y": 257
+      },
+      "tools": {
+        "bottom": 876,
+        "height": 759,
+        "width": 322.16668701171875,
+        "x": 32,
+        "y": 117
+      }
+    },
+    {
+      "test": "landmark-counts",
+      "banner": 1,
+      "main": 1,
+      "contentinfo": 1
+    },
+    {
+      "dimensions": [
+        "1200 × 800 · live HTML",
+        "1200 × 800 · live HTML",
+        "1200 × 800 · live HTML"
+      ],
+      "frames": [
+        {
+          "height": "800px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "width": "1200px"
+        },
+        {
+          "height": "800px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "width": "1200px"
+        },
+        {
+          "height": "800px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "width": "1200px"
+        }
+      ],
+      "horizontalOverflow": false,
+      "selected": "1200,800",
+      "test": "comparison-sizing"
+    }
+  ],
+  "consoleWarningsAndErrors": []
+}

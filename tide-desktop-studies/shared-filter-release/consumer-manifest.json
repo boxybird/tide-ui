@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "kitVersion": "1.3.0",
+  "approvedInput": "../margin-reveal-unified-search/demo/",
+  "publicComponent": "tide-filter-panel",
+  "privateBlocks": ["tide-app", "tide-study", "tide-shell", "tide-shell-document", "tide-feed-study", "tide-slide-study", "tide-slide-study-document", "tide-room-study", "tide-room-study-document", "tide-width-study", "tide-margin-study", "tide-filter-study", "tide-gutter-study", "tide-browse-flyout", "tide-filter-host"],
+  "styleHome": "app/css/host.css",
+  "behaviorHome": ["app/js/filters.js", "app/js/rail.js", "app/js/event-search.js", "app/js/search-core.js", "app/js/event-navigation.js"],
+  "contract": "docs/ADOPTION.md",
+  "notes": "Existing study composition names remain private host adapters to preserve the approved layout. They are not additions to the kit API."
+}

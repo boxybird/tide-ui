@@ -1,0 +1,46 @@
+/* Additions around Date Line. Existing type, photo, facts, actions and event
+   geometry stay intact. The adjacency selector only restores the original
+   card separator after a newly inserted advertising slot. */
+@layer components {
+  .ad-slot {
+    display: flex; flex-direction: column; min-block-size: 144px;
+    padding: 20px var(--inset);
+    border-block-start: 1px solid var(--line-subtle);
+    background: #14191c;
+  }
+  /* Restore the exact original top rule after the inserted advertisement. */
+  .ad-slot + .event-card { border-block-start: 1px solid var(--line-subtle); }
+  .ad-label {
+    display: flex; align-items: baseline; justify-content: space-between;
+    flex-wrap: wrap; gap: 4px 12px; color: var(--text-label);
+    font-size: 11px; line-height: 16px;
+  }
+  .ad-label > span:first-child { letter-spacing: .02em; }
+  .ad-label > span:last-child { color: var(--text-secondary); }
+  .ad-slot .ad-headline {
+    margin-block-start: 8px; color: var(--text-primary);
+    font-size: 16px; font-weight: 550; line-height: 24px; letter-spacing: -.015em;
+  }
+  .ad-link {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    min-block-size: 44px; margin-block-start: auto;
+    color: var(--text-secondary); font-size: 12px; line-height: 20px;
+    text-decoration: none;
+  }
+  .ad-link .icon { inline-size: 16px; block-size: 16px; }
+  .detail-ad {
+    margin-block-start: 32px; padding: 16px;
+    border: 1px solid var(--line-subtle); border-radius: 12px;
+    scroll-margin-block-start: 24px;
+  }
+  .full-details .photo-credit { margin-block-start: 12px; color: var(--text-tertiary); font-size: 12px; line-height: 20px; }
+  .partner-page { min-block-size: 100vh; padding: 24px; }
+  .partner-back { display: inline-flex; align-items: center; gap: 8px; min-block-size: 44px; font-size: 13px; text-underline-offset: 4px; }
+  .partner-page > .category { margin-block-start: 48px; }
+  .partner-page h1 { margin-block-start: 12px; font-size: 32px; font-weight: 580; line-height: 40px; letter-spacing: -.035em; }
+  .partner-page > p { margin-block-start: 24px; color: var(--text-secondary); font-size: 14px; line-height: 24px; }
+  .partner-page .partner-disclosure { padding-block-start: 24px; margin-block-start: 40px; border-block-start: 1px solid var(--line-subtle); color: var(--text-tertiary); font-size: 12px; line-height: 20px; }
+}
+@layer states {
+  @media (hover: hover) { .ad-link:hover { color: var(--accent); } }
+}

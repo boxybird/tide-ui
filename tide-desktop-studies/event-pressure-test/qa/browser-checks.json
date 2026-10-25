@@ -1,0 +1,684 @@
+{
+  "date": "2026-10-24",
+  "browser": "Connected Chromium in-app browser on Windows",
+  "notRun": [
+    "Firefox",
+    "Safari",
+    "Physical devices",
+    "Screen reader"
+  ],
+  "desktopCases": [
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-10-24",
+        "2026-10-24T18:00:00-06:00",
+        "2026-10-24T20:00:00-06:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something",
+      "url": "/event-pressure-test/app/long-copy.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-24T22:30:00-06:00",
+        "2026-10-25T01:00:00-06:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "From the last train to the first bus",
+      "url": "/event-pressure-test/app/after-midnight.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-10-30",
+        "2026-11-02"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "Four days at the print table",
+      "url": "/event-pressure-test/app/across-months.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "Neighborhood altar walk",
+      "url": "/event-pressure-test/app/all-day.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "Tiny studios, bigger ideas — live from your kitchen",
+      "url": "/event-pressure-test/app/online-donation.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-11-03",
+        "2026-11-03T18:00:00-07:00",
+        "2026-11-03T20:00:00-07:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "Tuesday paper club — November 3 session",
+      "url": "/event-pressure-test/app/weekly-session.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-11-05",
+        "2026-11-05T17:00:00-07:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "Open studio: mend a little, stay a while",
+      "url": "/event-pressure-test/app/open-end.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "A listening circle, somewhere close to home",
+      "url": "/event-pressure-test/app/details-tba.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-10-25",
+        "2026-10-25T11:00:00-06:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": "The organizer has cancelled this event.The date and venue below are the original details, retained for reference. Do not travel to this event.",
+      "selectedVisible": true,
+      "title": "Sunday print swap",
+      "url": "/event-pressure-test/app/cancelled.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": "A new date has not been confirmed.Originally planned for October 27. That date is no longer valid; the organizer will announce a replacement.",
+      "selectedVisible": true,
+      "title": "A night of found sounds",
+      "url": "/event-pressure-test/app/postponed.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-11-04",
+        "2026-11-04T19:30:00-07:00",
+        "2026-11-04T21:00:00-07:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": "Moved to Wednesday, November 4 at 7:30 PM.Previously Monday, October 26 at 8 PM. The list, date filters and event details now use the new date.",
+      "selectedVisible": true,
+      "title": "Small room, new date",
+      "url": "/event-pressure-test/app/rescheduled.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-10-29",
+        "2026-10-29T18:00:00-06:00",
+        "2026-10-29T20:00:00-06:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": "All places for this session are taken.No ticket purchase is offered here. A waitlist or additional session has not been announced.",
+      "selectedVisible": true,
+      "title": "One table, twelve makers",
+      "url": "/event-pressure-test/app/sold-out.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [
+        "2026-10-23",
+        "2026-10-23T20:00:00-06:00",
+        "2026-10-23T22:00:00-06:00"
+      ],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": "This event has ended.Friday, October 23 is in the past for this fixed-date pressure test. The page is an archive, not an invitation to attend.",
+      "selectedVisible": true,
+      "title": "Last night at the listening room",
+      "url": "/event-pressure-test/app/ended.html"
+    },
+    {
+      "applyBottom": 866,
+      "brokenPhotos": 0,
+      "dates": [],
+      "detailX": 724.3333740234375,
+      "detailY": 117,
+      "heading": "H1",
+      "horizontal": false,
+      "listBottom": 866,
+      "notice": null,
+      "selectedVisible": true,
+      "title": "This listing is no longer available.",
+      "url": "/event-pressure-test/app/removed.html"
+    }
+  ],
+  "heldStates": [
+    {
+      "apply": "Loading events…",
+      "busy": [
+        "results"
+      ],
+      "count": "Loading events…",
+      "detail": "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something",
+      "overflow": false,
+      "scene": "feed-loading"
+    },
+    {
+      "apply": "Events unavailable",
+      "busy": [],
+      "count": "Events unavailable",
+      "detail": "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something",
+      "overflow": false,
+      "scene": "feed-failed"
+    },
+    {
+      "apply": "Show 14 events",
+      "busy": [
+        "event-detail"
+      ],
+      "count": "14 events",
+      "detail": "Opening this event…",
+      "overflow": false,
+      "scene": "detail-loading"
+    },
+    {
+      "apply": "Show 14 events",
+      "busy": [],
+      "count": "14 events",
+      "detail": "This event couldn’t load.",
+      "overflow": false,
+      "scene": "detail-failed"
+    },
+    {
+      "apply": "Show 0 events",
+      "busy": [],
+      "count": "0 upcoming events",
+      "detail": "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something",
+      "overflow": false,
+      "scene": "no-upcoming"
+    },
+    {
+      "apply": "Show 14 events",
+      "busy": [],
+      "count": "14 events",
+      "detail": "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something",
+      "overflow": false,
+      "scene": "cached-copy"
+    }
+  ],
+  "interactions": [
+    {
+      "test": "Feed retry preserves draft, separates applied count, clears busy and restores focus",
+      "pass": true,
+      "state": {
+        "apply": [
+          {
+            "disabled": false,
+            "text": "Show 1 event"
+          }
+        ],
+        "busy": "false",
+        "count": "14 events",
+        "feed": false,
+        "focus": "result-count",
+        "query": "circle"
+      }
+    },
+    {
+      "name": "Detail retry preserves list and draft, restores title focus",
+      "before": {
+        "draft": "circle",
+        "list": 540
+      },
+      "after": {
+        "busy": null,
+        "draft": "circle",
+        "focus": "event-title",
+        "list": 540,
+        "state": "ready",
+        "title": "H1"
+      },
+      "pass": true
+    },
+    {
+      "name": "Cached refresh retains draft and list position at visible retry action, removes both notices",
+      "before": {
+        "draft": "circle",
+        "list": 0,
+        "notices": 2
+      },
+      "after": {
+        "draft": "circle",
+        "list": 0,
+        "notices": 0,
+        "state": "ready"
+      },
+      "pass": true
+    },
+    {
+      "name": "feed-loading automatic completion does not steal search focus",
+      "after": {
+        "busy": 0,
+        "detailH": "H2",
+        "draft": "circle",
+        "focus": "q",
+        "state": "ready"
+      },
+      "pass": true
+    },
+    {
+      "name": "detail-loading automatic completion does not steal search focus",
+      "after": {
+        "busy": 0,
+        "detailH": "H1",
+        "draft": "circle",
+        "focus": "q",
+        "state": "ready"
+      },
+      "pass": true
+    },
+    {
+      "name": "Date UI: Nov 1 includes multi-day and all-day only",
+      "after": {
+        "count": "2 events",
+        "h1": 1,
+        "titles": [
+          "Four days at the print table",
+          "Neighborhood altar walk"
+        ],
+        "url": "?from=2026-11-01&to=2026-11-01"
+      },
+      "pass": true
+    },
+    {
+      "name": "No matches retains a clear-search recovery",
+      "after": {
+        "count": "0 events for “zzzz”",
+        "empty": "No events found.Try another search, a wider date range or fewer categories.Clear search and filters",
+        "visible": true
+      },
+      "pass": true
+    },
+    {
+      "name": "Reset and apply recovers all 14 cases",
+      "after": {
+        "count": "14 events",
+        "from": "",
+        "query": ""
+      },
+      "pass": true
+    },
+    {
+      "name": "1024px failed-feed drawer opens with unknown disabled count; Escape returns focus",
+      "after": {
+        "disabled": true,
+        "focus": "responsive-filter-title",
+        "modal": true,
+        "overflow": false,
+        "unknown": "Events unavailable",
+        "width": 1024
+      },
+      "closed": {
+        "focus": "Search and filters",
+        "open": false
+      },
+      "pass": true
+    },
+    {
+      "name": "390px failed-feed drawer opens with unknown disabled count; Escape returns focus",
+      "after": {
+        "disabled": true,
+        "focus": "responsive-filter-title",
+        "modal": true,
+        "overflow": false,
+        "unknown": "Events unavailable",
+        "width": 390
+      },
+      "closed": {
+        "focus": "Search and filters",
+        "open": false
+      },
+      "pass": true
+    }
+  ],
+  "responsive": [
+    {
+      "brokenImages": 0,
+      "detailVisible": false,
+      "h1": [
+        "Coming up."
+      ],
+      "height": 740,
+      "overflow": false,
+      "path": "index.html",
+      "width": 320,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something"
+      ],
+      "height": 740,
+      "overflow": false,
+      "path": "long-copy.html",
+      "width": 320,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "A listening circle, somewhere close to home"
+      ],
+      "height": 740,
+      "overflow": false,
+      "path": "details-tba.html",
+      "width": 320,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "A night of found sounds"
+      ],
+      "height": 740,
+      "overflow": false,
+      "path": "postponed.html",
+      "width": 320,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "This event couldn’t load."
+      ],
+      "height": 740,
+      "overflow": false,
+      "path": "detail-failed.html",
+      "width": 320,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": false,
+      "h1": [
+        "Coming up."
+      ],
+      "height": 740,
+      "overflow": false,
+      "path": "feed-loading.html",
+      "width": 320,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": false,
+      "h1": [
+        "Coming up."
+      ],
+      "height": 844,
+      "overflow": false,
+      "path": "index.html",
+      "width": 390,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something"
+      ],
+      "height": 844,
+      "overflow": false,
+      "path": "long-copy.html",
+      "width": 390,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "A listening circle, somewhere close to home"
+      ],
+      "height": 844,
+      "overflow": false,
+      "path": "details-tba.html",
+      "width": 390,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "A night of found sounds"
+      ],
+      "height": 844,
+      "overflow": false,
+      "path": "postponed.html",
+      "width": 390,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "This event couldn’t load."
+      ],
+      "height": 844,
+      "overflow": false,
+      "path": "detail-failed.html",
+      "width": 390,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": false,
+      "h1": [
+        "Coming up."
+      ],
+      "height": 844,
+      "overflow": false,
+      "path": "feed-loading.html",
+      "width": 390,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "Coming up."
+      ],
+      "height": 768,
+      "overflow": false,
+      "path": "index.html",
+      "width": 1024,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "An evening for people who have never made a print before, including the slightly nervous, the wonderfully curious, and anyone who just wants to make something"
+      ],
+      "height": 768,
+      "overflow": false,
+      "path": "long-copy.html",
+      "width": 1024,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "A listening circle, somewhere close to home"
+      ],
+      "height": 768,
+      "overflow": false,
+      "path": "details-tba.html",
+      "width": 1024,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "A night of found sounds"
+      ],
+      "height": 768,
+      "overflow": false,
+      "path": "postponed.html",
+      "width": 1024,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": true,
+      "h1": [
+        "This event couldn’t load."
+      ],
+      "height": 768,
+      "overflow": false,
+      "path": "detail-failed.html",
+      "width": 1024,
+      "railHiddenAttribute": false
+    },
+    {
+      "brokenImages": 0,
+      "detailVisible": false,
+      "h1": [
+        "Coming up."
+      ],
+      "height": 768,
+      "overflow": false,
+      "path": "feed-loading.html",
+      "width": 1024,
+      "railHiddenAttribute": false
+    }
+  ],
+  "geometry": [
+    {
+      "alignment": true,
+      "bottomGap": 34,
+      "gap": 24.000030517578125,
+      "gutter": 10,
+      "height": 650,
+      "listBottom": 616,
+      "overflow": false,
+      "showBottom": 616,
+      "width": 1366
+    },
+    {
+      "alignment": true,
+      "bottomGap": 34,
+      "gap": 24.000030517578125,
+      "gutter": 10,
+      "height": 900,
+      "listBottom": 866,
+      "overflow": false,
+      "showBottom": 866,
+      "width": 1440
+    },
+    {
+      "alignment": true,
+      "bottomGap": 34,
+      "gap": 24.000030517578125,
+      "gutter": 10,
+      "height": 1080,
+      "listBottom": 1046,
+      "overflow": false,
+      "showBottom": 1046,
+      "width": 1920
+    }
+  ]
+}

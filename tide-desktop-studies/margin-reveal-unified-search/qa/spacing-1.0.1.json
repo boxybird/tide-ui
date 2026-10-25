@@ -1,0 +1,694 @@
+{
+  "pass": true,
+  "version": "1.0.1",
+  "date": "2026-10-24",
+  "browser": "Live in-app Chromium; CSS-only desktop refinement.",
+  "checks": {
+    "desktopBottomMatchesGutter": true,
+    "resetRowBalanced": true,
+    "showEventsBottomAligned": true,
+    "showEventsDidNotMoveUp": true,
+    "desktopWidthsAndEventUnchanged": true,
+    "phoneUnchanged": true,
+    "tabletUnchanged": true,
+    "oneQueryNoHorizontalOverflow": true
+  },
+  "evidence": {
+    "beforeDesktop": {
+      "apply": {
+        "bottom": 852,
+        "height": 48,
+        "right": 280,
+        "width": 248,
+        "x": 32,
+        "y": 804
+      },
+      "columnGap": 24.000030517578125,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "dividerToReset": 23.9999589765625,
+      "dock": {
+        "bottom": 852.0000457763672,
+        "height": 136.6666717529297,
+        "right": 304,
+        "width": 272,
+        "x": 32,
+        "y": 715.3333740234375
+      },
+      "dockPadding": "24px",
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "right": 1320.3438110351562,
+        "width": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "footer": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "right": 1424.666748046875,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 852,
+        "height": 735,
+        "right": 700.3333435058594,
+        "width": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "listBottom": 48,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 852,
+        "height": 735,
+        "right": 304,
+        "width": 272,
+        "x": 32,
+        "y": 117
+      },
+      "railBottom": 48,
+      "reset": {
+        "bottom": 788,
+        "height": 48,
+        "right": 106.20833587646484,
+        "width": 74.20833587646484,
+        "x": 32,
+        "y": 740
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "beforeTablet": {
+      "apply": {
+        "bottom": 744,
+        "height": 48,
+        "right": 176.81729125976562,
+        "width": 336,
+        "x": -159.18270874023438,
+        "y": 696
+      },
+      "columnGap": 24,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 768,
+        "height": 768,
+        "right": 200.8172912597656,
+        "width": 384,
+        "x": -183.1827087402344,
+        "y": 0
+      },
+      "dividerToReset": null,
+      "dock": null,
+      "dockPadding": null,
+      "event": {
+        "bottom": 2282.59375,
+        "height": 2161.59375,
+        "right": 984.6666870117188,
+        "width": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "footer": {
+        "bottom": 768.0000457763672,
+        "height": 156.6666717529297,
+        "right": 200.8172912597656,
+        "width": 384,
+        "x": -183.1827087402344,
+        "y": 611.3333740234375
+      },
+      "header": {
+        "bottom": 97,
+        "height": 97,
+        "right": 1008.6666870117188,
+        "width": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 744,
+        "height": 623,
+        "right": 414,
+        "width": 390,
+        "x": 24,
+        "y": 121
+      },
+      "listBottom": 24,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "railBottom": 768,
+      "reset": {
+        "bottom": 680,
+        "height": 48,
+        "right": -84.97437286376953,
+        "width": 74.20833587646484,
+        "x": -159.18270874023438,
+        "y": 632
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 768,
+        "width": 1024
+      }
+    },
+    "beforePhone": {
+      "apply": {
+        "bottom": 820,
+        "height": 48,
+        "right": 318.66668701171875,
+        "width": 294.66668701171875,
+        "x": 24,
+        "y": 772
+      },
+      "columnGap": -374.6666870117187,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 844,
+        "height": 844,
+        "right": 342.66668701171875,
+        "width": 342.66668701171875,
+        "x": 0,
+        "y": 0
+      },
+      "dividerToReset": null,
+      "dock": null,
+      "dockPadding": null,
+      "event": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "bottom": 844.0000457763672,
+        "height": 156.6666717529297,
+        "right": 342.66668701171875,
+        "width": 342.66668701171875,
+        "x": 0,
+        "y": 687.3333740234375
+      },
+      "header": {
+        "bottom": 97,
+        "height": 97,
+        "right": 374.6666870117187,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 9491.6669921875,
+        "height": 9394.6669921875,
+        "right": 374.6666870117187,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 97
+      },
+      "listBottom": -8647.6669921875,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "railBottom": 844,
+      "reset": {
+        "bottom": 756,
+        "height": 48,
+        "right": 98.20833587646484,
+        "width": 74.20833587646484,
+        "x": 24,
+        "y": 708
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "afterPhone": {
+      "apply": {
+        "bottom": 820,
+        "height": 48,
+        "right": 318.66668701171875,
+        "width": 294.66668701171875,
+        "x": 24,
+        "y": 772
+      },
+      "columnGap": -374.6666870117187,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 844,
+        "height": 844,
+        "right": 342.66668701171875,
+        "width": 342.66668701171875,
+        "x": 0,
+        "y": 0
+      },
+      "dividerToReset": null,
+      "dock": null,
+      "dockPadding": null,
+      "event": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "bottom": 844.0000457763672,
+        "height": 156.6666717529297,
+        "right": 342.66668701171875,
+        "width": 342.66668701171875,
+        "x": 0,
+        "y": 687.3333740234375
+      },
+      "header": {
+        "bottom": 97,
+        "height": 97,
+        "right": 374.6666870117187,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 9491.6669921875,
+        "height": 9394.6669921875,
+        "right": 374.6666870117187,
+        "width": 374.6666870117187,
+        "x": 0,
+        "y": 97
+      },
+      "listBottom": -8647.6669921875,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "railBottom": 844,
+      "reset": {
+        "bottom": 756,
+        "height": 48,
+        "right": 98.20833587646484,
+        "width": 74.20833587646484,
+        "x": 24,
+        "y": 708
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "afterTablet": {
+      "apply": {
+        "bottom": 744,
+        "height": 48,
+        "right": 177.2164306640625,
+        "width": 336,
+        "x": -158.7835693359375,
+        "y": 696
+      },
+      "columnGap": 24,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 768,
+        "height": 768,
+        "right": 201.2164306640625,
+        "width": 384,
+        "x": -182.7835693359375,
+        "y": 0
+      },
+      "dividerToReset": null,
+      "dock": null,
+      "dockPadding": null,
+      "event": {
+        "bottom": 2282.59375,
+        "height": 2161.59375,
+        "right": 984.6666870117188,
+        "width": 546.6666870117188,
+        "x": 438,
+        "y": 121
+      },
+      "footer": {
+        "bottom": 768.0000457763672,
+        "height": 156.6666717529297,
+        "right": 201.2164306640625,
+        "width": 384,
+        "x": -182.7835693359375,
+        "y": 611.3333740234375
+      },
+      "header": {
+        "bottom": 97,
+        "height": 97,
+        "right": 1008.6666870117188,
+        "width": 1008.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 744,
+        "height": 623,
+        "right": 414,
+        "width": 390,
+        "x": 24,
+        "y": 121
+      },
+      "listBottom": 24,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "railBottom": 768,
+      "reset": {
+        "bottom": 680,
+        "height": 48,
+        "right": -84.57523345947266,
+        "width": 74.20833587646484,
+        "x": -158.7835693359375,
+        "y": 632
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 768,
+        "width": 1024
+      }
+    },
+    "afterDesktop": {
+      "apply": {
+        "bottom": 876,
+        "height": 48,
+        "right": 280,
+        "width": 248,
+        "x": 32,
+        "y": 828
+      },
+      "columnGap": 24.000030517578125,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "dividerToReset": 15.9999589765625,
+      "dock": {
+        "bottom": 876.0000457763672,
+        "height": 128.6666717529297,
+        "right": 304,
+        "width": 272,
+        "x": 32,
+        "y": 747.3333740234375
+      },
+      "dockPadding": "16px",
+      "event": {
+        "bottom": 2362.59375,
+        "height": 2245.59375,
+        "right": 1320.3438110351562,
+        "width": 596.0104370117188,
+        "x": 724.3333740234375,
+        "y": 117
+      },
+      "footer": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "right": 1424.666748046875,
+        "width": 1424.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 876,
+        "height": 759,
+        "right": 700.3333435058594,
+        "width": 372.3333435058594,
+        "x": 328,
+        "y": 117
+      },
+      "listBottom": 24,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 876,
+        "height": 759,
+        "right": 304,
+        "width": 272,
+        "x": 32,
+        "y": 117
+      },
+      "railBottom": 24,
+      "reset": {
+        "bottom": 812,
+        "height": 48,
+        "right": 106.20833587646484,
+        "width": 74.20833587646484,
+        "x": 32,
+        "y": 764
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    "shortDesktop": {
+      "apply": {
+        "bottom": 576,
+        "height": 48,
+        "right": 264,
+        "width": 232,
+        "x": 32,
+        "y": 528
+      },
+      "columnGap": 24.000030517578125,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "dividerToReset": 15.999989494140625,
+      "dock": {
+        "bottom": 576.0000152587891,
+        "height": 128.6666717529297,
+        "right": 288,
+        "width": 256,
+        "x": 32,
+        "y": 447.3333435058594
+      },
+      "dockPadding": "16px",
+      "event": {
+        "bottom": 2174.59375,
+        "height": 2057.59375,
+        "right": 1152.666748046875,
+        "width": 548.3333740234375,
+        "x": 604.3333740234375,
+        "y": 117
+      },
+      "footer": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "right": 1184.666748046875,
+        "width": 1184.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 576,
+        "height": 459,
+        "right": 580.3333435058594,
+        "width": 268.3333435058594,
+        "x": 312,
+        "y": 117
+      },
+      "listBottom": 24,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 576,
+        "height": 459,
+        "right": 288,
+        "width": 256,
+        "x": 32,
+        "y": 117
+      },
+      "railBottom": 24,
+      "reset": {
+        "bottom": 512,
+        "height": 48,
+        "right": 106.20833587646484,
+        "width": 74.20833587646484,
+        "x": 32,
+        "y": 464
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 600,
+        "width": 1200
+      }
+    },
+    "wideDesktop": {
+      "apply": {
+        "bottom": 976,
+        "height": 48,
+        "right": 296,
+        "width": 248,
+        "x": 48,
+        "y": 928
+      },
+      "columnGap": 24.000030517578125,
+      "count": "48 matching events",
+      "dialog": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "dividerToReset": 15.9999589765625,
+      "dock": {
+        "bottom": 976.0000457763672,
+        "height": 128.6666717529297,
+        "right": 320,
+        "width": 272,
+        "x": 48,
+        "y": 847.3333740234375
+      },
+      "dockPadding": "16px",
+      "event": {
+        "bottom": 2462.59375,
+        "height": 2345.59375,
+        "right": 1400.3438110351562,
+        "width": 596.0104370117188,
+        "x": 804.3333740234375,
+        "y": 117
+      },
+      "footer": {
+        "bottom": 0,
+        "height": 0,
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "header": {
+        "bottom": 93,
+        "height": 93,
+        "right": 1584.666748046875,
+        "width": 1584.666748046875,
+        "x": 0,
+        "y": 0
+      },
+      "list": {
+        "bottom": 976,
+        "height": 859,
+        "right": 780.3333435058594,
+        "width": 436.3333435058594,
+        "x": 344,
+        "y": 117
+      },
+      "listBottom": 24,
+      "overflow": false,
+      "query": "",
+      "queryCount": 1,
+      "rail": {
+        "bottom": 976,
+        "height": 859,
+        "right": 320,
+        "width": 272,
+        "x": 48,
+        "y": 117
+      },
+      "railBottom": 24,
+      "reset": {
+        "bottom": 912,
+        "height": 48,
+        "right": 122.20833587646484,
+        "width": 74.20833587646484,
+        "x": 48,
+        "y": 864
+      },
+      "resetToShow": 16,
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    }
+  }
+}

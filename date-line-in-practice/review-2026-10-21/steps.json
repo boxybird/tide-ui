@@ -1,0 +1,31 @@
+[
+  {
+    "step": 1,
+    "name": "Scan the list",
+    "health": "Strong visual hierarchy; discovery and saved states remain unmodeled.",
+    "image": "01-list.png",
+    "notes": "Date, title, venue, time and price scan cleanly. Advertisement is clearly disclosed and visually distinct. This weekend, Albuquerque and Saved read as future discovery controls; the current static study has no filtering or saved-state behavior. Add dynamic event status only when needed; keep ordinary card density unchanged."
+  },
+  {
+    "step": 2,
+    "name": "Open an event",
+    "health": "Strong opening; attendance action needs a real destination.",
+    "image": "02-event-opening.png",
+    "notes": "Full-screen photo and date/time/venue/price stay clear. Plan this evening currently scrolls to detail, matching the static study scope. Real events need a truthful primary action such as Get tickets, RSVP or Visit organizer, plus sold-out/cancelled variants. Save icon is a visual preview. Preserve the hero geometry."
+  },
+  {
+    "step": 3,
+    "name": "Read the details",
+    "health": "Good depth; practical trust and travel details are incomplete.",
+    "image": "03-event-details-viewport.png",
+    "fullImage": "03-event-details.png",
+    "notes": "Description, inclusions, schedule, age requirement and preparation guidance justify the detail page. Event ad is disclosed and below the introduction. Finding your way only has a city and a request to ask the organizer; the real product needs a street address or explicit undisclosed-location state, directions, named organizer/contact and factual access information. Add share/calendar and an honest ticket/RSVP link. These are omissions in a fictional static study, not defects in a live service."
+  },
+  {
+    "step": 4,
+    "name": "Open the poor-photo version",
+    "health": "Readable; additional image failure states need design coverage.",
+    "image": "04-rough-photo.png",
+    "notes": "The existing scrim preserves readable event information over the harsh flash snapshot. The full-height blank wall demonstrates the limits of automatic cropping. Next stress cases should include no image, failed loading, a wide photo, a text-heavy poster and an organizer-selected focal point. Fallback should use the approved dark texture and unchanged content structure. No different crop rule was tested here."
+  }
+]

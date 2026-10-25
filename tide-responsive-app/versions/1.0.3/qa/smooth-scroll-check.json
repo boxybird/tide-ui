@@ -1,0 +1,12 @@
+{
+  "bottomGap": 24,
+  "documentBehavior": "smooth",
+  "reducedMotion": false,
+  "resultsBehavior": "smooth",
+  "destination": {
+    "focus": "event-story",
+    "hash": "#event-story",
+    "scrollY": 720,
+    "storyTop": 44.0625
+  }
+}

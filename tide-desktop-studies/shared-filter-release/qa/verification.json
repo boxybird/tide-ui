@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "date": "2026-10-24",
+  "kitVersion": "1.3.0",
+  "newComponents": [
+    "tide-filter-panel"
+  ],
+  "primitiveAndExistingComponentSourcesUnchanged": 9,
+  "themeModes": 6,
+  "appPages": 53,
+  "appReferences": 3969,
+  "preservation": {
+    "desktopStudyFiles": 185,
+    "widthStudyFiles": 177,
+    "appFiles": 980,
+    "kitFiles": 180,
+    "refinementFiles": 177,
+    "lineupFiles": 182,
+    "controlBarFiles": 176,
+    "filterSpaceFiles": 178,
+    "slidingFilterFiles": 123,
+    "readingWidthFiles": 188,
+    "containedWidthFiles": 182,
+    "marginRevealFiles": 73,
+    "marginRefinedFiles": 66,
+    "marginAlignedFiles": 66,
+    "responsiveFilterFiles": 73,
+    "browseFirstFiles": 75,
+    "originalFoundationFiles": 176,
+    "approvedPrototypeFiles": 72,
+    "approvedPrototypeArchiveSha256": "1f8226ef94f33fec68671b6f72ac9c0de87fdf2c94554714a95f506e344ac490"
+  },
+  "runs": [
+    {
+      "command": "python -B tools/build.py --check",
+      "cwd": "kit",
+      "exitCode": 0,
+      "output": "3 themes / 6 modes. 348 contrast checks passed. 111 generated files verified."
+    },
+    {
+      "command": "python -B tools/check.py",
+      "cwd": "kit",
+      "exitCode": 0,
+      "output": "{\n  \"pass\": true,\n  \"htmlFiles\": 105,\n  \"localReferences\": 1672,\n  \"screenTemplates\": 15,\n  \"registeredComponents\": 22,\n  \"browserScripts\": 0,\n  \"inlineStyles\": 0,\n  \"failures\": []\n}"
+    },
+    {
+      "command": "python -B -m unittest discover -s tools -p test_*.py",
+      "cwd": "kit",
+      "exitCode": 0,
+      "output": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.488s\n\nOK"
+    },
+    {
+      "command": "python -B tools/build_app.py --check",
+      "cwd": ".",
+      "exitCode": 0,
+      "output": "53 independent app pages built; shared CSS and shell adopted."
+    }
+  ],
+  "failures": []
+}

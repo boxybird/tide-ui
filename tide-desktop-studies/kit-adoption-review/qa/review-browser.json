@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "date": "2026-10-24",
+  "scope": "Companion documentation rendering in Chromium only; no renewed Firefox/Safari testing.",
+  "evidence": {
+    "anchor": {
+      "hash": "#interaction",
+      "headingY": 24
+    },
+    "phone": {
+      "overflow": false,
+      "scripts": 0,
+      "tableRegions": [
+        {
+          "keyboardAccess": true,
+          "name": "Search and filter ownership decisions",
+          "role": "region",
+          "scrollWidth": 512,
+          "width": 327
+        },
+        {
+          "keyboardAccess": true,
+          "name": "Search and filter state contract",
+          "role": "region",
+          "scrollWidth": 512,
+          "width": 327
+        }
+      ],
+      "width": 390
+    },
+    "desktop": {
+      "overflow": false,
+      "proposedComponentInstances": 0,
+      "scripts": 0,
+      "tableRows": [
+        10,
+        13
+      ],
+      "width": 1440
+    }
+  }
+}

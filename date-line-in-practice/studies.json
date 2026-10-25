@@ -1,0 +1,4 @@
+[
+  {"id":"01","slug":"local-partner","name":"Local Partner","title":"One quiet ad in the list. One below the opening.","note":"A labelled local-partner placement sits between the second and third events. The original cards keep their exact styling. The opened event keeps its first screen intact; a second ad appears after the introduction when you scroll.","extra":"Open the event ad placement","extraHref":"frames/local-partner-event.html#event-sponsor"},
+  {"id":"02","slug":"rough-upload","name":"Rough Upload","title":"The same event, with a genuinely awkward photo.","note":"Crooked framing, harsh flash, too much wall and blurred hands replace the ideal photo. The list stays identical to the approved Date Line. The event’s text, controls, crop rules and geometry stay fixed; the existing overlay carries readability."}
+]
