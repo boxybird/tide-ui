@@ -3,7 +3,7 @@
   'use strict';
   const root=document.body;
   const desktop=matchMedia('(min-width:75rem)');
-  const key='tide:reading-widths:photo:'+root.dataset.room;
+  const key='tide:reading-widths:photo:'+root.dataset.stateKey;
   const modes=new Set(['original','rough','none']);
   const originals=new WeakMap();
   const asset=new URL('assets/organizer-upload.png',document.currentScript.src).href;
@@ -21,15 +21,13 @@
     if(!photo)return;
     if(!originals.has(photo))originals.set(photo,{src:photo.getAttribute('src'),alt:photo.alt});
     const original=originals.get(photo);
-    const figure=photo.closest('.tide-room-study__media');
     photo.hidden=mode==='none';
-    if(figure)figure.hidden=mode==='none';
     photo.src=mode==='rough'?asset:original.src;
     photo.alt=mode==='rough'?'An imperfect organizer snapshot: a printmaking table below a large blank wall, softly focused and unevenly lit.':original.alt;
   }
   function ready() {
-    root.classList.remove('tide-room-study--ready');
-    if(desktop.matches)requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('tide-room-study--ready')));
+    root.classList.remove('tide-app--ready');
+    if(desktop.matches)requestAnimationFrame(()=>requestAnimationFrame(()=>root.classList.add('tide-app--ready')));
   }
   window.addEventListener('message',event=>{
     if(event.origin!==location.origin||event.source!==parent||event.data?.type!=='tide:reading-widths:photo'||!modes.has(event.data.mode))return;

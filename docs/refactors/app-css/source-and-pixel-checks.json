@@ -1,0 +1,55 @@
+{
+  "kitInputsUnchanged": 59,
+  "oldAppCssBytes": 40434,
+  "newAppCssSourceBytes": 23407,
+  "appCssReductionPercent": 42.1,
+  "screenshots": [
+    {
+      "case": "desktop",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0,
+      "totalPixels": 1269675
+    },
+    {
+      "case": "tablet",
+      "size": [
+        1009,
+        757
+      ],
+      "changedPixels": 0,
+      "totalPixels": 763813,
+      "note": "Initial captures differed despite identical DOM geometry; the repeated pair at a fixed matching viewport was pixel-identical."
+    },
+    {
+      "case": "phone-list",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0,
+      "totalPixels": 304500
+    },
+    {
+      "case": "phone-event",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0,
+      "totalPixels": 304500
+    },
+    {
+      "case": "venue",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0,
+      "totalPixels": 1269675
+    }
+  ],
+  "authoredHtmlContentAndPublicClassesUnchanged": 60
+}

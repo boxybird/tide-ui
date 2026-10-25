@@ -43,7 +43,9 @@ def main():
     for folder in ('tide','site','events','docs'):
         for p in (ROOT/'build'/folder).rglob('*'):
             if p.is_file():reference['reference/'+p.relative_to(ROOT/'build').as_posix()]=p.read_bytes()
-    rows.append(archive('tide-ui-reference-'+version+'.zip',reference))
+    app_version=json.loads((ROOT/'examples/events/consumer-manifest.json').read_text(encoding='utf-8'))['version']
+    # The consuming example can ship a patch without changing the kit version.
+    rows.append(archive('tide-ui-reference-kit-'+version+'-events-'+app_version+'.zip',reference))
     (ROOT/'dist/SHA256SUMS.txt').write_text('\n'.join(rows)+'\n',encoding='utf-8')
     print('\n'.join(rows))
 

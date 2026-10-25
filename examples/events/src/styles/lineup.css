@@ -1,0 +1,53 @@
+/* List headings and calendar context at every width; kit cards remain shared. */
+@layer tide.app-lineup {
+  /* One heading rhythm at every width. Both desktop columns use the same
+     label, title and supporting-copy rows; mobile keeps the same hierarchy. */
+  .tide-lineup__heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: var(--tide-space-2);
+    padding-block-start: var(--tide-space-6);
+    padding-inline: var(--tide-layout-inset);
+    font-size: var(--tide-font-size-caption);
+    line-height: var(--tide-leading-body);
+  }
+  .tide-lineup__heading > * { margin-block: 0; }
+  .tide-lineup__heading-title {
+    color: var(--tide-color-text-primary);
+    font-size: var(--tide-font-size-page);
+    line-height: var(--tide-leading-page);
+    font-weight: var(--tide-font-weight-heading);
+    letter-spacing: var(--tide-tracking-title);
+  }
+  .tide-lineup__summary {
+    padding-block-end: var(--tide-space-4);
+    border-block-start: 0;
+  }
+  .tide-app__results {
+    scroll-padding-block-start: calc(var(--tide-lineup-month-height, var(--tide-size-target)) + var(--tide-space-2));
+  }
+  .tide-lineup__month-header {
+    padding-block: var(--tide-space-2);
+    border-block-end: 0;
+  }
+  .tide-lineup__month-title {
+    font-size: var(--tide-font-size-control);
+    line-height: var(--tide-leading-body);
+  }
+  .tide-lineup__year {
+    font-size: var(--tide-font-size-caption);
+  }
+  .tide-lineup__year { color: var(--tide-color-text-muted); font-weight: var(--tide-font-weight-regular); }
+  .tide-lineup__query {
+    display: block;
+    margin-block-start: var(--tide-space-2);
+    color: var(--tide-color-text-secondary);
+    font-size: var(--tide-font-size-caption);
+    line-height: var(--tide-leading-caption);
+    font-weight: var(--tide-font-weight-regular);
+    letter-spacing: normal;
+  }
+  /* Isolate the complete feed beneath its sibling permanent summary. */
+  .tide-lineup__feed { isolation: isolate; }
+}

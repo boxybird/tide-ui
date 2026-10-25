@@ -1,5 +1,11 @@
 # Changelog
 
+## Events example 1.1.1 · 2026-10-25
+
+- Consolidated inherited app styles into five registered, ordered CSS modules and one generated app stylesheet. Removed inactive layout variants and study-era class aliases from all 60 authored pages and runtime helpers.
+- Retained kit1.3.0 inputs, app content, native routes, scoped search, responsive controls, sticky geometry and existing session preferences. Simplified the single selected lineup heading helper.
+- Added app selector/module ownership checks and recorded before/after responsive verification. Reference ZIP names now include the independently versioned example.
+
 ## Repository migration · 2026-10-25
 
 - Established permanent `packages/tide/`, `site/` and `examples/events/` homes with one shared CSS distribution.

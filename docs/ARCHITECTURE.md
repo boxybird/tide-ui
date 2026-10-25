@@ -8,4 +8,6 @@ Build order is package → site → example, driven by `tools/build.py`. Output 
 
 Every theme resolves the same semantic names. Light/dark are appearance modes rather than separate libraries. Theme changes cannot redefine typography, spacing or radius. Neutral notice borders, Manrope, square controls, accessible labels and unframed event compositions are preserved decisions.
 
-The event app retains its existing compatibility names and concatenated host layers during migration. This makes geometry and CSS parity verifiable. Consolidating private app classes/styles is a separate future change; public component selectors and themes should remain stable.
+The event example's five registered `src/styles/` modules bundle into one app-only stylesheet. Private layout, lineup, responsive drawer and venue classes describe their purpose; abandoned study variants are absent. The kit's public selectors, canonical recipes and themes remain unchanged. See the app ownership contract at `examples/events/docs/COMPONENT-OWNERSHIP.md`. Existing per-theme session keys remain compatible across the refactor.
+
+Downloadable kit artifacts retain the independent kit version. Reference artifacts include both kit and app versions, so an app-only patch can be packaged without overwriting an earlier reference release.

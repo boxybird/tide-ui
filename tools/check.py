@@ -65,7 +65,7 @@ def main():
         if 'event-search-form' in s.ids:
             expected=6 if path.name=='sunshine-theater.html' else 54
             if s.classes.count('tide-event-card')!=expected:failures.append(name+': sample count drift')
-            if s.ids.count('event-query')!=1 or 'tide-app-release__feed' not in s.classes:failures.append(name+': control/stacking owner missing')
+            if s.ids.count('event-query')!=1 or 'tide-lineup__feed' not in s.classes:failures.append(name+': control/stacking owner missing')
     for name in ('base','layout','components','patterns','content','filter-panel','utilities'):
         css=(KIT/'css'/f'{name}.css').read_text(encoding='utf-8')
         if re.search(r'#[0-9a-fA-F]{3,8}\b|rgba?\(|oklch\(|data-theme|--tide-palette-',css):failures.append(name+': theme input leaked into component source')
@@ -99,9 +99,19 @@ def main():
             if url.scheme or url.netloc or not url.path:continue
             markdown_refs+=1
             if not(path.parent/unquote(url.path)).resolve().is_file():failures.append(str(path.relative_to(ROOT))+': missing documentation link '+ref)
-    appcss='\n'.join(p.read_text(encoding='utf-8') for p in (ROOT/'examples/events/src/runtime/css').glob('*.css'))
+    appcss='\n'.join(p.read_text(encoding='utf-8') for p in (ROOT/'examples/events/src/styles').glob('*.css'))
     failures+=style_ownership_issues(appcss,manifest)
-    if not re.search(r'\.tide-app-release__feed\s*\{\s*isolation:\s*isolate;',appcss):failures.append('Accepted feed isolation missing')
+    if not re.search(r'\.tide-lineup__feed\s*\{\s*isolation:\s*isolate;',appcss):failures.append('Accepted feed isolation missing')
+    # Private app selectors have one current home, never inherited study aliases.
+    app_source=ROOT/'examples/events/src'
+    usage='\n'.join(p.read_text(encoding='utf-8') for p in app_source.rglob('*') if p.suffix in ('.html','.js'))
+    usage+=(ROOT/'examples/events/tools/build.py').read_text(encoding='utf-8')
+    for p in app_source.rglob('*'):
+        if p.suffix in ('.html','.js','.css') and re.search(r'\btide-(?:[\w-]*study[\w-]*|shell(?:-document)?)(?:__[\w-]+)?\b',p.read_text(encoding='utf-8')):
+            failures.append(str(p.relative_to(ROOT))+': historical app selector returned')
+    for cls in set(re.findall(r'\.(tide-[\w-]+(?:__[\w-]+)?)',appcss)):
+        if any(cls==block or cls.startswith(block+'__') or cls.startswith(block+'--') for block in private) and not re.search(r'(?<![\w-])'+re.escape(cls)+r'(?![\w-])',usage):
+            failures.append('Unused private app selector: '+cls)
     # All emitted six-mode screen bodies remain identical apart from paths.
     signatures={}
     for path in (ROOT/'build/site').glob('*/frames/*.html'):

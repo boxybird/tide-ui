@@ -9,15 +9,15 @@
   const small=matchMedia('(width < 75rem)'),phone=matchMedia('(width < 48rem)');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const results=document.getElementById('results');
-  const intro=results.querySelector('.tide-slide-study__intro');
+  const intro=results.querySelector('.tide-app__intro');
   const context=results.querySelector('.tide-app__filter-row');
-  const summary=results.querySelector('.tide-slide-study__summary');
-  const badge=summary.querySelector('.tide-slide-study__applied');
+  const summary=results.querySelector('.tide-lineup__summary');
+  const badge=summary.querySelector('.tide-app__applied-filters');
   const filters=results.querySelector('.tide-app__filters');
   const fields=filters.querySelector('.tide-app__filter-form');
   const actions=fields.querySelector('.tide-app__filter-actions');
   const apply=actions.querySelector('button[type="submit"]');
-  const launcher=document.querySelector('.tide-browse-flyout__trigger');
+  const launcher=document.querySelector('.tide-filter-drawer__trigger');
   const query=document.getElementById('event-query');
   
   
@@ -39,7 +39,7 @@
   const appliedCount=Number(Boolean(applied.from||applied.to))+applied.categories.length;
   const returnKey='tide:app-release-1.1.0:applied';
   let mounted=false,desktopMounted=false,snapshot=null,committing=false,closing=false,exitAnimation=null;
-  const gutterProperty='--tide-unified-search-scrollbar-gutter';
+  const gutterProperty='--tide-app-scrollbar-gutter';
   let gutterObserver=null,gutterFrame=0,pendingGutter=0,lastGutter=null;
 
   function watchGutter(){
@@ -76,16 +76,16 @@
   }
 
   function clearViewport(){
-    dialog.style.removeProperty('--tide-browse-flyout-viewport-height');
-    dialog.style.removeProperty('--tide-browse-flyout-viewport-top');
+    dialog.style.removeProperty('--tide-filter-drawer-viewport-height');
+    dialog.style.removeProperty('--tide-filter-drawer-viewport-top');
   }
   function syncViewport(){
     const viewport=window.visualViewport;
     if(!mounted||!dialog.open||!viewport||viewport.scale!==1)return;
     // A software keyboard may resize only the visual viewport. Do not constrain
     // pinch zoom; keep native zoom/panning behavior when scale differs from one.
-    dialog.style.setProperty('--tide-browse-flyout-viewport-height',viewport.height+'px');
-    dialog.style.setProperty('--tide-browse-flyout-viewport-top',viewport.offsetTop+'px');
+    dialog.style.setProperty('--tide-filter-drawer-viewport-height',viewport.height+'px');
+    dialog.style.setProperty('--tide-filter-drawer-viewport-top',viewport.offsetTop+'px');
   }
 
   function values(){return controls.map(input=>({value:input.value,checked:input.checked}));}
@@ -107,14 +107,14 @@
     if(small.matches||desktopMounted)return;
     const dock=document.querySelector('.tide-filter-panel__footer');
     if(!dock)return;
-    // The preserved geometry adapter owns the dock. Restore these children
+    // The desktop rail composition owns the dock. Restore these children
     // before it removes that dock at the next breakpoint.
     dock.prepend(statusRow);
     
     
     apply.classList.add('tide-button--full');
     apply.classList.remove('tide-button--secondary');
-    legacyClear.classList.add('tide-filter-host__legacy-clear');
+    legacyClear.classList.add('tide-app__legacy-clear');
     
     desktopMounted=true;update();watchGutter();
   }
@@ -126,7 +126,7 @@
     
     apply.classList.remove('tide-button--full');
     apply.classList.toggle('tide-button--secondary',wasSecondary);
-    legacyClear.classList.remove('tide-filter-host__legacy-clear');
+    legacyClear.classList.remove('tide-app__legacy-clear');
     desktopMounted=false;
   }
   function closePanel(){
@@ -147,7 +147,7 @@
   function label(){
     if(!mounted)return;
     launcher.classList.toggle('tide-button--icon',phone.matches);
-    launcher.classList.toggle('tide-browse-flyout__trigger--applied',TideSearch.active(applied));
+    launcher.classList.toggle('tide-filter-drawer__trigger--applied',TideSearch.active(applied));
     launcher.setAttribute('aria-label','Search and filters'+(appliedCount?' · '+appliedCount+' applied':''));
   }
   function mount(){
@@ -155,15 +155,15 @@
     slots.forEach(({node,marker})=>node.before(marker));
     body.append(form,fields);footer.append(apply);nav.prepend(launcher);
     summary.after(context);
-    if(!document.body.classList.contains('tide-app-release--profile'))intro.classList.add('tide-sr-only');
-    context.classList.add('tide-browse-flyout__context');context.hidden=!TideSearch.active(applied);
-    form.classList.add('tide-browse-flyout__query');
-    fields.classList.add('tide-filter-host__fields');
+    if(!document.body.classList.contains('tide-app--venue'))intro.classList.add('tide-sr-only');
+    context.classList.add('tide-filter-drawer__context');context.hidden=!TideSearch.active(applied);
+    form.classList.add('tide-filter-drawer__query');
+    fields.classList.add('tide-app__filter-fields');
     apply.classList.add('tide-button--full');apply.classList.remove('tide-button--secondary');
     actions.hidden=true;filters.hidden=true;launcher.hidden=false;
     const names={music:'Music',comedy:'Comedy',workshop:'Workshops'};
     badge.hidden=!appliedCount;badge.textContent=applied.categories.map(category=>names[category]).join(' · ')||'Dates set';
-    mounted=true;document.body.classList.add('tide-browse-flyout--mounted');label();update();
+    mounted=true;document.body.classList.add('tide-app--drawer');label();update();
   }
   function unmount(){
     if(!mounted)return;
@@ -173,14 +173,14 @@
     clearViewport();
     // Restore outer wrappers first, then their original children.
     slots.forEach(({node,marker})=>marker.replaceWith(node));
-    intro.classList.remove('tide-sr-only');context.classList.remove('tide-browse-flyout__context');context.hidden=false;
-    form.classList.remove('tide-browse-flyout__query');
-    fields.classList.remove('tide-filter-host__fields');
+    intro.classList.remove('tide-sr-only');context.classList.remove('tide-filter-drawer__context');context.hidden=false;
+    form.classList.remove('tide-filter-drawer__query');
+    fields.classList.remove('tide-app__filter-fields');
     apply.classList.remove('tide-button--full');apply.classList.toggle('tide-button--secondary',wasSecondary);apply.textContent=applyText;
     actions.hidden=false;filters.hidden=false;launcher.hidden=true;
-    launcher.classList.add('tide-button--icon');launcher.classList.remove('tide-browse-flyout__trigger--applied');
+    launcher.classList.add('tide-button--icon');launcher.classList.remove('tide-filter-drawer__trigger--applied');
     launcher.setAttribute('aria-expanded','false');badge.hidden=true;badge.textContent='Filters · '+appliedCount;
-    mounted=false;document.body.classList.remove('tide-browse-flyout--mounted');
+    mounted=false;document.body.classList.remove('tide-app--drawer');
     if(wasOpen||active===launcher)results.focus({preventScroll:true});
   }
 

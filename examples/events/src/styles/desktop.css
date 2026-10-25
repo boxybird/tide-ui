@@ -1,0 +1,122 @@
+/* Desktop host geometry. The right pane remains natural document scrolling;
+   the browsing pair borrows the outer margin without moving that right pane. */
+@layer tide.app-layout {
+  @media (width >= 75rem) {
+    .tide-app-document {
+      container-type: inline-size;
+      scroll-padding-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6));
+    }
+    .tide-app {
+      --tide-app-outer-inset: var(--tide-space-8);
+      --tide-app-content-width: 76rem;
+      --tide-app-content-inset: max(var(--tide-app-outer-inset), calc((100cqw - var(--tide-app-content-width)) / 2));
+      --tide-app-panel-top: calc(var(--tide-app-header-block-size) + var(--tide-space-6));
+      --tide-app-panel-height: max(0px, calc(100dvh - var(--tide-app-panel-top) - var(--tide-app-pane-gap) - var(--tide-app-scrollbar-gutter, 0px)));
+      --tide-app-filter-width: clamp(16rem, 20vw, 17rem);
+      --tide-app-margin-space: max(0px, calc(var(--tide-app-content-inset) - var(--tide-app-outer-inset)));
+      --tide-app-reveal-duration: 440ms;
+      --tide-app-reveal-ease: cubic-bezier(.22, 1, .36, 1);
+    }
+    .tide-app__header, .tide-app__site-footer { max-inline-size: none; padding-inline: var(--tide-app-outer-inset); }
+    .tide-app__header { position: sticky; inset-block-start: 0; z-index: var(--tide-z-navigation); background: var(--tide-color-canvas); }
+    .tide-app__workspace { max-inline-size: none; padding-inline: var(--tide-app-outer-inset); grid-template-columns: 22rem minmax(0, 1fr); }
+    .tide-app__story { max-inline-size: 48rem; margin-inline: auto; }
+    .tide-app__results {
+      grid-column: 2; grid-row: 1;
+      inset-block-start: var(--tide-app-panel-top); max-block-size: var(--tide-app-panel-height); block-size: var(--tide-app-panel-height); overscroll-behavior-y: contain;
+      inline-size: 100%; max-inline-size: calc((var(--tide-app-content-width) - var(--tide-space-6)) / 2); justify-self: end;
+    }
+    .tide-app__detail, .tide-app__preview-state { grid-column: 3; grid-row: 1; }
+
+    /* Subgrid lets MAIN span the footer row, keeping sticky panes bounded even
+       at the document end. JS adds this modifier only while the rail is mounted. */
+    .tide-app--desktop {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: var(--tide-app-header-block-size) auto auto;
+      gap: var(--tide-app-pane-gap);
+      align-content: start;
+      padding-inline: var(--tide-app-content-inset);
+    }
+    .tide-app--desktop .tide-app__header {
+      grid-column: 1 / -1; grid-row: 1; align-self: start;
+      margin-inline: calc(-1 * var(--tide-app-content-inset));
+      box-shadow: 0 var(--tide-space-6) 0 var(--tide-color-canvas);
+    }
+    .tide-app--desktop .tide-app__workspace {
+      grid-column: 1 / -1; grid-row: 2 / 4;
+      grid-template-columns: subgrid; grid-template-rows: subgrid;
+      padding: 0; margin: 0;
+    }
+    .tide-app__browse {
+      grid-column: 1; grid-row: 1;
+      position: sticky; inset-block-start: var(--tide-app-panel-top);
+      container-type: inline-size;
+      block-size: var(--tide-app-panel-height);
+      min-inline-size: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 0px) minmax(0, 1fr);
+      grid-template-rows: minmax(0, 1fr);
+      column-gap: 0;
+      inline-size: 100%; margin-inline-start: 0;
+      transition: inline-size var(--tide-app-reveal-duration) var(--tide-app-reveal-ease), margin-inline-start var(--tide-app-reveal-duration) var(--tide-app-reveal-ease), grid-template-columns var(--tide-app-reveal-duration) var(--tide-app-reveal-ease), column-gap var(--tide-app-reveal-duration) var(--tide-app-reveal-ease);
+    }
+    .tide-app__browse--filters-open {
+      inline-size: calc(100% + var(--tide-app-margin-space));
+      margin-inline-start: calc(-1 * var(--tide-app-margin-space));
+      grid-template-columns: minmax(0, var(--tide-app-filter-width)) minmax(0, 1fr);
+      column-gap: var(--tide-app-pane-gap);
+    }
+    .tide-app--desktop .tide-app__results {
+      position: relative; inset-block-start: auto;
+      grid-column: auto; grid-row: 1;
+      min-inline-size: 0; min-block-size: 0; block-size: 100%; max-block-size: 100%;
+      scroll-padding-block-start: calc(var(--tide-lineup-summary-height, 0px) + var(--tide-lineup-month-height, var(--tide-size-target)) + var(--tide-space-2));
+    }
+    .tide-app__filter-clip {
+      grid-row: 1; min-inline-size: 0; min-block-size: 0; block-size: 100%;
+      overflow: clip; visibility: hidden;
+      transition: visibility 0s linear var(--tide-app-reveal-duration);
+    }
+    .tide-app__browse--filters-open .tide-app__filter-clip { visibility: visible; transition-delay: 0s; }
+    .tide-app__filter-rail {
+      position: relative; inline-size: var(--tide-app-filter-width); min-inline-size: 0; block-size: 100%;
+      opacity: 0; transform: translateX(calc(-1 * var(--tide-space-6)));
+      transition: transform var(--tide-app-reveal-duration) var(--tide-app-reveal-ease), opacity var(--tide-app-reveal-duration) var(--tide-app-reveal-ease);
+    }
+    .tide-app__browse--filters-open .tide-app__filter-rail { opacity: 1; transform: translateX(0); }
+    .tide-app__filter-close { position: absolute; inset-inline-end: var(--tide-space-4); inset-block-start: var(--tide-space-3); z-index: var(--tide-z-card-control); }
+    .tide-app--desktop .tide-app__intro.tide-sr-only { padding: 0; margin: 0; }
+    .tide-app--desktop .tide-lineup__summary {
+      position: sticky; inset-block-start: 0; z-index: var(--tide-z-card-control);
+      grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--tide-space-2);
+      background: var(--tide-color-canvas);
+    }
+    .tide-lineup__summary > :not(.tide-app__filter-toggle) { grid-column: 1; }
+    .tide-app__filter-toggle { grid-column: 2; grid-row: 1 / 4; align-self: center; }
+    .tide-lineup__order { display: flex; flex-wrap: wrap; align-items: center; gap: var(--tide-space-2); }
+    .tide-app--desktop .tide-lineup__month-header { inset-block-start: var(--tide-lineup-summary-height, 0px); }
+    .tide-app--desktop .tide-app__detail, .tide-app--desktop .tide-app__preview-state { grid-column: 2; grid-row: 1; }
+    .tide-app--desktop .tide-app__site-footer { grid-column: 2; grid-row: 3; margin: 0; padding-inline: 0; justify-self: stretch; }
+    .tide-app--desktop .tide-app__filter-disclosure, .tide-app__legacy-clear { display: none; }
+    /* Remove duplicate wrapper insets, keeping padding inside each control. */
+    .tide-app--desktop .tide-app__filter-rail :where(.tide-app__intro, .tide-app__search, .tide-app__filter-row) { padding-inline-start: 0; }
+    .tide-app--desktop .tide-app__filter-rail .tide-app__filters { margin-inline-start: 0; }
+    .tide-app--desktop .tide-app__filter-rail :focus-visible { outline-offset: calc(-1 * var(--tide-focus-width)); }
+    .tide-app--ready.tide-app--desktop { transition: grid-template-columns var(--tide-app-reveal-duration) var(--tide-app-reveal-ease), padding-inline var(--tide-app-reveal-duration) var(--tide-app-reveal-ease); }
+    .tide-app--ready.tide-app--desktop .tide-app__header { transition: margin-inline var(--tide-app-reveal-duration) var(--tide-app-reveal-ease); }
+    .tide-app__browse--instant, .tide-app__browse--instant .tide-app__filter-clip, .tide-app__browse--instant .tide-app__filter-rail { transition: none; }
+  }
+  @media (width >= 90rem) { .tide-app__workspace { grid-template-columns: var(--tide-app-list-width) minmax(0, 1fr); } }
+  @media (width >= 100rem) { .tide-app { --tide-app-outer-inset: var(--tide-space-12); } }
+  @media (width >= 140rem) { .tide-app { --tide-app-outer-inset: var(--tide-space-16); } }
+  @media (prefers-reduced-motion: reduce) {
+    .tide-app__browse, .tide-app__filter-clip, .tide-app__filter-rail,
+    .tide-app--ready.tide-app--desktop, .tide-app--ready.tide-app--desktop .tide-app__header { transition: none; }
+  }
+  @media print {
+    .tide-app, .tide-app .tide-app__workspace { display: block; padding: 0; }
+    .tide-app .tide-app__header { position: static; }
+    .tide-app__filter-toggle, .tide-app__filter-clip { display: none; }
+  }
+}

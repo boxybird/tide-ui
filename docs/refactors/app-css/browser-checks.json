@@ -1,0 +1,224 @@
+{
+  "browser": "Windows in-app Chromium",
+  "baselineCommit": "003885b82e24e4a753a34caf7364a9c89c5d9d1b",
+  "renderedCases": {
+    "desktop": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "short": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "wide": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "tablet": {
+      "nodes": 1184,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "portrait": {
+      "nodes": 1184,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "phone-list": {
+      "nodes": 1184,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "phone-event": {
+      "nodes": 1212,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "small": {
+      "nodes": 1184,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "venue": {
+      "nodes": 267,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "zero": {
+      "nodes": 268,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "wrapped": {
+      "nodes": 1219,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "help": {
+      "nodes": 128,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "saved": {
+      "nodes": 138,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "submit": {
+      "nodes": 81,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "tide-light": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "tide-dark": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "summer-light": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "summer-dark": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "bumble-light": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "bumble-dark": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "closed": {
+      "nodes": 1188,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "drawer": {
+      "nodes": 1184,
+      "comparedStylePropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    }
+  },
+  "behaviorChecks": [
+    {
+      "name": "Escape cancels draft and restores focus",
+      "pass": true
+    },
+    {
+      "name": "Draft count changes without applying to feed",
+      "pass": true
+    },
+    {
+      "name": "Applied query uses URL and one matching preview",
+      "pass": true
+    },
+    {
+      "name": "Zero-result state",
+      "pass": true
+    },
+    {
+      "name": "Reset clears refinements and restores draft count",
+      "pass": true
+    },
+    {
+      "name": "Venue guide persists when scoped filters find nothing",
+      "pass": true
+    },
+    {
+      "name": "Venue reset retains exact scope",
+      "pass": true
+    },
+    {
+      "name": "Month jump clears sticky summary and feed stays isolated",
+      "monthTop": 249,
+      "pass": true,
+      "summaryBottom": 249
+    },
+    {
+      "name": "All events exits venue scope",
+      "pass": true
+    },
+    {
+      "name": "Inclusive dates and category narrow to one draft event",
+      "pass": true
+    },
+    {
+      "name": "Date/category applies through native query parameters",
+      "pass": true
+    },
+    {
+      "name": "Inverted dates block native submission",
+      "pass": true
+    },
+    {
+      "name": "Resizing open drawer rolls back draft and retains one control set",
+      "pass": true
+    },
+    {
+      "name": "Desktop native scrollbar spacing and Show events alignment",
+      "gutter": 10,
+      "listBottom": 866,
+      "pass": true,
+      "showBottom": 866
+    },
+    {
+      "name": "Event selection returns document to top before native navigation",
+      "pass": true
+    },
+    {
+      "name": "Browser Back restores document reading position",
+      "pass": true,
+      "scrollY": 900
+    },
+    {
+      "name": "Scrolling feed keeps summary above calendar headings",
+      "pass": true,
+      "scrollTop": 2700
+    },
+    {
+      "name": "Phone venue guide and fragment focus clear sticky header",
+      "focused": "venue-information",
+      "headerBottom": 97,
+      "pass": true,
+      "targetTop": 121
+    }
+  ],
+  "nativeFirefoxSafari": "Deferred; no native sessions available",
+  "consoleWarningsAndErrors": []
+}

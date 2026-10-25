@@ -138,7 +138,7 @@
     markPreview(null);
   }
 
-  if (document.body.classList.contains('tide-app-release--profile')) { markPreview(null); return; }
+  if (document.body.classList.contains('tide-app--venue')) { markPreview(null); return; }
 
   // A real event URL always owns its detail. Filtering submits to search.html,
   // where the preview instead follows the first matching result when needed.
