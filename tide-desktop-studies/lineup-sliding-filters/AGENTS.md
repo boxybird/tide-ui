@@ -1,3 +1,0 @@
-# Lineup · Sliding Filters
-
-Two isolated desktop compositions from preserved Lineup: Between (list / filters / event) and Left (filters / list / event). Both start with two equal desktop panes; opening filters splits the browsing half into Lineup's original equal filter/list widths. Preserve all predecessors, app and kit. Keep original controls, IDs, card/detail markup, sticky header, pinned Apply dock, 48px bottom clearance and natural right document scrolling. Use private `tide-slide-study` classes and existing tokens. Below 75rem restore exact approved Lineup controls/order/disclosure. No kit additions during this study. Use Python `-B`, save evidence/releases here and serve with the existing port4187 server. Do not publish.

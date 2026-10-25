@@ -1,7 +1,0 @@
-All four PNG assets generated with built-in Image Gen on2026-10-20 for the Burque Pocket Nights prototype.
-Visual reference attached for event photography: research/concepts/pocket-nights/03-pocket-texture.png.
-workshop.png: portrait1024x1536, ordinary grainy smartphone photo of an adult printmaking social, messy shared table, roller/green cutting mat/coffee/prints, warm practical studio light, activity upper65%, darker table lower section. Reference used for scene/mood, no interface or text overlays.
-concert.png: portrait1024x1536, local psych-rock guitarist on cramped Albuquerque bar stage, amber/red practical lights, audience heads, imperfect handheld framing and mild grain, dark foreground. No UI or promotional typography.
-comedy.png: portrait1024x1536, fictional comedian in plaid on modest stage, microphone/stool/water/dark curtain, uneven practical lights, ordinary audience smartphone photo, dark lower foreground. Full exact prompt in comedy-prompt.txt.
-dots.png: seamless repeating subtle charcoal UI background, almost uniform#191d1f, faint evenly spaced muted-gray pin dots, matte, no text/symbols/objects/UI.
-Photos depict fictional event subjects. They do not represent confirmed real listings, performers, venues or attendance.

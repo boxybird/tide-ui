@@ -1,9 +1,0 @@
-{
-  "name": "burque-date-line-motion-sketches",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node server.cjs",
-    "build": "node build.mjs"
-  }
-}

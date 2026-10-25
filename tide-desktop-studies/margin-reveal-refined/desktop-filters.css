@@ -1,6 +1,0 @@
-/* App composition: the sidebar already exposes these controls on desktop. */
-@layer tide.filter-study {
-  @media (width >= 75rem) {
-    .tide-filter-study.tide-slide-study--mounted .tide-filter-study__summary { display: none; }
-  }
-}

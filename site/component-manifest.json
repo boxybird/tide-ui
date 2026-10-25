@@ -1,0 +1,32 @@
+{
+  "styleHome": "css/docs.css",
+  "privateBlocks": [
+    "tide-doc-anchor",
+    "tide-doc-code",
+    "tide-doc-content",
+    "tide-doc-details",
+    "tide-doc-filter-frame",
+    "tide-doc-footer",
+    "tide-doc-grid",
+    "tide-doc-heading",
+    "tide-doc-hero",
+    "tide-doc-label",
+    "tide-doc-nav",
+    "tide-doc-panel",
+    "tide-doc-rules",
+    "tide-doc-screen",
+    "tide-doc-screens",
+    "tide-doc-section",
+    "tide-doc-space",
+    "tide-doc-swatch",
+    "tide-doc-swatch-label",
+    "tide-doc-swatches",
+    "tide-doc-table",
+    "tide-doc-theme-grid",
+    "tide-doc-theme-pair",
+    "tide-doc-type",
+    "tide-library",
+    "tide-theme-picker"
+  ],
+  "notes": "Documentation presentation only. These classes are outside the public kit API."
+}

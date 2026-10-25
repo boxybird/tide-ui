@@ -1,0 +1,23 @@
+{
+  "snapshotTag": "design-history/2026-10-25",
+  "kitVersion": "1.3.0",
+  "appVersion": "1.1.0",
+  "css": {
+    "build/tide/css/tide.css": "107df2e9e80b4a49e8e38e63f8ec0930d8214af15de26c283453fa3bf5c258d9"
+  },
+  "appRuntime": {
+    "examples/events/src/runtime/css/app.css": "325b7524fd46a9332066196b667d6d39b79051c87a8138870787485413d2bb45",
+    "examples/events/src/runtime/css/host.css": "679fa13c9957dcbfbf8710c5ea04df8c8ab5d41654eed9620ac8e1b38f8fa0f0",
+    "examples/events/src/runtime/js/event-navigation.js": "6fd208aaa3e8b57fd687fc150b5c966bc55ca5ac3ffd5a398d155ee9557db56d",
+    "examples/events/src/runtime/js/event-search.js": "e96d46f0704dedb7f1fd3fdde944e2779eef90ab9add5a7fbe432c8ab6e52283",
+    "examples/events/src/runtime/js/filters.js": "bfd5b3c414b37d53eaa58dd6408ad36efb4173cc96ff81dcdc3b3513705b354e",
+    "examples/events/src/runtime/js/headings.js": "7790fa6d61b2934db529779996ab85f2c2e2490d738a1a9ee89cc235f9b3fbdd",
+    "examples/events/src/runtime/js/rail.js": "c335dc6b7199b6f672ede61156e93f4958d6f3b034c2e446b47f1d58a21781be",
+    "examples/events/src/runtime/js/room.js": "528fa7ce0bddbcb4064064a910291bc529fca4a207e9bf519b6a80a721f773da",
+    "examples/events/src/runtime/js/search-core.js": "aa2bf9733de72fbee16c9c739e50b1215e734c1ab5ae92a7b3d0feb4aa623842",
+    "examples/events/src/runtime/js/venue-context.js": "702cfa243bfd191aba988a9cbbe165aba413f1105a896ea1038452963366e205",
+    "examples/events/src/runtime/assets/images/comedy.png": "ed2b929187af5c0ab74a01042a2d6b909b71743cc8b3a6b16370f5c4dbe5ad87",
+    "examples/events/src/runtime/assets/images/concert.png": "27d0661f263af6d45bf323e7c2e168656d1639afb7ec001a91a10018fb52c44e",
+    "examples/events/src/runtime/js/assets/organizer-upload.png": "eba29350a6e76bd7c9060c61e91e15b8161117ee99606884b0c301a4837693f6"
+  }
+}

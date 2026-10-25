@@ -1,0 +1,34 @@
+name: Build and contracts
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHON: python
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - run: npm run build
+      - run: npm run check
+      - run: npm run package
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: tide-distribution-${{ matrix.os }}
+          path: |
+            dist/
+            build/reports/
+          retention-days: 14

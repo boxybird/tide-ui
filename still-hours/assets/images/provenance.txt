@@ -1,4 +1,0 @@
-ink-after-dark.png is an unchanged copy of burque-pocket/public/images/workshop.png.
-It is the same generated, illustrative user-submitted-style workshop photograph
-used in Quiet Studies. Holding it constant supports direct design comparison.
-No new photographic assets were generated for Still Hours.

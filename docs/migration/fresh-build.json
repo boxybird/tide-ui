@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "archivedDirectoriesPresent": false,
+  "gitDirectoryPresent": false,
+  "runs": [
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "output": "Tide 1.3.0: three paired themes, contrast gates and CSS distribution built.\nReference site: all six theme/mode libraries and screen specimens built.\nBuilt 420 app pages (default + six modes), one review, and one shared runtime."
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0,
+      "output": "Tide 1.3.0: three paired themes, contrast gates and CSS distribution verified.\nReference site: all six theme/mode libraries and screen specimens verified.\nChecked 420 app pages (default + six modes), one review, and one shared runtime.\n{\n  \"pass\": true,\n  \"kitVersion\": \"1.3.0\",\n  \"htmlFiles\": 526,\n  \"localReferences\": 36171,\n  \"themes\": 3,\n  \"modesPerTheme\": 2,\n  \"runs\": [\n    {\n      \"name\": \"palette-and-contract-tests\",\n      \"pass\": true,\n      \"output\": \"..............\\n----------------------------------------------------------------------\\nRan 14 tests in 0.527s\\n\\nOK\"\n    },\n    {\n      \"name\": \"sample-search-tests\",\n      \"pass\": true,\n      \"output\": \"16 venue scope/search assertions passed.\"\n    }\n  ],\n  \"failures\": []\n}"
+    }
+  ]
+}

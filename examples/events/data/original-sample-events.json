@@ -1,0 +1,2549 @@
+[
+  {
+    "slug": "desert-frequencies",
+    "title": "Desert Frequencies",
+    "category": "Music",
+    "venue": "Sister",
+    "day": "23",
+    "weekday": "Fri",
+    "date": "2026-10-23",
+    "longDate": "Friday, October 23",
+    "time": "8:00 PM",
+    "start": "20:00",
+    "range": "8:00–11:00 PM",
+    "duration": "3 hours",
+    "price": "$18",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "A little louder, a little later.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Find your place near the speakers.",
+    "lead": "An evening of local live music, warm amplifiers and unhurried sets. Come early for the opening act and stay for the sounds you did not know you needed.",
+    "inclusions": [
+      "Three live sets from local musicians",
+      "Standing room close to the stage",
+      "A full evening of music on one ticket"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "Opening set"
+      ],
+      [
+        "9:00 PM",
+        "Second act"
+      ],
+      [
+        "10:00 PM",
+        "The final set"
+      ]
+    ],
+    "know": [
+      "This is a standing-room show. Bring hearing protection if you prefer a quieter listening experience.",
+      "The evening is 21+. Photo identification is required. Set times are approximate."
+    ],
+    "attendance": "Advance admission is $18 in this sample listing. Check the organizer’s ticket page for availability, fees and refund terms before making plans.",
+    "datetime": "2026-10-23T20:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "the-late-set",
+    "title": "The Late Set",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "day": "23",
+    "weekday": "Fri",
+    "date": "2026-10-23",
+    "longDate": "Friday, October 23",
+    "time": "9:30 PM",
+    "start": "21:30",
+    "range": "9:30–11:00 PM",
+    "duration": "90 minutes",
+    "price": "$15",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "Good company. Questionable stories.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "After hours",
+    "heading": "A small room. A good laugh.",
+    "lead": "Settle in for a late-night lineup of local comics and new material. An intimate room, a relaxed host and enough time for one more story.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "9:00 PM",
+        "Doors and seating"
+      ],
+      [
+        "9:30 PM",
+        "Your host takes the mic"
+      ],
+      [
+        "9:45 PM",
+        "The lineup"
+      ],
+      [
+        "11:00 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seating is first come, first served. Arrive before the show to sit with friends.",
+      "Expect adult language and themes. This is a 21+ evening. Please keep phones silent during the sets."
+    ],
+    "attendance": "Admission is $15 in this sample listing. Confirm tickets and the venue’s cancellation policy with the organizer before heading out.",
+    "datetime": "2026-10-23T21:30:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "tiny-prints-big-ideas",
+    "title": "Tiny Prints, Big Ideas",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-10-24",
+    "start": "14:00",
+    "time": "2:00 PM",
+    "range": "2:00 PM–4:00 PM",
+    "duration": "2 hours",
+    "price": "$20",
+    "included": "Materials included",
+    "age": "All ages",
+    "subtitle": "Small blocks. Plenty of possibility.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Make a miniature print from one small carving block. Experiment with simple shapes, then trade a print with someone at the table.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "2:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "2:20 PM",
+        "Work on your design"
+      ],
+      [
+        "3:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "4:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Admission is $20. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "24",
+    "weekday": "Sat",
+    "longDate": "Saturday, October 24",
+    "datetime": "2026-10-24T14:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "ink-after-dark",
+    "title": "Ink After Dark",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "day": "24",
+    "weekday": "Sat",
+    "date": "2026-10-24",
+    "longDate": "Saturday, October 24",
+    "time": "6:00 PM",
+    "start": "18:00",
+    "range": "6:00–8:00 PM",
+    "duration": "2 hours",
+    "price": "$32",
+    "included": "Materials included",
+    "age": "21+",
+    "subtitle": "A printmaking social.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "A different kind of night out.",
+    "lead": "Carve a simple block, pull your first print, and settle into an easygoing evening around a shared studio table. Make something imperfect and entirely yours.",
+    "inclusions": [
+      "All materials and tools",
+      "Guidance from a local printmaker",
+      "One wine or alcohol-free pour",
+      "Your finished prints to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table & choose a design"
+      ],
+      [
+        "6:20 PM",
+        "Carve your block"
+      ],
+      [
+        "7:00 PM",
+        "Ink, roll & pull your first print"
+      ],
+      [
+        "8:00 PM",
+        "Pack up your new masterpieces"
+      ]
+    ],
+    "know": [
+      "Beginners are welcome. Wear something you’d happily get ink on. Come on your own or bring a friend; everyone shares a worktable.",
+      "This is a 21+ evening. Arrive about 10 minutes early to get settled."
+    ],
+    "attendance": "The $32 workshop price includes materials and one drink. A real listing would link to the organizer’s booking page here, with availability and cancellation terms.",
+    "datetime": "2026-10-24T18:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "saturday-on-the-small-stage",
+    "title": "Saturday on the Small Stage",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-10-24",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$18",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "Close enough to hear the strings.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "Three local acts share a small stage and a generous evening. Expect guitar-led sets, a little improvisation and room to find your favorite corner.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "This is a 21+ evening. Bring photo identification and check the venue’s admission details before heading out."
+    ],
+    "attendance": "Admission is $18. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "24",
+    "weekday": "Sat",
+    "longDate": "Saturday, October 24",
+    "datetime": "2026-10-24T20:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "sunday-paper-club",
+    "title": "Sunday Paper Club",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-10-25",
+    "start": "11:00",
+    "time": "11:00 AM",
+    "range": "11:00 AM–1:00 PM",
+    "duration": "2 hours",
+    "price": "Free",
+    "included": "Free entry",
+    "age": "All ages",
+    "subtitle": "Bring an idea. Borrow some paper.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Drop in with scraps, sketches or nothing at all. The shared table is open for collage, simple stamps and a few hours of making things together.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "11:00 AM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "11:20 AM",
+        "Work on your design"
+      ],
+      [
+        "12:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "1:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Entry is free. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "25",
+    "weekday": "Sun",
+    "longDate": "Sunday, October 25",
+    "datetime": "2026-10-25T11:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "low-volume-sunday",
+    "title": "Low Volume Sunday",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-10-25",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$10",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "A softer landing for the weekend.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "An early evening of acoustic sets with space between the songs. Come for one set or settle in for the whole session.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "5:30 PM",
+        "Doors open"
+      ],
+      [
+        "6:00 PM",
+        "The first set"
+      ],
+      [
+        "7:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "8:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $10. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "25",
+    "weekday": "Sun",
+    "longDate": "Sunday, October 25",
+    "datetime": "2026-10-25T18:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "first-drafts-false-starts",
+    "title": "First Drafts & False Starts",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-10-26",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "Free",
+    "included": "Free entry",
+    "age": "21+",
+    "subtitle": "New material, still finding its feet.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "Local comics try out fresh stories in a forgiving room. Some jokes will land, some will become better stories next week.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Entry is free. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "26",
+    "weekday": "Mon",
+    "longDate": "Monday, October 26",
+    "datetime": "2026-10-26T19:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "postcards-from-the-neighborhood",
+    "title": "Postcards from the Neighborhood",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-10-27",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$18",
+    "included": "Materials included",
+    "age": "16+",
+    "subtitle": "Make something worth sending.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Turn familiar streets, buildings and small observations into a set of hand-printed postcards. Simple designs are very welcome.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 16+. Arrive about ten minutes early to get settled."
+    ],
+    "attendance": "Admission is $18. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "27",
+    "weekday": "Tue",
+    "longDate": "Tuesday, October 27",
+    "datetime": "2026-10-27T18:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "two-guitars-one-room",
+    "title": "Two Guitars, One Room",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-10-27",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$12",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "An evening without much distance.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "Two songwriters trade short sets, favorite songs and the stories behind them. The room is small and the arrangements stay simple.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $12. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "27",
+    "weekday": "Tue",
+    "longDate": "Tuesday, October 27",
+    "datetime": "2026-10-27T20:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "midweek-mic",
+    "title": "Midweek Mic",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-10-28",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "$8",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "A good reason to go out on Wednesday.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A rotating host introduces a mix of familiar local voices and first-time performers. Expect short sets and a relaxed pace.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $8. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "28",
+    "weekday": "Wed",
+    "longDate": "Wednesday, October 28",
+    "datetime": "2026-10-28T19:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "black-ink-bright-paper",
+    "title": "Black Ink, Bright Paper",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-10-29",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$24",
+    "included": "Materials included",
+    "age": "18+",
+    "subtitle": "One color can do a lot.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Explore contrast with dark ink and a stack of colorful paper. Cut a bold shape, adjust the pressure and see what changes from print to print.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 18+. Arrive about ten minutes early to get settled."
+    ],
+    "attendance": "Admission is $24. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "29",
+    "weekday": "Thu",
+    "longDate": "Thursday, October 29",
+    "datetime": "2026-10-29T18:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "songs-for-the-last-light",
+    "title": "Songs for the Last Light",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-10-29",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$15",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "For the end of a long day.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "An intimate lineup of songs about home, leaving and getting there eventually. Local musicians perform stripped-back sets.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $15. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "29",
+    "weekday": "Thu",
+    "longDate": "Thursday, October 29",
+    "datetime": "2026-10-29T20:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "the-friday-reset",
+    "title": "The Friday Reset",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-10-30",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "$12",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "Leave the week at the door.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A hosted evening of local stand-up, everyday frustrations and useful perspective. Arrive early if you want to sit with friends.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $12. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "30",
+    "weekday": "Fri",
+    "longDate": "Friday, October 30",
+    "datetime": "2026-10-30T19:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "carve-a-creature",
+    "title": "Carve a Creature",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-10-31",
+    "start": "13:00",
+    "time": "1:00 PM",
+    "range": "1:00 PM–3:00 PM",
+    "duration": "2 hours",
+    "price": "$16",
+    "included": "Materials included",
+    "age": "All ages",
+    "subtitle": "Friendly monsters encouraged.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Design a small creature and turn it into a repeatable paper print. There will be simple stamping options for younger makers.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "1:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "1:20 PM",
+        "Work on your design"
+      ],
+      [
+        "2:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "3:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Admission is $16. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "31",
+    "weekday": "Sat",
+    "longDate": "Saturday, October 31",
+    "datetime": "2026-10-31T13:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "costumes-feedback",
+    "title": "Costumes & Feedback",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-10-31",
+    "start": "21:00",
+    "time": "9:00 PM",
+    "range": "9:00 PM–11:00 PM",
+    "duration": "2 hours",
+    "price": "$20",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "A little strange. A little loud.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "Close October with a roomful of noisy local bands and homemade costumes. Dressing up is welcome, and entirely optional.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "8:30 PM",
+        "Doors open"
+      ],
+      [
+        "9:00 PM",
+        "The first set"
+      ],
+      [
+        "10:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "11:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "This is a 21+ evening. Bring photo identification and check the venue’s admission details before heading out."
+    ],
+    "attendance": "Admission is $20. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "31",
+    "weekday": "Sat",
+    "longDate": "Saturday, October 31",
+    "datetime": "2026-10-31T21:00:00-06:00",
+    "month": "Oct"
+  },
+  {
+    "slug": "first-sunday-print-exchange",
+    "title": "First Sunday Print Exchange",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-11-01",
+    "start": "11:00",
+    "time": "11:00 AM",
+    "range": "11:00 AM–1:00 PM",
+    "duration": "2 hours",
+    "price": "Free",
+    "included": "Free entry",
+    "age": "All ages",
+    "subtitle": "A fresh month at the shared table.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Bring a few prints to exchange, or stop by to see what people are making. A small demonstration table is open to beginners.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "11:00 AM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "11:20 AM",
+        "Work on your design"
+      ],
+      [
+        "12:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "1:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Entry is free. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "1",
+    "weekday": "Sun",
+    "longDate": "Sunday, November 1",
+    "datetime": "2026-11-01T11:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "november-quietly",
+    "title": "November, Quietly",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-11-01",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–9:00 PM",
+    "duration": "2 hours",
+    "price": "$10",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "An early start to a new month.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "A low-key evening of local acoustic music. Short sets leave time to talk, listen and make plans for the weeks ahead.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "6:30 PM",
+        "Doors open"
+      ],
+      [
+        "7:00 PM",
+        "The first set"
+      ],
+      [
+        "8:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "9:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $10. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "1",
+    "weekday": "Sun",
+    "longDate": "Sunday, November 1",
+    "datetime": "2026-11-01T19:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "nothing-personal",
+    "title": "Nothing Personal",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-02",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "$10",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "Stories that got a little out of hand.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "Local comics share opinions they probably should have kept to themselves. An easygoing Monday lineup with a host to keep things moving.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $10. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "2",
+    "weekday": "Mon",
+    "longDate": "Monday, November 2",
+    "datetime": "2026-11-02T19:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "a-table-full-of-zines",
+    "title": "A Table Full of Zines",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-11-03",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$12",
+    "included": "Materials included",
+    "age": "16+",
+    "subtitle": "Fold, print, share, repeat.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Make a tiny folded publication using stamps, collage and a few handwritten lines. Leave with a finished zine and a few copies to trade.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 16+. Arrive about ten minutes early to get settled."
+    ],
+    "attendance": "Admission is $12. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "3",
+    "weekday": "Tue",
+    "longDate": "Tuesday, November 3",
+    "datetime": "2026-11-03T18:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "after-the-record-store-closes",
+    "title": "After the Record Store Closes",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-11-04",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$14",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "The listening continues.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "A pair of local bands bring their favorite influences into a live set. Expect familiar textures and a few things you have not heard before.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "This is a 21+ evening. Bring photo identification and check the venue’s admission details before heading out."
+    ],
+    "attendance": "Admission is $14. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "4",
+    "weekday": "Wed",
+    "longDate": "Wednesday, November 4",
+    "datetime": "2026-11-04T20:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "setups-second-chances",
+    "title": "Setups & Second Chances",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-05",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "$8",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "The first version is never the last.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A workshop-style comedy night where short sets get a second pass. Come for the stories, stay for the changes.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $8. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "5",
+    "weekday": "Thu",
+    "longDate": "Thursday, November 5",
+    "datetime": "2026-11-05T19:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "friday-night-ink-club",
+    "title": "Friday Night Ink Club",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-11-06",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$28",
+    "included": "Materials included",
+    "age": "21+",
+    "subtitle": "Clock out. Roll some ink.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Spend a Friday evening making a small block print around the shared studio table. Bring a sketch if you have one; there are prompts if you do not.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 21+. Arrive about ten minutes early to get settled."
+    ],
+    "attendance": "Admission is $28. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "6",
+    "weekday": "Fri",
+    "longDate": "Friday, November 6",
+    "datetime": "2026-11-06T18:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "analog-hours",
+    "title": "Analog Hours",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-11-06",
+    "start": "21:00",
+    "time": "9:00 PM",
+    "range": "9:00 PM–11:00 PM",
+    "duration": "2 hours",
+    "price": "$20",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "Warm amps and a late finish.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "A night of guitar-driven local music, a few extended instrumentals and plenty of texture. The first set starts soon after doors.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "8:30 PM",
+        "Doors open"
+      ],
+      [
+        "9:00 PM",
+        "The first set"
+      ],
+      [
+        "10:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "11:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "This is a 21+ evening. Bring photo identification and check the venue’s admission details before heading out."
+    ],
+    "attendance": "Admission is $20. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "6",
+    "weekday": "Fri",
+    "longDate": "Friday, November 6",
+    "datetime": "2026-11-06T21:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "print-something-for-someone",
+    "title": "Print Something for Someone",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-11-07",
+    "start": "13:00",
+    "time": "1:00 PM",
+    "range": "1:00 PM–3:00 PM",
+    "duration": "2 hours",
+    "price": "$22",
+    "included": "Materials included",
+    "age": "All ages",
+    "subtitle": "A small handmade gesture.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Make a short run of simple prints to give away. Work from a personal symbol, a shared joke or a pattern that feels like someone you know.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "1:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "1:20 PM",
+        "Work on your design"
+      ],
+      [
+        "2:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "3:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Admission is $22. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "7",
+    "weekday": "Sat",
+    "longDate": "Saturday, November 7",
+    "datetime": "2026-11-07T13:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "small-room-big-opinions",
+    "title": "Small Room, Big Opinions",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-07",
+    "start": "21:00",
+    "time": "9:00 PM",
+    "range": "9:00 PM–10:30 PM",
+    "duration": "90 minutes",
+    "price": "$15",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "Everyone has a theory.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A Saturday lineup of local comics with strong views about very ordinary things. General admission seating keeps the room relaxed.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "8:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "9:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "9:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "10:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $15. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "7",
+    "weekday": "Sat",
+    "longDate": "Saturday, November 7",
+    "datetime": "2026-11-07T21:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "sunday-in-slow-motion",
+    "title": "Sunday in Slow Motion",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-11-08",
+    "start": "17:00",
+    "time": "5:00 PM",
+    "range": "5:00 PM–7:00 PM",
+    "duration": "2 hours",
+    "price": "$12",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "One more song before Monday.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "An early show of unhurried local sets. Bring someone who likes to listen, and leave with a little evening still ahead of you.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "4:30 PM",
+        "Doors open"
+      ],
+      [
+        "5:00 PM",
+        "The first set"
+      ],
+      [
+        "6:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "7:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $12. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "8",
+    "weekday": "Sun",
+    "longDate": "Sunday, November 8",
+    "datetime": "2026-11-08T17:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "beginner-s-block",
+    "title": "Beginner’s Block",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-11-09",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$20",
+    "included": "Materials included",
+    "age": "16+",
+    "subtitle": "Your first print starts here.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Start with the basics of carving, inking and pulling a print. The session moves slowly, with time to practice each step.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 16+. Arrive about ten minutes early to get settled."
+    ],
+    "attendance": "Admission is $20. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "9",
+    "weekday": "Mon",
+    "longDate": "Monday, November 9",
+    "datetime": "2026-11-09T18:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "ten-minutes-each",
+    "title": "Ten Minutes Each",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-10",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "Free",
+    "included": "Free entry",
+    "age": "21+",
+    "subtitle": "A few stories. A clear time limit.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A quick-moving lineup gives each comic ten minutes and a chance to try something new. Drop in for an informal weekday show.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Entry is free. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "10",
+    "weekday": "Tue",
+    "longDate": "Tuesday, November 10",
+    "datetime": "2026-11-10T19:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "desert-radio-live",
+    "title": "Desert Radio Live",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-11-11",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$18",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "Local sounds, in the same room.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "A varied lineup moves from quiet guitar parts to a fuller late set. Come early to hear the whole progression.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "This is a 21+ evening. Bring photo identification and check the venue’s admission details before heading out."
+    ],
+    "attendance": "Admission is $18. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "11",
+    "weekday": "Wed",
+    "longDate": "Wednesday, November 11",
+    "datetime": "2026-11-11T20:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "the-imperfect-print",
+    "title": "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-11-12",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$30",
+    "included": "Materials included",
+    "age": "18+",
+    "subtitle": "Make room for the unexpected.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Explore layered prints, uneven textures and the useful surprises that happen when ink meets paper. Bring curiosity rather than a polished plan.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 18+. Arrive about ten minutes early to get settled.",
+      "You can start from a supplied shape or bring a small sketch. Keep designs simple enough to finish in one session.",
+      "Work dries on a shared rack while you explore another variation. Bring a flat folder if you would like to carry your prints home without folding them."
+    ],
+    "attendance": "Admission is $30. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "12",
+    "weekday": "Thu",
+    "longDate": "Thursday, November 12",
+    "datetime": "2026-11-12T18:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "the-very-late-set",
+    "title": "The Very Late Set",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-13",
+    "start": "21:30",
+    "time": "9:30 PM",
+    "range": "9:30 PM–11:00 PM",
+    "duration": "90 minutes",
+    "price": "$15",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "For people who are not done with Friday.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A late lineup of local stand-up and a relaxed host. Expect adult themes, short sets and a room ready for one more story.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "9:10 PM",
+        "Doors and seating"
+      ],
+      [
+        "9:30 PM",
+        "Your host opens the show"
+      ],
+      [
+        "9:45 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "11:00 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $15. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "13",
+    "weekday": "Fri",
+    "longDate": "Friday, November 13",
+    "datetime": "2026-11-13T21:30:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "three-bands-a-borrowed-amp",
+    "title": "Three Bands & a Borrowed Amp",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-11-14",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$18",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "A shared stage and a few new favorites.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "Three local bands split the evening with fast changeovers and distinctly different sounds. One admission covers the full lineup.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $18. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "14",
+    "weekday": "Sat",
+    "longDate": "Saturday, November 14",
+    "datetime": "2026-11-14T20:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "paper-coffee-company",
+    "title": "Paper, Coffee & Company",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-11-15",
+    "start": "11:00",
+    "time": "11:00 AM",
+    "range": "11:00 AM–1:00 PM",
+    "duration": "2 hours",
+    "price": "$16",
+    "included": "Materials included",
+    "age": "All ages",
+    "subtitle": "An unhurried morning of making.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "A gentle introduction to printing simple patterns on paper. Work at your own pace and enjoy the company around the table.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "11:00 AM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "11:20 AM",
+        "Work on your design"
+      ],
+      [
+        "12:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "1:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Admission is $16. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "15",
+    "weekday": "Sun",
+    "longDate": "Sunday, November 15",
+    "datetime": "2026-11-15T11:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "notes-from-the-group-chat",
+    "title": "Notes from the Group Chat",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-16",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "$12",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "Some things sound better out loud.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "Local comics turn everyday messages, misunderstandings and family updates into an evening of stand-up.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $12. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "16",
+    "weekday": "Mon",
+    "longDate": "Monday, November 16",
+    "datetime": "2026-11-16T19:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "two-colors-one-block",
+    "title": "Two Colors, One Block",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-11-17",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$26",
+    "included": "Materials included",
+    "age": "16+",
+    "subtitle": "A little planning. A little overlap.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Try a two-color print with one simple block. Explore how small shifts in alignment and color change the finished image.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 16+. Arrive about ten minutes early to get settled."
+    ],
+    "attendance": "Admission is $26. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "17",
+    "weekday": "Tue",
+    "longDate": "Tuesday, November 17",
+    "datetime": "2026-11-17T18:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "near-the-speakers",
+    "title": "Near the Speakers",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-11-18",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$16",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "For the songs that sound better live.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "An evening of local bands built around a small room and a close audience. Find a spot where the mix feels right to you.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "This is a 21+ evening. Bring photo identification and check the venue’s admission details before heading out."
+    ],
+    "attendance": "Admission is $16. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "18",
+    "weekday": "Wed",
+    "longDate": "Wednesday, November 18",
+    "datetime": "2026-11-18T20:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "warm-up-night",
+    "title": "Warm-Up Night",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-19",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "$8",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "Fresh material before the weekend.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A Thursday room for comics to test new ideas and audiences to discover a few new voices. The host keeps the sets short.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $8. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "19",
+    "weekday": "Thu",
+    "longDate": "Thursday, November 19",
+    "datetime": "2026-11-19T19:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "after-work-make-something",
+    "title": "After Work, Make Something",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-11-20",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$24",
+    "included": "Materials included",
+    "age": "21+",
+    "subtitle": "A different use for your hands.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Put the workday aside and make a small set of printed cards. All the basic tools are ready at the table.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "This session is 21+. Arrive about ten minutes early to get settled."
+    ],
+    "attendance": "Admission is $24. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "20",
+    "weekday": "Fri",
+    "longDate": "Friday, November 20",
+    "datetime": "2026-11-20T18:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "the-neighborhood-listening-room",
+    "title": "The Neighborhood Listening Room",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-11-21",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$12",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "A seat near a good song.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "An intimate evening of local songwriters and small arrangements. Between songs there is room for a story or two.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $12. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "21",
+    "weekday": "Sat",
+    "longDate": "Saturday, November 21",
+    "datetime": "2026-11-21T20:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "handmade-holiday-cards",
+    "title": "Handmade Holiday Cards",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-11-22",
+    "start": "14:00",
+    "time": "2:00 PM",
+    "range": "2:00 PM–4:00 PM",
+    "duration": "2 hours",
+    "price": "$22",
+    "included": "Materials included",
+    "age": "All ages",
+    "subtitle": "Start with paper. End with a small stack.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Print a personal pattern or a simple message onto a set of blank cards. There are plenty of non-seasonal prompts too.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "2:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "2:20 PM",
+        "Work on your design"
+      ],
+      [
+        "3:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "4:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Admission is $22. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "22",
+    "weekday": "Sun",
+    "longDate": "Sunday, November 22",
+    "datetime": "2026-11-22T14:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "a-few-good-stories",
+    "title": "A Few Good Stories",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-23",
+    "start": "19:00",
+    "time": "7:00 PM",
+    "range": "7:00 PM–8:30 PM",
+    "duration": "90 minutes",
+    "price": "$10",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "The ones worth telling again.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "Local comics bring longer stories to a relaxed Monday room. Expect a little more detail and a few unexpected endings.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "6:40 PM",
+        "Doors and seating"
+      ],
+      [
+        "7:00 PM",
+        "Your host opens the show"
+      ],
+      [
+        "7:15 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "8:30 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $10. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "23",
+    "weekday": "Mon",
+    "longDate": "Monday, November 23",
+    "datetime": "2026-11-23T19:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "print-swap-studio-social",
+    "title": "Print Swap & Studio Social",
+    "category": "Workshop",
+    "venue": "Barelas Print Studio",
+    "date": "2026-11-24",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "Free",
+    "included": "Free entry",
+    "age": "All ages",
+    "subtitle": "See what everyone has been making.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "An open studio evening for showing work, trading a print and asking questions. Come to browse even if you have nothing to exchange.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "6:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "6:20 PM",
+        "Work on your design"
+      ],
+      [
+        "7:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "8:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Entry is free. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "24",
+    "weekday": "Tue",
+    "longDate": "Tuesday, November 24",
+    "datetime": "2026-11-24T18:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "home-for-the-long-weekend",
+    "title": "Home for the Long Weekend",
+    "category": "Music",
+    "venue": "Sister",
+    "date": "2026-11-25",
+    "start": "20:00",
+    "time": "8:00 PM",
+    "range": "8:00 PM–10:00 PM",
+    "duration": "2 hours",
+    "price": "$18",
+    "included": "General admission",
+    "age": "21+",
+    "subtitle": "Familiar faces, a shared evening.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "Local musicians and returning friends share short sets before the long weekend. One ticket covers the full evening.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "7:30 PM",
+        "Doors open"
+      ],
+      [
+        "8:00 PM",
+        "The first set"
+      ],
+      [
+        "9:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "10:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "This is a 21+ evening. Bring photo identification and check the venue’s admission details before heading out."
+    ],
+    "attendance": "Admission is $18. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "25",
+    "weekday": "Wed",
+    "longDate": "Wednesday, November 25",
+    "datetime": "2026-11-25T20:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "an-open-door-session",
+    "title": "An Open Door Session",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-11-26",
+    "start": "16:00",
+    "time": "4:00 PM",
+    "range": "4:00 PM–6:00 PM",
+    "duration": "2 hours",
+    "price": "Free",
+    "included": "Free entry",
+    "age": "All ages",
+    "subtitle": "Come in for a song or two.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "An informal afternoon of acoustic music. Stay for a short set or settle into a quiet corner for the whole session.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "3:30 PM",
+        "Doors open"
+      ],
+      [
+        "4:00 PM",
+        "The first set"
+      ],
+      [
+        "5:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "6:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Entry is free. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "26",
+    "weekday": "Thu",
+    "longDate": "Thursday, November 26",
+    "datetime": "2026-11-26T16:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "leftovers-one-liners",
+    "title": "Leftovers & One-Liners",
+    "category": "Comedy",
+    "venue": "Dry Heat",
+    "date": "2026-11-27",
+    "start": "21:30",
+    "time": "9:30 PM",
+    "range": "9:30 PM–11:00 PM",
+    "duration": "90 minutes",
+    "price": "$12",
+    "included": "Seated show",
+    "age": "21+",
+    "subtitle": "A late show after a long week.",
+    "image": "comedy.png",
+    "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front.",
+    "eyebrow": "In good company",
+    "heading": "Make a little room for a good laugh.",
+    "lead": "A relaxed Friday lineup finds the funny side of family gatherings, too much food and unusual holiday plans.",
+    "inclusions": [
+      "A hosted lineup of local comedians",
+      "General admission seating",
+      "A 90-minute evening of stand-up"
+    ],
+    "schedule": [
+      [
+        "9:10 PM",
+        "Doors and seating"
+      ],
+      [
+        "9:30 PM",
+        "Your host opens the show"
+      ],
+      [
+        "9:45 PM",
+        "The lineup takes the mic"
+      ],
+      [
+        "11:00 PM",
+        "Good nights and last laughs"
+      ]
+    ],
+    "know": [
+      "Seats are first come, first served. Arrive before the show to sit together.",
+      "Expect adult language and themes. This is a 21+ show; please keep phones silent during sets."
+    ],
+    "attendance": "Admission is $12. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "27",
+    "weekday": "Fri",
+    "longDate": "Friday, November 27",
+    "datetime": "2026-11-27T21:30:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "make-your-own-gift-wrap",
+    "title": "Make Your Own Gift Wrap",
+    "category": "Workshop",
+    "venue": "The Paper Table",
+    "date": "2026-11-28",
+    "start": "13:00",
+    "time": "1:00 PM",
+    "range": "1:00 PM–3:00 PM",
+    "duration": "2 hours",
+    "price": "$18",
+    "included": "Materials included",
+    "age": "All ages",
+    "subtitle": "Good paper deserves a second life.",
+    "image": "ink-after-dark.png",
+    "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug.",
+    "eyebrow": "At the worktable",
+    "heading": "An idea, a table and a little ink.",
+    "lead": "Use simple stamps to turn plain paper into reusable wrapping sheets. Try a repeating pattern or make every sheet different.",
+    "inclusions": [
+      "Shared tools, ink and paper",
+      "Guidance from a local printmaker",
+      "Your finished work to take home"
+    ],
+    "schedule": [
+      [
+        "1:00 PM",
+        "Meet the table and choose a direction"
+      ],
+      [
+        "1:20 PM",
+        "Work on your design"
+      ],
+      [
+        "2:00 PM",
+        "Print, compare and try another version"
+      ],
+      [
+        "3:00 PM",
+        "Pack up and share what you made"
+      ]
+    ],
+    "know": [
+      "No previous printmaking experience is needed. Wear something you would be happy to get ink on.",
+      "All ages are welcome; younger makers should come with an adult."
+    ],
+    "attendance": "Admission is $18. Materials and tools are included. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "28",
+    "weekday": "Sat",
+    "longDate": "Saturday, November 28",
+    "datetime": "2026-11-28T13:00:00-07:00",
+    "month": "Nov"
+  },
+  {
+    "slug": "one-more-sunday",
+    "title": "One More Sunday",
+    "category": "Music",
+    "venue": "Warehouse Room",
+    "date": "2026-11-29",
+    "start": "18:00",
+    "time": "6:00 PM",
+    "range": "6:00 PM–8:00 PM",
+    "duration": "2 hours",
+    "price": "$12",
+    "included": "General admission",
+    "age": "All ages",
+    "subtitle": "A soft close to the month.",
+    "image": "concert.png",
+    "alt": "A guitarist under red club lights, with a small audience gathered close to the stage.",
+    "eyebrow": "In the room",
+    "heading": "Local sounds. A room worth finding.",
+    "lead": "Finish November with a small lineup of local acoustic sets. An early start leaves time to get home without rushing.",
+    "inclusions": [
+      "Two hours of local live music",
+      "One admission for the full lineup",
+      "Time between sets to find your favorite spot"
+    ],
+    "schedule": [
+      [
+        "5:30 PM",
+        "Doors open"
+      ],
+      [
+        "6:00 PM",
+        "The first set"
+      ],
+      [
+        "7:00 PM",
+        "A short break and the next act"
+      ],
+      [
+        "8:00 PM",
+        "Last songs and good nights"
+      ]
+    ],
+    "know": [
+      "Set times are approximate. Bring hearing protection if you prefer a quieter listening experience.",
+      "All ages are welcome in this sample listing. Check seating and venue arrangements before making plans."
+    ],
+    "attendance": "Admission is $12. This is an illustrative event. A real listing would link to the organizer for availability, fees and cancellation terms.",
+    "day": "29",
+    "weekday": "Sun",
+    "longDate": "Sunday, November 29",
+    "datetime": "2026-11-29T18:00:00-07:00",
+    "month": "Nov"
+  }
+]

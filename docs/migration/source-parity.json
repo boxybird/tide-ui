@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "appHTMLCompared": 420,
+  "siteHTMLCompared": 105,
+  "normalization": "Local asset/navigation paths only; page markup/content otherwise exact",
+  "compiledCSSAndAppRuntimeUnchanged": true,
+  "failures": []
+}

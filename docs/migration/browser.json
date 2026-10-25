@@ -1,0 +1,188 @@
+{
+  "pass": true,
+  "browser": "Chromium on Windows",
+  "checks": [
+    {
+      "name": "desktop-parity",
+      "pass": true,
+      "cards": 54,
+      "images": true,
+      "listBottom": 866,
+      "listTop": 117,
+      "showBottom": 866,
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    {
+      "name": "venue-and-sticky-handoff",
+      "pass": true,
+      "cards": 6,
+      "guide": true,
+      "onTop": true,
+      "outgoingTop": 158.33334350585938,
+      "scroll": 459.3333435058594,
+      "summaryBottom": 249
+    },
+    {
+      "name": "theme-tide-light",
+      "pass": true,
+      "app": {
+        "aligned": true,
+        "count": 6,
+        "guide": true,
+        "overflow": false
+      },
+      "site": {
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "mode": "light",
+        "nav": true,
+        "overflow": false,
+        "theme": "tide"
+      }
+    },
+    {
+      "name": "theme-tide-dark",
+      "pass": true,
+      "app": {
+        "aligned": true,
+        "count": 6,
+        "guide": true,
+        "overflow": false
+      },
+      "site": {
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "mode": "dark",
+        "nav": true,
+        "overflow": false,
+        "theme": "tide"
+      }
+    },
+    {
+      "name": "theme-summer-light",
+      "pass": true,
+      "app": {
+        "aligned": true,
+        "count": 6,
+        "guide": true,
+        "overflow": false
+      },
+      "site": {
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "mode": "light",
+        "nav": true,
+        "overflow": false,
+        "theme": "summer"
+      }
+    },
+    {
+      "name": "theme-summer-dark",
+      "pass": true,
+      "app": {
+        "aligned": true,
+        "count": 6,
+        "guide": true,
+        "overflow": false
+      },
+      "site": {
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "mode": "dark",
+        "nav": true,
+        "overflow": false,
+        "theme": "summer"
+      }
+    },
+    {
+      "name": "theme-bumble-light",
+      "pass": true,
+      "app": {
+        "aligned": true,
+        "count": 6,
+        "guide": true,
+        "overflow": false
+      },
+      "site": {
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "mode": "light",
+        "nav": true,
+        "overflow": false,
+        "theme": "bumble"
+      }
+    },
+    {
+      "name": "theme-bumble-dark",
+      "pass": true,
+      "app": {
+        "aligned": true,
+        "count": 6,
+        "guide": true,
+        "overflow": false
+      },
+      "site": {
+        "font": "Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "mode": "dark",
+        "nav": true,
+        "overflow": false,
+        "theme": "bumble"
+      }
+    },
+    {
+      "name": "draft-apply-venue-event",
+      "pass": true,
+      "draft": {
+        "cards": 6,
+        "live": "1 matching event"
+      },
+      "event": {
+        "back": "http://127.0.0.1:4188/events/app/sunshine-theater.html?venue=sunshine-theater&q=Signal",
+        "title": "High Desert Signal",
+        "url": "http://127.0.0.1:4188/events/app/high-desert-signal.html?venue=sunshine-theater&q=Signal"
+      }
+    },
+    {
+      "name": "empty-and-scoped-reset",
+      "pass": true,
+      "empty": {
+        "count": 0,
+        "empty": true,
+        "guide": true
+      },
+      "reset": {
+        "count": 6,
+        "scope": "sunshine-theater"
+      }
+    },
+    {
+      "name": "phone-venue-fragment",
+      "pass": true,
+      "focus": "venue-information",
+      "header": 97,
+      "overflow": false,
+      "top": 121
+    },
+    {
+      "name": "phone-full-event-and-upload-path",
+      "pass": true,
+      "hero": 844,
+      "images": true,
+      "list": "none",
+      "overflow": false,
+      "title": "Ink After Dark"
+    },
+    {
+      "name": "tablet-modal-and-gutter-cleanup",
+      "pass": true,
+      "dialog": false,
+      "focus": "tide-button tide-button--quiet tide-browse-flyout__trigger",
+      "gutter": "",
+      "query": ""
+    }
+  ],
+  "console": [],
+  "limits": [
+    "Firefox/Safari remain deferred",
+    "No physical-device or screen-reader testing",
+    "No native browser zoom available; responsive placement and unchanged CSS verified"
+  ]
+}

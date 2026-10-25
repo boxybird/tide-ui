@@ -50,5 +50,8 @@ Desktop.ini
 !.vscode/extensions.json
 !.vscode/settings.example.json
 
-# Keep source, lockfiles, release dist/ directories, ZIP archives,
-# screenshots, and QA evidence versioned for the preserved studies.
+# Generated output and release artifacts; canonical sources are versioned.
+/build/
+/dist/
+/.migration/
+*.zip

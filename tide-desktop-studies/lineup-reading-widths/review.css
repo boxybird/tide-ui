@@ -1,4 +1,0 @@
-@layer tide.room-review {
-  .tide-room-review__toolbar { display: grid; grid-template-columns: minmax(14rem, 1fr) minmax(14rem, 1fr) minmax(16rem, 2fr); gap: var(--tide-space-6); align-items: end; }
-  @media (width < 50rem) { .tide-room-review__toolbar { grid-template-columns: minmax(0, 1fr); } }
-}

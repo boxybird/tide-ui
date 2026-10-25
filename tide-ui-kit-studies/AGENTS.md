@@ -1,3 +1,0 @@
-# Tide UI kit studies
-
-User selected Tide as the current favorite UI kit appearance. Preserve its square 2px/4px corners, flat surfaces, Manrope, exact type scale, spacing, target sizes, component inventory, screens and coverage. User explicitly dislikes colored left borders on announcements/callouts: remove them in every Tide study; do not substitute a colored side ornament. Wording carries meaning. Keep static HTML/CSS. Root is Tide; Mist is its light mode, Slate a muted blue-gray treatment, Deep a darker cyan palette. Local port4184. Earlier collections remain preserved except the explicitly requested callout-stripe removal in the existing Tide skin at port4183. Do not publish.

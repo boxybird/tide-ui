@@ -1,0 +1,15 @@
+{
+  "name": "tide-ui",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Themeable HTML and CSS UI kit, reference site and events example",
+  "license": "MIT",
+  "scripts": {
+    "build": "node tools/task.cjs build",
+    "check": "node tools/task.cjs check",
+    "dev": "node tools/serve.cjs",
+    "package": "node tools/task.cjs package",
+    "verify:history": "node tools/task.cjs verify-history"
+  },
+  "engines": {"node": ">=18"}
+}

@@ -1,4 +1,0 @@
-@layer tide.width-review {
-  .tide-width-review__toolbar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--tide-space-6); align-items: end; }
-  @media (width < 50rem) { .tide-width-review__toolbar { grid-template-columns: minmax(0, 1fr); } }
-}

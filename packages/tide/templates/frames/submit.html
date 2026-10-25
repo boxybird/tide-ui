@@ -1,0 +1,62 @@
+<body class="tide tide-screen tide-screen--kit">
+<header class="tide-appbar"><a class="tide-brand" href="01-list.html" aria-label="Burque events">BURQUE<span aria-hidden="true">.</span></a><a class="tide-saved-link" href="saved.html"><svg class="tide-icon" focusable="false" width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 2.5C3 2.22386 3.22386 2 3.5 2H11.5C11.7761 2 12 2.22386 12 2.5V13.5C12 13.6818 11.9014 13.8492 11.7424 13.9373C11.5834 14.0254 11.3891 14.0203 11.235 13.924L7.5 11.5896L3.765 13.924C3.61087 14.0203 3.41659 14.0254 3.25762 13.9373C3.09864 13.8492 3 13.6818 3 13.5V2.5ZM4 3V12.5979L6.97 10.7416C7.29427 10.539 7.70573 10.539 8.03 10.7416L11 12.5979V3H4Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>Saved</a>
+</header>
+<main>
+<div class="tide-page-intro">
+<p class="tide-eyebrow">For organizers</p>
+<h1 class="tide-page-intro__title">Share an evening.</h1>
+<p>A local event, in your own words.</p>
+</div>
+<form action="review.html" class="tide-page-body">
+<p class="tide-caption">All fields are required unless marked optional.</p>
+<section class="tide-form-section">
+<h2>The essentials</h2>
+<div class="tide-field"><label for="event-title" class="tide-field__label">Event title</label><input id="event-title" type="text" value="Ink After Dark" required maxlength="120" class="tide-field__control">
+</div>
+<div class="tide-field"><label for="category" class="tide-field__label">Category</label><select id="category" required class="tide-field__control"><option>Music</option><option>Comedy</option><option selected>Workshop</option><option>Art &amp; culture</option><option>Food &amp; drink</option></select>
+</div>
+<div class="tide-field"><label for="description" class="tide-field__label">What’s the evening like?</label><textarea id="description" aria-describedby="description-note" required class="tide-field__control">Carve a simple block, pull your first print, and settle into an easygoing evening around a shared studio table. All materials and tools are included.</textarea><small id="description-note" class="tide-field__hint">Help someone decide whether this is for them. Include age limits and useful access information.</small>
+</div>
+</section>
+<section class="tide-form-section">
+<h2>When &amp; where</h2>
+<div class="tide-field"><label for="date" class="tide-field__label">Date</label><input id="date" type="date" value="2026-10-24" required class="tide-field__control">
+</div>
+<div class="tide-split">
+<div class="tide-field"><label for="start" class="tide-field__label">Starts</label><input id="start" type="time" value="18:00" required class="tide-field__control">
+</div>
+<div class="tide-field"><label for="end" class="tide-field__label">Ends · optional</label><input id="end" type="time" value="20:00" class="tide-field__control">
+</div>
+</div>
+<div class="tide-field"><label for="venue" class="tide-field__label">Venue</label><input id="venue" type="text" value="Barelas Print Studio" required class="tide-field__control">
+</div>
+<div class="tide-field"><label for="address" class="tide-field__label">Street address</label><input id="address" type="text" value="123 Sample Street SW" required aria-describedby="address-note" class="tide-field__control"><small id="address-note" class="tide-field__hint">Fictional address for this design sample.</small>
+</div>
+</section>
+<section class="tide-form-section">
+<h2>Admission</h2>
+<div class="tide-field"><label for="price" class="tide-field__label">Price per person</label><input id="price" type="number" value="32" required min="0" step="0.01" aria-describedby="price-note" class="tide-field__control"><small id="price-note" class="tide-field__hint">Enter 0 for a free event.</small>
+</div>
+<div class="tide-field"><label for="tickets" class="tide-field__label">Tickets or RSVP link · optional</label><input id="tickets" type="url" value="https://example.com/ink-after-dark" aria-describedby="tickets-note" class="tide-field__control"><small id="tickets-note" class="tide-field__hint">Send people to the official organizer or ticket page.</small>
+</div>
+</section>
+<section class="tide-form-section">
+<h2>A photo · optional</h2>
+<div class="tide-upload"><label for="photo">Choose an event photo</label><input id="photo" aria-describedby="photo-note" type="file" accept="image/jpeg,image/png,image/webp">
+<p id="photo-note" class="tide-caption">JPG, PNG or WebP. Up to 10 MB. No photo? Your event will still have a clear, well-designed listing.</p>
+</div>
+</section>
+<section class="tide-form-section">
+<h2>Who’s hosting?</h2>
+<div class="tide-field"><label for="organizer" class="tide-field__label">Organizer name</label><input id="organizer" type="text" value="Barelas Print Studio" required class="tide-field__control">
+</div>
+<div class="tide-field"><label for="email" class="tide-field__label">Contact email</label><input id="email" type="email" value="hello@example.com" required aria-describedby="email-note" class="tide-field__control"><small id="email-note" class="tide-field__hint">For review questions. This email won’t be published.</small>
+</div>
+</section>
+<div class="tide-form-actions"><button class="tide-button tide-button--full">Review event<svg class="tide-icon" focusable="false" width="24" height="24" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></button><a class="tide-button tide-button--secondary tide-button--full" href="01-list.html">Cancel</a>
+</div>
+</form>
+</main>
+<footer class="tide-screen-footer"><span>Design sample · fictional details</span><a href="../index.html#screens" target="_top">Back to UI kit</a>
+</footer>
+</body>

@@ -1,0 +1,9 @@
+{
+  "name": "tide-html-css-kit",
+  "version": "1.3.0",
+  "private": true,
+  "description": "BEM HTML recipes and semantic CSS tokens for Tide, Summer and Bumble",
+  "license": "MIT",
+  "scripts": {"build": "python -B tools/build.py"},
+  "sideEffects": ["**/*.css"]
+}
