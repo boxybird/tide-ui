@@ -1,0 +1,28 @@
+{
+  "full": {
+    "fullIconAttributes": true,
+    "savedControl": true,
+    "focusTitle": false,
+    "yearNote": true,
+    "priceUnit": "per person",
+    "planLabel": "Plan this evening",
+    "wrappedCue": true,
+    "cueIcon": "arrow-down",
+    "disclosure": "A fictional evening for a design study. Event details and photography are illustrative; this page does not make a reservation.",
+    "backIcon": true,
+    "backLabel": "Back to all events"
+  },
+  "concise": {
+    "fullIconAttributes": false,
+    "savedControl": false,
+    "focusTitle": true,
+    "yearNote": false,
+    "priceUnit": null,
+    "planLabel": "Event information",
+    "wrappedCue": false,
+    "cueIcon": "chevron-down",
+    "disclosure": "Sample event, not an actual Sunshine Theater listing. Concert photograph is illustrative and does not depict this venue.",
+    "backIcon": false,
+    "backLabel": "Back to the lineup"
+  }
+}

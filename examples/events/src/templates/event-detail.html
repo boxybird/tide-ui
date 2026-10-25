@@ -1,0 +1,23 @@
+<section class="tide-app__detail" id="event-detail" aria-labelledby="event-title" tabindex="-1">
+  <section class="tide-event-hero" aria-labelledby="event-title">
+    <img class="tide-event-hero__photo" src="{{PHOTO_SRC}}" width="{{PHOTO_WIDTH}}" height="{{PHOTO_HEIGHT}}" alt="{{PHOTO_ALT}}" fetchpriority="high">
+    <div class="tide-event-hero__scrim" aria-hidden="true"></div>
+    <nav class="tide-event-hero__toolbar" aria-label="Event"><a class="tide-photo-control" href="index.html" aria-label="Back to all events">{{BACK_ICON}}</a>{{SAVED_CONTROL}}</nav>
+    <div class="tide-event-hero__content"><div class="tide-event-hero__intro"><p class="tide-eyebrow">{{CATEGORY}}{{AGE}}</p><h{{DETAIL_LEVEL}} class="tide-event-hero__title" id="event-title"{{TITLE_ATTRIBUTES}}>{{TITLE}}</h{{DETAIL_LEVEL}}><p class="tide-event-hero__subtitle">{{SUBTITLE}}</p></div>
+      <dl class="tide-event-hero__facts">
+        <div><dt>{{DATE_ICON}}<span class="tide-sr-only">Date</span></dt><dd><time datetime="{{DATE}}">{{DATE_LABEL}}</time></dd></div>
+        <div><dt>{{TIME_ICON}}<span class="tide-sr-only">Time</span></dt><dd>{{TIMES}}{{DURATION_NOTE}}</dd></div>
+        <div><dt>{{VENUE_ICON}}<span class="tide-sr-only">Venue</span></dt><dd>{{VENUE}}</dd></div>
+      </dl>
+      <div class="tide-event-hero__admission"><p><strong>{{PRICE}}</strong>{{PRICE_UNIT}}</p><span>{{ADMISSION_NOTE}}</span></div>
+      <a class="tide-button tide-button--plan" href="#attendance"><span>{{PLAN_LABEL}}</span>{{PLAN_ICON}}</a>
+      <a class="tide-event-hero__cue" href="#event-story">{{CUE_LABEL}}{{CUE_ICON}}</a>
+    </div>
+  </section>
+  <article class="tide-event-details tide-app__story" id="event-story" aria-labelledby="story-title" tabindex="-1">
+    <p class="tide-eyebrow">{{STORY_LABEL}}</p><h{{STORY_LEVEL}} class="tide-event-details__title" id="story-title">{{STORY_TITLE}}</h{{STORY_LEVEL}}><p class="tide-event-details__lead">{{LEAD}}</p>
+    {{SECTIONS}}
+    <p class="tide-disclosure">{{DISCLOSURE}}</p>
+    <a class="tide-back-link" href="index.html">{{STORY_BACK_ICON}}{{BACK_LABEL}}</a>
+  </article>
+</section>

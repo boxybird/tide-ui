@@ -1,0 +1,67 @@
+{
+  "baselineCommit": "734b4015a1d46d56aa178180cb1262fae4fa9ec7",
+  "generatedPagesCompared": 420,
+  "semanticMarkupDifferences": 0,
+  "byteIdenticalPages": 21,
+  "normalization": "Decoded attributes and text compared; attribute order and formatting whitespace normalized. All elements, attributes, content, IDs, links and order retained.",
+  "kitInputsUnchanged": 59,
+  "appRuntimeFilesUnchanged": 12,
+  "oldHtmlAndContentSourceBytes": 855661,
+  "newHtmlAndContentSourceBytes": 267152,
+  "sourceReductionPercent": 68.8,
+  "canonicalEventRecords": 54,
+  "individualSourceDocumentsRemoved": 54,
+  "nativeEventDocumentsGenerated": 54,
+  "nonEventSourceDocuments": 6,
+  "screenshots": [
+    {
+      "case": "desktop",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0,
+      "note": "Repeated baseline/current capture at the same fixed viewport; initial captures had raster differences despite identical DOM geometry."
+    },
+    {
+      "case": "phone-event",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "ink-desktop",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "long-detail",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "comedy-detail",
+      "size": [
+        1425,
+        891
+      ],
+      "changedPixels": 0
+    },
+    {
+      "case": "phone-venue-event",
+      "size": [
+        375,
+        812
+      ],
+      "changedPixels": 0
+    }
+  ]
+}

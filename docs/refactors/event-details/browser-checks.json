@@ -1,0 +1,209 @@
+{
+  "baselineCommit": "734b4015a1d46d56aa178180cb1262fae4fa9ec7",
+  "browser": "Windows in-app Chromium",
+  "renderedCases": {
+    "desktop": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "short": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "wide": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "tablet": {
+      "nodes": 1184,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "portrait": {
+      "nodes": 1184,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "phone-list": {
+      "nodes": 1184,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "phone-event": {
+      "nodes": 1212,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "small": {
+      "nodes": 1184,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "venue": {
+      "nodes": 267,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "zero": {
+      "nodes": 268,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "wrapped": {
+      "nodes": 1219,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "help": {
+      "nodes": 128,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "saved": {
+      "nodes": 138,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "submit": {
+      "nodes": 81,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "tide-light": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "tide-dark": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "summer-light": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "summer-dark": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "bumble-light": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "bumble-dark": {
+      "nodes": 1188,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "ink-desktop": {
+      "nodes": 1216,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "long-detail": {
+      "nodes": 1217,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "comedy-detail": {
+      "nodes": 1215,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "phone-venue-event": {
+      "nodes": 1183,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    },
+    "phone-long-detail": {
+      "nodes": 1213,
+      "comparedPropertiesPerNode": 55,
+      "differences": 0,
+      "horizontalOverflow": false
+    }
+  },
+  "behaviorChecks": [
+    {
+      "name": "Full event uses shared content and selects its list card",
+      "pass": true
+    },
+    {
+      "name": "Attendance anchor retains native fragment and focus",
+      "pass": true,
+      "targetTop": 471.2604370117187
+    },
+    {
+      "name": "Live-filtered preview loads full structured detail and correct heading level",
+      "pass": true
+    },
+    {
+      "name": "Venue link opens the exact scoped six-event schedule",
+      "pass": true
+    },
+    {
+      "name": "Scoped zero-result state keeps venue information visible",
+      "pass": true
+    },
+    {
+      "name": "Phone full-screen event keeps rough-upload photo behavior",
+      "pass": true
+    },
+    {
+      "name": "Saved route reuses the same event content as a preview",
+      "pass": true
+    },
+    {
+      "name": "Responsive filters retain Escape rollback and focus",
+      "pass": true
+    },
+    {
+      "name": "Native gutter spacing keeps Show events aligned",
+      "gutter": 10,
+      "listBottom": 866,
+      "pass": true,
+      "showBottom": 866
+    },
+    {
+      "name": "Generated event URL opens after smooth return to top",
+      "pass": true
+    },
+    {
+      "name": "Browser Back restores reading position",
+      "pass": true,
+      "scrollY": 900
+    }
+  ],
+  "consoleWarningsAndErrors": [],
+  "deferred": "Native Firefox/Safari, physical-device and screen-reader checks"
+}

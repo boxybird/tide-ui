@@ -5,43 +5,15 @@ values are HTML-escaped; Html is reserved for markup composed by this module.
 """
 from collections import defaultdict
 from datetime import date, datetime
-from html import escape
 import json
 from pathlib import Path
 import re
+from template_engine import Html, expand, attribute
+from event_details import EventDetails
 
 ROOT = Path(__file__).resolve().parents[1]
-TOKEN = re.compile(r'{{\s*(?:>\s*([a-z][a-z0-9-]*)|([A-Z][A-Z0-9_]*))\s*}}')
 MONTHS = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
 WEEKDAYS = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday')
-
-
-class Html(str):
-    """Explicit, trusted composition output; never use for sample text values."""
-
-
-def expand(text, values, templates, stack=()):
-    literal = TOKEN.sub('', text)
-    if '{{' in literal or '}}' in literal:
-        raise ValueError('Malformed app template token')
-    def replace(match):
-        partial, key = match.groups()
-        if partial:
-            if partial not in templates:
-                raise ValueError('Unknown app partial: ' + partial)
-            if partial in stack:
-                raise ValueError('Cyclic app partial: ' + ' -> '.join((*stack, partial)))
-            return expand(templates[partial], values, templates, (*stack, partial))
-        if key not in values:
-            raise ValueError('Unknown app template value: ' + key)
-        value = values[key]
-        return str(value) if isinstance(value, Html) else escape(str(value), quote=True)
-    # Substitute once: sample text that resembles a token remains ordinary text.
-    return TOKEN.sub(replace, text)
-
-
-def attribute(name, value):
-    return Html(' ' + name + '="' + escape(str(value), quote=True) + '"')
 
 
 class AppTemplates:
@@ -54,6 +26,8 @@ class AppTemplates:
         if len(self.templates) != len(sources):
             raise ValueError('App partial names must be unique')
         self.events = json.loads((ROOT/manifest['dataHome']['events']).read_text(encoding='utf-8'))
+        self.detail_presentations = json.loads((ROOT/manifest['dataHome']['detailPresentations']).read_text(encoding='utf-8'))
+        self.details = EventDetails(self.partial, self.detail_presentations)
         self.routes = json.loads((ROOT/manifest['dataHome']['routes']).read_text(encoding='utf-8'))
         self.by_id = {event['id']:event for event in self.events}
         if len(self.by_id) != len(self.events):
@@ -70,8 +44,8 @@ class AppTemplates:
             if event.get('endDate'):
                 date.fromisoformat(event['endDate'])
         actual = {p.stem for p in (ROOT/'src/pages').glob('*.html')}
-        if actual != set(self.by_id) | set(self.routes):
-            raise ValueError('Every source page needs an event or explicit route context')
+        if actual != set(self.routes):
+            raise ValueError('Only explicitly registered non-event documents belong in src/pages; event documents use event-page.html')
 
     def partial(self, name, values):
         return Html(expand('{{> ' + name + '}}', values, self.templates))
@@ -150,8 +124,17 @@ class AppTemplates:
             'FOOTER_BACK_HIDDEN':Html('') if saved else Html(' hidden'),
             'FOOTER_NOTE':'Saved items are an example shortlist.' if saved else 'End of the sample feed. Fictional events for UX testing. Venue information is sourced separately.',
         })
+        if selected and not venue:
+            event = self.by_id[selected]
+            values['EVENT_DETAIL'] = self.details.render(event, 1 if route in self.by_id else 2)
+            values['DOCUMENT_TITLE'] = event['detail']['documentTitle']
         return values
 
     def page(self, source):
-        text = source.read_text(encoding='utf-8')
-        return expand(text, self.context(source.stem), self.templates)
+        route = Path(source).stem
+        values = self.context(route)
+        text = self.templates['event-page'] if route in self.by_id else (ROOT/'src/pages'/(route+'.html')).read_text(encoding='utf-8')
+        return expand(text, values, self.templates)
+
+    def pages(self):
+        return {route+'.html':self.page(route) for route in sorted(set(self.by_id) | set(self.routes))}

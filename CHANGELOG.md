@@ -1,5 +1,11 @@
 # Changelog
 
+## Events example 1.1.3 · 2026-10-25
+
+- Replaced 54 individual event source documents with shared event-page/detail templates, preserving every native route. Index/search/saved previews reuse the same detail content.
+- Extended the canonical sample catalog to structured event details in `data/events.json`; registered existing full/concise presentation defaults, typed content blocks and shared inline icons. No raw event HTML is stored in data.
+- Preserved kit1.3.0, app CSS/browser runtime, exact content/attributes, photo behavior, heading levels, fragment targets and venue/search navigation. Added detail rendering/escaping contracts and guards against duplicated event markup.
+
 ## Events example 1.1.2 · 2026-10-25
 
 - Extracted shared build-time app header, filters/rail/dialog, lineup summary, month groups, event card and empty/footer markup. All 60 routes consume named partials; unique event and content-page details remain local.

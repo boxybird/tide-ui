@@ -26,7 +26,7 @@ def build(check=False):
     css = '/* App composition only; generated from src/styles/. */\n' + '\n'.join(source.read_text(encoding='utf-8') for source in css_sources)
     expected[OUT/'runtime/css/app.css'] = css.encode('utf-8')
     templates = AppTemplates()
-    rendered_pages = {source.name:templates.page(source) for source in sorted((ROOT/'src/pages').glob('*.html'))}
+    rendered_pages = templates.pages()
     destinations = [(OUT / 'app', 'bumble', 'dark')] + [(OUT / 'themes' / (t+'-'+m), t, m) for t,m in MODES]
     for directory, theme, mode in destinations:
         for name, text in rendered_pages.items():

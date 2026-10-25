@@ -115,7 +115,7 @@ def main():
         source=p.read_text(encoding='utf-8')
         if source.count('{{> header}}')!=1:
             failures.append(str(p.relative_to(ROOT))+': use one shared app header')
-        if re.search(r'<(?:header|form|article|dialog|aside)\s+class="(?:tide-app__header|tide-app__search|tide-event-card\b|tide-filter-panel|tide-app__filter-rail)',source):
+        if re.search(r'<(?:header|form|article|dialog|aside|section)\s+class="(?:tide-app__header|tide-app__search|tide-event-card\b|tide-filter-panel|tide-app__filter-rail|tide-event-hero\b|tide-event-details\b)',source):
             failures.append(str(p.relative_to(ROOT))+': duplicated shared app markup; use its partial')
     for cls in set(re.findall(r'\.(tide-[\w-]+(?:__[\w-]+)?)',appcss)):
         if any(cls==block or cls.startswith(block+'__') or cls.startswith(block+'--') for block in private) and not re.search(r'(?<![\w-])'+re.escape(cls)+r'(?![\w-])',usage):

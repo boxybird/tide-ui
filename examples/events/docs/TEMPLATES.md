@@ -6,16 +6,20 @@ This example uses build-time partials, not browser rendering. The UI kit's canon
 
 | Source | Owns |
 | --- | --- |
-| `src/pages/*.html` | Native route documents and individual event details, venue guide, help or submission content |
+| `src/pages/*.html` | Six non-event documents with unique venue/help/submission content and list wrappers |
 | `src/templates/header.html` | Brand and navigation, including existing secondary-link and current-page variants |
 | `filter-rail.html`, `filters.html`, `filter-dialog.html` | One original GET form/control set, desktop rail and responsive dialog shell |
 | `results-intro.html`, `lineup-summary.html`, `summary-*.html` | Existing heading levels, counts, applied badge and filter toggle |
 | `event-list.html`, `month-group.html`, `month-nav.html`, `month-jump.html` | Complete-feed isolation, stable calendar IDs, grouping and jumps |
 | `event-card.html` | One card recipe, selected modifier/status, authored dataset and date/time/admission markup |
 | `empty-results.html`, `results-footer.html` | Existing recovery and list footer variants |
-| `data/event-list.json` | Canonical 54 authored cards, in approved order; shared by rendering and search tests |
+| `data/events.json` | Canonical 54 authored events, including card fields and structured detail content; shared by rendering and search tests |
 | `data/pages.json` | Six non-event route contexts: collection, selection and navigation state |
-| `tools/html_templates.py` | Escaped value substitution and explicit collection/route composition |
+| `event-page.html`, `event-detail.html`, `detail-*.html` | One event document/detail composition, structured sections and existing inline icons |
+| `data/detail-presentations.json` | Existing full/concise structural defaults and common labels |
+| `tools/html_templates.py` | Explicit list/route composition and generation of all native event documents |
+| `tools/template_engine.py` | Escaped value substitution and registered includes |
+| `tools/event_details.py` | Structured detail rendering, heading levels and supported content blocks |
 
 All template names and list-data homes are registered in `consumer-manifest.json`. The build fails for missing/unregistered partial files, unknown values/routes, malformed syntax and cyclic includes. Normal checks reject pasted header, filter, rail, dialog or card markup in route sources.
 
@@ -27,12 +31,12 @@ Use `{{UPPERCASE_VALUE}}` for a value. Plain strings are HTML-escaped in text an
 
 The renderer explicitly composes repeated cards and calendar groups. The template syntax deliberately has no loops or conditionals. Optional fragments, current-link attributes and selected status are supplied by the typed composition functions. Keep new reusable app markup in a registered partial and add its context in the renderer rather than building HTML strings inside browser scripts.
 
-The app builder expands every source route once, then emits the default app and all six theme/mode examples. Do not edit generated pages in `build/`. Run `npm run build` and `npm run check` from the repository root.
+The app builder expands six non-event documents and generates 54 event documents from `event-page.html` plus their data. It then emits the default app and all six theme/mode examples. Do not edit generated pages in `build/`. Run `npm run build` and `npm run check` from the repository root.
 
 ## Preserved state and content
 
-Event route filenames select the corresponding card ID. Index/search retain High Desert Signal as their unfiltered preview. Sunshine Theater shows six exact-ID matches and initially selects no event. Saved reuses Ink After Dark, retaining its original shortlist dataset and heading/footer variants. Heading levels and navigation active states retain their existing per-route differences.
+Canonical sample IDs determine native event filenames and select their corresponding card. Index/search retain High Desert Signal as their unfiltered preview. Sunshine Theater shows six exact-ID matches and initially selects no event. Saved reuses Ink After Dark, retaining its original shortlist dataset and heading/footer variants. Heading levels and navigation active states retain their existing per-route differences.
 
-Calendar labels use fixed English month/day names and local ISO dates, independent of the build machine's locale. Authored start timestamps are retained; display-only ranges retain their existing span markup. The original 48-event and six-Sunshine JSON files remain provenance records. Event-detail prose stays in the route files; this extraction is not a new content-management or ingestion system.
+Calendar labels use fixed English month/day names and local ISO dates, independent of the build machine's locale. Authored start timestamps are retained; display-only ranges retain their existing span markup. The original 48-event and six-Sunshine JSON files remain provenance records. Event-detail prose now lives in structured sample data. The [detail contract](DETAILS.md) documents supported blocks and existing presentation variants. This remains a sample app rather than a content-management or ingestion system.
 
-The runtime still moves one original control set between rail and dialog. Native form association, live draft counts, Show events/Enter, Reset, Escape/focus restoration, URL state, venue scope, sticky offsets, scroll restoration and reduced-motion behavior retain their current contracts. App styles/scripts/assets are byte-identical to 1.1.1.
+The runtime still moves one original control set between rail and dialog. Native form association, live draft counts, Show events/Enter, Reset, Escape/focus restoration, URL state, venue scope, sticky offsets, scroll restoration and reduced-motion behavior retain their current contracts. App styles/scripts/assets remain byte-identical to the approved baseline.

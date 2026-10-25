@@ -1,5 +1,5 @@
 {
-  "version": "1.1.2",
+  "version": "1.1.3",
   "kitVersion": "1.3.0",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
@@ -28,14 +28,42 @@
     "src/runtime/js/venue-context.js"
   ],
   "contract": "docs/COMPONENT-OWNERSHIP.md",
-  "notes": "Shared build-time header, filters and listing templates. Public kit and app CSS/browser runtime are unchanged.",
+  "notes": "Shared list and individual-detail templates consume canonical sample events. All native event URLs remain; public kit, app styles and browser runtime are unchanged.",
   "acceptedInputs": [
     "Sticky hierarchy and venue journey, integrated in App 1.1.0"
   ],
   "templateHome": [
+    "src/templates/detail-age.html",
+    "src/templates/detail-attendance.html",
+    "src/templates/detail-cue-label.html",
+    "src/templates/detail-icon-arrow-down.html",
+    "src/templates/detail-icon-arrow-right.html",
+    "src/templates/detail-icon-back.html",
+    "src/templates/detail-icon-calendar.html",
+    "src/templates/detail-icon-check.html",
+    "src/templates/detail-icon-chevron-down.html",
+    "src/templates/detail-icon-clock.html",
+    "src/templates/detail-icon-pin.html",
+    "src/templates/detail-icon-saved.html",
+    "src/templates/detail-inclusion.html",
+    "src/templates/detail-inclusions.html",
+    "src/templates/detail-note.html",
+    "src/templates/detail-paragraph.html",
+    "src/templates/detail-place-line.html",
+    "src/templates/detail-place.html",
+    "src/templates/detail-price-unit.html",
+    "src/templates/detail-saved-control.html",
+    "src/templates/detail-schedule-item.html",
+    "src/templates/detail-schedule.html",
+    "src/templates/detail-section.html",
+    "src/templates/detail-time.html",
+    "src/templates/detail-venue-action.html",
+    "src/templates/detail-venue-link.html",
     "src/templates/empty-results.html",
     "src/templates/event-card.html",
+    "src/templates/event-detail.html",
     "src/templates/event-list.html",
+    "src/templates/event-page.html",
     "src/templates/filter-dialog.html",
     "src/templates/filter-rail.html",
     "src/templates/filters.html",
@@ -51,7 +79,8 @@
     "src/templates/summary-toggle.html"
   ],
   "dataHome": {
-    "events": "data/event-list.json",
-    "routes": "data/pages.json"
+    "events": "data/events.json",
+    "routes": "data/pages.json",
+    "detailPresentations": "data/detail-presentations.json"
   }
 }

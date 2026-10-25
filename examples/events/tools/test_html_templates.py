@@ -30,7 +30,7 @@ class TemplateContracts(unittest.TestCase):
     def test_every_event_route_selects_its_own_card_once(self):
         for slug in self.app.by_id:
             with self.subTest(slug=slug):
-                parsed = Elements(self.app.page(ROOT/'src/pages'/(slug+'.html')))
+                parsed = Elements(self.app.page(slug))
                 self.assertEqual(len(parsed.cards), 54)
                 self.assertEqual(parsed.current, [slug])
                 for control in ('event-query', 'event-from', 'event-to', 'venue-scope'):
