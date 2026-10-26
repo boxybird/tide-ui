@@ -109,8 +109,8 @@ Use `.tide-event-hero__title`, `.tide-event-details__title`, `.tide-event-detail
 
 The prominent date is a `time` with a valid datetime value and a full accessible date label; visible day/month fragments are hidden from assistive technology to avoid repetition. Time, venue and price are real text. Unknown information should not be fabricated to fill a layout.
 
-## States not yet implemented
+## Behavior boundaries
 
-The kit does not claim production behavior for asynchronous loading, live save/unsave, toasts, file-size validation, search/filter logic, booking, sharing, dialogs, menus, authentication or organizer editing. The Coverage section retains those product decisions. Add a behavior contract and keyboard/announcement tests when implementing them.
+The kit provides HTML/CSS recipes and documented states. Example-page scripts demonstrate the interactions documented in their own contracts, including search/filter behavior. A visual specimen does not establish an operational service. Coverage records UI examples, not pending product decisions. Extend a component or example interaction only for a concrete UI need, with a behavior contract and relevant keyboard/announcement checks. Service implementation is outside project scope.
 
 All fourteen screen/specimen compositions are included in every named theme and both modes. The selected list and the full-screen event are available directly; the library also shows search, filters, saved, empty, submission, review, confirmation, recovery, adopted app patterns, help and rich HTML.

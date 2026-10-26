@@ -41,7 +41,7 @@ Small tables without a wrapper use a fixed layout and wrap their cells. For a wi
 
 The optional wrapper has a 32rem table minimum; its own width is bounded. Its visible caption supplies an accessible name. A tab stop gives keyboard access in engines that do not automatically focus scroll containers. Avoid assigning a scrolling region to every short two-column table. Long code samples scroll within PRE; give a potentially scrolling PRE `tabindex="0"` and a useful accessible name. Ordinary text, inline code and URLs wrap. Printing releases the scrolling constraints.
 
-Images/video retain their intrinsic ratio. Supply correct dimensions, meaningful alt text or an intentional empty alt, and a caption where useful. Prose does not invent alt text, sanitize HTML, permit arbitrary embeds or establish a video-player contract. Sanitize rich HTML and validate URLs in the eventual content pipeline. Styling is not a security boundary.
+Images/video retain their intrinsic ratio. Supply correct dimensions, meaningful alt text or an intentional empty alt, and a caption where useful. Prose does not invent alt text, sanitize HTML, permit arbitrary embeds or establish a video-player contract. When reusing this pattern with externally supplied content, the consumer must sanitize rich HTML and validate URLs. Styling is not a security boundary.
 
 ### Embedded components
 
@@ -96,7 +96,7 @@ Supported layout extension points: `--tide-content-page-width` (70rem) and `--ti
 
 ## Example and scope
 
-The help page covers finding events, dates/categories, preview selection, access questions, admission tables, changed plans and organizer guidance. It explicitly describes which features work in the current preview. It does not claim live booking, support messages or event submission. Help content is a realistic fixture; privacy and terms copy require the eventual service’s actual data practices.
+The help page covers finding events, dates/categories, preview selection, access questions, admission tables, changed plans and organizer guidance. It explicitly describes which features work in the current preview. It does not claim live booking, support messages or event submission. Help content is a realistic UI fixture. Operational policies and legal service documents are outside this repository’s deliverables.
 
 The kit’s `theme-mode/frames/help.html` and `prose.html` use the same source across all six modes. The consuming app generates `help.html` and `help-review.html` at the root and in every theme directory. The app’s review gallery is presentation only; its theme links and viewport frames are not part of the prose API.
 

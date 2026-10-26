@@ -1,62 +1,42 @@
 [
   {
     "area": "Shared search and filters",
-    "coverage": "Optional header, scrolling body, pinned actions; clean, one/zero, invalid and applied specimens in all six modes. Host-tested GET, draft count, reset/cancel/clear, keyboard and resize.",
-    "status": "Included \u00b7 Kit 1.3.0; independent consumer verified"
+    "coverage": "Optional header, scrolling body, pinned actions; clean, one/zero, invalid and applied specimens in all six modes. Example interactions cover GET, draft counts, reset/cancel/clear, keyboard and resize.",
+    "status": "Included · Kit 1.3.0 and events example"
   },
   {
-    "area": "Website content",
+    "area": "Browse and event details",
+    "coverage": "Selected list, scrolling details and original-photo opening.",
+    "status": "Included in events example"
+  },
+  {
+    "area": "Discovery and empty results",
+    "coverage": "Search, date/category/price filters and recovery from no matching results.",
+    "status": "Layouts and example interactions included"
+  },
+  {
+    "area": "Venue page",
+    "coverage": "Sunshine Theater guide, scoped event list and useful venue information when filters match no samples.",
+    "status": "Included in events example"
+  },
+  {
+    "area": "Content pages",
     "coverage": "Scoped prose, help-page layout, optional contents, tables, figures and native footer navigation.",
-    "status": "Included \u00b7 Kit 1.2.0"
+    "status": "Included · Kit 1.2.0"
   },
   {
-    "area": "Browse & event",
-    "coverage": "The selected list, full-screen photo opening and scrolling details.",
-    "status": "Preserved"
-  },
-  {
-    "area": "Discover",
-    "coverage": "Search, date/category/price filters, no matching results.",
+    "area": "Saved-page examples",
+    "coverage": "Saved list and empty-state compositions using authored fixtures.",
     "status": "Layouts included"
   },
   {
-    "area": "Save & return",
-    "coverage": "Saved list and empty state. Later: persistence, unsave and save failure.",
-    "status": "Layouts included"
-  },
-  {
-    "area": "Attend",
-    "coverage": "Event-specific Get tickets / RSVP / Visit organizer, external handoff and sold-out/cancelled actions.",
-    "status": "Next screen pass"
-  },
-  {
-    "area": "Organizer submission",
-    "coverage": "Required fields, optional photo, review and pending-review confirmation.",
-    "status": "Layouts included"
-  },
-  {
-    "area": "Manage an event",
-    "coverage": "Private edit link or sign-in, drafts, published status, edits and cancellation.",
-    "status": "Next screen pass"
+    "area": "Submission and review examples",
+    "coverage": "Required fields, optional photo control, review layout and pending-review confirmation as UI specimens.",
+    "status": "Layouts and native field validation included"
   },
   {
     "area": "Content resilience",
-    "coverage": "Poor uploads, no photo, text-heavy posters, long titles, unknown venue/access details.",
-    "status": "Existing + no-photo sample"
-  },
-  {
-    "area": "Trust & recovery",
-    "coverage": "Organizer/contact, address/directions, share/calendar, report incorrect details, unavailable and connection failure.",
-    "status": "Patterns + remaining flows"
-  },
-  {
-    "area": "Administration",
-    "coverage": "Review queue, approve/reject, duplicate/spam reports and corrections.",
-    "status": "Before public submissions"
-  },
-  {
-    "area": "Account & notifications",
-    "coverage": "Cross-device saved events, profiles, preferences and reminders.",
-    "status": "Defer until useful"
+    "coverage": "No-photo sample, illustrative posters, long text and unknown venue/access details.",
+    "status": "Existing specimens; extend for specific UI needs"
   }
 ]

@@ -4,6 +4,14 @@ A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components 
 
 Kit **1.3.0** · Events example **1.1.5** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
+## Project scope
+
+The maintained deliverables are the UI kit, its documentation and best practices, and pages composed from the kit: event details, venue pages, filter bars, event listings and other interface examples. Sample content and local interactions support design and evaluation. This remains an ongoing GitHub repository for iteration and reuse.
+
+Hosting, deployment, production launch, live event sourcing or ingestion, backend services, operational submissions/moderation, accounts and ticketing services are outside project scope. These are not deferred milestones. Submission, review and saved-page specimens are UI examples.
+
+A UI deliverable is finished when its canonical sources and ownership are clear, documentation and relevant specimens are current, and applicable build, contract and interaction checks pass with testing limits recorded. Packaging is optional. Further work should address a concrete kit or example-page need: components, tokens, themes, accessibility, responsive composition, reusable patterns or documentation. Coverage is an inventory of UI examples, not a service roadmap.
+
 ## Start
 
 Requires Node.js 18+ and Python 3.10+. There are no npm or Python dependencies to install. Set `PYTHON` if your interpreter has a nonstandard executable name or location.

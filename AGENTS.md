@@ -2,6 +2,16 @@
 
 The user authorized repository cleanup on 2026-10-25. The complete earlier project (5,300 tracked files) is preserved at Git tag `design-history/2026-10-25`, commit `60864d0`. A standalone recovery bundle lives in `.git/design-history-2026-10-25.bundle` on this machine. Archived studies belong in that tagged history; do not recreate version folders in the active tree or run historical writers against current sources.
 
+## Project scope
+
+This is an ongoing GitHub repository for the Tide UI kit, its documentation and best practices, and example pages built with the kit. Event pages, venue pages, filter bars and event listings are UI deliverables. Sample content and local interactions support interface design and evaluation.
+
+Hosting, deployment, production launch, live event sourcing or ingestion, backend services, operational submissions/moderation, accounts and ticketing services are outside this project's scope. They are not deferred milestones or prerequisites for finishing a UI deliverable. Existing submission, review and saved-page specimens demonstrate UI patterns only.
+
+When asked what is next, recommend work on kit components, tokens, themes, accessibility, documentation, reusable patterns or pages composed from the kit. Base recommendations on a specific UI need or documented gap; Coverage is an inventory of examples, not a product roadmap.
+
+A UI deliverable is finished when its canonical sources and ownership are clear, its documentation and relevant specimens are current, and applicable build, contract and interaction checks pass with testing limits recorded. Completed deliverables remain available for iteration; they do not lead to a service launch.
+
 ## Current homes
 
 - `packages/tide/`: maintained kit1.3.0 CSS modules, theme inputs, canonical HTML recipes, registry, contracts and tests.
@@ -22,4 +32,4 @@ App 1.1.1 consolidates app CSS into five registered `src/styles/` modules and pu
 
 App 1.1.5 registers nine deferred browser scripts in execution order. `app-runtime.js` owns shared breakpoint/storage/state/URL/label helpers; `event-navigation.js` alone owns month jumps; `preview.js` owns the accepted photo/inspect hooks and readiness. Keep historical storage/message/preview parameters compatible. Preserve mount/close/resize timing, native modified links, reduced motion, scroll restoration, focus and one original control set. See `examples/events/docs/RUNTIME.md`; never duplicate calendar listeners in the rail or direct storage/media-query handling in feature scripts.
 
-End every completed repository task with `main` as the only branch. Tags/releases preserve versions. Never force-push or rewrite published history for routine cleanup. Do not publish the preview or npm package unless requested. Follow CONTRIBUTING.md and keep README/CHANGELOG/contracts current.
+End every completed repository task with `main` as the only branch. Tags/releases preserve versions. Never force-push or rewrite published history for routine cleanup. Keep previews local and artifacts in the repository workflow; hosting, service launch and npm registry publication are outside project scope. Follow CONTRIBUTING.md and keep README/CHANGELOG/contracts current.

@@ -2,7 +2,7 @@
 
 The canonical maintained package. Three named themes—Tide, Summer and Bumble—share semantic roles, typography, geometry and component HTML. Each theme supports light, dark and system appearance. The kit ships no browser JavaScript.
 
-From the repository root run `npm run build`, `npm run check`, then `npm run dev`. The CSS distribution is generated at `build/tide/`; the reference site is generated at `build/site/`. To consume the kit, copy its `css/`, `assets/` and `licenses/` together. The CSS entry point is `css/tide.css`. npm registry publication is not configured.
+From the repository root run `npm run build`, `npm run check`, then `npm run dev`. The CSS distribution is generated at `build/tide/`; the reference site is generated at `build/site/`. To consume the kit, copy its `css/`, `assets/` and `licenses/` together. The CSS entry point is `css/tide.css`. The repository and its local documentation/examples are the maintained deliverables.
 
 | Source | Purpose |
 | --- | --- |

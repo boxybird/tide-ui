@@ -17,7 +17,7 @@ The kit remains Tide 1.3.0, consumed read-only. `consumer-manifest.json` registe
 
 Desktop order stays app navigation/dialog → permanent lineup summary → isolated feed's month headings → cards. Month handoff works in both directions. Below the desktop breakpoint the summary retains its original behavior; phone uses natural document scrolling. Neither event pane receives a decorative outer border or clipping shell.
 
-The venue guide remains visible when its *filtered* schedule has no results. A venue with no upcoming events intrinsically, venue directory/following, arbitrary additional venues, real data fetching and submission validation remain future coverage. This release does not claim those states are implemented.
+The venue guide remains visible when its *filtered* schedule has no results. An intrinsically empty venue schedule, venue directory and additional venue compositions are possible UI studies when selected for a concrete kit/example need; they are not a required backlog. Live data fetching and operational submission processing are outside project scope. Existing native form-validation examples remain UI behavior.
 
 Accepted contracts remain in the design-history tag under `tide-desktop-studies/release-handoffs/`; the table above is the maintained integration contract. The complete originals remain at the design-history tag. Current app/kit checks are independent of those archives.
 

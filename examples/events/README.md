@@ -1,6 +1,6 @@
 # Burque events example · 1.1.5
 
-A framework-free consuming app for Tide 1.3.0. It includes 54 authored sample events, the accepted sticky month-heading hierarchy, live draft search counts, pinned Show events actions and the Sunshine Theater venue journey. No live submissions, accounts, booking or PWA services are implemented.
+A framework-free consuming app for Tide 1.3.0. It includes 54 authored sample events, the accepted sticky month-heading hierarchy, live draft search counts, pinned Show events actions and the Sunshine Theater venue journey. Its deliverables are reusable UI patterns and example pages, evaluated with local sample data and interactions. See [project scope](../../README.md#project-scope); operating an events service is outside that scope.
 
 Build and preview from the repository root: `npm run build`, `npm run check`, `npm run dev`. Open `/events/app/index.html?preview-filters=open`. `/events/index.html` links to complete examples for all six theme/mode combinations. All pages consume the one `build/tide/css/tide.css` distribution.
 

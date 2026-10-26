@@ -2,11 +2,13 @@
 
 Use `main` as the only lasting branch. Any temporary working branch must be merged and removed. Versioned history belongs in tags/release assets, not sibling implementation folders.
 
+Contributions serve the UI kit, its documentation/best practices or example pages built with it. See [project scope and completion criteria](README.md#project-scope). Service operations are not completion criteria or a follow-on backlog.
+
 1. Edit canonical sources in `packages/tide/`, `site/` or `examples/events/` according to ownership.
 2. Reuse an existing component before adding one. New kit components need a BEM block, CSS/HTML source, variants/states, accessibility/behavior contract, registry entry and specimens in every theme/mode. Remove duplicate app styling when adopting a pattern.
 3. Run `npm run build` and `npm run check`. Inspect relevant keyboard behavior and all affected theme/mode/viewport states. Record actual browser coverage; do not equate source checks with assistive-technology or cross-browser testing.
 4. Update component contracts, changelog and version for the affected package/example. Keep generated `build/`, `dist/`, caches and routine screenshots out of Git. Keep a small amount of reviewed regression evidence when it helps explain an accepted contract.
-5. Package with `npm run package`. Distribution ZIPs/checksums are release artifacts. Publication or hosting is a separate action.
+5. When a downloadable kit/example snapshot is useful, package with `npm run package`. ZIPs/checksums support repository review and reuse; packaging is optional for UI completion.
 
 Keep API-preserving fixes in patch versions, additive components/themes in minor versions, and incompatible public markup/token/behavior changes in major versions. The kit and example have independent versions. Repository-only moves need a changelog entry and parity verification; they do not silently change component APIs.
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## Repository scope · 2026-10-26
+
+- Defined maintained deliverables as the UI kit, its documentation/best practices and example pages, with UI completion criteria and guidance for next-work recommendations.
+- Replaced the reference-site product roadmap and screen map with an inventory of UI coverage. Removed service-operation milestones and eventual-service language from active guidance.
+- Preserved sample content, venue-fact attribution, component APIs and example behavior.
+
 ## Events example 1.1.5 · 2026-10-25
 
 - Consolidated app-only storage/media/state/URL/count helpers and refinement counting, preserving URL/form ownership, session keys and deferred execution.
