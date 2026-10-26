@@ -255,48 +255,38 @@
         }
       }
     },
-    "summer": {
-      "name": "Summer",
-      "description": "Apricot surfaces and plum in daylight. Warm charcoal and peach after dark.",
-      "light": {
-        "canvas": [
-          0.925,
-          0.06,
-          65
-        ],
-        "accent": [
-          0.41,
-          0.105,
-          340
-        ]
-      },
-      "dark": {
-        "canvas": [
-          0.2,
-          0.021,
-          55
-        ],
-        "accent": [
-          0.81,
-          0.105,
-          55
-        ]
-      }
-    },
     "bumble": {
       "name": "Bumble",
-      "description": "Soft yellow with ink-blue actions. Midnight ink with a honey accent.",
+      "description": "Warm paper and ink-blue actions by day. Unchanged midnight ink and honey after dark.",
       "light": {
         "canvas": [
-          0.965,
-          0.058,
+          0.97,
+          0.004,
           95
         ],
         "accent": [
           0.3,
           0.055,
           260
-        ]
+        ],
+        "texture": 0.015,
+        "overrides": {
+          "selected-surface": [
+            0.955,
+            0.028,
+            95
+          ],
+          "selected-text": [
+            0.3,
+            0.055,
+            260
+          ],
+          "selected-border": [
+            0.48,
+            0.055,
+            85
+          ]
+        }
       },
       "dark": {
         "canvas": [
@@ -309,6 +299,96 @@
           0.135,
           95
         ]
+      }
+    },
+    "slate": {
+      "name": "Slate",
+      "description": "Cool neutral surfaces with blue actions; graphite and soft blue after dark.",
+      "light": {
+        "canvas": [
+          0.97,
+          0.003,
+          250
+        ],
+        "accent": [
+          0.44,
+          0.1,
+          255
+        ],
+        "texture": 0.015
+      },
+      "dark": {
+        "canvas": [
+          0.205,
+          0.012,
+          250
+        ],
+        "accent": [
+          0.8,
+          0.085,
+          255
+        ],
+        "texture": 0.12
+      }
+    },
+    "grove": {
+      "name": "Grove",
+      "description": "Stone surfaces with evergreen actions; forest charcoal and sage after dark.",
+      "light": {
+        "canvas": [
+          0.97,
+          0.003,
+          145
+        ],
+        "accent": [
+          0.44,
+          0.1,
+          155
+        ],
+        "texture": 0.015
+      },
+      "dark": {
+        "canvas": [
+          0.205,
+          0.012,
+          145
+        ],
+        "accent": [
+          0.8,
+          0.085,
+          155
+        ],
+        "texture": 0.12
+      }
+    },
+    "iris": {
+      "name": "Iris",
+      "description": "Neutral porcelain with violet actions; soft charcoal and lavender after dark.",
+      "light": {
+        "canvas": [
+          0.97,
+          0.003,
+          290
+        ],
+        "accent": [
+          0.44,
+          0.1,
+          295
+        ],
+        "texture": 0.015
+      },
+      "dark": {
+        "canvas": [
+          0.205,
+          0.012,
+          290
+        ],
+        "accent": [
+          0.8,
+          0.085,
+          295
+        ],
+        "texture": 0.12
       }
     }
   }

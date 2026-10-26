@@ -32,7 +32,7 @@ def build(check=False):
     for path,content in files.items():
         if check:assert path.is_file() and path.read_bytes()==content,'Stale kit output: '+str(path.relative_to(PROJECT))
         else:path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(content)
-    print('Tide 1.3.0: three paired themes, contrast gates and CSS distribution '+('verified.' if check else 'built.'))
+    print('Tide: paired themes, contrast gates and CSS distribution '+('verified.' if check else 'built.'))
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');build(parser.parse_args().check)

@@ -120,7 +120,7 @@ def main():
     for cls in set(re.findall(r'\.(tide-[\w-]+(?:__[\w-]+)?)',appcss)):
         if any(cls==block or cls.startswith(block+'__') or cls.startswith(block+'--') for block in private) and not re.search(r'(?<![\w-])'+re.escape(cls)+r'(?![\w-])',usage):
             failures.append('Unused private app selector: '+cls)
-    # All emitted six-mode screen bodies remain identical apart from paths.
+    # All emitted theme/mode screen bodies remain identical apart from paths.
     signatures={}
     for path in (ROOT/'build/site').glob('*/frames/*.html'):
         body=re.search(r'<body\b.*</body>',path.read_text(encoding='utf-8'),re.S).group()
@@ -138,7 +138,7 @@ def main():
     runtime=subprocess.run([node,str(ROOT/'examples/events/tools/test-runtime.cjs')],cwd=ROOT,capture_output=True,text=True)
     runs.append({'name':'app-runtime-contracts','pass':runtime.returncode==0,'output':(runtime.stdout+runtime.stderr).strip()})
     failures.extend(run['name']+' failed: '+run['output'] for run in runs if not run['pass'])
-    report={'pass':not failures,'kitVersion':manifest['version'],'htmlFiles':len(pages),'localReferences':refs,'markdownReferences':markdown_refs,'themes':3,'modesPerTheme':2,'runs':runs,'failures':failures}
+    report={'pass':not failures,'kitVersion':manifest['version'],'htmlFiles':len(pages),'localReferences':refs,'markdownReferences':markdown_refs,'themes':len(json.loads((KIT/'tokens/themes.json').read_text(encoding='utf-8'))['themes']),'modesPerTheme':2,'runs':runs,'failures':failures}
     out=ROOT/'build/reports';out.mkdir(parents=True,exist_ok=True)
     (out/'checks.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,indent=2));return bool(failures)

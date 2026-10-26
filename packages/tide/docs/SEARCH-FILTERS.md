@@ -4,7 +4,7 @@ The Filter panel is the only new block. Field, Fieldset, Choice, Button, Badge, 
 
 ## Ownership
 
-`css/filter-panel.css` ships in `tide.components.extensions`. `templates/filter-panel.html` and `tools/filter_panel.py` supply the same shell to the kit specimens and consumer app. `component-manifest.json` registers the block, states and reused patterns. `templates/frames/filter-panel.html` generates identical HTML in Tide, Summer and Bumble, each light and dark.
+`css/filter-panel.css` ships in `tide.components.extensions`. `templates/filter-panel.html` and `tools/filter_panel.py` supply the same shell to the kit specimens and consumer app. `component-manifest.json` registers the block, states and reused patterns. `templates/frames/filter-panel.html` generates identical HTML in every registered theme, each light and dark.
 
 The host owns the native aside/dialog, placement, available height, breakpoint, matching, validation, URL routing, pluralization, opening snapshot, focus restoration and viewport handling. The kit adds no browser runtime. The consumer's scripts are an integration example, not a kit service.
 

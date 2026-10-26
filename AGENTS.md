@@ -14,7 +14,7 @@ A UI deliverable is finished when its canonical sources and ownership are clear,
 
 ## Current homes
 
-- `packages/tide/`: maintained kit1.3.0 CSS modules, theme inputs, canonical HTML recipes, registry, contracts and tests.
+- `packages/tide/`: maintained kit1.4.0 CSS modules, theme inputs, canonical HTML recipes, registry, contracts and tests. Theme direction and research live in `packages/tide/docs/COLOR-DESIGN.md`; preserve the accepted Bumble Dark palette.
 - `site/`: reference-site builder and presentation; Foundations / Components / Screens / Coverage / Tokens / Themes / Extend.
 - `examples/events/`: sample app1.1.5, including accepted sticky heading and Sunshine Theater patterns. App behavior/layout remains separate from kit components.
 - `tools/`: portable build/check/dev/package tools. Normal checks never import archived studies or require their paths.
@@ -24,7 +24,7 @@ Run `npm run build`, `npm run check`, `npm run dev` from the root. Node18+ and P
 
 ## Contracts
 
-Use BEM `tide-` names, semantic theme roles, named type/spacing/radius inputs, modern supported CSS and accessible native HTML. Tide, Summer and Bumble each require light/dark modes. Preserve Manrope, square controls, neutral notice borders and unframed event panes; no colored left callout stripe. Reusable discoveries require CSS/HTML/state/behavior homes, registration, all-theme specimens and removal of duplicated app styles.
+Use BEM `tide-` names, semantic theme roles, named type/spacing/radius inputs, modern supported CSS and accessible native HTML. Tide, Bumble, Slate, Grove and Iris each require light/dark modes. Summer has been removed at the user's request. Preserve Manrope, square controls, neutral notice borders and unframed event panes; no colored left callout stripe. Reusable discoveries require CSS/HTML/state/behavior homes, registration, all-theme specimens and removal of duplicated app styles.
 
 Preserve the app's bounded left panes, natural right document, native scrollbar measurement, 24px-plus-occupied-gutter bottom clearance, Show events alignment, responsive filter flyout and one original control set. Complete-feed isolation remains below the permanent desktop summary, with measured sticky offsets. Keep exact venue IDs, scoped Reset/return/explicit exit behavior and useful venue information when filters match no events. All54 event entries are authored samples, with real venue facts attributed separately.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## Tide kit 1.4.0 · 2026-10-26
+
+- Replaced Bumble Light's broad yellow surfaces with warm paper, retained ink-blue actions and introduced localized pale-honey selections. Bumble Dark is unchanged.
+- Added Slate, Grove and Iris, each with restrained neutral surfaces and separately tuned light/dark accents; retained Tide. Removed Summer Light and Summer Dark at the user's request, including their generated specimens; the extension entry now uses Tide Light.
+- Documented source-grounded color design policy, role allocation, accessibility criteria and review limits. Updated the theme-authoring recipe to use a neutral canvas.
+- Made event theme specimens and theme-count reporting follow the canonical registry. All ten maintained modes use the existing shared kit, markup and runtime.
+
 ## Repository scope · 2026-10-26
 
 - Defined maintained deliverables as the UI kit, its documentation/best practices and example pages, with UI completion criteria and guidance for next-work recommendations.

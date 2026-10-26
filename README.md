@@ -1,8 +1,8 @@
 # Tide UI
 
-A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and three themes—Tide, Summer and Bumble—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
+A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
 
-Kit **1.3.0** · Events example **1.1.5** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Kit **1.4.0** · Events example **1.1.5** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
 ## Project scope
 

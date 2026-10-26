@@ -31,19 +31,19 @@ Do not consume the implementation names in components. There is no `text-primary
 
 ## Add a seed-based theme
 
-Add one entry in `tokens/themes.json`. This example intentionally has an orange-tinted canvas. It is sufficient input; you do not need to manually recolor each component.
+Read [color design guidance](COLOR-DESIGN.md) for the visual policy and researched rationale. Add one entry in `tokens/themes.json`. Start with a near-neutral canvas; this example pairs porcelain surfaces with violet actions. It is sufficient input; you do not need to manually recolor each component.
 
 ```json
-"apricot": {
-  "name": "Apricot",
-  "description": "A warm surface with plum actions.",
+"porcelain": {
+  "name": "Porcelain",
+  "description": "Neutral surfaces with violet actions.",
   "light": {
-    "canvas": [0.925, 0.060, 65],
-    "accent": [0.410, 0.105, 340]
+    "canvas": [0.970, 0.003, 290],
+    "accent": [0.440, 0.100, 295]
   },
   "dark": {
-    "canvas": [0.200, 0.021, 55],
-    "accent": [0.810, 0.105, 55]
+    "canvas": [0.205, 0.012, 290],
+    "accent": [0.800, 0.085, 295]
   }
 }
 ```
