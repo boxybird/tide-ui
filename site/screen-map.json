@@ -6,7 +6,7 @@
   },
   {
     "area": "Browse and event details",
-    "coverage": "Selected list, scrolling details and original-photo opening.",
+    "coverage": "Selected list, scrolling details and original-photo opening. Cancelled, sold out, changed-time, multi-day and no-photo compositions.",
     "status": "Included in events example"
   },
   {
@@ -16,8 +16,8 @@
   },
   {
     "area": "Venue page",
-    "coverage": "Sunshine Theater guide, scoped event list and useful venue information when filters match no samples.",
-    "status": "Included in events example"
+    "coverage": "Shared venue profile and directory card; populated/intrinsically empty schedules, unknown access, scoped filtered-empty example.",
+    "status": "Kit recipes and events example included"
   },
   {
     "area": "Content pages",
@@ -31,12 +31,22 @@
   },
   {
     "area": "Submission and review examples",
-    "coverage": "Required fields, optional photo control, review layout and pending-review confirmation as UI specimens.",
+    "coverage": "Required fields, optional photo control, review layout and pending-review confirmation as UI specimens. Linked form error summary with retained values/hints, focus, correction and reset.",
     "status": "Layouts and native field validation included"
   },
   {
     "area": "Content resilience",
     "coverage": "No-photo sample, illustrative posters, long text and unknown venue/access details.",
     "status": "Existing specimens; extend for specific UI needs"
+  },
+  {
+    "area": "Website navigation",
+    "coverage": "Native header links, current page, skip target, related footer links and narrow/long-label wrapping.",
+    "status": "Kit recipe included"
+  },
+  {
+    "area": "Control states",
+    "coverage": "Read-only, disabled, invalid, native choice and pressed-button states; local file selection/replacement/removal and rejected type/size.",
+    "status": "Kit specimens and documentation demonstrations included"
   }
 ]

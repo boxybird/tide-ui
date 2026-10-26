@@ -2,7 +2,7 @@
 
 A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
 
-Kit **1.4.0** · Events example **1.1.5** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Kit **1.5.0** · Events example **1.1.6** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
 ## Project scope
 
@@ -50,6 +50,8 @@ After building, copy `build/tide/css/` and `build/tide/assets/` together, keepin
 ```
 
 Use the same semantic tokens in every theme. Set `data-mode="light|dark|system"`; omitting it follows system appearance. See [package guide](packages/tide/README.md), [architecture](docs/ARCHITECTURE.md), [contributing](CONTRIBUTING.md) and [changelog](CHANGELOG.md).
+
+A [page-recipe guide](packages/tide/docs/PAGE-PATTERNS.md) covers reusable venue compositions, form validation, event conditions, site navigation and native control states. Open the reference site’s Screens section for all-theme examples and local demonstrations.
 
 ## Design history
 

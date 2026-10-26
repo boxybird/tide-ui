@@ -34,11 +34,12 @@
 .tide-button--full { inline-size: 100%; }
 .tide-button:disabled { background: var(--tide-color-raised); color: var(--tide-color-text-muted); border-color: transparent; }
 @media (hover: hover) {
-  .tide-button:not(:disabled):not(.tide-button--secondary):not(.tide-button--quiet):hover { background: color-mix(in oklab, var(--tide-color-accent), var(--tide-color-accent-state-target) 8%); }
-  .tide-button--secondary:not(:disabled):hover { background: var(--tide-color-raised); }
-  .tide-button--quiet:not(:disabled):hover { color: var(--tide-color-text-primary); }
+  .tide-button:not(:disabled):not([aria-pressed='true']):not(.tide-button--secondary):not(.tide-button--quiet):hover { background: color-mix(in oklab, var(--tide-color-accent), var(--tide-color-accent-state-target) 8%); }
+  .tide-button--secondary:not(:disabled):not([aria-pressed='true']):hover { background: var(--tide-color-raised); }
+  .tide-button--quiet:not(:disabled):not([aria-pressed='true']):hover { color: var(--tide-color-text-primary); }
 }
-.tide-button:not(:disabled):not(.tide-button--secondary):not(.tide-button--quiet):active { background: var(--tide-color-accent-hover); }
+.tide-button:not(:disabled):not([aria-pressed='true']):not(.tide-button--secondary):not(.tide-button--quiet):active { background: var(--tide-color-accent-hover); }
+.tide-button[aria-pressed='true']:not(:disabled) { background: var(--tide-color-selected-surface); color: var(--tide-color-selected-text); border-color: var(--tide-color-selected-border); }
 .tide-icon-button { display: inline-grid; place-items: center; inline-size: var(--tide-size-target); block-size: var(--tide-size-target); flex: 0 0 var(--tide-size-target); border: var(--tide-border-control); border-radius: var(--tide-radius-control); color: var(--tide-color-text-primary); background: transparent; text-decoration: none; }
 .tide-icon-button--selected, .tide-icon-button[aria-pressed='true'] { color: var(--tide-color-selected-text); background: var(--tide-color-selected-surface); border-color: var(--tide-color-selected-border); }
 .tide-icon-button--focus-sample { outline: var(--tide-focus-width) solid var(--tide-color-focus); outline-offset: var(--tide-focus-gap); }
@@ -52,8 +53,10 @@ textarea.tide-field__control { min-block-size: 7.5rem; resize: vertical; }
 .tide-field__hint { color: var(--tide-color-text-secondary); font-size: var(--tide-font-size-caption); line-height: var(--tide-leading-caption); }
 .tide-field__control[aria-invalid='true'] { border-color: var(--tide-color-status-danger-text); }
 .tide-field__error { color: var(--tide-color-status-danger-text); font-size: var(--tide-font-size-caption); line-height: var(--tide-leading-caption); }
+.tide-field__control[readonly] { background: var(--tide-color-surface); }
 .tide-field__control:disabled { background: var(--tide-color-raised); color: var(--tide-color-text-muted); }
 .tide-choice { display: flex; align-items: center; gap: var(--tide-space-3); min-block-size: var(--tide-size-target); cursor: pointer; }
+.tide-choice:has(input:disabled) { color: var(--tide-color-text-muted); cursor: default; }
 .tide-choice input { margin: 0; inline-size: var(--tide-size-icon-action); block-size: var(--tide-size-icon-action); flex-shrink: 0; }
 .tide-fieldset__legend { margin-block-end: var(--tide-space-3); font-size: var(--tide-font-size-control); line-height: var(--tide-leading-body); font-weight: var(--tide-font-weight-label); }
 .tide-chip-list { display: flex; flex-wrap: wrap; gap: var(--tide-space-2); }
@@ -64,6 +67,9 @@ textarea.tide-field__control { min-block-size: 7.5rem; resize: vertical; }
 .tide-upload { padding: var(--tide-space-4); border: var(--tide-border-width) dashed var(--tide-color-border-control); border-radius: var(--tide-radius-control); display: grid; gap: var(--tide-space-3); }
 .tide-upload input { min-inline-size: 0; inline-size: 100%; color: var(--tide-color-text-secondary); font-size: var(--tide-font-size-caption); }
 .tide-upload input::file-selector-button { min-block-size: var(--tide-size-target); margin-inline-end: var(--tide-space-3); padding: var(--tide-space-2) var(--tide-space-3); border: var(--tide-border-control); border-radius: var(--tide-radius-control); background: var(--tide-color-raised); color: var(--tide-color-text-primary); font: inherit; }
+
+.tide-upload:has(input[aria-invalid='true']) { border-style: solid; }
+.tide-upload input:disabled::file-selector-button { color: var(--tide-color-text-muted); background: var(--tide-color-surface); }
 
 /* Feedback — the status is written out; callouts always have uniform neutral edges. */
 .tide-badge { display: inline-flex; align-items: center; gap: .375rem; min-block-size: var(--tide-space-6); padding: .125rem var(--tide-space-2); border: var(--tide-border-width) solid var(--tide-color-border-strong); border-radius: var(--tide-radius-control); color: var(--tide-color-text-secondary); font-size: var(--tide-font-size-label); line-height: 1.125rem; font-weight: var(--tide-font-weight-medium); letter-spacing: .02em; }
@@ -160,7 +166,7 @@ textarea.tide-field__control { min-block-size: 7.5rem; resize: vertical; }
 .tide-button--icon { inline-size: var(--tide-size-control); padding: var(--tide-space-3); }
 @media (forced-colors: active) {
   .tide-button, .tide-icon-button, .tide-chip, .tide-photo-control { border: var(--tide-border-width) solid ButtonText; }
-  .tide-icon-button--selected, .tide-chip--selected, .tide-chip:has(input:checked) { outline: var(--tide-focus-width) solid Highlight; }
+  .tide-button[aria-pressed='true'], .tide-icon-button--selected, .tide-chip--selected, .tide-chip:has(input:checked) { outline: var(--tide-focus-width) solid Highlight; }
   .tide-event-hero { color: CanvasText; background: Canvas; }
   .tide-event-hero__scrim { background: Canvas; }
 }

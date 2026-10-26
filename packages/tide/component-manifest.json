@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "classConvention": "BEM with tide- prefix",
   "runtime": "HTML and CSS; native browser behavior only",
   "componentSource": "templates/library.html#components",
@@ -19,7 +19,8 @@
         "focus-visible",
         "hover",
         "active",
-        "disabled"
+        "disabled",
+        "aria-pressed toggle"
       ],
       "roles": [
         "accent",
@@ -27,7 +28,10 @@
         "accent-state-target",
         "accent-hover",
         "focus",
-        "border-control"
+        "border-control",
+        "selected-surface",
+        "selected-text",
+        "selected-border"
       ],
       "fixture": "search.html"
     },
@@ -64,7 +68,9 @@
         "focus-visible",
         "disabled",
         "aria-invalid",
-        "required"
+        "required",
+        "readonly where natively supported",
+        "hint and error together"
       ],
       "roles": [
         "field",
@@ -82,7 +88,9 @@
       "block": "tide-choice",
       "states": [
         "checked",
-        "focus-visible"
+        "focus-visible",
+        "disabled checked",
+        "disabled unchecked"
       ],
       "roles": [
         "accent",
@@ -276,7 +284,11 @@
       "name": "File field",
       "block": "tide-upload",
       "states": [
-        "native optional file choice"
+        "native optional file choice",
+        "local selection and replacement demo",
+        "rejected type/size demo",
+        "remove file",
+        "disabled"
       ],
       "roles": [
         "raised",
@@ -476,6 +488,109 @@
       "styleOwnership": "kit",
       "contract": "docs/SEARCH-FILTERS.md#filter-panel",
       "behavior": "HTML/CSS shell only. Host owns one combined form, matching/validation, dialog snapshot and focus, GET routing, breakpoint placement and available height."
+    },
+    {
+      "name": "Venue profile",
+      "block": "tide-venue-profile",
+      "elements": [
+        "header"
+      ],
+      "states": [
+        "populated schedule",
+        "no upcoming events",
+        "unknown access information"
+      ],
+      "roles": [
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "border-subtle",
+        "focus"
+      ],
+      "source": "css/page-patterns.css",
+      "htmlSource": "templates/frames/venue.html",
+      "fixture": "venue.html",
+      "styleOwnership": "kit",
+      "contract": "docs/PAGE-PATTERNS.md#venues",
+      "behavior": "Heading, address/contact, access information, actions and event-specific guidance. Consumers own sticky/scroll placement; retain profile information for empty schedules and filtered zero matches."
+    },
+    {
+      "name": "Venue card",
+      "block": "tide-venue-card",
+      "elements": [
+        "title"
+      ],
+      "states": [
+        "with events",
+        "empty schedule"
+      ],
+      "roles": [
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "border-subtle",
+        "focus"
+      ],
+      "source": "css/page-patterns.css",
+      "htmlSource": "templates/frames/venues.html",
+      "fixture": "venues.html",
+      "styleOwnership": "kit",
+      "contract": "docs/PAGE-PATTERNS.md#venues",
+      "behavior": "Native heading link, description, place and accurate schedule wording. No nested interactive links or invented access facts."
+    },
+    {
+      "name": "Site header",
+      "block": "tide-site-header",
+      "elements": [
+        "links",
+        "link"
+      ],
+      "states": [
+        "current page",
+        "focus-visible",
+        "long labels",
+        "narrow wrapping"
+      ],
+      "roles": [
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "border-subtle",
+        "focus"
+      ],
+      "source": "css/page-patterns.css",
+      "htmlSource": "templates/frames/navigation.html",
+      "fixture": "navigation.html",
+      "styleOwnership": "kit",
+      "contract": "docs/PAGE-PATTERNS.md#navigation",
+      "behavior": "Native nav/list/link composition that wraps without a menu script. One aria-current=page link only when it identifies this page. Skip link and main target supplied by the page."
+    },
+    {
+      "name": "Form error summary",
+      "block": "tide-error-summary",
+      "elements": [
+        "title",
+        "list"
+      ],
+      "states": [
+        "hidden before validation",
+        "multiple errors",
+        "field correction",
+        "reset"
+      ],
+      "roles": [
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "border-subtle",
+        "focus"
+      ],
+      "source": "css/page-patterns.css",
+      "htmlSource": "templates/frames/form-validation.html",
+      "fixture": "form-validation.html",
+      "styleOwnership": "kit",
+      "contract": "docs/PAGE-PATTERNS.md#form-validation",
+      "behavior": "Compose with Notice. Reveal after validation; retain values/hints, expose invalid fields, focus summary once on failed submit and focus field destinations. Do not also announce the same summary as an alert."
     }
   ],
   "supportingBlocks": [
@@ -708,6 +823,28 @@
         "tide-icon"
       ],
       "contract": "docs/SEARCH-FILTERS.md#modal-and-progressive-enhancement"
+    },
+    {
+      "name": "Event conditions",
+      "uses": [
+        "tide-event-details",
+        "tide-summary",
+        "tide-notice",
+        "tide-badge",
+        "tide-button",
+        "tide-fallback"
+      ],
+      "contract": "docs/PAGE-PATTERNS.md#event-conditions"
+    },
+    {
+      "name": "Native control states",
+      "uses": [
+        "tide-field",
+        "tide-choice",
+        "tide-upload",
+        "tide-button"
+      ],
+      "contract": "docs/PAGE-PATTERNS.md#control-states"
     }
   ],
   "compositions": [

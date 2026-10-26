@@ -66,7 +66,7 @@ def main():
             expected=6 if path.name=='sunshine-theater.html' else 54
             if s.classes.count('tide-event-card')!=expected:failures.append(name+': sample count drift')
             if s.ids.count('event-query')!=1 or 'tide-lineup__feed' not in s.classes:failures.append(name+': control/stacking owner missing')
-    for name in ('base','layout','components','patterns','content','filter-panel','utilities'):
+    for name in ('base','layout','components','patterns','content','filter-panel','page-patterns','utilities'):
         css=(KIT/'css'/f'{name}.css').read_text(encoding='utf-8')
         if re.search(r'#[0-9a-fA-F]{3,8}\b|rgba?\(|oklch\(|data-theme|--tide-palette-',css):failures.append(name+': theme input leaked into component source')
     for path in (ROOT/'build').rglob('*.css'):
@@ -137,6 +137,9 @@ def main():
     runs.append({'name':'sample-search-tests','pass':search.returncode==0,'output':(search.stdout+search.stderr).strip()})
     runtime=subprocess.run([node,str(ROOT/'examples/events/tools/test-runtime.cjs')],cwd=ROOT,capture_output=True,text=True)
     runs.append({'name':'app-runtime-contracts','pass':runtime.returncode==0,'output':(runtime.stdout+runtime.stderr).strip()})
+    for script in json.loads((ROOT/'site/component-manifest.json').read_text(encoding='utf-8'))['behaviorHome']:
+        syntax=subprocess.run([node,'--check',str(ROOT/'site'/script)],cwd=ROOT,capture_output=True,text=True)
+        runs.append({'name':'site-script-syntax:'+script,'pass':syntax.returncode==0,'output':(syntax.stdout+syntax.stderr).strip()})
     failures.extend(run['name']+' failed: '+run['output'] for run in runs if not run['pass'])
     report={'pass':not failures,'kitVersion':manifest['version'],'htmlFiles':len(pages),'localReferences':refs,'markdownReferences':markdown_refs,'themes':len(json.loads((KIT/'tokens/themes.json').read_text(encoding='utf-8'))['themes']),'modesPerTheme':2,'runs':runs,'failures':failures}
     out=ROOT/'build/reports';out.mkdir(parents=True,exist_ok=True)

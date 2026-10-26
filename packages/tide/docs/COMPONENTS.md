@@ -1,3 +1,7 @@
+# Additions in 1.5.0
+
+Venue profile and Venue card, Site header and Form error summary have shared CSS/HTML/state contracts in [page recipes](PAGE-PATTERNS.md). Seven all-theme specimens cover venue/schedule conditions, form validation, event conditions, navigation and control states. The events example consumes shared venue rhythm. Documentation-only scripts demonstrate local validation, pressed state and file selection; the CSS package stays script-free.
+
 # Additions in 1.3.0
 
 Filter panel (`tide-filter-panel`) owns header/body/footer/status/count layout. Source: css/filter-panel.css. Canonical HTML: templates/filter-panel.html. Fixture: frames/filter-panel.html in all six modes. Reuse existing Field, Choice, Button, Badge, Result summary, Field error and Empty. See [contract](SEARCH-FILTERS.md).
@@ -10,6 +14,9 @@ The rendered component list is the library's Components section. Its source is `
 
 | Component / composition | BEM block | Included states or variants | Source specimen |
 | --- | --- | --- | --- |
+| Venue profile / card | `tide-venue-profile`, `tide-venue-card` | Practical facts, unknown access, schedule populated/empty, native directory link | Venue, venue-empty and venues |
+| Site header | `tide-site-header` | Native navigation, current page, focus, narrow and long-label wrapping | Navigation; venues |
+| Form error summary | `tide-error-summary` | Multiple linked errors, preserved hints/values, focus, correction and reset | Form validation |
 | Filter panel | `tide-filter-panel` | Optional header, scrolling body, pinned footer, status/count, flush rail; reused reset/submit controls | All six filter-panel fixtures; shared shell template |
 | Text action | `tide-button` | Primary, secondary, quiet, full width, icon-only, disabled, focus, hover/pressed | Library; search; submit |
 | Icon action | `tide-icon-button` | Rest, selected, focus specimen | Library |
@@ -113,4 +120,4 @@ The prominent date is a `time` with a valid datetime value and a full accessible
 
 The kit provides HTML/CSS recipes and documented states. Example-page scripts demonstrate the interactions documented in their own contracts, including search/filter behavior. A visual specimen does not establish an operational service. Coverage records UI examples, not pending product decisions. Extend a component or example interaction only for a concrete UI need, with a behavior contract and relevant keyboard/announcement checks. Service implementation is outside project scope.
 
-All fourteen screen/specimen compositions are included in every named theme and both modes. The selected list and the full-screen event are available directly; the library also shows search, filters, saved, empty, submission, review, confirmation, recovery, adopted app patterns, help and rich HTML.
+All screen/specimen compositions are included in every named theme and both modes. The selected list and the full-screen event are available directly; the library also shows search, filters, saved, empty, submission, review, confirmation, recovery, adopted app patterns, help and rich HTML.

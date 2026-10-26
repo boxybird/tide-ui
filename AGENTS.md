@@ -14,13 +14,15 @@ A UI deliverable is finished when its canonical sources and ownership are clear,
 
 ## Current homes
 
-- `packages/tide/`: maintained kit1.4.0 CSS modules, theme inputs, canonical HTML recipes, registry, contracts and tests. Theme direction and research live in `packages/tide/docs/COLOR-DESIGN.md`; preserve the accepted Bumble Dark palette.
+- `packages/tide/`: maintained kit1.5.0 CSS modules, theme inputs, canonical HTML recipes, registry, contracts and tests. Theme direction and research live in `packages/tide/docs/COLOR-DESIGN.md`; preserve the accepted Bumble Dark palette.
 - `site/`: reference-site builder and presentation; Foundations / Components / Screens / Coverage / Tokens / Themes / Extend.
-- `examples/events/`: sample app1.1.5, including accepted sticky heading and Sunshine Theater patterns. App behavior/layout remains separate from kit components.
+- `examples/events/`: sample app1.1.6, including accepted sticky heading and Sunshine Theater patterns. App behavior/layout remains separate from kit components.
 - `tools/`: portable build/check/dev/package tools. Normal checks never import archived studies or require their paths.
 - `build/` and `dist/`: ignored generated outputs/artifacts. Never edit or commit generated theme copies.
 
 Run `npm run build`, `npm run check`, `npm run dev` from the root. Node18+ and Python3.10+ are required; no dependencies need installation. `PYTHON` can select the interpreter. Local preview is port4187: `/site/index.html` and `/events/app/index.html?preview-filters=open`. `npm run verify:history` is a separate optional archive check.
+
+Kit 1.5.0 page recipes live in `packages/tide/css/page-patterns.css`, `docs/PAGE-PATTERNS.md` and seven registered all-theme specimens. Venue profile rhythm is shared with the app; retain its private viewport/fragment geometry. Documentation demonstrations live only in `site/scripts/recipe-demos.js`; do not add them to the CSS distribution or app runtime.
 
 ## Contracts
 

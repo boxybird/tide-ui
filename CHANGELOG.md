@@ -1,5 +1,11 @@
 # Changelog
 
+## Tide kit 1.5.0 / Events example 1.1.6 · 2026-10-26
+
+- Added registered Venue profile/card, Site header and Form error summary compositions with shared CSS, native markup and behavior contracts. Adopted venue-profile rhythm in the existing example and removed duplicated app styles.
+- Added seven all-theme specimens covering populated/empty venue schedules and directory items, linked multi-field validation, five event conditions, wrapping navigation and native control states.
+- Added documentation-only demonstrations for validation/focus/reset, a pressed button and actual local file selection/replacement/removal with type/size feedback. The CSS package remains script-free; app runtime, native routes, sample data, themes and primitives are preserved.
+
 ## Tide kit 1.4.0 · 2026-10-26
 
 - Replaced Bumble Light's broad yellow surfaces with warm paper, retained ink-blue actions and introduced localized pale-honey selections. Bumble Dark is unchanged.

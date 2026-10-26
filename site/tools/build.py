@@ -142,6 +142,9 @@ def build(check=False):
             content=re.sub(r'((?:href|src)=")((?:\.\./)*)(css/tide\.css|assets/[^"<>]+)(")',lambda m:m[1]+os.path.relpath(PROJECT/'build/tide'/m[3],target.parent).replace('\\','/')+m[4],content)
         files[target]=content.encode('utf-8')
     files[OUT/'css/docs.css']=(SITE/'css/docs.css').read_bytes()
+    scripts=json.loads((SITE/'component-manifest.json').read_text(encoding='utf-8'))['behaviorHome']
+    assert {SITE/name for name in scripts}==set((SITE/'scripts').glob('*.js')), 'Register every documentation demonstration script.'
+    for name in scripts:files[OUT/name]=(SITE/name).read_bytes()
     files[OUT/'extensions/panel.css']=(ROOT/'extensions/panel.css').read_bytes()
     for p in (ROOT/'docs').glob('*.md'):files[OUT/'docs'/p.name]=p.read_bytes()
     files[OUT/'README.md']=(ROOT/'README.md').read_bytes()

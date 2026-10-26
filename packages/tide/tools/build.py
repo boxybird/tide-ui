@@ -18,7 +18,7 @@ def outputs():
     bundle=[f'/* Generated Tide {version} entry point. Edit the named source modules, then build. */','@layer '+', '.join('tide.'+name for name in modules)+';']
     for name in modules:
         content=themes if name=='themes' else (ROOT/'css'/f'{name}.css').read_text(encoding='utf-8')
-        if name=='components':content+='\n@layer extensions {\n'+(ROOT/'css/patterns.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/content.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/filter-panel.css').read_text(encoding='utf-8')+'\n}\n'
+        if name=='components':content+='\n@layer extensions {\n'+(ROOT/'css/patterns.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/content.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/filter-panel.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/page-patterns.css').read_text(encoding='utf-8')+'\n}\n'
         bundle.append('@layer tide.'+name+' {\n'+content+'\n}')
     files={OUT/'css/tide.css':('\n\n'.join(bundle)+'\n').encode(),OUT/'css/themes.css':themes.encode(),OUT/'tokens/resolved.json':(json.dumps(resolved,indent=2)+'\n').encode(),OUT/'tokens/primitives.json':(json.dumps(dict(re.findall(r'(--tide-[\w-]+):\s*([^;]+);',(ROOT/'css/tokens.css').read_text(encoding='utf-8'))),indent=2)+'\n').encode(),PROJECT/'build/reports/contrast.json':(json.dumps({'standard':'WCAG 2 relative luminance, sRGB','themes':audit},indent=2)+'\n').encode()}
     for folder in ('assets','licenses'):
