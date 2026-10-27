@@ -1,5 +1,7 @@
 # Contributing
 
+Browser deliverables must contain zero JavaScript: no script files, script imports, inline handlers or JavaScript URLs in the kit, documentation specimens or events example. Node/Python are development tools only. Prefer native HTML and CSS; author static UI states where behavior would require an application engine. See [browser policy](docs/NO-BROWSER-JAVASCRIPT.md).
+
 Use `main` as the only lasting branch. Any temporary working branch must be merged and removed. Versioned history belongs in tags/release assets, not sibling implementation folders.
 
 Contributions serve the UI kit, its documentation/best practices or example pages built with it. See [project scope and completion criteria](README.md#project-scope). Service operations are not completion criteria or a follow-on backlog.

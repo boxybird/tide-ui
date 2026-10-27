@@ -1,4 +1,4 @@
-# Tide HTML and CSS kit · 1.5.0
+# Tide HTML and CSS kit · 1.5.2
 
 The canonical maintained package. Five named themes—Tide, Bumble, Slate, Grove and Iris—share semantic roles, typography, geometry and component HTML. Each theme supports light, dark and system appearance. The kit ships no browser JavaScript.
 
@@ -18,6 +18,6 @@ From the repository root run `npm run build`, `npm run check`, then `npm run dev
 
 The repository migration preserved the compiled 1.3.0 CSS exactly; kit 1.4.0 revises Bumble Light and adds three theme pairs. See [color design guidance](docs/COLOR-DESIGN.md). Existing composed specimens remain in the package so their registry references stay authoritative; site-only rendering and presentation CSS live in `site/`. Historical one-time import scripts and prior version ZIPs are recoverable from the design-history tag.
 
-Page recipes in [PAGE-PATTERNS.md](docs/PAGE-PATTERNS.md) add shared venue profile/card, site header and error-summary compositions, plus event-condition and native-control specimens. Local demonstrations belong to the reference site, not the CSS package.
+Page recipes in [PAGE-PATTERNS.md](docs/PAGE-PATTERNS.md) add shared venue profile/card, site header and error-summary compositions, plus event-condition and native-control specimens. Canonical specimens and the reference site are native HTML/CSS only. See [zero-browser-JavaScript policy](docs/BROWSER-POLICY.md).
 
 Read [theming](docs/THEMING.md), [components](docs/COMPONENTS.md), [extension rules](docs/EXTENDING.md), [Prose and Content page](docs/CONTENT.md) and [Filter panel/patterns](docs/SEARCH-FILTERS.md). In these original contracts, former paths such as generated `tide-dark/frames/` refer to `build/site/tide-dark/frames/`; generated colors/reports now live in `build/tide/tokens/` and `build/reports/`. Run build/check commands from the repository root. These location changes do not change the component API.

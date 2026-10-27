@@ -1,75 +1,35 @@
-# Page recipes · Tide 1.5.0
+# Page recipes · Tide 1.5.2
 
-These recipes cover venue, event, navigation and form compositions. Reuse the existing primitives, semantic roles and native HTML. Composition CSS home: `css/page-patterns.css`; additive control states stay with their existing owners in `css/components.css`. Page recipes are bundled in `tide.components.extensions`. The registry records each reusable block and behavior boundary. Every specimen is generated from the same HTML in every registered theme and both modes.
-
-The CSS package ships no browser JavaScript. `site/scripts/recipe-demos.js` in the repository provides local documentation demonstrations for form validation, a pressed button and file selection. It is outside the kit distribution and does not submit, upload or persist data. The events example retains its nine registered scripts.
+The kit and canonical specimens use only HTML/CSS and native browser behavior. There are no script imports, event handlers or required browser modules. Shared composition CSS lives in `css/page-patterns.css`; component states remain with their existing owners. All registered specimens are generated in every theme and both modes. See [browser policy](BROWSER-POLICY.md).
 
 ## Venues
 
-Specimens: `frames/venue.html`, `venue-empty.html` and `venues.html`.
+`tide-venue-profile` owns internal padding and section/header rhythm, composed with Page intro, Summary, Button, Notice and ordinary sections. The app owns viewport placement and responsive layout. `tide-venue-card` is an unframed directory item with a real heading link and separate secondary actions. Known venue facts and attribution remain authored; event age/admission conditions do not become blanket venue facts.
 
-`tide-venue-profile` supplies internal padding and section rhythm; `__header` supplies heading/intro rhythm. Compose it with Page intro, Summary, Button, Notice and ordinary sections. The Sunshine Theater example consumes these shared styles; its private stylesheet retains viewport placement, responsive transitions and measured fragment clearance. Do not transfer the example's split-pane geometry into the kit component.
-
-Use a page H1 for the venue name, then a labelled article or section for practical information. Supply known address/contact information as real text and links. Separate confirmed facts from unknown access information. Event age limits, admission and times belong to the event. A real venue's source attribution remains authored content; these fictional kit specimens establish no venue facts.
-
-`tide-venue-card` is an unframed directory item with a heading link, optional description, location and accurately worded schedule context. `__title` owns title typography. Keep other actions outside the heading link; a stretched whole-card link is unnecessary. Omit unavailable information rather than inventing it. A directory can reuse an ordinary list or labelled article sequence.
-
-| Schedule condition | Wording and recovery |
-| --- | --- |
-| Venue has events | Show its event list using Event card and the existing feed recipe. |
-| Venue has no upcoming entries | Say “No upcoming events listed”; retain the profile and offer other events. No reset action is needed. |
-| Venue events exist but filters match none | Say “No events match these filters”; retain the profile and offer a scoped reset. Keep the venue context. |
+A populated venue shows sample events. A venue with no entries retains its information and an explicit empty state. An authored filtered-empty state explains recovery without hiding useful venue information. The kit supplies presentation and semantics, not matching or sourcing.
 
 ## Form validation
 
-Specimen: `frames/form-validation.html`. `tide-error-summary` composes with `tide-notice`; `__title` and `__list` supply the summary heading and linked errors. The neutral Notice border stays uniform. No error stripe or extra palette is needed.
+Use associated labels, supported native input types, required constraints and visible hints. The form specimen uses ordinary native submission and reset. A successful submission reloads its static local page; no service receives or stores a listing.
 
-1. Start with labelled native controls, applicable constraints and persistent hints. Do not mark untouched fields invalid. Keep native validation enabled until an enhancement is ready.
-2. On an unsuccessful submit, preserve every value. Set `aria-invalid="true"` on failed controls; append their error IDs to `aria-describedby` alongside existing hint IDs. Do not replace useful hints.
-3. Reveal any containing disclosure before moving focus. Populate summary links in field order, reveal the summary and focus it with `tabindex="-1"`. The heading names the summary. Do not combine this focus move with `role="alert"` or a duplicate summary announcement.
-4. An error link focuses its actual field. Native fragment URLs remain useful; enhanced plain clicks may reveal and focus the target. Retain modified-link behavior.
-5. After validation, update affected errors as values are corrected without moving focus or repeatedly announcing the entire summary. Remove invalid semantics when a field is valid. Hide the summary when no errors remain.
-6. On successful validation, use one polite status message. Reset restores the specimen's initial values and clears error state, descriptions, summary and result text.
+`tide-error-summary` supplies a labelled section, title, list and native links to fields. The visible summary in the specimen is explicitly an authored appearance example, separate from browser validation. CSS does not compute error lists, mutate `aria-invalid`, announce changing validation results or enforce cross-field date relationships. Render a real summary as part of a consuming native/server response when appropriate.
 
-The demonstration opens Contact details by default so native validation can focus the email without JavaScript. If a consumer initially closes a disclosure, its enhancement must open it when a contained field becomes invalid. The demo checks native constraints only; operational validation is outside this project. Errors are associated through `aria-describedby`; they are not communicated through color alone.
+Keep contact disclosure open when required fields live inside it, so native validation can reach them. Use document-appropriate heading levels and unique IDs. Do not mark every static summary as an urgent alert.
 
 ## Event conditions
 
-Specimen: `frames/event-states.html`. These are compositions of Event details, Summary, Badge, Notice, Button and Missing photo; they do not introduce competing event components.
-
-| Condition | Facts and action |
-| --- | --- |
-| Cancelled | State cancellation prominently; retain the original date, venue and advertised price for recognition. Replace the attendance action with useful contact or alternative-event links. |
-| Sold out | Keep date, venue and price, and explicitly state availability. Show a waitlist only when a real destination exists; otherwise offer other events. |
-| Time changed | The current time is the main fact and the list time. Label the previous time as historical context; explain what changed. |
-| Multi-day | Give the date span and each day's hours. Explain overnight closure and whether admission covers one session or the span. Use valid `time` values and explicit local-time wording. |
-| No photo | Keep the title, facts and next action. Reuse Fallback; do not add an unrelated image, an empty image tag or a second H1. |
-
-The specimens use H2 for each event within a page that has one H1. On a standalone event page, use an H1 for that event; class-based typography remains the same. Status badges are text, not controls. A static notice is not automatically an alert. All five conditions remain legible without an image or status hue.
+Use existing hero/details, Notice, Badge and button/link recipes for populated, free, sold-out, cancelled and changed-time specimens. States are authored content. Unavailable actions are disabled or omitted; useful event and venue facts remain visible. Native links keep their real destinations and expected modified-click/history behavior.
 
 ## Navigation
 
-Specimen: `frames/navigation.html`; the venue specimens reuse the header. `tide-site-header` contains a Brand link and native `nav`/`ul`/`li`/`a` markup. `__links` supplies wrapping layout; `__link` supplies the target, underline and current-page appearance.
-
-Use one accurately named main navigation landmark. Mark only the link to the actual current page with `aria-current="page"`. A venue detail page does not mark the directory as the current page. Give footer navigation a distinct label such as “Related pages”. Pair the header with Skip link and a focusable main target.
-
-Links wrap on narrow screens and with larger text; do not hide destinations, clip labels or force a fixed header height. The header remains in document flow. Browser link behavior, Tab order and focus remain native. There are no menu roles or arrow-key requirements. This recipe does not introduce a menu, breadcrumbs or a site-wide router.
+`tide-site-header` composes Brand and ordinary navigation links. Use `aria-current` only for the actual current page. Links wrap at narrow widths and enlarged text. This recipe introduces no menu widget, arrow-key controller or router.
 
 ## Control states
 
-Specimen: `frames/control-states.html`.
+Readonly text remains focusable/selectable. Disabled native controls are unavailable and omitted from submission. Selection uses native radio/checkbox state; the save-state example is a checkbox and does not imply persistence. Static reviewed-error fields are labelled authored fixtures.
 
-| Control | Supported demonstration |
-| --- | --- |
-| Text field | Editable, native read-only, disabled, and invalid with both hint and error. Read-only values can be focused/copied; disabled controls are unavailable and omitted from submission. |
-| Select | Normal and disabled. Native select has no read-only state. |
-| Checkbox/radio | Checked/unchecked, disabled checked/unchecked, native keyboard selection. Do not apply simulated selected classes to native inputs. |
-| Button | Enabled/disabled and `aria-pressed` toggle. The toggle keeps a stable accessible name; its state and visible pressed treatment update together. |
-| Date/time | Native controls with local-date/time wording. Picker chrome follows the browser; no custom calendar is introduced. |
-| File input | Native chooser, actual local selection/replacement, removal, disabled, and explicit rejected type/size feedback. Preserve the chooser and associate the error with it. |
-
-The file demo accepts JPEG, PNG and WebP up to 10 MiB (labelled 10 MB). It reads the browser-provided type and size only; it does not validate file contents. A rejected selection remains available for replacement or removal and never appears accepted. Filenames enter the DOM through text content. Nothing is uploaded, and no fake preselected filename is placed in an input. Without scripts, the ordinary native chooser remains usable and its accept list remains a browser hint.
+The file specimen uses the native chooser, filename display and replacement behavior. `accept` is a chooser hint. It does not enforce custom file size/content checks, preview an image or upload anything. The consuming application must handle any operational validation outside this kit. Browser-native reset works for controls associated with a form.
 
 ## Verification
 
-Run `npm run build` and `npm run check` from the root. Check every registered theme in both modes, keyboard and focus, 320px/phone/desktop widths, enlarged text, long labels, invalid/corrected/reset forms and selected/replaced/rejected files. The documentation demo is syntax-checked as a registered site script. Actual observations and limits are in the [coverage verification record](../../../docs/ui-pages/VERIFICATION.md); source checks alone do not establish screen-reader behavior.
+Run the root build/check commands. Checks reject executable dependencies in canonical kit HTML and browser output, including script files/imports, inline handlers and JavaScript URLs. Native validation and checkbox/file state replace the former site-only demonstrations. Current browser observations cover Chromium on Windows; Firefox/Safari, physical devices and screen readers remain deferred.

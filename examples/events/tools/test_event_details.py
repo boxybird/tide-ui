@@ -26,7 +26,7 @@ class DetailContracts(unittest.TestCase):
     def test_one_document_recipe_generates_all_original_routes(self):
         pages=self.app.pages()
         self.assertEqual(set(pages), {slug+'.html' for slug in self.app.by_id} | {slug+'.html' for slug in self.app.routes})
-        self.assertEqual(len(pages), 60)
+        self.assertEqual(len(pages), 64)
         self.assertEqual({p.name for p in (ROOT/'src/pages').glob('*.html')}, {page['source'] for page in self.app.routes.values() if page.get('source')})
 
     def test_each_event_has_one_page_title_and_stable_anchor_hierarchy(self):
@@ -58,6 +58,16 @@ class DetailContracts(unittest.TestCase):
         self.assertTrue(any(attrs.get('href')=='sunshine-theater.html' for tag, attrs in concise.nodes))
         self.assertNotIn('tabindex', full.by_id['event-title'][1])
         self.assertEqual(concise.by_id['event-title'][1]['tabindex'], '-1')
+
+    def test_only_real_details_prioritize_photos_and_previews_are_lazy(self):
+        for slug in self.app.by_id:
+            with self.subTest(slug=slug):
+                self.assertTrue(self.app.by_id[slug]['detail']['image']['src'].endswith('.webp'))
+                for level, loading, priority in [(1, 'eager', 'high'), (2, 'lazy', 'auto')]:
+                    doc=DetailDocument(self.app.details.render(self.app.by_id[slug], level))
+                    photo=next(attrs for tag, attrs in doc.nodes if tag=='img')
+                    self.assertEqual((photo['loading'], photo['fetchpriority']), (loading, priority))
+                    self.assertEqual((photo['width'], photo['height']), ('1024', '1536'))
 
     def test_authored_timestamps_keep_daylight_saving_offsets_and_ranges(self):
         full=DetailDocument(self.app.details.render(self.app.by_id['the-imperfect-print'], 1))

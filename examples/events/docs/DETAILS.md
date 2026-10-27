@@ -1,10 +1,12 @@
 # Individual event content and templates
 
-All 54 event documents use `src/templates/document.html`, `workspace.html` and `event-detail.html`. Their native `<sample-id>.html` URLs are unchanged. `src/pages/` contains only three unique venue/help/submission content fragments; six non-event routes are registered in `data/pages.json`. The app builder renders all 60 routes before emitting the default app and six theme/mode examples; no browser renderer, new router or dependencies are involved.
+All 54 event documents use `src/templates/document.html`, `workspace.html` and `event-detail.html`. Their native `<sample-id>.html` URLs are unchanged. `src/pages/` contains only three unique venue/help/submission content fragments; ten non-event routes are registered in `data/pages.json`. The app builder renders all 64 routes before emitting the default app and ten theme/mode examples. The browser receives HTML and CSS with no JavaScript.
 
 ## Content ownership
 
 `data/events.json` is the canonical sample catalog. Existing card fields supply shared title, category, venue identity/label, date and price. Each record's `detail` object contains its document title, image metadata, subtitle, authored timestamps/range labels, admission note, cue, story label/title/lead and ordered sections. Times retain their original timezone offsets and display labels rather than being reconstructed from a browser or build-machine locale.
+
+App 1.1.8 references app-owned WebP photos. The renderer keeps real event photos eager/high priority and preview photos lazy/normal priority, preserving authored dimensions and alt text. See [asset ownership and performance verification](PERFORMANCE.md).
 
 Each section has a title, optional stable fragment ID and ordered blocks:
 

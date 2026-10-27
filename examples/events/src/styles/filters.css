@@ -1,56 +1,10 @@
-/* Events lead; the existing search and filter controls share a left flyout.
-   Every product rule is below the frozen desktop breakpoint. */
+/* Native disclosures remain in the document at narrow widths. No modal,
+   cloned controls, hidden enhancement state or viewport script is required. */
 @layer tide.app-filters {
   @media (width < 75rem) {
-    html:has(.tide-app--drawer) {
-      --tide-app-drawer-header-size: calc(var(--tide-app-header-inset-start) + var(--tide-space-6) + var(--tide-size-control) + var(--tide-border-width));
-      scroll-padding-block-start: calc(var(--tide-app-drawer-header-size) + var(--tide-space-4));
-    }
-    .tide-app--drawer .tide-app__header {
-      position: sticky;
-      inset-block-start: 0;
-      z-index: var(--tide-z-navigation);
-      block-size: var(--tide-app-drawer-header-size);
-      background: var(--tide-color-canvas);
-    }
-    /* Keep sticky calendar labels inside their pane's stacking context. */
-    .tide-app--drawer .tide-app__results { isolation: isolate; }
-    .tide-app--drawer .tide-app__intro.tide-sr-only { padding: 0; margin: -1px; }
-    .tide-filter-drawer__trigger { inline-size: var(--tide-size-control); margin: 0; }
-    .tide-filter-drawer__trigger-label { display: none; }
-    .tide-filter-drawer__trigger--applied { color: var(--tide-color-accent); }
-    .tide-filter-drawer__dialog {
-      inline-size: min(24rem, calc(100% - var(--tide-space-8)));
-      block-size: var(--tide-filter-drawer-viewport-height, 100dvh);
-      inset-block-start: var(--tide-filter-drawer-viewport-top, 0px);
-      margin-inline: 0 auto;
-      inset-inline: 0 auto;
-    }
-    .tide-filter-drawer__query { padding-inline: 0; }
-    .tide-filter-drawer__context { margin-block-start: var(--tide-space-4); }
-    .tide-app--drawer .tide-lineup__order { display: flex; flex-wrap: wrap; align-items: center; gap: var(--tide-space-2); }
-    .tide-filter-drawer__dialog[open] { animation: tide-filter-drawer-enter 240ms cubic-bezier(.22, 1, .36, 1); }
-    @keyframes tide-filter-drawer-enter { from { transform: translateX(-100%); } to { transform: translateX(0); } }
+    .tide-app__filter-rail { block-size: auto; overflow: visible; }
+    .tide-app__filter-body { overflow: visible; }
+    .tide-app__filter-footer { padding: var(--tide-space-4) var(--tide-layout-inset); }
   }
-  @media (width < 60rem) {
-    .tide-app--drawer .tide-lineup__month-header { inset-block-start: var(--tide-app-drawer-header-size); }
-  }
-  @media (48rem <= width < 75rem) {
-    .tide-filter-drawer__trigger { inline-size: auto; }
-    .tide-filter-drawer__trigger-label { display: inline; }
-  }
-  @media (60rem <= width < 75rem) {
-    .tide-app--drawer .tide-app__results {
-      inset-block-start: calc(var(--tide-app-drawer-header-size) + var(--tide-space-6));
-      max-block-size: max(0px, calc(100dvh - var(--tide-app-drawer-header-size) - 2 * var(--tide-space-6)));
-    }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .tide-filter-drawer__dialog[open] { animation: none; }
-  }
-  @media (width < 75rem) {
-    html:has(.tide-filter-drawer__dialog[open]) { overflow: hidden; scrollbar-gutter: stable; }
-    .tide-filter-drawer__dialog { max-inline-size: none; max-block-size: none; inset-block-end: auto; }
-    .tide-app__filter-fields { padding-block: 0; gap: var(--tide-space-8); }
-  }
+  @media (width < 60rem) { .tide-app--event .tide-app__browse { display: none; } }
 }

@@ -74,6 +74,7 @@ class EventDetails:
             }))
         values = {
             'PHOTO_SRC':image['src'], 'PHOTO_ALT':image['alt'], 'PHOTO_WIDTH':image['width'], 'PHOTO_HEIGHT':image['height'],
+            'PHOTO_LOADING':'eager' if level==1 else 'lazy', 'PHOTO_PRIORITY':'high' if level==1 else 'auto',
             'BACK_ICON':icon('back'),
             'SAVED_CONTROL':self.partial('detail-saved-control', {'SAVED_ICON':icon('saved')}) if presentation['savedControl'] else Html(''),
             'CATEGORY':event['categoryLabel'], 'AGE':self.partial('detail-age', {'AGE':content['age']}) if content.get('age') else Html(''),

@@ -1,5 +1,54 @@
 # Changelog
 
+## Tide kit 1.5.2 / Events example 2.0.2 · 2026-10-26
+
+- Changed the shared local Manrope face to `font-display: block`. Text waits for the font during the browser's bounded block period instead of immediately painting fallback text. Existing font preload/caching remain; no browser JavaScript or document-hiding gate is added. A font delayed beyond the browser's block period can still fall back and later swap.
+
+## Events example 2.0.1 · 2026-10-26
+
+- Preloaded the existing local 24.8 KB Manrope font before app stylesheets on every route and theme/mode. No CDN or browser script is involved; the preload and kit CSS share the same font URL.
+- Changed the local preview server to keep WOFF2 fonts fresh for one day with content-based ETag revalidation. Editable HTML/CSS still revalidate on refresh. The existing `font-display: swap` remains so text stays readable if a font fails or is slow.
+
+## Tide kit 1.5.1 / Events example 2.0.0 · 2026-10-26
+
+- Enforced zero browser JavaScript across the kit, canonical specimens, reference site and events example. Removed all nine app scripts, the site demo script, executable HTML dependencies and obsolete modal/preview script partials. Node/Python remain development tooling only.
+- Replaced browser-created heading spans with build-time HTML. The fixed results summary now sits outside the native scrolling feed; CSS handles sticky month headings, native gutter reservation and bounded panels without height observers or viewport scripts.
+- Replaced scripted drawer behavior with native disclosures and reset controls. Added four authored category/empty result pages; removed live text/date matching, fetched previews, custom history/storage and photo-message hooks. Native event URLs and the 54 sample records remain. These behavior changes require the app major version.
+- Removed demo-script references accidentally included in kit HTML specimens. Native validation, checkbox/radio state, file selection and authored error-summary presentation remain available. Checks reject browser script files and executable HTML/SVG hooks in deliverables.
+
+## Events example 1.2.2 · 2026-10-26
+
+- Removed desktop layout assembly from JavaScript. Shared HTML now authors the browse grid, filter panel, heading, original controls and footer in their permanent positions; CSS Grid/subgrid supplies the existing centered 20/35/45 layout immediately.
+- Reduced `rail.js` to sticky-summary measurement and retained preview-parameter compatibility. Native scrollbar clearance remains measured; only the responsive drawer relocates controls below 75rem.
+- Added placement and no-assembly regression contracts. Verified desktop headings and columns with all app scripts omitted, repeated refreshes and responsive filtering/cancellation; see the desktop-layout verification and its browser limits.
+
+## Events example 1.2.1 · 2026-10-26
+
+- Changed desktop column proportions to 20% filters, 35% event list and 45% detail, dividing available space after gaps inside the existing centered 92rem maximum. Matching browse and startup tracks retain alignment; tablet/mobile layouts are unchanged.
+
+## Events example 1.2.0 · 2026-10-26
+
+- Replaced the desktop margin-reveal layout with a centered three-column composition: permanent filters, bounded events list and naturally scrolling event/venue detail. The container caps at 92rem, with 16rem filters, a 390px list and a flexible right column.
+- Removed desktop collapse/reveal behavior and its animated geometry. The same three tracks and header inset exist before mounting; the original form/control set still moves into the responsive drawer below 75rem.
+- Preserved native routes, search/reset/validation, measured sticky/gutter clearance, Back restoration, photo/inspection hooks and saved-page composition. Historical rail keys remain available; stored collapsed preferences do not hide the permanent desktop column. See the example's desktop-layout contract and verification.
+
+## Events example 1.1.9 · 2026-10-26
+
+- Fixed the desktop startup grid reserving an empty first column and placing event details in an implicit third column before the filter rail mounted. Rail-bearing workspaces now start with the same centered two-pane geometry as the mounted layout, including wider breakpoints.
+- Preserved saved-page composition, responsive controls, filter motion, native scrolling and runtime timing. Chromium comparison measured zero horizontal pane drift between startup and mounted layouts at five desktop widths; see the example's performance verification.
+
+## Events example 1.1.8 · 2026-10-26
+
+- Disabled the cross-document title-transition experiment, removing its opt-in, title names and snapshot styling after unrelated titles visibly overlapped event details.
+- Switched event photos and the rough-upload preview to same-size WebP derivatives: four served images total 384 KB instead of 8.72 MB. Original PNG sources and the kit remain unchanged.
+- Kept real event photos eager/high priority; made list/saved preview images lazy/normal priority. Filtered first-result HTML previews now wait for the existing split breakpoint and load once if a narrow window is widened.
+- Recorded Back/filter-flash isolation and browser limits in the example's performance notes. Filter mounting, native navigation, reading restoration and existing panel animations are unchanged.
+
+## Events example 1.1.7 · 2026-10-26
+
+- Added a CSS-only native cross-document title transition experiment: stable event identities pair list titles with event detail headings and reverse on return. Preview headings and the detail route's duplicate list title are excluded.
+- Kept motion in app composition, gated by reduced-motion preference and CSS feature support. Native URLs, nine runtime scripts, filters, focus and reading restoration are preserved. See the example's title-transition contract for verification and limits; Tide remains 1.5.0.
+
 ## Tide kit 1.5.0 / Events example 1.1.6 · 2026-10-26
 
 - Added registered Venue profile/card, Site header and Form error summary compositions with shared CSS, native markup and behavior contracts. Adopted venue-profile rhythm in the existing example and removed duplicated app styles.

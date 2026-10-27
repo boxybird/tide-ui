@@ -5,20 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="A static, responsive Burque events design study using the Tide HTML and CSS kit.">
   <title>{{DOCUMENT_TITLE}}</title>
+<link rel="preload" href="{{KIT_ASSETS}}/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{KIT_CSS}}">
 <link rel="stylesheet" href="{{APP_CSS}}">
-<script src="js/search-core.js" defer></script>
-<script src="js/app-runtime.js" defer></script>
-{{VENUE_SCRIPT}}
-<script src="js/event-search.js" defer></script>
-<script src="js/event-navigation.js" defer></script>
-<script src="js/headings.js" defer></script>
-<script src="js/filters.js" defer></script>
-<script src="js/rail.js" defer></script>
-<script src="js/preview.js" defer></script>
+
 </head>
 <body{{BODY_ATTRIBUTES}}>
 {{SKIP_LINKS}}{{> header}}{{PAGE_CONTENT}}{{SITE_FOOTER}}
-{{FILTER_DIALOG}}
+
 </body>
 </html>

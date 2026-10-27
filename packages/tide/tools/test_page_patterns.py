@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PageRecipeContracts(unittest.TestCase):
-    def test_validation_remains_usable_before_the_enhancement_runs(self):
+    def test_validation_is_native_and_the_summary_is_an_authored_specimen(self):
         scan = ContractScan()
         scan.feed((ROOT/'templates/frames/form-validation.html').read_text(encoding='utf-8'))
         form = next(n for n in scan.nodes if n['tag']=='form')
@@ -23,7 +23,7 @@ class PageRecipeContracts(unittest.TestCase):
         summary = next(n for n in scan.nodes if 'tide-error-summary' in n['attrs'].get('class','').split())
         self.assertEqual(summary['tag'], 'section')
         self.assertIn('aria-labelledby', summary['attrs'])
-        self.assertIn('hidden', summary['attrs'])
+        self.assertFalse(any(n['tag']=='script' for n in scan.nodes))
         self.assertNotEqual(summary['attrs'].get('role'), 'alert')
         self.assertEqual(summary['attrs']['tabindex'], '-1')
 
@@ -34,6 +34,11 @@ class PageRecipeContracts(unittest.TestCase):
         self.assertIn('.tide-venue-profile', css)
         self.assertIn('.tide-error-summary', css)
         self.assertNotIn('recipe-demos.js', css)
+
+    def test_canonical_html_has_no_script_dependency(self):
+        for source in (ROOT/'templates').rglob('*.html'):
+            scan=ContractScan();scan.feed(source.read_text(encoding='utf-8'))
+            self.assertFalse(any(n['tag']=='script' for n in scan.nodes), str(source))
 
 
 if __name__=='__main__':

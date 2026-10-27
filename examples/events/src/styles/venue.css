@@ -1,6 +1,5 @@
 /* Private viewport composition; profile rhythm comes from the shared kit. */
 @layer tide.app-venue {
-  .tide-venue__context { display: flex; flex-wrap: wrap; gap: var(--tide-space-3); margin-block-start: var(--tide-space-3); }
   .tide-venue__profile { display: block; }
   .tide-venue__visit { scroll-margin-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6)); }
   .tide-app__review { max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-10) var(--tide-layout-inset); }

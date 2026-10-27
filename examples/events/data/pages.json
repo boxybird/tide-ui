@@ -3,20 +3,20 @@
     "collection": "all",
     "selected": "high-desert-signal",
     "currentNav": "find",
-    "documentTitle": "High Desert Signal · Burque",
+    "documentTitle": "High Desert Signal \u00b7 Burque",
     "layout": "workspace"
   },
   "search": {
     "collection": "all",
     "selected": "high-desert-signal",
     "currentNav": "find",
-    "documentTitle": "High Desert Signal · Burque",
+    "documentTitle": "High Desert Signal \u00b7 Burque",
     "layout": "workspace"
   },
   "sunshine-theater": {
     "collection": "venue",
     "currentNav": "find",
-    "documentTitle": "Sunshine Theater · Venue & upcoming sample events · Burque",
+    "documentTitle": "Sunshine Theater \u00b7 Venue & upcoming sample events \u00b7 Burque",
     "layout": "workspace",
     "source": "sunshine-theater.html"
   },
@@ -25,20 +25,59 @@
     "selected": "ink-after-dark",
     "currentNav": "saved",
     "secondaryNav": "submit",
-    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Saved events · Burque",
+    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal \u00b7 Saved events \u00b7 Burque",
     "layout": "workspace"
   },
   "help": {
     "secondaryNav": "submit",
-    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Help & guidance · Burque",
+    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal \u00b7 Help & guidance \u00b7 Burque",
     "layout": "content",
     "source": "help.html"
   },
   "submit": {
     "currentNav": "secondary",
     "secondaryNav": "submit",
-    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Add an event · Burque",
+    "documentTitle": "Workbench / Half Split / Contained / Margin Reveal \u00b7 Add an event \u00b7 Burque",
     "layout": "content",
     "source": "submit.html"
+  },
+  "search-music": {
+    "collection": "all",
+    "selected": "desert-frequencies",
+    "currentNav": "find",
+    "documentTitle": "Music sample results \u00b7 Burque",
+    "layout": "workspace",
+    "sampleFilter": {
+      "category": "music"
+    }
+  },
+  "search-comedy": {
+    "collection": "all",
+    "selected": "the-late-set",
+    "currentNav": "find",
+    "documentTitle": "Comedy sample results \u00b7 Burque",
+    "layout": "workspace",
+    "sampleFilter": {
+      "category": "comedy"
+    }
+  },
+  "search-workshop": {
+    "collection": "all",
+    "selected": "tiny-prints-big-ideas",
+    "currentNav": "find",
+    "documentTitle": "Workshop sample results \u00b7 Burque",
+    "layout": "workspace",
+    "sampleFilter": {
+      "category": "workshop"
+    }
+  },
+  "search-empty": {
+    "collection": "all",
+    "currentNav": "find",
+    "documentTitle": "No results specimen \u00b7 Burque",
+    "layout": "workspace",
+    "sampleFilter": {
+      "empty": true
+    }
   }
 }

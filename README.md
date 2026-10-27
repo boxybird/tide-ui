@@ -2,7 +2,7 @@
 
 A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
 
-Kit **1.5.0** · Events example **1.1.6** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Kit **1.5.2** · Events example **2.0.2** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
 ## Project scope
 
@@ -22,7 +22,7 @@ npm run check
 npm run dev
 ```
 
-Open the [UI kit](http://127.0.0.1:4187/site/index.html), [events example](http://127.0.0.1:4187/events/app/index.html?preview-filters=open) or [all-theme app review](http://127.0.0.1:4187/events/index.html). The reference site includes Foundations, Components, Screens, Coverage, Tokens, Themes and Extend. `PORT` changes the local server port.
+Open the [UI kit](http://127.0.0.1:4187/site/index.html), [events example](http://127.0.0.1:4187/events/app/index.html) or [all-theme app review](http://127.0.0.1:4187/events/index.html). The reference site includes Foundations, Components, Screens, Coverage, Tokens, Themes and Extend. `PORT` changes the local server port.
 
 ## Repository
 
@@ -30,13 +30,13 @@ Open the [UI kit](http://127.0.0.1:4187/site/index.html), [events example](http:
 | --- | --- |
 | `packages/tide/` | CSS modules, theme inputs, canonical HTML recipes, component registry, fonts/assets/licenses and component contracts |
 | `site/` | Reference-site builder and documentation presentation CSS |
-| `examples/events/` | Sample app HTML, app-only layout CSS, search/navigation behavior and authored fixtures |
+| `examples/events/` | Native HTML/CSS sample pages, authored result states and event fixtures; no browser scripts |
 | `tools/` | Portable build, contract checks, local preview, packaging and optional history verification |
 | `docs/` | Architecture, contribution/versioning rules, design decisions and migration evidence |
 | `build/` | Generated distribution, reference site, example and reports; ignored by Git |
 | `dist/` | Generated release ZIP and checksums; ignored by Git |
 
-Edit named sources and rebuild. Generated theme/mode copies are never edited or committed. The kit supplies CSS and HTML recipes; JavaScript integration belongs to the consuming app. Python and Node are build tools, not browser dependencies.
+Edit named sources and rebuild. Generated theme/mode copies are never edited or committed. The kit, reference specimens and events example contain zero browser JavaScript, enforced by checks. Python and Node are development tools, not browser dependencies. See [browser policy and audit](docs/NO-BROWSER-JAVASCRIPT.md).
 
 ## Use the CSS
 
@@ -59,4 +59,4 @@ The complete earlier project is preserved at Git tag **`design-history/2026-10-2
 
 ## Verification
 
-`npm run check` validates generated output, HTML associations, component ownership, local references, theme parity, contrast and search behavior. It does not require old study directories. App JavaScript cleanup is recorded in [runtime verification](docs/refactors/app-javascript/VERIFICATION.md). Venue and utility extraction is recorded in [page verification](docs/refactors/utility-pages/VERIFICATION.md). Individual event template extraction is recorded in [detail verification](docs/refactors/event-details/VERIFICATION.md). Shared app HTML extraction is recorded in [template verification](docs/refactors/app-html/VERIFICATION.md). App-only CSS cleanup is recorded in [refactor verification](docs/refactors/app-css/VERIFICATION.md). Browser observations and limits are recorded in [migration verification](docs/migration/VERIFICATION.md) and the kit's [compatibility contract](packages/tide/docs/COMPATIBILITY.md). Support targets current Chrome, Firefox and Safari; current visual evidence is Chromium on Windows. Native Firefox/Safari checks remain deferred, rather than reported as passing.
+`npm run check` validates generated output, HTML associations, component ownership, local references, theme parity, contrast, authored result states and the zero-browser-script boundary. It does not require old study directories. App JavaScript cleanup is recorded in [runtime verification](docs/refactors/app-javascript/VERIFICATION.md). Venue and utility extraction is recorded in [page verification](docs/refactors/utility-pages/VERIFICATION.md). Individual event template extraction is recorded in [detail verification](docs/refactors/event-details/VERIFICATION.md). Shared app HTML extraction is recorded in [template verification](docs/refactors/app-html/VERIFICATION.md). App-only CSS cleanup is recorded in [refactor verification](docs/refactors/app-css/VERIFICATION.md). Browser observations and limits are recorded in [migration verification](docs/migration/VERIFICATION.md) and the kit's [compatibility contract](packages/tide/docs/COMPATIBILITY.md). Support targets current Chrome, Firefox and Safari; current visual evidence is Chromium on Windows. Native Firefox/Safari checks remain deferred, rather than reported as passing.

@@ -104,7 +104,16 @@ class AppTemplates:
         saved = collection=='saved'
         venue = collection=='venue'
         events = [event for event in self.events if (not venue or event['venue']=='sunshine-theater') and (not saved or event['id']=='ink-after-dark')]
+        sample = page.get('sampleFilter', {})
+        if set(sample)-{'category','empty'} or sample.get('category') not in (None,'music','comedy','workshop'):
+            raise ValueError('Unsupported authored result state')
+        if sample.get('category'):
+            events = [event for event in events if event['category']==sample['category']]
+        if sample.get('empty'):
+            events = []
         selected = page.get('selected', '')
+        if selected and selected not in {event['id'] for event in events}:
+            selected = ''
         groups = defaultdict(list)
         for event in events:
             groups[event['date'][:7]].append(event)
@@ -113,7 +122,7 @@ class AppTemplates:
             day = date.fromisoformat(month+'-01')
             jumps = Html(''.join(self.partial('month-jump', {'MONTH_ID':key, 'MONTH_LABEL':MONTHS[int(key[5:])-1]+' '+key[:4], 'MONTH_SHORT':MONTHS[int(key[5:])-1][:3]}) for key in groups))
             group_html.append(self.partial('month-group', {
-                'MONTH_ID':month, 'MONTH_LABEL':MONTHS[day.month-1]+' '+str(day.year),
+                'MONTH_ID':month, 'MONTH_NAME':MONTHS[day.month-1], 'MONTH_YEAR':day.year, 'MONTH_LABEL':MONTHS[day.month-1]+' '+str(day.year),
                 'MONTH_COUNT':str(len(entries))+' '+('event' if len(entries)==1 else 'events'),
                 'MONTH_NAV':self.partial('month-nav', {'MONTH_JUMPS':jumps}) if len(groups)>1 else Html(''),
                 'EVENT_CARDS':Html(''.join(self.card(event, selected, saved) for event in entries)),
@@ -128,7 +137,13 @@ class AppTemplates:
             'VENUE_SCOPE':'sunshine-theater' if venue else '',
             'SUMMARY_KICKER':Html('') if saved else self.partial('summary-kicker', {'KICKER':'Sunshine Theater' if venue else 'The lineup'}),
             'SUMMARY_BADGE':Html('') if saved else self.partial('summary-badge', {}),
-            'SUMMARY_TOGGLE':Html('') if saved else self.partial('summary-toggle', {}),
+            'SUMMARY_TOGGLE':Html(''),
+            'EMPTY_HIDDEN':Html(' hidden' if events else ''),
+            'PREVIEW_HIDDEN':Html('' if not events else ' hidden'),
+            'MUSIC_CHECKED':Html(' checked' if sample.get('category')=='music' else ''),
+            'COMEDY_CHECKED':Html(' checked' if sample.get('category')=='comedy' else ''),
+            'WORKSHOP_CHECKED':Html(' checked' if sample.get('category')=='workshop' else ''),
+            'EVENT_DETAIL':Html(''),
             'ORDER_LABEL':'Sample schedule · Soonest first' if venue else 'Soonest first',
             'FEED_CLASS':'tide-event-list' if saved else 'tide-event-list tide-lineup__feed',
             'FEED_ID':Html('') if saved else attribute('id', 'venue-feed'),
@@ -151,21 +166,23 @@ class AppTemplates:
         if event:
             skips = [('event-detail', 'Skip to event', '')]
         elif collection:
-            detail_target = 'venue-information' if venue else 'event-detail'
+            detail_target = 'venue-information' if venue else 'preview-state' if page.get('sampleFilter',{}).get('empty') else 'event-detail'
             detail_label = 'Skip to venue details' if venue else 'Skip to event preview'
             skips = [('results', 'Skip to results', ''), (detail_target, detail_label, ' tide-app__skip--detail')]
         else:
             skips = [('main-content', 'Skip to content', '')]
         state_key = 'margin-aligned' if saved or not collection else 'app-release-1.1.0'
         body_class = 'tide-app--venue tide tide-app' if venue else 'tide tide-app tide-app--event' if event else 'tide tide-app'
+        if collection and not saved:
+            body_class += ' tide-app--columns'
         body_attributes = str(attribute('data-venue-scope', 'sunshine-theater')) if venue else ''
         body_attributes += attribute('data-state-key', state_key)+attribute('class', body_class)
         return {
             'BODY_ATTRIBUTES':Html(body_attributes),
-            'VENUE_SCRIPT':self.partial('venue-script', {}) if collection and not saved else Html(''),
+            'VENUE_SCRIPT':Html(''),
             'SKIP_LINKS':Html(''.join(self.partial('skip-link', {'SKIP_TARGET':target, 'SKIP_LABEL':label, 'SKIP_MODIFIER':Html(modifier)}) for target, label, modifier in skips)),
             'SITE_FOOTER':Html('') if route=='help' else self.partial('site-footer', {}),
-            'FILTER_DIALOG':self.partial('filter-dialog', {}) if collection and not saved else Html(''),
+            'FILTER_DIALOG':Html(''),
         }
 
     def page(self, source):
@@ -182,10 +199,12 @@ class AppTemplates:
             values['SUBMISSION_BACK_ICON'] = self.partial('detail-icon-back', {'ICON_EXTRA':Html(' fill="none" xmlns="http://www.w3.org/2000/svg"')})
         content = Html(expand((ROOT/'src/pages'/page['source']).read_text(encoding='utf-8'), values, self.templates)) if page.get('source') else values['EVENT_DETAIL']
         if page['layout']=='workspace':
+            results = self.partial('workspace-results', {
+                **values, 'RESULTS_INTRO':self.partial('results-intro', values) if saved else Html(''),
+            })
             content = self.partial('workspace', {
                 **values, 'WORKSPACE_DETAIL':content,
-                'WORKSPACE_RAIL':Html('') if saved else self.partial('filter-rail', values),
-                'WORKSPACE_FILTERS':Html('') if saved else self.partial('filters', values),
+                'WORKSPACE_BROWSE':results if saved else self.partial('workspace-browse', {**values, 'WORKSPACE_RESULTS':results}),
             })
         return self.partial('document', {**values, **self.document_context(route, page, event), 'PAGE_CONTENT':content})
 

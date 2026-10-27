@@ -8,11 +8,13 @@ from html_templates import AppTemplates, ROOT, expand
 
 class Elements(HTMLParser):
     def __init__(self, text):
-        super().__init__(); self.cards = []; self.current = []; self.inputs = []
+        super().__init__(); self.cards = []; self.current = []; self.inputs = []; self.stack = []; self.ancestors = {}
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if attrs.get('id'):
+            self.ancestors[attrs['id']] = [parent.get('id') for _, parent in self.stack]
         classes = attrs.get('class', '').split()
         if 'tide-event-card' in classes:
             self.cards.append(attrs)
@@ -20,6 +22,14 @@ class Elements(HTMLParser):
             self.current.append(attrs['aria-labelledby'].removeprefix('card-'))
         if tag=='input':
             self.inputs.append(attrs.get('id'))
+        if tag not in ('area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'):
+            self.stack.append((tag, attrs))
+
+    def handle_endtag(self, tag):
+        for index in range(len(self.stack)-1, -1, -1):
+            if self.stack[index][0] == tag:
+                del self.stack[index:]
+                break
 
 
 class TemplateContracts(unittest.TestCase):
@@ -36,6 +46,13 @@ class TemplateContracts(unittest.TestCase):
                 for control in ('event-query', 'event-from', 'event-to', 'venue-scope'):
                     self.assertEqual(parsed.inputs.count(control), 1)
 
+    def test_every_document_preloads_the_shared_local_font(self):
+        for name, page in self.app.pages().items():
+            with self.subTest(name=name):
+                preload='<link rel="preload" href="{{KIT_ASSETS}}/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>'
+                self.assertIn(preload, page)
+                self.assertLess(page.index(preload), page.index('<link rel="stylesheet"'))
+
     def test_venue_and_saved_collections_reuse_canonical_cards(self):
         venue = Elements(self.app.page(ROOT/'src/pages/sunshine-theater.html'))
         self.assertEqual(len(venue.cards), 6)
@@ -45,6 +62,25 @@ class TemplateContracts(unittest.TestCase):
         self.assertEqual(len(saved.cards), 1)
         self.assertEqual(saved.current, ['ink-after-dark'])
         self.assertNotIn('data-venue', saved.cards[0])  # Existing shortlist semantics.
+
+    def test_initial_html_places_heading_and_controls_in_the_filter_column(self):
+        for route in set(self.app.by_id) | {'index','search','sunshine-theater'}:
+            with self.subTest(route=route):
+                parsed=Elements(self.app.page(route))
+                for identifier in ('results-title','event-search-form','event-from','event-to'):
+                    self.assertIn('lineup-filters', parsed.ancestors[identifier])
+                    self.assertNotIn('results', parsed.ancestors[identifier])
+                self.assertIn('results', parsed.ancestors['result-count'])
+                self.assertNotIn('lineup-filters', parsed.ancestors['result-count'])
+                self.assertEqual(parsed.inputs.count('event-query'), 1)
+
+    def test_authored_result_pages_match_their_declared_category(self):
+        for category in ('music','comedy','workshop'):
+            parsed=Elements(self.app.page('search-'+category))
+            expected=[e for e in self.app.events if e['category']==category]
+            self.assertEqual(len(parsed.cards), len(expected))
+            self.assertEqual({card['data-category'] for card in parsed.cards}, {category})
+        self.assertEqual(Elements(self.app.page('search-empty')).cards, [])
 
     def test_sample_text_is_escaped_in_text_and_attribute_contexts(self):
         event = deepcopy(self.app.events[0])

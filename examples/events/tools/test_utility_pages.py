@@ -20,15 +20,12 @@ class UtilityContracts(unittest.TestCase):
     def setUpClass(cls):
         cls.app=AppTemplates()
 
-    def test_script_order_and_session_profiles_remain_route_specific(self):
-        common=['search-core', 'app-runtime', 'event-search', 'event-navigation', 'headings', 'filters', 'rail', 'preview']
+    def test_documents_are_script_free_and_keep_native_route_metadata(self):
         for route in ['index', 'search', 'sunshine-theater', 'saved', 'help', 'submit', 'ink-after-dark']:
             with self.subTest(route=route):
                 doc=Document(self.app.page(route))
                 scoped=route in ('index', 'search', 'sunshine-theater', 'ink-after-dark')
-                scripts=common[:2]+(['venue-context'] if scoped else [])+common[2:]
-                self.assertEqual([attrs['src'] for tag,attrs in doc.nodes if tag=='script'], ['js/'+name+'.js' for name in scripts])
-                self.assertTrue(all('defer' in attrs for tag,attrs in doc.nodes if tag=='script'))
+                self.assertFalse(any(tag=='script' for tag,attrs in doc.nodes))
                 body=next(attrs for tag,attrs in doc.nodes if tag=='body')
                 self.assertEqual(body['data-state-key'], 'app-release-1.1.0' if scoped else 'margin-aligned')
                 self.assertEqual(body.get('data-venue-scope'), 'sunshine-theater' if route=='sunshine-theater' else None)

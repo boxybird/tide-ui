@@ -63,7 +63,10 @@ def main():
             if not target.is_file():failures.append(name+': missing '+ref)
             elif url.fragment and target.suffix=='.html' and url.fragment not in scan(target).ids:failures.append(name+': missing fragment '+ref)
         if 'event-search-form' in s.ids:
-            expected=6 if path.name=='sunshine-theater.html' else 54
+            fixture_routes=json.loads((ROOT/'examples/events/data/pages.json').read_text(encoding='utf-8'))
+            fixture_events=json.loads((ROOT/'examples/events/data/events.json').read_text(encoding='utf-8'))
+            state=fixture_routes.get(path.stem,{}).get('sampleFilter',{})
+            expected=0 if state.get('empty') else sum(e['category']==state['category'] for e in fixture_events) if state.get('category') else 6 if path.name=='sunshine-theater.html' else 54
             if s.classes.count('tide-event-card')!=expected:failures.append(name+': sample count drift')
             if s.ids.count('event-query')!=1 or 'tide-lineup__feed' not in s.classes:failures.append(name+': control/stacking owner missing')
     for name in ('base','layout','components','patterns','content','filter-panel','page-patterns','utilities'):
@@ -131,15 +134,16 @@ def main():
     runs.append({'name':'palette-and-contract-tests','pass':tests.returncode==0,'output':(tests.stdout+tests.stderr).strip()})
     templates=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=ROOT/'examples/events',capture_output=True,text=True)
     runs.append({'name':'app-template-contracts','pass':templates.returncode==0,'output':(templates.stdout+templates.stderr).strip()})
-    node=shutil.which('node')
-    assert node,'Node.js is required for the sample search assertions'
-    search=subprocess.run([node,str(ROOT/'examples/events/tools/test-search.cjs')],cwd=ROOT,capture_output=True,text=True)
-    runs.append({'name':'sample-search-tests','pass':search.returncode==0,'output':(search.stdout+search.stderr).strip()})
-    runtime=subprocess.run([node,str(ROOT/'examples/events/tools/test-runtime.cjs')],cwd=ROOT,capture_output=True,text=True)
-    runs.append({'name':'app-runtime-contracts','pass':runtime.returncode==0,'output':(runtime.stdout+runtime.stderr).strip()})
-    for script in json.loads((ROOT/'site/component-manifest.json').read_text(encoding='utf-8'))['behaviorHome']:
-        syntax=subprocess.run([node,'--check',str(ROOT/'site'/script)],cwd=ROOT,capture_output=True,text=True)
-        runs.append({'name':'site-script-syntax:'+script,'pass':syntax.returncode==0,'output':(syntax.stdout+syntax.stderr).strip()})
+    # Browsers consume native HTML/CSS only. Node remains development tooling.
+    for folder in (KIT/'templates', KIT/'css', KIT/'assets', ROOT/'site', ROOT/'examples/events/src', ROOT/'build/tide', ROOT/'build/site', ROOT/'build/events'):
+        for p in folder.rglob('*'):
+            if not p.is_file():continue
+            if p.suffix.lower() in ('.js','.mjs','.cjs'):
+                failures.append(str(p.relative_to(ROOT))+': browser JavaScript is forbidden')
+            if p.suffix.lower() in ('.html','.svg'):
+                text=p.read_text(encoding='utf-8')
+                if re.search(r'<script\b|\son[a-z]+\s*=|(?:href|src)\s*=\s*[\"\']\s*javascript:',text,re.I):
+                    failures.append(str(p.relative_to(ROOT))+': executable browser dependency is forbidden')
     failures.extend(run['name']+' failed: '+run['output'] for run in runs if not run['pass'])
     report={'pass':not failures,'kitVersion':manifest['version'],'htmlFiles':len(pages),'localReferences':refs,'markdownReferences':markdown_refs,'themes':len(json.loads((KIT/'tokens/themes.json').read_text(encoding='utf-8'))['themes']),'modesPerTheme':2,'runs':runs,'failures':failures}
     out=ROOT/'build/reports';out.mkdir(parents=True,exist_ok=True)

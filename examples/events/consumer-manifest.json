@@ -1,13 +1,12 @@
 {
-  "version": "1.1.6",
-  "kitVersion": "1.5.0",
+  "version": "2.0.2",
+  "kitVersion": "1.5.2",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
   "privateBlocks": [
     "tide-app",
     "tide-app-document",
     "tide-lineup",
-    "tide-filter-drawer",
     "tide-venue"
   ],
   "styleHome": [
@@ -17,19 +16,9 @@
     "src/styles/filters.css",
     "src/styles/venue.css"
   ],
-  "behaviorHome": [
-    "src/runtime/js/search-core.js",
-    "src/runtime/js/app-runtime.js",
-    "src/runtime/js/venue-context.js",
-    "src/runtime/js/event-search.js",
-    "src/runtime/js/event-navigation.js",
-    "src/runtime/js/headings.js",
-    "src/runtime/js/filters.js",
-    "src/runtime/js/rail.js",
-    "src/runtime/js/preview.js"
-  ],
+  "behaviorHome": [],
   "contract": "docs/COMPONENT-OWNERSHIP.md",
-  "notes": "Consumes shared venue-profile rhythm. Viewport geometry, native URLs, unique venue facts and all nine runtime scripts remain app-owned and unchanged.",
+  "notes": "Browser-JavaScript-free native HTML/CSS specimens. Authored result states replace live search; native navigation, disclosures, reset and validation remain. Development tools are separate.",
   "acceptedInputs": [
     "Sticky hierarchy and venue journey, integrated in App 1.1.0"
   ],
@@ -65,7 +54,8 @@
     "src/templates/event-card.html",
     "src/templates/event-detail.html",
     "src/templates/event-list.html",
-    "src/templates/filter-dialog.html",
+    "src/templates/filter-actions.html",
+    "src/templates/filter-status.html",
     "src/templates/filter-rail.html",
     "src/templates/filters.html",
     "src/templates/form-field.html",
@@ -87,9 +77,9 @@
     "src/templates/skip-link.html",
     "src/templates/summary-badge.html",
     "src/templates/summary-kicker.html",
-    "src/templates/summary-toggle.html",
-    "src/templates/venue-script.html",
-    "src/templates/workspace.html"
+    "src/templates/workspace.html",
+    "src/templates/workspace-browse.html",
+    "src/templates/workspace-results.html"
   ],
   "dataHome": {
     "events": "data/events.json",

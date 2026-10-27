@@ -15,7 +15,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Desert Frequencies · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -140,7 +140,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · The Late Set · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -265,7 +265,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Tiny Prints, Big Ideas · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -390,7 +390,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Ink After Dark · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -516,7 +516,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Saturday on the Small Stage · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -641,7 +641,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Sunday Paper Club · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -766,7 +766,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Low Volume Sunday · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -891,7 +891,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · First Drafts & False Starts · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -1016,7 +1016,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Postcards from the Neighborhood · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -1141,7 +1141,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Two Guitars, One Room · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -1266,7 +1266,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Midweek Mic · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -1391,7 +1391,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Black Ink, Bright Paper · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -1516,7 +1516,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Songs for the Last Light · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -1641,7 +1641,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · The Friday Reset · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -1766,7 +1766,7 @@
       "presentation": "concise",
       "documentTitle": "High Desert Signal · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A small live music performance, photographed from the audience."
@@ -1854,7 +1854,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Carve a Creature · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -1979,7 +1979,7 @@
       "presentation": "concise",
       "documentTitle": "The Midnight Electric · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A small live music performance, photographed from the audience."
@@ -2067,7 +2067,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Costumes & Feedback · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -2192,7 +2192,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · First Sunday Print Exchange · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -2317,7 +2317,7 @@
       "presentation": "concise",
       "documentTitle": "Sunday in Stereo · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A small live music performance, photographed from the audience."
@@ -2405,7 +2405,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · November, Quietly · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -2530,7 +2530,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Nothing Personal · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -2655,7 +2655,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · A Table Full of Zines · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -2780,7 +2780,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · After the Record Store Closes · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -2905,7 +2905,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Setups & Second Chances · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -3030,7 +3030,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Friday Night Ink Club · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -3155,7 +3155,7 @@
       "presentation": "concise",
       "documentTitle": "Voices on Central · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A small live music performance, photographed from the audience."
@@ -3243,7 +3243,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Analog Hours · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -3368,7 +3368,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Print Something for Someone · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -3493,7 +3493,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Small Room, Big Opinions · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -3618,7 +3618,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Sunday in Slow Motion · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -3743,7 +3743,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Beginner’s Block · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -3868,7 +3868,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Ten Minutes Each · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -3993,7 +3993,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Desert Radio Live · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -4118,7 +4118,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -4251,7 +4251,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · The Very Late Set · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -4376,7 +4376,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Three Bands & a Borrowed Amp · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -4501,7 +4501,7 @@
       "presentation": "concise",
       "documentTitle": "After the Last Train · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A small live music performance, photographed from the audience."
@@ -4589,7 +4589,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Paper, Coffee & Company · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -4714,7 +4714,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Notes from the Group Chat · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -4839,7 +4839,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Two Colors, One Block · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -4964,7 +4964,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Near the Speakers · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -5089,7 +5089,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Warm-Up Night · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -5214,7 +5214,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · After Work, Make Something · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -5339,7 +5339,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · The Neighborhood Listening Room · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -5464,7 +5464,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Handmade Holiday Cards · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -5589,7 +5589,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · A Few Good Stories · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -5714,7 +5714,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Print Swap & Studio Social · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -5839,7 +5839,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Home for the Long Weekend · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -5964,7 +5964,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · An Open Door Session · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."
@@ -6089,7 +6089,7 @@
       "presentation": "concise",
       "documentTitle": "The Long Weekend · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A small live music performance, photographed from the audience."
@@ -6177,7 +6177,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Leftovers & One-Liners · Burque",
       "image": {
-        "src": "assets/images/comedy.png",
+        "src": "assets/images/comedy.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A stand-up comedian holding a microphone in a small, warmly lit room, with the audience seated in front."
@@ -6302,7 +6302,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · Make Your Own Gift Wrap · Burque",
       "image": {
-        "src": "{{KIT_ASSETS}}/images/ink-after-dark.png",
+        "src": "assets/images/ink-after-dark.webp",
         "width": "1024",
         "height": "1536",
         "alt": "Hands rolling ink at a shared printmaking table, surrounded by prints, tools, and a coffee mug."
@@ -6427,7 +6427,7 @@
       "presentation": "full",
       "documentTitle": "Workbench / Half Split / Contained / Margin Reveal · One More Sunday · Burque",
       "image": {
-        "src": "assets/images/concert.png",
+        "src": "assets/images/concert.webp",
         "width": "1024",
         "height": "1536",
         "alt": "A guitarist under red club lights, with a small audience gathered close to the stage."

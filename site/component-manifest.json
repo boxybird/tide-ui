@@ -29,7 +29,5 @@
     "tide-theme-picker"
   ],
   "notes": "Documentation presentation only. These classes are outside the public kit API.",
-  "behaviorHome": [
-    "scripts/recipe-demos.js"
-  ]
+  "behaviorHome": []
 }

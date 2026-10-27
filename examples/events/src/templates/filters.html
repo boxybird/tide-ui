@@ -1,24 +1,14 @@
-<form class="tide-app__search tide-stack" id="event-search-form" action="{{SEARCH_ACTION}}" method="get" aria-label="Find events">
-          <input type="hidden" name="venue" id="venue-scope" value="{{VENUE_SCOPE}}"><label class="tide-app__search-label" for="event-query">Search events</label>
-          <div class="tide-field"><input class="tide-field__control" id="event-query" name="q" type="search" placeholder="Music, workshops, a place…" maxlength="160"></div>
-        </form>
-        <div class="tide-app__filter-row"><p id="date-summary">Oct 23–Nov 29, 2026</p><span class="tide-badge" id="filter-badge">Upcoming</span><a class="tide-link tide-app__clear" href="index.html" hidden>Clear all</a></div><button class="tide-button tide-button--quiet tide-button--icon tide-filter-drawer__trigger" type="button" aria-label="Search and filters" title="Search and filters" aria-haspopup="dialog" aria-controls="responsive-filters" aria-expanded="false" hidden><svg class="tide-icon" viewBox="0 0 15 15" fill="none" aria-hidden="true" focusable="false"><circle cx="6.5" cy="6.5" r="4" stroke="currentColor" stroke-width="1.25"/><path d="m9.5 9.5 3.5 3.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></svg><span class="tide-filter-drawer__trigger-label">Search &amp; filters</span></button><details class="tide-expandable tide-app__filters"><summary class="tide-expandable__summary tide-app__filter-disclosure">Filters <svg class="tide-icon tide-expandable__icon" viewBox="0 0 15 15" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></summary>
-      <div class="tide-expandable__body tide-app__filter-form">
-        <fieldset class="tide-fieldset"><legend class="tide-fieldset__legend">When</legend>
-          <p class="tide-field__hint" id="date-hint">Include either date, or both. Dates are local to Albuquerque.</p>
-          <div class="tide-app__date-fields">
-            <div class="tide-field"><label class="tide-field__label" for="event-from">From</label><input class="tide-field__control" id="event-from" type="date" name="from" form="event-search-form" aria-describedby="date-hint"></div>
-            <div class="tide-field"><label class="tide-field__label" for="event-to">Through</label><input class="tide-field__control" id="event-to" type="date" name="to" form="event-search-form" aria-describedby="date-hint date-error"></div>
-          </div>
-          <p class="tide-field__error" id="date-error" hidden>Choose an end date on or after the start date.</p>
-        </fieldset>
-        <fieldset class="tide-fieldset"><legend class="tide-fieldset__legend">Category</legend>
-          <label class="tide-choice"><input type="checkbox" name="category" value="music" form="event-search-form"> Music</label>
-          <label class="tide-choice"><input type="checkbox" name="category" value="comedy" form="event-search-form"> Comedy</label>
-          <label class="tide-choice"><input type="checkbox" name="category" value="workshop" form="event-search-form"> Workshops</label>
-          <p class="tide-field__hint">No category selected includes all categories.</p>
-        </fieldset>
-        <div class="tide-app__filter-actions"><button class="tide-button tide-button--secondary" type="submit" form="event-search-form">Apply filters</button><a class="tide-link" href="index.html">Clear all</a></div>
-      </div>
-    </details>
-        <noscript><p class="tide-app__search-note tide-caption">Search and filters need JavaScript in this local preview. All {{EVENT_COUNT}} events are available below.</p></noscript>
+<form class="tide-app__search tide-stack" id="event-search-form" action="{{SEARCH_ACTION}}" method="get" aria-label="Native search controls example">
+  <input type="hidden" name="venue" id="venue-scope" value="{{VENUE_SCOPE}}"><label class="tide-app__search-label" for="event-query">Search events · example</label>
+  <div class="tide-field"><input class="tide-field__control" id="event-query" name="q" type="search" placeholder="Native search control" maxlength="160"></div>
+</form>
+<div class="tide-app__search-note tide-stack"><p class="tide-caption">Control examples. Browse sample result pages:</p><nav class="tide-row" aria-label="Authored result states"><a class="tide-link" href="search.html">All</a><a class="tide-link" href="search-music.html">Music</a><a class="tide-link" href="search-comedy.html">Comedy</a><a class="tide-link" href="search-workshop.html">Workshops</a><a class="tide-link" href="search-empty.html">No results</a></nav></div>
+<div class="tide-app__filter-row"><p id="date-summary">Authored sample schedule</p><span class="tide-badge" id="filter-badge">{{EVENT_COUNT}} samples</span><a class="tide-link tide-app__clear" href="index.html">All events</a></div>
+<details class="tide-expandable tide-app__filters" open><summary class="tide-expandable__summary tide-app__filter-disclosure">Date and category controls</summary>
+  <div class="tide-expandable__body tide-app__filter-form">
+    <fieldset class="tide-fieldset"><legend class="tide-fieldset__legend">When</legend><p class="tide-field__hint" id="date-hint">Example dates. Use the sample pages to review results.</p>
+      <div class="tide-app__date-fields"><div class="tide-field"><label class="tide-field__label" for="event-from">From</label><input class="tide-field__control" id="event-from" type="date" name="from" form="event-search-form" aria-describedby="date-hint"></div><div class="tide-field"><label class="tide-field__label" for="event-to">Through</label><input class="tide-field__control" id="event-to" type="date" name="to" form="event-search-form" aria-describedby="date-hint"></div></div>
+    </fieldset>
+    <fieldset class="tide-fieldset"><legend class="tide-fieldset__legend">Category · example</legend><label class="tide-choice"><input type="checkbox" name="category" value="music" form="event-search-form"{{MUSIC_CHECKED}}> Music</label><label class="tide-choice"><input type="checkbox" name="category" value="comedy" form="event-search-form"{{COMEDY_CHECKED}}> Comedy</label><label class="tide-choice"><input type="checkbox" name="category" value="workshop" form="event-search-form"{{WORKSHOP_CHECKED}}> Workshops</label></fieldset>
+  </div>
+</details>

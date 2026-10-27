@@ -39,14 +39,10 @@
     font-size: var(--tide-font-size-caption);
   }
   .tide-lineup__year { color: var(--tide-color-text-muted); font-weight: var(--tide-font-weight-regular); }
-  .tide-lineup__query {
-    display: block;
-    margin-block-start: var(--tide-space-2);
-    color: var(--tide-color-text-secondary);
-    font-size: var(--tide-font-size-caption);
-    line-height: var(--tide-leading-caption);
-    font-weight: var(--tide-font-weight-regular);
-    letter-spacing: normal;
+  @media (width >= 60rem) {
+    .tide-app__results { display: grid; grid-template-rows: auto minmax(0, 1fr); overflow: clip; }
+    .tide-app__feed-scroll { min-block-size: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-gutter: stable; scroll-padding-block-start: var(--tide-space-16); }
+    .tide-app__filter-body { scrollbar-gutter: stable; }
   }
   /* Isolate the complete feed beneath its sibling permanent summary. */
   .tide-lineup__feed { isolation: isolate; }

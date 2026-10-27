@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Manrope'; font-style: normal; font-weight: 200 800;
-  font-display: swap;
+  /* Prefer a brief wait for local Manrope over an immediate fallback flash. */
+  font-display: block;
   src: url('../assets/fonts/manrope-latin-wght-normal.woff2') format('woff2');
 }
 :root { background: var(--tide-color-canvas); }

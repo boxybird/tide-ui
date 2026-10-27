@@ -1,1 +1,4 @@
-<aside class="tide-app__filter-rail" id="lineup-filters" aria-label="Search and filters" tabindex="0" hidden><button class="tide-button tide-button--quiet tide-button--icon tide-app__filter-close" type="button" aria-label="Close filters" title="Close filters" hidden><svg class="tide-icon" viewBox="0 0 15 15" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="m4 4 7 7M11 4l-7 7" stroke="currentColor" stroke-linecap="round" stroke-width="1.25"/></svg></button></aside>
+<aside class="tide-app__filter-rail tide-filter-panel tide-filter-panel--rail" id="lineup-filters" aria-label="Search and filters" tabindex="0">
+  <div class="tide-filter-panel__body tide-app__filter-body" tabindex="0" role="region" aria-label="Filter options">{{> results-intro}}{{> filters}}</div>
+  <div class="tide-filter-panel__footer tide-app__filter-footer">{{> filter-status}}{{> filter-actions}}</div>
+</aside>
