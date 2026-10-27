@@ -1,5 +1,7 @@
 # Lineup application kit · 2.1.1
 
+The [fresh responsive audit](docs/FRESH-AUDIT.md) confirms the six original repairs across phone, tablet and desktop. Two application follow-ups remain: split-tablet bottom clearance and private Filter panel footer overrides. This audit updates documentation only; Lineup remains 2.1.1 and Tide remains unchanged.
+
 Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.10.0**. Burque Events is its authored sample website. The application version is **2.1.0**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus the four global result specimens and three scoped venue empty views: 67 documents in the default app and each of ten theme/mode combinations.
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).

@@ -1,0 +1,799 @@
+{
+  "date": "2026-10-27",
+  "applicationVersion": "2.1.1",
+  "kitVersion": "1.10.0",
+  "baselineCommit": "0250809a2c0683fde91f7768e29067e210678365",
+  "startingGitState": "clean, main only",
+  "scope": "Lineup documentation and retained audit evidence only; no runtime/package version change.",
+  "unchanged": {
+    "kitSourceFiles": 109,
+    "kitDistributionFiles": 18,
+    "referenceSiteSourceFiles": 4,
+    "referenceSiteBuiltFiles": 323,
+    "sharedToolFiles": 13,
+    "applicationNonDocFiles": 96
+  },
+  "originalFixesConfirmed": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06"
+  ],
+  "openFindings": [
+    {
+      "id": "R02",
+      "priority": 2,
+      "title": "Private aliases override Filter panel status layout and narrow rail footer padding",
+      "statusCases": 150,
+      "paddingCases": 100,
+      "typeDifferences": 0,
+      "canonicalStatusLayout": "flex",
+      "applicationStatusLayout": "grid",
+      "canonicalRailPadding": "16px 24px 0px 0px",
+      "narrowApplicationPadding": "20px 24px 24px 24px",
+      "sources": [
+        "src/styles/filters.css",
+        "src/templates/filter-status.html",
+        "src/templates/filter-rail.html"
+      ]
+    },
+    {
+      "id": "R01",
+      "priority": 3,
+      "title": "Split-tablet pane clearance below 24px",
+      "expected": 24,
+      "observed": [
+        {
+          "route": "index",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-music",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-comedy",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-empty",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "sunshine-theater",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.33331298828125
+        },
+        {
+          "route": "sunshine-theater-comedy",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.33331298828125
+        },
+        {
+          "route": "desert-frequencies",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "the-imperfect-print",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "high-desert-signal",
+          "width": 960,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "index",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-music",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-comedy",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-empty",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "sunshine-theater",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.33331298828125
+        },
+        {
+          "route": "sunshine-theater-comedy",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.33331298828125
+        },
+        {
+          "route": "desert-frequencies",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "the-imperfect-print",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "high-desert-signal",
+          "width": 1024,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "index",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-music",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-comedy",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "search-empty",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "sunshine-theater",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.33331298828125
+        },
+        {
+          "route": "sunshine-theater-comedy",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.33331298828125
+        },
+        {
+          "route": "desert-frequencies",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "the-imperfect-print",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.333328247070312
+        },
+        {
+          "route": "high-desert-signal",
+          "width": 1199,
+          "height": 900,
+          "clearance": 20.333328247070312
+        }
+      ],
+      "sources": [
+        "src/styles/base.css",
+        "src/templates/filter-trigger.html"
+      ]
+    }
+  ],
+  "browser": "In-app Chromium on Windows, CSS viewport emulation",
+  "geometryCases": 279,
+  "geometryGroups": {
+    "all routes": 201,
+    "breakpoints": 72,
+    "short desktop": 6
+  },
+  "geometryErrors": [],
+  "componentCases": 240,
+  "rolesSampled": 45,
+  "sharedSlotComparisons": 5970,
+  "typeDifferences": 0,
+  "componentCoverage": [
+    {
+      "mode": "bumble-dark",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "bumble-light",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "grove-dark",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "grove-light",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "iris-dark",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "iris-light",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "slate-dark",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "slate-light",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "tide-dark",
+      "cases": 24,
+      "slots": 597
+    },
+    {
+      "mode": "tide-light",
+      "cases": 24,
+      "slots": 597
+    }
+  ],
+  "footerTextFlowBumbleDark": {
+    "application": {
+      "countAlign": "end",
+      "resetWhiteSpace": "nowrap"
+    },
+    "canonical": {
+      "countAlign": "start",
+      "resetWhiteSpace": "normal"
+    }
+  },
+  "excludedBoxDifferences": "Browser-resolved automatic minimums (auto versus 0px); surrounding layout differs. Explicit supported button/profile variants are matched separately.",
+  "keyboardJourneys": [
+    {
+      "route": "index",
+      "width": 390,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 278.66668701171875,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "saved",
+      "width": 390,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 136.6666717529297,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 390,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 319.3333435058594,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 318,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "search-empty",
+      "width": 390,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 282,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "help",
+      "width": 390,
+      "kind": "primary",
+      "target": "main-content",
+      "targetTop": 133.33334350585938,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "submit",
+      "width": 390,
+      "kind": "primary",
+      "target": "main-content",
+      "targetTop": 130,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "desert-frequencies",
+      "width": 390,
+      "kind": "primary",
+      "target": "event-detail",
+      "targetTop": 0,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "index",
+      "width": 1024,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 247.33334350585935,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "index",
+      "width": 1024,
+      "kind": "preview",
+      "target": "event-detail",
+      "targetTop": 119.33333587646484,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "saved",
+      "width": 1024,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 110.33333587646484,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "saved",
+      "width": 1024,
+      "kind": "preview",
+      "target": "event-detail",
+      "targetTop": 115.66667175292967,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 1024,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 274,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 1024,
+      "kind": "preview",
+      "target": "venue-information",
+      "targetTop": 110,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 274,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "kind": "preview",
+      "target": "venue-information",
+      "targetTop": 116.66667175292967,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "search-empty",
+      "width": 1024,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 246.6666717529297,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "search-empty",
+      "width": 1024,
+      "kind": "preview",
+      "target": "preview-state",
+      "targetTop": 107.33333587646484,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "help",
+      "width": 1024,
+      "kind": "primary",
+      "target": "main-content",
+      "targetTop": 91.66667175292967,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "submit",
+      "width": 1024,
+      "kind": "primary",
+      "target": "main-content",
+      "targetTop": 115.66667175292967,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "desert-frequencies",
+      "width": 1024,
+      "kind": "primary",
+      "target": "event-detail",
+      "targetTop": 114,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "index",
+      "width": 1440,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 117,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "index",
+      "width": 1440,
+      "kind": "preview",
+      "target": "event-detail",
+      "targetTop": 113.66667175292967,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "saved",
+      "width": 1440,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 117,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "saved",
+      "width": 1440,
+      "kind": "preview",
+      "target": "event-detail",
+      "targetTop": 115.66667175292967,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 1440,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 117,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 1440,
+      "kind": "preview",
+      "target": "venue-information",
+      "targetTop": 101,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 117,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "kind": "preview",
+      "target": "venue-information",
+      "targetTop": 101,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "search-empty",
+      "width": 1440,
+      "kind": "primary",
+      "target": "results",
+      "targetTop": 117,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "search-empty",
+      "width": 1440,
+      "kind": "preview",
+      "target": "preview-state",
+      "targetTop": 111,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "help",
+      "width": 1440,
+      "kind": "primary",
+      "target": "main-content",
+      "targetTop": 93,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "submit",
+      "width": 1440,
+      "kind": "primary",
+      "target": "main-content",
+      "targetTop": 115.66667175292967,
+      "focusVisible": true,
+      "pass": true
+    },
+    {
+      "route": "desert-frequencies",
+      "width": 1440,
+      "kind": "primary",
+      "target": "event-detail",
+      "targetTop": 110.33333587646484,
+      "focusVisible": true,
+      "pass": true
+    }
+  ],
+  "venueJourney": {
+    "about": {
+      "focus": "venue-information",
+      "hash": "#venue-information",
+      "infoTop": 32,
+      "path": "/events/app/sunshine-theater.html"
+    },
+    "empty": {
+      "cards": 0,
+      "closed": true,
+      "info": true,
+      "path": "/events/app/sunshine-theater-comedy.html",
+      "recovery": "sunshine-theater.html#results",
+      "scope": "sunshine-theater"
+    },
+    "recovery": {
+      "cards": 6,
+      "hash": "#results",
+      "path": "/events/app/sunshine-theater.html",
+      "scope": "sunshine-theater"
+    },
+    "reset": {
+      "cards": 6,
+      "closed": true,
+      "path": "/events/app/sunshine-theater.html",
+      "scope": "sunshine-theater"
+    },
+    "exit": {
+      "cards": 54,
+      "path": "/events/app/index.html",
+      "scope": null
+    }
+  },
+  "formJourney": {
+    "before": {
+      "emailTypeMismatch": true,
+      "labels": true,
+      "name": "Sample evening"
+    },
+    "after": {
+      "email": "",
+      "name": ""
+    }
+  },
+  "drawerResize": {
+    "openDesktop": {
+      "controls": 1,
+      "delta": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "open": true,
+      "query": "retained example"
+    },
+    "closedDesktop": {
+      "open": false,
+      "shown": true
+    },
+    "closedPhone": {
+      "open": false,
+      "shown": false,
+      "width": 390
+    },
+    "reset": {
+      "checked": 0,
+      "query": ""
+    },
+    "escaped": {
+      "focus": "Filters",
+      "open": false
+    },
+    "phoneValueBeforeReset": "retained example"
+  },
+  "monthJourneys": [
+    {
+      "width": 390,
+      "before": {
+        "feed": 397.3333435058594,
+        "hash": "",
+        "month": 3885.33349609375,
+        "pageY": 0,
+        "summary": 340.66668701171875,
+        "width": 390
+      },
+      "after": {
+        "feed": -3488,
+        "hash": "#month-2026-11",
+        "month": 0,
+        "pageY": 3885.333251953125,
+        "summary": -3544.666748046875,
+        "width": 390
+      }
+    },
+    {
+      "width": 1024,
+      "before": {
+        "feed": 361.3333435058594,
+        "hash": "",
+        "month": 3849.33349609375,
+        "pageY": 0,
+        "summary": 304.66668701171875,
+        "width": 1024
+      },
+      "after": {
+        "feed": 264.66668701171875,
+        "hash": "#month-2026-11",
+        "month": 264.66668701171875,
+        "pageY": 96.66666412353516,
+        "summary": 208,
+        "width": 1024
+      }
+    },
+    {
+      "width": 1200,
+      "before": {
+        "feed": 229.6666717529297,
+        "hash": "",
+        "month": 3717.666748046875,
+        "pageY": 0,
+        "summary": 173,
+        "width": 1200
+      },
+      "after": {
+        "feed": 229.6666717529297,
+        "hash": "#month-2026-11",
+        "month": 229.6666717529297,
+        "pageY": 0,
+        "summary": 173,
+        "width": 1200
+      }
+    },
+    {
+      "width": 1440,
+      "before": {
+        "feed": 229.6666717529297,
+        "hash": "",
+        "month": 3685.666748046875,
+        "pageY": 0,
+        "summary": 173,
+        "width": 1440
+      },
+      "after": {
+        "feed": 229.6666717529297,
+        "hash": "#month-2026-11",
+        "month": 229.6666717529297,
+        "pageY": 0,
+        "summary": 173,
+        "width": 1440
+      }
+    }
+  ],
+  "generatedTitlesChecked": 737,
+  "acceptedScreenshotFiles": [
+    "fresh-browse-phone.png",
+    "fresh-browse-tablet.png",
+    "fresh-filters-phone.png",
+    "fresh-event-phone.png",
+    "fresh-venue-empty.png",
+    "fresh-saved-desktop.png",
+    "fresh-global-empty.png",
+    "fresh-help-phone.png",
+    "fresh-submit-tablet.png"
+  ],
+  "discardedEvidence": "Stale initial tab markup; one two-tab component run without correct application viewport; transitional captures/native-scroll readings. Repeated and replaced before acceptance.",
+  "check": {
+    "command": "npm run check",
+    "status": "passed",
+    "pass": true,
+    "htmlFiles": 1031,
+    "localReferences": 60048,
+    "markdownReferences": 482,
+    "runs": [
+      {
+        "name": "preview-http-contracts",
+        "pass": true
+      },
+      {
+        "name": "palette-and-contract-tests",
+        "pass": true
+      },
+      {
+        "name": "app-template-contracts",
+        "pass": true
+      }
+    ]
+  },
+  "limits": [
+    "Firefox/Safari",
+    "physical devices/software keyboards",
+    "screen readers",
+    "forced colours",
+    "text enlargement/zoom",
+    "print",
+    "exhaustive native states/modified clicks/outside dismissal",
+    "current-run reduced-motion interaction",
+    "external destinations/venue-fact revalidation"
+  ]
+}

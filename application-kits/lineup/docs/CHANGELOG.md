@@ -1,5 +1,10 @@
 # Lineup application-kit changelog
 
+## Audit checkpoint · 2026-10-27
+
+- Re-audited Lineup 2.1.1 with fresh phone, portrait/split-tablet and desktop evidence, all-theme component comparisons and native journeys. The six original fixes hold; two application-only findings remain: R01 pane bottom clearance and R02 Filter panel internal footer/status-row overrides. See [the report and testing limits](FRESH-AUDIT.md).
+- Updated only Lineup documentation and retained audit evidence. Application templates, CSS, data, assets, tests and version remain unchanged; Tide, shared tooling and the reference site remain unchanged.
+
 ## 2.1.1 · 2026-10-27
 
 - Removed retired Workbench / Half Split / Contained / Margin Reveal prefixes from Saved, Help, Add an event and 48 native event document titles. Native paths, authored event headings and all non-title event fields remain intact.
