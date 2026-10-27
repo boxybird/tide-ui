@@ -27,6 +27,8 @@ The minimum versions above describe individual feature support, not a promise to
 
 ## Actual verification
 
+Kit 1.7.0 adds optional `:user-invalid` styling and an SVG-mask disclosure fallback. Kit 1.7.1 aligns collapsed native selects and disclosures with a shared chevron and padding; the select popup and selection behavior remain native. Explicit `aria-invalid` and browser constraint-validation messages remain available if interaction-based invalid styling is unsupported. See [form verification](FORM-VERIFICATION.md) for Chromium measurements, native select line-height reporting and remaining engine/assistive-technology limits. The [normalization status](NORMALIZATION-STATUS.md) records completed passes and remaining audit work.
+
 The local in-app Chromium browser is the rendering test surface available for this handoff. `CSS.supports()` confirmed OKLCH, light-dark and color-mix support there. Layout, theme navigation, native form behavior and screenshot observations are recorded in `qa/REPORT.md` and its linked evidence.
 
 Firefox and Safari support is verified at the feature-data level; those engines were not physically run in this environment. A release should still receive native Firefox and macOS/iOS Safari visual/keyboard tests, especially date/time fields, forced-colors/high-contrast handling and text wrapping. Do not label those as passed engine tests based only on this document.

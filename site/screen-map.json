@@ -1,8 +1,8 @@
 [
   {
     "area": "Shared search and filters",
-    "coverage": "Optional header, scrolling body, pinned actions; clean, one/zero, invalid and applied specimens in all six modes. Example interactions cover GET, draft counts, reset/cancel/clear, keyboard and resize.",
-    "status": "Included · Kit 1.3.0 and events example"
+    "coverage": "Optional header, scrolling body and pinned actions; one/zero/invalid/applied authored states in all ten modes. Native fields/reset; consumers own matching and dialog behavior.",
+    "status": "Included \u00b7 Kit 1.3.0 and events example"
   },
   {
     "area": "Browse and event details",
@@ -22,7 +22,7 @@
   {
     "area": "Content pages",
     "coverage": "Scoped prose, help-page layout, optional contents, tables, figures and native footer navigation.",
-    "status": "Included · Kit 1.2.0"
+    "status": "Included \u00b7 Kit 1.2.0"
   },
   {
     "area": "Saved-page examples",
@@ -31,7 +31,7 @@
   },
   {
     "area": "Submission and review examples",
-    "coverage": "Required fields, optional photo control, review layout and pending-review confirmation as UI specimens. Linked form error summary with retained values/hints, focus, correction and reset.",
+    "coverage": "Required fields, optional native photo control, review layout and pending-review confirmation. Authored linked summary is separate from native validation.",
     "status": "Layouts and native field validation included"
   },
   {
@@ -46,7 +46,17 @@
   },
   {
     "area": "Control states",
-    "coverage": "Read-only, disabled, invalid, native choice and pressed-button states; local file selection/replacement/removal and rejected type/size.",
-    "status": "Kit specimens and documentation demonstrations included"
+    "coverage": "All-theme button and form matrices: fixed type/geometry, shared select/disclosure chevrons and logical insets, native listbox/size-one/RTL comparisons, selected/invalid/disabled precedence, file reset and authored linked errors.",
+    "status": "Native controls and authored state specimens included"
+  },
+  {
+    "area": "Feedback components",
+    "coverage": "Shared all-theme badge/notice/toast/empty-state matrix: fixed type/spacing, semantic status text, neutral notice borders, native action states, hidden/context/long-content specimens and explicit compact empty density.",
+    "status": "Included \u00b7 Kit 1.8.0"
+  },
+  {
+    "area": "Listing components",
+    "coverage": "All-theme card/date/calendar/result matrix: fixed type/spacing, preview and authored event states, native link layers, known/unknown dates, visible separators, sticky groups and long/hidden/context cases.",
+    "status": "Included \u00b7 Kit 1.9.0"
   }
 ]

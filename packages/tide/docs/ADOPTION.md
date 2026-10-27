@@ -1,3 +1,7 @@
+# Current listing contracts · 1.9.0
+
+See [LISTINGS.md](LISTINGS.md) for canonical card/date/calendar/result contracts and all-theme listing-states.html. The examples below remain compatibility compositions. Current browser deliverables use native links and no navigation helper; application viewport geometry stays private.
+
 # Adoption shipped in 1.3.0
 
 The accepted shared filter shell is extracted into Filter panel. The independent app copy consumes its CSS and canonical HTML; private panel/body/footer/count/reset-row rules were removed from that consumer. Matching, routing, dialog lifecycle and viewport geometry remain host-owned. See [search/filter contract](SEARCH-FILTERS.md). The original 1.2.1 kit and approved prototype remain frozen.
@@ -42,7 +46,7 @@ The host updates counts and `hidden` on groups/cards after filtering. Hide a gro
 
 `tide-results` remains the existing result-summary composition. Use `tide-results__count` on a heading or paragraph, and `tide-results__order` on the chronological-order label. The host owns correct singular/plural wording and whether a polite live region is appropriate. Plain “Soonest first” text does not imply an interactive sorting control.
 
-Desktop list-only scrolling, focus on the destination heading, smooth event navigation and Back restoration belong to the host navigation helper. The CSS component does not implement a router.
+Desktop list scrolling, destination focus and Back restoration belong to native links and the host layout. No kit navigation helper or router ships.
 
 ## Search and filters
 
@@ -60,7 +64,7 @@ Desktop list-only scrolling, focus on the destination heading, smooth event navi
 </details>
 ```
 
-Use native `details`/`summary`, not a simulated button. Enter or Space toggles it; Tab reaches controls when open. Do not duplicate the browser's expanded state with manually managed ARIA. The SVG is decorative. CSS owns the 44px summary, border, chevron orientation and inner spacing; the parent owns external margins. A required invalid field in a closed disclosure must reveal its parent before focus/reporting.
+Use native `details`/`summary`, not a simulated button. Enter or Space toggles it; Tab reaches controls when open. Do not duplicate the browser's expanded state with manually managed ARIA. The SVG is decorative. CSS owns the regular summary, border, chevron orientation and inner spacing; the parent owns external margins. A required invalid field in a closed disclosure must reveal its parent before focus/reporting.
 
 Date ranges have visible From/Through labels and an inclusive/local-date hint. Multiple categories combine with OR, then intersect with text and dates. Keep draft controls distinct from applied results, preserve entered values on invalid submission, and provide a clear reset from no results. These are the current app's interaction rules, not behavior supplied by this script-free kit.
 
@@ -80,7 +84,7 @@ The app's source check rejects shared blocks with no registry home and redefinit
 
 ## Other cases worth exploring next
 
-Keep the same design while considering cancelled/postponed events, changed times after saving, unavailable/deleted event URLs, lost connectivity and retry, missing/poor poster images, long venue/title text, accessibility information and time-zone wording. Each accepted state should reuse existing components before introducing a new one. Live search can follow later with loading, announcement, Escape/clear and stale-response rules defined before implementation.
+Keep the same design while considering cancelled/postponed events, changed times after saving, unavailable/deleted event URLs, lost connectivity and retry, missing/poor poster images, long venue/title text, accessibility information and time-zone wording. Each accepted state should reuse existing components before introducing a new one. Extend authored loading/search/empty specimens for concrete UI needs; real dynamic matching remains a consumer responsibility.
 
 ## Release 1.1.0
 

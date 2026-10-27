@@ -10,11 +10,11 @@ Components use these roles in both modes:
 | --- | --- |
 | Surfaces | `canvas`, `surface`, `raised`, `field` |
 | Text | `text-primary`, `text-secondary`, `text-muted`, `text-label` |
-| Actions | `accent`, `on-accent`, `accent-hover`, `focus` |
+| Actions | `accent`, `on-accent`, `accent-hover`, `accent-active`, `focus` |
 | Boundaries | `border-subtle`, `border-strong`, `border-control` |
 | Selection | `selected-surface`, `selected-text`, `selected-border` |
 | Status | `status-success-text/surface/border`, `status-warning-text/surface/border`, `status-danger-text/surface/border` |
-| Photo context | `photo-canvas`, `photo-text-primary`, `photo-text-secondary`, `photo-text-muted`, `photo-accent`, `on-photo-accent`, `photo-accent-hover` |
+| Photo context | `photo-canvas`, `photo-text-primary`, `photo-text-secondary`, `photo-text-muted`, `photo-accent`, `on-photo-accent`, `photo-accent-hover`, `photo-accent-active` |
 
 For example, `--tide-color-text-secondary` must remain readable on every ordinary surface on which supporting text can appear. `--tide-color-border-control` must identify a field or actionable outline. A decorative separator uses `border-subtle` and is not expected to identify a control. Status hue never replaces words such as Cancelled, Published or Pending review.
 
@@ -64,7 +64,7 @@ The report is `build/reports/contrast.json` at the repository root. Each theme/m
 
 - Primary, secondary, muted, label and accent text on canvas, surface, raised and field: at least 4.5:1 for ordinary-size text.
 - Inline status/error text on those same surfaces and badge text on its badge surface: at least 4.5:1.
-- Primary action labels on the normal and actual OKLab-mixed hover/pressed background: at least 4.5:1.
+- Primary action labels on normal, hover and active backgrounds: at least 4.5:1. Hover mixes 8% toward the contrast-safe state target; active mixes 16%. Photo-context actions have separately checked roles. These additive active roles preserve existing theme values.
 - Selected labels on their selected surface: at least 4.5:1.
 - Control boundaries, selected boundaries, and focus outlines on their supported adjacent surfaces: at least 3:1. A surface-colored offset separates the focus ring from a filled control.
 - Photo text/action colors against the photo context's opaque base. These measurements do not validate every pixel of an uploaded image.

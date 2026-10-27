@@ -1,5 +1,5 @@
 {
-  "version": "1.5.3",
+  "version": "1.9.0",
   "classConvention": "BEM with tide- prefix",
   "runtime": "HTML and CSS; native browser behavior only",
   "componentSource": "templates/library.html#components",
@@ -12,15 +12,20 @@
         "secondary",
         "quiet",
         "full",
+        "spread",
+        "compact",
         "icon",
         "plan"
       ],
       "states": [
-        "focus-visible",
+        "rest",
         "hover",
         "active",
+        "focus-visible",
+        "aria-pressed authored state",
         "disabled",
-        "aria-pressed toggle"
+        "disabled pressed",
+        "forced-colors selected/focus"
       ],
       "roles": [
         "accent",
@@ -31,29 +36,58 @@
         "border-control",
         "selected-surface",
         "selected-text",
-        "selected-border"
+        "selected-border",
+        "accent-active",
+        "raised",
+        "text-muted"
       ],
-      "fixture": "search.html"
+      "fixture": "button-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/buttons.html",
+      "styleOwnership": "kit",
+      "contract": "docs/BUTTONS.md",
+      "behavior": "Native buttons, links and authored pressed states. Consumers own actual toggle state changes. Disabled buttons use native disabled; unavailable links omit href and use aria-disabled. No browser JavaScript ships.",
+      "deprecatedVariants": {
+        "plan": "Use spread/full; event composition owns its action gap."
+      }
     },
     {
       "name": "Icon button",
       "block": "tide-icon-button",
       "variants": [
+        "regular",
         "selected",
         "focus-sample"
       ],
       "states": [
+        "rest",
+        "hover",
+        "active",
         "focus-visible",
-        "aria-pressed"
+        "aria-pressed authored state",
+        "disabled",
+        "disabled pressed",
+        "forced-colors selected/focus"
       ],
       "roles": [
         "text-primary",
         "selected-text",
         "selected-surface",
         "selected-border",
-        "focus"
+        "focus",
+        "accent-active",
+        "raised",
+        "text-muted"
       ],
-      "fixture": "library"
+      "fixture": "button-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/buttons.html",
+      "styleOwnership": "kit",
+      "contract": "docs/BUTTONS.md",
+      "behavior": "Native buttons, links and authored pressed states. Consumers own actual toggle state changes. Disabled buttons use native disabled; unavailable links omit href and use aria-disabled. No browser JavaScript ships.",
+      "deprecatedVariants": {
+        "focus-sample": "Display-only compatibility alias. Demonstrate real focus-visible instead."
+      }
     },
     {
       "name": "Field",
@@ -65,12 +99,20 @@
         "error"
       ],
       "states": [
+        "rest",
+        "hover",
+        "active",
         "focus-visible",
+        "required untouched",
+        "user-invalid after native interaction",
+        "aria-invalid authored error",
+        "readonly",
         "disabled",
-        "aria-invalid",
-        "required",
-        "readonly where natively supported",
-        "hint and error together"
+        "invalid disabled",
+        "hint and error together",
+        "shared single-select chevron",
+        "RTL logical insets",
+        "native listbox fallback"
       ],
       "roles": [
         "field",
@@ -79,24 +121,45 @@
         "text-muted",
         "status-danger-text",
         "border-control",
-        "focus"
+        "focus",
+        "accent",
+        "surface",
+        "raised"
       ],
-      "fixture": "submit.html"
+      "fixture": "form-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/controls.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FORMS.md",
+      "behavior": "Native typing, supported readonly/disabled semantics and constraint validation. Authored errors preserve hints/values; consumers render reviewed messages and aria-invalid together."
     },
     {
       "name": "Native choice",
       "block": "tide-choice",
       "states": [
+        "unchecked",
         "checked",
+        "native hover and active",
         "focus-visible",
+        "aria-invalid",
         "disabled checked",
-        "disabled unchecked"
+        "disabled unchecked",
+        "disabled fieldset"
       ],
       "roles": [
         "accent",
+        "text-primary",
+        "text-secondary",
+        "text-muted",
+        "status-danger-text",
         "focus"
       ],
-      "fixture": "filters.html"
+      "fixture": "form-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/controls.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FORMS.md",
+      "behavior": "Visible native checkbox/radio inside its label. Native checked, required, keyboard and disabled/fieldset semantics; no simulated choice engine."
     },
     {
       "name": "Filter chip",
@@ -105,17 +168,37 @@
         "selected"
       ],
       "states": [
+        "rest",
+        "hover",
+        "active",
+        "focus-visible",
         "checked",
-        "focus-visible"
+        "selected hover and active",
+        "invalid checked",
+        "disabled checked",
+        "disabled unchecked",
+        "disabled fieldset",
+        "disabled selected link"
       ],
       "roles": [
+        "text-primary",
         "text-secondary",
+        "text-muted",
         "selected-text",
         "selected-surface",
         "selected-border",
-        "border-control"
+        "border-control",
+        "focus",
+        "status-danger-text",
+        "field",
+        "raised"
       ],
-      "fixture": "filters.html"
+      "fixture": "form-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/controls.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FORMS.md",
+      "behavior": "Native checkbox/radio label or navigation anchor. Native checked state supplies selection. Authored selected compatibility is appearance only; unavailable links omit href. Disabled appearance wins over selection/errors."
     },
     {
       "name": "Badge",
@@ -126,16 +209,33 @@
         "danger"
       ],
       "states": [
-        "static status text",
-        "neutral In view label inside an event-card status slot"
+        "neutral",
+        "success",
+        "warning",
+        "danger",
+        "optional decorative icon",
+        "long wrapping label",
+        "hidden"
       ],
       "roles": [
         "text-secondary",
+        "border-strong",
         "status-success-text",
+        "status-success-surface",
+        "status-success-border",
         "status-warning-text",
-        "status-danger-text"
+        "status-warning-surface",
+        "status-warning-border",
+        "status-danger-text",
+        "status-danger-surface",
+        "status-danger-border"
       ],
-      "fixture": "states.html"
+      "fixture": "feedback-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/feedback.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FEEDBACK.md",
+      "behavior": "Noninteractive authored status text. No button, toggle, hover, disabled or automatic live-region semantics."
     },
     {
       "name": "Notice",
@@ -145,28 +245,71 @@
         "success"
       ],
       "states": [
-        "explicit wording; uniform neutral border"
+        "information",
+        "recovery",
+        "success",
+        "long content",
+        "optional native action",
+        "composed error summary",
+        "hidden"
       ],
       "roles": [
+        "accent",
+        "accent-hover",
+        "border-strong",
+        "focus",
         "surface",
+        "text-muted",
         "text-primary",
-        "text-secondary",
-        "border-strong"
+        "text-secondary"
       ],
-      "fixture": "states.html"
+      "fixture": "feedback-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/feedback.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FEEDBACK.md",
+      "elements": [
+        "title",
+        "body",
+        "actions",
+        "action"
+      ],
+      "behavior": "Persistent authored explanation with uniform neutral borders. Error/success modifiers remain compatible labels with the same shell. Consumers own actual validation, focus, insertion and announcements."
     },
     {
       "name": "Toast specimen",
       "block": "tide-toast",
       "states": [
-        "static message and link"
+        "message only",
+        "native action",
+        "wrapped message and action",
+        "unavailable action without href",
+        "action hover",
+        "action active",
+        "action focus-visible",
+        "hidden"
       ],
       "roles": [
+        "accent",
+        "accent-hover",
+        "border-strong",
+        "focus",
         "raised",
+        "text-muted",
         "text-primary",
-        "accent"
+        "text-secondary"
       ],
-      "fixture": "library"
+      "fixture": "feedback-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/feedback.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FEEDBACK.md",
+      "elements": [
+        "message",
+        "actions",
+        "action"
+      ],
+      "behavior": "Static authored message specimen and optional native link. No saving, timing, queue, dismissal, automatic focus or live-region engine ships. Legacy direct span/anchor markup remains supported."
     },
     {
       "name": "Organizer",
@@ -213,26 +356,68 @@
         "meta",
         "separator",
         "price",
-        "status"
+        "status",
+        "category"
       ],
       "variants": [
         "in-view"
       ],
       "states": [
-        "hover",
-        "focus-visible",
-        "long title wrap",
-        "in-view preview, with neutral badge; distinct from aria-current=page"
+        "rest",
+        "native link hover/active/focus",
+        "in-view preview",
+        "authored cancelled/sold-out/changed time",
+        "unavailable detail without link",
+        "unknown date/time",
+        "long title/venue/metadata",
+        "independent action above link",
+        "hidden card and visible separators",
+        "context isolation"
       ],
       "roles": [
-        "surface",
-        "text-primary",
-        "text-secondary",
-        "text-label",
         "accent",
-        "border-subtle"
+        "accent-hover",
+        "border-control",
+        "border-subtle",
+        "focus",
+        "surface",
+        "text-label",
+        "text-primary",
+        "text-secondary"
       ],
-      "fixture": "01-list.html"
+      "fixture": "listing-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/listing-card.html",
+      "contract": "docs/LISTINGS.md",
+      "styleOwnership": "kit",
+      "consumerStyleExceptions": [
+        {
+          "target": ".tide-event-card__status",
+          "properties": {
+            "display": [
+              "none",
+              "inline-flex"
+            ]
+          },
+          "purpose": "Host controls preview-label visibility."
+        },
+        {
+          "target": ".tide-event-card--in-view",
+          "properties": {
+            "outline": [
+              "none"
+            ]
+          },
+          "purpose": "Host may suppress preview decoration when there is no paired detail pane."
+        }
+      ],
+      "behavior": "Native sibling covering link and optional independent action; no nested controls or simulated article button. Host renders actual preview/status/availability. Kit owns type/spacing; only declared preview visibility/outline exceptions remain consumer-owned.",
+      "supportingSources": [
+        "css/patterns.css"
+      ],
+      "deprecatedElements": {
+        "separator": "Legacy decorative metadata node remains valid but hidden; fixed gaps avoid orphan divider lines when wrapping."
+      }
     },
     {
       "name": "Prominent date",
@@ -242,27 +427,60 @@
         "parts"
       ],
       "states": [
-        "full accessible time label"
+        "known full native time label",
+        "single/two-digit day alignment",
+        "year boundary",
+        "context isolation"
       ],
       "roles": [
         "accent",
         "text-secondary"
       ],
-      "fixture": "01-list.html"
+      "fixture": "listing-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/listing-date.html",
+      "contract": "docs/LISTINGS.md",
+      "styleOwnership": "kit",
+      "behavior": "Known dates use native time plus a full accessible label; decorative fragments are aria-hidden. Unknown dates are ordinary text, never fabricated datetime values."
     },
     {
       "name": "Empty state",
       "block": "tide-empty",
       "states": [
-        "no results",
-        "no saved events"
+        "first use",
+        "no matches",
+        "intrinsically empty schedule",
+        "unavailable listing",
+        "regular spacing",
+        "explicit compact spacing",
+        "long content",
+        "native action states",
+        "hidden"
       ],
       "roles": [
+        "accent",
+        "accent-hover",
+        "border-strong",
+        "focus",
+        "text-muted",
         "text-primary",
-        "text-secondary",
-        "accent"
+        "text-secondary"
       ],
-      "fixture": "saved-empty.html"
+      "fixture": "feedback-states.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/feedback.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FEEDBACK.md",
+      "elements": [
+        "title",
+        "body",
+        "actions",
+        "action"
+      ],
+      "variants": [
+        "compact"
+      ],
+      "behavior": "Authored absent-content explanation and appropriate next step. Heading-level-independent title; legacy h2/p markup remains supported. Consumers render actual result state; no matching or persistence engine ships."
     },
     {
       "name": "Missing photo",
@@ -285,18 +503,36 @@
       "block": "tide-upload",
       "states": [
         "native optional file choice",
-        "local selection and replacement demo",
-        "rejected type/size demo",
-        "remove file",
-        "disabled"
+        "native selection and replacement",
+        "native reset",
+        "hover",
+        "active",
+        "focus-visible",
+        "required untouched",
+        "user-invalid",
+        "aria-invalid authored error",
+        "disabled",
+        "invalid disabled"
       ],
       "roles": [
         "raised",
+        "surface",
         "text-primary",
         "text-secondary",
-        "border-control"
+        "text-muted",
+        "border-control",
+        "focus",
+        "status-danger-text",
+        "selected-surface",
+        "selected-text",
+        "selected-border"
       ],
-      "fixture": "submit.html"
+      "fixture": "form-states.html",
+      "behavior": "Native chooser, selection/replacement and form reset. Accept is a chooser hint. Consumer-rendered errors and file-content/size validation are separate; no upload engine or browser JavaScript ships.",
+      "source": "css/components.css",
+      "htmlSource": "templates/controls.html",
+      "styleOwnership": "kit",
+      "contract": "docs/FORMS.md"
     },
     {
       "name": "Photographic event opening",
@@ -310,7 +546,8 @@
         "facts",
         "admission",
         "cue",
-        "title"
+        "title",
+        "action"
       ],
       "states": [
         "full viewport",
@@ -337,17 +574,28 @@
       "states": [
         "closed",
         "open",
-        "focus-visible"
+        "hover",
+        "active",
+        "focus-visible",
+        "fallback chevron",
+        "explicit icon",
+        "regular 48px geometry with field-aligned insets"
       ],
       "roles": [
+        "text-primary",
         "text-secondary",
+        "raised",
+        "selected-surface",
+        "selected-text",
         "border-control",
         "focus"
       ],
       "source": "css/patterns.css",
       "styleOwnership": "kit",
-      "fixture": "app-patterns.html",
-      "behavior": "Native details/summary. Enter or Space toggles; Tab reaches revealed controls. Do not simulate aria-expanded or duplicate the native role."
+      "fixture": "form-states.html",
+      "behavior": "Native details/summary. Enter or Space toggles; Tab reaches revealed controls. Do not simulate aria-expanded or duplicate the native role.",
+      "htmlSource": "templates/controls.html",
+      "contract": "docs/FORMS.md"
     },
     {
       "name": "Calendar event group",
@@ -363,23 +611,31 @@
         "sticky"
       ],
       "states": [
-        "one/many events",
-        "multiple months",
-        "hidden empty group",
-        "focus-visible jump"
+        "one/many visible events",
+        "sticky and static header",
+        "hidden cards/group",
+        "native month jump focus",
+        "long heading/nav wrap",
+        "context isolation"
       ],
       "roles": [
-        "canvas",
-        "text-secondary",
-        "text-muted",
         "accent",
+        "accent-hover",
         "border-subtle",
-        "focus"
+        "canvas",
+        "focus",
+        "text-muted",
+        "text-secondary"
       ],
       "source": "css/patterns.css",
       "styleOwnership": "kit",
-      "fixture": "app-patterns.html",
-      "behavior": "Real fragment links and unique heading IDs. Host updates counts/hidden state; desktop list-only scrolling and target focus belong to the host navigation helper."
+      "fixture": "listing-states.html",
+      "behavior": "Authored labelled groups with native fragments and 44px jump targets. Consumers own counts, hidden state and scrolling ancestors; sticky offset is an explicit CSS input. No calendar navigation script ships.",
+      "htmlSource": "templates/listings.html",
+      "contract": "docs/LISTINGS.md",
+      "supportingSources": [
+        "css/components.css"
+      ]
     },
     {
       "name": "Event details",
@@ -573,24 +829,26 @@
         "list"
       ],
       "states": [
-        "hidden before validation",
-        "multiple errors",
-        "field correction",
-        "reset"
+        "authored linked summary",
+        "associated field and upload errors",
+        "native fragment navigation",
+        "neutral notice boundary"
       ],
       "roles": [
+        "surface",
         "text-primary",
         "text-secondary",
         "text-muted",
-        "border-subtle",
+        "border-strong",
+        "accent",
         "focus"
       ],
       "source": "css/page-patterns.css",
-      "htmlSource": "templates/frames/form-validation.html",
-      "fixture": "form-validation.html",
+      "htmlSource": "templates/controls.html",
+      "fixture": "form-states.html",
       "styleOwnership": "kit",
-      "contract": "docs/PAGE-PATTERNS.md#form-validation",
-      "behavior": "Compose with Notice. Reveal after validation; retain values/hints, expose invalid fields, focus summary once on failed submit and focus field destinations. Do not also announce the same summary as an alert."
+      "contract": "docs/FORMS.md",
+      "behavior": "Compose with Notice. This static specimen does not compute, reveal or clear errors. A consumer-rendered summary retains values/hints and exposes invalid fields; the consumer owns summary focus and announcements."
     }
   ],
   "supportingBlocks": [
@@ -627,7 +885,10 @@
     {
       "block": "tide-fieldset",
       "source": "css/components.css",
-      "purpose": "Native labelled field grouping"
+      "purpose": "Native group and explicit legend typography; consumers may compose group layout.",
+      "htmlSource": "templates/controls.html",
+      "fixture": "form-states.html",
+      "contract": "docs/FORMS.md"
     },
     {
       "block": "tide-icon",
@@ -647,7 +908,25 @@
     {
       "block": "tide-photo-control",
       "source": "css/components.css",
-      "purpose": "Action on photographic reading context"
+      "purpose": "Action on photographic reading context",
+      "styleOwnership": "kit",
+      "htmlSource": "templates/buttons.html",
+      "fixture": "button-states.html",
+      "contract": "docs/BUTTONS.md#icon-and-photo-controls",
+      "variants": [
+        "regular",
+        "save-preview"
+      ],
+      "states": [
+        "rest",
+        "hover",
+        "active",
+        "focus-visible",
+        "authored pressed",
+        "disabled",
+        "disabled pressed"
+      ],
+      "behavior": "Native compact photographic action, or explicitly decorative static preview. Consumers own state changes."
     },
     {
       "block": "tide-place",
@@ -751,9 +1030,24 @@
         "count",
         "order"
       ],
-      "source": "css/patterns.css",
+      "source": "css/layout.css",
       "styleOwnership": "kit",
-      "behavior": "Host supplies accurate singular/plural wording. Use a polite status for dynamically updated counts; sorting text is not a fake control."
+      "behavior": "Explicit count and order typography. Consumer supplies truthful singular/plural counts; static specimens are not live regions or sorting controls. Dynamic announcements belong to the consumer.",
+      "htmlSource": "templates/listings.html",
+      "fixture": "listing-states.html",
+      "contract": "docs/LISTINGS.md",
+      "states": [
+        "zero",
+        "one",
+        "many",
+        "long labels",
+        "hidden",
+        "context isolation"
+      ],
+      "supportingSources": [
+        "css/components.css",
+        "css/patterns.css"
+      ]
     }
   },
   "patterns": [

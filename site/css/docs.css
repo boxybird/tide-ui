@@ -1,5 +1,7 @@
 /* Reference-library presentation only. Not shipped with tide.css. */
 @layer tide.docs {
+  .tide-doc-actions { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); align-items: start; gap: var(--tide-space-6); }
+  .tide-doc-actions__photo { padding: var(--tide-space-4); background: var(--tide-color-photo-canvas); color: var(--tide-color-photo-text-primary); }
   .tide-library { max-inline-size: none; margin: 0; }
   .tide-doc-nav { position: fixed; inset: 0 auto 0 0; inline-size: 15.75rem; padding: var(--tide-space-10) var(--tide-space-7); border-inline-end: var(--tide-border-hairline); display: flex; flex-direction: column; background: var(--tide-color-canvas); z-index: var(--tide-z-navigation); overflow-y: auto; }
   .tide-doc-nav .tide-brand { font-size: var(--tide-font-size-control); }
@@ -24,6 +26,10 @@
   .tide-doc-panel > h3 { font-size: var(--tide-font-size-control); line-height: var(--tide-leading-body); font-weight: var(--tide-font-weight-label); margin-block-end: var(--tide-space-2); }
   .tide-doc-panel > .tide-caption { margin-block-end: var(--tide-space-6); }
   .tide-doc-panel--wide { grid-column: 1 / -1; }
+  .tide-doc-controls--context { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: .1em; text-transform: uppercase; }
+  .tide-doc-feedback--context { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: .1em; text-transform: uppercase; }
+  .tide-doc-listing--context { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: .1em; text-transform: uppercase; }
+  .tide-doc-listing__viewport { max-block-size: 24rem; overflow: auto; scrollbar-gutter: stable; isolation: isolate; }
   .tide-doc-swatches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--tide-space-4); }
   .tide-doc-swatch { block-size: var(--tide-space-16); border: var(--tide-border-width) solid var(--tide-color-border-strong); border-radius: var(--tide-radius-control); margin-block-end: var(--tide-space-2); }
   .tide-doc-swatch--canvas { background: var(--tide-color-canvas); }

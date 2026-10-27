@@ -20,11 +20,25 @@ def ownership_issues(classes,manifest,private_blocks=()):
 def style_ownership_issues(css,manifest):
     css=re.sub(r'/\*.*?\*/','',css,flags=re.S)
     selectors=' '.join(re.findall(r'([^{}]+)\{',css))
-    entries=manifest['components']+[
+    entries=manifest['components']+manifest.get('supportingBlocks',[])+[
         {'block':block,**contract} for block,contract in manifest.get('compositionContracts',{}).items()]
-    return ['Kit-owned selectors redefined in app CSS: '+entry['block'] for entry in entries
-            if entry.get('styleOwnership')=='kit'
-            and re.search(r'\.'+re.escape(entry['block'])+r'(?:__[\w-]+|--[\w-]+)?(?![\w-])',selectors)]
+    issues=[]
+    for entry in entries:
+        target=r'\.'+re.escape(entry['block'])+r'(?:__[\w-]+|--[\w-]+)?(?![\w-])'
+        if entry.get('styleOwnership')!='kit' or not re.search(target,selectors):continue
+        exceptions=entry.get('consumerStyleExceptions',[])
+        matching=[(s.strip(),dict((k.strip(),v.strip()) for k,v in
+                   (part.split(':',1) for part in body.split(';') if ':' in part)))
+                  for s,body in re.findall(r'([^{}]+)\{([^{}]*)\}',css) if re.search(target,s)]
+        def permitted(selector,declarations):
+            # Narrow consumer-owned presentation slots, never typography/geometry.
+            if ',' in selector:return False
+            return any(selector.endswith(rule['target']) and
+                       all(name in rule['properties'] and value in rule['properties'][name]
+                           for name,value in declarations.items()) for rule in exceptions)
+        if not exceptions or not matching or any(not permitted(s,d) for s,d in matching):
+            issues.append('Kit-owned selectors redefined in app CSS: '+entry['block'])
+    return issues
 
 
 class ContractScan(HTMLParser):

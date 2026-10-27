@@ -1,5 +1,35 @@
 # Changelog
 
+## Tide kit 1.9.0 · 2026-10-27
+
+- Normalized card/category/metadata, date-block, calendar and result typography independently of surrounding context. Retained 24px card insets and fixed metadata gaps; suppressed legacy decorative metadata dividers to avoid orphan lines on wrapping. Date columns reserve font-relative space for single-/two-digit alignment. Removed the narrow-screen metadata-gap override.
+- Added covering-link keyboard/active treatment, visible-card separators across hidden entries, wrapping result-order labels and an explicit sticky offset input. Preserved neutral preview markers, unframed panes and native link/action layers.
+- Added canonical card/date/listing recipes, all-theme state specimens and regression checks. Registered card ownership with only existing consumer preview visibility/outline choices permitted. Application sources/layouts and resolved palettes are unchanged.
+
+## Tide kit 1.8.0 · 2026-10-27
+
+- Normalized badges to 12px/20px labels and messages to 14px/24px, with explicit type/case independent of reading context. Notices now have even 16px padding and 8px flow gaps; every notice state retains the same neutral border.
+- Added reusable title/body/action slots, native feedback link states and wrapping toast actions. Toasts reserve a stable minimum action row; message-only specimens retain that shell. Empty-state titles are heading-level independent, with consistent 16px gaps and an explicit compact spacing option. Legacy markup remains supported.
+- Added shared all-theme feedback specimens, ownership/behavior docs and portable/rendered regression checks. Generated combined CSS omits ordinary source comments while preserving strings, URLs, licenses and rule/value order, keeping existing byte budgets unchanged. Application sources/layouts and palette values are unchanged.
+
+## Tide kit 1.7.1 · 2026-10-27
+
+- Aligned fields and disclosures to a shared 48px regular box, 11px vertical / 16px horizontal padding and the same centered 18px source chevron. Field values retain 16px type; disclosure labels retain 14px type with a shared 24px line box.
+- Replaced only collapsed native select chrome; browser menus, selection and keyboard behavior remain native. Added logical trailing space, muted disabled indicators and native listbox/size-one comparisons. Updated all-theme specimens, contracts and checks. Application sources/layouts remain unchanged.
+
+## Tide kit 1.7.0 · 2026-10-27
+
+- Normalized field values, labels, hints, legends and choice typography so reading contexts cannot alter control type. Retained 48px fields and 44px minimum choice targets; aligned chips, disclosure summaries and native file buttons with the compact action rhythm.
+- Completed hover/active, checked, invalid and disabled precedence, including inherited fieldset disabling. Added interaction-based native invalid styling without marking untouched required fields invalid. Upload errors now use the same danger boundary as text fields; summaries retain neutral Notice borders.
+- Restored disclosure indicators when no explicit icon is authored, using the existing distributed chevron. Added a shared all-theme form matrix, ownership/state contracts, portable regression checks and a read-only browser measurement probe. Application source/layout files are unchanged.
+
+## Tide kit 1.6.0 · 2026-10-27
+
+- Standardized regular button geometry and explicit Manrope typography across primary, secondary, quiet and trailing-arrow actions. Removed viewport density changes and geometry overrides from the legacy plan variant; event composition retains its action gap.
+- Added explicit compact/spread options and regular legacy icon/photo sizes, with one 18px action glyph. Existing plan/icon/photo classes remain compatible; deprecated the display-only focus-sample alias.
+- Completed hover, distinct active, native focus, authored pressed, disabled and combined-state presentation for button/icon/photo families. Added audited active color roles without changing existing palette roles or theme inputs.
+- Added a shared all-theme button matrix, a state/ownership contract, portable regression guards and a development-only browser measurement probe. Reconciled native/static demonstration claims. Application layout and template sources are unchanged.
+
 ## Events example 2.0.4 · 2026-10-26
 
 - Gave Saved separate intrinsic intro/summary rows and a bounded feed row, preventing a stretched or collapsed count row.

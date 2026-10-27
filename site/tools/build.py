@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 from html import escape
+from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
@@ -22,6 +23,8 @@ from palette import css
 from compiler import load_themes, theme_styles
 from content import help_content
 from filter_panel import specimen
+from contracts import VOID
+from listing_specimens import listings
 
 SECTIONS = ['top', 'foundations', 'components', 'content-pages', 'screens', 'coverage', 'tokens', 'themes', 'extend']
 
@@ -56,11 +59,74 @@ def adopted_patterns(level):
     return fragment
 
 
+def buttons(level):
+    return (ROOT/'templates/buttons.html').read_text(encoding='utf-8').replace('{{BUTTON_LEVEL}}', str(level)).replace('{{BUTTON_SUBLEVEL}}', str(level+1))
+
+
+def controls(level):
+    fragment=(ROOT/'templates/controls.html').read_text(encoding='utf-8')
+    svg=(ROOT/'assets/icons/ChevronDownIcon.svg').read_text(encoding='utf-8')
+    svg=re.sub(r'<svg[^>]*>', '<svg class="tide-icon tide-expandable__icon" viewBox="0 0 15 15" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">', svg)
+    svg=re.sub(r'fill="#[0-9a-fA-F]+"', 'fill="currentColor"', svg)
+    return fragment.replace('{{CONTROL_LEVEL}}', str(level)).replace('{{CONTROL_SUBLEVEL}}', str(level+1)).replace('{{CONTROL_DISCLOSURE_ICON}}', svg)
+
+
+def feedback(level):
+    fragment=(ROOT/'templates/feedback.html').read_text(encoding='utf-8')
+    for token,value in {'FEEDBACK_LEVEL':str(level),'FEEDBACK_SUBLEVEL':str(level+1),'FEEDBACK_ITEM_LEVEL':str(level+2)}.items():
+        fragment=fragment.replace('{{'+token+'}}',value)
+    for token,name in [('FEEDBACK_CHECK_ICON','CheckIcon'),('FEEDBACK_BOOKMARK_ICON','BookmarkIcon')]:
+        svg=(ROOT/f'assets/icons/{name}.svg').read_text(encoding='utf-8')
+        svg=re.sub(r'<svg[^>]*>', '<svg class="tide-icon" viewBox="0 0 15 15" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">',svg)
+        fragment=fragment.replace('{{'+token+'}}',svg)
+    return fragment
+
+
+def feedback_cases(fragment, names):
+    """Extract complete canonical cases without copying their HTML into the site."""
+    starts=[0]
+    for line in fragment.splitlines(keepends=True):starts.append(starts[-1]+len(line))
+    class Cases(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=False);self.depth=0;self.start=None;self.key=None;self.found={}
+        def source_position(self):
+            line,column=self.getpos();return starts[line-1]+column
+        def handle_starttag(self,tag,attrs):
+            if self.start is not None:
+                self.depth+=tag not in VOID
+            elif dict(attrs).get('data-feedback-case') in names:
+                self.key=dict(attrs)['data-feedback-case']
+                if self.key in self.found:raise ValueError('Duplicate feedback case: '+self.key)
+                self.start=self.source_position();self.depth=1
+        def handle_startendtag(self,tag,attrs):pass
+        def handle_endtag(self,tag):
+            if self.start is None:return
+            self.depth-=1
+            if not self.depth:
+                end=fragment.index('>',self.source_position())+1
+                self.found[self.key]=fragment[self.start:end];self.start=None
+    parser=Cases();parser.feed(fragment)
+    if set(parser.found)!=set(names):raise ValueError('Missing canonical feedback preview')
+    return parser.found
+
+
+def feedback_overview(level):
+    names=['badge-neutral','badge-success','badge-warning','badge-danger','notice-info','toast-action','empty-matches']
+    cases=feedback_cases(feedback(level),names)
+    out=[f'<section class="tide-stack tide-u-mt-8" id="feedback-contract" aria-labelledby="feedback-title"><h{level} id="feedback-title">Status, explanation and a useful next step.</h{level}><p>Shared type and spacing; open the matrix for all states and checks.</p><div class="tide-doc-actions">']
+    for title,keys in [('Badges',names[:4]),('Notice',['notice-info']),('Toast specimen',['toast-action']),('Empty state',['empty-matches'])]:
+        content=''.join(cases[key] for key in keys)
+        if title=='Badges':content='<div class="tide-row">'+content+'</div>'
+        out.append(f'<section class="tide-doc-panel tide-stack"><h{level+1}>{title}</h{level+1}>'+content+'</section>')
+    out.append('</div><p><a class="tide-link" href="{{FRAMES}}feedback-states.html">All feedback states</a> · <a class="tide-link" href="{{BASE}}docs/FEEDBACK.md">Read the feedback contract</a></p><p id="feedback-destination" tabindex="-1" class="tide-caption">Native link target for these authored examples.</p></section>')
+    return ''.join(out)
+
+
 def contracts(themes, resolved, selected, mode, base):
     role_groups = {
         'Surfaces': ['canvas','surface','raised','field'],
         'Text': ['text-primary','text-secondary','text-muted','text-label'],
-        'Actions': ['accent','on-accent','accent-hover','focus'],
+        'Actions': ['accent','on-accent','accent-hover','accent-active','focus'],
         'Boundaries': ['border-subtle','border-strong','border-control'],
         'Selection': ['selected-surface','selected-text','selected-border'],
         'Status': [f'status-{status}-{suffix}' for status in ('success','warning','danger') for suffix in ('text','surface','border')],
@@ -92,10 +158,11 @@ def document(body, title, theme, mode, prefix, docs=False):
 
 def outputs(themes, resolved, audit):
     result={}
+    listing_frame=listings(2)
     version=json.loads((ROOT/'component-manifest.json').read_text(encoding='utf-8'))['version']
     extra = '\n'.join(f".tide-library:has(#{section}:target) .tide-theme-picker__links[data-for='{section}'] {{ display:grid; }}" for section in SECTIONS[1:])
     result[ROOT/'css/docs-navigation.css'] = '@layer tide.docs {\n'+extra+'\n}\n'
-    template = (ROOT/'templates/library.html').read_text(encoding='utf-8').replace('{{ADOPTED_PATTERNS}}',adopted_patterns(3)).replace('{{FILTER_PANEL}}',specimen(4))
+    template = (ROOT/'templates/library.html').read_text(encoding='utf-8').replace('{{ADOPTED_PATTERNS}}',adopted_patterns(3)).replace('{{FILTER_PANEL}}',specimen(4)).replace('{{BUTTON_SPECIMENS}}',buttons(3)).replace('{{CONTROL_SPECIMENS}}',controls(3)).replace('{{FEEDBACK_SPECIMENS}}',feedback_overview(3))
     for key, theme in themes.items():
         for mode in ('light','dark'):
             for at_root in ([False, True] if key == 'tide' and mode == 'dark' else [False]):
@@ -109,9 +176,9 @@ def outputs(themes, resolved, audit):
                 html = html.replace('</head>','<link rel="stylesheet" href="'+base+'css/docs-navigation.css">\n</head>')
                 result[folder/'index.html'] = html
             for source in (ROOT/'templates/frames').glob('*.html'):
-                body = source.read_text(encoding='utf-8').replace('{{ADOPTED_PATTERNS}}',adopted_patterns(2)).replace('{{FILTER_PANEL}}',specimen()).replace('{{HELP_CONTENT}}',help_content({'BROWSE':'01-list.html','SEARCH':'search.html','SUBMIT':'submit.html','EVENT':'01-event.html'})).replace('{{ASSETS}}','../../assets/').replace('{{FRAMES}}','')
+                body = source.read_text(encoding='utf-8').replace('{{ADOPTED_PATTERNS}}',adopted_patterns(2)).replace('{{FILTER_PANEL}}',specimen()).replace('{{BUTTON_SPECIMENS}}',buttons(2)).replace('{{CONTROL_SPECIMENS}}',controls(2)).replace('{{FEEDBACK_SPECIMENS}}',feedback(2)).replace('{{LISTING_SPECIMENS}}',listing_frame).replace('{{HELP_CONTENT}}',help_content({'BROWSE':'01-list.html','SEARCH':'search.html','SUBMIT':'submit.html','EVENT':'01-event.html'})).replace('{{ASSETS}}','../../assets/').replace('{{FRAMES}}','')
                 title = source.stem.replace('-',' ').title() + ' · ' + theme['name'] + ' / ' + mode.title()
-                result[ROOT/f'{key}-{mode}'/'frames'/source.name] = document(body,title,key,mode,'../../',docs=source.name in ('app-patterns.html','filter-panel.html'))
+                result[ROOT/f'{key}-{mode}'/'frames'/source.name] = document(body,title,key,mode,'../../',docs=source.name in ('app-patterns.html','filter-panel.html','button-states.html','form-states.html','feedback-states.html','listing-states.html'))
     system = '<body class="tide tide-screen tide-screen--kit"><main class="tide-page-body tide-page-body--spaced tide-stack"><p class="tide-eyebrow">System appearance</p><h1>Day or night.</h1><p>This page has no mode-switching JavaScript. Change your operating system appearance to test it.</p><div class="tide-notice"><strong>The same roles, in both modes.</strong><p>Native form controls and page surfaces use the active color scheme.</p></div><div class="tide-field"><label class="tide-field__label" for="sample">A native control</label><input class="tide-field__control" id="sample" value="Ink After Dark"></div><a class="tide-button" href="index.html#themes">Back to the kit</a></main></body>'
     result[ROOT/'system.html'] = document(system,'Tide · System appearance','tide','system','')
     panel=(ROOT/'templates/panel.html').read_text(encoding='utf-8')

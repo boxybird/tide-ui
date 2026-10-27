@@ -8,7 +8,7 @@
 .tide-site-header__links { display: flex; flex-wrap: wrap; gap: var(--tide-space-2) var(--tide-space-5); list-style: none; }
 .tide-site-header__link { display: inline-flex; align-items: center; min-block-size: var(--tide-size-target); color: var(--tide-color-text-secondary); text-decoration: underline; text-underline-offset: var(--tide-space-1); overflow-wrap: anywhere; }
 .tide-site-header__link[aria-current='page'] { color: var(--tide-color-text-primary); font-weight: var(--tide-font-weight-action); text-decoration-thickness: var(--tide-focus-width); }
-.tide-error-summary { scroll-margin-block-start: var(--tide-space-6); }
+.tide-error-summary { scroll-margin-block-start: var(--tide-space-6); font-family: var(--tide-font-family); font-style: normal; font-size: var(--tide-font-size-body); font-weight: var(--tide-font-weight-regular); line-height: var(--tide-leading-body); letter-spacing: normal; text-transform: none; }
 .tide-error-summary__title { font-size: var(--tide-font-size-control); line-height: var(--tide-leading-body); font-weight: var(--tide-font-weight-action); }
 .tide-error-summary__list { display: grid; gap: var(--tide-space-2); padding-inline-start: var(--tide-space-5); list-style: disc; }
 @media (width < 30rem) {

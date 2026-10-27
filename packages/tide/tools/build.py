@@ -10,6 +10,18 @@ ROOT=Path(__file__).resolve().parents[1]
 PROJECT=ROOT.parents[1]
 OUT=PROJECT/'build/tide'
 
+def strip_css_comments(source):
+    """Omit source commentary without rewriting CSS tokens, strings or URLs.
+
+    Keep license/preserve comments. Readable canonical modules remain unchanged.
+    This is deliberately not a CSS minifier.
+    """
+    tokens=re.compile(r'''\burl\((?:'(?:\\[\s\S]|[^'\\])*'|"(?:\\[\s\S]|[^"\\])*"|\\[\s\S]|[^'"\\)])*\)|'(?:\\[\s\S]|[^'\\])*'|"(?:\\[\s\S]|[^"\\])*"|/\*[\s\S]*?\*/''',re.I)
+    def keep(match):
+        value=match.group()
+        return ' ' if value.startswith('/*') and not re.search(r'^/\*!|@license|@preserve',value,re.I) else value
+    return tokens.sub(keep,source)
+
 def outputs():
     _,resolved,audit=load_themes(ROOT/'tokens/themes.json')
     themes=theme_styles(resolved)
@@ -19,7 +31,7 @@ def outputs():
     for name in modules:
         content=themes if name=='themes' else (ROOT/'css'/f'{name}.css').read_text(encoding='utf-8')
         if name=='components':content+='\n@layer extensions {\n'+(ROOT/'css/patterns.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/content.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/filter-panel.css').read_text(encoding='utf-8')+'\n'+(ROOT/'css/page-patterns.css').read_text(encoding='utf-8')+'\n}\n'
-        bundle.append('@layer tide.'+name+' {\n'+content+'\n}')
+        bundle.append('@layer tide.'+name+' {\n'+strip_css_comments(content)+'\n}')
     files={OUT/'css/tide.css':('\n\n'.join(bundle)+'\n').encode(),OUT/'css/themes.css':themes.encode(),OUT/'tokens/resolved.json':(json.dumps(resolved,indent=2)+'\n').encode(),OUT/'tokens/primitives.json':(json.dumps(dict(re.findall(r'(--tide-[\w-]+):\s*([^;]+);',(ROOT/'css/tokens.css').read_text(encoding='utf-8'))),indent=2)+'\n').encode(),PROJECT/'build/reports/contrast.json':(json.dumps({'standard':'WCAG 2 relative luminance, sRGB','themes':audit},indent=2)+'\n').encode()}
     for folder in ('assets','licenses'):
         for p in (ROOT/folder).rglob('*'):

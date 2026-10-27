@@ -28,7 +28,7 @@
 .tide-form-section h2 { margin-block-end: var(--tide-space-1); }
 .tide-form-actions { display: grid; gap: var(--tide-space-3); margin-block-start: var(--tide-space-6); }
 .tide-search-line { display: grid; grid-template-columns: minmax(0, 1fr) var(--tide-size-control); gap: var(--tide-space-2); }
-.tide-results { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--tide-space-3); padding: var(--tide-space-5) var(--tide-layout-inset); border-block-start: var(--tide-border-hairline); color: var(--tide-color-text-secondary); font-size: var(--tide-font-size-caption); line-height: var(--tide-leading-caption); }
+.tide-results { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--tide-space-3); padding: var(--tide-space-4) var(--tide-layout-inset); border-block-start: var(--tide-border-hairline); color: var(--tide-color-text-secondary); }
 .tide-summary { display: grid; gap: var(--tide-space-4); }
 .tide-summary > div { display: grid; grid-template-columns: 4.75rem minmax(0, 1fr); gap: var(--tide-space-4); }
 .tide-summary dt { color: var(--tide-color-text-muted); font-size: var(--tide-font-size-caption); }

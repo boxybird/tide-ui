@@ -117,6 +117,7 @@ def resolve(mode):
     hover = mix(roles['accent'], roles['accent-state-target'], .08)
     roles['on-accent'] = fit(roles['on-accent'], [roles['accent'], hover])
     roles['accent-hover'] = hover
+    roles['accent-active'] = mix(roles['accent'], roles['accent-state-target'], .16)
     roles['border-subtle'] = roles.get('border-subtle', gamut([l + (-.14 if light_surface else .14), c * .6, h]))
     roles['border-strong'] = roles.get('border-strong', gamut([l + (-.25 if light_surface else .25), c * .65, h]))
     roles['border-control'] = fit(roles.get('border-control', [.5 if light_surface else .65, min(c, .035), h]), backgrounds, 3.15)
@@ -139,6 +140,7 @@ def resolve(mode):
     roles['on-photo-accent'] = fit([.229171,.022842,200.5214], [roles['photo-accent']])
     roles['photo-state-target'] = [0.,0.,0.] if luminance(roles['on-photo-accent']) > luminance(roles['photo-accent']) else [1.,0.,0.]
     roles['photo-accent-hover'] = mix(roles['photo-accent'], roles['photo-state-target'], .08)
+    roles['photo-accent-active'] = mix(roles['photo-accent'], roles['photo-state-target'], .16)
     roles['on-photo-accent'] = fit(roles['on-photo-accent'], [roles['photo-accent'],roles['photo-accent-hover']])
     roles['texture-opacity'] = mode.get('texture', .025 if light_surface else .2)
     return roles
@@ -157,7 +159,8 @@ def checks(roles):
         for status in ('success', 'warning', 'danger'):
             add(f'status-{status}-text', bg, 4.5, 'Status / validation text')
     add('on-accent', 'accent', 4.5, 'Primary button label')
-    add('on-accent', 'accent-hover', 4.5, 'Hovered / pressed primary button label')
+    add('on-accent', 'accent-hover', 4.5, 'Hovered primary button label')
+    add('on-accent', 'accent-active', 4.5, 'Active primary button label')
     add('selected-text', 'selected-surface', 4.5, 'Selected option label')
     add('selected-border', 'selected-surface', 3, 'Selected option boundary')
     add('focus', 'selected-surface', 3, 'Selected option focus')
@@ -167,4 +170,5 @@ def checks(roles):
         add(fg,'photo-canvas',4.5,'Photo context, opaque base (scrim requires image review)')
     add('on-photo-accent','photo-accent',4.5,'Photo primary button')
     add('on-photo-accent','photo-accent-hover',4.5,'Photo button hover')
+    add('on-photo-accent','photo-accent-active',4.5,'Photo button active')
     return rows

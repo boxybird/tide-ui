@@ -1,4 +1,4 @@
-# Page recipes · Tide 1.5.3
+# Page recipes · Tide 1.7.1
 
 The kit and canonical specimens use only HTML/CSS and native browser behavior. There are no script imports, event handlers or required browser modules. Shared composition CSS lives in `css/page-patterns.css`; component states remain with their existing owners. All registered specimens are generated in every theme and both modes. See [browser policy](BROWSER-POLICY.md).
 
@@ -9,6 +9,8 @@ The kit and canonical specimens use only HTML/CSS and native browser behavior. T
 A populated venue shows sample events. A venue with no entries retains its information and an explicit empty state. An authored filtered-empty state explains recovery without hiding useful venue information. The kit supplies presentation and semantics, not matching or sourcing.
 
 ## Form validation
+
+The current [form control contract](FORMS.md) and `frames/form-states.html` matrix cover shared typography/geometry, native and authored invalid states, disabled precedence, linked summaries and file/reset behavior in all ten modes. The earlier `form-validation.html` remains a native usage example; its contact disclosure now receives the shared fallback chevron when no explicit icon is authored.
 
 Use associated labels, supported native input types, required constraints and visible hints. The form specimen uses ordinary native submission and reset. A successful submission reloads its static local page; no service receives or stores a listing.
 
