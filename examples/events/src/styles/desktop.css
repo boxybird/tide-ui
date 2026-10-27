@@ -4,7 +4,7 @@
   @media (width >= 75rem) {
     .tide-app-document {
       container-type: inline-size;
-      scroll-padding-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6));
+      scroll-padding-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6) + var(--tide-lineup-target-offset, 0px));
     }
     .tide-app {
       --tide-app-outer-inset: var(--tide-space-8);

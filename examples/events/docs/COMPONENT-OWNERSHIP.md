@@ -7,7 +7,7 @@ The example consumes Tide 1.5.3 and contains no browser JavaScript. Shared compo
 | Event cards, hero/details, fields, notices, badges, prose, native controls and filter-panel internals | `packages/tide/` component recipes and CSS |
 | 20/35/45 centered desktop layout, bounded left panes and natural right document | `src/styles/desktop.css`, static `tide-app--columns` body modifier and authored workspace templates |
 | Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
-| Native narrow-screen controls | `filters.html`, `filters.css`; ordinary form, details/summary and reset, with no modal or moved controls |
+| Native responsive filter drawer | `filter-trigger.html`, `filter-rail.html`, `filters.css`; popover buttons, left slide/reduced motion, scrolling body/pinned footer and CSS return to the reserved desktop column; one form/control set, native disclosure/reset, browser-owned dismissal/focus |
 | Result/card/month counts and label spans | Build-time `tools/html_templates.py`, `data/events.json`, `data/pages.json` and registered partials |
 | Category/empty specimens and complete previews | Typed `sampleFilter` route context; four authored result pages, never browser matching or fetching |
 | Venue information and exact IDs | Authored venue fragment and native route context; no DOM rewriting |

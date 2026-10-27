@@ -1,5 +1,12 @@
 # Changelog
 
+## Events example 2.0.4 · 2026-10-26
+
+- Gave Saved separate intrinsic intro/summary rows and a bounded feed row, preventing a stretched or collapsed count row.
+- Corrected native month fragments to align the selected month at the feed top and preserve the outer desktop reading position. Phone month targets have no leftover heading gap; no browser JavaScript is added.
+- Restored the mobile/tablet filter drawer with native popover buttons and CSS entry/exit motion from the left, Close/Escape/outside-click dismissal, native focus return, reduced motion and a scrolling body above the pinned footer. No browser JavaScript is added.
+- Kept one original form/control set and the permanent desktop filter column. An open drawer resized to desktop fits the reserved column through CSS anchors with a shared-geometry fallback. Added native invoker-target association checks and recorded browser coverage in the [drawer contract](examples/events/docs/FILTER-DRAWER.md).
+
 ## Tide kit 1.5.3 / Events example 2.0.3 · 2026-10-26
 
 - Restored the compact native Reset button at the left of the events filter footer and the page event count at the right, using app-scoped CSS grid and shorter labels without browser JavaScript.

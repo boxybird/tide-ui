@@ -1,5 +1,5 @@
 {
-  "version": "2.0.3",
+  "version": "2.0.4",
   "kitVersion": "1.5.3",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
@@ -18,7 +18,7 @@
   ],
   "behaviorHome": [],
   "contract": "docs/COMPONENT-OWNERSHIP.md",
-  "notes": "Browser-JavaScript-free native HTML/CSS specimens. Authored result states replace live search; native navigation, disclosures, reset and validation remain. Development tools are separate.",
+  "notes": "Browser-JavaScript-free native HTML/CSS specimens. One native popover filter drawer becomes the permanent desktop column. Authored result states replace live search; native navigation, disclosures, reset and validation remain. Development tools are separate.",
   "acceptedInputs": [
     "Sticky hierarchy and venue journey, integrated in App 1.1.0"
   ],
@@ -57,6 +57,7 @@
     "src/templates/filter-actions.html",
     "src/templates/filter-status.html",
     "src/templates/filter-rail.html",
+    "src/templates/filter-trigger.html",
     "src/templates/filters.html",
     "src/templates/form-field.html",
     "src/templates/form-hint.html",

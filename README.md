@@ -2,7 +2,7 @@
 
 A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
 
-Kit **1.5.3** · Events example **2.0.3** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Kit **1.5.3** · Events example **2.0.4** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
 ## Project scope
 

@@ -39,9 +39,19 @@
     font-size: var(--tide-font-size-caption);
   }
   .tide-lineup__year { color: var(--tide-color-text-muted); font-weight: var(--tide-font-weight-regular); }
+  .tide-lineup__month { scroll-margin-block-start: 0; }
+  .tide-app-document:has(.tide-lineup__month:target) { scroll-padding-block-start: 0; }
   @media (width >= 60rem) {
     .tide-app__results { display: grid; grid-template-rows: auto minmax(0, 1fr); overflow: clip; }
-    .tide-app__feed-scroll { min-block-size: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-gutter: stable; scroll-padding-block-start: var(--tide-space-16); }
+    /* Saved has an intro before its permanent summary; only the feed grows. */
+    .tide-app__results:has(> .tide-app__intro) { grid-template-rows: auto auto minmax(0, 1fr); }
+    .tide-app__feed-scroll { min-block-size: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-gutter: stable; scroll-padding-block-start: 0; }
+    /* Native fragments scroll every ancestor. Reserve the summary in the
+       outer page only, using its three one-line rows and existing rhythm. */
+    .tide-app-document:has(.tide-lineup__month:target) {
+      --tide-lineup-target-offset: calc(var(--tide-space-6) + var(--tide-leading-label) + var(--tide-leading-page) + var(--tide-leading-body) + 2 * var(--tide-space-2) + var(--tide-space-4));
+      scroll-padding-block-start: calc(var(--tide-space-6) + var(--tide-lineup-target-offset));
+    }
     .tide-app__filter-body { scrollbar-gutter: stable; }
   }
   /* Isolate the complete feed beneath its sibling permanent summary. */

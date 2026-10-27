@@ -11,7 +11,7 @@ The Tide kit, its canonical HTML specimens, the reference site and the events ex
 | Runtime creation of count/month spans | Escaped build-time HTML partials |
 | Summary/month-height observers | Summary outside the native feed scroller; month headers stick at its top |
 | Occupied-scrollbar measurement and viewport writes | CSS `scrollbar-gutter`, bounded grid rows and viewport units |
-| Desktop assembly and responsive control movement | One authored panel and native disclosures; no drawer controller |
+| Desktop assembly and responsive control movement | One authored panel, a native popover drawer below 75rem and CSS desktop placement; native disclosures, no drawer controller |
 | Click interception, delayed navigation and custom reading history | Native links, fragments and browser Back/history |
 | Filtering engine and fetched first-result previews | Authored all/category/empty-result documents with complete HTML previews |
 | Venue DOM rewriting | Authored route/venue context and links |
@@ -25,6 +25,8 @@ The initial audit found two kit HTML specimens importing a site-only demo script
 Arbitrary text/date matching, live counts, persistent saved state, custom modal draft/cancel logic and query-driven photo inspection are not CSS features. They are removed from this native UI specimen rather than reimplemented through hidden scripts or a new service. The events example clearly labels its controls as examples and links to authored result pages. Query parameters are not interpreted by browser code. The same 54 event records and original native event paths remain; four additional category/empty state pages support interface review.
 
 A native form reset restores authored values, including checked fixture defaults. Native input validation covers supported required/type constraints; a From/Through relationship is not dynamically validated. Populated error summaries are authored states, distinct from native browser messages. Native file selection does not promise custom size/content checks. No operational backend is added.
+
+Native HTML can own panel opening and dismissal without JavaScript. Events 2.0.4 restores the narrow-screen filter drawer through `popover="auto"`, `popovertarget` and CSS slide transitions, while preserving the permanent desktop column and one original control set. It is non-modal: closing keeps current form values and does not implement draft rollback. The drawer contract is `examples/events/docs/FILTER-DRAWER.md` in the source checkout.
 
 ## Verification limits
 

@@ -99,6 +99,7 @@ class AppTemplates:
             **{name:Html('{{'+name+'}}') for name in ('KIT_CSS','APP_CSS','KIT_ASSETS')},
         }
         collection = page.get('collection')
+        values['FILTER_TRIGGER'] = self.partial('filter-trigger', {}) if collection and collection!='saved' else Html('')
         if collection is None:
             return values
         saved = collection=='saved'

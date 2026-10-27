@@ -5,7 +5,7 @@ There is no browser JavaScript. `behaviorHome` is empty; `document.html` loads s
 ## Native behavior
 
 - Links and fragment URLs navigate normally, including modified clicks and browser Back.
-- Native details/summary provides disclosure. There is no JavaScript modal, focus trap, viewport resizing or control relocation.
+- Below 75rem a native `popover="auto"` panel and `popovertarget` buttons provide the left filter drawer, explicit Close, Escape/outside-click dismissal and focus return. CSS supplies sliding motion, reduced motion and responsive placement; the same controls form the permanent desktop column. This is a non-modal popover, with no authored focus trap, draft rollback or control relocation. Native details/summary still provides date/category disclosure. See the [drawer contract](FILTER-DRAWER.md).
 - Native form reset restores source defaults. Required/type constraints use browser validation. Sample From/Through controls do not implement relational date validation.
 - The file chooser provides its native selection/replacement UI. Content and size validation are not supplied by the UI kit.
 - CSS supplies grid/subgrid, sticky headings, viewport height and native gutter reservation. The result summary is outside the scrolling feed, eliminating dynamic sticky offsets.

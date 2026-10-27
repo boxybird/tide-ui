@@ -26,7 +26,7 @@ class Scan(HTMLParser):
         self.classes+=d.get('class','').split()
         for key in ('href','src','action'):
             if d.get(key):self.refs.append(d[key])
-        for key in ('for','form','aria-describedby','aria-labelledby','aria-controls'):self.bound+=d.get(key,'').split()
+        for key in ('for','form','aria-describedby','aria-labelledby','aria-controls','popovertarget','commandfor'):self.bound+=d.get(key,'').split()
         if tag=='label' and d.get('for'):self.labels.append(d['for'])
         if tag in ('input','textarea','select') and d.get('type') not in ('hidden','checkbox','radio'):self.controls.append(d)
         if tag=='time' and d.get('datetime'):self.times.append(d['datetime'])

@@ -8,7 +8,7 @@ Only `{{UPPERCASE_VALUE}}` and `{{> registered-partial}}` are supported. Plain v
 | --- | --- |
 | `document.html`, `workspace.html` | Native document and main browse/detail slots; stylesheets only |
 | `workspace-browse.html`, `workspace-results.html` | Static filter/list grouping and results region |
-| `filter-rail.html`, `filters.html`, `filter-status.html`, `filter-actions.html` | One native form/control set, disclosures, reset and static result-state links |
+| `filter-trigger.html`, `filter-rail.html`, `filters.html`, `filter-status.html`, `filter-actions.html` | Native popover trigger/close and one responsive panel/form/control set, disclosures, reset and static result-state links |
 | `results-intro.html`, `lineup-summary.html`, `month-group.html` | Authored headings/counts and month-name/year spans; no DOM rewriting |
 | `event-list.html`, `month-nav.html`, `month-jump.html` | Summary outside the native feed scroller, stable fragment destinations and complete-feed isolation |
 | `event-card.html`, `event-detail.html`, `detail-*.html` | Cards and all 54 native event details, with authored preview heading levels |

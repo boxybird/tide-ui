@@ -1,10 +1,12 @@
-# Burque events example · 2.0.3
+# Burque events example · 2.0.4
 
 A browser-JavaScript-free HTML/CSS consumer of Tide 1.5.3. All 54 events are authored samples. The original 60 routes remain, plus Music, Comedy, Workshop and empty-result specimens: 64 documents in the default app and each of ten theme/mode combinations.
 
-Desktop keeps the centered 92rem maximum and 20/35/45 filters/list/detail proportions. CSS Grid/subgrid, native scrolling, sticky month headers and viewport units supply layout. The result summary sits outside the feed scroller, so no height observer is needed. Narrow layouts keep the one original control set in the document with native disclosures. There is no scripted drawer or duplicated form.
+Desktop keeps the centered 92rem maximum and 20/35/45 filters/list/detail proportions. CSS Grid/subgrid, native scrolling, sticky month headers and viewport units supply layout. The result summary sits outside the feed scroller, so no height observer is needed. Below 75rem, Filters opens the same control set in a native popover drawer that slides in from the left. Close, Escape and outside-click dismissal are browser-owned; reduced motion removes the slide. The body scrolls above a pinned footer. No browser scripts or duplicated form are required. See the [drawer contract and verification](docs/FILTER-DRAWER.md).
 
 Native links, fragments, browser Back, input controls, reset, required/type validation and file selection remain. Free-text/date matching, live result counts, fetched previews, session state and photo/inspection message hooks are removed. Controls are explicitly labelled examples. Use the authored result-state links to review populated/category/empty layouts; URL query values are not evaluated. No backend or service is introduced.
+
+Saved reserves separate intro, summary and scrolling-feed rows. Native month links align the selected heading at the feed top; desktop summary clearance comes from named type/spacing inputs. See the [desktop contract and browser coverage](docs/DESKTOP-LAYOUT.md).
 
 Run `npm run build`, `npm run check`, `npm run dev` from the root. Open `/events/app/index.html`; `/events/index.html` links to all modes. Node/Python are development tools only. See [zero-browser-JavaScript policy](../../docs/NO-BROWSER-JAVASCRIPT.md).
 

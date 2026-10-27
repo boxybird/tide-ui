@@ -1,16 +1,59 @@
-/* Native disclosures remain in the document at narrow widths. No modal,
-   cloned controls, hidden enhancement state or viewport script is required. */
+/* One native popover/control set: a left drawer below 75rem, the permanent
+   filter column above it. Opening, dismissal and focus return are browser-owned. */
 @layer tide.app-filters {
+  .tide-app__filter-trigger, .tide-app__filter-header { display: none; }
+  .tide-app__filter-rail[popover] { inset: auto; max-inline-size: none; max-block-size: none; }
   .tide-app__filter-footer .tide-app__filter-status-row {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
   }
   .tide-app__filter-footer [data-filter-reset] { white-space: nowrap; }
   .tide-app__filter-footer .tide-app__filter-count { min-inline-size: 0; text-align: end; }
+  @media (width >= 75rem) {
+    .tide-app__filter-clip { anchor-name: --tide-app-filter-column; }
+    .tide-app__filter-rail[popover] { display: grid; }
+    /* An already-open popover stays in the top layer when the viewport widens.
+       Fit it to the reserved column until native dismissal; never clone/move it.
+       Shared grid geometry is the fallback for browsers without CSS anchors. */
+    .tide-app__filter-rail:popover-open {
+      position: fixed;
+      position-anchor: --tide-app-filter-column;
+      inset-block-start: var(--tide-app-panel-top);
+      inset-inline-start: var(--tide-app-content-inset);
+      inline-size: calc((100cqw - 2 * var(--tide-app-content-inset) - 2 * var(--tide-app-pane-gap)) * .2);
+      block-size: var(--tide-app-panel-height);
+      inset-block-start: anchor(top, var(--tide-app-panel-top));
+      inset-inline-start: anchor(left, var(--tide-app-content-inset));
+      inline-size: anchor-size(width, calc((100cqw - 2 * var(--tide-app-content-inset) - 2 * var(--tide-app-pane-gap)) * .2));
+      block-size: anchor-size(height, var(--tide-app-panel-height));
+    }
+    .tide-app__filter-rail::backdrop { display: none; }
+  }
   @media (width < 75rem) {
-    .tide-app__filter-rail { block-size: auto; overflow: visible; }
-    .tide-app__filter-body { overflow: visible; }
-    .tide-app__filter-footer { padding: var(--tide-space-4) var(--tide-layout-inset); }
+    .tide-app__filter-trigger { display: inline-flex; }
+    .tide-app__filter-header { display: grid; }
+    .tide-app__filter-rail[popover] {
+      position: fixed;
+      inset: 0 auto 0 0;
+      inline-size: min(24rem, calc(100dvw - var(--tide-space-8)));
+      block-size: 100dvh;
+      transform: translateX(-100%);
+    }
+    .tide-app__filter-rail[popover]:not(:popover-open) { display: none; }
+    .tide-app__filter-rail:popover-open { display: grid; transform: translateX(0); }
+    .tide-app__filter-body { overflow-y: auto; }
+    .tide-app__filter-footer {
+      padding: var(--tide-space-5) var(--tide-layout-inset) max(var(--tide-space-6), env(safe-area-inset-bottom, 0px));
+    }
+    html:has(.tide-app__filter-rail:popover-open) { overflow: hidden; scrollbar-gutter: stable; }
+    @media (prefers-reduced-motion: no-preference) {
+      .tide-app__filter-rail[popover] {
+        transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
+      }
+      @starting-style {
+        .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
+      }
+    }
   }
   @media (width < 60rem) { .tide-app--event .tide-app__browse { display: none; } }
 }
