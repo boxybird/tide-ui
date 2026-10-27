@@ -1,9 +1,11 @@
 /* Page recipes. Kit owns internal rhythm; consumers own viewport geometry. */
+.tide-venue-profile, .tide-venue-card, .tide-site-header { font-family: var(--tide-font-family); font-style: normal; font-size: var(--tide-font-size-body); line-height: var(--tide-leading-body); font-weight: var(--tide-font-weight-regular); letter-spacing: normal; text-transform: none; }
 .tide-venue-profile { padding: var(--tide-space-6); overflow-wrap: anywhere; }
+.tide-venue-profile--flush-inline { padding-inline: 0; }
 .tide-venue-profile > * + * { margin-block-start: var(--tide-space-6); }
 .tide-venue-profile__header > * + * { margin-block-start: var(--tide-space-3); }
 .tide-venue-card { display: grid; gap: var(--tide-space-3); padding-block: var(--tide-space-6); border-block-end: var(--tide-border-hairline); overflow-wrap: anywhere; }
-.tide-venue-card__title { font-size: var(--tide-font-size-section); line-height: var(--tide-leading-section); font-weight: var(--tide-font-weight-heading); }
+.tide-venue-card__title { font-size: var(--tide-font-size-section); line-height: var(--tide-leading-section); font-weight: var(--tide-font-weight-heading); letter-spacing: var(--tide-tracking-title); }
 .tide-site-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--tide-space-4) var(--tide-space-8); padding: var(--tide-space-6); border-block-end: var(--tide-border-hairline); }
 .tide-site-header__links { display: flex; flex-wrap: wrap; gap: var(--tide-space-2) var(--tide-space-5); list-style: none; }
 .tide-site-header__link { display: inline-flex; align-items: center; min-block-size: var(--tide-size-target); color: var(--tide-color-text-secondary); text-decoration: underline; text-underline-offset: var(--tide-space-1); overflow-wrap: anywhere; }

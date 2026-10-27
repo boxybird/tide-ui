@@ -30,6 +30,7 @@
 .tide :where(input, textarea)::placeholder { color: var(--tide-color-text-muted); opacity: 1; }
 .tide ::selection { color: var(--tide-color-selected-text); background: var(--tide-color-selected-surface); }
 .tide-icon { inline-size: var(--tide-size-icon); block-size: var(--tide-size-icon); flex: 0 0 auto; }
+.tide-eyebrow, .tide-caption { font-family: var(--tide-font-family); font-style: normal; font-weight: var(--tide-font-weight-regular); letter-spacing: normal; text-transform: none; }
 .tide-eyebrow { display: block; color: var(--tide-color-text-label); font-size: var(--tide-font-size-label); font-weight: var(--tide-font-weight-medium); line-height: var(--tide-leading-label); letter-spacing: var(--tide-tracking-label); text-transform: uppercase; }
 .tide-caption { color: var(--tide-color-text-muted); font-size: var(--tide-font-size-caption); line-height: var(--tide-leading-caption); }
 .tide-link { color: var(--tide-color-accent); text-underline-offset: var(--tide-space-1); }

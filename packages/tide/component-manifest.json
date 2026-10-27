@@ -1,5 +1,5 @@
 {
-  "version": "1.9.0",
+  "version": "1.10.0",
   "classConvention": "BEM with tide- prefix",
   "runtime": "HTML and CSS; native browser behavior only",
   "componentSource": "templates/library.html#components",
@@ -315,7 +315,10 @@
       "name": "Organizer",
       "block": "tide-organizer",
       "states": [
-        "contact link"
+        "contact link",
+        "long content",
+        "context isolation",
+        "hidden ancestor"
       ],
       "roles": [
         "text-primary",
@@ -323,16 +326,28 @@
         "border-subtle",
         "accent"
       ],
-      "fixture": "library"
+      "fixture": "kit-closeout.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/closeout-components.html",
+      "contract": "docs/KIT-CLOSEOUT.md",
+      "styleOwnership": "kit",
+      "behavior": "Static contact information with native links; consumers supply truthful identity and contact destinations.",
+      "elements": [
+        "title"
+      ]
     },
     {
       "name": "Sponsored placement",
       "block": "tide-partner",
       "elements": [
-        "label"
+        "label",
+        "title"
       ],
       "states": [
-        "explicit sponsored wording"
+        "explicit sponsored wording",
+        "long content",
+        "context isolation",
+        "hidden ancestor"
       ],
       "roles": [
         "canvas",
@@ -340,7 +355,12 @@
         "text-secondary",
         "text-muted"
       ],
-      "fixture": "library"
+      "fixture": "kit-closeout.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/closeout-components.html",
+      "contract": "docs/KIT-CLOSEOUT.md",
+      "styleOwnership": "kit",
+      "behavior": "Static sponsorship with persistent explicit wording; no simulated selection, dismissal or tracking behavior."
     },
     {
       "name": "Event card",
@@ -399,7 +419,8 @@
               "inline-flex"
             ]
           },
-          "purpose": "Host controls preview-label visibility."
+          "purpose": "Host controls preview-label visibility.",
+          "reason": "Existing documented preview-label visibility or outline suppression; typography and geometry remain kit-owned."
         },
         {
           "target": ".tide-event-card--in-view",
@@ -408,7 +429,8 @@
               "none"
             ]
           },
-          "purpose": "Host may suppress preview decoration when there is no paired detail pane."
+          "purpose": "Host may suppress preview decoration when there is no paired detail pane.",
+          "reason": "Existing documented preview-label visibility or outline suppression; typography and geometry remain kit-owned."
         }
       ],
       "behavior": "Native sibling covering link and optional independent action; no nested controls or simulated article button. Host renders actual preview/status/availability. Kit owns type/spacing; only declared preview visibility/outline exceptions remain consumer-owned.",
@@ -486,17 +508,26 @@
       "name": "Missing photo",
       "block": "tide-fallback",
       "elements": [
-        "label"
+        "label",
+        "title"
       ],
       "states": [
-        "no image"
+        "no image",
+        "long content",
+        "context isolation",
+        "hidden ancestor"
       ],
       "roles": [
         "surface",
         "text-primary",
         "text-muted"
       ],
-      "fixture": "review.html"
+      "fixture": "kit-closeout.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/closeout-components.html",
+      "contract": "docs/KIT-CLOSEOUT.md",
+      "styleOwnership": "kit",
+      "behavior": "Text alternative when no event image is available; no decorative empty image or fabricated alt text."
     },
     {
       "name": "File field",
@@ -551,7 +582,10 @@
       ],
       "states": [
         "full viewport",
-        "short viewport"
+        "short viewport",
+        "long content",
+        "context isolation",
+        "hidden ancestor"
       ],
       "roles": [
         "photo-canvas",
@@ -561,7 +595,55 @@
         "photo-accent",
         "on-photo-accent"
       ],
-      "fixture": "01-event.html"
+      "fixture": "kit-closeout.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/closeout-components.html",
+      "contract": "docs/KIT-CLOSEOUT.md",
+      "styleOwnership": "kit",
+      "behavior": "Photographic reading context with native links and semantic facts. Kit owns internal rhythm; consumer exceptions cover safe-area, viewport, crop protection and print placement only.",
+      "consumerStyleExceptions": [
+        {
+          "target": ".tide-event-hero",
+          "properties": {
+            "min-block-size": [
+              "calc(100svh - var(--tide-space-20))",
+              "0"
+            ]
+          },
+          "reason": "Host viewport reserve and print flow; no change to component type or internal rhythm."
+        },
+        {
+          "target": ".tide-event-hero__toolbar",
+          "properties": {
+            "inset-block-start": [
+              "calc(var(--tide-space-5) + env(safe-area-inset-top, 0px))"
+            ],
+            "display": [
+              "none"
+            ]
+          },
+          "reason": "Native safe-area clearance and print omission of navigation."
+        },
+        {
+          "target": ".tide-event-hero__content",
+          "properties": {
+            "padding-block-end": [
+              "max(var(--tide-space-6), env(safe-area-inset-bottom, 0px))"
+            ],
+            "--tide-photo-reserve": [
+              "32svh"
+            ],
+            "padding-block-start": [
+              "var(--tide-photo-reserve)",
+              "var(--tide-space-6)"
+            ],
+            "background": [
+              "linear-gradient(180deg, transparent 0 calc(var(--tide-photo-reserve) - var(--tide-space-20)), var(--tide-photo-scrim-medium) calc(var(--tide-photo-reserve) - var(--tide-space-6)), var(--tide-photo-scrim-strong) var(--tide-photo-reserve), var(--tide-color-canvas) 100%)"
+            ]
+          },
+          "reason": "Existing bounded preview crop protection, safe area and print placement; accepted values are constrained."
+        }
+      ]
     },
     {
       "name": "Expandable disclosure",
@@ -647,7 +729,10 @@
         "section-title"
       ],
       "states": [
-        "scrolling rich detail"
+        "scrolling rich detail",
+        "long content",
+        "context isolation",
+        "hidden ancestor"
       ],
       "roles": [
         "canvas",
@@ -656,7 +741,41 @@
         "text-muted",
         "accent"
       ],
-      "fixture": "01-event.html"
+      "fixture": "kit-closeout.html",
+      "source": "css/components.css",
+      "htmlSource": "templates/closeout-components.html",
+      "contract": "docs/KIT-CLOSEOUT.md",
+      "styleOwnership": "kit",
+      "behavior": "Semantic headings, paragraphs, lists and native fragments. Consumers supply content, heading levels and IDs; documented exceptions cover reading measure, safe-area and fragment clearance.",
+      "consumerStyleExceptions": [
+        {
+          "target": ".tide-event-details",
+          "properties": {
+            "padding-block-end": [
+              "max(var(--tide-space-10), env(safe-area-inset-bottom, 0px))"
+            ]
+          },
+          "reason": "Safe-area bottom clearance."
+        },
+        {
+          "target": ":is(.tide-event-details > p, .tide-event-details__section)",
+          "properties": {
+            "max-inline-size": [
+              "var(--tide-layout-reading)"
+            ]
+          },
+          "reason": "Consumer reading measure in a wide detail document."
+        },
+        {
+          "target": ".tide-event-details__section-title",
+          "properties": {
+            "scroll-margin-block-start": [
+              "var(--tide-space-6)"
+            ]
+          },
+          "reason": "Native fragment clearance in the host document."
+        }
+      ]
     },
     {
       "name": "Prose",
@@ -698,7 +817,10 @@
         "description"
       ],
       "states": [
-        "extension example"
+        "extension example",
+        "long content",
+        "context isolation",
+        "hidden ancestor"
       ],
       "roles": [
         "surface",
@@ -706,7 +828,12 @@
         "text-secondary",
         "border-subtle"
       ],
-      "fixture": "extensions/index.html"
+      "fixture": "kit-closeout.html",
+      "source": "extensions/panel.css",
+      "htmlSource": "templates/closeout-components.html",
+      "contract": "docs/KIT-CLOSEOUT.md",
+      "styleOwnership": "kit",
+      "behavior": "Additive extension stylesheet, loaded explicitly. Theme-aware static panel and native links; no behavior engine."
     },
     {
       "name": "Filter panel",
@@ -768,7 +895,10 @@
       "fixture": "venue.html",
       "styleOwnership": "kit",
       "contract": "docs/PAGE-PATTERNS.md#venues",
-      "behavior": "Heading, address/contact, access information, actions and event-specific guidance. Consumers own sticky/scroll placement; retain profile information for empty schedules and filtered zero matches."
+      "behavior": "Heading, address/contact, access information, actions and event-specific guidance. Consumers own sticky/scroll placement; retain profile information for empty schedules and filtered zero matches.",
+      "variants": [
+        "flush-inline"
+      ]
     },
     {
       "name": "Venue card",
@@ -855,32 +985,73 @@
     {
       "block": "tide-back-link",
       "source": "css/components.css",
-      "purpose": "Back navigation with icon"
+      "purpose": "Back navigation with icon",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Back navigation with icon Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html"
     },
     {
       "block": "tide-brand",
       "source": "css/components.css",
-      "purpose": "Wordmark navigation"
+      "purpose": "Wordmark navigation",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Wordmark navigation Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html"
     },
     {
       "block": "tide-caption",
       "source": "css/base.css",
-      "purpose": "Secondary caption typography"
+      "purpose": "Secondary caption typography",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Secondary caption typography Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/adopted-patterns.html",
+      "fixture": "library",
+      "consumerStyleExceptions": [
+        {
+          "target": ".tide-caption",
+          "properties": {
+            "margin-block-end": [
+              "var(--tide-space-4)"
+            ]
+          },
+          "reason": "External spacing between a caption and a consumer form; caption type remains kit-owned."
+        }
+      ]
     },
     {
       "block": "tide-disclosure",
       "source": "css/components.css",
-      "purpose": "Event-detail disclosure copy; not an interactive disclosure"
+      "purpose": "Event-detail disclosure copy; not an interactive disclosure",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Event-detail disclosure copy; not an interactive disclosure Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html"
     },
     {
       "block": "tide-event-list",
       "source": "css/layout.css",
-      "purpose": "Touching event-card stack"
+      "purpose": "Touching event-card stack",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Touching event-card stack Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/adopted-patterns.html",
+      "fixture": "library"
     },
     {
       "block": "tide-eyebrow",
       "source": "css/base.css",
-      "purpose": "Small category/context label"
+      "purpose": "Small category/context label",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Small category/context label Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/adopted-patterns.html",
+      "fixture": "library"
     },
     {
       "block": "tide-fieldset",
@@ -888,22 +1059,87 @@
       "purpose": "Native group and explicit legend typography; consumers may compose group layout.",
       "htmlSource": "templates/controls.html",
       "fixture": "form-states.html",
-      "contract": "docs/FORMS.md"
+      "contract": "docs/FORMS.md",
+      "styleOwnership": "kit",
+      "behavior": "Native group and explicit legend typography; consumers may compose group layout. Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "consumerStyleExceptions": [
+        {
+          "target": ".tide-fieldset",
+          "properties": {
+            "display": [
+              "grid"
+            ],
+            "gap": [
+              "var(--tide-space-2)"
+            ]
+          },
+          "reason": "Consumers compose native group layout; legend and control typography remain kit-owned."
+        }
+      ]
     },
     {
       "block": "tide-icon",
       "source": "css/base.css",
-      "purpose": "Decorative icon dimensions"
+      "purpose": "Decorative icon dimensions",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Decorative icon dimensions Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/buttons.html",
+      "fixture": "library",
+      "consumerStyleExceptions": [
+        {
+          "target": ".tide-icon",
+          "properties": {
+            "inline-size": [
+              "var(--tide-size-icon-small)"
+            ],
+            "block-size": [
+              "var(--tide-size-icon-small)"
+            ]
+          },
+          "reason": "Explicit compact glyph choice in native navigation, independent of its target size."
+        }
+      ]
     },
     {
       "block": "tide-inclusions",
       "source": "css/components.css",
-      "purpose": "Event inclusion list"
+      "purpose": "Event inclusion list",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Event inclusion list Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html"
     },
     {
       "block": "tide-link",
       "source": "css/base.css",
-      "purpose": "Inline text navigation"
+      "purpose": "Inline text navigation",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Inline text navigation Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html",
+      "consumerStyleExceptions": [
+        {
+          "target": ".tide-link",
+          "properties": {
+            "display": [
+              "inline-flex"
+            ],
+            "align-items": [
+              "center"
+            ],
+            "min-block-size": [
+              "var(--tide-size-target)"
+            ],
+            "font-size": [
+              "var(--tide-font-size-caption)"
+            ]
+          },
+          "reason": "Explicit native compact filter-footer link with a full target; surrounding layout stays private."
+        }
+      ]
     },
     {
       "block": "tide-photo-control",
@@ -931,77 +1167,152 @@
     {
       "block": "tide-place",
       "source": "css/components.css",
-      "purpose": "Venue text within event details"
+      "purpose": "Venue text within event details",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Venue text within event details Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html"
     },
     {
       "block": "tide-schedule",
       "source": "css/components.css",
-      "purpose": "Event time/description pairs"
+      "purpose": "Event time/description pairs",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Event time/description pairs Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html"
     },
     {
       "block": "tide-search-line",
       "source": "css/layout.css",
-      "purpose": "Search input and submit action row"
+      "purpose": "Search input and submit action row",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Search input and submit action row Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/frames/search.html",
+      "fixture": "search.html"
     },
     {
       "block": "tide-sr-only",
       "source": "css/utilities.css",
-      "purpose": "Visually hidden accessible text"
+      "purpose": "Visually hidden accessible text",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Visually hidden accessible text Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html"
     },
     {
       "block": "tide-skip-link",
       "source": "css/utilities.css",
-      "purpose": "Focus-revealed native link to main content"
+      "purpose": "Focus-revealed native link to main content",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Focus-revealed native link to main content Native semantics and consumer behavior follow the documented supporting-block contract.",
+      "htmlSource": "templates/frames/button-states.html",
+      "fixture": "button-states.html"
     },
     {
       "block": "tide-frame",
       "source": "css/base.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Generated specimen wrapper with native scrolling. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/frames/01-list.html",
+      "fixture": "01-list.html",
+      "purpose": "Generated specimen wrapper with native scrolling"
     },
     {
       "block": "tide-list",
       "source": "css/layout.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Native list-page header, context, card stack and footer scaffold. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/frames/01-list.html",
+      "fixture": "01-list.html",
+      "purpose": "Native list-page header, context, card stack and footer scaffold"
     },
     {
       "block": "tide-saved-link",
       "source": "css/components.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Native saved-page destination with compact glyph and caption type. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/frames/01-list.html",
+      "fixture": "01-list.html",
+      "purpose": "Native saved-page destination with compact glyph and caption type"
     },
     {
       "block": "tide-state",
       "source": "css/layout.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Static adjacent-state separator. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/frames/states.html",
+      "fixture": "states.html",
+      "purpose": "Static adjacent-state separator"
     },
     {
       "block": "tide-chip-list",
       "source": "css/components.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Wrapping group of native chip controls. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/controls.html",
+      "fixture": "library",
+      "purpose": "Wrapping group of native chip controls"
     },
     {
       "block": "tide-u-start",
       "source": "css/utilities.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Explicit grid-item alignment. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/frames/received.html",
+      "fixture": "received.html",
+      "purpose": "Explicit grid-item alignment"
     },
     {
       "block": "tide-u-mb-8",
       "source": "css/utilities.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Explicit external 32px bottom margin. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/library.html",
+      "fixture": "library",
+      "purpose": "Explicit external 32px bottom margin"
     },
     {
       "block": "tide-u-mt-7",
       "source": "css/utilities.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Explicit external 28px top margin. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/frames/event-states.html",
+      "fixture": "event-states.html",
+      "purpose": "Explicit external 28px top margin"
     },
     {
       "block": "tide-u-mt-8",
       "source": "css/utilities.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Explicit external 32px top margin. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/buttons.html",
+      "fixture": "library",
+      "purpose": "Explicit external 32px top margin"
     },
     {
       "block": "tide-u-muted",
       "source": "css/utilities.css",
-      "note": "Existing selector registered during repository ownership audit; CSS unchanged."
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#supporting-blocks",
+      "behavior": "Secondary semantic text color. No state engine; inherited reading type is intentional for layout/utility helpers. Native descendants retain their semantics.",
+      "htmlSource": "templates/frames/review.html",
+      "fixture": "review.html",
+      "purpose": "Secondary semantic text color"
     }
   ],
   "compositionContracts": {
@@ -1048,6 +1359,94 @@
         "css/components.css",
         "css/patterns.css"
       ]
+    },
+    "tide-screen": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/01-event.html",
+      "fixture": "01-event.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-stack": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/adopted-patterns.html",
+      "fixture": "library",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-row": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/adopted-patterns.html",
+      "fixture": "library",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-split": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/submit.html",
+      "fixture": "submit.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-appbar": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/filters.html",
+      "fixture": "filters.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-page-intro": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/app-patterns.html",
+      "fixture": "app-patterns.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-page-body": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/app-patterns.html",
+      "fixture": "app-patterns.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-form-section": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/filters.html",
+      "fixture": "filters.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-form-actions": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/filters.html",
+      "fixture": "filters.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-summary": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/closeout-components.html",
+      "fixture": "kit-closeout.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
+    },
+    "tide-screen-footer": {
+      "source": "css/layout.css",
+      "htmlSource": "templates/frames/filters.html",
+      "fixture": "filters.html",
+      "styleOwnership": "kit",
+      "contract": "docs/OWNERSHIP.md#compositions",
+      "behavior": "Documented composition helper. Kit owns the declared default rhythm; the consumer authors semantic children, route destinations and native control behavior. Inherited typography is intentional only for generic layout helpers."
     }
   },
   "patterns": [

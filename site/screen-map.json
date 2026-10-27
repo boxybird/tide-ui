@@ -58,5 +58,10 @@
     "area": "Listing components",
     "coverage": "All-theme card/date/calendar/result matrix: fixed type/spacing, preview and authored event states, native link layers, known/unknown dates, visible separators, sticky groups and long/hidden/context cases.",
     "status": "Included \u00b7 Kit 1.9.0"
+  },
+  {
+    "area": "Kit ownership and page rhythm",
+    "coverage": "All 65 public component, supporting-block and composition owners have canonical CSS/HTML/contracts. All-theme organizer/sponsor/fallback/hero/details/panel and venue/navigation context comparisons.",
+    "status": "Included \u00b7 Kit 1.10.0"
   }
 ]

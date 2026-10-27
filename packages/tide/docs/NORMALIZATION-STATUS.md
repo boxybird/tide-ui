@@ -1,6 +1,6 @@
 # Kit normalization status · 2026-10-27
 
-The four requested normalization passes are complete in Tide 1.9.0. Each family has canonical HTML/CSS, explicit type/spacing/state contracts, all-ten-mode specimens and portable regression checks. Chromium measurements cover 1280px, 430px and 320px widths. These completed passes do not close every finding from the broader component audit.
+The requested component normalization and source/ownership closeout are complete in Tide 1.10.0. All 26 components, 26 supporting blocks and 13 compositions have required CSS/HTML/behavior/fixture/ownership contracts. Canonical documentation and all-theme specimens are current. Application composition can now use these contracts; no further known item from this source/type/spacing audit is left as an unowned kit task.
 
 | Completed family | Contract | Evidence and limits |
 | --- | --- | --- |
@@ -8,19 +8,16 @@ The four requested normalization passes are complete in Tide 1.9.0. Each family 
 | Fields, choices, chips, disclosures, upload and errors, including select/summary alignment | [Forms](FORMS.md) | [Form verification](FORM-VERIFICATION.md) |
 | Badges, notices, toast specimens and empty states | [Feedback](FEEDBACK.md) | [Feedback verification](FEEDBACK-VERIFICATION.md) |
 | Event cards, dates, calendar groups and result summaries | [Listings](LISTINGS.md) | [Listing verification](LISTING-VERIFICATION.md) |
+| Organizer, sponsorship, missing photo, event opening/details, extension and page patterns | [Kit closeout](KIT-CLOSEOUT.md), [ownership](OWNERSHIP.md) | [Closeout verification](KIT-CLOSEOUT-VERIFICATION.md) |
 
-The original audit's button geometry/type, implicit density, incomplete control states, disabled precedence, missing disclosure indicator, upload error treatment and obsolete demonstration claims (F01–F09) are addressed by these contracts. The display-only focus alias (F11) is explicitly deprecated and retained for compatibility; new specimens use actual keyboard focus. Equivalent forced-colors state rules are present (F12), with actual operating-system verification still outstanding.
+## Audit closure
 
-## Remaining kit work
+F01–F09 are addressed by explicit geometry/type/state contracts, native/static behavior boundaries, canonical specimens and focused regression checks. F10 now requires ownership metadata for every public block and checks fixtures plus consumer overrides. The remaining unnamed optical values have named inputs, remaining component roots declare their own type, and nested venue recipes explicitly opt out of duplicate inline padding.
 
-Ownership enforcement (F10) is improved for the normalized families but is not complete across the registry. Organizer, Sponsored placement, Missing photo, Photographic event opening, Event details and Additive panel still lack the full CSS/HTML/contract/ownership metadata. Supporting blocks also need their canonical HTML homes recorded where applicable. Requiring these fields for every public component should follow that inventory cleanup, with checks that catch missing ownership rather than silently skipping entries.
-
-A final typography/spacing review remains for those components and page patterns. The original audit noted unnamed brand/admission type values and event-detail leading, plus nested venue-profile padding that can double an inset in a composed page. These are review items, not evidence that every occurrence should be flattened to one size or inset. Review canonical recipes and name intentional exceptions before changing them. Application viewport and layout sources remain separate.
+The display-only focus alias (F11) remains explicitly deprecated for compatibility; current specimens exercise actual keyboard focus. Removing that published alias would be a later incompatible API decision, not unfinished normalization. Forced-colors state rules are equivalent at source (F12); actual operating-system verification remains outstanding.
 
 ## Verification boundary
 
-The current root build/check passes 57 kit tests, 28 application tests and seven local HTTP tests. It validates generated HTML, ownership rules already registered, references, zero browser JavaScript, ten-mode parity, 600 contrast pairs and existing byte budgets. Each family document records rendered/native checks and their limits. Passing these checks does not cover components without registered contracts.
+Root build/check covers 66 kit tests, 28 application tests and seven local HTTP tests, 998 generated HTML documents, all ten modes, 600 contrast pairs, existing byte budgets and zero browser JavaScript. The closeout matrix adds 30 passing rendered runs at 1280px, 430px and 320px, normal/conflicting type contexts and hidden examples. Each family document records its actual native/rendered checks and limits. All 103 application files and resolved palettes match their pre-closeout hashes.
 
-Firefox, Safari, physical devices, screen readers, enlarged root fonts and an actual OS forced-colors session remain untested. Current engine observations are Chromium on Windows; feature compatibility data is not a passed browser test. Some pointer-held active states and nonzero consumer sticky offsets have source checks rather than exhaustive rendered verification. These limits remain visible in the family verification documents.
-
-The next kit closeout should finish the remaining ownership inventory and review its component/page-pattern typography and insets before calling the whole kit normalized. Cross-engine and assistive-technology verification remains a separate recorded check. Application composition can then build on the documented kit contracts; service operations are outside repository scope.
+Firefox, Safari, physical devices, screen readers, enlarged root fonts and an actual OS forced-colors session remain untested. Some pointer-held active states and nonzero consumer sticky offsets have source checks rather than exhaustive rendered verification. Current browser evidence is Chromium on Windows. These are recorded verification limits, not passed tests or additional service milestones. Targeted checks do not establish whole-product accessibility conformance.

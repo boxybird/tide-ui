@@ -29,6 +29,7 @@
   .tide-doc-controls--context { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: .1em; text-transform: uppercase; }
   .tide-doc-feedback--context { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: .1em; text-transform: uppercase; }
   .tide-doc-listing--context { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: .1em; text-transform: uppercase; }
+  .tide-doc-closeout { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 700; font-style: italic; letter-spacing: .1em; text-transform: uppercase; }
   .tide-doc-listing__viewport { max-block-size: 24rem; overflow: auto; scrollbar-gutter: stable; isolation: isolate; }
   .tide-doc-swatches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--tide-space-4); }
   .tide-doc-swatch { block-size: var(--tide-space-16); border: var(--tide-border-width) solid var(--tide-color-border-strong); border-radius: var(--tide-radius-control); margin-block-end: var(--tide-space-2); }

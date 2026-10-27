@@ -15,7 +15,7 @@ sys.dont_write_bytecode=True
 ROOT=Path(__file__).resolve().parents[1]
 KIT=ROOT/'packages/tide'
 sys.path.insert(0,str(KIT/'tools'))
-from contracts import markup_issues,ownership_issues,registered_blocks,style_ownership_issues
+from contracts import markup_issues,ownership_issues,registered_blocks,style_ownership_issues,registry_issues,registry_entries
 
 class Scan(HTMLParser):
     def __init__(self):
@@ -106,14 +106,17 @@ def main():
                 elif target.suffix in ('.png','.webp','.jpg','.jpeg') and target.is_relative_to(ROOT):
                     limit=budgets['imageExceptions'].get(target.relative_to(ROOT).as_posix(),budgets['maxServedImageBytes'])
                     if target.stat().st_size>limit:failures.append(str(path.relative_to(ROOT))+': CSS image budget exceeded: '+ref)
-    for c in manifest['components']:
+    failures+=registry_issues(manifest,KIT)
+    for c in registry_entries(manifest):
         if c['block'] not in allclasses:failures.append('No specimen for '+c['block'])
         if c.get('source') and not(KIT/c['source']).is_file():failures.append('Missing component source: '+c['block'])
-        fixture=c['fixture']
+        fixture=c.get('fixture')
+        if not fixture or '..' in fixture.split('/'):continue
         target=ROOT/'build/site/index.html' if fixture=='library' else ROOT/'build/site'/fixture if fixture.startswith('extensions/') else ROOT/'build/site/tide-dark/frames'/fixture
         if not target.is_file():failures.append('Missing component fixture: '+c['block'])
-    for c in manifest.get('supportingBlocks',[]):
-        if not(KIT/c['source']).is_file():failures.append('Missing supporting source: '+c['block'])
+        else:
+            fixture_html=target.read_text(encoding='utf-8')
+            if not re.search(r'(?<![\w-])'+re.escape(c['block'])+r'(?![\w-])',fixture_html):failures.append('Registered fixture omits block: '+c['block'])
     for pattern in manifest.get('patterns',[]):
         if not(KIT/pattern['contract'].split('#')[0]).is_file():failures.append('Missing pattern contract: '+pattern['name'])
         failures.extend('Unknown pattern block '+block for block in pattern['uses'] if block not in registered_blocks(manifest))

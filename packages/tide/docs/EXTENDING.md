@@ -8,7 +8,7 @@ For discoveries from the app playground, follow [adoption and ownership](ADOPTIO
 
 Use BEM (Block, Element, Modifier): `.tide-event-card`, `.tide-event-card__title`, `.tide-button--secondary`. Prefix all kit classes with `tide-` to avoid host-application collisions. Keep modifiers on the same element as their base block. Use semantic attributes for actual state (`disabled`, `aria-invalid`, `aria-pressed`, `checked`); a visual class does not implement behavior or announce a state.
 
-One file may hold multiple related small blocks. A new substantial component can have its own stylesheet, imported after the kit with a named layer. `extensions/panel.css` and its HTML example show this without modifying the core. The declaration `@layer tide.components.extensions` places a new block inside the kit's component layer. New blocks have unique names, so they do not depend on overriding existing selectors. A consuming application's deliberate overrides should have their own later top-level layer, documented as application-owned.
+One file may hold multiple related small blocks. A new substantial component can have its own stylesheet, imported after the kit with a named layer. `extensions/panel.css` and its HTML example show this without modifying the core. The declaration `@layer tide.components.extensions` places a new block inside the kit's component layer. New blocks have unique names, so they do not depend on overriding existing selectors. Consumer viewport/layout rules belong to private blocks in a later top-level layer. That layer does not exempt shared selectors from ownership checks: use a documented variant/input or an explicit reviewed property/value exception. See [public ownership](OWNERSHIP.md).
 
 Keep selectors shallow: a block, its element, a state or a modifier. Native descendants inside a block are acceptable when they are part of that block's contract. Do not style an unrelated neighbor through DOM position or a theme-name selector.
 
@@ -33,6 +33,8 @@ Expose component custom properties only when they are useful supported extension
 ## Required component entry
 
 Add its name, purpose, BEM classes, HTML source, supported states, semantic roles and keyboard/behavior expectations to `component-manifest.json` and `docs/COMPONENTS.md`. Include at least the normal state and any meaningful focus, selected, disabled, error, loading or empty state. Do not add a state that the component does not actually have.
+
+Every component, supporting block and composition requires `source`, `htmlSource`, `fixture`, `contract`, `behavior` and `styleOwnership`. Compositions also require an entry in `compositionContracts`. The CSS/HTML/Markdown homes must exist and the rendered fixture must contain the block. The root check rejects omissions; no component is implicitly exempt because its metadata is incomplete.
 
 For behavior-heavy patterns (dialog, menu, tabs, combobox), HTML and CSS alone are insufficient. Specify the focus, escape, keyboard, state and announcement behavior before calling it complete. This kit intentionally contains no fake modal/menu widgets.
 

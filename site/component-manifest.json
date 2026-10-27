@@ -3,6 +3,7 @@
   "privateBlocks": [
     "tide-doc-actions",
     "tide-doc-anchor",
+    "tide-doc-closeout",
     "tide-doc-code",
     "tide-doc-content",
     "tide-doc-controls",

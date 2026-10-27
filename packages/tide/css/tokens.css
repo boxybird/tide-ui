@@ -9,6 +9,12 @@
   --tide-font-weight-label: 550;
   --tide-font-weight-heading: 580;
   --tide-font-weight-action: 650;
+  /* Optical wordmark and admission roles retain their accepted proportions. */
+  --tide-font-weight-brand: 450;
+  --tide-font-size-brand: 1.1875rem;
+  --tide-font-size-admission: 1.375rem;
+  --tide-tracking-brand: .22em;
+  --tide-tracking-subheading: -.01em;
   --tide-font-size-micro: .625rem;
   --tide-font-size-label: .6875rem;
   --tide-font-size-caption: .75rem;
@@ -72,6 +78,13 @@
   --tide-control-trailing-space: calc(var(--tide-control-inset-inline) + var(--tide-size-icon-action) + var(--tide-space-3));
   --tide-field-padding-inline: var(--tide-control-inset-inline);
   --tide-field-textarea-min: 7.5rem;
+  --tide-fallback-min: 13.75rem;
+  --tide-size-icon-fact: 1.0625rem;
+  --tide-icon-fact-offset: .125rem;
+  --tide-size-icon-cue: .875rem;
+  --tide-summary-label-width: 4.75rem;
+  --tide-schedule-label-width: 4.5rem;
+  --tide-appbar-min: 5.75rem;
   --tide-badge-padding-block: calc((var(--tide-space-6) - var(--tide-leading-caption) - 2 * var(--tide-border-width)) / 2);
   --tide-layout-inset: var(--tide-space-6);
   --tide-layout-screen: 26.875rem;

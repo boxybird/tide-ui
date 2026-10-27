@@ -10,6 +10,14 @@
     border-radius: var(--tide-radius-panel);
     background: var(--tide-panel-background);
     color: var(--tide-color-text-primary);
+    font-family: var(--tide-font-family);
+    font-style: normal;
+    font-size: var(--tide-font-size-body);
+    line-height: var(--tide-leading-body);
+    font-weight: var(--tide-font-weight-regular);
+    letter-spacing: normal;
+    text-transform: none;
+    overflow-wrap: anywhere;
   }
   .tide-panel__title { font-size: var(--tide-font-size-section); line-height: var(--tide-leading-section); font-weight: var(--tide-font-weight-heading); }
   .tide-panel__description { color: var(--tide-color-text-secondary); }

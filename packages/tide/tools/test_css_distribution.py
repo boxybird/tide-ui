@@ -1,4 +1,4 @@
-"""Safety and rule parity of comment-only CSS distribution compaction."""
+"""Safety and rule parity of CSS distribution compaction."""
 from pathlib import Path
 import unittest
 
@@ -21,6 +21,14 @@ class CssDistributionContracts(unittest.TestCase):
         for source in (ROOT/'css').glob('*.css'):
             css=source.read_text(encoding='utf-8')
             self.assertEqual(list(rules(css)),list(rules(strip_css_comments(css))),source.name)
+
+    def test_indentation_is_removed_without_rewriting_protected_text_or_tokens(self):
+        source='a {\n    content: "first\\\n    second";\n    --message: "  text  ";\n    background: url("a  b.svg");\n    width: calc(100% - 1rem);\n  }'
+        compact=strip_css_comments(source)
+        self.assertIn('"first\\\n    second"',compact)
+        self.assertIn('"  text  "',compact)
+        self.assertIn('url("a  b.svg")',compact)
+        self.assertIn('\nwidth: calc(100% - 1rem);\n}',compact)
 
     def test_generated_entry_keeps_header_layers_and_omits_source_commentary(self):
         css=next(data.decode() for path,data in outputs().items() if path.name=='tide.css')

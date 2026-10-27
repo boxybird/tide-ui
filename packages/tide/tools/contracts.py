@@ -11,6 +11,40 @@ def registered_blocks(manifest):
             | {entry['block'] for entry in manifest.get('supportingBlocks',[])})
 
 
+def registry_entries(manifest):
+    return manifest['components']+manifest.get('supportingBlocks',[])+[
+        {'block':block,**contract} for block,contract in manifest.get('compositionContracts',{}).items()]
+
+
+def registry_issues(manifest,root):
+    """Every public block needs a reviewable owner, recipe and behavior boundary."""
+    issues=[];entries=registry_entries(manifest)
+    blocks=[e['block'] for e in entries]
+    for block in sorted(set(blocks)):
+        if blocks.count(block)>1:issues.append('Duplicate registry owner: '+block)
+    for block in manifest.get('compositions',[]):
+        if block not in manifest.get('compositionContracts',{}):issues.append('Missing composition contract: '+block)
+    for entry in entries:
+        block=entry['block']
+        for key in ('source','htmlSource','fixture','contract','behavior','styleOwnership'):
+            if not isinstance(entry.get(key),str) or not entry[key].strip():issues.append(block+': missing '+key)
+        if entry.get('styleOwnership') not in ('kit',):issues.append(block+': invalid styleOwnership')
+        for key in ('source','htmlSource','contract'):
+            if entry.get(key):
+                path=(root/entry[key].split('#')[0]).resolve()
+                suffix={'source':'.css','htmlSource':'.html','contract':'.md'}[key]
+                if not path.is_relative_to(root.resolve()) or not path.is_file() or path.suffix!=suffix:
+                    issues.append(block+': invalid '+key+' home')
+        if entry.get('fixture') and ('..' in entry['fixture'].split('/') or not entry['fixture'].endswith('.html') and entry['fixture']!='library'):
+            issues.append(block+': invalid fixture')
+        for path in entry.get('supportingSources',[]):
+            if not (root/path).is_file():issues.append(block+': invalid supporting source')
+        for exception in entry.get('consumerStyleExceptions',[]):
+            if not exception.get('target') or not exception.get('reason') or not exception.get('properties'):
+                issues.append(block+': incomplete consumer style exception')
+    return issues
+
+
 def ownership_issues(classes,manifest,private_blocks=()):
     known=registered_blocks(manifest)|set(private_blocks)|{'tide'}
     blocks={cls.split('__')[0].split('--')[0] for cls in classes}
@@ -20,19 +54,27 @@ def ownership_issues(classes,manifest,private_blocks=()):
 def style_ownership_issues(css,manifest):
     css=re.sub(r'/\*.*?\*/','',css,flags=re.S)
     selectors=' '.join(re.findall(r'([^{}]+)\{',css))
-    entries=manifest['components']+manifest.get('supportingBlocks',[])+[
-        {'block':block,**contract} for block,contract in manifest.get('compositionContracts',{}).items()]
+    entries=registry_entries(manifest)
     issues=[]
     for entry in entries:
         target=r'\.'+re.escape(entry['block'])+r'(?:__[\w-]+|--[\w-]+)?(?![\w-])'
         if entry.get('styleOwnership')!='kit' or not re.search(target,selectors):continue
         exceptions=entry.get('consumerStyleExceptions',[])
-        matching=[(s.strip(),dict((k.strip(),v.strip()) for k,v in
+        def matching_selectors(rule):
+            # Commas inside :is/:where are not separate selectors. A negative
+            # match such as p:not(.tide-eyebrow) does not restyle that block.
+            depth=0;start=0;out=[]
+            for i,char in enumerate(rule):
+                depth+=(char=='(')-(char==')')
+                if char==',' and depth==0:out.append(rule[start:i].strip());start=i+1
+            out.append(rule[start:].strip())
+            return [s for s in out if re.search(target,re.sub(r':not\([^()]*\)','',s))]
+        matching=[(s,dict((k.strip(),v.strip()) for k,v in
                    (part.split(':',1) for part in body.split(';') if ':' in part)))
-                  for s,body in re.findall(r'([^{}]+)\{([^{}]*)\}',css) if re.search(target,s)]
+                  for rule,body in re.findall(r'([^{}]+)\{([^{}]*)\}',css) for s in matching_selectors(rule)]
+        if not matching:continue
         def permitted(selector,declarations):
-            # Narrow consumer-owned presentation slots, never typography/geometry.
-            if ',' in selector:return False
+            # Reviewed property/value slots, never unrestricted overrides.
             return any(selector.endswith(rule['target']) and
                        all(name in rule['properties'] and value in rule['properties'][name]
                            for name,value in declarations.items()) for rule in exceptions)

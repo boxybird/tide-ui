@@ -1,4 +1,6 @@
-# Tide HTML and CSS kit · 1.9.0
+# Tide HTML and CSS kit · 1.10.0
+
+All public blocks have required [ownership contracts](docs/OWNERSHIP.md). The [final normalization pass](docs/KIT-CLOSEOUT.md) covers remaining components and page rhythm, with an all-theme `frames/kit-closeout.html` matrix. See [completion and verification limits](docs/NORMALIZATION-STATUS.md).
 
 Cards, dates, calendar groups and result summaries have a [listing contract](docs/LISTINGS.md) and all-theme `frames/listing-states.html` matrix. Canonical card/date recipes stay separate from consumer viewport composition.
 

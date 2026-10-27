@@ -2,9 +2,9 @@
 
 A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
 
-Kit **1.9.0** · Events example **2.0.4** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Kit **1.10.0** · Events example **2.0.4** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
-Kit normalization contracts: [buttons](packages/tide/docs/BUTTONS.md), [fields, choices, chips, disclosures and file/error states](packages/tide/docs/FORMS.md), and [badges, notices, toast specimens and empty states](packages/tide/docs/FEEDBACK.md). [Cards, dates, calendar groups and results](packages/tide/docs/LISTINGS.md) have a dedicated matrix too. Each has all-theme specimens and regression checks. See [completion status and remaining audit work](packages/tide/docs/NORMALIZATION-STATUS.md) before treating these passes as a complete audit of every kit component.
+Kit normalization contracts: [buttons](packages/tide/docs/BUTTONS.md), [fields, choices, chips, disclosures and file/error states](packages/tide/docs/FORMS.md), and [badges, notices, toast specimens and empty states](packages/tide/docs/FEEDBACK.md). [Cards, dates, calendar groups and results](packages/tide/docs/LISTINGS.md) have a dedicated matrix too. Each has all-theme specimens and regression checks. See [completion status and verification limits](packages/tide/docs/NORMALIZATION-STATUS.md) for completed scope and browser-testing limits.
 
 ## Project scope
 

@@ -1,3 +1,7 @@
+# Kit closeout in 1.10.0
+
+All public blocks now have required [ownership contracts](OWNERSHIP.md). Remaining component/page-pattern [typography and spacing](KIT-CLOSEOUT.md) have an all-theme normal/context/hidden matrix in `kit-closeout.html`. See [verification](KIT-CLOSEOUT-VERIFICATION.md) and [completion status](NORMALIZATION-STATUS.md). Application layout sources remain unchanged.
+
 # Listings normalized in 1.9.0
 
 Cards, dates, calendar groups and result summaries have a [listing contract](LISTINGS.md), canonical card/date recipes and all-theme `listing-states.html`. Type, spacing, visible separators and native preview/navigation states are covered by [verification](LISTING-VERIFICATION.md). Application viewport/layout ownership remains separate.

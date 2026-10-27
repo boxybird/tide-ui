@@ -1,5 +1,7 @@
 # Loading without changing the interface
 
+Kit 1.10.0 also removes indentation and padding after CSS separators in the combined distribution only. Protected strings, URLs and retained comments are untouched; rule/value parity is checked. Canonical modules retain readable formatting and all existing budgets remain unchanged.
+
 Kit 1.8.0 keeps the existing CSS/document budgets while adding feedback normalization. The combined CSS compiler omits ordinary source comments and retains generated headers plus license/preserve comments. It leaves CSS strings, URLs, rules, values and layer order unchanged; canonical modules retain their documentation. Regression checks verify that transformation. No byte budget is raised.
 
 Tide 1.5.3 / events 2.0.3 keeps browser deliverables HTML/CSS only. This cleanup changes image encoding and local HTTP delivery, with the same layout, colors, type, content and native behaviors.

@@ -1,10 +1,12 @@
-# Page recipes · Tide 1.7.1
+# Page recipes · Tide 1.10.0
 
 The kit and canonical specimens use only HTML/CSS and native browser behavior. There are no script imports, event handlers or required browser modules. Shared composition CSS lives in `css/page-patterns.css`; component states remain with their existing owners. All registered specimens are generated in every theme and both modes. See [browser policy](BROWSER-POLICY.md).
 
 ## Venues
 
 `tide-venue-profile` owns internal padding and section/header rhythm, composed with Page intro, Summary, Button, Notice and ordinary sections. The app owns viewport placement and responsive layout. `tide-venue-card` is an unframed directory item with a real heading link and separate secondary actions. Known venue facts and attribution remain authored; event age/admission conditions do not become blanket venue facts.
+
+Inside a page that already supplies inline padding, explicitly add `tide-venue-profile--flush-inline`. It removes only the profile's inline padding, retaining 24px block padding and section/header rhythm. The populated and empty venue specimens use this variant to align profile information with the following schedule. Standalone/default profiles and application layout sources are unchanged. See [closeout type/spacing](KIT-CLOSEOUT.md) and [ownership](OWNERSHIP.md).
 
 A populated venue shows sample events. A venue with no entries retains its information and an explicit empty state. An authored filtered-empty state explains recovery without hiding useful venue information. The kit supplies presentation and semantics, not matching or sourcing.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## Tide kit 1.10.0 · 2026-10-27
+
+- Completed ownership contracts for all 26 components, 26 supporting blocks and 13 compositions. Normal checks now reject missing ownership/recipe/behavior metadata, duplicate owners and fixtures omitting their registered block. Existing consumer geometry exceptions are constrained to documented property/value choices; grouped selectors cannot conceal type or spacing overrides.
+- Normalized remaining organizer, sponsorship, fallback, photographic opening/details and extension-panel type and spacing. Named intentional optical values, aligned details with page-heading leading, and prevented generic paragraph/heading rules from changing named component text roles. Removed narrow-screen fact-gap and admission-type density changes.
+- Added an explicit inline-padding variant for venue profiles nested in padded pages, preserving standalone/application defaults. Added all-theme normal/context/hidden specimens, ownership/type contracts and regression checks. Application sources/layouts and resolved palettes are unchanged.
+- Kept existing byte budgets by removing ordinary comments, indentation and separator padding from generated combined CSS while preserving protected text, rule/value sequence and canonical source formatting. Recorded Chromium evidence and deferred engine/assistive-technology limits separately.
+
 ## Tide kit 1.9.0 · 2026-10-27
 
 - Normalized card/category/metadata, date-block, calendar and result typography independently of surrounding context. Retained 24px card insets and fixed metadata gaps; suppressed legacy decorative metadata dividers to avoid orphan lines on wrapping. Date columns reserve font-relative space for single-/two-digit alignment. Removed the narrow-screen metadata-gap override.

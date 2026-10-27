@@ -11,16 +11,26 @@ PROJECT=ROOT.parents[1]
 OUT=PROJECT/'build/tide'
 
 def strip_css_comments(source):
-    """Omit source commentary without rewriting CSS tokens, strings or URLs.
+    """Omit commentary and separator padding without rewriting CSS values.
 
     Keep license/preserve comments. Readable canonical modules remain unchanged.
-    This is deliberately not a CSS minifier.
+    This is deliberately not a general CSS minifier.
     """
     tokens=re.compile(r'''\burl\((?:'(?:\\[\s\S]|[^'\\])*'|"(?:\\[\s\S]|[^"\\])*"|\\[\s\S]|[^'"\\)])*\)|'(?:\\[\s\S]|[^'\\])*'|"(?:\\[\s\S]|[^"\\])*"|/\*[\s\S]*?\*/''',re.I)
     def keep(match):
         value=match.group()
         return ' ' if value.startswith('/*') and not re.search(r'^/\*!|@license|@preserve',value,re.I) else value
-    return tokens.sub(keep,source)
+    # Strip indentation and padding after CSS separators only outside protected
+    # strings, URLs and retained comments. Keep values and token separators.
+    def compact_gap(gap):
+        return re.sub(r'([;{}])[ \t]+',r'\1',re.sub(r'\n[ \t]+','\n',gap))
+    pieces=[];cursor=0
+    for match in tokens.finditer(source):
+        gap=source[cursor:match.start()]
+        pieces.append(compact_gap(gap))
+        pieces.append(keep(match));cursor=match.end()
+    pieces.append(compact_gap(source[cursor:]))
+    return ''.join(pieces)
 
 def outputs():
     _,resolved,audit=load_themes(ROOT/'tokens/themes.json')
