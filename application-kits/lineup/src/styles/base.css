@@ -19,27 +19,9 @@
   .tide-app__header {
     max-inline-size: var(--tide-app-max-width);
     margin-inline: auto;
-    padding: var(--tide-space-6) var(--tide-layout-inset);
+    padding-inline: var(--tide-layout-inset);
     padding-block-start: var(--tide-app-header-inset-start);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--tide-space-4);
-    border-block-end: var(--tide-border-hairline);
   }
-  .tide-app__nav { display: flex; align-items: center; gap: var(--tide-space-5); }
-  .tide-app__nav-link {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--tide-space-2);
-    min-block-size: var(--tide-size-target);
-    color: var(--tide-color-text-secondary);
-    font-size: var(--tide-font-size-caption);
-    text-decoration: none;
-  }
-  .tide-app__nav-link[aria-current='page'] { color: var(--tide-color-accent); text-decoration: underline; }
-  .tide-app__nav-link--wide { display: none; }
-  .tide-app__nav .tide-icon { inline-size: var(--tide-size-icon-small); block-size: var(--tide-size-icon-small); }
   .tide-app__workspace { max-inline-size: var(--tide-app-reading-width); margin-inline: auto; }
   .tide-app__browse-heading { min-inline-size: 0; }
   .tide-app__results { min-inline-size: 0; scroll-margin-block-start: var(--tide-space-6); }
@@ -73,16 +55,13 @@
   .tide-app__field-row { display: grid; gap: var(--tide-space-5); }
   .tide-app__site-footer { max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-6); padding-block-end: max(var(--tide-space-6), env(safe-area-inset-bottom, 0px)); color: var(--tide-color-text-muted); font-size: var(--tide-font-size-label); line-height: var(--tide-leading-caption); }
   .tide-app--event > .tide-app__site-footer { display: none; }
-  .tide-app__skip { position: absolute; inset: -10rem auto auto var(--tide-space-4); z-index: var(--tide-z-skip-link); padding: var(--tide-space-3); color: var(--tide-color-on-accent); background: var(--tide-color-accent); }
-  .tide-app__skip:focus { inset-block-start: var(--tide-space-4); }
-  .tide-app__skip--detail { display: none; }
+  .tide-app__detail-skip { display: none; }
 
   @container tide-app-form (inline-size >= 32rem) {
     .tide-app__field-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
   @media (width >= 45rem) {
-    .tide-app__nav-link--wide { display: inline-flex; }
     .tide-app__workspace, .tide-app__form-wrap { margin-block: var(--tide-space-6) var(--tide-space-12); }
   }
 
@@ -93,7 +72,7 @@
 
   /* Content decides the split: 390px results + a useful detail column + gap/insets. */
   @media (width >= 60rem) {
-    .tide-app__header { block-size: var(--tide-app-header-block-size); }
+    .tide-app__header { min-block-size: var(--tide-app-header-block-size); }
     .tide-app__workspace {
       max-inline-size: var(--tide-app-max-width);
       margin-inline: auto;
@@ -145,7 +124,7 @@
     .tide-app--event .tide-app__header { display: flex; }
     .tide-app--event .tide-app__results { display: block; }
     .tide-app--event > .tide-app__site-footer { display: block; }
-    .tide-app__skip--detail { display: block; }
+    .tide-app__detail-skip { display: block; }
   }
 
   @media (width >= 74rem) {

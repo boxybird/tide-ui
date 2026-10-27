@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.1.1 · 2026-10-27
+
+- Removed retired Workbench / Half Split / Contained / Margin Reveal prefixes from Saved, Help, Add an event and 48 native event document titles. Native paths, authored event headings and all non-title event fields remain intact.
+- Adopted Tide's Site header/navigation list/link and Skip link recipes. Removed private link/helper appearance and narrow-screen link hiding; all main destinations wrap naturally. Saved uses the ordinary text navigation recipe alongside the other header destinations.
+- Derived `aria-current="page"` from exact native route/destination matches. Sunshine Theater identifies its own page; category results, scoped empty views and event details no longer imply that another collection page is current. Kept the focusable skip destinations and optional split-view detail jump.
+- Extended application navigation/focus-target contracts and recorded responsive, all-theme and Chromium keyboard verification in [navigation and titles](NAVIGATION-TITLES.md). All canonical edits remain in Lineup; Tide and shared sources are unchanged.
+
 ## 2.1.0 · 2026-10-27
 
 - Moved the single browse heading out of the native filter popover into the ordinary application layout. Phone/tablet headings remain exposed with Filters closed; desktop retains the first-column heading above bounded controls and results beside it. Updated native month-target clearance and short-window heading space.

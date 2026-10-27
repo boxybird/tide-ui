@@ -15,7 +15,9 @@ Every one of the 67 native routes uses `document.html`. Sixty-five event/list/se
 
 `data/pages.json` owns ten non-event routes. Three category specimens and an empty-result specimen use a restricted `sampleFilter` object; the build rejects unknown categories/keys. Event titles and facts come from the 54 canonical records. Context values are escaped and script/HTML injection is not accepted in sample data.
 
-Native skip links retain event/detail/results/main targets. Empty results target the actual preview placeholder. Exact venue identity and authored facts remain; no runtime venue rewriting or query-state recovery is supplied. Saved remains a fixed sample shortlist. The native submission specimen still has no operational submit service, upload endpoint or account behavior.
+`header.html` consumes Tide's Site header/navigation list recipe; `skip-link.html` consumes its native Skip link helper. Only an exact route/destination match receives `aria-current="page"`. The utility-page titles name Saved events, Help & guidance and Add an event, followed by Burque; 48 event metadata titles also drop the same retired prefix. Retired study names remain only in historical provenance/evidence.
+
+Native skip links retain event/detail/results/main targets and focusable destinations. Empty results target the actual preview placeholder. Exact venue identity and authored facts remain; no runtime venue rewriting or query-state recovery is supplied. Saved remains a fixed sample shortlist. The native submission specimen still has no operational submit service, upload endpoint or account behavior.
 
 `data/submission-fields.json` retains IDs/names, required/optional markers, hint associations, native types, maxlength and autocomplete. File chooser, permission markup and unique prose remain authored HTML. Native reset restores source defaults; browser validation supplies native required/type checks. There is no JavaScript validation summary controller.
 

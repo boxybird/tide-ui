@@ -1,4 +1,4 @@
-# Lineup application kit · 2.1.0
+# Lineup application kit · 2.1.1
 
 Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.10.0**. Burque Events is its authored sample website. The application version is **2.1.0**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus the four global result specimens and three scoped venue empty views: 67 documents in the default app and each of ten theme/mode combinations.
 
@@ -7,6 +7,8 @@ The UI kit at `packages/tide/` is the source of truth for public components, typ
 Desktop keeps the centered 92rem maximum and 20/35/45 filters/list/detail proportions. CSS Grid/subgrid, native scrolling, sticky month headers and viewport units supply layout. The result summary sits outside the feed scroller, so no height observer is needed. The single page heading stays outside the filter panel at every width. Below 75rem, Filters opens the same control set in a native popover drawer that slides in from the left. Close, Escape and outside-click dismissal are browser-owned; reduced motion removes the slide. The body scrolls above a pinned footer. No browser scripts or duplicated form are required. See the [drawer contract and verification](docs/FILTER-DRAWER.md).
 
 Native links, fragments, browser Back, input controls, reset, required/type validation and file selection remain. Free-text/date matching, live result counts, fetched previews, session state and photo/inspection message hooks are removed. Controls are explicitly labelled examples. Use the authored result-state links to review populated/category/empty layouts; URL query values are not evaluated. No backend or service is introduced.
+
+The header and skip links use Tide's canonical recipes. Main links wrap at narrow widths; current-page styling follows the actual native destination. Saved, Help, Add an event and native event pages have descriptive titles without retired study names. See [navigation/title verification](docs/NAVIGATION-TITLES.md).
 
 Venue result links, Reset and empty-state recovery stay at the venue; “All events across Albuquerque” is the explicit city-wide exit. See [heading/venue verification](docs/HEADINGS-VENUE-SCOPE.md).
 

@@ -8,7 +8,7 @@ from html_templates import AppTemplates, ROOT, expand
 
 class Elements(HTMLParser):
     def __init__(self, text):
-        super().__init__(); self.cards = []; self.current = []; self.inputs = []; self.stack = []; self.ancestors = {}
+        super().__init__(); self.cards = []; self.current = []; self.inputs = []; self.stack = []; self.ancestors = {}; self.navigation = []
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
@@ -16,6 +16,8 @@ class Elements(HTMLParser):
         if attrs.get('id'):
             self.ancestors[attrs['id']] = [parent.get('id') for _, parent in self.stack]
         classes = attrs.get('class', '').split()
+        if tag=='a' and 'tide-site-header__link' in classes:
+            self.navigation.append(attrs)
         if 'tide-event-card' in classes:
             self.cards.append(attrs)
         if 'tide-event-card--in-view' in classes:
@@ -116,12 +118,17 @@ class TemplateContracts(unittest.TestCase):
             with self.subTest(text=text), self.assertRaisesRegex(ValueError, 'Malformed app template token'):
                 expand(text, {}, {})
 
-    def test_existing_navigation_variants_keep_active_links(self):
-        for route, href in [('index', 'index.html'), ('sunshine-theater', 'index.html'), ('saved', 'saved.html'), ('submit', 'submit.html')]:
+    def test_native_navigation_marks_only_its_actual_current_destination(self):
+        for route in set(self.app.routes) | set(self.app.by_id):
             with self.subTest(route=route):
                 header = self.app.partial('header', self.app.context(route))
-                self.assertIn('href="'+href+'" aria-current="page"', header)
-        self.assertNotIn('aria-current', self.app.partial('header', self.app.context('help')))
+                links = Elements(header).navigation
+                secondary = 'submit.html' if route in ('saved','help','submit') else 'sunshine-theater.html'
+                self.assertEqual([link['href'] for link in links], ['index.html',secondary,'saved.html'])
+                self.assertIn('<ul class="tide-site-header__links">', header)
+                self.assertEqual([link['href'] for link in links if link.get('aria-current')=='page'],
+                                 [link['href'] for link in links if link['href']==route+'.html'])
+                self.assertFalse(any('hidden' in link or 'role' in link or 'target' in link for link in links))
 
 
 if __name__=='__main__':

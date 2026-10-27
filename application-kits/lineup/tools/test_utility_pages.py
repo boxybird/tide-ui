@@ -43,16 +43,19 @@ class UtilityContracts(unittest.TestCase):
         cases={
             'help':['#main-content'], 'submit':['#main-content'],
             'sunshine-theater':['#results', '#venue-information'],
+            'sunshine-theater-comedy':['#results', '#venue-information'],
             'index':['#results', '#event-detail'], 'saved':['#results', '#event-detail'],
+            'search-empty':['#results', '#preview-state'],
             'ink-after-dark':['#event-detail'],
         }
         for route,targets in cases.items():
             with self.subTest(route=route):
                 doc=Document(self.app.page(route))
-                skips=[attrs['href'] for tag,attrs in doc.nodes if 'tide-app__skip' in attrs.get('class','').split()]
-                ids={attrs['id'] for tag,attrs in doc.nodes if attrs.get('id')}
+                skips=[attrs['href'] for tag,attrs in doc.nodes if tag=='a' and 'tide-skip-link' in attrs.get('class','').split()]
+                ids={attrs['id']:attrs for tag,attrs in doc.nodes if attrs.get('id')}
                 self.assertEqual(skips, targets)
                 self.assertTrue(all(target[1:] in ids for target in targets))
+                self.assertTrue(all(ids[target[1:]].get('tabindex') in ('0','-1') for target in targets))
 
     def test_submission_fields_keep_native_validation_and_hint_associations(self):
         doc=Document(self.app.page('submit'))

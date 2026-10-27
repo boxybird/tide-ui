@@ -1,8 +1,10 @@
-# Desktop composition · Lineup 2.1.0
+# Desktop composition · Lineup 2.1.1
 
 The entire app is native HTML/CSS with no browser scripts. At 75rem and above, authored filter/list/detail columns use CSS Grid/subgrid in 20/35/45 proportions after gaps, inside a centered 92rem maximum. The ordinary-document heading and filter controls start in their own rows of the first column; no node moves during load. The heading is outside the popover, and results span both rows in the middle column.
 
 `workspace-browse.html`, `workspace-results.html`, `filter-rail.html`, `filter-status.html` and `filter-actions.html` own the complete structure. The result summary is outside `.tide-app__feed-scroll`, which contains the complete isolated feed, empty state and footer. CSS grid rows reserve the summary naturally; month headings stick at the feed top without measuring its height. Native gutter reservation replaces JavaScript scrollbar measurement. Left panes remain bounded with a minimum 24px bottom clearance; the right document scrolls naturally.
+
+The header consumes Tide's Site header recipe. Lineup retains only its viewport width/insets, safe-area clearance, desktop sticky placement and minimum one-row height. Below the split breakpoint it grows naturally as the canonical navigation list wraps; all three destinations stay exposed. See [navigation verification](NAVIGATION-TITLES.md).
 
 Below 75rem, Filters opens the same authored panel as a left-side native popover drawer. The browser owns toggling, Close, Escape, outside-click dismissal and focus return; CSS owns placement, slide transitions, reduced motion and the bounded scrolling body/pinned footer. At desktop widths the panel stays visible even when the popover is closed. An open popover resized to desktop fits its reserved column through CSS anchor positioning, with shared grid geometry as a fallback. Native dismissal then returns it to ordinary flow without hiding the column. No controls move or duplicate. Saved keeps its separate layout; event details retain full-screen reading at phone widths. See the [drawer contract and verification](FILTER-DRAWER.md).
 

@@ -6,6 +6,7 @@ Only `{{UPPERCASE_VALUE}}` and `{{> registered-partial}}` are supported. Plain v
 
 | Home | Ownership |
 | --- | --- |
+| `header.html`, `skip-link.html` | Canonical Tide Site header/list/link and Skip link recipes; native destinations, exact current page and route-appropriate focusable fragments |
 | `document.html`, `workspace.html` | Native document and main browse/detail slots; stylesheets only |
 | `workspace-browse.html`, `workspace-results.html` | Static filter/list grouping and results region |
 | `filter-trigger.html`, `filter-rail.html`, `filters.html`, `filter-status.html`, `filter-actions.html` | Native popover trigger/close and one responsive panel/form/control set, disclosures, reset and static result-state links |

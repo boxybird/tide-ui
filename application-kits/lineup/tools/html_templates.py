@@ -103,13 +103,13 @@ class AppTemplates:
             page = self.routes[route]
         else:
             raise ValueError('Unknown app route: ' + route)
-        current = page.get('currentNav')
         secondary = page.get('secondaryNav', 'venue')
+        secondary_route = 'sunshine-theater' if secondary=='venue' else 'submit'
         values = {
-            'FIND_CURRENT':attribute('aria-current', 'page') if current=='find' else Html(''),
-            'SECONDARY_CURRENT':attribute('aria-current', 'page') if current=='secondary' else Html(''),
-            'SAVED_CURRENT':attribute('aria-current', 'page') if current=='saved' else Html(''),
-            'SECONDARY_HREF':'sunshine-theater.html' if secondary=='venue' else 'submit.html',
+            'FIND_CURRENT':attribute('aria-current', 'page') if route=='index' else Html(''),
+            'SECONDARY_CURRENT':attribute('aria-current', 'page') if route==secondary_route else Html(''),
+            'SAVED_CURRENT':attribute('aria-current', 'page') if route=='saved' else Html(''),
+            'SECONDARY_HREF':secondary_route+'.html',
             'SECONDARY_LABEL':'Sunshine Theater' if secondary=='venue' else 'Add an event',
             **{name:Html('{{'+name+'}}') for name in ('KIT_CSS','APP_CSS','KIT_ASSETS')},
         }
@@ -204,7 +204,7 @@ class AppTemplates:
         elif collection:
             detail_target = 'venue-information' if venue else 'preview-state' if page.get('sampleFilter',{}).get('empty') else 'event-detail'
             detail_label = 'Skip to venue details' if venue else 'Skip to event preview'
-            skips = [('results', 'Skip to results', ''), (detail_target, detail_label, ' tide-app__skip--detail')]
+            skips = [('results', 'Skip to results', ''), (detail_target, detail_label, ' tide-app__detail-skip')]
         else:
             skips = [('main-content', 'Skip to content', '')]
         state_key = 'margin-aligned' if saved or not collection else 'app-release-1.1.0'

@@ -2,7 +2,7 @@
 
 Lineup **2.0.4**, layout family **option 1**, is the current named application kit derived from **Tide UI 1.10.0**. Burque Events is its sample website. The application sources now live together in `application-kits/lineup/`; `/events/` preview URLs remain stable. The move preserves all application HTML/CSS/assets and all 704 generated route documents. Tide's component sources, tokens, recipes, registry, assets and generated distribution are unchanged; only two integration-test references follow the moved application path. See [move parity](audit/move-parity.json).
 
-This document preserves the **2.0.4 audit baseline** and its original screenshots/measurements. **L01 and L02 are resolved in Lineup 2.0.5**; see [the application-only repair and verification](SAVED-TYPOGRAPHY.md). **L03 and L04 are resolved in Lineup 2.1.0**; see [visible headings and scoped venue recovery](HEADINGS-VENUE-SCOPE.md). L05/L06 remain open. A passing source/contract suite does not imply that the remaining findings are resolved.
+This document preserves the **2.0.4 audit baseline** and its original screenshots/measurements. **L01 and L02 are resolved in Lineup 2.0.5**; see [the application-only repair and verification](SAVED-TYPOGRAPHY.md). **L03 and L04 are resolved in Lineup 2.1.0**; see [visible headings and scoped venue recovery](HEADINGS-VENUE-SCOPE.md). **L05 and L06 are resolved in Lineup 2.1.1**; see [canonical navigation and descriptive titles](NAVIGATION-TITLES.md). All six findings from this baseline have recorded application-only resolutions. The historical observations below remain unchanged in meaning; source checks alone are not browser or assistive-technology coverage.
 
 ## Scope and inventory
 
@@ -63,11 +63,11 @@ On Sunshine Theater, the Music/Comedy/Workshops/No results links in `src/templat
 
 Phone venue information remains present, beginning about 1658px below the top of the 390px document after six cards; there is no early native jump to it. The desktop information panel remains useful and unframed, with attributed venue facts and clear sample notices. Follow-up: author scoped result/empty states and explicit return/exit links in application route contexts, preserve the venue information, and add a visible phone “About this venue” fragment link. This needs no UI-kit changes or live matching engine. See the [page-recipe venue contract](../../../packages/tide/docs/PAGE-PATTERNS.md#venues).
 
-### L05 · Low · Retired layout names remain in page titles
+### L05 · Resolved in 2.1.1 · Retired layout names in page titles
 
-Saved/help/submission browser titles still start with “Workbench / Half Split / Contained / Margin Reveal”. These obsolete study names do not describe Lineup's current layout. Correct the three `documentTitle` values in `data/pages.json` in a follow-up application patch. This audit intentionally retains native-document byte parity.
+Saved/help/submission browser titles still start with “Workbench / Half Split / Contained / Margin Reveal”. These obsolete study names do not describe Lineup's current layout. Correct the three `documentTitle` values in `data/pages.json` in a follow-up application patch. This audit intentionally retains native-document byte parity. The 2.1.1 complete title scan also found and corrected the same prefix on 48 native event documents; all other event fields remain unchanged.
 
-### L06 · Low · Private navigation/helpers duplicate available kit recipes
+### L06 · Resolved in 2.1.1 · Private navigation/helpers duplicate available kit recipes
 
 The header's `tide-app__nav-link` and `tide-app__skip` implement navigation/helper presentation while Tide supplies Site header, Saved link and Skip link recipes. This is a reuse opportunity rather than a claim that application viewport geometry belongs in Tide. Compare the kit recipes with `src/styles/base.css` and `header.html` / `skip-link.html`; adopt compatible shared presentation while keeping responsive placement private. Preserve the native destinations and one control set. No new UI-kit component is necessary for the evidence captured here.
 
