@@ -53,6 +53,21 @@ class AppTemplates:
                 raise ValueError('Invalid app content source')
             if page['layout']=='content' and not page.get('source'):
                 raise ValueError('Content pages need an explicit source')
+            if page.get('collection')=='venue':
+                owner = self.routes.get(page.get('venue'), {})
+                if owner.get('collection')!='venue' or page.get('source')!=owner.get('source'):
+                    raise ValueError('Venue results must retain their venue owner and information source')
+                links = owner.get('resultRoutes', {})
+                if set(links)!={'all','music','comedy','workshop','empty'}:
+                    raise ValueError('Register every venue result-state destination')
+                for target in links.values():
+                    destination = self.routes.get(target, {})
+                    if destination.get('collection')!='venue' or destination.get('venue')!=page['venue']:
+                        raise ValueError('Venue result-state links must remain in the same venue')
+                # This authored venue has only music samples, so All and Music
+                # intentionally share one truthful document, not a duplicate.
+                if links['music']==links['all'] and any(event['category']!='music' for event in self.events if event['venue']==page['venue']):
+                    raise ValueError('A shared All/Music venue page requires only music samples')
         actual = {p.name for p in (ROOT/'src/pages').glob('*.html')}
         if actual != {page['source'] for page in self.routes.values() if page.get('source')}:
             raise ValueError('Only registered unique content fragments belong in src/pages')
@@ -104,7 +119,12 @@ class AppTemplates:
             return values
         saved = collection=='saved'
         venue = collection=='venue'
-        events = [event for event in self.events if (not venue or event['venue']=='sunshine-theater') and (not saved or event['id']=='ink-after-dark')]
+        venue_id = page.get('venue') if venue else None
+        venue_owner = self.routes[venue_id] if venue else {}
+        result_routes = venue_owner['resultRoutes'] if venue else {'all':'search','music':'search-music','comedy':'search-comedy','workshop':'search-workshop','empty':'search-empty'}
+        collection_href = venue_id+'.html' if venue else 'index.html'
+        events = [event for event in self.events if (not venue or event['venue']==venue_id) and (not saved or event['id']=='ink-after-dark')]
+        venue_total = len(events) if venue else 0
         sample = page.get('sampleFilter', {})
         if set(sample)-{'category','empty'} or sample.get('category') not in (None,'music','comedy','workshop'):
             raise ValueError('Unsupported authored result state')
@@ -132,15 +152,29 @@ class AppTemplates:
             'INTRO_LABEL':'Saved' if saved else 'Albuquerque',
             'INTRO_TITLE':'For another evening.' if saved else 'Sunshine Theater' if venue else 'Coming up.',
             'INTRO_COPY':'Your shortlist, all in one place.' if saved else '120 Central Ave SW · Downtown Albuquerque' if venue else 'Good things happening close to home.',
+            'INTRO_LINKS':self.partial('scope-link', {'LINK_HREF':'#venue-information', 'LINK_LABEL':'About this venue'}) if venue else Html(''),
             'HEADING_LEVEL':page.get('headingLevel', 1), 'EVENT_COUNT':len(events),
             'COUNT_LABEL':str(len(events))+' '+('event' if len(events)==1 else 'events'),
-            'SEARCH_ACTION':'sunshine-theater.html' if venue else 'search.html',
-            'VENUE_SCOPE':'sunshine-theater' if venue else '',
+            'SEARCH_ACTION':collection_href if venue else 'search.html',
+            'VENUE_SCOPE':venue_id if venue else '',
+            'RESULT_NOTE':f'Venue control examples. All {venue_total} venue samples are music.' if venue else 'Control examples. Browse sample result pages:',
+            'RESULT_NAV_LABEL':'Sunshine Theater sample result states' if venue else 'Authored result states',
+            **{'RESULT_'+kind.upper()+'_HREF':target+'.html' for kind,target in result_routes.items()},
+            'COLLECTION_HREF':collection_href,
+            'COLLECTION_LABEL':'All venue events' if venue else 'All events',
+            'RESULTS_ACTION_LABEL':'View all venue samples' if venue else 'View all sample results',
+            'RESET_TAG':'a' if venue else 'button',
+            'RESET_ATTRIBUTES':attribute('href', collection_href) if venue else Html(attribute('type','reset')+attribute('form','event-search-form')),
+            'SCOPE_EXIT':self.partial('scope-link', {'LINK_HREF':'index.html', 'LINK_LABEL':'All events across Albuquerque'}) if venue else Html(''),
             'SUMMARY_KICKER':Html('') if saved else self.partial('summary-kicker', {'KICKER':'Sunshine Theater' if venue else 'The lineup'}),
             'SUMMARY_BADGE':Html('') if saved else self.partial('summary-badge', {}),
             'SUMMARY_TOGGLE':Html(''),
             'EMPTY_HIDDEN':Html(' hidden' if events else ''),
-            'PREVIEW_HIDDEN':Html('' if not events else ' hidden'),
+            'EMPTY_TITLE':f"No {sample.get('category', 'matching')} sample events at Sunshine Theater." if venue else 'No events found.',
+            'EMPTY_COPY':f'Browse all {venue_total} venue samples or read the venue information below.' if venue else 'This authored specimen shows an empty result state. Browse another sample result page.',
+            'EMPTY_RECOVERY_HREF':collection_href+'#results' if venue else 'index.html',
+            'EMPTY_RECOVERY_LABEL':'Show all venue events' if venue else 'Clear search and filters',
+            'PREVIEW_HIDDEN':Html(' hidden' if events or venue else ''),
             'MUSIC_CHECKED':Html(' checked' if sample.get('category')=='music' else ''),
             'COMEDY_CHECKED':Html(' checked' if sample.get('category')=='comedy' else ''),
             'WORKSHOP_CHECKED':Html(' checked' if sample.get('category')=='workshop' else ''),
@@ -149,9 +183,10 @@ class AppTemplates:
             'FEED_CLASS':'tide-event-list' if saved else 'tide-event-list tide-lineup__feed',
             'FEED_ID':Html('') if saved else attribute('id', 'venue-feed'),
             'MONTH_GROUPS':Html(''.join(group_html)),
-            'FOOTER_HREF':'submit.html' if saved else 'sunshine-theater.html',
-            'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'Explore Sunshine Theater and its upcoming sample events.',
-            'FOOTER_BACK_HIDDEN':Html('') if saved else Html(' hidden'),
+            'FOOTER_HREF':'submit.html' if saved else '#venue-information' if venue else 'sunshine-theater.html',
+            'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'About Sunshine Theater' if venue else 'Explore Sunshine Theater and its upcoming sample events.',
+            'FOOTER_BACK_HIDDEN':Html('') if saved or venue else Html(' hidden'),
+            'FOOTER_BACK_LABEL':'All events across Albuquerque' if venue else 'Back to all events',
             'FOOTER_NOTE':'Saved items are an example shortlist.' if saved else 'End of the sample feed. Fictional events for UX testing. Venue information is sourced separately.',
         })
         if selected and not venue:

@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.1.0 · 2026-10-27
+
+- Moved the single browse heading out of the native filter popover into the ordinary application layout. Phone/tablet headings remain exposed with Filters closed; desktop retains the first-column heading above bounded controls and results beside it. Updated native month-target clearance and short-window heading space.
+- Added three venue-owned empty documents for Comedy, Workshops and No results. All/Music share the existing six-music-sample venue document. Result links, native venue Reset/form action and recovery remain at Sunshine Theater; an explicitly named link exits to all Albuquerque events. Every empty view retains venue information, with a visible same-document information jump.
+- Added application regression coverage for heading uniqueness/placement, scoped destinations, venue information/recovery and global-versus-venue reset behavior. Kept all original paths, IDs, the original control set, authored data and zero browser JavaScript. Tide and shared repository sources are unchanged.
+- Recorded all-theme type/heading/layout checks, native venue journeys, month jumps, drawer resize/focus and short desktop coverage in [the verification contract](HEADINGS-VENUE-SCOPE.md).
+
 ## 2.0.5 · 2026-10-27
 
 - Corrected Saved's two-track desktop placement: results occupy column 1 and detail occupies column 2. Browse pages retain their explicit three-column overrides. Saved's list is 352px at 1200px and 390px at 1440px; no unused first or implicit third track remains.

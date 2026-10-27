@@ -1,0 +1,3412 @@
+{
+  "date": "2026-10-27",
+  "applicationVersion": "2.1.0",
+  "kitVersion": "1.10.0",
+  "baselineCommit": "7fbd4574cb35c7b637d2ff1706118a35e1f9b130",
+  "scope": "All repository edits are under application-kits/lineup/. The separately requested personal scope skill is installed outside the repository.",
+  "unchanged": {
+    "kitSourceFiles": 109,
+    "kitDistributionFiles": 18,
+    "referenceSiteFiles": 323,
+    "authoredEventData": true,
+    "venueFactsFragment": true
+  },
+  "resolved": [
+    "L01",
+    "L02",
+    "L03",
+    "L04"
+  ],
+  "open": [
+    "L05",
+    "L06"
+  ],
+  "routes": 67,
+  "generatedApplicationDocuments": 737,
+  "registeredPartials": 60,
+  "browser": "In-app Chromium on Windows, CSS viewport emulation",
+  "themeCases": 300,
+  "componentStylesCompared": 3000,
+  "typeDifferences": 0,
+  "responsiveCases": 108,
+  "nativeMonthJumps": 60,
+  "phoneMonth": {
+    "hash": "#month-2026-11",
+    "month": 0,
+    "path": "/events/app/index.html",
+    "width": 390
+  },
+  "shortDesktop": [
+    {
+      "route": "index",
+      "width": 1200,
+      "body": 86.73958587646484,
+      "footer": 476.00001525878906,
+      "heading": {
+        "bottom": 260.59375,
+        "height": 143.59375,
+        "right": 246.53125,
+        "top": 117,
+        "width": 238.53125,
+        "x": 8
+      },
+      "h1": {
+        "bottom": 185,
+        "height": 36,
+        "right": 212.53125,
+        "top": 149,
+        "width": 180.53125,
+        "x": 32
+      },
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "body": 65.40625,
+      "footer": 476,
+      "heading": {
+        "bottom": 260.59375,
+        "height": 143.59375,
+        "right": 246.53125,
+        "top": 117,
+        "width": 238.53125,
+        "x": 8
+      },
+      "h1": {
+        "bottom": 221,
+        "height": 72,
+        "right": 212.53125,
+        "top": 149,
+        "width": 180.53125,
+        "x": 32
+      },
+      "pass": true
+    },
+    {
+      "route": "index",
+      "width": 1440,
+      "body": 86.73958587646484,
+      "footer": 476.00001525878906,
+      "heading": {
+        "bottom": 260.59375,
+        "height": 143.59375,
+        "right": 294.53125,
+        "top": 117,
+        "width": 286.53125,
+        "x": 8
+      },
+      "h1": {
+        "bottom": 185,
+        "height": 36,
+        "right": 260.53125,
+        "top": 149,
+        "width": 228.53125,
+        "x": 32
+      },
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "body": 86.73958587646484,
+      "footer": 476.00001525878906,
+      "heading": {
+        "bottom": 260.59375,
+        "height": 143.59375,
+        "right": 294.53125,
+        "top": 117,
+        "width": 286.53125,
+        "x": 8
+      },
+      "h1": {
+        "bottom": 185,
+        "height": 36,
+        "right": 260.53125,
+        "top": 149,
+        "width": 228.53125,
+        "x": 32
+      },
+      "pass": true
+    }
+  ],
+  "openDrawerResize": [
+    {
+      "route": "index",
+      "width": 1200,
+      "clip": {
+        "bottom": 976,
+        "height": 707,
+        "right": 246.53125,
+        "top": 269,
+        "width": 214.53125,
+        "x": 32
+      },
+      "rail": {
+        "bottom": 976,
+        "height": 707,
+        "right": 246.53125,
+        "top": 269,
+        "width": 214.53125,
+        "x": 32
+      },
+      "open": true,
+      "value": "scope-proof",
+      "controls": 1,
+      "pass": true
+    },
+    {
+      "route": "index",
+      "width": 1440,
+      "clip": {
+        "bottom": 976,
+        "height": 707,
+        "right": 294.53125,
+        "top": 269,
+        "width": 262.53125,
+        "x": 32
+      },
+      "rail": {
+        "bottom": 976,
+        "height": 707,
+        "right": 294.53125,
+        "top": 269,
+        "width": 262.53125,
+        "x": 32
+      },
+      "open": true,
+      "value": "scope-proof",
+      "controls": 1,
+      "pass": true
+    },
+    {
+      "route": "index",
+      "width": 1920,
+      "clip": {
+        "bottom": 976,
+        "height": 731,
+        "right": 501.12501525878906,
+        "top": 245,
+        "width": 284.8020935058594,
+        "x": 216.3229217529297
+      },
+      "rail": {
+        "bottom": 976,
+        "height": 731,
+        "right": 501.12501525878906,
+        "top": 245,
+        "width": 284.8020935058594,
+        "x": 216.3229217529297
+      },
+      "open": true,
+      "value": "scope-proof",
+      "controls": 1,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 1200,
+      "clip": {
+        "bottom": 976,
+        "height": 635,
+        "right": 246.53125,
+        "top": 341,
+        "width": 214.53125,
+        "x": 32
+      },
+      "rail": {
+        "bottom": 976,
+        "height": 635,
+        "right": 246.53125,
+        "top": 341,
+        "width": 214.53125,
+        "x": 32
+      },
+      "open": true,
+      "value": "scope-proof",
+      "controls": 1,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 1440,
+      "clip": {
+        "bottom": 976,
+        "height": 671,
+        "right": 294.53125,
+        "top": 305,
+        "width": 262.53125,
+        "x": 32
+      },
+      "rail": {
+        "bottom": 976,
+        "height": 671,
+        "right": 294.53125,
+        "top": 305,
+        "width": 262.53125,
+        "x": 32
+      },
+      "open": true,
+      "value": "scope-proof",
+      "controls": 1,
+      "pass": true
+    },
+    {
+      "route": "sunshine-theater",
+      "width": 1920,
+      "clip": {
+        "bottom": 976,
+        "height": 671,
+        "right": 501.12501525878906,
+        "top": 305,
+        "width": 284.8020935058594,
+        "x": 216.3229217529297
+      },
+      "rail": {
+        "bottom": 976,
+        "height": 671,
+        "right": 501.12501525878906,
+        "top": 305,
+        "width": 284.8020935058594,
+        "x": 216.3229217529297
+      },
+      "open": true,
+      "value": "scope-proof",
+      "controls": 1,
+      "pass": true
+    }
+  ],
+  "drawers": [
+    {
+      "route": "index",
+      "desktop": {
+        "open": false,
+        "shown": true
+      },
+      "phone": {
+        "focus": "Filters",
+        "h1": [
+          "Coming up."
+        ],
+        "open": false
+      }
+    },
+    {
+      "route": "sunshine-theater",
+      "desktop": {
+        "open": false,
+        "shown": true
+      },
+      "phone": {
+        "focus": "Filters",
+        "h1": [
+          "Sunshine Theater"
+        ],
+        "open": false
+      }
+    }
+  ],
+  "venueJourney": {
+    "about": {
+      "hash": "#venue-information",
+      "path": "/events/app/sunshine-theater-comedy.html",
+      "venue": true
+    },
+    "workshops": {
+      "cards": 0,
+      "h1": [
+        "Sunshine Theater"
+      ],
+      "info": true,
+      "path": "/events/app/sunshine-theater-workshop.html",
+      "popover": false,
+      "scope": "sunshine-theater"
+    },
+    "reset": {
+      "cards": 6,
+      "path": "/events/app/sunshine-theater.html",
+      "query": "",
+      "scope": "sunshine-theater"
+    },
+    "music": {
+      "cards": 6,
+      "categories": [
+        "music",
+        "music",
+        "music",
+        "music",
+        "music",
+        "music"
+      ],
+      "closed": true,
+      "path": "/events/app/sunshine-theater.html"
+    },
+    "empty": {
+      "cards": 0,
+      "closed": true,
+      "info": true,
+      "path": "/events/app/sunshine-theater-empty.html"
+    },
+    "recovery": {
+      "cards": 6,
+      "path": "/events/app/sunshine-theater.html",
+      "scope": "sunshine-theater"
+    },
+    "exit": {
+      "cards": 54,
+      "path": "/events/app/index.html",
+      "scope": null
+    },
+    "back": {
+      "cards": 6,
+      "path": "/events/app/sunshine-theater.html",
+      "scope": "sunshine-theater"
+    }
+  },
+  "venueForm": {
+    "cards": 6,
+    "closed": true,
+    "path": "/events/app/sunshine-theater.html",
+    "query": "?venue=sunshine-theater&q=scope-proof&from=&to=",
+    "scope": "sunshine-theater"
+  },
+  "themes": [
+    {
+      "mode": "tide-light",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-light",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "tide-dark",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-light",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "bumble-dark",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-light",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "slate-dark",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-light",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "grove-dark",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-light",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "index",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-empty",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "saved",
+      "width": 390,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "index",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-empty",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "saved",
+      "width": 768,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "index",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "saved",
+      "width": 1024,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "index",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "saved",
+      "width": 1200,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "index",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 54,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 6,
+      "typeSlots": 14,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-comedy",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-workshop",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "sunshine-theater-empty",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 1,
+      "cards": 0,
+      "typeSlots": 6,
+      "errors": []
+    },
+    {
+      "mode": "iris-dark",
+      "route": "saved",
+      "width": 1440,
+      "visibleHeadings": 1,
+      "controls": 0,
+      "cards": 1,
+      "typeSlots": 14,
+      "errors": []
+    }
+  ],
+  "scopeSkill": {
+    "name": "application-kit-scope",
+    "filesMatchValidatedStaging": true,
+    "fileCount": 2
+  },
+  "check": {
+    "command": "npm run check",
+    "pass": true,
+    "status": "passed",
+    "htmlFiles": 1031,
+    "localReferences": 60048,
+    "markdownReferences": 428,
+    "runs": [
+      {
+        "name": "preview-http-contracts",
+        "pass": true
+      },
+      {
+        "name": "palette-and-contract-tests",
+        "pass": true
+      },
+      {
+        "name": "app-template-contracts",
+        "pass": true
+      }
+    ]
+  },
+  "limits": [
+    "Firefox/Safari",
+    "physical devices/software keyboards",
+    "screen readers",
+    "forced colors",
+    "text enlargement/zoom",
+    "print",
+    "current-run reduced-motion interaction",
+    "exhaustive native states"
+  ]
+}

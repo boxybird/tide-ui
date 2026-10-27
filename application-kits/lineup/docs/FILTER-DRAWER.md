@@ -22,3 +22,7 @@ Microsoft Edge 156.0.4314.42 (Chromium, Windows), with page JavaScript disabled:
 - Measured entry and exit transforms confirmed the 240ms left slide and retained top-layer exit. Keyboard checkbox changes scrolled the body while preserving the footer; a 500px-tall viewport kept its footer in view. The open desktop resize state stayed aligned while scrolling the outer page.
 
 Generated output, the detailed browser report and routine screenshots stay in ignored `build/qa/`; they are not canonical sources. Firefox, Safari, physical touch devices/software keyboards, screen readers and forced-colors interaction remain unverified. Native popovers and discrete/starting-style transitions are browser features; CSS anchor positioning improves the already-open desktop resize state, with a shared-geometry fallback for older engines.
+
+## Lineup 2.1.0
+
+The page heading now belongs to the ordinary browse layout outside the popover; the drawer contains controls and its own Search & filters title. The desktop anchor follows the filter clip below the heading when an open drawer is widened. Venue Reset navigates to that venue’s unfiltered sample document; the global Reset remains native form reset. Current [heading/venue verification](HEADINGS-VENUE-SCOPE.md) records resize, focus and scoped recovery evidence.

@@ -1,6 +1,6 @@
 # Native document composition · App 2.0.0
 
-Every one of the 64 native routes uses `document.html`. Sixty-two event/list/search/saved/venue/result-state routes share `workspace.html`; help and submission retain their own main layouts. There are only three unique fragments in `src/pages/`. Browser script inventories are empty.
+Every one of the 67 native routes uses `document.html`. Sixty-five event/list/search/saved/venue/result-state routes share `workspace.html`; help and submission retain their own main layouts. There are only three unique fragments in `src/pages/`. Browser script inventories are empty.
 
 | Source | Contract |
 | --- | --- |

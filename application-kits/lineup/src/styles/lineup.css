@@ -18,17 +18,27 @@
     /* Native fragments scroll every ancestor. The context wrapper and the
        canonical one-line Results row reserve space only in the outer page. */
     .tide-app-document:has(.tide-lineup__month:target) {
+      --tide-app-page-intro-height: calc(var(--tide-space-2) + var(--tide-leading-label) + var(--tide-space-2) + var(--tide-leading-page) + var(--tide-space-3) + var(--tide-leading-body) + var(--tide-space-6));
+      --tide-app-browse-heading-height: 0px;
       --tide-lineup-context-height: calc(var(--tide-space-6) + var(--tide-leading-label) + var(--tide-space-4));
       --tide-lineup-results-height: calc(2 * var(--tide-space-4) + var(--tide-leading-body) + var(--tide-border-width));
-      --tide-lineup-target-offset: calc(var(--tide-lineup-context-height) + var(--tide-lineup-results-height));
+      --tide-lineup-target-offset: calc(var(--tide-app-browse-heading-height) + var(--tide-lineup-context-height) + var(--tide-lineup-results-height));
       scroll-padding-block-start: calc(var(--tide-space-6) + var(--tide-lineup-target-offset));
     }
     /* Saved has the canonical Page intro instead of the context wrapper.
        Its authored title/supporting copy fit one line at split-layout widths. */
     .tide-app-document:has(.tide-lineup__month:target):has(.tide-app__results > .tide-app__intro) {
-      --tide-lineup-context-height: calc(var(--tide-space-2) + var(--tide-leading-label) + var(--tide-space-2) + var(--tide-leading-page) + var(--tide-space-3) + var(--tide-leading-body) + var(--tide-space-6));
+      --tide-lineup-context-height: var(--tide-app-page-intro-height);
     }
     .tide-app__filter-body { scrollbar-gutter: stable; }
+  }
+  @media (60rem <= width < 75rem) {
+    .tide-app-document:has(.tide-lineup__month:target):has(.tide-app__browse-heading) {
+      --tide-app-browse-heading-height: var(--tide-app-page-intro-height);
+    }
+    .tide-app-document:has(.tide-lineup__month:target):has(.tide-app--venue) {
+      --tide-app-browse-heading-height: calc(var(--tide-app-page-intro-height) + var(--tide-space-3) + var(--tide-leading-body));
+    }
   }
   /* Isolate the complete feed beneath its sibling permanent summary. */
   .tide-lineup__feed { isolation: isolate; }

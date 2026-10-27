@@ -41,6 +41,7 @@
   .tide-app__nav-link--wide { display: none; }
   .tide-app__nav .tide-icon { inline-size: var(--tide-size-icon-small); block-size: var(--tide-size-icon-small); }
   .tide-app__workspace { max-inline-size: var(--tide-app-reading-width); margin-inline: auto; }
+  .tide-app__browse-heading { min-inline-size: 0; }
   .tide-app__results { min-inline-size: 0; scroll-margin-block-start: var(--tide-space-6); }
   .tide-app__intro h1, .tide-app__intro h2 { max-inline-size: 20ch; }
   .tide-app__search { padding-inline: var(--tide-layout-inset); }
@@ -102,6 +103,23 @@
       gap: var(--tide-app-pane-gap);
       align-items: start;
     }
+    .tide-app__browse {
+      position: sticky;
+      inset-block-start: var(--tide-space-6);
+      block-size: max(0px, calc(100dvh - var(--tide-app-header-block-size) - 2 * var(--tide-space-6)));
+      min-inline-size: 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto minmax(0, 1fr);
+    }
+    .tide-app__browse-heading { grid-column: 1; grid-row: 1; }
+    .tide-app__filter-clip { display: contents; }
+    .tide-app__browse > .tide-app__results {
+      position: relative;
+      inset-block-start: auto;
+      grid-column: 1; grid-row: 2;
+      min-block-size: 0; block-size: 100%; max-block-size: 100%;
+    }
     .tide-app__results {
       position: sticky;
       inset-block-start: var(--tide-space-6);
@@ -136,7 +154,7 @@
   }
 
   @media print {
-    .tide-app__header, .tide-app__results, .tide-app__site-footer, .tide-event-hero__toolbar { display: none; }
+    .tide-app__header, .tide-app__browse, .tide-app__results, .tide-app__site-footer, .tide-event-hero__toolbar { display: none; }
     .tide-app__workspace, .tide-app__detail { display: block; max-inline-size: none; border: 0; }
     .tide-app__detail .tide-event-hero { min-block-size: 0; }
     .tide-app__detail .tide-event-hero__content { padding-block-start: var(--tide-space-6); }

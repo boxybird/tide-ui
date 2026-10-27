@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.0.5
+# Native component ownership · Lineup 2.1.0
 
 The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -9,6 +9,8 @@ The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScri
 | Saved desktop tracks | `desktop.css`: results in column 1, detail in column 2; scoped browse overrides keep their three-column placement |
 | Canonical component typography | Tide recipes; `test_presentation.py` rejects private aliases that override shared type across rendered routes |
 | Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; private context wrapper beside canonical Results; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
+| Visible browse heading | `workspace-browse.html` authors one canonical intro outside the popover; private grid placement keeps it visible on phone/tablet/desktop |
+| Venue result destinations and recovery | `data/pages.json` venue owner/result map, `html_templates.py`, scope/reset/empty partials; same venue information in populated and empty states |
 | Native responsive filter drawer | `filter-trigger.html`, `filter-rail.html`, `filters.css`; popover buttons, left slide/reduced motion, scrolling body/pinned footer and CSS return to the reserved desktop column; one form/control set, native disclosure/reset, browser-owned dismissal/focus |
 | Result/card/month counts and label spans | Build-time `tools/html_templates.py`, `data/events.json`, `data/pages.json` and registered partials |
 | Category/empty specimens and complete previews | Typed `sampleFilter` route context; four authored result pages, never browser matching or fetching |
@@ -22,3 +24,5 @@ Native event paths, IDs and 54 records remain. Custom draft counts, arbitrary te
 CSS uses native gutter reservation and grid rows instead of JavaScript height/scrollbar measurements. The fixed summary no longer requires month headers to subtract its measured height. Original minimum 24px panel bottom clearance remains; native scrollbar space is reserved in the scrolling area through CSS.
 
 All source ownership and theme boundaries remain explicit. No generated copies are edited. See [runtime boundary](RUNTIME.md), [desktop contract](DESKTOP-LAYOUT.md) and [policy/audit](../../../docs/NO-BROWSER-JAVASCRIPT.md).
+
+Current [heading/venue verification](HEADINGS-VENUE-SCOPE.md) covers the original control set, unique heading, scoped native routes and exact venue ID. Tide remains unchanged.

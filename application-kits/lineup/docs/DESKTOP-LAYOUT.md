@@ -1,6 +1,6 @@
-# Desktop composition · Lineup 2.0.5
+# Desktop composition · Lineup 2.1.0
 
-The entire app is native HTML/CSS with no browser scripts. At 75rem and above, authored filter/list/detail columns use CSS Grid/subgrid in 20/35/45 proportions after gaps, inside a centered 92rem maximum. The heading and controls start in their final column; no node moves during load.
+The entire app is native HTML/CSS with no browser scripts. At 75rem and above, authored filter/list/detail columns use CSS Grid/subgrid in 20/35/45 proportions after gaps, inside a centered 92rem maximum. The ordinary-document heading and filter controls start in their own rows of the first column; no node moves during load. The heading is outside the popover, and results span both rows in the middle column.
 
 `workspace-browse.html`, `workspace-results.html`, `filter-rail.html`, `filter-status.html` and `filter-actions.html` own the complete structure. The result summary is outside `.tide-app__feed-scroll`, which contains the complete isolated feed, empty state and footer. CSS grid rows reserve the summary naturally; month headings stick at the feed top without measuring its height. Native gutter reservation replaces JavaScript scrollbar measurement. Left panes remain bounded with a minimum 24px bottom clearance; the right document scrolls naturally.
 
@@ -18,4 +18,6 @@ Native links, browser history, controls and reset remain. Result matching and pr
 
 The earlier 1.2.2 script-free diagnostic proved the desktop grid and heading positions did not need scripts. App 2.0.0 extends that boundary to the entire app and reference specimens. Current checks scan every generated route/theme and canonical HTML for script dependencies. Browser evidence is Chromium on Windows; Firefox/Safari, devices and screen readers remain deferred.
 
-Current [Lineup 2.0.5 verification](SAVED-TYPOGRAPHY.md) resolves the Saved track failure and component type drift without changing the UI kit. Existing authored row heights and token-based target clearance are covered by the recorded native fragment checks.
+Historical [Lineup 2.0.5 verification](SAVED-TYPOGRAPHY.md) resolves the Saved track failure and component type drift without changing the UI kit. Existing authored row heights and token-based target clearance are covered by the recorded native fragment checks.
+
+From 60rem to 75rem, one bounded browse column contains the exposed heading above results; target clearance includes that heading and the venue information link. From 75rem, the heading sits above the filter panel and can scroll within 40% of the pane in short windows, keeping the h1 readable and leaving usable control/footer space. The result column does not reserve its neighbouring heading height. See [2.1.0 heading/venue verification](HEADINGS-VENUE-SCOPE.md).

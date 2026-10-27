@@ -2,7 +2,7 @@
 
 Lineup **2.0.4**, layout family **option 1**, is the current named application kit derived from **Tide UI 1.10.0**. Burque Events is its sample website. The application sources now live together in `application-kits/lineup/`; `/events/` preview URLs remain stable. The move preserves all application HTML/CSS/assets and all 704 generated route documents. Tide's component sources, tokens, recipes, registry, assets and generated distribution are unchanged; only two integration-test references follow the moved application path. See [move parity](audit/move-parity.json).
 
-This document preserves the **2.0.4 audit baseline** and its original screenshots/measurements. **L01 and L02 are resolved in Lineup 2.0.5**; see [the application-only repair and verification](SAVED-TYPOGRAPHY.md). L03–L06 remain open. A passing source/contract suite does not imply that the remaining findings are resolved.
+This document preserves the **2.0.4 audit baseline** and its original screenshots/measurements. **L01 and L02 are resolved in Lineup 2.0.5**; see [the application-only repair and verification](SAVED-TYPOGRAPHY.md). **L03 and L04 are resolved in Lineup 2.1.0**; see [visible headings and scoped venue recovery](HEADINGS-VENUE-SCOPE.md). L05/L06 remain open. A passing source/contract suite does not imply that the remaining findings are resolved.
 
 ## Scope and inventory
 
@@ -49,7 +49,7 @@ Measured card type remains aligned: 24px/32px title, 14px/24px metadata, 12px/20
 
 ![Tide canonical listing reference from this audit run](audit/20-tide-listing-reference.png)
 
-### L03 · Medium · The browse page heading disappears with the closed drawer
+### L03 · Resolved in 2.1.0 · Visible browse headings
 
 On browse/category/empty/venue pages below 75rem, the only h1 is inside the closed popover. At 390px the first exposed heading is the h2 result count, followed by h3 months. The region's accessible label also points to the hidden drawer heading. This is a heading/navigation clarity risk, not a claim of full accessibility failure. The phone event pages, Saved, help and submission expose their own h1.
 
@@ -57,7 +57,7 @@ Follow-up: place the primary page heading and useful context in the ordinary app
 
 ![Phone browse view: the visible hierarchy begins with a result-count h2](audit/05-phone-list.png)
 
-### L04 · Medium · Venue result-state links silently leave venue scope
+### L04 · Resolved in 2.1.0 · Venue result-state scope
 
 On Sunshine Theater, the Music/Comedy/Workshops/No results links in `src/templates/filters.html` point to global `search-*.html` documents, whose route contexts use collection `all`. For example, Comedy leaves the venue and shows 13 global samples. Only “All events” makes the exit explicit. There is no authored venue-filtered empty document demonstrating that useful venue information remains available during recovery. A hidden venue form field does not change these native link destinations.
 
@@ -95,4 +95,4 @@ Run root `npm run build` and `npm run check`; the [verification record](audit/ve
 
 Browser measurements/screenshots are in-app Chromium on Windows with CSS viewport emulation. The matrices measure geometry, headings, control count and image/script presence; most cases are not full interaction tests. Pointer/keyboard interactions were exercised only where explicitly stated above. Firefox/Safari, physical touch devices/software keyboards, screen readers, forced colors, zoom/text enlargement, current-run reduced-motion interaction, print, and a complete state/contrast audit remain unverified. Source theme/contrast checks are not assistive-technology evidence. No WCAG conformance claim is made.
 
-L01/L02 are resolved by the [2.0.5 application patch](SAVED-TYPOGRAPHY.md), with rendered comparisons and application regression guards. Next application work can address the heading/venue-scope findings L03/L04. Tide remains the source of truth.
+L01/L02 are resolved by the [2.0.5 application patch](SAVED-TYPOGRAPHY.md), with rendered comparisons and application regression guards. L03/L04 are resolved by the [2.1.0 heading/venue patch](HEADINGS-VENUE-SCOPE.md). L05/L06 remain application follow-ups. Tide remains the source of truth.
