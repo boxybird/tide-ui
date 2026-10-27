@@ -42,9 +42,7 @@
   .tide-app__nav .tide-icon { inline-size: var(--tide-size-icon-small); block-size: var(--tide-size-icon-small); }
   .tide-app__workspace { max-inline-size: var(--tide-app-reading-width); margin-inline: auto; }
   .tide-app__results { min-inline-size: 0; scroll-margin-block-start: var(--tide-space-6); }
-  .tide-app__intro { padding-block-start: var(--tide-space-6); }
   .tide-app__intro h1, .tide-app__intro h2 { max-inline-size: 20ch; }
-  .tide-app__intro p:not(.tide-eyebrow) { margin-block-start: var(--tide-space-2); font-size: var(--tide-font-size-caption); }
   .tide-app__search { padding-inline: var(--tide-layout-inset); }
   .tide-app__search-label { color: var(--tide-color-text-secondary); font-size: var(--tide-font-size-caption); }
   .tide-app__filter-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--tide-space-3); padding: var(--tide-space-4) var(--tide-layout-inset) var(--tide-space-5); }
@@ -116,7 +114,6 @@
       scrollbar-width: thin;
       scrollbar-color: var(--tide-color-border-control) var(--tide-color-canvas);
     }
-    .tide-app__results .tide-app__intro { padding-block-start: var(--tide-space-6); }
     .tide-app__detail { display: block; }
     .tide-app__preview-state { display: grid; min-block-size: calc(100svh - var(--tide-space-20)); }
     .tide-app__detail .tide-event-hero { min-block-size: calc(100svh - var(--tide-space-20)); }

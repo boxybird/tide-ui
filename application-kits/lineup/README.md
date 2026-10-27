@@ -1,6 +1,6 @@
-# Lineup application kit · 2.0.4
+# Lineup application kit · 2.0.5
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.10.0**. Burque Events is its authored sample website. The application version remains **2.0.4**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus Music, Comedy, Workshop and empty-result specimens: 64 documents in the default app and each of ten theme/mode combinations.
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.10.0**. Burque Events is its authored sample website. The application version is **2.0.5**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus Music, Comedy, Workshop and empty-result specimens: 64 documents in the default app and each of ten theme/mode combinations.
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 
@@ -8,7 +8,7 @@ Desktop keeps the centered 92rem maximum and 20/35/45 filters/list/detail propor
 
 Native links, fragments, browser Back, input controls, reset, required/type validation and file selection remain. Free-text/date matching, live result counts, fetched previews, session state and photo/inspection message hooks are removed. Controls are explicitly labelled examples. Use the authored result-state links to review populated/category/empty layouts; URL query values are not evaluated. No backend or service is introduced.
 
-Saved reserves separate intro, summary and scrolling-feed rows. Native month links align the selected heading at the feed top; desktop summary clearance comes from named type/spacing inputs. See the [desktop contract and browser coverage](docs/DESKTOP-LAYOUT.md).
+Saved uses two populated desktop columns and reserves separate intro, canonical summary and scrolling-feed rows. Lineup adopts Tide's result, calendar and page-intro typography without private type aliases. See the [2.0.5 changes](docs/CHANGELOG.md) and [verification](docs/SAVED-TYPOGRAPHY.md). Native month links align the selected heading at the feed top; desktop summary clearance comes from named type/spacing inputs. See the [desktop contract and browser coverage](docs/DESKTOP-LAYOUT.md).
 
 Run `npm run build`, `npm run check`, `npm run dev` from the root. Open `/events/app/index.html`; `/events/index.html` links to all modes. Canonical sources moved from `examples/events/` to `application-kits/lineup/`; generated `build/events/` output and native preview URLs remain unchanged. Node/Python are development tools only. See [zero-browser-JavaScript policy](../../docs/NO-BROWSER-JAVASCRIPT.md).
 

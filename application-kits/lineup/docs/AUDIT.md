@@ -2,7 +2,7 @@
 
 Lineup **2.0.4**, layout family **option 1**, is the current named application kit derived from **Tide UI 1.10.0**. Burque Events is its sample website. The application sources now live together in `application-kits/lineup/`; `/events/` preview URLs remain stable. The move preserves all application HTML/CSS/assets and all 704 generated route documents. Tide's component sources, tokens, recipes, registry, assets and generated distribution are unchanged; only two integration-test references follow the moved application path. See [move parity](audit/move-parity.json).
 
-This is an audit baseline, not a layout repair or redesign. The issues below remain reproducible. A passing source/contract suite does not mean this application has passed the rendered audit.
+This document preserves the **2.0.4 audit baseline** and its original screenshots/measurements. **L01 and L02 are resolved in Lineup 2.0.5**; see [the application-only repair and verification](SAVED-TYPOGRAPHY.md). L03–L06 remain open. A passing source/contract suite does not imply that the remaining findings are resolved.
 
 ## Scope and inventory
 
@@ -24,7 +24,7 @@ Current-run evidence: 20 inspected screenshots; 96 geometry/heading cases across
 
 ## Findings and application-only follow-ups
 
-### L01 · High · Saved breaks at the desktop breakpoint
+### L01 · Resolved in 2.0.5 · Saved desktop breakpoint
 
 At 1199px the Saved list is 390px wide. At 1200px it shrinks to **117.6px**, with text fragmented into several lines and a large unused first column. At 1440px it remains unnecessarily offset, with a 319.6px list. There is no document horizontal overflow: an overflow-only test misses this failure.
 
@@ -32,11 +32,11 @@ Cause: `src/styles/desktop.css` gives the non-column workspace two explicit trac
 
 ![Saved at 1200px: unused first track and a compressed event list](audit/12-desktop-saved.png)
 
-### L02 · High · Private aliases override public component appearance
+### L02 · Resolved in 2.0.5 · Private component aliases
 
 The same elements carry public Tide and private Lineup classes. Rules in `src/styles/lineup.css` change the public slot through its private alias; selector-only ownership checks do not join CSS selectors to composed markup.
 
-| Shared element | Tide 1.10.0 recipe | Current Lineup rendering |
+| Shared element | Tide 1.10.0 recipe | Lineup 2.0.4 baseline |
 | --- | --- | --- |
 | `tide-results` + `tide-lineup__summary` / `__heading` | 14px/24px; 16px/24px block/inline padding | 12px/24px; 24px top, 16px bottom, 24px inline padding |
 | `tide-results__count` + `tide-lineup__heading-title` | 14px/24px inherited result type | 28px/36px page-title type |
@@ -95,4 +95,4 @@ Run root `npm run build` and `npm run check`; the [verification record](audit/ve
 
 Browser measurements/screenshots are in-app Chromium on Windows with CSS viewport emulation. The matrices measure geometry, headings, control count and image/script presence; most cases are not full interaction tests. Pointer/keyboard interactions were exercised only where explicitly stated above. Firefox/Safari, physical touch devices/software keyboards, screen readers, forced colors, zoom/text enlargement, current-run reduced-motion interaction, print, and a complete state/contrast audit remain unverified. Source theme/contrast checks are not assistive-technology evidence. No WCAG conformance claim is made.
 
-Recommended next application task: repair L01, then reconcile L02 against the canonical kit recipe with rendered guards. Follow with the heading/venue-scope work in L03/L04. These are Lineup changes; Tide remains the source of truth.
+L01/L02 are resolved by the [2.0.5 application patch](SAVED-TYPOGRAPHY.md), with rendered comparisons and application regression guards. Next application work can address the heading/venue-scope findings L03/L04. Tide remains the source of truth.

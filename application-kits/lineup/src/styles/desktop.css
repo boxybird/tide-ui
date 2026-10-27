@@ -16,14 +16,14 @@
     }
     .tide-app__header, .tide-app__site-footer { max-inline-size: none; padding-inline: var(--tide-app-outer-inset); }
     .tide-app__header { position: sticky; inset-block-start: 0; z-index: var(--tide-z-navigation); background: var(--tide-color-canvas); }
-    /* Keep the saved page's separate unenhanced composition. */
+    /* Saved has two explicit tracks; browse pages override placement below. */
     .tide-app__workspace { max-inline-size: none; padding-inline: var(--tide-app-outer-inset); grid-template-columns: 22rem minmax(0, 1fr); }
     .tide-app__results {
-      grid-column: 2; grid-row: 1;
+      grid-column: 1; grid-row: 1;
       inset-block-start: var(--tide-app-panel-top); max-block-size: var(--tide-app-panel-height); block-size: var(--tide-app-panel-height); overscroll-behavior-y: contain;
       inline-size: 100%; max-inline-size: calc((var(--tide-app-content-width) - var(--tide-space-6)) / 2); justify-self: end;
     }
-    .tide-app__detail, .tide-app__preview-state { grid-column: 3; grid-row: 1; }
+    .tide-app__detail, .tide-app__preview-state { grid-column: 2; grid-row: 1; }
     .tide-app__story { max-inline-size: 48rem; margin-inline: auto; }
 
     .tide-app--columns {
@@ -61,12 +61,6 @@
       min-inline-size: 0; min-block-size: 0; block-size: 100%; overflow: clip;
     }
     .tide-app__filter-rail { position: relative; inline-size: 100%; min-inline-size: 0; block-size: 100%; }
-    .tide-app--columns .tide-lineup__summary {
-      position: static;
-      grid-template-columns: minmax(0, 1fr); background: var(--tide-color-canvas);
-    }
-    .tide-lineup__summary > * { grid-column: 1; }
-    .tide-lineup__order { display: flex; flex-wrap: wrap; align-items: center; gap: var(--tide-space-2); }
     .tide-app--columns .tide-app__detail, .tide-app--columns .tide-app__preview-state { grid-column: 3; grid-row: 1; }
     .tide-app--columns .tide-app__site-footer { grid-column: 3; grid-row: 3; margin: 0; padding-inline: 0; justify-self: stretch; }
     .tide-app__legacy-clear { display: none; }

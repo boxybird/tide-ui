@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.0.4
+# Native component ownership · Lineup 2.0.5
 
 The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -6,7 +6,9 @@ The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScri
 | --- | --- |
 | Event cards, hero/details, fields, notices, badges, prose, native controls and filter-panel internals | `packages/tide/` component recipes and CSS |
 | 20/35/45 centered desktop layout, bounded left panes and natural right document | `src/styles/desktop.css`, static `tide-app--columns` body modifier and authored workspace templates |
-| Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
+| Saved desktop tracks | `desktop.css`: results in column 1, detail in column 2; scoped browse overrides keep their three-column placement |
+| Canonical component typography | Tide recipes; `test_presentation.py` rejects private aliases that override shared type across rendered routes |
+| Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; private context wrapper beside canonical Results; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
 | Native responsive filter drawer | `filter-trigger.html`, `filter-rail.html`, `filters.css`; popover buttons, left slide/reduced motion, scrolling body/pinned footer and CSS return to the reserved desktop column; one form/control set, native disclosure/reset, browser-owned dismissal/focus |
 | Result/card/month counts and label spans | Build-time `tools/html_templates.py`, `data/events.json`, `data/pages.json` and registered partials |
 | Category/empty specimens and complete previews | Typed `sampleFilter` route context; four authored result pages, never browser matching or fetching |
