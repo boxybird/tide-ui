@@ -1,0 +1,356 @@
+{
+  "date": "2026-10-27",
+  "applicationVersion": "2.1.2",
+  "kitVersion": "1.10.0",
+  "baselineCommit": "f7712012fb694f3883a0f7d8078be00b1230d341",
+  "startingGitState": "clean, main only",
+  "scope": "All canonical edits are inside application-kits/lineup/.",
+  "resolved": [
+    "R01",
+    "R02"
+  ],
+  "open": [],
+  "unchanged": {
+    "kitSourceFiles": 109,
+    "kitBuiltFiles": 18,
+    "referenceSiteSourceFiles": 4,
+    "referenceSiteBuiltFiles": 323,
+    "sharedToolFiles": 13,
+    "applicationDataPageAssetFiles": 9
+  },
+  "browser": "In-app Chromium on Windows, CSS viewport emulation",
+  "footerCases": 240,
+  "openDrawerCases": 160,
+  "footerRoles": 5,
+  "propertiesPerRole": 24,
+  "propertyComparisons": 28800,
+  "styleDifferences": 0,
+  "themeCoverage": [
+    {
+      "mode": "bumble-dark",
+      "cases": 24
+    },
+    {
+      "mode": "bumble-light",
+      "cases": 24
+    },
+    {
+      "mode": "grove-dark",
+      "cases": 24
+    },
+    {
+      "mode": "grove-light",
+      "cases": 24
+    },
+    {
+      "mode": "iris-dark",
+      "cases": 24
+    },
+    {
+      "mode": "iris-light",
+      "cases": 24
+    },
+    {
+      "mode": "slate-dark",
+      "cases": 24
+    },
+    {
+      "mode": "slate-light",
+      "cases": 24
+    },
+    {
+      "mode": "tide-dark",
+      "cases": 24
+    },
+    {
+      "mode": "tide-light",
+      "cases": 24
+    }
+  ],
+  "geometryCases": 218,
+  "boundedCases": 170,
+  "minimumBottomClearance": 24,
+  "geometrySummary": [
+    {
+      "width": 320,
+      "height": 844,
+      "cases": 9,
+      "minimumClearance": null
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "cases": 9,
+      "minimumClearance": null
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "cases": 9,
+      "minimumClearance": null
+    },
+    {
+      "width": 959,
+      "height": 900,
+      "cases": 9,
+      "minimumClearance": null
+    },
+    {
+      "width": 960,
+      "height": 500,
+      "cases": 3,
+      "minimumClearance": 24
+    },
+    {
+      "width": 960,
+      "height": 900,
+      "cases": 9,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1024,
+      "height": 500,
+      "cases": 3,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1024,
+      "height": 900,
+      "cases": 67,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1199,
+      "height": 900,
+      "cases": 9,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1200,
+      "height": 500,
+      "cases": 3,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1200,
+      "height": 900,
+      "cases": 67,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1440,
+      "height": 500,
+      "cases": 3,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "cases": 9,
+      "minimumClearance": 24
+    },
+    {
+      "width": 1920,
+      "height": 1000,
+      "cases": 9,
+      "minimumClearance": 24
+    }
+  ],
+  "nativeResetEscape": {
+    "draft": {
+      "checked": 1,
+      "from": "2026-11-01",
+      "query": "print"
+    },
+    "reset": {
+      "checked": 0,
+      "from": "",
+      "query": ""
+    },
+    "escape": {
+      "focus": "Filters",
+      "open": false
+    }
+  },
+  "openResize": {
+    "before": {
+      "footerTop": 631.3333740234375,
+      "width": 390
+    },
+    "scrolled": {
+      "bodyScroll": 0,
+      "footerTop": 631.3333740234375,
+      "query": "retained example"
+    },
+    "desktop": {
+      "controls": 1,
+      "delta": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "open": true,
+      "query": "retained example",
+      "width": 1440
+    },
+    "dismissedDesktop": {
+      "open": false,
+      "shown": true
+    },
+    "closedPhone": {
+      "open": false,
+      "query": "retained example",
+      "shown": false,
+      "width": 390
+    }
+  },
+  "scrollFocus": {
+    "before": {
+      "footerTop": 631.3333740234375
+    },
+    "after": {
+      "bodyScroll": 341.3333435058594,
+      "footerTop": 631.3333740234375
+    },
+    "tabToReset": {
+      "reset": true,
+      "tag": "BUTTON",
+      "text": "Reset"
+    },
+    "tabToAction": {
+      "tag": "BUTTON",
+      "text": "View all sample results"
+    }
+  },
+  "venue": {
+    "reset": {
+      "cards": 6,
+      "closed": true,
+      "path": "/events/app/sunshine-theater.html",
+      "scope": "sunshine-theater"
+    },
+    "recovery": {
+      "cards": 6,
+      "hash": "#results",
+      "path": "/events/app/sunshine-theater.html",
+      "scope": "sunshine-theater"
+    }
+  },
+  "monthTargets": [
+    {
+      "width": 390,
+      "route": "index",
+      "before": {
+        "feed": 397.3333435058594,
+        "hash": "",
+        "month": 3885.33349609375,
+        "pageY": 0,
+        "summary": 340.66668701171875,
+        "width": 390
+      },
+      "after": {
+        "feed": -3488,
+        "hash": "#month-2026-11",
+        "month": 0,
+        "pageY": 3885.333251953125,
+        "summary": -3544.666748046875,
+        "width": 390
+      }
+    },
+    {
+      "width": 1024,
+      "route": "index",
+      "before": {
+        "feed": 361.6666870117187,
+        "hash": "",
+        "month": 3849.666748046875,
+        "pageY": 0,
+        "summary": 305,
+        "width": 1024
+      },
+      "after": {
+        "feed": 265,
+        "hash": "#month-2026-11",
+        "month": 265,
+        "pageY": 96.66666412353516,
+        "summary": 208.33334350585935,
+        "width": 1024
+      }
+    },
+    {
+      "width": 1199,
+      "route": "sunshine-theater",
+      "before": {
+        "feed": 397.6666870117187,
+        "hash": "",
+        "month": 835,
+        "pageY": 0,
+        "summary": 341,
+        "width": 1199
+      },
+      "after": {
+        "feed": 301,
+        "hash": "#month-2026-11",
+        "month": 301,
+        "pageY": 96.66666412353516,
+        "summary": 244.33334350585935,
+        "width": 1199
+      }
+    },
+    {
+      "width": 1440,
+      "route": "index",
+      "before": {
+        "feed": 229.6666717529297,
+        "hash": "",
+        "month": 3685.666748046875,
+        "pageY": 0,
+        "summary": 173,
+        "width": 1440
+      },
+      "after": {
+        "feed": 229.6666717529297,
+        "hash": "#month-2026-11",
+        "month": 229.6666717529297,
+        "pageY": 0,
+        "summary": 173,
+        "width": 1440
+      }
+    }
+  ],
+  "applicationTests": 36,
+  "check": {
+    "command": "npm run check",
+    "status": "passed",
+    "pass": true,
+    "htmlFiles": 1031,
+    "localReferences": 60048,
+    "markdownReferences": 510,
+    "runs": [
+      {
+        "name": "preview-http-contracts",
+        "pass": true
+      },
+      {
+        "name": "palette-and-contract-tests",
+        "pass": true
+      },
+      {
+        "name": "app-template-contracts",
+        "pass": true
+      }
+    ]
+  },
+  "evidenceHandling": "The incomplete bulk browser batch timed out and was discarded. Final footer cases were saved in ten completed per-theme batches, with actual dimensions checked. Native fragment positions were read after settling.",
+  "limits": [
+    "Firefox/Safari",
+    "physical devices/software keyboards and safe-area simulation",
+    "screen readers",
+    "forced colours",
+    "text enlargement/zoom",
+    "print",
+    "current-run reduced-motion interaction",
+    "exhaustive native states"
+  ]
+}

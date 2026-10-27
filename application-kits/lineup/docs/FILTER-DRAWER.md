@@ -1,15 +1,19 @@
-# Native responsive filter drawer · App 2.0.4
+# Native responsive filter drawer · Lineup 2.1.2
 
 The same `filter-rail.html` aside and original form/control set serve both layouts. `filter-trigger.html` is rendered by the shared header only on routes with a filter panel. The kit owns Filter panel internals, Button, Icon, fields and native Expandable; app-owned `filters.css` owns responsive placement and motion. `consumer-manifest.json` registers the templates and stylesheet. No browser JavaScript is shipped or needed.
 
 ## Behavior
 
 - Below 75rem, Filters opens `#lineup-filters` through `popovertarget`. Its `popover="auto"` state supplies native toggling, explicit Close, Escape and outside-click dismissal. The close button receives native autofocus; dismissal returns focus to the launcher when appropriate.
-- The drawer occupies the left edge, at most 24rem wide with at least a 2rem outside-dismissal area. Its `100dvh` grid keeps the header and footer visible while the body scrolls. Footer padding respects the bottom safe area. CSS prevents background page scrolling while the narrow drawer is open.
+- The drawer occupies the left edge, at most 24rem wide with at least a 2rem outside-dismissal area. Its `100dvh` grid keeps the header and footer visible while the body scrolls. Private child wrappers reserve the drawer's start gutter and bottom safe area around the status/actions. The canonical rail footer remains a direct child of its panel; its own padding, grid gap, status flex layout and text flow stay in Tide. CSS prevents background page scrolling while the narrow drawer is open.
 - Entry and exit translate horizontally over 240ms. `@starting-style`, discrete `display` and `overlay` transitions preserve the visible exit. With reduced motion, opening and closing are immediate.
 - This is a non-modal popover: the page is not inert and there is no focus trap or modal claim. Close, Escape and outside dismissal preserve entered values. Native search inputs can consume the first Escape to clear their text. Reset restores authored defaults; result counts remain authored samples.
 - At 75rem and above the original 20/35/45 desktop composition remains. The launcher and drawer header are hidden; the panel is always displayed in its original column. If resized while open, CSS anchors fit the top-layer panel to `.tide-app__filter-clip`, with the existing grid geometry as a fallback. Dismissal leaves the desktop panel visible. Returning to a narrow width preserves the browser's open/closed state and the original input values.
 - Saved/help/submission have no filter launcher or panel. Event detail pages retain their full-screen phone reading layout; filters remain available in the split layout from 60rem upwards.
+
+## Current verification · Lineup 2.1.2
+
+[Footer/tablet verification](FILTER-FOOTER-TABLET.md) covers exact all-theme recipe parity, bounded pane clearance, native controls and drawer resizing. The earlier evidence below remains historical.
 
 ## Verification · 2026-10-26
 

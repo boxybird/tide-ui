@@ -3,12 +3,6 @@
 @layer tide.app-filters {
   .tide-app__filter-trigger, .tide-app__filter-header { display: none; }
   .tide-app__filter-rail[popover] { inset: auto; max-inline-size: none; max-block-size: none; }
-  .tide-app__filter-footer .tide-app__filter-status-row {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-  .tide-app__filter-footer [data-filter-reset] { white-space: nowrap; }
-  .tide-app__filter-footer .tide-app__filter-count { min-inline-size: 0; text-align: end; }
   @media (width >= 75rem) {
     .tide-app__filter-clip { anchor-name: --tide-app-filter-column; }
     .tide-app__filter-rail[popover] { display: grid; }
@@ -42,9 +36,10 @@
     .tide-app__filter-rail[popover]:not(:popover-open) { display: none; }
     .tide-app__filter-rail:popover-open { display: grid; transform: translateX(0); }
     .tide-app__filter-body { overflow-y: auto; }
-    .tide-app__filter-footer {
-      padding: var(--tide-space-5) var(--tide-layout-inset) max(var(--tide-space-6), env(safe-area-inset-bottom, 0px));
-    }
+    /* Private child wrappers supply drawer clearance around canonical slots.
+       The rail footer remains a direct panel child with Tide's own padding/gap. */
+    .tide-app__filter-footer-slot { padding-inline-start: var(--tide-layout-inset); }
+    .tide-app__filter-footer-slot--actions { padding-block-end: max(var(--tide-space-6), env(safe-area-inset-bottom, 0px)); }
     html:has(.tide-app__filter-rail:popover-open) { overflow: hidden; scrollbar-gutter: stable; }
     @media (prefers-reduced-motion: no-preference) {
       .tide-app__filter-rail[popover] {

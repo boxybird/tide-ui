@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.1.1
+# Native component ownership · Lineup 2.1.2
 
 The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -9,6 +9,8 @@ The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScri
 | Saved desktop tracks | `desktop.css`: results in column 1, detail in column 2; scoped browse overrides keep their three-column placement |
 | Navigation and skip-link presentation | Tide's `tide-site-header`, `__links`, `__link` and `tide-skip-link`; Lineup authors destinations, list semantics, current-page context and focusable IDs |
 | Header geometry and optional preview skip | Private header width/insets/sticky placement and `tide-app__detail-skip` visibility from 60rem; no private navigation/helper appearance |
+| Filter footer and status internals | Tide owns rail padding/gap, flex/wrapping status row, count alignment and Reset text flow; private child wrappers supply narrow drawer clearance without aliasing public slots |
+| Split-tablet header allowance | `base.css` uses the canonical 48px control input only where Filters is present between 60rem and 75rem; navigation-only/desktop rows retain the 44px input |
 | Canonical component typography | Tide recipes; `test_presentation.py` rejects private aliases that override shared type across rendered routes |
 | Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; private context wrapper beside canonical Results; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
 | Visible browse heading | `workspace-browse.html` authors one canonical intro outside the popover; private grid placement keeps it visible on phone/tablet/desktop |
@@ -27,4 +29,6 @@ CSS uses native gutter reservation and grid rows instead of JavaScript height/sc
 
 All source ownership and theme boundaries remain explicit. No generated copies are edited. See [runtime boundary](RUNTIME.md), [desktop contract](DESKTOP-LAYOUT.md) and [policy/audit](../../../docs/NO-BROWSER-JAVASCRIPT.md).
 
-Current [heading/venue verification](HEADINGS-VENUE-SCOPE.md) covers the original control set, unique heading, scoped native routes and exact venue ID. Tide remains unchanged.
+Current [footer/tablet verification](FILTER-FOOTER-TABLET.md) resolves the fresh audit findings. Application guards cover shared typography plus all properties on rendered footer/status/count aliases and the Reset data hook. Shared sources remain read-only.
+
+Historical [heading/venue verification](HEADINGS-VENUE-SCOPE.md) covers the original control set, unique heading, scoped native routes and exact venue ID. Tide remains unchanged.

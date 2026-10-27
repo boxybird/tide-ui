@@ -2,6 +2,8 @@
 
 **2026-10-27 · Tide UI 1.10.0 · baseline `0250809`**
 
+**Current status:** R01/R02 are [resolved in Lineup 2.1.2](FILTER-FOOTER-TABLET.md). This document and its screenshots/measurements preserve the 2.1.1 audit checkpoint; the statements below describe that baseline.
+
 The six fixes from the [initial audit](AUDIT.md) hold in this fresh pass. Saved has its two populated desktop tracks; shared typography matches Tide; browse headings stay outside the closed drawer; venue recovery remains scoped; retired study names are absent from document titles; and the header/skip links consume the canonical recipes. Two application-only follow-ups remain: **R01, split-tablet pane clearance**, and **R02, filter-footer recipe ownership**. No interaction was blocked in the exercised journeys.
 
 This is an audit and documentation update. Application version remains **2.1.1**. Templates, styles, fixtures, assets and tests are unchanged. Tide, the reference site, shared tooling and sibling applications remain read-only. [Machine-readable evidence](audit/fresh-evidence.json) records the starting commit, boundary fingerprints, coverage and actual check results.
@@ -19,7 +21,7 @@ Only current-run captures and measurements support these conclusions. An existin
 
 ## Findings
 
-### R02 · P2 · Private aliases still change Filter panel internals
+### R02 · P2 · Resolved in 2.1.2 · Private filter-footer aliases
 
 The native drawer remains readable and usable, but its internal presentation is partly forked through private aliases:
 
@@ -37,7 +39,7 @@ This is recipe-ownership drift, not an observed blocked action or a claim of acc
 
 **Application-only follow-up:** restore the canonical status row and footer internals. Put responsive drawer gutters/safe-area reservation in a private outer composition where needed. Preserve the pinned footer, original form/control set, native popover dismissal, scoped Reset and desktop column. Add focused application regression coverage for these internal slots; do not change Tide or weaken its checks. Evidence: step 2 and the component matrix.
 
-### R01 · P3 · Split-tablet pane clearance is about 20px instead of 24px
+### R01 · P3 · Resolved in 2.1.2 · Split-tablet pane clearance
 
 At 960, 1024 and 1199px on browse/event routes with Filters in the header, the actual header measures approximately **96.67px**. The private `--tide-app-header-block-size` still budgets **93px**, using Tide's 44px `--tide-size-target`. The canonical Filters button uses the 48px `--tide-size-control`. Since the header now grows naturally, the bounded pane starts lower while its available-height subtraction retains the shorter value.
 
@@ -99,4 +101,4 @@ The root build/check commands verify generated freshness, zero browser JavaScrip
 
 Evidence is in-app Chromium on Windows with CSS viewport emulation. No Firefox/Safari, physical device/software keyboard, screen-reader, forced-colours, text-enlargement/zoom or print verification is claimed. This run did not exhaust every hover/pressed/disabled state, modified click, outside-dismissal path, reduced-motion interaction or external destination. Native validity was read without invoking a submission. Venue facts were not re-researched. Geometry/type matrices are DOM measurements; the accepted screenshots cover representative journeys, not every matrix cell. This is not a full accessibility-conformance audit.
 
-Routine captures, the canonical rail probes and expanded matrices are ignored artifacts under `build/qa/lineup-fresh-audit/`. A local screenshot report is available at `/qa/lineup-fresh-audit/report.html` while the preview server is running. The accepted screenshots above are retained inside Lineup. The next application pass should address R02 and R01 together while keeping Tide unchanged.
+Routine captures, the canonical rail probes and expanded matrices are ignored artifacts under `build/qa/lineup-fresh-audit/`. A local screenshot report is available at `/qa/lineup-fresh-audit/report.html` while the preview server is running. The accepted screenshots above are retained inside Lineup. The subsequent [2.1.2 repair](FILTER-FOOTER-TABLET.md) resolves R02/R01 together while keeping Tide unchanged.

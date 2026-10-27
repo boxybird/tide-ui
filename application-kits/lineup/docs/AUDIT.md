@@ -1,6 +1,6 @@
 # Lineup application-kit audit · 2026-10-27
 
-Current follow-up: the [fresh Lineup 2.1.1 audit](FRESH-AUDIT.md) independently confirms the six original fixes and records two remaining application findings, R01/R02. This document retains the original 2.0.4 baseline.
+Current status: the [fresh Lineup 2.1.1 audit](FRESH-AUDIT.md) independently confirmed the six original fixes. Its R01/R02 follow-ups are [resolved in Lineup 2.1.2](FILTER-FOOTER-TABLET.md). This document retains the original 2.0.4 baseline.
 
 Lineup **2.0.4**, layout family **option 1**, is the current named application kit derived from **Tide UI 1.10.0**. Burque Events is its sample website. The application sources now live together in `application-kits/lineup/`; `/events/` preview URLs remain stable. The move preserves all application HTML/CSS/assets and all 704 generated route documents. Tide's component sources, tokens, recipes, registry, assets and generated distribution are unchanged; only two integration-test references follow the moved application path. See [move parity](audit/move-parity.json).
 

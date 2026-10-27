@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.1.2 · 2026-10-27
+
+- Restored Tide's Filter panel rail footer and wrapping status row. Removed private footer/status/count aliases, forced Reset whitespace and count alignment. Two private child wrappers reserve narrow drawer start/bottom safe-area clearance while leaving the public footer a direct child of the rail with its canonical padding/gap.
+- Corrected the private header-row allowance from 44px to the existing 48px control input only when Filters is present in the 60–75rem split range. Tablet panes now retain their documented 24px bottom clearance. Saved/navigation-only and permanent-desktop headers keep the 44px input.
+- Added focused application ownership guards for all properties on rendered footer/status/count aliases and the Reset hook. Preserved the original form/control set, native Reset/venue routes, drawer dismissal/resize behavior and zero browser JavaScript. See [verification](FILTER-FOOTER-TABLET.md).
+- Tide 1.10.0 and shared repository sources are unchanged. The fresh audit's R01/R02 findings are resolved; historical evidence remains intact.
+
 ## Audit checkpoint · 2026-10-27
 
 - Re-audited Lineup 2.1.1 with fresh phone, portrait/split-tablet and desktop evidence, all-theme component comparisons and native journeys. The six original fixes hold; two application-only findings remain: R01 pane bottom clearance and R02 Filter panel internal footer/status-row overrides. See [the report and testing limits](FRESH-AUDIT.md).

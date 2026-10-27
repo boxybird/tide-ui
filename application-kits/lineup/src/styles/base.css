@@ -7,7 +7,8 @@
     --tide-app-pane-gap: var(--tide-space-6);
     /* Shared header geometry: its control row, padding and border. */
     --tide-app-header-inset-start: max(var(--tide-space-6), env(safe-area-inset-top, 0px));
-    --tide-app-header-block-size: calc(var(--tide-app-header-inset-start) + var(--tide-space-6) + var(--tide-size-target) + var(--tide-border-width));
+    --tide-app-header-row-size: var(--tide-size-target);
+    --tide-app-header-block-size: calc(var(--tide-app-header-inset-start) + var(--tide-space-6) + var(--tide-app-header-row-size) + var(--tide-border-width));
   }
 
   html { scroll-padding-block-start: var(--tide-space-6); }
@@ -71,6 +72,12 @@
   }
 
   /* Content decides the split: 390px results + a useful detail column + gap/insets. */
+  @media (60rem <= width < 75rem) {
+    /* Filters is a canonical 48px control; navigation-only rows stay 44px. */
+    .tide-app-document:has(.tide-app__filter-trigger) {
+      --tide-app-header-row-size: var(--tide-size-control);
+    }
+  }
   @media (width >= 60rem) {
     .tide-app__header { min-block-size: var(--tide-app-header-block-size); }
     .tide-app__workspace {
