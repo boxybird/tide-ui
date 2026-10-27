@@ -1,0 +1,994 @@
+{
+  "status": "complete",
+  "date": "2026-10-27",
+  "application": "Lineup",
+  "version": "2.1.3",
+  "uiKit": "Tide 1.10.0",
+  "baselineCommit": "c1f0d361acd525bae107e6082587f08427ca32a2",
+  "scope": "application-kits/lineup/",
+  "personalization": "Separate future task; no personalization backlog blocks alignment.",
+  "boundary": {
+    "kit": {
+      "path": "packages/tide",
+      "files": 109,
+      "sha256": "3ad0d63cfd04cb95d000c38520c0d151e158faff33d0942ea073f956998f1fd4",
+      "unchanged": true
+    },
+    "kitBuild": {
+      "path": "build/tide",
+      "files": 18,
+      "sha256": "da9a94ac2bee4f8988870e8f8428e25bdf41e002c64ea1708da92a447b77794c",
+      "unchanged": true
+    },
+    "site": {
+      "path": "site",
+      "files": 4,
+      "sha256": "8df63839e098a4e660b47bb42797d2f485b30e48b7f893e4971577caf6f0070c",
+      "unchanged": true
+    },
+    "siteBuild": {
+      "path": "build/site",
+      "files": 323,
+      "sha256": "a848fc566d5572c267074f35f2904b0f4226dbff5a2fcdbf823294dc9fa6ced8",
+      "unchanged": true
+    },
+    "tools": {
+      "path": "tools",
+      "files": 13,
+      "sha256": "087095b98dc6145b29e302991d2789290af021bc829a37597b4159afd18978c9",
+      "unchanged": true
+    }
+  },
+  "browser": "Chromium in-app browser on Windows",
+  "parity": {
+    "routeCases": 201,
+    "themeCases": 300,
+    "overviewCases": 3,
+    "differences": 0,
+    "properties": [
+      "font-family",
+      "font-size",
+      "font-weight",
+      "font-style",
+      "line-height",
+      "letter-spacing",
+      "text-transform",
+      "color",
+      "background-color",
+      "background-image",
+      "border-top-width",
+      "border-top-style",
+      "border-top-color",
+      "border-right-width",
+      "border-right-style",
+      "border-right-color",
+      "border-bottom-width",
+      "border-bottom-style",
+      "border-bottom-color",
+      "border-left-width",
+      "border-left-style",
+      "border-left-color",
+      "border-radius",
+      "padding-top",
+      "padding-right",
+      "padding-bottom",
+      "padding-left",
+      "row-gap",
+      "column-gap",
+      "outline-width",
+      "outline-style",
+      "outline-color",
+      "outline-offset",
+      "text-decoration-line",
+      "text-decoration-thickness",
+      "text-underline-offset",
+      "box-shadow",
+      "opacity",
+      "display",
+      "align-items",
+      "justify-content",
+      "flex-direction",
+      "flex-wrap"
+    ],
+    "method": "Same authored component HTML, current Tide distribution only versus Tide plus Lineup CSS. Private composition nodes excluded; host visibility and inline-flex blockification normalized.",
+    "roleComparisons": 47061
+  },
+  "layout": {
+    "cases": 223,
+    "minimumBottomClearance": 24,
+    "horizontalOverflowCases": 0,
+    "visibleHeadingFailures": 0
+  },
+  "native": {
+    "journey": {
+      "searchFocus": {
+        "focusVisible": true,
+        "id": "event-query",
+        "label": "tide-field__label",
+        "outline": [
+          "2px",
+          "solid",
+          "2.66667px"
+        ],
+        "parent": "tide-field"
+      },
+      "edited": {
+        "comedy": true,
+        "footerTop": 651.3333740234375,
+        "from": "2026-11-01",
+        "q": "Sample query",
+        "scroll": 313.3333435058594
+      },
+      "reset": {
+        "comedy": false,
+        "footerTop": 651.3333740234375,
+        "from": "",
+        "q": ""
+      },
+      "dismissed": {
+        "focus": "Filters",
+        "open": false
+      },
+      "keyboardReset": {
+        "bodyScroll": 313.3333435058594,
+        "footerTop": 651.3333740234375,
+        "tag": "BUTTON",
+        "text": "Reset"
+      },
+      "keyboardAction": {
+        "tag": "BUTTON",
+        "text": "View all sample results"
+      }
+    },
+    "venue": {
+      "reset": {
+        "cards": 6,
+        "path": "/events/app/sunshine-theater.html",
+        "venueIds": [
+          "sunshine-theater"
+        ]
+      },
+      "empty": {
+        "cards": 0,
+        "heading": "Sunshine Theater",
+        "path": "/events/app/sunshine-theater-comedy.html",
+        "venueInfo": true
+      },
+      "recovery": {
+        "cards": 6,
+        "hash": "#results",
+        "path": "/events/app/sunshine-theater.html"
+      }
+    },
+    "desktop-focus": {
+      "focusVisible": true,
+      "id": "event-query",
+      "leftClearance": 8,
+      "outline": [
+        "2px",
+        "solid",
+        "2.66667px"
+      ],
+      "rightClearance": 34
+    },
+    "resize": {
+      "openWide": {
+        "delta": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "open": true,
+        "q": "Resize sample",
+        "queryCount": 1
+      },
+      "closedWide": {
+        "display": "grid",
+        "open": false,
+        "q": "Resize sample"
+      },
+      "closedPhone": {
+        "display": "none",
+        "open": false,
+        "q": "Resize sample"
+      }
+    },
+    "month": {
+      "feedTop": 229.6666717529297,
+      "hash": "#month-2026-11",
+      "monthTop": 229.6666717529297,
+      "pageY": 0,
+      "summaryTop": 117,
+      "width": 1440
+    },
+    "skip": {
+      "visible": {
+        "focusVisible": true,
+        "text": "Skip to results",
+        "top": 16
+      },
+      "target": {
+        "hash": "#results",
+        "id": "results"
+      }
+    },
+    "form": {
+      "category": "",
+      "fields": 11,
+      "name": ""
+    }
+  },
+  "inventory": {
+    "routes": [
+      "a-few-good-stories",
+      "a-table-full-of-zines",
+      "after-the-last-train",
+      "after-the-record-store-closes",
+      "after-work-make-something",
+      "an-open-door-session",
+      "analog-hours",
+      "beginner-s-block",
+      "black-ink-bright-paper",
+      "carve-a-creature",
+      "costumes-feedback",
+      "desert-frequencies",
+      "desert-radio-live",
+      "first-drafts-false-starts",
+      "first-sunday-print-exchange",
+      "friday-night-ink-club",
+      "handmade-holiday-cards",
+      "help",
+      "high-desert-signal",
+      "home-for-the-long-weekend",
+      "index",
+      "ink-after-dark",
+      "leftovers-one-liners",
+      "low-volume-sunday",
+      "make-your-own-gift-wrap",
+      "midnight-electric",
+      "midweek-mic",
+      "near-the-speakers",
+      "notes-from-the-group-chat",
+      "nothing-personal",
+      "november-quietly",
+      "one-more-sunday",
+      "paper-coffee-company",
+      "postcards-from-the-neighborhood",
+      "print-something-for-someone",
+      "print-swap-studio-social",
+      "saturday-on-the-small-stage",
+      "saved",
+      "search-comedy",
+      "search-empty",
+      "search-music",
+      "search-workshop",
+      "search",
+      "setups-second-chances",
+      "small-room-big-opinions",
+      "songs-for-the-last-light",
+      "submit",
+      "sunday-in-slow-motion",
+      "sunday-in-stereo",
+      "sunday-paper-club",
+      "sunshine-theater-comedy",
+      "sunshine-theater-empty",
+      "sunshine-theater-workshop",
+      "sunshine-theater",
+      "ten-minutes-each",
+      "the-friday-reset",
+      "the-imperfect-print",
+      "the-late-set",
+      "the-long-weekend",
+      "the-neighborhood-listening-room",
+      "the-very-late-set",
+      "three-bands-a-borrowed-amp",
+      "tiny-prints-big-ideas",
+      "two-colors-one-block",
+      "two-guitars-one-room",
+      "voices-on-central",
+      "warm-up-night"
+    ],
+    "components": [
+      {
+        "class": "tide-back-link",
+        "instances": 61,
+        "block": "tide-back-link",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-badge",
+        "instances": 3213,
+        "block": "tide-badge",
+        "recipe": "templates/feedback.html"
+      },
+      {
+        "class": "tide-brand",
+        "instances": 67,
+        "block": "tide-brand",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-button",
+        "instances": 398,
+        "block": "tide-button",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-button--full",
+        "instances": 64,
+        "block": "tide-button",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-button--icon",
+        "instances": 64,
+        "block": "tide-button",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-button--plan",
+        "instances": 60,
+        "block": "tide-button",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-button--quiet",
+        "instances": 192,
+        "block": "tide-button",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-button--secondary",
+        "instances": 78,
+        "block": "tide-button",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-caption",
+        "instances": 264,
+        "block": "tide-caption",
+        "recipe": "templates/adopted-patterns.html"
+      },
+      {
+        "class": "tide-choice",
+        "instances": 193,
+        "block": "tide-choice",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-content-page",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__body",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__contents",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__contents-title",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__footer",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__footer-links",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__header",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__layout",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__lead",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__meta",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-content-page__title",
+        "instances": 1,
+        "block": "tide-content-page",
+        "recipe": "templates/content/help.html"
+      },
+      {
+        "class": "tide-date",
+        "instances": 3085,
+        "block": "tide-date",
+        "recipe": "templates/listing-date.html"
+      },
+      {
+        "class": "tide-date__day",
+        "instances": 3085,
+        "block": "tide-date",
+        "recipe": "templates/listing-date.html"
+      },
+      {
+        "class": "tide-date__parts",
+        "instances": 3085,
+        "block": "tide-date",
+        "recipe": "templates/listing-date.html"
+      },
+      {
+        "class": "tide-disclosure",
+        "instances": 60,
+        "block": "tide-disclosure",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-empty",
+        "instances": 130,
+        "block": "tide-empty",
+        "recipe": "templates/feedback.html"
+      },
+      {
+        "class": "tide-event-card",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card--in-view",
+        "instances": 60,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__category",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__content",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__copy",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__heading",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__link",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__meta",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__price",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__status",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__title",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-card__venue",
+        "instances": 3085,
+        "block": "tide-event-card",
+        "recipe": "templates/listing-card.html"
+      },
+      {
+        "class": "tide-event-details",
+        "instances": 60,
+        "block": "tide-event-details",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-details__lead",
+        "instances": 60,
+        "block": "tide-event-details",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-details__section",
+        "instances": 284,
+        "block": "tide-event-details",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-details__section-title",
+        "instances": 296,
+        "block": "tide-event-details",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-details__title",
+        "instances": 60,
+        "block": "tide-event-details",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-group",
+        "instances": 121,
+        "block": "tide-event-group",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-event-group--sticky",
+        "instances": 121,
+        "block": "tide-event-group",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-event-group__count",
+        "instances": 121,
+        "block": "tide-event-group",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-event-group__header",
+        "instances": 121,
+        "block": "tide-event-group",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-event-group__jump",
+        "instances": 240,
+        "block": "tide-event-group",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-event-group__nav",
+        "instances": 120,
+        "block": "tide-event-group",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-event-group__title",
+        "instances": 121,
+        "block": "tide-event-group",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-event-hero",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__admission",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__content",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__cue",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__facts",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__intro",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__note",
+        "instances": 104,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__photo",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__scrim",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__subtitle",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__title",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-hero__toolbar",
+        "instances": 60,
+        "block": "tide-event-hero",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-event-list",
+        "instances": 65,
+        "block": "tide-event-list",
+        "recipe": "templates/adopted-patterns.html"
+      },
+      {
+        "class": "tide-expandable",
+        "instances": 64,
+        "block": "tide-expandable",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-expandable__body",
+        "instances": 64,
+        "block": "tide-expandable",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-expandable__summary",
+        "instances": 64,
+        "block": "tide-expandable",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-eyebrow",
+        "instances": 320,
+        "block": "tide-eyebrow",
+        "recipe": "templates/adopted-patterns.html"
+      },
+      {
+        "class": "tide-field",
+        "instances": 203,
+        "block": "tide-field",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-field__control",
+        "instances": 203,
+        "block": "tide-field",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-field__hint",
+        "instances": 72,
+        "block": "tide-field",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-field__label",
+        "instances": 204,
+        "block": "tide-field",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-fieldset",
+        "instances": 128,
+        "block": "tide-fieldset",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-fieldset__legend",
+        "instances": 128,
+        "block": "tide-fieldset",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-filter-panel",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-filter-panel--rail",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-filter-panel__body",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-filter-panel__count",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-filter-panel__footer",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-filter-panel__header",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-filter-panel__status-row",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-filter-panel__title",
+        "instances": 64,
+        "block": "tide-filter-panel",
+        "recipe": "templates/filter-panel.html"
+      },
+      {
+        "class": "tide-form-actions",
+        "instances": 1,
+        "block": "tide-form-actions",
+        "recipe": "templates/frames/filters.html"
+      },
+      {
+        "class": "tide-form-section",
+        "instances": 3,
+        "block": "tide-form-section",
+        "recipe": "templates/frames/filters.html"
+      },
+      {
+        "class": "tide-icon",
+        "instances": 816,
+        "block": "tide-icon",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-inclusions",
+        "instances": 52,
+        "block": "tide-inclusions",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-link",
+        "instances": 614,
+        "block": "tide-link",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-notice",
+        "instances": 4,
+        "block": "tide-notice",
+        "recipe": "templates/feedback.html"
+      },
+      {
+        "class": "tide-page-body",
+        "instances": 1,
+        "block": "tide-page-body",
+        "recipe": "templates/frames/app-patterns.html"
+      },
+      {
+        "class": "tide-page-intro",
+        "instances": 66,
+        "block": "tide-page-intro",
+        "recipe": "templates/frames/app-patterns.html"
+      },
+      {
+        "class": "tide-page-intro__title",
+        "instances": 70,
+        "block": "tide-page-intro",
+        "recipe": "templates/frames/app-patterns.html"
+      },
+      {
+        "class": "tide-photo-control",
+        "instances": 112,
+        "block": "tide-photo-control",
+        "recipe": "templates/buttons.html"
+      },
+      {
+        "class": "tide-place",
+        "instances": 60,
+        "block": "tide-place",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-prose",
+        "instances": 1,
+        "block": "tide-prose",
+        "recipe": "templates/frames/prose.html"
+      },
+      {
+        "class": "tide-prose__table-wrap",
+        "instances": 1,
+        "block": "tide-prose",
+        "recipe": "templates/frames/prose.html"
+      },
+      {
+        "class": "tide-results",
+        "instances": 65,
+        "block": "tide-results",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-results__count",
+        "instances": 65,
+        "block": "tide-results",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-results__order",
+        "instances": 65,
+        "block": "tide-results",
+        "recipe": "templates/listings.html"
+      },
+      {
+        "class": "tide-row",
+        "instances": 68,
+        "block": "tide-row",
+        "recipe": "templates/adopted-patterns.html"
+      },
+      {
+        "class": "tide-schedule",
+        "instances": 52,
+        "block": "tide-schedule",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-site-header",
+        "instances": 67,
+        "block": "tide-site-header",
+        "recipe": "templates/frames/navigation.html"
+      },
+      {
+        "class": "tide-site-header__link",
+        "instances": 201,
+        "block": "tide-site-header",
+        "recipe": "templates/frames/navigation.html"
+      },
+      {
+        "class": "tide-site-header__links",
+        "instances": 67,
+        "block": "tide-site-header",
+        "recipe": "templates/frames/navigation.html"
+      },
+      {
+        "class": "tide-skip-link",
+        "instances": 78,
+        "block": "tide-skip-link",
+        "recipe": "templates/frames/button-states.html"
+      },
+      {
+        "class": "tide-sr-only",
+        "instances": 180,
+        "block": "tide-sr-only",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-stack",
+        "instances": 192,
+        "block": "tide-stack",
+        "recipe": "templates/adopted-patterns.html"
+      },
+      {
+        "class": "tide-summary",
+        "instances": 4,
+        "block": "tide-summary",
+        "recipe": "templates/closeout-components.html"
+      },
+      {
+        "class": "tide-upload",
+        "instances": 1,
+        "block": "tide-upload",
+        "recipe": "templates/controls.html"
+      },
+      {
+        "class": "tide-venue-profile",
+        "instances": 4,
+        "block": "tide-venue-profile",
+        "recipe": "templates/frames/venue.html"
+      },
+      {
+        "class": "tide-venue-profile__header",
+        "instances": 4,
+        "block": "tide-venue-profile",
+        "recipe": "templates/frames/venue.html"
+      }
+    ]
+  },
+  "limits": [
+    "Chromium only; Firefox/Safari untested",
+    "No physical-device or screen-reader testing",
+    "Computed parity covers the stated properties/states; source guards separately cover every application stylesheet"
+  ],
+  "artifacts": {
+    "expanded": "build/qa/lineup-alignment/",
+    "screenshots": [
+      "alignment-phone.png",
+      "alignment-desktop.png"
+    ]
+  },
+  "checks": {
+    "pass": true,
+    "kitVersion": "1.10.0",
+    "htmlFiles": 1031,
+    "localReferences": 60048,
+    "markdownReferences": 526,
+    "themes": 5,
+    "modesPerTheme": 2,
+    "failures": [],
+    "runs": [
+      {
+        "name": "preview-http-contracts",
+        "pass": true,
+        "output": "▶ native preview HTTP contracts\n  ✔ Brotli and gzip preserve the exact document bytes (29.3465ms)\n  ✔ negotiation respects quality, refusal and identity (22.174ms)\n  ✔ validators are representation-specific and support weak/list matching (23.495ms)\n  ✔ CSS and binary assets revalidate; only fonts have a freshness lifetime (13.7944ms)\n  ✔ HEAD has the same representation headers with no body (6.1626ms)\n  ✔ source edits invalidate compressed and uncompressed validators immediately (6.4787ms)\n✔ native preview HTTP contracts (141.7619ms)\nℹ tests 7\nℹ suites 0\nℹ pass 7\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 296.0556"
+      },
+      {
+        "name": "palette-and-contract-tests",
+        "pass": true,
+        "output": "..................................................................\n----------------------------------------------------------------------\nRan 66 tests in 15.188s\n\nOK"
+      },
+      {
+        "name": "app-template-contracts",
+        "pass": true,
+        "output": ".........................................\n----------------------------------------------------------------------\nRan 41 tests in 7.090s\n\nOK"
+      }
+    ]
+  }
+}

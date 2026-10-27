@@ -1,4 +1,4 @@
-# Native responsive filter drawer · Lineup 2.1.2
+# Native responsive filter drawer · Lineup 2.1.3
 
 The same `filter-rail.html` aside and original form/control set serve both layouts. `filter-trigger.html` is rendered by the shared header only on routes with a filter panel. The kit owns Filter panel internals, Button, Icon, fields and native Expandable; app-owned `filters.css` owns responsive placement and motion. `consumer-manifest.json` registers the templates and stylesheet. No browser JavaScript is shipped or needed.
 
@@ -11,9 +11,9 @@ The same `filter-rail.html` aside and original form/control set serve both layou
 - At 75rem and above the original 20/35/45 desktop composition remains. The launcher and drawer header are hidden; the panel is always displayed in its original column. If resized while open, CSS anchors fit the top-layer panel to `.tide-app__filter-clip`, with the existing grid geometry as a fallback. Dismissal leaves the desktop panel visible. Returning to a narrow width preserves the browser's open/closed state and the original input values.
 - Saved/help/submission have no filter launcher or panel. Event detail pages retain their full-screen phone reading layout; filters remain available in the split layout from 60rem upwards.
 
-## Current verification · Lineup 2.1.2
+## Current verification · Lineup 2.1.3
 
-[Footer/tablet verification](FILTER-FOOTER-TABLET.md) covers exact all-theme recipe parity, bounded pane clearance, native controls and drawer resizing. The earlier evidence below remains historical.
+[Strict Tide alignment](TIDE-ALIGNMENT.md) covers canonical field/fieldset markup, unmodified component interiors, outward focus rings with private external clearance, all themes, bounded panes, native controls and drawer journeys. The [footer/tablet record](FILTER-FOOTER-TABLET.md) and earlier evidence below remain historical.
 
 ## Verification · 2026-10-26
 

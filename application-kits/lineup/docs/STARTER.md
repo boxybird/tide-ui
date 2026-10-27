@@ -1,12 +1,12 @@
 # Start from Lineup
 
-Lineup 2.1.2 is layout family option 1, derived from Tide UI 1.10.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions.
+Lineup 2.1.3 is layout family option 1, derived from Tide UI 1.10.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions.
 
 1. From the repository root, run `npm run build`, `npm run check` and `npm run dev`. Open `/events/app/index.html`; `/events/index.html` exposes all five themes in light/dark modes.
 2. Start with `data/pages.json` for route/collection context and `src/templates/document.html` / `workspace*.html` for composition. All 67 documents are generated from those sources. Only venue/help/submission need the three authored `src/pages/` fragments.
 3. Replace sample content in `data/events.json`, detail presentations, submission-field definitions and authored fragments as appropriate. The renderer escapes text; do not put raw HTML in sample JSON. Preserve valid native links, labels, IDs and associated field hints.
 4. Adjust private layout in the five registered `src/styles/` modules. Use Tide's semantic roles and named type/spacing inputs. Adopt public kit recipes and supported modifiers in markup; do not redefine public component type/spacing or change `packages/tide/` while working on Lineup.
-5. Review the [responsive audit](AUDIT.md), [ownership](COMPONENT-OWNERSHIP.md), [desktop layout](DESKTOP-LAYOUT.md) and [native drawer](FILTER-DRAWER.md) before changing pane geometry or responsive behavior. Rebuild and run normal checks; record the actual browsers/devices/states exercised.
+5. Start from the completed [Tide alignment baseline](TIDE-ALIGNMENT.md). Personalization is a separate task and must preserve canonical component adoption. Review the [responsive audit](AUDIT.md), [ownership](COMPONENT-OWNERSHIP.md), [desktop layout](DESKTOP-LAYOUT.md) and [native drawer](FILTER-DRAWER.md) before changing pane geometry or responsive behavior. Rebuild and run normal checks; record the actual browsers/devices/states exercised.
 
 Use `header.html` and `skip-link.html` for Tide's Site header and Skip link recipes. Route context derives `aria-current="page"` from the actual link destination; do not mark a collection link as the current detail/result page. Main links remain available on narrow screens. See [navigation and title ownership](NAVIGATION-TITLES.md).
 

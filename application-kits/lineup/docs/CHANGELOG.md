@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.1.3 · 2026-10-27
+
+- Completed strict one-to-one adoption of Tide 1.10.0 HTML/CSS. Search now uses the real Field label/wrapper; fieldsets use the canonical Stack recipe. Links and supporting/footer copy use kit typography. Cards use the current category/metadata markup, and the panel uses its semantic footer recipe.
+- Removed private hero padding/scrim/photo-reserve, component safe-area/print appearance, compact link type, selected-card outline suppression and inward focus-ring overrides. A private outer header wrapper owns the sticky canvas; Tide owns header interiors. External filter wrappers reserve room for canonical outward focus rings.
+- Added application-only strict appearance/interior guards, primitive/field/card/footer markup coverage and reproducible Tide-only browser probes. Recorded full-route responsive comparisons, all-theme component comparisons, native journeys and shared-source fingerprints in the [completed alignment record](TIDE-ALIGNMENT.md).
+- UI alignment is complete. Personalization remains a separate task. All changes are inside Lineup; Tide and shared sources are unchanged.
+
 ## 2.1.2 · 2026-10-27
 
 - Restored Tide's Filter panel rail footer and wrapping status row. Removed private footer/status/count aliases, forced Reset whitespace and count alignment. Two private child wrappers reserve narrow drawer start/bottom safe-area clearance while leaving the public footer a direct child of the rail with its canonical padding/gap.

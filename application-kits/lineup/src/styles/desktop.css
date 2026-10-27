@@ -69,9 +69,9 @@
     .tide-app--columns .tide-app__detail, .tide-app--columns .tide-app__preview-state { grid-column: 3; grid-row: 1; }
     .tide-app--columns .tide-app__site-footer { grid-column: 3; grid-row: 3; margin: 0; padding-inline: 0; justify-self: stretch; }
     .tide-app__legacy-clear { display: none; }
-    .tide-app--columns .tide-app__filter-rail :where(.tide-app__search, .tide-app__filter-row) { padding-inline-start: 0; }
-    .tide-app--columns .tide-app__filter-rail .tide-app__filters { margin-inline-start: 0; }
-    .tide-app--columns .tide-app__filter-rail :focus-visible { outline-offset: calc(-1 * var(--tide-focus-width)); }
+    /* External clearance lets Tide's outward focus rings remain visible. */
+    .tide-app--columns .tide-app__filter-rail :where(.tide-app__search, .tide-app__filter-row) { padding-inline-start: var(--tide-space-2); }
+    .tide-app--columns .tide-app__filter-rail .tide-app__filters { margin-inline-start: var(--tide-space-2); }
   }
   @media (width >= 90rem) { .tide-app__workspace:not(:has(.tide-app__filter-rail)) { grid-template-columns: var(--tide-app-list-width) minmax(0, 1fr); } }
   @media (width >= 100rem) { .tide-app { --tide-app-outer-inset: var(--tide-space-12); } }

@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.1.2
+# Native component ownership · Lineup 2.1.3
 
 The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -29,6 +29,8 @@ CSS uses native gutter reservation and grid rows instead of JavaScript height/sc
 
 All source ownership and theme boundaries remain explicit. No generated copies are edited. See [runtime boundary](RUNTIME.md), [desktop contract](DESKTOP-LAYOUT.md) and [policy/audit](../../../docs/NO-BROWSER-JAVASCRIPT.md).
 
-Current [footer/tablet verification](FILTER-FOOTER-TABLET.md) resolves the fresh audit findings. Application guards cover shared typography plus all properties on rendered footer/status/count aliases and the Reset data hook. Shared sources remain read-only.
+The [strict HTML/CSS alignment closeout](TIDE-ALIGNMENT.md) supersedes sampled appearance checks. `presentation_contract.py` rejects private lookalike type/decoration, shared token changes and public interior overrides through rendered aliases. Canonical fields, choices, buttons, uploads, card slots and semantic footer structure have application guards. The sticky header canvas is on a private outer wrapper; public header padding and appearance remain in Tide.
+
+Historical [footer/tablet verification](FILTER-FOOTER-TABLET.md) resolves the fresh audit findings. Application guards cover shared typography plus all properties on rendered footer/status/count aliases and the Reset data hook. Shared sources remain read-only.
 
 Historical [heading/venue verification](HEADINGS-VENUE-SCOPE.md) covers the original control set, unique heading, scoped native routes and exact venue ID. Tide remains unchanged.

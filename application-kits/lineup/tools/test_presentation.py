@@ -1,4 +1,4 @@
-"""Guard shared typography and filter-footer ownership through rendered aliases."""
+"""Guard complete component adoption, plus historical alias regressions."""
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -7,6 +7,8 @@ import sys
 import unittest
 
 from html_templates import AppTemplates, ROOT
+from build import review_document
+from presentation_contract import Tree, strict_style_issues, primitive_markup_issues
 
 KIT = ROOT.parents[1] / 'packages/tide'
 sys.path.insert(0, str(KIT / 'tools'))
@@ -147,6 +149,50 @@ class PresentationContracts(unittest.TestCase):
         html = '\n'.join(AppTemplates().pages().values())
         css = '\n'.join((ROOT / name).read_text(encoding='utf-8') for name in self.consumer['styleHome'])
         self.assertEqual(footer_alias_issues(html, css, self.manifest, self.consumer['privateBlocks']), [])
+
+    def test_no_private_appearance_or_shared_interior_overrides(self):
+        html = '\n'.join(AppTemplates().pages().values()) + review_document('')
+        css = '\n'.join((ROOT / name).read_text(encoding='utf-8') for name in self.consumer['styleHome'])
+        self.assertEqual(strict_style_issues(html, style_rules(css), self.consumer['privateBlocks']), [])
+
+    def test_strict_boundary_rejects_lookalikes_aliases_context_and_shared_tokens(self):
+        html = '<div class="tide-app__host"><div class="tide-field tide-app__alias"><label class="tide-field__label">Search</label></div></div>'
+        for css in ('.tide-app__label { font-size: 12px; }',
+                    '.tide-app__host { color: red; }',
+                    '.tide-app__alias { gap: 0; }',
+                    '.tide-app__host label { font-weight: 400; }',
+                    '.tide-app__host :focus-visible { outline-offset: -2px; }',
+                    ':root { --tide-font-size-body: 12px; }',
+                    '.tide-field__label { padding: 0; }'):
+            with self.subTest(css=css):
+                self.assertTrue(strict_style_issues(html, style_rules(css), self.consumer['privateBlocks']))
+        self.assertEqual(strict_style_issues(html, style_rules('.tide-app__host { padding: 24px; }'), self.consumer['privateBlocks']), [])
+
+    def test_every_route_uses_canonical_primitives_and_field_structure(self):
+        for route, html in AppTemplates().pages().items():
+            with self.subTest(route=route):
+                self.assertEqual(primitive_markup_issues(html), [])
+
+    def test_search_label_outside_field_and_private_primitive_are_rejected(self):
+        self.assertTrue(primitive_markup_issues('<label class="tide-field__label" for="q">Search</label><div class="tide-field"><input class="tide-field__control" id="q"></div>'))
+        self.assertTrue(primitive_markup_issues('<button class="tide-app__button">Go</button><label class="tide-app__label">Search</label><input id="q">'))
+
+    def test_cards_and_filter_footer_follow_current_recipe_structure(self):
+        recipe = (KIT / 'templates/listing-card.html').read_text(encoding='utf-8')
+        required = set(re.findall(r'\btide-event-card(?:__[\w-]+)?\b', recipe))
+        for route, html in AppTemplates().pages().items():
+            tree = Tree(html)
+            cards = {id(node):set(node['classes']) for node in tree.nodes if 'tide-event-card' in node['classes']}
+            for child in tree.nodes:
+                for parent in child['parents']:
+                    if id(parent) in cards:
+                        cards[id(parent)].update(child['classes'])
+            for node in tree.nodes:
+                if 'tide-event-card' in node['classes']:
+                    self.assertLessEqual(required, cards[id(node)], route)
+                if 'tide-filter-panel__footer' in node['classes']:
+                    self.assertEqual(node['tag'], 'footer', route)
+                    self.assertIn('tide-filter-panel', node['parents'][-1]['classes'], route)
 
 
 if __name__ == '__main__':
