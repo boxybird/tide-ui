@@ -1,6 +1,6 @@
-# Burque events example · 2.0.2
+# Burque events example · 2.0.3
 
-A browser-JavaScript-free HTML/CSS consumer of Tide 1.5.2. All 54 events are authored samples. The original 60 routes remain, plus Music, Comedy, Workshop and empty-result specimens: 64 documents in the default app and each of ten theme/mode combinations.
+A browser-JavaScript-free HTML/CSS consumer of Tide 1.5.3. All 54 events are authored samples. The original 60 routes remain, plus Music, Comedy, Workshop and empty-result specimens: 64 documents in the default app and each of ten theme/mode combinations.
 
 Desktop keeps the centered 92rem maximum and 20/35/45 filters/list/detail proportions. CSS Grid/subgrid, native scrolling, sticky month headers and viewport units supply layout. The result summary sits outside the feed scroller, so no height observer is needed. Narrow layouts keep the one original control set in the document with native disclosures. There is no scripted drawer or duplicated form.
 

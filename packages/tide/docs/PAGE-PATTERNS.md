@@ -1,4 +1,4 @@
-# Page recipes · Tide 1.5.2
+# Page recipes · Tide 1.5.3
 
 The kit and canonical specimens use only HTML/CSS and native browser behavior. There are no script imports, event handlers or required browser modules. Shared composition CSS lives in `css/page-patterns.css`; component states remain with their existing owners. All registered specimens are generated in every theme and both modes. See [browser policy](BROWSER-POLICY.md).
 

@@ -2,6 +2,8 @@
 
 Browser deliverables must contain zero JavaScript: no script files, script imports, inline handlers or JavaScript URLs in the kit, documentation specimens or events example. Node/Python are development tools only. Prefer native HTML and CSS; author static UI states where behavior would require an application engine. See [browser policy](docs/NO-BROWSER-JAVASCRIPT.md).
 
+Preserve the [loading and performance contracts](docs/LOADING-PERFORMANCE.md). Budget changes require review; replacing a lossless asset requires decoded pixel verification and updated provenance. Normal checks include local HTTP regression tests.
+
 Use `main` as the only lasting branch. Any temporary working branch must be merged and removed. Versioned history belongs in tags/release assets, not sibling implementation folders.
 
 Contributions serve the UI kit, its documentation/best practices or example pages built with it. See [project scope and completion criteria](README.md#project-scope). Service operations are not completion criteria or a follow-on backlog.

@@ -1,6 +1,12 @@
 /* Native disclosures remain in the document at narrow widths. No modal,
    cloned controls, hidden enhancement state or viewport script is required. */
 @layer tide.app-filters {
+  .tide-app__filter-footer .tide-app__filter-status-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .tide-app__filter-footer [data-filter-reset] { white-space: nowrap; }
+  .tide-app__filter-footer .tide-app__filter-count { min-inline-size: 0; text-align: end; }
   @media (width < 75rem) {
     .tide-app__filter-rail { block-size: auto; overflow: visible; }
     .tide-app__filter-body { overflow: visible; }

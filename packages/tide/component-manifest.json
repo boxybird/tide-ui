@@ -1,5 +1,5 @@
 {
-  "version": "1.5.2",
+  "version": "1.5.3",
   "classConvention": "BEM with tide- prefix",
   "runtime": "HTML and CSS; native browser behavior only",
   "componentSource": "templates/library.html#components",

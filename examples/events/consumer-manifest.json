@@ -1,6 +1,6 @@
 {
-  "version": "2.0.2",
-  "kitVersion": "1.5.2",
+  "version": "2.0.3",
+  "kitVersion": "1.5.3",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
   "privateBlocks": [

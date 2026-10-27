@@ -8,7 +8,7 @@
 /* Event card — no image required. The link covers the card; controls sit above it. */
 .tide-event-card { position: relative; isolation: isolate; padding: var(--tide-card-padding-block) var(--tide-layout-inset); background: var(--tide-color-surface); }
 .tide-event-card:not([hidden]) + .tide-event-card:not([hidden]) { border-block-start: var(--tide-border-hairline); }
-.tide-event-card::before { content: ''; position: absolute; inset: 0; z-index: -1; background: url('../assets/images/quiet-dots.png') 0 0 / var(--tide-texture-size); opacity: var(--tide-texture-opacity); pointer-events: none; }
+.tide-event-card::before { content: ''; position: absolute; inset: 0; z-index: -1; background: url('../assets/images/quiet-dots.webp') 0 0 / var(--tide-texture-size); opacity: var(--tide-texture-opacity); pointer-events: none; }
 .tide-event-card__link { position: absolute; inset: 0; z-index: var(--tide-z-card-link); }
 .tide-event-card__link:focus-visible { outline-offset: calc(-1 * var(--tide-focus-gap)); }
 .tide-event-card__heading { display: flex; justify-content: space-between; align-items: center; min-block-size: var(--tide-size-icon); gap: var(--tide-space-4); }

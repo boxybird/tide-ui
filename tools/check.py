@@ -5,6 +5,8 @@ from collections import Counter
 from datetime import datetime
 from urllib.parse import urlsplit,unquote
 import json
+import gzip
+import hashlib
 import re
 import shutil
 import subprocess
@@ -17,7 +19,7 @@ from contracts import markup_issues,ownership_issues,registered_blocks,style_own
 
 class Scan(HTMLParser):
     def __init__(self):
-        super().__init__();self.ids=[];self.refs=[];self.bound=[];self.classes=[];self.times=[];self.labels=[];self.controls=[];self.inline=False
+        super().__init__();self.ids=[];self.refs=[];self.bound=[];self.classes=[];self.times=[];self.labels=[];self.controls=[];self.images=[];self.fonts=[];self.inline=False
     def handle_starttag(self,tag,attrs):
         d=dict(attrs)
         if d.get('id'):self.ids.append(d['id'])
@@ -28,6 +30,8 @@ class Scan(HTMLParser):
         if tag=='label' and d.get('for'):self.labels.append(d['for'])
         if tag in ('input','textarea','select') and d.get('type') not in ('hidden','checkbox','radio'):self.controls.append(d)
         if tag=='time' and d.get('datetime'):self.times.append(d['datetime'])
+        if tag=='img':self.images.append(d)
+        if tag=='link' and d.get('rel')=='preload' and d.get('as')=='font':self.fonts.append(d)
         if 'style' in d or any(key.startswith('on') for key in d):self.inline=True
 
 def main():
@@ -37,12 +41,33 @@ def main():
     site_blocks=json.loads((ROOT/'site/component-manifest.json').read_text(encoding='utf-8'))['privateBlocks']
     pages=sorted((ROOT/'build/site').rglob('*.html'))+sorted((ROOT/'build/events').rglob('*.html'))
     cached={};failures=[];refs=0;allclasses=set()
+    budgets=json.loads((ROOT/'tools/performance-budgets.json').read_text(encoding='utf-8'))
+    for name,limits in budgets['files'].items():
+        data=(ROOT/name).read_bytes()
+        if len(data)>limits['maxBytes']:failures.append(name+': raw asset budget exceeded')
+        if limits.get('maxGzipBytes') and len(gzip.compress(data))>limits['maxGzipBytes']:failures.append(name+': compressed asset budget exceeded')
+    for image in json.loads((KIT/'assets/lossless-images.json').read_text(encoding='utf-8'))['images']:
+        for key,digest in (('source','sourceSha256'),('served','servedSha256')):
+            if hashlib.sha256((KIT/image[key]).read_bytes()).hexdigest()!=image[digest]:failures.append(image[key]+': lossless conversion provenance changed; verify decoded pixels and update the record')
+        if (KIT/image['served']).stat().st_size>image['maxBytes']:failures.append(image['served']+': lossless asset budget exceeded')
     def scan(path):
         if path not in cached:
             s=Scan();s.feed(path.read_text(encoding='utf-8'));cached[path]=s
         return cached[path]
     for path in pages:
         text=path.read_text(encoding='utf-8');s=scan(path);name=path.relative_to(ROOT).as_posix();allclasses.update(s.classes)
+        if len(gzip.compress(text.encode('utf-8')))>budgets['maxPageGzipBytes']:failures.append(name+': compressed document budget exceeded')
+        if any(ref.endswith('/css/tide.css') for ref in s.refs):
+            expected=ROOT/'build/tide/assets/fonts/manrope-latin-wght-normal.woff2'
+            if len(s.fonts)!=1 or (path.parent/s.fonts[0].get('href','')).resolve()!=expected or s.fonts[0].get('type')!='font/woff2' or 'crossorigin' not in s.fonts[0]:failures.append(name+': shared local font preload missing or incompatible')
+        for image in s.images:
+            if not all(re.fullmatch(r'[1-9][0-9]*',image.get(key,'')) for key in ('width','height')):failures.append(name+': image intrinsic dimensions missing')
+            source=urlsplit(image.get('src',''))
+            if source.scheme or source.netloc:continue
+            target=(path.parent/unquote(source.path)).resolve()
+            if target.is_file() and target.is_relative_to(ROOT):
+                limit=budgets['imageExceptions'].get(target.relative_to(ROOT).as_posix(),budgets['maxServedImageBytes'])
+                if target.stat().st_size>limit:failures.append(name+': served image budget exceeded: '+source.path)
         failures.extend(name+': '+i for i in markup_issues(text))
         for cls in s.classes:
             if cls!='tide' and not re.fullmatch(r'tide(?:-[a-z0-9]+)+(?:__[a-z0-9]+(?:-[a-z0-9]+)*)?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?',cls):failures.append(name+': invalid BEM name '+cls)
@@ -75,7 +100,12 @@ def main():
     for path in (ROOT/'build').rglob('*.css'):
         css=path.read_text(encoding='utf-8')
         for ref in re.findall(r'url\([\'\"]?([^\)\'\"]+)',css):
-            if not urlsplit(ref).scheme and not(path.parent/ref).resolve().is_file():failures.append(str(path.relative_to(ROOT))+': missing CSS asset '+ref)
+            if not urlsplit(ref).scheme:
+                target=(path.parent/ref).resolve()
+                if not target.is_file():failures.append(str(path.relative_to(ROOT))+': missing CSS asset '+ref)
+                elif target.suffix in ('.png','.webp','.jpg','.jpeg') and target.is_relative_to(ROOT):
+                    limit=budgets['imageExceptions'].get(target.relative_to(ROOT).as_posix(),budgets['maxServedImageBytes'])
+                    if target.stat().st_size>limit:failures.append(str(path.relative_to(ROOT))+': CSS image budget exceeded: '+ref)
     for c in manifest['components']:
         if c['block'] not in allclasses:failures.append('No specimen for '+c['block'])
         if c.get('source') and not(KIT/c['source']).is_file():failures.append('Missing component source: '+c['block'])
@@ -130,6 +160,8 @@ def main():
         normalized=re.sub(r'(?:\.\./)+tide/assets/','assets/',body)
         if signatures.setdefault(path.name,normalized)!=normalized:failures.append('Theme specimen structure differs: '+path.name)
     runs=[]
+    http_tests=subprocess.run([shutil.which('node') or 'node','--test','tools/test-serve.cjs'],cwd=ROOT,capture_output=True,text=True)
+    runs.append({'name':'preview-http-contracts','pass':http_tests.returncode==0,'output':(http_tests.stdout+http_tests.stderr).strip()})
     tests=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=KIT,capture_output=True,text=True)
     runs.append({'name':'palette-and-contract-tests','pass':tests.returncode==0,'output':(tests.stdout+tests.stderr).strip()})
     templates=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=ROOT/'examples/events',capture_output=True,text=True)

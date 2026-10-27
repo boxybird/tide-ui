@@ -1,6 +1,6 @@
 # Native component ownership · App 2.0.0
 
-The example consumes Tide 1.5.2 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
+The example consumes Tide 1.5.3 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
 | Responsibility | Canonical home |
 | --- | --- |

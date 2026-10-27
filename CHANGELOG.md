@@ -1,5 +1,12 @@
 # Changelog
 
+## Tide kit 1.5.3 / Events example 2.0.3 · 2026-10-26
+
+- Restored the compact native Reset button at the left of the events filter footer and the page event count at the right, using app-scoped CSS grid and shorter labels without browser JavaScript.
+- Switched the shared card texture and kit printmaking photo to verified lossless WebP derivatives, saving 1,434,124 requested bytes with identical decoded pixels. Preserved PNG sources/URLs, image dimensions, styles and existing app photos.
+- Added representation-specific ETags, Last-Modified, conditional GET/HEAD and negotiated Brotli/gzip to the local preview tool. Editable assets still revalidate; fonts keep one-day freshness. No browser JavaScript is added.
+- Added HTTP integration tests, lossless conversion provenance, asset/document byte budgets, intrinsic image size checks and shared font-preload checks. Included the missing preload on the app review entry. See the loading/performance contract.
+
 ## Tide kit 1.5.2 / Events example 2.0.2 · 2026-10-26
 
 - Changed the shared local Manrope face to `font-display: block`. Text waits for the font during the browser's bounded block period instead of immediately painting fallback text. Existing font preload/caching remain; no browser JavaScript or document-hiding gate is added. A font delayed beyond the browser's block period can still fall back and later swap.

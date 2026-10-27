@@ -1,5 +1,7 @@
 # App loading and performance
 
+Kit 1.5.3 / app 2.0.3 adds lossless shared kit assets, validators for all local file responses, negotiated text compression and regression budgets. See the current [loading contracts](../../../docs/LOADING-PERFORMANCE.md). Layout, markup presentation and app photo derivatives are unchanged.
+
 ## Local font loading · kit 1.5.2 / app 2.0.2
 
 Manrope is a local 24,836-byte variable WOFF2 at `packages/tide/assets/fonts/manrope-latin-wght-normal.woff2`; no remote font service is used. Every app document now preloads the same URL used by the shared kit CSS, with `as="font"`, WOFF2 type and anonymous CORS mode. The reference site already preloaded this asset. This removes late font discovery through app stylesheet loading.

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "build/tide/css/tide.css": {"maxBytes": 100000, "maxGzipBytes": 14000},
+    "build/events/runtime/css/app.css": {"maxBytes": 22000, "maxGzipBytes": 5000},
+    "build/tide/assets/fonts/manrope-latin-wght-normal.woff2": {"maxBytes": 26000}
+  },
+  "maxPageGzipBytes": 18000,
+  "maxServedImageBytes": 200000,
+  "imageExceptions": {
+    "build/tide/assets/images/quiet-dots.webp": 650000,
+    "build/tide/assets/images/ink-after-dark.webp": 1700000
+  }
+}

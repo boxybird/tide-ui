@@ -1,0 +1,25 @@
+{
+  "method": "WebP lossless, method 6; decoded RGBA bytes verified identical with Pillow",
+  "images": [
+    {
+      "source": "assets/images/quiet-dots.png",
+      "served": "assets/images/quiet-dots.webp",
+      "sourceSha256": "cf26af96dcb2975e3b5f38891aa30d3cc16693dc6bdc2d166a13d050c4da11cd",
+      "servedSha256": "de1e5fc66eb18578293daa2da029a6c34e5959b0f41b9e5e9f57447b71628791",
+      "rgbaSha256": "74ea81b7a72576baece4b281f343bf31b3d4be16ebc5300b21382bd021e39074",
+      "width": 1254,
+      "height": 1254,
+      "maxBytes": 650000
+    },
+    {
+      "source": "assets/images/ink-after-dark.png",
+      "served": "assets/images/ink-after-dark.webp",
+      "sourceSha256": "20bae5fa06fc40a67fcae264ba4f252c8e40c408e5d1b4866e8b5e777e939672",
+      "servedSha256": "aa74cdf8ff081d73d7cd7d1dd300adeaaae269c814f176243629276484881b72",
+      "rgbaSha256": "eaa16825eaed285d876388eb18cf4843e2648d5a79eded590f55d65027c87cc4",
+      "width": 1024,
+      "height": 1536,
+      "maxBytes": 1700000
+    }
+  ]
+}

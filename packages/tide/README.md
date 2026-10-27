@@ -1,4 +1,4 @@
-# Tide HTML and CSS kit · 1.5.2
+# Tide HTML and CSS kit · 1.5.3
 
 The canonical maintained package. Five named themes—Tide, Bumble, Slate, Grove and Iris—share semantic roles, typography, geometry and component HTML. Each theme supports light, dark and system appearance. The kit ships no browser JavaScript.
 
