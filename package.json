@@ -2,7 +2,7 @@
   "name": "tide-ui",
   "version": "1.10.0",
   "private": true,
-  "description": "Themeable HTML and CSS UI kit, reference site and events example",
+  "description": "Themeable HTML and CSS UI kit, reference site and derived application kits",
   "license": "MIT",
   "scripts": {
     "build": "node tools/task.cjs build",

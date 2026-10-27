@@ -26,7 +26,7 @@ Arbitrary text/date matching, live counts, persistent saved state, custom modal 
 
 A native form reset restores authored values, including checked fixture defaults. Native input validation covers supported required/type constraints; a From/Through relationship is not dynamically validated. Populated error summaries are authored states, distinct from native browser messages. Native file selection does not promise custom size/content checks. No operational backend is added.
 
-Native HTML can own panel opening and dismissal without JavaScript. Events 2.0.4 restores the narrow-screen filter drawer through `popover="auto"`, `popovertarget` and CSS slide transitions, while preserving the permanent desktop column and one original control set. It is non-modal: closing keeps current form values and does not implement draft rollback. The drawer contract is `examples/events/docs/FILTER-DRAWER.md` in the source checkout.
+Native HTML can own panel opening and dismissal without JavaScript. Events 2.0.4 restores the narrow-screen filter drawer through `popover="auto"`, `popovertarget` and CSS slide transitions, while preserving the permanent desktop column and one original control set. It is non-modal: closing keeps current form values and does not implement draft rollback. The drawer contract is `application-kits/lineup/docs/FILTER-DRAWER.md` in the source checkout.
 
 ## Verification limits
 

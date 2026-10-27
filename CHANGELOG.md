@@ -1,5 +1,12 @@
 # Changelog
 
+## Repository · Lineup application-kit home and audit · 2026-10-27
+
+- Named the current application kit **Lineup**, layout family **option 1**, and moved its complete maintained sources from `examples/events/` to `application-kits/lineup/`. Preserved application version 2.0.4, all 64 native routes, `/events/` preview URLs and the generated `build/events/` home. Future application layouts get named sibling homes and independent versions; release history stays in tags/artifacts.
+- Made the UI-kit/application-kit ownership boundary explicit in the index, starter, architecture, contributor and agent notes. Tide 1.10.0 remains the source of truth and its component sources/distribution are unchanged. Corrected the stale application dependency record from Tide 1.5.3 to 1.10.0. Two integration-test path references follow the move; no UI-kit API/version change.
+- Updated build/check/package paths and documentation evidence copying. Verified byte parity for 73 application `src/` files, 704 generated application documents, 18 generated kit files and 323 reference-site files.
+- Added the [current application audit](application-kits/lineup/docs/AUDIT.md): 20 inspected screenshots and 264 responsive/theme/event geometry cases. Recorded the Saved desktop grid defect, public/private class typography drift, hidden narrow-screen browse heading, venue scope/recovery gaps, historical titles and reuse opportunities. Layout repairs remain separate application work; testing limits are explicit.
+
 ## Tide kit 1.10.0 · 2026-10-27
 
 - Completed ownership contracts for all 26 components, 26 supporting blocks and 13 compositions. Normal checks now reject missing ownership/recipe/behavior metadata, duplicate owners and fixtures omitting their registered block. Existing consumer geometry exceptions are constrained to documented property/value choices; grouped selectors cannot conceal type or spacing overrides.
@@ -42,7 +49,7 @@
 - Gave Saved separate intrinsic intro/summary rows and a bounded feed row, preventing a stretched or collapsed count row.
 - Corrected native month fragments to align the selected month at the feed top and preserve the outer desktop reading position. Phone month targets have no leftover heading gap; no browser JavaScript is added.
 - Restored the mobile/tablet filter drawer with native popover buttons and CSS entry/exit motion from the left, Close/Escape/outside-click dismissal, native focus return, reduced motion and a scrolling body above the pinned footer. No browser JavaScript is added.
-- Kept one original form/control set and the permanent desktop filter column. An open drawer resized to desktop fits the reserved column through CSS anchors with a shared-geometry fallback. Added native invoker-target association checks and recorded browser coverage in the [drawer contract](examples/events/docs/FILTER-DRAWER.md).
+- Kept one original form/control set and the permanent desktop filter column. An open drawer resized to desktop fits the reserved column through CSS anchors with a shared-geometry fallback. Added native invoker-target association checks and recorded browser coverage in the [drawer contract](application-kits/lineup/docs/FILTER-DRAWER.md).
 
 ## Tide kit 1.5.3 / Events example 2.0.3 · 2026-10-26
 

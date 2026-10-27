@@ -8,7 +8,7 @@ All 60 native routes share one `document.html`, including metadata, stylesheet/s
 
 Eleven repeated submission-field wrappers now compose registered label/input/textarea/select/option/hint/optional fragments from `data/submission-fields.json`. Text is escaped, supported controls and data keys are restricted, and each field must have exactly one content slot. Native required/optional state, maxlength, autocomplete, date/time/email controls and reset behavior remain intact. Upload, permission, paired rows and form sections stay in their single authored source. The existing back icon is reused.
 
-Only three unique fragments remain in `src/pages/`: Sunshine Theater information, help and submission. The venue facts, attributed sources, prose, table, contents navigation and bespoke controls are retained verbatim. They do not need a new generic content renderer. No public kit component or styling is introduced. See `examples/events/docs/PAGES.md` for the page composition contract.
+Only three unique fragments remain in `src/pages/`: Sunshine Theater information, help and submission. The venue facts, attributed sources, prose, table, contents navigation and bespoke controls are retained verbatim. They do not need a new generic content renderer. No public kit component or styling is introduced. See `application-kits/lineup/docs/PAGES.md` for the page composition contract.
 
 ## Verification performed
 

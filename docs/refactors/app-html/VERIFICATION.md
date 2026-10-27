@@ -8,7 +8,7 @@ Sixteen registered partials now own the header, responsive filter controls/rail/
 
 The all-events, exact Sunshine Theater and saved lists reuse one 54-card fixture and one card recipe. Explicit context preserves current navigation, heading levels, selected-card status, initial preview, collection counts and saved-page differences. The original sample JSON/provenance records remain intact. The renderer is build-time Python with no new dependencies; output remains standalone HTML.
 
-Authored page HTML previously occupied 5,872,914 bytes. Pages, shared partials and the two new card/route data files total 855,661 bytes, an 85.4% reduction. Shared sources and contracts are described in `examples/events/docs/TEMPLATES.md`.
+Authored page HTML previously occupied 5,872,914 bytes. Pages, shared partials and the two new card/route data files total 855,661 bytes, an 85.4% reduction. Shared sources and contracts are described in `application-kits/lineup/docs/TEMPLATES.md`.
 
 ## Actual checks
 

@@ -46,7 +46,7 @@ class KitCloseoutContracts(unittest.TestCase):
         for e in registry_entries(self.manifest):
             b=e['block'];css='.'+b+' { font-size: 9px; }'
             self.assertIn('Kit-owned selectors redefined in app CSS: '+b,style_ownership_issues(css,self.manifest))
-        app='\n'.join(p.read_text(encoding='utf-8') for p in (PROJECT/'examples/events/src/styles').glob('*.css'))
+        app='\n'.join(p.read_text(encoding='utf-8') for p in (PROJECT/'application-kits/lineup/src/styles').glob('*.css'))
         self.assertEqual(style_ownership_issues(app,self.manifest),[])
 
     def test_exceptions_cannot_conceal_grouped_or_extra_declarations(self):

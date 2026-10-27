@@ -1,0 +1,39 @@
+{
+  "baselineCommit": "fec603ff885abbcd6d40cdcdaea1cc6fdb391107",
+  "kitVersion": "1.10.0",
+  "applicationVersion": "2.0.4",
+  "applicationId": "lineup",
+  "layoutFamily": "option-1",
+  "kitSourceFiles": 109,
+  "kitChanges": {
+    "changed": [
+      "tools/test_closeout.py",
+      "tools/test_listings.py"
+    ],
+    "removed": [],
+    "added": []
+  },
+  "kitChangeScope": "Two integration-test source paths only; no component/API/build-input changes.",
+  "kitBuildFilesUnchanged": 18,
+  "siteBuildFilesUnchanged": 323,
+  "applicationDocumentsUnchanged": 704,
+  "applicationSourceFilesUnchanged": 73,
+  "applicationOutputDelta": {
+    "changed": [
+      "README.md",
+      "docs/COMPONENT-OWNERSHIP.md",
+      "index.html"
+    ],
+    "removed": [],
+    "added": [
+      "docs/AUDIT.md",
+      "docs/STARTER.md",
+      "docs/audit/05-phone-list.png",
+      "docs/audit/12-desktop-saved.png",
+      "docs/audit/20-tide-listing-reference.png",
+      "docs/audit/browser-evidence.json",
+      "docs/audit/move-parity.json",
+      "docs/audit/verification.json"
+    ]
+  }
+}

@@ -8,7 +8,7 @@ All 54 native event documents now use `event-page.html` and `event-detail.html`;
 
 `data/events.json` extends the canonical sample catalog with structured detail content. Existing full/concise defaults live in `data/detail-presentations.json`. Plain paragraphs, places, inclusions, schedules, attendance notes and venue links render through registered partials; no event HTML is stored in JSON. Shared inline icons retain their exact existing shapes and attributes. The include/escaping engine is isolated in `tools/template_engine.py`, with detail composition in `tools/event_details.py`.
 
-HTML and content sources decrease from 855,661 to 267,152 bytes (68.8%). Fifty-four duplicated source documents are removed while all 54 native event routes are still generated. The authoring contract is `examples/events/docs/DETAILS.md`.
+HTML and content sources decrease from 855,661 to 267,152 bytes (68.8%). Fifty-four duplicated source documents are removed while all 54 native event routes are still generated. The authoring contract is `application-kits/lineup/docs/DETAILS.md`.
 
 ## Actual verification
 

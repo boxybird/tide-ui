@@ -37,7 +37,7 @@ class Scan(HTMLParser):
 def main():
     subprocess.run([sys.executable,'-B',str(ROOT/'tools/build.py'),'--check'],check=True,cwd=ROOT)
     manifest=json.loads((KIT/'component-manifest.json').read_text(encoding='utf-8'))
-    private=json.loads((ROOT/'examples/events/consumer-manifest.json').read_text(encoding='utf-8'))['privateBlocks']
+    private=json.loads((ROOT/'application-kits/lineup/consumer-manifest.json').read_text(encoding='utf-8'))['privateBlocks']
     site_blocks=json.loads((ROOT/'site/component-manifest.json').read_text(encoding='utf-8'))['privateBlocks']
     pages=sorted((ROOT/'build/site').rglob('*.html'))+sorted((ROOT/'build/events').rglob('*.html'))
     cached={};failures=[];refs=0;allclasses=set()
@@ -88,8 +88,8 @@ def main():
             if not target.is_file():failures.append(name+': missing '+ref)
             elif url.fragment and target.suffix=='.html' and url.fragment not in scan(target).ids:failures.append(name+': missing fragment '+ref)
         if 'event-search-form' in s.ids:
-            fixture_routes=json.loads((ROOT/'examples/events/data/pages.json').read_text(encoding='utf-8'))
-            fixture_events=json.loads((ROOT/'examples/events/data/events.json').read_text(encoding='utf-8'))
+            fixture_routes=json.loads((ROOT/'application-kits/lineup/data/pages.json').read_text(encoding='utf-8'))
+            fixture_events=json.loads((ROOT/'application-kits/lineup/data/events.json').read_text(encoding='utf-8'))
             state=fixture_routes.get(path.stem,{}).get('sampleFilter',{})
             expected=0 if state.get('empty') else sum(e['category']==state['category'] for e in fixture_events) if state.get('category') else 6 if path.name=='sunshine-theater.html' else 54
             if s.classes.count('tide-event-card')!=expected:failures.append(name+': sample count drift')
@@ -126,8 +126,9 @@ def main():
     declared=set(re.findall(r'(--tide-[\w-]+)\s*:',kitcss));consumed=set(re.findall(r'var\((--tide-[\w-]+)',kitcss))
     failures.extend('Unbound kit CSS token: '+token for token in sorted(consumed-declared))
     markdown_refs=0
-    markdown=[ROOT/name for name in ('README.md','CONTRIBUTING.md','CHANGELOG.md')]+[KIT/'README.md',ROOT/'examples/events/README.md']
-    markdown+=list((ROOT/'docs').rglob('*.md'))+list((KIT/'docs').glob('*.md'))+list((ROOT/'examples/events/docs').glob('*.md'))
+    markdown=[ROOT/name for name in ('README.md','CONTRIBUTING.md','CHANGELOG.md')]+[KIT/'README.md',ROOT/'application-kits/lineup/README.md']
+    markdown += [ROOT/'application-kits/README.md']
+    markdown+=list((ROOT/'docs').rglob('*.md'))+list((KIT/'docs').glob('*.md'))+list((ROOT/'application-kits/lineup/docs').glob('*.md'))
     markdown+=list((ROOT/'build').rglob('*.md'))
     for path in markdown:
         for ref in re.findall(r'\]\(([^)]+)\)',path.read_text(encoding='utf-8')):
@@ -135,13 +136,13 @@ def main():
             if url.scheme or url.netloc or not url.path:continue
             markdown_refs+=1
             if not(path.parent/unquote(url.path)).resolve().is_file():failures.append(str(path.relative_to(ROOT))+': missing documentation link '+ref)
-    appcss='\n'.join(p.read_text(encoding='utf-8') for p in (ROOT/'examples/events/src/styles').glob('*.css'))
+    appcss='\n'.join(p.read_text(encoding='utf-8') for p in (ROOT/'application-kits/lineup/src/styles').glob('*.css'))
     failures+=style_ownership_issues(appcss,manifest)
     if not re.search(r'\.tide-lineup__feed\s*\{\s*isolation:\s*isolate;',appcss):failures.append('Accepted feed isolation missing')
     # Private app selectors have one current home, never inherited study aliases.
-    app_source=ROOT/'examples/events/src'
+    app_source=ROOT/'application-kits/lineup/src'
     usage='\n'.join(p.read_text(encoding='utf-8') for p in app_source.rglob('*') if p.suffix in ('.html','.js'))
-    usage+=(ROOT/'examples/events/tools/build.py').read_text(encoding='utf-8')
+    usage+=(ROOT/'application-kits/lineup/tools/build.py').read_text(encoding='utf-8')
     # Template context can compose a class that is absent from literal markup.
     usage+='\n'+' '.join(allclasses)
     for p in app_source.rglob('*'):
@@ -167,10 +168,10 @@ def main():
     runs.append({'name':'preview-http-contracts','pass':http_tests.returncode==0,'output':(http_tests.stdout+http_tests.stderr).strip()})
     tests=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=KIT,capture_output=True,text=True)
     runs.append({'name':'palette-and-contract-tests','pass':tests.returncode==0,'output':(tests.stdout+tests.stderr).strip()})
-    templates=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=ROOT/'examples/events',capture_output=True,text=True)
+    templates=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=ROOT/'application-kits/lineup',capture_output=True,text=True)
     runs.append({'name':'app-template-contracts','pass':templates.returncode==0,'output':(templates.stdout+templates.stderr).strip()})
     # Browsers consume native HTML/CSS only. Node remains development tooling.
-    for folder in (KIT/'templates', KIT/'css', KIT/'assets', ROOT/'site', ROOT/'examples/events/src', ROOT/'build/tide', ROOT/'build/site', ROOT/'build/events'):
+    for folder in (KIT/'templates', KIT/'css', KIT/'assets', ROOT/'site', ROOT/'application-kits/lineup/src', ROOT/'build/tide', ROOT/'build/site', ROOT/'build/events'):
         for p in folder.rglob('*'):
             if not p.is_file():continue
             if p.suffix.lower() in ('.js','.mjs','.cjs'):

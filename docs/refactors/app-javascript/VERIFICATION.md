@@ -8,7 +8,7 @@ This app-only refactor starts from `66ae1c7dedafbe8bc20a3e3bf95b59cb8d2cd389`. T
 - Removed the duplicate desktop month-jump listener. Navigation now handles calendar focus, pending-navigation cancellation and measured desktop-summary clearance once; tablet/phone behavior is preserved.
 - Replaced the mixed `media.js` entry point with `preview.js`, moving inspection positioning out of venue context. Original/rough/no-photo modes, guarded parent messages, inspect positioning, preview-ready coordination and post-mount timing remain active. Historical keys/parameters are retained deliberately, rather than removed as apparently old names.
 - Removed repeated storage/media/state/count logic, inherited empty scaffolding and the misleading legacy-clear variable name. The existing fallback CSS modifier and no-script controls remain unchanged. Filters/rail still own their original mount, close, resize, focus and gutter behavior.
-- Registered all nine deferred scripts in execution order; added syntax, ownership and behavior contracts. No new runtime dependency, framework, router, service or kit component was introduced. See `examples/events/docs/RUNTIME.md`.
+- Registered all nine deferred scripts in execution order; added syntax, ownership and behavior contracts. No new runtime dependency, framework, router, service or kit component was introduced. See `application-kits/lineup/docs/RUNTIME.md`.
 
 ## Verification performed
 

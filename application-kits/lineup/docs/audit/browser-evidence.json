@@ -1,0 +1,5156 @@
+{
+  "date": "2026-10-27",
+  "browser": "Codex in-app Chromium on Windows; CSS viewport emulation",
+  "responsiveCases": 96,
+  "themeCases": 60,
+  "eventCases": 108,
+  "acceptedScreenshots": 20,
+  "observations": [
+    {
+      "cards": 54,
+      "category": {
+        "case": "uppercase",
+        "font": "12px",
+        "line": "20px",
+        "tracking": "1.44px"
+      },
+      "controls": 1,
+      "documentWidth": 1425,
+      "height": 1000,
+      "step": 1,
+      "url": "http://127.0.0.1:4187/events/app/index.html",
+      "width": 1440
+    },
+    {
+      "documentWidth": 1009,
+      "h1s": [
+        {
+          "text": "Coming up.",
+          "visible": true
+        }
+      ],
+      "height": 900,
+      "open": true,
+      "step": 2,
+      "width": 1024
+    },
+    {
+      "buttons": [
+        {
+          "font": "14px",
+          "height": 44,
+          "text": ""
+        },
+        {
+          "font": "14px",
+          "height": 48,
+          "text": "Event information"
+        },
+        {
+          "font": "14px",
+          "height": 48,
+          "text": "More events at Sunshine Theater"
+        }
+      ],
+      "client": 375,
+      "scroll": 375,
+      "step": 7,
+      "visibleH1": [
+        "High Desert Signal"
+      ],
+      "width": 390
+    },
+    {
+      "client": 1185,
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "right": 525.5729217529297,
+          "width": 117.57292175292967,
+          "x": 408
+        },
+        {
+          "classes": "tide-app__detail",
+          "right": 1152.6666870117188,
+          "width": 603.09375,
+          "x": 549.5729370117188
+        }
+      ],
+      "scroll": 1185,
+      "step": 12,
+      "title": "Workbench / Half Split / Contained / Margin Reveal \u00b7 Saved events \u00b7 Burque",
+      "width": 1200,
+      "workspace": "352px 117.573px 603.094px"
+    },
+    {
+      "documentWidth": 1425,
+      "fields": [
+        {
+          "font": "16px",
+          "height": 48,
+          "name": "event-name"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "name": "category"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "name": "date"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "name": "time"
+        },
+        {
+          "font": "16px",
+          "height": 48,
+          "name": "venue"
+        }
+      ],
+      "step": 18,
+      "width": 1440
+    },
+    {
+      "slots": [
+        {
+          "font": "14px",
+          "height": 56.66666793823242,
+          "line": "24px",
+          "padding": "16px 24px",
+          "selector": ".tide-results"
+        },
+        {
+          "font": "14px",
+          "height": 24,
+          "line": "24px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "14px",
+          "height": 60.66666793823242,
+          "line": "24px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        },
+        {
+          "font": "14px",
+          "height": 44,
+          "line": "24px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "height": 188,
+          "line": "24px",
+          "padding": "24px",
+          "selector": ".tide-event-card"
+        },
+        {
+          "font": "24px",
+          "height": 32,
+          "line": "32px",
+          "padding": "0px",
+          "selector": ".tide-event-card__title"
+        },
+        {
+          "font": "14px",
+          "height": 32,
+          "line": "24px",
+          "padding": "0px",
+          "selector": ".tide-date"
+        },
+        {
+          "missing": true,
+          "selector": ".tide-button"
+        }
+      ],
+      "source": "Tide 1.10.0 canonical listing specimen",
+      "step": 20
+    }
+  ],
+  "responsive": [
+    {
+      "client": 305,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "index.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 304.7,
+          "x": 0
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 304.7,
+          "x": 0
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 305,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 305,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 320
+    },
+    {
+      "client": 305,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 305,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 320
+    },
+    {
+      "client": 375,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "index.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 374.7,
+          "x": 0
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 374.7,
+          "x": 0
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 375,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "client": 390,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 0
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 390,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 375,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 390
+    },
+    {
+      "client": 375,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 375,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 390
+    },
+    {
+      "client": 753,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "index.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__detail",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 672,
+          "x": 40.3
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 768,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 672,
+          "x": 48
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 768,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 672,
+          "x": 40.3
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 753,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "client": 768,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 672,
+          "x": 48
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 768,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 753,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 768
+    },
+    {
+      "client": 753,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 753,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 768
+    },
+    {
+      "client": 1009,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "index.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 546.7,
+          "x": 438
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 24
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 1009,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 1009,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1009,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 1009,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1024
+    },
+    {
+      "client": 1184,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "index.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 706,
+          "x": 446
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 390,
+          "x": 32
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 1184,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 1184,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1184,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 1184,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1199
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "index.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Sunshine Theater"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 117.6,
+          "x": 408
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 603.1,
+          "x": 549.6
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 482.7,
+          "x": 670
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 375.4,
+          "x": 270.5
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 1185,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 1185,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1185,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 1185,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1200
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "index.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Sunshine Theater"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 319.6,
+          "x": 446
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 603.1,
+          "x": 789.6
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 590.7,
+          "x": 802
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 459.4,
+          "x": 318.5
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 1425,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 1425,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1425,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 1425,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1440
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "index.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "high-desert-signal.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "ink-after-dark.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "the-imperfect-print.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Sunshine Theater"
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail tide-venue__profile",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "sunshine-theater.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "For another evening."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 596,
+          "x": 633.6
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 603.1,
+          "x": 1253.6
+        }
+      ],
+      "route": "saved.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "search-music.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "search-comedy.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        },
+        {
+          "classes": "tide-app__detail",
+          "width": 640.8,
+          "x": 1047.5
+        }
+      ],
+      "route": "search-workshop.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        {
+          "font": "16px",
+          "padding": "0px",
+          "selector": ".tide-event-group__title"
+        },
+        {
+          "font": "14px",
+          "padding": "8px 24px",
+          "selector": ".tide-event-group__header"
+        }
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Coming up."
+      ],
+      "panes": [
+        {
+          "classes": "tide-app__results",
+          "width": 498.4,
+          "x": 525.1
+        }
+      ],
+      "route": "search-empty.html",
+      "scroll": 1905,
+      "slots": [
+        {
+          "font": "28px",
+          "padding": "0px",
+          "selector": ".tide-results__count"
+        },
+        null,
+        null
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "A little help finding your next evening."
+      ],
+      "panes": [],
+      "route": "help.html",
+      "scroll": 1905,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1920
+    },
+    {
+      "client": 1905,
+      "h1": [
+        "Make a little noise."
+      ],
+      "panes": [],
+      "route": "submit.html",
+      "scroll": 1905,
+      "slots": [
+        null,
+        null,
+        null
+      ],
+      "width": 1920
+    }
+  ],
+  "themes": [
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "tide",
+      "url": "/events/themes/tide-light/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "tide",
+      "url": "/events/themes/tide-light/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "tide",
+      "url": "/events/themes/tide-light/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "tide",
+      "url": "/events/themes/tide-light/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "tide",
+      "url": "/events/themes/tide-light/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "tide",
+      "url": "/events/themes/tide-light/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "tide",
+      "url": "/events/themes/tide-dark/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "tide",
+      "url": "/events/themes/tide-dark/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "tide",
+      "url": "/events/themes/tide-dark/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "tide",
+      "url": "/events/themes/tide-dark/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "tide",
+      "url": "/events/themes/tide-dark/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "tide",
+      "url": "/events/themes/tide-dark/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-light/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-light/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-light/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-light/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-light/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-light/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-dark/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-dark/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-dark/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-dark/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-dark/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "bumble",
+      "url": "/events/themes/bumble-dark/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "slate",
+      "url": "/events/themes/slate-light/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "slate",
+      "url": "/events/themes/slate-light/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "slate",
+      "url": "/events/themes/slate-light/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "slate",
+      "url": "/events/themes/slate-light/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "slate",
+      "url": "/events/themes/slate-light/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "slate",
+      "url": "/events/themes/slate-light/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "slate",
+      "url": "/events/themes/slate-dark/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "slate",
+      "url": "/events/themes/slate-dark/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "slate",
+      "url": "/events/themes/slate-dark/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "slate",
+      "url": "/events/themes/slate-dark/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "slate",
+      "url": "/events/themes/slate-dark/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "slate",
+      "url": "/events/themes/slate-dark/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "grove",
+      "url": "/events/themes/grove-light/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "grove",
+      "url": "/events/themes/grove-light/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "grove",
+      "url": "/events/themes/grove-light/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "grove",
+      "url": "/events/themes/grove-light/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "grove",
+      "url": "/events/themes/grove-light/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "grove",
+      "url": "/events/themes/grove-light/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "grove",
+      "url": "/events/themes/grove-dark/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "grove",
+      "url": "/events/themes/grove-dark/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "grove",
+      "url": "/events/themes/grove-dark/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "grove",
+      "url": "/events/themes/grove-dark/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "grove",
+      "url": "/events/themes/grove-dark/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "grove",
+      "url": "/events/themes/grove-dark/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "iris",
+      "url": "/events/themes/iris-light/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "iris",
+      "url": "/events/themes/iris-light/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "iris",
+      "url": "/events/themes/iris-light/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "iris",
+      "url": "/events/themes/iris-light/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "iris",
+      "url": "/events/themes/iris-light/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "light",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "iris",
+      "url": "/events/themes/iris-light/saved.html",
+      "width": 1440
+    },
+    {
+      "cards": 54,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "iris",
+      "url": "/events/themes/iris-dark/index.html",
+      "width": 390
+    },
+    {
+      "cards": 6,
+      "client": 375,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "iris",
+      "url": "/events/themes/iris-dark/sunshine-theater.html",
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "client": 375,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 375,
+      "theme": "iris",
+      "url": "/events/themes/iris-dark/saved.html",
+      "width": 390
+    },
+    {
+      "cards": 54,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "iris",
+      "url": "/events/themes/iris-dark/index.html",
+      "width": 1440
+    },
+    {
+      "cards": 6,
+      "client": 1425,
+      "controls": 1,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "iris",
+      "url": "/events/themes/iris-dark/sunshine-theater.html",
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "client": 1425,
+      "controls": 0,
+      "mode": "dark",
+      "resultFont": "28px",
+      "scroll": 1425,
+      "theme": "iris",
+      "url": "/events/themes/iris-dark/saved.html",
+      "width": 1440
+    }
+  ],
+  "events": [
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Desert Frequencies"
+      ],
+      "route": "desert-frequencies.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "The Late Set"
+      ],
+      "route": "the-late-set.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Tiny Prints, Big Ideas"
+      ],
+      "route": "tiny-prints-big-ideas.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "route": "ink-after-dark.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Saturday on the Small Stage"
+      ],
+      "route": "saturday-on-the-small-stage.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Sunday Paper Club"
+      ],
+      "route": "sunday-paper-club.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Low Volume Sunday"
+      ],
+      "route": "low-volume-sunday.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "First Drafts & False Starts"
+      ],
+      "route": "first-drafts-false-starts.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Postcards from the Neighborhood"
+      ],
+      "route": "postcards-from-the-neighborhood.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Two Guitars, One Room"
+      ],
+      "route": "two-guitars-one-room.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Midweek Mic"
+      ],
+      "route": "midweek-mic.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Black Ink, Bright Paper"
+      ],
+      "route": "black-ink-bright-paper.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Songs for the Last Light"
+      ],
+      "route": "songs-for-the-last-light.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "The Friday Reset"
+      ],
+      "route": "the-friday-reset.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "route": "high-desert-signal.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Carve a Creature"
+      ],
+      "route": "carve-a-creature.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "The Midnight Electric"
+      ],
+      "route": "midnight-electric.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Costumes & Feedback"
+      ],
+      "route": "costumes-feedback.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "First Sunday Print Exchange"
+      ],
+      "route": "first-sunday-print-exchange.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Sunday in Stereo"
+      ],
+      "route": "sunday-in-stereo.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "November, Quietly"
+      ],
+      "route": "november-quietly.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Nothing Personal"
+      ],
+      "route": "nothing-personal.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "A Table Full of Zines"
+      ],
+      "route": "a-table-full-of-zines.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "After the Record Store Closes"
+      ],
+      "route": "after-the-record-store-closes.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Setups & Second Chances"
+      ],
+      "route": "setups-second-chances.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Friday Night Ink Club"
+      ],
+      "route": "friday-night-ink-club.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Voices on Central"
+      ],
+      "route": "voices-on-central.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Analog Hours"
+      ],
+      "route": "analog-hours.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Print Something for Someone"
+      ],
+      "route": "print-something-for-someone.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Small Room, Big Opinions"
+      ],
+      "route": "small-room-big-opinions.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Sunday in Slow Motion"
+      ],
+      "route": "sunday-in-slow-motion.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Beginner\u2019s Block"
+      ],
+      "route": "beginner-s-block.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Ten Minutes Each"
+      ],
+      "route": "ten-minutes-each.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Desert Radio Live"
+      ],
+      "route": "desert-radio-live.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "route": "the-imperfect-print.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "The Very Late Set"
+      ],
+      "route": "the-very-late-set.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Three Bands & a Borrowed Amp"
+      ],
+      "route": "three-bands-a-borrowed-amp.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "After the Last Train"
+      ],
+      "route": "after-the-last-train.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Paper, Coffee & Company"
+      ],
+      "route": "paper-coffee-company.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Notes from the Group Chat"
+      ],
+      "route": "notes-from-the-group-chat.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Two Colors, One Block"
+      ],
+      "route": "two-colors-one-block.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Near the Speakers"
+      ],
+      "route": "near-the-speakers.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Warm-Up Night"
+      ],
+      "route": "warm-up-night.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "After Work, Make Something"
+      ],
+      "route": "after-work-make-something.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "The Neighborhood Listening Room"
+      ],
+      "route": "the-neighborhood-listening-room.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Handmade Holiday Cards"
+      ],
+      "route": "handmade-holiday-cards.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "A Few Good Stories"
+      ],
+      "route": "a-few-good-stories.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Print Swap & Studio Social"
+      ],
+      "route": "print-swap-studio-social.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Home for the Long Weekend"
+      ],
+      "route": "home-for-the-long-weekend.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "An Open Door Session"
+      ],
+      "route": "an-open-door-session.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "The Long Weekend"
+      ],
+      "route": "the-long-weekend.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Leftovers & One-Liners"
+      ],
+      "route": "leftovers-one-liners.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "Make Your Own Gift Wrap"
+      ],
+      "route": "make-your-own-gift-wrap.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 375,
+      "detail": true,
+      "h1": [
+        "One More Sunday"
+      ],
+      "route": "one-more-sunday.html",
+      "scripts": 0,
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Desert Frequencies"
+      ],
+      "route": "desert-frequencies.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "The Late Set"
+      ],
+      "route": "the-late-set.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Tiny Prints, Big Ideas"
+      ],
+      "route": "tiny-prints-big-ideas.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Ink After Dark"
+      ],
+      "route": "ink-after-dark.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Saturday on the Small Stage"
+      ],
+      "route": "saturday-on-the-small-stage.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Sunday Paper Club"
+      ],
+      "route": "sunday-paper-club.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Low Volume Sunday"
+      ],
+      "route": "low-volume-sunday.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "First Drafts & False Starts"
+      ],
+      "route": "first-drafts-false-starts.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Postcards from the Neighborhood"
+      ],
+      "route": "postcards-from-the-neighborhood.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Two Guitars, One Room"
+      ],
+      "route": "two-guitars-one-room.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Midweek Mic"
+      ],
+      "route": "midweek-mic.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Black Ink, Bright Paper"
+      ],
+      "route": "black-ink-bright-paper.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Songs for the Last Light"
+      ],
+      "route": "songs-for-the-last-light.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "The Friday Reset"
+      ],
+      "route": "the-friday-reset.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "High Desert Signal"
+      ],
+      "route": "high-desert-signal.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Carve a Creature"
+      ],
+      "route": "carve-a-creature.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "The Midnight Electric"
+      ],
+      "route": "midnight-electric.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Costumes & Feedback"
+      ],
+      "route": "costumes-feedback.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "First Sunday Print Exchange"
+      ],
+      "route": "first-sunday-print-exchange.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Sunday in Stereo"
+      ],
+      "route": "sunday-in-stereo.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "November, Quietly"
+      ],
+      "route": "november-quietly.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Nothing Personal"
+      ],
+      "route": "nothing-personal.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "A Table Full of Zines"
+      ],
+      "route": "a-table-full-of-zines.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "After the Record Store Closes"
+      ],
+      "route": "after-the-record-store-closes.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Setups & Second Chances"
+      ],
+      "route": "setups-second-chances.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Friday Night Ink Club"
+      ],
+      "route": "friday-night-ink-club.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Voices on Central"
+      ],
+      "route": "voices-on-central.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Analog Hours"
+      ],
+      "route": "analog-hours.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Print Something for Someone"
+      ],
+      "route": "print-something-for-someone.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Small Room, Big Opinions"
+      ],
+      "route": "small-room-big-opinions.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Sunday in Slow Motion"
+      ],
+      "route": "sunday-in-slow-motion.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Beginner\u2019s Block"
+      ],
+      "route": "beginner-s-block.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Ten Minutes Each"
+      ],
+      "route": "ten-minutes-each.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Desert Radio Live"
+      ],
+      "route": "desert-radio-live.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "The Art of the Imperfect Print: An Evening of Layers, Texture & Happy Accidents"
+      ],
+      "route": "the-imperfect-print.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "The Very Late Set"
+      ],
+      "route": "the-very-late-set.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Three Bands & a Borrowed Amp"
+      ],
+      "route": "three-bands-a-borrowed-amp.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "After the Last Train"
+      ],
+      "route": "after-the-last-train.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Paper, Coffee & Company"
+      ],
+      "route": "paper-coffee-company.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Notes from the Group Chat"
+      ],
+      "route": "notes-from-the-group-chat.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Two Colors, One Block"
+      ],
+      "route": "two-colors-one-block.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Near the Speakers"
+      ],
+      "route": "near-the-speakers.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Warm-Up Night"
+      ],
+      "route": "warm-up-night.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "After Work, Make Something"
+      ],
+      "route": "after-work-make-something.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "The Neighborhood Listening Room"
+      ],
+      "route": "the-neighborhood-listening-room.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Handmade Holiday Cards"
+      ],
+      "route": "handmade-holiday-cards.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "A Few Good Stories"
+      ],
+      "route": "a-few-good-stories.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Print Swap & Studio Social"
+      ],
+      "route": "print-swap-studio-social.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Home for the Long Weekend"
+      ],
+      "route": "home-for-the-long-weekend.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "An Open Door Session"
+      ],
+      "route": "an-open-door-session.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "The Long Weekend"
+      ],
+      "route": "the-long-weekend.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Leftovers & One-Liners"
+      ],
+      "route": "leftovers-one-liners.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "Make Your Own Gift Wrap"
+      ],
+      "route": "make-your-own-gift-wrap.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "brokenImages": [],
+      "client": 1425,
+      "detail": true,
+      "h1": [
+        "One More Sunday"
+      ],
+      "route": "one-more-sunday.html",
+      "scripts": 0,
+      "scroll": 1425,
+      "width": 1440
+    }
+  ],
+  "nativeChecks": {
+    "monthJumpDesktop": {
+      "width": 1440,
+      "targetMonth": "2026-11",
+      "feedTopBeforeAndAfter": 249,
+      "monthTopAfter": 249,
+      "summaryTopBeforeAndAfter": 117,
+      "outerScrollBeforeAndAfter": 0
+    },
+    "filters": {
+      "tabletWidth": 1024,
+      "phoneWidth": 390,
+      "phoneHeight": 844,
+      "oneSearchControl": true,
+      "resetClearedEnteredText": true,
+      "escapeClosed": true,
+      "closeClosed": true,
+      "focusReturnedToFilters": true,
+      "phoneFooterBottom": 844
+    }
+  }
+}

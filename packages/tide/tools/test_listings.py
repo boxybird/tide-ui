@@ -110,7 +110,7 @@ class ListingContracts(unittest.TestCase):
                           '.tide-event-card { padding: 8px; }',
                           '.host .tide-event-card--in-view { outline: 8px solid red; }']:
             self.assertIn('Kit-owned selectors redefined in app CSS: tide-event-card',style_ownership_issues(forbidden,self.manifest))
-        app='\n'.join(p.read_text(encoding='utf-8') for p in (PROJECT/'examples/events/src/styles').glob('*.css'))
+        app='\n'.join(p.read_text(encoding='utf-8') for p in (PROJECT/'application-kits/lineup/src/styles').glob('*.css'))
         self.assertEqual(style_ownership_issues(app,self.manifest),[])
 
     def test_registered_css_html_contracts_exist(self):

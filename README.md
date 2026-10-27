@@ -1,8 +1,8 @@
 # Tide UI
 
-A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The documentation and Burque events example consume the same generated stylesheet.
+A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The reference site and derived application kits consume the same generated stylesheet.
 
-Kit **1.10.0** · Events example **2.0.4** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Tide UI kit **1.10.0** · [Lineup application kit](application-kits/lineup/README.md) **2.0.4**, layout family **option 1** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
 Kit normalization contracts: [buttons](packages/tide/docs/BUTTONS.md), [fields, choices, chips, disclosures and file/error states](packages/tide/docs/FORMS.md), and [badges, notices, toast specimens and empty states](packages/tide/docs/FEEDBACK.md). [Cards, dates, calendar groups and results](packages/tide/docs/LISTINGS.md) have a dedicated matrix too. Each has all-theme specimens and regression checks. See [completion status and verification limits](packages/tide/docs/NORMALIZATION-STATUS.md) for completed scope and browser-testing limits.
 
@@ -32,11 +32,14 @@ Open the [UI kit](http://127.0.0.1:4187/site/index.html), [events example](http:
 | --- | --- |
 | `packages/tide/` | CSS modules, theme inputs, canonical HTML recipes, component registry, fonts/assets/licenses and component contracts |
 | `site/` | Reference-site builder and documentation presentation CSS |
-| `examples/events/` | Native HTML/CSS sample pages, authored result states and event fixtures; no browser scripts |
+| `application-kits/` | Named application kits derived from Tide, with independent versions; [index](application-kits/README.md) |
+| `application-kits/lineup/` | Lineup option 1: application layout, templates, authored results, sample content/assets, docs and tests |
 | `tools/` | Portable build, contract checks, local preview, packaging and optional history verification |
 | `docs/` | Architecture, contribution/versioning rules, design decisions and migration evidence |
 | `build/` | Generated distribution, reference site, example and reports; ignored by Git |
 | `dist/` | Generated release ZIP and checksums; ignored by Git |
+
+Tide is the UI source of truth; application-kit work does not change its component sources, recipes or tokens. The application has one canonical home and keeps its existing `/events/` preview URLs. See the [Lineup audit](application-kits/lineup/docs/AUDIT.md).
 
 Edit named sources and rebuild. Generated theme/mode copies are never edited or committed. The kit, reference specimens and events example contain zero browser JavaScript, enforced by checks. Python and Node are development tools, not browser dependencies. See [browser policy and audit](docs/NO-BROWSER-JAVASCRIPT.md).
 

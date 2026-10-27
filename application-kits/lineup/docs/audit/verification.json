@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-27",
+  "application": "Lineup",
+  "applicationVersion": "2.0.4",
+  "layoutFamily": "option-1",
+  "kitVersion": "1.10.0",
+  "build": {
+    "command": "npm run build",
+    "pass": true
+  },
+  "check": {
+    "command": "npm run check",
+    "pass": true,
+    "htmlFiles": 998,
+    "localReferences": 59256,
+    "markdownReferences": 384,
+    "themes": 5,
+    "modesPerTheme": 2,
+    "runs": [
+      {
+        "name": "preview-http-contracts",
+        "pass": true,
+        "tests": 7
+      },
+      {
+        "name": "palette-and-contract-tests",
+        "pass": true,
+        "tests": 66
+      },
+      {
+        "name": "app-template-contracts",
+        "pass": true,
+        "tests": 28
+      }
+    ],
+    "failures": []
+  },
+  "browser": {
+    "screenshots": 20,
+    "responsiveCases": 96,
+    "themeCases": 60,
+    "eventCases": 108,
+    "engine": "In-app Chromium on Windows; CSS viewport emulation",
+    "findingsRemainOpen": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06"
+    ]
+  },
+  "attempts": [
+    "Initial build passed; the pre-move check was invalidated by source relocation before its subprocess finished.",
+    "First post-move check passed source/kit/application tests but sandbox EACCES blocked HTTP test connections to localhost.",
+    "Final npm run check was rerun with localhost access and all checks passed."
+  ],
+  "limits": [
+    "Firefox/Safari",
+    "physical devices/software keyboards",
+    "screen readers",
+    "forced colors",
+    "zoom/text enlargement",
+    "current-run reduced motion interaction",
+    "print",
+    "complete state/contrast audit"
+  ],
+  "parity": "move-parity.json",
+  "note": "Passing build/contract checks validate the move; they do not resolve the rendered application audit findings. Evidence-only record updates are followed by a rebuild and source/output freshness check."
+}

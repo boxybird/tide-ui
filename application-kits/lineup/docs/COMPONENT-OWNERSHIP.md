@@ -1,6 +1,6 @@
-# Native component ownership · App 2.0.0
+# Native component ownership · Lineup 2.0.4
 
-The example consumes Tide 1.5.3 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
+The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
 | Responsibility | Canonical home |
 | --- | --- |

@@ -1,6 +1,9 @@
 {
+  "id": "lineup",
+  "name": "Lineup",
+  "layoutFamily": "option-1",
   "version": "2.0.4",
-  "kitVersion": "1.5.3",
+  "kitVersion": "1.10.0",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
   "privateBlocks": [
