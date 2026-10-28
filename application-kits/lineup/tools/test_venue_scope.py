@@ -1,5 +1,4 @@
 """Native result journeys retain their venue and its information on recovery."""
-from pathlib import Path
 import re
 import unittest
 from urllib.parse import urlsplit
@@ -15,14 +14,13 @@ class VenueScopeContracts(unittest.TestCase):
         cls.app = AppTemplates()
         cls.routes = {name:page for name,page in cls.app.routes.items() if page.get('collection')=='venue'}
 
-    def test_native_result_links_stay_in_the_venue(self):
-        for route in self.routes:
+    def test_reference_result_routes_stay_scoped_without_a_tutorial_menu(self):
+        for route,page in self.routes.items():
             source = self.app.page(route)
-            nav = re.search(r'<nav[^>]+aria-label="Sunshine Theater sample result states"[^>]*>(.*?)</nav>', source, re.S)[1]
-            links = [attrs['href'] for tag,attrs in Document(nav).nodes if tag=='a']
-            self.assertEqual(len(links), 5)
-            for href in links:
-                target = self.app.routes[Path(urlsplit(href).path).stem]
+            self.assertNotIn('sample result states', source)
+            self.assertNotIn('href="sunshine-theater-empty.html"', source)
+            for destination in self.app.routes[page['venue']]['resultRoutes'].values():
+                target = self.app.routes[destination]
                 self.assertEqual((target['collection'], target['venue']), ('venue', 'sunshine-theater'))
         venue = [e for e in self.app.events if e['venue']=='sunshine-theater']
         self.assertEqual(len(venue), 6)
@@ -58,11 +56,12 @@ class VenueScopeContracts(unittest.TestCase):
             self.assertEqual(sum(attrs.get('id')=='results-title' for tag,attrs in doc.nodes), 1, route)
             self.assertNotIn('lineup-filters', Elements(source).ancestors['results-title'])
 
-    def test_global_reset_and_category_destinations_remain_native(self):
+    def test_global_reset_remains_native_without_reference_state_links(self):
         source = self.app.page('index')
         reset = next((tag,attrs) for tag,attrs in Document(source).nodes if 'data-filter-reset' in attrs)
         self.assertEqual((reset[0], reset[1]['type'], reset[1]['form']), ('button', 'reset', 'event-search-form'))
-        self.assertIn('href="search-comedy.html"', source)
+        for route in ('search-music', 'search-comedy', 'search-workshop', 'search-empty'):
+            self.assertNotIn('href="'+route+'.html"', source)
 
 
 if __name__ == '__main__':

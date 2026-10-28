@@ -1,4 +1,4 @@
-# Native responsive filter drawer · Lineup 2.1.3
+# Native responsive filter drawer · Lineup 2.1.4
 
 The same `filter-rail.html` aside and original form/control set serve both layouts. `filter-trigger.html` is rendered by the shared header only on routes with a filter panel. The kit owns Filter panel internals, Button, Icon, fields and native Expandable; app-owned `filters.css` owns responsive placement and motion. `consumer-manifest.json` registers the templates and stylesheet. No browser JavaScript is shipped or needed.
 
@@ -11,7 +11,11 @@ The same `filter-rail.html` aside and original form/control set serve both layou
 - At 75rem and above the original 20/35/45 desktop composition remains. The launcher and drawer header are hidden; the panel is always displayed in its original column. If resized while open, CSS anchors fit the top-layer panel to `.tide-app__filter-clip`, with the existing grid geometry as a fallback. Dismissal leaves the desktop panel visible. Returning to a narrow width preserves the browser's open/closed state and the original input values.
 - Saved/help/submission have no filter launcher or panel. Event detail pages retain their full-screen phone reading layout; filters remain available in the split layout from 60rem upwards.
 
-## Current verification · Lineup 2.1.3
+## Current verification · Lineup 2.1.4
+
+The drawer's HTML/CSS mechanism is unchanged. The [handoff verification](HANDOFF.md) covers the simplified controls, native dismissal/reset, responsive placement and current testing limits. Tutorial result links, example labels and duplicate sample counts have been removed from the panel. Integration explanations remain in kit documentation.
+
+## Alignment verification · Lineup 2.1.3
 
 [Strict Tide alignment](TIDE-ALIGNMENT.md) covers canonical field/fieldset markup, unmodified component interiors, outward focus rings with private external clearance, all themes, bounded panes, native controls and drawer journeys. The [footer/tablet record](FILTER-FOOTER-TABLET.md) and earlier evidence below remain historical.
 

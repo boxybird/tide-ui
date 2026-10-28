@@ -68,7 +68,6 @@
     .tide-app__filter-rail { position: relative; inline-size: 100%; min-inline-size: 0; block-size: 100%; }
     .tide-app--columns .tide-app__detail, .tide-app--columns .tide-app__preview-state { grid-column: 3; grid-row: 1; }
     .tide-app--columns .tide-app__site-footer { grid-column: 3; grid-row: 3; margin: 0; padding-inline: 0; justify-self: stretch; }
-    .tide-app__legacy-clear { display: none; }
     /* External clearance lets Tide's outward focus rings remain visible. */
     .tide-app--columns .tide-app__filter-rail :where(.tide-app__search, .tide-app__filter-row) { padding-inline-start: var(--tide-space-2); }
     .tide-app--columns .tide-app__filter-rail .tide-app__filters { margin-inline-start: var(--tide-space-2); }

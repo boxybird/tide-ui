@@ -9,7 +9,7 @@ Only `{{UPPERCASE_VALUE}}` and `{{> registered-partial}}` are supported. Plain v
 | `header.html`, `skip-link.html` | Canonical Tide Site header/list/link and Skip link recipes; native destinations, exact current page and route-appropriate focusable fragments |
 | `document.html`, `workspace.html` | Native document and main browse/detail slots; stylesheets only |
 | `workspace-browse.html`, `workspace-results.html` | Static filter/list grouping and results region |
-| `filter-trigger.html`, `filter-rail.html`, `filters.html`, `filter-status.html`, `filter-actions.html` | Native popover trigger/close and one responsive panel/form/control set, disclosures, reset and static result-state links |
+| `filter-trigger.html`, `filter-rail.html`, `filters.html`, `filter-status.html`, `filter-actions.html` | Native popover trigger/close and one responsive panel/form/control set, disclosures, reset and venue context; no tutorial result-state menu |
 | `results-intro.html`, `lineup-summary.html`, `month-group.html` | Canonical Page intro, Results and calendar slots; private context wrapper beside Results, plain month/year text; no DOM rewriting or private type aliases |
 | `event-list.html`, `month-nav.html`, `month-jump.html` | Summary outside the native feed scroller, stable fragment destinations and complete-feed isolation |
 | `event-card.html`, `event-detail.html`, `detail-*.html` | Cards and all 54 native event details, with authored preview heading levels |

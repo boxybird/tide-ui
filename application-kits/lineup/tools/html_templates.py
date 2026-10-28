@@ -120,11 +120,8 @@ class AppTemplates:
         saved = collection=='saved'
         venue = collection=='venue'
         venue_id = page.get('venue') if venue else None
-        venue_owner = self.routes[venue_id] if venue else {}
-        result_routes = venue_owner['resultRoutes'] if venue else {'all':'search','music':'search-music','comedy':'search-comedy','workshop':'search-workshop','empty':'search-empty'}
         collection_href = venue_id+'.html' if venue else 'index.html'
         events = [event for event in self.events if (not venue or event['venue']==venue_id) and (not saved or event['id']=='ink-after-dark')]
-        venue_total = len(events) if venue else 0
         sample = page.get('sampleFilter', {})
         if set(sample)-{'category','empty'} or sample.get('category') not in (None,'music','comedy','workshop'):
             raise ValueError('Unsupported authored result state')
@@ -157,12 +154,9 @@ class AppTemplates:
             'COUNT_LABEL':str(len(events))+' '+('event' if len(events)==1 else 'events'),
             'SEARCH_ACTION':collection_href if venue else 'search.html',
             'VENUE_SCOPE':venue_id if venue else '',
-            'RESULT_NOTE':f'Venue control examples. All {venue_total} venue samples are music.' if venue else 'Control examples. Browse sample result pages:',
-            'RESULT_NAV_LABEL':'Sunshine Theater sample result states' if venue else 'Authored result states',
-            **{'RESULT_'+kind.upper()+'_HREF':target+'.html' for kind,target in result_routes.items()},
             'COLLECTION_HREF':collection_href,
             'COLLECTION_LABEL':'All venue events' if venue else 'All events',
-            'RESULTS_ACTION_LABEL':'View all venue samples' if venue else 'View all sample results',
+            'RESULTS_ACTION_LABEL':'Search this venue' if venue else 'Search events',
             'RESET_TAG':'a' if venue else 'button',
             'RESET_ATTRIBUTES':attribute('href', collection_href) if venue else Html(attribute('type','reset')+attribute('form','event-search-form')),
             'SCOPE_EXIT':self.partial('scope-link', {'LINK_HREF':'index.html', 'LINK_LABEL':'All events across Albuquerque'}) if venue else Html(''),
@@ -170,8 +164,8 @@ class AppTemplates:
             'SUMMARY_BADGE':Html('') if saved else self.partial('summary-badge', {}),
             'SUMMARY_TOGGLE':Html(''),
             'EMPTY_HIDDEN':Html(' hidden' if events else ''),
-            'EMPTY_TITLE':f"No {sample.get('category', 'matching')} sample events at Sunshine Theater." if venue else 'No events found.',
-            'EMPTY_COPY':f'Browse all {venue_total} venue samples or read the venue information below.' if venue else 'This authored specimen shows an empty result state. Browse another sample result page.',
+            'EMPTY_TITLE':f"No {sample.get('category', 'matching')} events at Sunshine Theater." if venue else 'No events found.',
+            'EMPTY_COPY':'Browse all venue events or read the venue information below.' if venue else 'Try a different search, change the dates or clear your filters.',
             'EMPTY_RECOVERY_HREF':collection_href+'#results' if venue else 'index.html',
             'EMPTY_RECOVERY_LABEL':'Show all venue events' if venue else 'Clear search and filters',
             'PREVIEW_HIDDEN':Html(' hidden' if events or venue else ''),
@@ -179,15 +173,15 @@ class AppTemplates:
             'COMEDY_CHECKED':Html(' checked' if sample.get('category')=='comedy' else ''),
             'WORKSHOP_CHECKED':Html(' checked' if sample.get('category')=='workshop' else ''),
             'EVENT_DETAIL':Html(''),
-            'ORDER_LABEL':'Sample schedule · Soonest first' if venue else 'Soonest first',
+            'ORDER_LABEL':'Soonest first',
             'FEED_CLASS':'tide-event-list' if saved else 'tide-event-list tide-lineup__feed',
             'FEED_ID':Html('') if saved else attribute('id', 'venue-feed'),
             'MONTH_GROUPS':Html(''.join(group_html)),
             'FOOTER_HREF':'submit.html' if saved else '#venue-information' if venue else 'sunshine-theater.html',
-            'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'About Sunshine Theater' if venue else 'Explore Sunshine Theater and its upcoming sample events.',
+            'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'About Sunshine Theater' if venue else 'Explore Sunshine Theater and its upcoming events.',
             'FOOTER_BACK_HIDDEN':Html('') if saved or venue else Html(' hidden'),
             'FOOTER_BACK_LABEL':'All events across Albuquerque' if venue else 'Back to all events',
-            'FOOTER_NOTE':'Saved items are an example shortlist.' if saved else 'End of the sample feed. Fictional events for UX testing. Venue information is sourced separately.',
+            'FOOTER_NOTE':'Your saved events, all in one place.' if saved else 'You’re all caught up.',
         })
         if selected and not venue:
             event = self.by_id[selected]

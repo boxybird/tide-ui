@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.1.4 · 2026-10-27
+
+- Removed tutorial result-state navigation, duplicate sample counts, example search/category labels and explanatory demo text from the application. Retained the native search form, dates/categories, Reset, venue context and useful recovery links.
+- Cleaned Help, submission labels, page metadata, footer and event prose into ordinary product copy. Moved fictional-content/photography provenance and static-service limits into the [handoff contract](HANDOFF.md). All event IDs, routes, dates, prices and venue facts remain intact.
+- Retained the existing native popover and modern CSS drawer: transitions, reduced motion, pinned footer, desktop anchors and one control set. No browser JavaScript was present or added. Reference result documents remain available from the kit review entry, outside the application navigation.
+- Updated application contracts and verification for the handoff. Tide and shared repository sources remain unchanged.
+
 ## 2.1.3 · 2026-10-27
 
 - Completed strict one-to-one adoption of Tide 1.10.0 HTML/CSS. Search now uses the real Field label/wrapper; fieldsets use the canonical Stack recipe. Links and supporting/footer copy use kit typography. Cards use the current category/metadata markup, and the panel uses its semantic footer recipe.

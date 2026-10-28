@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.1.3
+# Native component ownership · Lineup 2.1.4
 
 The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -22,6 +22,8 @@ The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScri
 | Document, browse, results and filter body/footer | Registered `document.html`, `workspace*.html`, `filter-rail.html`, `filter-status.html`, `filter-actions.html` |
 | Eleven submission fields | Registered `form-*.html`, `data/submission-fields.json` and build-time form renderer |
 | Browser runtime | None. `behaviorHome` is empty; checks reject browser executables and script hooks. |
+
+The [2.1.4 handoff contract](HANDOFF.md) removes tutorial result-state navigation and example wording from customer-facing templates. Native form fields remain; reference layouts, fixture provenance and integration limits live outside the product interface. This does not alter shared components or add service behavior.
 
 Native event paths, IDs and 54 records remain. Custom draft counts, arbitrary text/date filtering, fetched previews, session storage, photo/message hooks, delayed navigation and custom restoration are retired. Existing query strings do not activate behaviors. Native history, links and input/reset behavior belong to the browser.
 

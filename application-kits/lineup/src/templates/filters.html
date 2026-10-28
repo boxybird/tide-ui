@@ -1,14 +1,13 @@
-<form class="tide-app__search" id="event-search-form" action="{{SEARCH_ACTION}}" method="get" aria-label="Native search controls example">
+<form class="tide-app__search" id="event-search-form" action="{{SEARCH_ACTION}}" method="get" aria-label="Search events">
   <input type="hidden" name="venue" id="venue-scope" value="{{VENUE_SCOPE}}">
-  <div class="tide-field"><label class="tide-field__label" for="event-query">Search events · example</label><input class="tide-field__control" id="event-query" name="q" type="search" placeholder="Native search control" maxlength="160"></div>
+  <div class="tide-field"><label class="tide-field__label" for="event-query">Search events</label><input class="tide-field__control" id="event-query" name="q" type="search" placeholder="Event, artist or venue" maxlength="160"></div>
 </form>
-<div class="tide-app__search-note tide-stack"><p class="tide-caption">{{RESULT_NOTE}}</p><nav class="tide-row" aria-label="{{RESULT_NAV_LABEL}}"><a class="tide-link" href="{{RESULT_ALL_HREF}}">All</a><a class="tide-link" href="{{RESULT_MUSIC_HREF}}">Music</a><a class="tide-link" href="{{RESULT_COMEDY_HREF}}">Comedy</a><a class="tide-link" href="{{RESULT_WORKSHOP_HREF}}">Workshops</a><a class="tide-link" href="{{RESULT_EMPTY_HREF}}">No results</a></nav>{{SCOPE_EXIT}}</div>
-<div class="tide-app__filter-row"><p class="tide-caption" id="date-summary">Authored sample schedule</p><span class="tide-badge" id="filter-badge">{{EVENT_COUNT}} samples</span><a class="tide-link" href="{{COLLECTION_HREF}}">{{COLLECTION_LABEL}}</a></div>
-<details class="tide-expandable tide-app__filters" open><summary class="tide-expandable__summary tide-app__filter-disclosure">Date and category controls</summary>
+<div class="tide-app__filter-row"><a class="tide-link" href="{{COLLECTION_HREF}}">{{COLLECTION_LABEL}}</a>{{SCOPE_EXIT}}</div>
+<details class="tide-expandable tide-app__filters" open><summary class="tide-expandable__summary tide-app__filter-disclosure">Date and category</summary>
   <div class="tide-expandable__body tide-app__filter-form">
-    <fieldset class="tide-fieldset tide-stack"><legend class="tide-fieldset__legend">When</legend><p class="tide-field__hint" id="date-hint">Example dates. Use the sample pages to review results.</p>
+    <fieldset class="tide-fieldset tide-stack"><legend class="tide-fieldset__legend">When</legend><p class="tide-field__hint" id="date-hint">Choose a start and end date.</p>
       <div class="tide-app__date-fields"><div class="tide-field"><label class="tide-field__label" for="event-from">From</label><input class="tide-field__control" id="event-from" type="date" name="from" form="event-search-form" aria-describedby="date-hint"></div><div class="tide-field"><label class="tide-field__label" for="event-to">Through</label><input class="tide-field__control" id="event-to" type="date" name="to" form="event-search-form" aria-describedby="date-hint"></div></div>
     </fieldset>
-    <fieldset class="tide-fieldset tide-stack"><legend class="tide-fieldset__legend">Category · example</legend><label class="tide-choice"><input type="checkbox" name="category" value="music" form="event-search-form"{{MUSIC_CHECKED}}> Music</label><label class="tide-choice"><input type="checkbox" name="category" value="comedy" form="event-search-form"{{COMEDY_CHECKED}}> Comedy</label><label class="tide-choice"><input type="checkbox" name="category" value="workshop" form="event-search-form"{{WORKSHOP_CHECKED}}> Workshops</label></fieldset>
+    <fieldset class="tide-fieldset tide-stack"><legend class="tide-fieldset__legend">Category</legend><label class="tide-choice"><input type="checkbox" name="category" value="music" form="event-search-form"{{MUSIC_CHECKED}}> Music</label><label class="tide-choice"><input type="checkbox" name="category" value="comedy" form="event-search-form"{{COMEDY_CHECKED}}> Comedy</label><label class="tide-choice"><input type="checkbox" name="category" value="workshop" form="event-search-form"{{WORKSHOP_CHECKED}}> Workshops</label></fieldset>
   </div>
 </details>

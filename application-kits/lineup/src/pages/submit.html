@@ -1,7 +1,7 @@
 <main class="tide-app__form-wrap" id="main-content" tabindex="-1">
       <div class="tide-page-intro tide-app__intro"><p class="tide-eyebrow">For the neighborhood</p><h1 class="tide-page-intro__title">Make a little noise.</h1><p>Have something happening in Albuquerque? Start with the details.</p></div>
-      <div class="tide-page-body"><form class="tide-app__form" aria-label="Event submission example">
-        <p class="tide-caption">Form preview. Fields are required unless marked optional. Nothing is submitted or stored.</p>
+      <div class="tide-page-body"><form class="tide-app__form" aria-label="Add an event">
+        <p class="tide-caption">Fields are required unless marked optional.</p>
         <section class="tide-form-section" aria-labelledby="basics"><h2 id="basics">The basics</h2>
           {{FIELD_EVENT_NAME}}
           {{FIELD_EVENT_CATEGORY}}
@@ -15,7 +15,7 @@
           {{FIELD_ACCESS}}
         </section>
         <section class="tide-form-section" aria-labelledby="photo-contact"><h2 id="photo-contact">Photo &amp; contact</h2>
-          <div class="tide-upload"><label class="tide-field__label" for="photo">Event photo (optional)</label><input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="photo-hint"><p class="tide-field__hint" id="photo-hint">A clear phone photo is enough. JPEG, PNG or WebP. Nothing is uploaded in this preview.</p></div>
+          <div class="tide-upload"><label class="tide-field__label" for="photo">Event photo (optional)</label><input id="photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" aria-describedby="photo-hint"><p class="tide-field__hint" id="photo-hint">A clear phone photo is enough. JPEG, PNG or WebP.</p></div>
           {{FIELD_EMAIL}}
           <label class="tide-choice"><input type="checkbox" name="permission" required> I have permission to share these details and this photo.</label>
         </section>

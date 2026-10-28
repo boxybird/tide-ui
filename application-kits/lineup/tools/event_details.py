@@ -88,7 +88,7 @@ class EventDetails:
             'CUE_LABEL':self.partial('detail-cue-label', {'TEXT':content['cueText']}) if presentation['wrappedCue'] else Html(escape(content['cueText'])+' '),
             'CUE_ICON':icon(presentation['cueIcon']),
             'STORY_LABEL':content['storyLabel'], 'STORY_TITLE':content['storyTitle'], 'LEAD':content['lead'],
-            'SECTIONS':Html(''.join(sections)), 'DISCLOSURE':presentation['disclosure'],
+            'SECTIONS':Html(''.join(sections)),
             'STORY_BACK_ICON':icon('back') if presentation['backIcon'] else Html(''), 'BACK_LABEL':presentation['backLabel'],
         }
         return self.partial('event-detail', values)

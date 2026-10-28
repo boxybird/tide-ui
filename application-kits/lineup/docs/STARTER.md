@@ -1,6 +1,6 @@
 # Start from Lineup
 
-Lineup 2.1.3 is layout family option 1, derived from Tide UI 1.10.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions.
+Lineup 2.1.4 is layout family option 1, derived from Tide UI 1.10.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
 
 1. From the repository root, run `npm run build`, `npm run check` and `npm run dev`. Open `/events/app/index.html`; `/events/index.html` exposes all five themes in light/dark modes.
 2. Start with `data/pages.json` for route/collection context and `src/templates/document.html` / `workspace*.html` for composition. All 67 documents are generated from those sources. Only venue/help/submission need the three authored `src/pages/` fragments.
@@ -12,7 +12,7 @@ Use `header.html` and `skip-link.html` for Tide's Site header and Skip link reci
 
 Filter footer spacing/layout stays in Tide. Use the private child wrappers in `filter-rail.html` for narrow viewport clearance; keep public footer/status/count classes free of private appearance aliases. The split-tablet height input accounts for the visible Filters control. See [the repair contract](FILTER-FOOTER-TABLET.md).
 
-The application ships native HTML/CSS only. Links, fragments, browser Back, native controls, popover dismissal, reset, validation and file selection work locally. Category and empty results are authored pages. Arbitrary search/date matching, persistent saved state and operational submission are outside this specimen's scope; inputs are explicitly labeled examples. This is a reusable UI starting point.
+The application ships native HTML/CSS only. Links, fragments, browser Back, native controls, popover dismissal, reset, validation and file selection work locally. Category and empty layouts remain authored reference pages, available from the kit review entry rather than a tutorial menu inside the application. Search uses ordinary product labels and a native GET form contract. Arbitrary search/date matching, persistent saved state and operational submission remain service integration boundaries, documented outside the product UI.
 
 Keep application releases in tags/artifacts. A different application layout belongs in its own named sibling directory under `application-kits/`, with its own ownership and version. Do not copy or fork Tide into it. The root builder currently builds Lineup; adding another kit includes registering its build/check/output ownership in repository tooling.
 

@@ -13,7 +13,7 @@
   },
   "sunshine-theater": {
     "collection": "venue",
-    "documentTitle": "Sunshine Theater \u00b7 Venue & upcoming sample events \u00b7 Burque",
+    "documentTitle": "Sunshine Theater \u00b7 Venue & upcoming events \u00b7 Burque",
     "layout": "workspace",
     "source": "sunshine-theater.html",
     "venue": "sunshine-theater",
@@ -47,7 +47,7 @@
   "search-music": {
     "collection": "all",
     "selected": "desert-frequencies",
-    "documentTitle": "Music sample results \u00b7 Burque",
+    "documentTitle": "Music results \u00b7 Burque",
     "layout": "workspace",
     "sampleFilter": {
       "category": "music"
@@ -56,7 +56,7 @@
   "search-comedy": {
     "collection": "all",
     "selected": "the-late-set",
-    "documentTitle": "Comedy sample results \u00b7 Burque",
+    "documentTitle": "Comedy results \u00b7 Burque",
     "layout": "workspace",
     "sampleFilter": {
       "category": "comedy"
@@ -65,7 +65,7 @@
   "search-workshop": {
     "collection": "all",
     "selected": "tiny-prints-big-ideas",
-    "documentTitle": "Workshop sample results \u00b7 Burque",
+    "documentTitle": "Workshop results \u00b7 Burque",
     "layout": "workspace",
     "sampleFilter": {
       "category": "workshop"
@@ -73,7 +73,7 @@
   },
   "search-empty": {
     "collection": "all",
-    "documentTitle": "No results specimen \u00b7 Burque",
+    "documentTitle": "No events found \u00b7 Burque",
     "layout": "workspace",
     "sampleFilter": {
       "empty": true
@@ -82,7 +82,7 @@
   "sunshine-theater-comedy": {
     "collection": "venue",
     "venue": "sunshine-theater",
-    "documentTitle": "Comedy sample results at Sunshine Theater \u00b7 Burque",
+    "documentTitle": "Comedy results at Sunshine Theater \u00b7 Burque",
     "layout": "workspace",
     "source": "sunshine-theater.html",
     "sampleFilter": {
@@ -93,7 +93,7 @@
   "sunshine-theater-workshop": {
     "collection": "venue",
     "venue": "sunshine-theater",
-    "documentTitle": "Workshop sample results at Sunshine Theater \u00b7 Burque",
+    "documentTitle": "Workshop results at Sunshine Theater \u00b7 Burque",
     "layout": "workspace",
     "source": "sunshine-theater.html",
     "sampleFilter": {
@@ -104,7 +104,7 @@
   "sunshine-theater-empty": {
     "collection": "venue",
     "venue": "sunshine-theater",
-    "documentTitle": "Empty sample results at Sunshine Theater \u00b7 Burque",
+    "documentTitle": "Empty results at Sunshine Theater \u00b7 Burque",
     "layout": "workspace",
     "source": "sunshine-theater.html",
     "sampleFilter": {
