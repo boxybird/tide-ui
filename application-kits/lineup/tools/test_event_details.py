@@ -26,7 +26,7 @@ class DetailContracts(unittest.TestCase):
     def test_one_document_recipe_generates_all_original_routes(self):
         pages=self.app.pages()
         self.assertEqual(set(pages), {slug+'.html' for slug in self.app.by_id} | {slug+'.html' for slug in self.app.routes})
-        self.assertEqual(len(pages), 67)
+        self.assertEqual(len(pages), 68)
         self.assertEqual({p.name for p in (ROOT/'src/pages').glob('*.html')}, {page['source'] for page in self.app.routes.values() if page.get('source')})
 
     def test_each_event_has_one_page_title_and_stable_anchor_hierarchy(self):

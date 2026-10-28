@@ -1,5 +1,28 @@
 # Lineup application-kit changelog
 
+## 2.2.1 · 2026-10-28
+
+- Added the native mobile Menu below a content-based 34rem breakpoint. Menu/Filters share row two; brand/Saved retain row one. Wider screens keep the accepted inline navigation.
+- Reused existing Tide navigation buttons, Icon and Panel recipes. Private CSS handles mounting, anchors and responsive availability; the public Panel stylesheet is copied unchanged into generated application dependencies. No Tide edit, browser JavaScript or custom keyboard/history engine is introduced.
+- Authored link items once for inline and popup presentations, exposing only the appropriate Main navigation. Preserved the original filter controls and all 68 routes. See [mobile navigation](MOBILE-NAVIGATION.md) for native dismissal, resizing, fallback and consumer migration.
+- Verified all ten phone theme/modes, twenty exact desktop header comparisons, small-phone/breakpoint/tablet cases and native navigation/dismissal. Build/check pass with all 124 tests; Chromium coverage and remaining browser limits are recorded.
+
+## 2.2.0 · 2026-10-28
+
+- Replaced the route-dependent secondary destination with consistent Find Events, Venues and Add an Event links. Saved remains separate; Help is available from the shared footer. Current-page states still identify only an exact native destination.
+- Added the Venues directory using existing Content page and unframed Venue card recipes. Sunshine Theater links to its profile, schedule and information. No new venue facts, imagery, service behavior or browser dependency is introduced.
+- Retained the existing header wrapping and the 2.1.9 filter-panel changes. Tide is unchanged. The application now emits 68 routes per mode, 748 total, with all original destinations preserved.
+- Migration: replace retired `SECONDARY_*` header values with `VENUES_CURRENT` / `SUBMIT_CURRENT`, include the new content route, and remove obsolete `secondaryNav` metadata. See [navigation and directory](VENUES-NAVIGATION.md).
+- Verified forty themed phone/desktop cases, six small/tablet cases and native directory/navigation journeys. All 122 repository checks pass. Current phone wrapping is explicitly retained for the upcoming responsiveness review, with no overlap or hidden destinations.
+
+## 2.1.9 · 2026-10-28
+
+- Capitalized the visible drawer and desktop utility headings as Search & Filters; the wording is application-owned.
+- Added a private content wrapper with Tide's named 24px top clearance below 75rem. Kept the flush public rail body/footer and desktop search spacing unchanged.
+- Adopted the existing compact Category fieldset/choice composition from Tide's filter-disclosure specimen. Removed the extra Stack gap between 44px choice targets; date-field Stack spacing remains.
+- Preserved the original controls, native popover/reset behavior and zero browser JavaScript. Tide 1.12.0 and shared sources remain unchanged. See the [filter-panel spacing contract](FILTER-PANEL-SPACING.md).
+- Verified all ten theme/modes at phone, tablet and desktop widths, boundary/short-screen cases, venue scope and native interactions. Desktop search rectangles are identical to the baseline. Build/check pass, including all 121 HTTP/Tide/application checks; browser limits remain documented.
+
 ## Consumer integration documentation · 2026-10-28
 
 - Added a framework-neutral [consumer integration guide](CONSUMER-INTEGRATION.md) covering the existing document/form/region composition, native fallback, optional navigation, collection loading, focus/history, failures, motion and upgrade responsibilities.

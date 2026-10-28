@@ -28,6 +28,9 @@
     gap: var(--tide-space-4) var(--tide-space-6);
   }
   .tide-app__header-primary { min-inline-size: 0; }
+  .tide-app__header-mobile, .tide-app__menu-host { display: none; }
+  .tide-app__menu-links { display: grid; gap: var(--tide-space-2); list-style: none; }
+  .tide-app__menu-links > li { display: grid; justify-items: start; }
   .tide-app__header-utility { inline-size: auto; justify-self: end; }
   .tide-app__workspace { max-inline-size: var(--tide-app-reading-width); margin-inline: auto; }
   .tide-app__browse-heading { display: none; min-inline-size: 0; }
@@ -130,6 +133,33 @@
     .tide-app--event .tide-app__results { display: block; }
     .tide-app--event > .tide-app__site-footer { display: block; }
     .tide-app__detail-skip { display: block; }
+  }
+
+  /* The full link row needs about 33rem with the original Filters control.
+     Keep a small content allowance and retain native links as the fallback. */
+  @supports selector(:popover-open) {
+    @media (width < 34rem) {
+      .tide-app__header-inline { display: none; }
+      .tide-app__header-mobile { display: block; inline-size: max-content; anchor-name: --tide-app-menu-button; }
+      /* Mount the unchanged Panel only while its native popover is open. */
+      .tide-app__menu-host:has(> :popover-open) { display: contents; }
+      .tide-app__menu {
+        position: fixed;
+        inline-size: max-content;
+        max-inline-size: calc(100dvw - var(--tide-space-12));
+        max-block-size: calc(100dvh - var(--tide-space-12));
+        overflow-y: auto;
+      }
+      @supports (top: anchor(bottom)) {
+        .tide-app__menu {
+          inset: auto;
+          inset-block-start: anchor(--tide-app-menu-button bottom);
+          inset-inline-start: anchor(--tide-app-menu-button left);
+          margin: var(--tide-space-2) 0 0;
+        }
+      }
+      html:has(#lineup-menu:popover-open) { overflow: hidden; scrollbar-gutter: stable; }
+    }
   }
 
   @media (width >= 74rem) {

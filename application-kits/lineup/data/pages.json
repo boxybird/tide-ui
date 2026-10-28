@@ -25,21 +25,23 @@
       "empty": "sunshine-theater-empty"
     }
   },
+  "venues": {
+    "documentTitle": "Venues · Burque",
+    "layout": "content",
+    "source": "venues.html"
+  },
   "saved": {
     "collection": "saved",
     "selected": "ink-after-dark",
-    "secondaryNav": "submit",
     "documentTitle": "Saved events \u00b7 Burque",
     "layout": "workspace"
   },
   "help": {
-    "secondaryNav": "submit",
     "documentTitle": "Help & guidance \u00b7 Burque",
     "layout": "content",
     "source": "help.html"
   },
   "submit": {
-    "secondaryNav": "submit",
     "documentTitle": "Add an event \u00b7 Burque",
     "layout": "content",
     "source": "submit.html"

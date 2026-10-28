@@ -1,16 +1,20 @@
-# Header navigation · Lineup 2.1.7
+# Header navigation · Lineup 2.2.1
 
 Lineup composes Tide 1.12.0's Site header shell and reviewed navigation actions inside a private CSS Grid. The opt-in `extensions/navigation.css` remains loaded after the core stylesheet for navigation action states. Tide sources, recipes, tokens, registry and documentation site are unchanged.
 
+Below 34rem, the [native Menu popover](MOBILE-NAVIGATION.md) replaces the inline presentation. Brand/Saved remain in row one and Menu/Filters occupy row two. Above that breakpoint, the existing inline header geometry is preserved. Shared link items are authored once, with one exposed Main navigation at a time; popup appearance comes from Tide's unchanged Panel extension.
+
 ## Composition
 
-`header.html` owns the private `tide-app__header-layout` wrapper. Its flexible leading track leaves Burque at the start while Find events, the route-appropriate secondary destination and Saved sit on the right. The 24px external column gap separates primary navigation from Saved; the existing primary link list keeps Tide's 8px action gap. The original Filters control follows the utility on split tablet, and remains hidden with the permanent desktop filters.
+`header.html` owns the private `tide-app__header-layout` wrapper. Its flexible leading track leaves Burque at the start while Find Events, Venues and Add an Event sit beside the separate Saved utility on the right. The 24px external column gap separates primary navigation from Saved; the link list keeps Tide's 8px action gap. The original Filters control follows the utility on split tablet, and remains hidden with the permanent desktop filters. The [directory contract](VENUES-NAVIGATION.md) records native destinations and migration.
 
-Below 60rem, the grid places Burque and Saved on row one. Primary links occupy the start of row two and Filters aligns to its far right and top edge. Links wrap within their own cell, including text wrapping at the smallest widths. Header height grows in normal flow; no fixed phone height, absolute positioning, cloned controls, script or positive tabindex is used. Routes without filters give primary navigation the full second row. Native event documents retain their established header omission below 60rem.
+Below 60rem, the grid places Burque and Saved on row one. The primary presentation occupies the start of row two and Filters aligns to its far right. From 34rem the links remain inline and can wrap naturally; below 34rem the Menu trigger opens ordinary navigation links in a native popover. Header height grows in normal flow; no fixed phone height, layout script or positive tabindex is used. Routes without filters give the primary presentation the full second row. Native event documents retain their established header omission below 60rem.
 
-The private wrapper owns its tracks, gap and placement. It does not alias or override the interior of Tide's centered header modifier; that modifier is no longer consumed. The shared header shell retains its padding and border. Buttons retain canonical type, padding, colors, radius, target sizes, hover, held, current-page and focus appearance. Saved keeps the source Bookmark icon. Only the actual index, venue, submission or Saved destination receives `aria-current="page"`.
+The private wrapper owns its tracks, gap and placement. It does not alias or override the interior of Tide's centered header modifier; that modifier is no longer consumed. The shared shell retains its padding and border. Buttons retain canonical type, padding, colors, radius, target sizes, hover, held, current-page and focus appearance. Saved keeps the source Bookmark icon. Only the actual index, directory, submission or Saved destination receives `aria-current="page"`. A venue profile does not mark the directory as the current page.
 
-## Layout and behavior boundary
+## Historical 2.1.7 layout and verification
+
+The following baseline predates the third primary item and new directory. Current responsive behavior retains the same wrapping/grid rules; the expanded menu is the starting point for a separate responsiveness review. The new directory and shared footer Help link are recorded in the current [directory contract](VENUES-NAVIGATION.md).
 
 Desktop retains its 93px single row, and split tablet retains the existing 48px Filters allowance and 97px header. All main content and non-header templates are unchanged from `86636a9`; all four non-header application stylesheets and data remain unchanged. The two left panes, summary, feed, right document, footer, native scrollbar gutters and at least 24px bottom clearance retain their geometry from 60rem upwards. Narrow content moves only with the header's normal-flow height.
 

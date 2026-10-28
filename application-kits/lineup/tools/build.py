@@ -34,6 +34,9 @@ def build(check=False):
     assert set(css_sources) == set((ROOT/'src/styles').glob('*.css')), 'Register every app stylesheet in consumer-manifest.json, in cascade order.'
     css = '/* App composition only; generated from src/styles/. */\n' + '\n'.join(source.read_text(encoding='utf-8') for source in css_sources)
     expected[OUT/'runtime/css/app.css'] = css.encode('utf-8')
+    # Consume the existing public extension byte-for-byte. Its source remains in
+    # Tide; only this application's generated dependency copy is emitted here.
+    expected[OUT/'runtime/css/tide-panel.css'] = (PROJECT/'packages/tide/extensions/panel.css').read_bytes()
     templates = AppTemplates()
     rendered_pages = templates.pages()
     destinations = [(OUT / 'app', 'bumble', 'dark')] + [(OUT / 'themes' / (t+'-'+m), t, m) for t,m in MODES]
@@ -43,6 +46,7 @@ def build(check=False):
             text = re.sub(r'data-mode="[^"]+"', 'data-mode="'+mode+'"', text, count=1)
             text = text.replace('{{KIT_CSS}}', relative(KIT/'css/tide.css', directory))
             text = text.replace('{{KIT_NAV_CSS}}', relative(KIT/'extensions/navigation.css', directory))
+            text = text.replace('{{KIT_PANEL_CSS}}', relative(OUT/'runtime/css/tide-panel.css', directory))
             text = text.replace('{{APP_CSS}}', relative(OUT / 'runtime/css/app.css', directory))
             text = text.replace('{{KIT_ASSETS}}', relative(KIT/'assets', directory))
             text = re.sub(r'((?:href|src)=")(js/[^"<>]+|assets/[^"<>]+)(")',

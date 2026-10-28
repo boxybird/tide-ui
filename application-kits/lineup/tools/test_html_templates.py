@@ -62,6 +62,11 @@ class TemplateContracts(unittest.TestCase):
                 self.assertNotIn('navigation-review.css',page)
                 self.assertNotIn('tide-doc-navigation',page)
 
+    def test_every_document_loads_the_existing_panel_extension_for_native_menu(self):
+        for name,page in self.app.pages().items():
+            with self.subTest(name=name):
+                self.assertIn('<link rel="stylesheet" href="{{KIT_PANEL_CSS}}">',page)
+
     def test_venue_and_saved_collections_reuse_canonical_cards(self):
         venue = Elements(self.app.page(ROOT/'src/pages/sunshine-theater.html'))
         self.assertEqual(len(venue.cards), 6)
@@ -130,8 +135,8 @@ class TemplateContracts(unittest.TestCase):
             with self.subTest(route=route):
                 header = self.app.partial('header', self.app.context(route))
                 links = Elements(header).navigation
-                secondary = 'submit.html' if route in ('saved','help','submit') else 'sunshine-theater.html'
-                self.assertEqual([link['href'] for link in links], ['index.html',secondary,'saved.html'])
+                primary=['index.html','venues.html','submit.html']
+                self.assertEqual([link['href'] for link in links], primary+primary+['saved.html'])
                 self.assertIn('<ul class="tide-site-header__links tide-site-header__links--actions">', header)
                 self.assertIn('tide-app__header-layout',header)
                 self.assertNotIn('tide-site-header--centered',header)
@@ -140,6 +145,22 @@ class TemplateContracts(unittest.TestCase):
                 self.assertEqual([link['href'] for link in links if link.get('aria-current')=='page'],
                                  [link['href'] for link in links if link['href']==route+'.html'])
                 self.assertFalse(any('hidden' in link or 'role' in link or 'target' in link for link in links))
+
+    def test_mobile_menu_is_native_navigation_with_unique_popover_target(self):
+        from presentation_contract import Tree
+        for route in ('index','venues','saved','help','submit'):
+            nodes=Tree(self.app.page(route)).nodes
+            triggers=[n for n in nodes if n['attrs'].get('popovertarget')=='lineup-menu']
+            self.assertEqual(len(triggers),1)
+            self.assertEqual(triggers[0]['tag'],'button')
+            self.assertEqual(triggers[0]['attrs']['type'],'button')
+            panels=[n for n in nodes if n['attrs'].get('id')=='lineup-menu']
+            self.assertEqual(len(panels),1)
+            self.assertEqual(panels[0]['attrs']['popover'],'auto')
+            self.assertEqual(panels[0]['tag'],'nav')
+            self.assertIn('tide-panel',panels[0]['classes'])
+            self.assertFalse(any(n['attrs'].get('role') in ('menu','menuitem') for n in nodes))
+            self.assertNotIn('aria-expanded',triggers[0]['attrs'])
 
 
 if __name__=='__main__':

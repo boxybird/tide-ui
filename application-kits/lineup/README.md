@@ -1,4 +1,8 @@
-# Lineup application kit · 2.1.8
+# Lineup application kit · 2.2.1
+
+The primary menu consistently offers **Find Events**, **Venues** and **Add an Event**, with Saved separate and Help in the site footer. Below 34rem, a native Menu popover keeps the phone header to two rows; tablet/desktop keep inline navigation. The Venues directory links to Sunshine Theater using existing Tide recipes. See [mobile navigation](docs/MOBILE-NAVIGATION.md) and the [directory contract](docs/VENUES-NAVIGATION.md).
+
+The filter headings now read **Search & Filters**. The mobile/tablet drawer has 24px of top content clearance, while desktop search placement is preserved. Category choices adopt Tide's compact filter-disclosure grouping with 44px rows and no added Stack gap. Tide remains unchanged; see the [filter-panel spacing contract](docs/FILTER-PANEL-SPACING.md).
 
 The event photo's top-left return link is available below 60rem, where an event occupies the full reading view. It hides when the event list is visible beside the detail. This is application CSS only; Tide and the remaining event controls retain their appearance and placement.
 
@@ -6,7 +10,7 @@ The primary navigation now sits beside the separate Saved utility on the right, 
 
 **Lineup uses the selected compact utility headers.** Version 2.1.5 aligns Search & filters with the result count and removes the Coming up intro, tagline and repeated The lineup label. Both rows consume Tide's new canonical utility variant. The [implementation contract](docs/COMPACT-HEADERS.md) and [design QA](design-qa.md) record composition and verification. The user reviewed and accepted the Tide and Lineup changes on 2026-10-27. The [handoff boundary](docs/HANDOFF.md) still applies; no browser JavaScript or service behavior is introduced.
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.1.8**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus the four global result references and three scoped venue empty views: 67 documents in the default app and each of ten theme/mode combinations.
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.2.1**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus four global result references, three scoped venue empty views and the Venues directory: 68 documents in the default app and each of ten theme/mode combinations.
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 
@@ -24,6 +28,6 @@ Saved uses two populated desktop columns and reserves separate intro, canonical 
 
 Run `npm run build`, `npm run check`, `npm run dev` from the root. Open `/events/app/index.html`; `/events/index.html` links to all modes. Canonical sources moved from `examples/events/` to `application-kits/lineup/`; generated `build/events/` output and native preview URLs remain unchanged. Node/Python are development tools only. See [zero-browser-JavaScript policy](../../docs/NO-BROWSER-JAVASCRIPT.md).
 
-Canonical sources are `src/templates/`, three unique fragments in `src/pages/`, the five `src/styles/` modules and structured `data/` fixtures. `data/events.json` owns events, `data/pages.json` owns thirteen non-event routes and typed authored result states, and `data/submission-fields.json` owns eleven submission fields. The renderer escapes text and rejects unknown/missing/cyclic includes. Never edit generated copies.
+Canonical sources are `src/templates/`, four unique fragments in `src/pages/`, the five `src/styles/` modules and structured `data/` fixtures. `data/events.json` owns events, `data/pages.json` owns fourteen non-event routes and typed authored result states, and `data/submission-fields.json` owns eleven submission fields. The renderer escapes text and rejects unknown/missing/cyclic includes. Never edit generated copies.
 
 See [runtime boundary](docs/RUNTIME.md), [desktop composition](docs/DESKTOP-LAYOUT.md), [template ownership](docs/TEMPLATES.md), [document composition](docs/PAGES.md) and [performance observations](docs/PERFORMANCE.md). Browser evidence remains Chromium; other browser/device/assistive-technology checks are deferred.

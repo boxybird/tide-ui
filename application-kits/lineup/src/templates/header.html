@@ -1,6 +1,12 @@
 <div class="tide-app__header"><header class="tide-site-header"><div class="tide-app__header-layout">
       <div class="tide-app__header-brand"><a class="tide-brand" href="index.html" aria-label="Burque home">BURQUE<span aria-hidden="true">.</span></a></div>
-      <nav class="tide-app__header-primary" aria-label="Main"><ul class="tide-site-header__links tide-site-header__links--actions"><li><a class="tide-button tide-button--quiet tide-button--compact tide-button--navigation" href="index.html"{{FIND_CURRENT}}>Find events</a></li><li><a class="tide-button tide-button--quiet tide-button--compact tide-button--navigation" href="{{SECONDARY_HREF}}"{{SECONDARY_CURRENT}}>{{SECONDARY_LABEL}}</a></li></ul></nav>
+      <div class="tide-app__header-primary">
+        <nav class="tide-app__header-inline" aria-label="Main"><ul class="tide-site-header__links tide-site-header__links--actions">{{> navigation-items}}</ul></nav>
+        <div class="tide-app__header-mobile">
+          <button class="tide-button tide-button--quiet tide-button--compact tide-button--navigation" id="lineup-menu-trigger" type="button" popovertarget="lineup-menu">Menu{{HEADER_MENU_ICON}}</button>
+          <div class="tide-app__menu-host"><nav class="tide-panel tide-app__menu" id="lineup-menu" popover="auto" aria-label="Main"><ul class="tide-app__menu-links">{{> navigation-items}}</ul></nav></div>
+        </div>
+      </div>
       <nav class="tide-app__header-utility" aria-label="Saved"><a class="tide-button tide-button--secondary tide-button--compact tide-button--navigation" href="saved.html"{{SAVED_CURRENT}}>{{HEADER_SAVED_ICON}}Saved</a></nav>
       {{FILTER_TRIGGER}}
     </div></header></div>

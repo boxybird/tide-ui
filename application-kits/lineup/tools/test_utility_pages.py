@@ -21,7 +21,7 @@ class UtilityContracts(unittest.TestCase):
         cls.app=AppTemplates()
 
     def test_documents_are_script_free_and_keep_native_route_metadata(self):
-        for route in ['index', 'search', 'sunshine-theater', 'saved', 'help', 'submit', 'ink-after-dark']:
+        for route in ['index', 'search', 'sunshine-theater', 'venues', 'saved', 'help', 'submit', 'ink-after-dark']:
             with self.subTest(route=route):
                 doc=Document(self.app.page(route))
                 scoped=route in ('index', 'search', 'sunshine-theater', 'ink-after-dark')
@@ -31,17 +31,17 @@ class UtilityContracts(unittest.TestCase):
                 self.assertEqual(body.get('data-venue-scope'), 'sunshine-theater' if route=='sunshine-theater' else None)
 
     def test_saved_and_content_pages_do_not_gain_filter_controls(self):
-        for route in ('saved', 'help', 'submit'):
+        for route in ('saved', 'help', 'submit', 'venues'):
             with self.subTest(route=route):
                 nodes=Document(self.app.page(route)).nodes
                 self.assertFalse(any(tag=='dialog' or attrs.get('id')=='event-search-form' for tag,attrs in nodes))
                 footer_count=sum(attrs.get('class')=='tide-app__site-footer' for tag,attrs in nodes)
                 self.assertEqual(footer_count, 0 if route=='help' else 1)
-        self.assertEqual({p.name for p in (ROOT/'src/pages').glob('*.html')}, {'sunshine-theater.html', 'help.html', 'submit.html'})
+        self.assertEqual({p.name for p in (ROOT/'src/pages').glob('*.html')}, {'sunshine-theater.html', 'help.html', 'submit.html', 'venues.html'})
 
     def test_skip_link_targets_keep_native_ids_and_route_labels(self):
         cases={
-            'help':['#main-content'], 'submit':['#main-content'],
+            'help':['#main-content'], 'submit':['#main-content'], 'venues':['#main-content'],
             'sunshine-theater':['#results', '#venue-information'],
             'sunshine-theater-comedy':['#results', '#venue-information'],
             'index':['#results', '#event-detail'], 'saved':['#results', '#event-detail'],
@@ -115,6 +115,17 @@ class UtilityContracts(unittest.TestCase):
             self.assertNotIn('<script>example',source)
         finally:
             self.app.routes['help']['documentTitle']=title
+
+    def test_directory_links_to_complete_venue_and_information_destinations(self):
+        directory=Document(self.app.page('venues'))
+        self.assertEqual(sum(tag=='h1' for tag,attrs in directory.nodes),1)
+        self.assertTrue(any('tide-venue-card' in attrs.get('class','').split() for tag,attrs in directory.nodes))
+        links={attrs['href'] for tag,attrs in directory.nodes if tag=='a'}
+        for destination in ('sunshine-theater.html','sunshine-theater.html#results','sunshine-theater.html#venue-information','help.html'):
+            self.assertIn(destination,links)
+        venue_ids={attrs['id'] for tag,attrs in Document(self.app.page('sunshine-theater')).nodes if attrs.get('id')}
+        self.assertTrue({'results','venue-information'}<=venue_ids)
+        self.assertFalse(any(attrs.get('id')=='event-search-form' for tag,attrs in directory.nodes))
 
 
 if __name__=='__main__':

@@ -36,6 +36,9 @@
     .tide-app__filter-rail[popover]:not(:popover-open) { display: none; }
     .tide-app__filter-rail:popover-open { display: grid; transform: translateX(0); }
     .tide-app__filter-body { overflow-y: auto; }
+    /* The flush rail recipe also serves the drawer. A private content wrapper
+       restores its top clearance without changing Tide's body or desktop rail. */
+    .tide-app__filter-content { padding-block-start: var(--tide-space-6); }
     /* Private child wrappers supply drawer clearance around canonical slots.
        The rail footer remains a direct panel child with Tide's own padding/gap. */
     .tide-app__filter-footer-slot { padding-inline-start: var(--tide-layout-inset); }

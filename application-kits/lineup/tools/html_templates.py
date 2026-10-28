@@ -103,16 +103,14 @@ class AppTemplates:
             page = self.routes[route]
         else:
             raise ValueError('Unknown app route: ' + route)
-        secondary = page.get('secondaryNav', 'venue')
-        secondary_route = 'sunshine-theater' if secondary=='venue' else 'submit'
         values = {
             'FIND_CURRENT':attribute('aria-current', 'page') if route=='index' else Html(''),
-            'SECONDARY_CURRENT':attribute('aria-current', 'page') if route==secondary_route else Html(''),
+            'VENUES_CURRENT':attribute('aria-current', 'page') if route=='venues' else Html(''),
+            'SUBMIT_CURRENT':attribute('aria-current', 'page') if route=='submit' else Html(''),
             'SAVED_CURRENT':attribute('aria-current', 'page') if route=='saved' else Html(''),
-            'SECONDARY_HREF':secondary_route+'.html',
-            'SECONDARY_LABEL':'Sunshine Theater' if secondary=='venue' else 'Add an event',
             'HEADER_SAVED_ICON':self.partial('detail-icon-saved', {'ICON_EXTRA':Html('')}),
-            **{name:Html('{{'+name+'}}') for name in ('KIT_CSS','KIT_NAV_CSS','APP_CSS','KIT_ASSETS')},
+            'HEADER_MENU_ICON':self.partial('detail-icon-chevron-down', {'ICON_EXTRA':Html('')}),
+            **{name:Html('{{'+name+'}}') for name in ('KIT_CSS','KIT_NAV_CSS','KIT_PANEL_CSS','APP_CSS','KIT_ASSETS')},
         }
         collection = page.get('collection')
         values['FILTER_TRIGGER'] = self.partial('filter-trigger', {}) if collection and collection!='saved' else Html('')

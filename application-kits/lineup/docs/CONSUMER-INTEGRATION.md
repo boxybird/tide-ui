@@ -1,5 +1,11 @@
 # Consumer integration · Lineup 2.1.8
 
+Lineup 2.1.9 retains the integration points below. Its private filter-content wrapper and compact Category grouping are documented in [filter-panel spacing](FILTER-PANEL-SPACING.md); field names, native routes and runtime boundaries are unchanged. The external consumer experiment described here consumed 2.1.8.
+
+Lineup 2.2.0 adds `venues.html` and a consistent primary menu. Template consumers should adopt the new Venues/submission current-page values and remove the retired route-dependent secondary navigation. The [navigation/directory contract](VENUES-NAVIGATION.md) records that migration. Existing event/filter integration points remain unchanged.
+
+Lineup 2.2.1 adds the [native mobile Menu](MOBILE-NAVIGATION.md). A shared link-item partial renders inline and popup presentations; CSS exposes only the relevant one. Adapters should scope navigation work to the active presentation rather than assuming one DOM copy of every header link. Template consumers also adopt `HEADER_MENU_ICON`, `KIT_PANEL_CSS` and the registered `navigation-items.html` partial; the builder supplies the unchanged public Panel extension as a generated dependency. No browser runtime is added.
+
 Lineup supplies complete HTML documents, native destinations and controls, responsive composition, and authored reference states. A consuming website can retain full-document navigation or add partial navigation and its own client runtime. The kit does not require a routing framework or a multi-page-only interaction model.
 
 This guide documents the current composition and the responsibilities of an independent consumer. It adds no runtime dependency, replacement protocol, public selector API or Tide component. Lineup's distribution remains script-free. Consumer adapters, servers, experiments and their dependencies belong outside the kit.

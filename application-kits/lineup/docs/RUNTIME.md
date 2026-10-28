@@ -5,6 +5,7 @@ There is no browser JavaScript. `behaviorHome` is empty; `document.html` loads s
 ## Native behavior
 
 - Links and fragment URLs navigate normally, including modified clicks and browser Back.
+- Below 34rem a native auto popover supplies the mobile Menu, with CSS anchor placement and unchanged Tide Panel/navigation appearance. Tab, Escape, outside-click dismissal and invoker focus return remain native. The inline fallback stays available when popover selectors are unsupported. See [mobile navigation](MOBILE-NAVIGATION.md).
 - Below 75rem a native `popover="auto"` panel and `popovertarget` buttons provide the left filter drawer, explicit Close, Escape/outside-click dismissal and focus return. CSS supplies sliding motion, reduced motion and responsive placement; the same controls form the permanent desktop column. This is a non-modal popover, with no authored focus trap, draft rollback or control relocation. Native details/summary still provides date/category disclosure. See the [drawer contract](FILTER-DRAWER.md).
 - Native form reset restores source defaults. Required/type constraints use browser validation. From/Through controls do not implement relational date validation.
 - The file chooser provides its native selection/replacement UI. Content and size validation are not supplied by the UI kit.

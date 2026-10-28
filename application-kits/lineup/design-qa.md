@@ -1,6 +1,6 @@
 # Lineup design QA · compact headers and header navigation
 
-The earlier sections retain the accepted workspace and header-navigation records. The current 2.1.8 event-return availability verification is recorded last.
+The earlier sections retain the workspace, navigation, event-return and filter-panel records. The current 2.2.0 real-menu/directory verification is recorded last.
 
 ## Findings
 
@@ -114,3 +114,21 @@ Ignored evidence is in `build/qa/lineup-event-back/`: `before.json`, `after.json
 Root build/check passes: 1,041 HTML documents, 56,891 local references, 615 Markdown references and all 121 tests (7 HTTP, 72 Tide, 42 application), including strict ownership, zero browser JavaScript and unchanged performance budgets. All canonical edits are within Lineup; `main` is the only branch.
 
 final result: passed
+
+## Filter-panel spacing · Lineup 2.1.9 / Tide unchanged
+
+The visible headings read Search & Filters. A private content wrapper adds Tide's named 24px top clearance only in the mobile/tablet drawer. Category adopts the compact plain-fieldset/choice composition from Tide's existing filter-disclosure specimen: 44px choice rows with no extra Stack gap. Date fields retain Stack, and no shared component internals are overridden.
+
+The [spacing contract](docs/FILTER-PANEL-SPACING.md) records the 30 all-theme phone/tablet/desktop spacing cases, four boundary/short-screen cases, venue scope, native Reset/dismissal/focus and open-drawer resizing. Desktop search form/label/input rectangles at 1440×900 match the settled baseline exactly. All 121 repository checks pass (7 HTTP, 72 Tide, 42 application). Expanded evidence remains ignored under `build/qa/lineup-filter-panel/`; current browser coverage is Chromium on Windows, with the limits recorded in the contract.
+
+## Real menu and venue directory · Lineup 2.2.0 / Tide unchanged
+
+The primary menu consistently offers Find Events, Venues and Add an Event, with Saved separate and Help in the shared footer. The native directory adopts existing Content page and Venue card recipes and links to Sunshine Theater's profile, schedule and information. This retains the current wrapping as the baseline for the next responsiveness review; phone wrapping is not presented as a finished redesign.
+
+The [navigation/directory contract](docs/VENUES-NAVIGATION.md) records forty all-theme phone/desktop cases, six small/tablet cases, native journeys, filter preservation, consumer migration and browser limits. All 122 repository checks pass (7 HTTP, 72 Tide, 43 application). The four filter source files remain byte-identical to the 2.1.9 working checkpoint; protected Tide/reference-site/shared-tooling sources remain unchanged. Raw measurements and screenshots stay ignored under `build/qa/lineup-real-navigation/`.
+
+## Native mobile Menu · Lineup 2.2.1 / Tide unchanged
+
+Below 34rem, a native Menu popover replaces the inline primary presentation. Brand/Saved retain row one; Menu/Filters share row two. A registered partial authors the real links once for both presentations. Private CSS controls responsive mounting and anchored placement; existing Tide navigation buttons, Icon and unchanged Panel provide appearance. All 68 routes and the original filter control set remain.
+
+The [mobile navigation contract](docs/MOBILE-NAVIGATION.md) records ten phone theme/mode cases, twenty exact desktop header comparisons, 320×500 and breakpoint/tablet checks, keyboard/outside dismissal, native link journeys, Filters interaction and resizing. All 124 repository checks pass (7 HTTP, 72 Tide, 45 application). Protected sources and the four filter-panel files are unchanged. Expanded evidence stays ignored under `build/qa/lineup-mobile-menu/`; browser and fallback testing limits are explicit in the contract.
