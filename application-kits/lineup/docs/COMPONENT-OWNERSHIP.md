@@ -1,13 +1,13 @@
-# Native component ownership · Lineup 2.1.5
+# Native component ownership · Lineup 2.1.6
 
-The Lineup application kit consumes Tide 1.11.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
+The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
 | Responsibility | Canonical home |
 | --- | --- |
 | Event cards, hero/details, fields, notices, badges, prose, native controls and filter-panel internals | `packages/tide/` component recipes and CSS |
 | 20/35/45 centered desktop layout, bounded left panes and natural right document | `src/styles/desktop.css`, static `tide-app--columns` body modifier and authored workspace templates |
 | Saved desktop tracks | `desktop.css`: results in column 1, detail in column 2; scoped browse overrides keep their three-column placement |
-| Navigation and skip-link presentation | Tide's `tide-site-header`, `__links`, `__link` and `tide-skip-link`; Lineup authors destinations, list semantics, current-page context and focusable IDs |
+| Navigation and skip-link presentation | Tide's optional centered Site header, compact navigation actions and `tide-skip-link`; Lineup authors destinations, list semantics, current-page context and focusable IDs |
 | Header geometry and optional preview skip | Private header width/insets/sticky placement and `tide-app__detail-skip` visibility from 60rem; no private navigation/helper appearance |
 | Filter footer and status internals | Tide owns rail padding/gap, flex/wrapping status row, count alignment and Reset text flow; private child wrappers supply narrow drawer clearance without aliasing public slots |
 | Split-tablet header allowance | `base.css` uses the canonical 48px control input only where Filters is present between 60rem and 75rem; navigation-only/desktop rows retain the 44px input |

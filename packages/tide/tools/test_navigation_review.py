@@ -1,4 +1,4 @@
-"""The review must reuse action geometry and stay outside the released kit."""
+"""The opt-in navigation recipe reuses action geometry and keeps defaults intact."""
 import importlib.util
 import json
 from pathlib import Path
@@ -21,6 +21,7 @@ class NavigationReviewContracts(unittest.TestCase):
         cls.site=importlib.util.module_from_spec(spec);spec.loader.exec_module(cls.site)
         cls.rendered=cls.site.outputs(*load_themes(ROOT/'tokens/themes.json'))
         cls.proposal=(PROJECT/'site/css/navigation-review.css').read_text(encoding='utf-8')
+        cls.navigation=(ROOT/'extensions/navigation.css').read_text(encoding='utf-8')
 
     def test_proposal_styles_are_loaded_only_by_ten_review_documents(self):
         pages=[p for p,html in self.rendered.items() if 'href="../../css/navigation-review.css"' in html]
@@ -52,25 +53,42 @@ class NavigationReviewContracts(unittest.TestCase):
 
     def test_proposed_current_state_does_not_override_geometry_or_focus(self):
         permitted={'box-shadow','border-color'}
-        for selector,decl,context in rules(self.proposal):
-            if not re.search(r'\.tide-doc-navigation__link(?![\w-])',selector):continue
+        for selector,decl,context in rules(self.navigation):
+            if not re.search(r'\.tide-button--navigation(?![\w-])',selector):continue
             self.assertTrue(all(k.startswith('--tide-action-') or k in permitted for k in decl),selector)
-        self.assertNotIn(':focus',self.proposal)
-        self.assertNotIn('aria-pressed',self.proposal)
-        self.assertNotIn('data-review-state',self.proposal)
-        self.assertIn("[href]:not([aria-disabled='true'])",self.proposal)
+        self.assertNotIn(':focus',self.navigation)
+        self.assertNotIn('aria-pressed',self.navigation)
+        self.assertNotIn('data-review-state',self.navigation)
+        self.assertIn("[href]:not([aria-disabled='true'])",self.navigation)
+        self.assertIn('@layer tide.components {',self.navigation)
+        self.assertNotIn('tide-button--navigation',self.proposal)
 
     def test_selected_colors_and_source_icon_stay_in_the_existing_system(self):
         _,themes,_=load_themes(ROOT/'tokens/themes.json')
         for modes in themes.values():
             for roles in modes.values():
                 self.assertGreaterEqual(contrast(roles['selected-text'],roles['selected-surface']),4.5)
-        self.assertIn('var(--tide-color-selected-surface)',self.proposal)
-        self.assertIn('var(--tide-color-selected-text)',self.proposal)
+        self.assertIn('var(--tide-color-selected-surface)',self.navigation)
+        self.assertIn('var(--tide-color-selected-text)',self.navigation)
         self.assertIn("assets/icons/BookmarkIcon.svg",(PROJECT/'site/tools/build.py').read_text(encoding='utf-8'))
         manifest=json.loads((PROJECT/'site/component-manifest.json').read_text(encoding='utf-8'))
         self.assertIn('css/navigation-review.css',manifest['reviewStyles'])
         self.assertIn('tide-doc-navigation',manifest['privateBlocks'])
+
+    def test_navigation_variants_have_canonical_owners_and_remain_opt_in(self):
+        manifest=json.loads((ROOT/'component-manifest.json').read_text(encoding='utf-8'))
+        for block,variant in [('tide-button','navigation'),('tide-site-header','centered')]:
+            entry=next(e for e in manifest['components'] if e['block']==block)
+            self.assertIn(variant,entry['variants'])
+            self.assertIn('extensions/navigation.css',entry['supportingSources'])
+        for p,html in self.rendered.items():
+            if p.name=='navigation-review.html':
+                self.assertIn('href="../../extensions/navigation.css"',html)
+                self.assertIn('tide-site-header__leading',html)
+                self.assertIn('tide-site-header__primary',html)
+                self.assertIn('tide-site-header__utility',html)
+        for source in (ROOT/'css').glob('*.css'):
+            self.assertNotIn('tide-site-header--centered',source.read_text(encoding='utf-8'))
 
 
 if __name__=='__main__':unittest.main()

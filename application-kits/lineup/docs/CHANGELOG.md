@@ -1,5 +1,10 @@
 # Lineup application-kit changelog
 
+## 2.1.6 · 2026-10-27
+
+- Adopted reviewed centered primary navigation and separate Saved using Tide 1.12.0's opt-in recipe. Kept native route/current-page semantics, source icon and the original Filters trigger.
+- Application stylesheets, data and main content are unchanged. See [header navigation](HEADER-NAVIGATION.md) for ownership, parity and verification.
+
 ## 2.1.5 · 2026-10-27
 
 - Implemented the selected compact Search & filters / result-count headers using Tide 1.11.0's canonical utility variant. Removed the Coming up intro, general tagline and repeated The lineup context label.

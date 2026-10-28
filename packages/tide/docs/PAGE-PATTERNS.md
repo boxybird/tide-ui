@@ -26,6 +26,8 @@ Use existing hero/details, Notice, Badge and button/link recipes for populated, 
 
 ## Navigation
 
+Tide 1.12.0 adds the opt-in [centered navigation recipe](NAVIGATION.md), loaded through `extensions/navigation.css`. The default header below keeps its original presentation.
+
 `tide-site-header` composes Brand and ordinary navigation links. Use `aria-current` only for the actual current page. Links wrap at narrow widths and enlarged text. This recipe introduces no menu widget, arrow-key controller or router.
 
 ## Control states

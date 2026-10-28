@@ -16,7 +16,7 @@ class Elements(HTMLParser):
         if attrs.get('id'):
             self.ancestors[attrs['id']] = [parent.get('id') for _, parent in self.stack]
         classes = attrs.get('class', '').split()
-        if tag=='a' and 'tide-site-header__link' in classes:
+        if tag=='a' and 'tide-button--navigation' in classes:
             self.navigation.append(attrs)
         if 'tide-event-card' in classes:
             self.cards.append(attrs)
@@ -54,6 +54,13 @@ class TemplateContracts(unittest.TestCase):
                 preload='<link rel="preload" href="{{KIT_ASSETS}}/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>'
                 self.assertIn(preload, page)
                 self.assertLess(page.index(preload), page.index('<link rel="stylesheet"'))
+
+    def test_every_document_loads_the_canonical_navigation_extension(self):
+        for name,page in self.app.pages().items():
+            with self.subTest(name=name):
+                self.assertIn('<link rel="stylesheet" href="{{KIT_NAV_CSS}}">',page)
+                self.assertNotIn('navigation-review.css',page)
+                self.assertNotIn('tide-doc-navigation',page)
 
     def test_venue_and_saved_collections_reuse_canonical_cards(self):
         venue = Elements(self.app.page(ROOT/'src/pages/sunshine-theater.html'))
@@ -125,7 +132,10 @@ class TemplateContracts(unittest.TestCase):
                 links = Elements(header).navigation
                 secondary = 'submit.html' if route in ('saved','help','submit') else 'sunshine-theater.html'
                 self.assertEqual([link['href'] for link in links], ['index.html',secondary,'saved.html'])
-                self.assertIn('<ul class="tide-site-header__links">', header)
+                self.assertIn('<ul class="tide-site-header__links tide-site-header__links--actions">', header)
+                self.assertIn('tide-site-header--centered',header)
+                self.assertIn('aria-label="Saved"',header)
+                self.assertTrue(all('tide-button--compact' in link['class'] for link in links))
                 self.assertEqual([link['href'] for link in links if link.get('aria-current')=='page'],
                                  [link['href'] for link in links if link['href']==route+'.html'])
                 self.assertFalse(any('hidden' in link or 'role' in link or 'target' in link for link in links))

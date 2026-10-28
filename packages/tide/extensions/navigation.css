@@ -1,0 +1,37 @@
+/* Opt-in navigation recipes. Defaults and existing action geometry are unchanged. */
+@layer tide.components {
+  .tide-site-header--centered { display: grid; grid-template-columns: minmax(max-content, 1fr) minmax(0, auto) minmax(max-content, 1fr); }
+  .tide-site-header__leading { min-inline-size: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--tide-space-4); justify-self: start; }
+  .tide-site-header--centered > .tide-site-header__primary { min-inline-size: 0; inline-size: auto; justify-self: center; }
+  .tide-site-header--centered > .tide-site-header__utility { min-inline-size: 0; inline-size: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: end; gap: var(--tide-space-4); justify-self: end; }
+  .tide-site-header__links--actions { gap: var(--tide-space-2); }
+  .tide-button--navigation[aria-current='page'] {
+    --tide-action-background: var(--tide-color-selected-surface);
+    --tide-action-text: var(--tide-color-selected-text);
+    --tide-action-hover-background: var(--tide-color-selected-surface);
+    --tide-action-hover-text: var(--tide-color-selected-text);
+    --tide-action-active-background: var(--tide-color-selected-surface);
+    --tide-action-active-text: var(--tide-color-selected-text);
+  }
+  @media (hover: hover) {
+    .tide-button--navigation[aria-current='page']:where([href]:not([aria-disabled='true'])):hover { box-shadow: inset 0 0 0 var(--tide-border-width) var(--tide-color-selected-border); }
+  }
+  .tide-button--navigation[aria-current='page']:where([href]:not([aria-disabled='true'])):active { box-shadow: inset 0 0 0 var(--tide-focus-width) var(--tide-color-selected-border); }
+  @media (width < 44rem) {
+    .tide-site-header--centered { grid-template-columns: minmax(0, 1fr) auto; column-gap: var(--tide-space-2); }
+    .tide-site-header--centered > .tide-site-header__leading { gap: var(--tide-space-2); }
+    .tide-site-header--centered > .tide-site-header__primary { grid-column: 1 / -1; grid-row: 2; inline-size: 100%; justify-self: start; }
+    .tide-site-header--centered > .tide-site-header__utility { grid-column: 2; grid-row: 1; }
+  }
+  @media (forced-colors: active) {
+    .tide-button--navigation[aria-current='page'] {
+      --tide-action-background: Highlight;
+      --tide-action-text: HighlightText;
+      --tide-action-hover-background: Highlight;
+      --tide-action-hover-text: HighlightText;
+      --tide-action-active-background: Highlight;
+      --tide-action-active-text: HighlightText;
+      border-color: Highlight;
+    }
+  }
+}

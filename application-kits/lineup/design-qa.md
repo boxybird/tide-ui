@@ -1,4 +1,6 @@
-# Compact headers · design QA
+# Lineup design QA · compact headers and centered navigation
+
+The first sections retain the accepted 2.1.5 workspace record. The current 2.1.6 header integration and its verification are recorded below.
 
 ## Findings
 
@@ -58,5 +60,28 @@ Implementation checklist: visual comparisons complete; native interactions compl
 `npm run build` and `npm run check` passed. The check covered 1,031 generated HTML files, 55,763 local references, 578 Markdown references, performance budgets, browser-JavaScript prohibition and 115 tests (7 preview HTTP, 67 Tide palette/contracts and 41 application template contracts). Tide CSS is 99,988 bytes and Lineup CSS is 18,508 bytes, within the unchanged budgets. Git diff whitespace checks pass; `main` is the only branch. The implementation starts from `8239327`.
 
 The first repository check rejected an application wrapper selector that referenced the shared Results variant. External spacing now uses the explicit private `tide-lineup__summary--utility` class; no ownership exemption or shared-check relaxation was added. The application builder includes this review record, and package documentation avoids source-file links that are unavailable in the built reference site. The complete check passed after these corrections.
+
+## Header navigation · Lineup 2.1.6 / Tide 1.12.0
+
+The current integration implements the third displayed navigation option using the separately reviewed Tide treatment. Source target: [centered navigation mock](docs/design/centered-navigation-target.png), 2128 × 739 pixels representing a 1440 × 500 CSS crop. The stronger implementation reference is the accepted native Tide header in `build/qa/tide-navigation-review/after-header.png` (1377 × 93 pixels).
+
+Implementation: `http://127.0.0.1:4187/events/app/index.html`, Bumble Dark, 1440 × 900 CSS viewport, initial scroll, closed drawer and no pointer/keyboard state. Capture: `build/qa/lineup-header-navigation/desktop.png` (JPEG 1425 × 891 despite the suffix). Exact header capture: `header.png` (JPEG 1361 × 93), measuring 1360.667 × 92.667 CSS pixels. DevicePixelRatio is approximately 1.
+
+Combined evidence: `build/qa/lineup-header-navigation/comparison.html` and `comparison.png`, rendered at 1504 × 960. The selected mock and actual application are shown together at equal 720px width, normalized to the same 1440px CSS context. The actual application is cropped to the mock's upper 500px. Reviewed Tide and Lineup header captures appear together at their native CSS dimensions; focused primary-link and Saved crops align their centers/trailing edges to account for the 16px component-width difference. Both full composition and readable focused controls were inspected from this combined input.
+
+Fonts: navigation uses the reviewed Manrope 14px/22px weight 550 and normal tracking. Geometry: 44px minimum, 10px/16px padding, 2px radius, reserved hairline and 18px source icon. Colors: current-page selected surface/text and native hover/active/focus roles match Tide. Assets: the original supplied icon, wordmark and application photograph are retained. Copy: destinations remain Find events, route-appropriate Sunshine Theater/Add an event, and Saved. The generated image's incidental photo/type/spacing differences below the header are intentionally excluded; the existing application composition is preserved.
+
+An initial P1 inspection found a missing current-page fill because a nested extension layer could not override Button's unlayered owner inputs. The stylesheet now joins `tide.components`, matching its canonical owner. A regression guard protects that layer. The final app and reviewed-Tide comparison show the selected fill/text correctly. No actionable P0/P1/P2 mismatch remains after this fix; the post-fix combined comparison required no further visual change.
+
+Verification completed:
+
+- Thirty before/after geometry cases cover index, venue, Saved, Help, submission and a native event at 390, 768, 1024, 1200 and 1440 by 900. Desktop and split-tablet pane rectangles are identical. Narrow headers wrap naturally; content retains the same widths/heights and moves only with the header's normal-flow height. Native event header omission is unchanged.
+- Ninety theme cases cover index/venue/Saved in all ten theme/mode combinations at 390, 1024 and 1440. Native navigation targets, type, padding and radius match the kit; no overlapping controls, horizontal overflow or scripts. Desktop primary links are centered.
+- Ten promoted Tide state cases verify actual hover/current/selected feedback and keyboard focus across every theme/mode. In Lineup, native Tab exposes the shared 2px outline with nominal 3px offset, and held pointer feedback shows the 2px inset keyline at unchanged 44px height. Current-page fill remains independent of focus and hover.
+- Native venue and Saved links, exact current-page semantics and browser Back pass. A query survives widening an open drawer from 390 to 1440; the same single control set fits its reserved column exactly. Native Reset clears it; Escape dismisses and returns focus to Filters. The desktop November fragment retains the permanent summary and aligns at y=193.667 with document scroll zero.
+- SHA-256 parity: all five application stylesheets, data and non-header templates are unchanged. All 738 generated main-content sections are identical. Tide's default CSS modules, palette inputs and assets are unchanged; navigation is a separately loaded canonical extension.
+- Browser console warnings/errors: none recorded. Expanded measurements and parity reports are in the ignored QA folder. The user accepted the header integration and requested its commit and push on main.
+
+A further 60 narrow-theme cases at 320/390 verify the final header spacing, with no overlaps, horizontal overflow or scripts. The final root build/check passes: 1,041 HTML documents, 56,891 local references, 607 Markdown references and 121 tests (7 HTTP, 72 Tide, 42 application), including unchanged performance budgets and ownership guards. Firefox/Safari, physical devices, screen readers, actual text zoom and changed OS forced-color/motion preferences remain unverified.
 
 final result: passed

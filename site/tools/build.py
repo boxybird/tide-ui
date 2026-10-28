@@ -64,7 +64,7 @@ def buttons(level):
 
 
 def navigation_review(themes):
-    """Isolated proposal using existing action recipes; not a kit API release."""
+    """Before/after sheet consuming the canonical opt-in navigation recipe."""
     fragment=(SITE/'templates/navigation-review.html').read_text(encoding='utf-8')
     svg=(ROOT/'assets/icons/BookmarkIcon.svg').read_text(encoding='utf-8')
     svg=re.sub(r'<svg[^>]*>', '<svg class="tide-icon" viewBox="0 0 15 15" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">', svg)
@@ -72,7 +72,8 @@ def navigation_review(themes):
     for theme,meta in themes.items():
         for appearance in ('light','dark'):
             links.append(f'<a class="tide-link" href="../../{theme}-{appearance}/frames/navigation-review.html">{escape(meta["name"])} / {appearance}</a>')
-    return fragment.replace('{{REVIEW_BOOKMARK}}',svg).replace('{{REVIEW_THEMES}}',''.join(links))
+    header=(ROOT/'templates/navigation.html').read_text(encoding='utf-8').replace('{{NAVIGATION_BOOKMARK}}',svg)
+    return fragment.replace('{{NAVIGATION_HEADER}}',header).replace('{{REVIEW_BOOKMARK}}',svg).replace('{{REVIEW_THEMES}}',''.join(links))
 
 
 def controls(level):
@@ -199,6 +200,7 @@ def outputs(themes, resolved, audit):
                 result[ROOT/f'{key}-{mode}'/'frames'/source.name] = html
             review=document(navigation_review(themes),'Navigation review · '+theme['name']+' / '+mode,key,mode,'../../',docs=True)
             review=review.replace('</head>','<link rel="stylesheet" href="../../css/navigation-review.css">\n</head>')
+            review=review.replace('</head>','<link rel="stylesheet" href="../../extensions/navigation.css">\n</head>')
             result[ROOT/f'{key}-{mode}'/'frames/navigation-review.html']=review
     system = '<body class="tide tide-screen tide-screen--kit"><main class="tide-page-body tide-page-body--spaced tide-stack"><p class="tide-eyebrow">System appearance</p><h1>Day or night.</h1><p>This page has no mode-switching JavaScript. Change your operating system appearance to test it.</p><div class="tide-notice"><strong>The same roles, in both modes.</strong><p>Native form controls and page surfaces use the active color scheme.</p></div><div class="tide-field"><label class="tide-field__label" for="sample">A native control</label><input class="tide-field__control" id="sample" value="Ink After Dark"></div><a class="tide-button" href="index.html#themes">Back to the kit</a></main></body>'
     result[ROOT/'system.html'] = document(system,'Tide · System appearance','tide','system','')
@@ -227,7 +229,7 @@ def build(check=False):
         target=OUT/path.relative_to(ROOT)
         if path.suffix=='.html':
             # All documentation pages consume the one built kit.
-            content=re.sub(r'((?:href|src)=")((?:\.\./)*)(css/tide\.css|assets/[^"<>]+)(")',lambda m:m[1]+os.path.relpath(PROJECT/'build/tide'/m[3],target.parent).replace('\\','/')+m[4],content)
+            content=re.sub(r'((?:href|src)=")((?:\.\./)*)(css/tide\.css|extensions/navigation\.css|assets/[^"<>]+)(")',lambda m:m[1]+os.path.relpath(PROJECT/'build/tide'/m[3],target.parent).replace('\\','/')+m[4],content)
         files[target]=content.encode('utf-8')
     files[OUT/'css/docs.css']=(SITE/'css/docs.css').read_bytes()
     site_manifest=json.loads((SITE/'component-manifest.json').read_text(encoding='utf-8'))

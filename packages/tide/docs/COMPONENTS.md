@@ -149,3 +149,5 @@ The prominent date is a `time` with a valid datetime value and a full accessible
 The kit provides HTML/CSS recipes, native controls and documented authored states. Consumers own application state changes and routing; the current example uses native/static result specimens. A visual specimen does not establish an operational service. Coverage records UI examples, not pending product decisions. Extend a component or example interaction only for a concrete UI need, with a behavior contract and relevant keyboard/announcement checks. Service implementation is outside project scope.
 
 All screen/specimen compositions are included in every named theme and both modes. The selected list and the full-screen event are available directly; the library also shows search, filters, saved, empty, submission, review, confirmation, recovery, adopted app patterns, help and rich HTML.
+
+The [optional centered navigation recipe](NAVIGATION.md) adds explicit Site header slots and current-page action emphasis without changing existing component defaults.

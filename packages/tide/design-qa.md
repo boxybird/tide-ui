@@ -1,4 +1,6 @@
-# Tide navigation proposal · component review QA
+# Tide navigation · review and canonical recipe QA
+
+The original sections record the accepted 1.11.0 review checkpoint at `c612546`. The current 1.12.0 promotion is recorded below; earlier isolation statements describe that checkpoint.
 
 ## Findings
 
@@ -47,5 +49,15 @@ Firefox/Safari, physical devices, screen readers, actual browser text zoom and O
 SHA-256 parity checks confirm unchanged Tide production CSS/tokens/assets, the complete built Tide distribution, Lineup source files and the complete generated application output against the initial `ebca5d5` baseline. The proposal's private stylesheet is loaded only by its ten documentation pages. The release remains Tide 1.11.0 and Lineup 2.1.5.
 
 Visual review, native state checks and responsive/theme measurements are complete. `npm run build` and `npm run check` passed after the documentation corrections: 1,041 HTML documents, 56,144 local references, 581 Markdown references and 119 tests (7 preview HTTP, 71 Tide contracts/palettes and 41 application templates). Performance budgets, theme structure parity, ownership and zero browser JavaScript checks pass without exemptions. The user accepted the navigation-only review and requested a commit and push on main. The changed files support only the navigation specimen, its registration, build integration, tests and documentation; unrelated Tide components and Lineup remain unchanged.
+
+## Canonical promotion · Tide 1.12.0
+
+The approved treatment now lives in `extensions/navigation.css` and `templates/navigation.html`, with Site header/Button ownership and variants registered. The comparison sheet consumes these canonical classes; its private stylesheet supplies documentation layout only. Existing default CSS modules, token/palette inputs, assets and action geometry remain unchanged.
+
+The modifiers join their existing `tide.components` owner layer. This fixes an initial current-page-input cascade defect caught during app integration. Current-page state uses the approved selected pair, transparent quiet border, native 1px/2px inset feedback and inherited focus. The responsive header supports a leading action without changing its geometry; below 44rem it uses the existing 8px named gaps and natural wrapping.
+
+Ten promoted all-theme state cases pass; Lineup's 90 theme/viewport cases match the reviewed control metrics. The actual reviewed-Tide and Lineup headers were inspected together with focused primary-link and Saved comparisons. No actionable P0/P1/P2 visual finding remains. See Lineup's current design QA for source/capture normalization and unchanged-main-content evidence.
+
+Final build and full repository check pass, including 121 tests, theme parity, native references, ownership, zero-browser-JavaScript and unchanged core performance budgets. The navigation extension is 2,540 bytes; the core entry point remains 99,988 bytes. Sixty final narrow-theme app cases confirm wrapping without overlaps. The user accepted the Lineup integration and its required Tide navigation recipe, and requested a commit and push on main.
 
 final result: passed

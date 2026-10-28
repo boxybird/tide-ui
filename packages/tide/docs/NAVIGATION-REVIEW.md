@@ -1,5 +1,7 @@
 # Navigation comparison · review proposal
 
+This records the accepted 1.11.0 review checkpoint at `c612546`. Tide 1.12.0 subsequently promotes the approved treatment into the [canonical optional recipe](NAVIGATION.md); the following isolation statements describe the original review checkpoint.
+
 This is the Tide component review requested before any Lineup implementation. It compares the current site header with the centered navigation direction selected from the third mockup. It is a documentation-only proposal against Tide 1.11.0, not a new published component variant or a change to the application dependency.
 
 Open `frames/navigation-review.html` in any theme/mode library. The Components sheet links to it beside the button specimens. The page includes complete before/after headers, the closest existing controls, a native state lab, neighboring regular controls and a geometry/state comparison. The existing navigation and button matrices remain available.

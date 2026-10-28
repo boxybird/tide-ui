@@ -1,5 +1,7 @@
 # Navigation and titles · Lineup 2.1.1
 
+The current 2.1.6 [header-navigation contract](HEADER-NAVIGATION.md) supersedes the original underlined appearance described below; routes, current-page and skip-link semantics remain.
+
 Lineup consumes Tide UI 1.10.0 without changing the UI kit. This application-only patch resolves audit findings **L05/L06**. The initial [2.0.4 audit](AUDIT.md) remains historical evidence; the [verification record](verification/navigation-titles.json) records this patch's checks and boundary fingerprints.
 
 ## Canonical recipes and application ownership

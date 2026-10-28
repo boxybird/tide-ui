@@ -111,7 +111,8 @@ class AppTemplates:
             'SAVED_CURRENT':attribute('aria-current', 'page') if route=='saved' else Html(''),
             'SECONDARY_HREF':secondary_route+'.html',
             'SECONDARY_LABEL':'Sunshine Theater' if secondary=='venue' else 'Add an event',
-            **{name:Html('{{'+name+'}}') for name in ('KIT_CSS','APP_CSS','KIT_ASSETS')},
+            'HEADER_SAVED_ICON':self.partial('detail-icon-saved', {'ICON_EXTRA':Html('')}),
+            **{name:Html('{{'+name+'}}') for name in ('KIT_CSS','KIT_NAV_CSS','APP_CSS','KIT_ASSETS')},
         }
         collection = page.get('collection')
         values['FILTER_TRIGGER'] = self.partial('filter-trigger', {}) if collection and collection!='saved' else Html('')

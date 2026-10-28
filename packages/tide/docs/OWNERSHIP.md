@@ -1,4 +1,4 @@
-# Public block ownership · Tide 1.11.0
+# Public block ownership · Tide 1.12.0
 
 The registry covers 26 components, 26 supporting blocks and 13 compositions. Every entry requires a canonical CSS source, HTML recipe, rendered fixture, behavior description, contract and explicit kit style ownership. Composition names require matching composition contracts. Missing fields, duplicate owners, invalid source paths, absent fixtures and fixtures omitting their registered block fail the normal check.
 
@@ -26,6 +26,8 @@ Screen, Stack, Row and Split are layout helpers. They intentionally inherit read
 Generic layout helpers must not reset a nested component's type, padding or states. Standalone venue profiles retain 24px insets. A profile inside an already padded page opts into `tide-venue-profile--flush-inline`; it removes only inline padding, retaining block padding and section rhythm. See [page recipes](PAGE-PATTERNS.md#venues).
 
 The [Results utility variant](RESULTS-UTILITY.md) is a kit-owned additive recipe. Consumers opt in through markup; no private count/type/divider overrides are authorized.
+
+The [optional navigation recipe](NAVIGATION.md) owns the centered header slots and navigation current-page modifier. It reuses existing action internals and is loaded explicitly.
 
 ## Consumer exceptions
 

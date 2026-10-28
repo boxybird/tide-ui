@@ -47,6 +47,7 @@ def outputs():
         for p in (ROOT/folder).rglob('*'):
             if p.is_file():files[OUT/folder/p.relative_to(ROOT/folder)]=p.read_bytes()
     files[OUT/'component-manifest.json']=(ROOT/'component-manifest.json').read_bytes()
+    files[OUT/'extensions/navigation.css']=(ROOT/'extensions/navigation.css').read_bytes()
     return files
 
 def build(check=False):

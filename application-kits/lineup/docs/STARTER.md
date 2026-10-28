@@ -1,6 +1,6 @@
 # Start from Lineup
 
-Lineup 2.1.5 is layout family option 1, derived from Tide UI 1.11.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
+Lineup 2.1.6 is layout family option 1, derived from Tide UI 1.12.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
 
 The [compact-header contract](COMPACT-HEADERS.md) covers the selected workspace and its canonical utility recipe.
 
@@ -10,7 +10,7 @@ The [compact-header contract](COMPACT-HEADERS.md) covers the selected workspace 
 4. Adjust private layout in the five registered `src/styles/` modules. Use Tide's semantic roles and named type/spacing inputs. Adopt public kit recipes and supported modifiers in markup; do not redefine public component type/spacing or change `packages/tide/` while working on Lineup.
 5. Start from the completed [Tide alignment baseline](TIDE-ALIGNMENT.md). Personalization is a separate task and must preserve canonical component adoption. Review the [responsive audit](AUDIT.md), [ownership](COMPONENT-OWNERSHIP.md), [desktop layout](DESKTOP-LAYOUT.md) and [native drawer](FILTER-DRAWER.md) before changing pane geometry or responsive behavior. Rebuild and run normal checks; record the actual browsers/devices/states exercised.
 
-Use `header.html` and `skip-link.html` for Tide's Site header and Skip link recipes. Route context derives `aria-current="page"` from the actual link destination; do not mark a collection link as the current detail/result page. Main links remain available on narrow screens. See [navigation and title ownership](NAVIGATION-TITLES.md).
+Use `header.html` and `skip-link.html` for Tide's optional centered Site header and Skip link recipes. Keep `extensions/navigation.css` loaded after the core kit CSS; see [header navigation](HEADER-NAVIGATION.md). Route context derives `aria-current="page"` from the actual link destination; do not mark a collection link as the current detail/result page. Main links remain available on narrow screens. See [navigation and title ownership](NAVIGATION-TITLES.md).
 
 Filter footer spacing/layout stays in Tide. Use the private child wrappers in `filter-rail.html` for narrow viewport clearance; keep public footer/status/count classes free of private appearance aliases. The split-tablet height input accounts for the visible Filters control. See [the repair contract](FILTER-FOOTER-TABLET.md).
 

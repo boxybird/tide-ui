@@ -1,5 +1,5 @@
 {
-  "version": "1.11.0",
+  "version": "1.12.0",
   "classConvention": "BEM with tide- prefix",
   "runtime": "HTML and CSS; native browser behavior only",
   "componentSource": "templates/library.html#components",
@@ -15,7 +15,8 @@
         "spread",
         "compact",
         "icon",
-        "plan"
+        "plan",
+        "navigation"
       ],
       "states": [
         "rest",
@@ -25,7 +26,8 @@
         "aria-pressed authored state",
         "disabled",
         "disabled pressed",
-        "forced-colors selected/focus"
+        "forced-colors selected/focus",
+        "aria-current page navigation"
       ],
       "roles": [
         "accent",
@@ -46,10 +48,13 @@
       "htmlSource": "templates/buttons.html",
       "styleOwnership": "kit",
       "contract": "docs/BUTTONS.md",
-      "behavior": "Native buttons, links and authored pressed states. Consumers own actual toggle state changes. Disabled buttons use native disabled; unavailable links omit href and use aria-disabled. No browser JavaScript ships.",
+      "behavior": "Native buttons, links and authored pressed states. Consumers own actual toggle state changes. Disabled buttons use native disabled; unavailable links omit href and use aria-disabled. No browser JavaScript ships. The opt-in navigation modifier maps aria-current=page to the reviewed selected appearance without toggle semantics.",
       "deprecatedVariants": {
         "plan": "Use spread/full; event composition owns its action gap."
-      }
+      },
+      "supportingSources": [
+        "extensions/navigation.css"
+      ]
     },
     {
       "name": "Icon button",
@@ -929,7 +934,10 @@
       "block": "tide-site-header",
       "elements": [
         "links",
-        "link"
+        "link",
+        "leading",
+        "primary",
+        "utility"
       ],
       "states": [
         "current page",
@@ -945,11 +953,17 @@
         "focus"
       ],
       "source": "css/page-patterns.css",
-      "htmlSource": "templates/frames/navigation.html",
-      "fixture": "navigation.html",
+      "htmlSource": "templates/navigation.html",
+      "fixture": "navigation-review.html",
       "styleOwnership": "kit",
       "contract": "docs/PAGE-PATTERNS.md#navigation",
-      "behavior": "Native nav/list/link composition that wraps without a menu script. One aria-current=page link only when it identifies this page. Skip link and main target supplied by the page."
+      "behavior": "Native nav/list/link composition that wraps without a menu script. One aria-current=page link only when it identifies this page. Skip link and main target supplied by the page. Optional centered navigation uses existing compact actions, leading and utility slots, and the separately loaded navigation stylesheet; default links remain unchanged.",
+      "variants": [
+        "centered"
+      ],
+      "supportingSources": [
+        "extensions/navigation.css"
+      ]
     },
     {
       "name": "Form error summary",

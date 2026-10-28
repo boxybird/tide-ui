@@ -42,6 +42,7 @@ def build(check=False):
             text = re.sub(r'data-theme="[^"]+"', 'data-theme="'+theme+'"', text, count=1)
             text = re.sub(r'data-mode="[^"]+"', 'data-mode="'+mode+'"', text, count=1)
             text = text.replace('{{KIT_CSS}}', relative(KIT/'css/tide.css', directory))
+            text = text.replace('{{KIT_NAV_CSS}}', relative(KIT/'extensions/navigation.css', directory))
             text = text.replace('{{APP_CSS}}', relative(OUT / 'runtime/css/app.css', directory))
             text = text.replace('{{KIT_ASSETS}}', relative(KIT/'assets', directory))
             text = re.sub(r'((?:href|src)=")(js/[^"<>]+|assets/[^"<>]+)(")',

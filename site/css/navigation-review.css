@@ -1,4 +1,4 @@
-/* Review-only proposal. Loaded by navigation-review.html, never by tide.css. */
+/* Documentation layout only. Navigation appearance comes from Tide. */
 @layer tide.docs {
   .tide-doc-navigation { max-inline-size: 92rem; margin-inline: auto; padding: var(--tide-space-6); display: grid; gap: var(--tide-space-10); }
   .tide-doc-navigation__intro { display: grid; gap: var(--tide-space-3); }
@@ -7,23 +7,6 @@
   .tide-doc-navigation__section { min-inline-size: 0; display: grid; gap: var(--tide-space-4); }
   .tide-doc-navigation__section > h2 { font-size: var(--tide-font-size-section); line-height: var(--tide-leading-section); font-weight: var(--tide-font-weight-heading); }
   .tide-doc-navigation__example { min-inline-size: 0; container-type: inline-size; }
-  .tide-doc-navigation__header { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
-  .tide-doc-navigation__header > .tide-brand { justify-self: start; }
-  .tide-doc-navigation__header > nav { min-inline-size: 0; justify-self: center; }
-  .tide-doc-navigation__header > .tide-button { justify-self: end; }
-  .tide-doc-navigation__links { display: flex; flex-wrap: wrap; gap: var(--tide-space-2); list-style: none; }
-  .tide-doc-navigation__link[aria-current='page'] {
-    --tide-action-background: var(--tide-color-selected-surface);
-    --tide-action-text: var(--tide-color-selected-text);
-    --tide-action-hover-background: var(--tide-color-selected-surface);
-    --tide-action-hover-text: var(--tide-color-selected-text);
-    --tide-action-active-background: var(--tide-color-selected-surface);
-    --tide-action-active-text: var(--tide-color-selected-text);
-  }
-  @media (hover: hover) {
-    .tide-doc-navigation__link[aria-current='page']:where([href]:not([aria-disabled='true'])):hover { box-shadow: inset 0 0 0 var(--tide-border-width) var(--tide-color-selected-border); }
-  }
-  .tide-doc-navigation__link[aria-current='page']:where([href]:not([aria-disabled='true'])):active { box-shadow: inset 0 0 0 var(--tide-focus-width) var(--tide-color-selected-border); }
   .tide-doc-navigation__comparison { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--tide-space-6); }
   .tide-doc-navigation__group { display: grid; align-content: start; justify-items: start; gap: var(--tide-space-3); }
   .tide-doc-navigation__group h3 { font-size: var(--tide-font-size-body); line-height: var(--tide-leading-body); font-weight: var(--tide-font-weight-label); }
@@ -34,25 +17,9 @@
   .tide-doc-navigation__lab { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--tide-space-6); }
   .tide-doc-navigation__lab :where(a, button) { scroll-margin-block-start: var(--tide-space-6); }
   .tide-doc-navigation__destination { padding-block-start: var(--tide-space-6); border-block-start: var(--tide-border-hairline); }
-  @container (width < 44rem) {
-    .tide-doc-navigation__header { grid-template-columns: minmax(0, 1fr) auto; }
-    .tide-doc-navigation__header > nav { grid-column: 1 / -1; grid-row: 2; inline-size: 100%; justify-self: start; }
-    .tide-doc-navigation__header > .tide-button { grid-column: 2; grid-row: 1; }
-  }
   @media (width < 40rem) {
     .tide-doc-navigation__table, .tide-doc-navigation__table tbody, .tide-doc-navigation__table tr, .tide-doc-navigation__table :is(th, td) { display: block; }
     .tide-doc-navigation__table thead { display: none; }
     .tide-doc-navigation__table td { padding-block-start: 0; }
-  }
-  @media (forced-colors: active) {
-    .tide-doc-navigation__link[aria-current='page'] {
-      --tide-action-background: Highlight;
-      --tide-action-text: HighlightText;
-      --tide-action-hover-background: Highlight;
-      --tide-action-hover-text: HighlightText;
-      --tide-action-active-background: Highlight;
-      --tide-action-active-text: HighlightText;
-      border-color: Highlight;
-    }
   }
 }

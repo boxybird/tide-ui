@@ -1,5 +1,7 @@
 # Buttons · Tide 1.6.0
 
+Tide 1.12.0 adds an opt-in [navigation modifier](NAVIGATION.md). It reuses compact quiet/secondary geometry and action states while mapping aria-current to location emphasis. Existing defaults and toggle semantics are unchanged.
+
 The kit owns action geometry, typography, native semantics and visual states. A consuming page owns placement, routing and actual state changes. No browser JavaScript is shipped or required by these specimens.
 
 CSS: `css/components.css`. Named inputs: `css/tokens.css`. Canonical HTML: `templates/buttons.html`, rendered in the library and `frames/button-states.html` in all ten theme/mode combinations. The registry declares the CSS/HTML/contract owners for Button, Icon button and Photo control. Documentation layout stays in `site/css/docs.css`.

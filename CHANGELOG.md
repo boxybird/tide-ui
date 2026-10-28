@@ -1,5 +1,10 @@
 # Changelog
 
+## Tide kit 1.12.0 · 2026-10-27
+
+- Promoted the reviewed centered header and current-page treatment into opt-in `extensions/navigation.css`, with canonical HTML, ownership/variant registration and the existing all-theme comparison sheet. Existing compact geometry, action states and source icons are reused; default CSS modules, palettes, primitives and assets are unchanged.
+- Lineup 2.1.6 consumes the recipe explicitly. See the [navigation contract](packages/tide/docs/NAVIGATION.md).
+
 ## Documentation · Tide navigation review · 2026-10-27
 
 - Added an isolated all-theme before/after navigation sheet beside the existing button specimens. It compares the proposed centered header with Tide’s compact quiet/secondary actions and their native states, geometry and semantics.

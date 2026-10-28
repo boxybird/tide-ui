@@ -1,4 +1,6 @@
-# Tide HTML and CSS kit · 1.11.0
+# Tide HTML and CSS kit · 1.12.0
+
+The [optional navigation recipe](docs/NAVIGATION.md) provides the reviewed centered header and current-page treatment. Load `extensions/navigation.css` after the core stylesheet to opt in. Existing defaults are unchanged.
 
 The additive [Results utility variant](docs/RESULTS-UTILITY.md) supplies the 20px header treatment reviewed and accepted on 2026-10-27. Default Results and other component recipes remain unchanged.
 
