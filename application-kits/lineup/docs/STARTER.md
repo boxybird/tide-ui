@@ -1,6 +1,6 @@
 # Start from Lineup
 
-Lineup 2.1.7 is layout family option 1, derived from Tide UI 1.12.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
+Lineup 2.1.8 is layout family option 1, derived from Tide UI 1.12.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
 
 The [compact-header contract](COMPACT-HEADERS.md) covers the selected workspace and its canonical utility recipe.
 
@@ -17,5 +17,11 @@ Filter footer spacing/layout stays in Tide. Use the private child wrappers in `f
 The application ships native HTML/CSS only. Links, fragments, browser Back, native controls, popover dismissal, reset, validation and file selection work locally. Category and empty layouts remain authored reference pages, available from the kit review entry rather than a tutorial menu inside the application. Search uses ordinary product labels and a native GET form contract. Arbitrary search/date matching, persistent saved state and operational submission remain service integration boundaries, documented outside the product UI.
 
 Keep application releases in tags/artifacts. A different application layout belongs in its own named sibling directory under `application-kits/`, with its own ownership and version. Do not copy or fork Tide into it. The root builder currently builds Lineup; adding another kit includes registering its build/check/output ownership in repository tooling.
+
+## Consuming-site upgrades
+
+Lineup is a maintained application kit. A website should record the Lineup release it consumes and be able to adopt later releases during its own update cycle. Releasing a website does not freeze the kit, and a new kit release does not automatically update a consuming website. Tide, Lineup and the consuming website have separate version and change ownership.
+
+Lineup releases should describe reusable changes and any required consumer migration in their changelog. The current HTML/CSS workflow uses reviewed source updates; automatic downstream migration tooling is not implemented. This upgrade expectation does not settle the detailed code-extension boundaries, which require their own review.
 
 For a scoped working session, invoke your personal guard with `Use $application-kit-scope for application-kits/lineup/.` The UI kit, shared tooling and sibling applications remain read-only; canonical edits and current application docs belong here.

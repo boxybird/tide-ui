@@ -1,5 +1,7 @@
 # Desktop composition · Lineup 2.1.5
 
+In Lineup 2.1.8 the event photo's return link hides from 60rem, where the list and detail appear side by side. Below that breakpoint it remains a native link to all events on full-screen event documents. Private application hosts control availability; the optional Saved action retains its existing position and appearance. An otherwise empty toolbar is omitted. Event/pane dimensions and the story's lower return link remain unchanged. See the current [design QA](../design-qa.md).
+
 The [selected compact-header implementation](COMPACT-HEADERS.md) replaces the previous browse intro and The lineup kicker with two utility rows. The user separately authorized the small Tide 1.11.0 Results variant and accepted both that recipe and the application change on 2026-10-27.
 
 At 75rem and above, CSS Grid/subgrid preserves the centered 92rem maximum and 20/35/45 filters/list/detail proportions. The left Search & filters label and middle count/order header start at the same top edge as the natural right document. Both labels consume canonical `tide-results--utility`. The original filter body and the month feed start together below those headers with a named external gap. The application owns placement only, with no public type, padding, color or divider overrides.

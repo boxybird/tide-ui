@@ -41,6 +41,7 @@
   .tide-app__results .tide-event-card__status { display: none; }
   .tide-app__result-footer { padding: var(--tide-space-6); display: grid; gap: var(--tide-space-2); }
   .tide-app__detail { display: none; min-inline-size: 0; scroll-margin-block-start: var(--tide-space-6); }
+  .tide-app__event-back { display: flex; }
   .tide-app__preview-state { display: none; min-inline-size: 0; scroll-margin-block-start: var(--tide-space-6); }
   .tide-app--event .tide-app__header, .tide-app--event .tide-app__results { display: none; }
   .tide-app--event .tide-app__detail { display: block; }
@@ -80,6 +81,10 @@
     .tide-app__filter-trigger { grid-column: 2; grid-row: 2; align-self: start; justify-self: end; }
   }
   @media (width >= 60rem) {
+    /* The list is beside the event. Reserve the leading toolbar slot so an
+       optional Saved control keeps its position; the hidden link cannot focus. */
+    .tide-app__event-back { visibility: hidden; }
+    .tide-app__event-tools:not(:has(.tide-app__event-saved)) { display: none; }
     .tide-app__header { min-block-size: var(--tide-app-header-block-size); }
     .tide-app__workspace {
       max-inline-size: var(--tide-app-max-width);

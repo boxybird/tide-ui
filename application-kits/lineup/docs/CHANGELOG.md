@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.1.8 · 2026-10-28
+
+- Hid the event photo's top-left return link from 60rem, matching the breakpoint where the event list and detail appear together. Retained the working native link on smaller event documents.
+- Used private application hosts to control availability, preserve the optional Saved control's position and omit an empty toolbar. Shared Tide sources, event content and pane geometry are unchanged.
+- Recorded the expectation that consuming websites can adopt later Lineup releases independently, with release notes and migration guidance. The current workflow uses reviewed source updates; detailed extension boundaries remain a separate discussion.
+- Verified 25 route/viewport cases and 20 all-theme cases, breakpoint visibility, keyboard omission, native mobile return and browser Back. See [design QA](../design-qa.md).
+
 ## 2.1.7 · 2026-10-28
 
 - Moved the primary navigation beside Saved on the right, separated by a named 24px external gap. Below 60rem, Burque and Saved occupy row one; primary links and the right-aligned Filters trigger occupy row two. Links wrap naturally on small phones.

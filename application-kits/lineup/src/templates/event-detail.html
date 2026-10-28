@@ -2,7 +2,7 @@
   <section class="tide-event-hero" aria-labelledby="event-title">
     <img class="tide-event-hero__photo" src="{{PHOTO_SRC}}" width="{{PHOTO_WIDTH}}" height="{{PHOTO_HEIGHT}}" alt="{{PHOTO_ALT}}" loading="{{PHOTO_LOADING}}" fetchpriority="{{PHOTO_PRIORITY}}">
     <div class="tide-event-hero__scrim" aria-hidden="true"></div>
-    <nav class="tide-event-hero__toolbar" aria-label="Event"><a class="tide-photo-control" href="index.html" aria-label="Back to all events">{{BACK_ICON}}</a>{{SAVED_CONTROL}}</nav>
+    <div class="tide-app__event-tools"><nav class="tide-event-hero__toolbar" aria-label="Event"><span class="tide-app__event-back"><a class="tide-photo-control" href="index.html" aria-label="Back to all events">{{BACK_ICON}}</a></span>{{SAVED_CONTROL}}</nav></div>
     <div class="tide-event-hero__content"><div class="tide-event-hero__intro"><p class="tide-eyebrow">{{CATEGORY}}{{AGE}}</p><h{{DETAIL_LEVEL}} class="tide-event-hero__title" id="event-title"{{TITLE_ATTRIBUTES}}>{{TITLE}}</h{{DETAIL_LEVEL}}><p class="tide-event-hero__subtitle">{{SUBTITLE}}</p></div>
       <dl class="tide-event-hero__facts">
         <div><dt>{{DATE_ICON}}<span class="tide-sr-only">Date</span></dt><dd><time datetime="{{DATE}}">{{DATE_LABEL}}</time></dd></div>

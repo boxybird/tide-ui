@@ -1,6 +1,6 @@
 # Lineup design QA · compact headers and header navigation
 
-The first sections retain the accepted 2.1.5 workspace and 2.1.6 centered-navigation records. The current 2.1.7 application-only header placement and its verification are recorded last.
+The earlier sections retain the accepted workspace and header-navigation records. The current 2.1.8 event-return availability verification is recorded last.
 
 ## Findings
 
@@ -98,5 +98,19 @@ Evidence from in-app Chromium on Windows, 2026-10-28, is in ignored `build/qa/li
 Firefox/Safari, physical devices, screen readers, actual text zoom and changed system motion/forced-color preferences remain unverified.
 
 Root build/check passed with 1,041 HTML documents, 56,891 local references, 611 Markdown references and all 121 tests (7 HTTP, 72 Tide, 42 application). Performance and strict component-ownership checks pass. Canonical changes are confined to Lineup; `main` remains the only branch. The user reviewed and accepted this placement change and requested that it be committed and saved on 2026-10-28.
+
+## Event return availability · Lineup 2.1.8 / Tide unchanged
+
+The user requested removal of the event photo's top-left back arrow when the list is already visible beside the event. The control is a native `index.html` link, not browser history. Application `base.css` hides its private host from the existing 60rem split breakpoint. Below 60rem the same link remains available on full-screen event documents. A private flex host preserves its original 44px geometry; retaining the hidden leading slot keeps the optional Saved control on the right. When Saved is absent, an outer private host omits the empty toolbar. No shared component style, token, event data, browser script or positive tabindex is added.
+
+In-app Chromium on Windows, 2026-10-28:
+
+- Twenty-five before/after cases cover index, venue, Saved, a full event and a concise event at 390, 959, 960, 1024 and 1440px. Hero/title/results/optional Saved rectangles are identical. The arrow is available only below 960px on a visible event, with no horizontal overflow.
+- Twenty cases cover all ten theme/mode pairs at 390 and 960px on a full event. Visibility, remaining controls and zero browser scripts pass.
+- Shift+Tab from the photo Saved control skips the hidden arrow in split view and reaches it on phone. Enter on the phone arrow returns to the visible all-events list; browser Back restores the event route. Concise split views omit the empty Event navigation from the accessibility tree. Browser warnings/errors: none.
+
+Ignored evidence is in `build/qa/lineup-event-back/`: `before.json`, `after.json`, `themes.json`, `desktop-before.png`, `desktop.png`, `phone.png` and the dependency fingerprint record. All 122 Tide/documentation-site source fingerprints remain unchanged. Coverage does not include Firefox/Safari, physical devices, screen readers or changed system preferences. The user accepted this application checkpoint and requested preservation on 2026-10-28. The starter notes also record the consuming-site upgrade expectation; no additional application behavior or component reorganization was introduced.
+
+Root build/check passes: 1,041 HTML documents, 56,891 local references, 615 Markdown references and all 121 tests (7 HTTP, 72 Tide, 42 application), including strict ownership, zero browser JavaScript and unchanged performance budgets. All canonical edits are within Lineup; `main` is the only branch.
 
 final result: passed
