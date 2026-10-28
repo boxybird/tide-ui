@@ -133,7 +133,8 @@ class TemplateContracts(unittest.TestCase):
                 secondary = 'submit.html' if route in ('saved','help','submit') else 'sunshine-theater.html'
                 self.assertEqual([link['href'] for link in links], ['index.html',secondary,'saved.html'])
                 self.assertIn('<ul class="tide-site-header__links tide-site-header__links--actions">', header)
-                self.assertIn('tide-site-header--centered',header)
+                self.assertIn('tide-app__header-layout',header)
+                self.assertNotIn('tide-site-header--centered',header)
                 self.assertIn('aria-label="Saved"',header)
                 self.assertTrue(all('tide-button--compact' in link['class'] for link in links))
                 self.assertEqual([link['href'] for link in links if link.get('aria-current')=='page'],

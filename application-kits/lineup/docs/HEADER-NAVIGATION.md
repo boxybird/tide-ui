@@ -1,17 +1,25 @@
-# Centered header navigation · Lineup 2.1.6
+# Header navigation · Lineup 2.1.7
 
-Lineup adopts the selected third header direction and reviewed Tide treatment. Tide 1.12.0 supplies the opt-in `extensions/navigation.css` recipe; Lineup 2.1.6 loads it explicitly after the core stylesheet. No documentation-only CSS or private component appearance is copied into the application.
+Lineup composes Tide 1.12.0's Site header shell and reviewed navigation actions inside a private CSS Grid. The opt-in `extensions/navigation.css` remains loaded after the core stylesheet for navigation action states. Tide sources, recipes, tokens, registry and documentation site are unchanged.
 
-The shared header keeps Burque and the original native Filters trigger in the leading group, centers Find events and the route-appropriate secondary destination, and places Saved in a separate utility navigation. Saved reuses the existing Bookmark icon partial. Tide owns type, padding, colors, hover, held, current-page and focus appearance. Route context still marks only the actual index, venue, submission or Saved destination as current. Native event/result documents do not identify a different collection document as current.
+## Composition
 
-Desktop retains its 93px single row. Split tablet retains the original 48px Filters allowance. Narrow headers grow naturally as leading controls and primary links wrap. Native event documents keep their established narrow-screen header omission. Links, popover dismissal/focus return, field/reset behavior and browser history remain native.
+`header.html` owns the private `tide-app__header-layout` wrapper. Its flexible leading track leaves Burque at the start while Find events, the route-appropriate secondary destination and Saved sit on the right. The 24px external column gap separates primary navigation from Saved; the existing primary link list keeps Tide's 8px action gap. The original Filters control follows the utility on split tablet, and remains hidden with the permanent desktop filters.
 
-## Layout boundary
+Below 60rem, the grid places Burque and Saved on row one. Primary links occupy the start of row two and Filters aligns to its far right and top edge. Links wrap within their own cell, including text wrapping at the smallest widths. Header height grows in normal flow; no fixed phone height, absolute positioning, cloned controls, script or positive tabindex is used. Routes without filters give primary navigation the full second row. Native event documents retain their established header omission below 60rem.
 
-All five application stylesheets, data files and workspace/content partials remain byte-identical to the starting `c612546` commit. Only header/document markup, explicit kit loading and associated registration/tests/docs change. Main content is compared across all 738 generated main documents, including the review entry. No column, pane, filter, feed, summary, right document, footer, card, typography or photo layout is redesigned.
+The private wrapper owns its tracks, gap and placement. It does not alias or override the interior of Tide's centered header modifier; that modifier is no longer consumed. The shared header shell retains its padding and border. Buttons retain canonical type, padding, colors, radius, target sizes, hover, held, current-page and focus appearance. Saved keeps the source Bookmark icon. Only the actual index, venue, submission or Saved destination receives `aria-current="page"`.
 
-The necessary Tide promotion contains only the approved navigation modifiers, canonical header recipe, ownership registration and associated version/docs/specimens. Default CSS modules, tokens, palettes and assets are unchanged. A separate stylesheet keeps the core distribution budget intact.
+## Layout and behavior boundary
+
+Desktop retains its 93px single row, and split tablet retains the existing 48px Filters allowance and 97px header. All main content and non-header templates are unchanged from `86636a9`; all four non-header application stylesheets and data remain unchanged. The two left panes, summary, feed, right document, footer, native scrollbar gutters and at least 24px bottom clearance retain their geometry from 60rem upwards. Narrow content moves only with the header's normal-flow height.
+
+Links, browser Back, drawer opening/dismissal/focus return, native fields and Reset remain browser-owned. There is one original control set and zero browser JavaScript.
 
 ## Verification
 
-Thirty baseline geometry cases confirm identical desktop/split-tablet pane positions. Narrow headers wrap naturally; other boxes keep their dimensions and move only in normal document flow. Ninety all-theme cases verify exact Tide control metrics and no overlaps or horizontal overflow. Ten promoted kit-state cases and native application navigation, Back, drawer resize/reset/Escape/focus return and month navigation pass. All 738 generated main-content sections remain byte-identical. The [design QA](../design-qa.md) records the combined visual comparison, evidence and testing limits. A further 60 cases verify final 320/390px header spacing across themes. Root build/check and all 121 tests pass. Firefox/Safari, physical devices, screen readers and changed OS preferences remain unverified. The user accepted this header integration and requested preservation and a push on main.
+Thirty before/after cases cover index, venue, Saved, Help, submission and an event at 390, 768, 1024, 1200 and 1440px. All measured pane rectangles from 960px upwards are identical. A further 120 cases cover index/venue/Saved across all ten theme/mode pairs at 320, 390, 768 and 1440px, with no control overlaps, horizontal overflow or scripts. Eight breakpoint-edge cases cover 479/480, 703/704, 959/960 and 1199/1200px.
+
+Native Close and Escape return focus to Filters. An entered query survives an open-drawer resize from 390 to 1440px; the panel exactly fits its reserved desktop column. Reset clears the query. Native venue/Saved navigation and Back retain correct current-page states. Keyboard focus retains Tide's 2px outline and nominal 3px offset. Browser warnings/errors: none. Dependency fingerprints and all 737 generated route main sections retain parity. The [design QA](../design-qa.md) records the evidence.
+
+Root build/check and all 121 tests pass, including strict component ownership and unchanged performance budgets. Coverage is in-app Chromium on Windows with viewport emulation. Firefox/Safari, physical devices, screen readers, actual text zoom and changed system motion/forced-color preferences remain unverified. The previous centered integration and Tide promotion are preserved in the 2.1.6 changelog and design-QA history.

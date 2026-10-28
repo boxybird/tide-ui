@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.1.7 · 2026-10-28
+
+- Moved the primary navigation beside Saved on the right, separated by a named 24px external gap. Below 60rem, Burque and Saved occupy row one; primary links and the right-aligned Filters trigger occupy row two. Links wrap naturally on small phones.
+- Kept Tide 1.12.0 unchanged. A private application grid composes the existing Site header shell, navigation actions and original native Filters button without overriding component appearance or the centered kit recipe.
+- Preserved all main content, desktop/split-tablet pane geometry, native routes/current-page semantics and the single popover control set. See [header navigation](HEADER-NAVIGATION.md) and [design QA](../design-qa.md) for responsive and ownership evidence.
+
 ## 2.1.6 · 2026-10-27
 
 - Adopted reviewed centered primary navigation and separate Saved using Tide 1.12.0's opt-in recipe. Kept native route/current-page semantics, source icon and the original Filters trigger.

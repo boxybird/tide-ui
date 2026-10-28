@@ -1,6 +1,6 @@
-# Lineup design QA · compact headers and centered navigation
+# Lineup design QA · compact headers and header navigation
 
-The first sections retain the accepted 2.1.5 workspace record. The current 2.1.6 header integration and its verification are recorded below.
+The first sections retain the accepted 2.1.5 workspace and 2.1.6 centered-navigation records. The current 2.1.7 application-only header placement and its verification are recorded last.
 
 ## Findings
 
@@ -83,5 +83,20 @@ Verification completed:
 - Browser console warnings/errors: none recorded. Expanded measurements and parity reports are in the ignored QA folder. The user accepted the header integration and requested its commit and push on main.
 
 A further 60 narrow-theme cases at 320/390 verify the final header spacing, with no overlaps, horizontal overflow or scripts. The final root build/check passes: 1,041 HTML documents, 56,891 local references, 607 Markdown references and 121 tests (7 HTTP, 72 Tide, 42 application), including unchanged performance budgets and ownership guards. Firefox/Safari, physical devices, screen readers, actual text zoom and changed OS forced-color/motion preferences remain unverified.
+
+## Header placement · Lineup 2.1.7 / Tide unchanged
+
+The user requested primary navigation beside Saved instead of centered, plus Filters at the far right of the second row when the header collapses. Lineup now owns a private inner grid in `header.html` / `base.css`; the public centered modifier is removed from application markup. The existing Site header shell and navigation actions retain their Tide appearance. A named 24px external gap distinguishes Saved from the primary links. Below 60rem, Burque/Saved occupy row one and primary navigation/Filters occupy row two. Links can wrap in their own cell. This is native CSS Grid with no absolute placement, duplicated controls or browser JavaScript.
+
+Evidence from in-app Chromium on Windows, 2026-10-28, is in ignored `build/qa/lineup-header-placement/`: `desktop-before.png`, `desktop.png`, `phone.png`, `before.json`, `after.json`, `themes.json` and `breakpoints.json`. Desktop comparison uses 1440 × 900; phone uses 390 × 900. Appearance inputs remain Manrope, canonical compact 44px actions, 48px Filters, original padding/radius/focus/state colors, source icon, event photo and all copy. The private brand wrapper prevents the wordmark link's focus area from stretching across the flexible leading track.
+
+- Thirty before/after cases cover six route families at 390, 768, 1024, 1200 and 1440px. From 960px upwards every measured header/main/pane rectangle is identical. Narrow content keeps its dimensions and follows the new header height in normal flow.
+- All ten theme/mode pairs pass at 320, 390, 768 and 1440px for index, venue and Saved: 120 cases with no overlapping controls, horizontal overflow or scripts. Eight edge cases around 480/704/960/1200px also fit. Split/desktop panes retain 24px bottom clearance at 700px height.
+- Native pointer and Enter open the same popover; Close and Escape dismiss it and return focus to Filters. An entered query survives a 390-to-1440px open-drawer resize; the panel exactly matches its reserved column and still has one query field. Reset clears it. Venue/Saved links and browser Back preserve document-accurate current states. Keyboard focus remains a 2px outline with nominal 3px offset. Browser warnings/errors: none.
+- SHA-256 comparison confirms all 122 Tide/site source files unchanged and all 737 generated route main sections unchanged. Only application-owned canonical files are edited; Tide remains 1.12.0.
+
+Firefox/Safari, physical devices, screen readers, actual text zoom and changed system motion/forced-color preferences remain unverified.
+
+Root build/check passed with 1,041 HTML documents, 56,891 local references, 611 Markdown references and all 121 tests (7 HTTP, 72 Tide, 42 application). Performance and strict component-ownership checks pass. Canonical changes are confined to Lineup; `main` remains the only branch. The user reviewed and accepted this placement change and requested that it be committed and saved on 2026-10-28.
 
 final result: passed

@@ -21,6 +21,14 @@
     max-inline-size: var(--tide-app-max-width);
     margin-inline: auto;
   }
+  /* Private composition only; Tide still owns the header shell and controls. */
+  .tide-app__header-layout {
+    inline-size: 100%; display: grid; align-items: center;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: var(--tide-space-4) var(--tide-space-6);
+  }
+  .tide-app__header-primary { min-inline-size: 0; }
+  .tide-app__header-utility { inline-size: auto; justify-self: end; }
   .tide-app__workspace { max-inline-size: var(--tide-app-reading-width); margin-inline: auto; }
   .tide-app__browse-heading { display: none; min-inline-size: 0; }
   .tide-app__results { min-inline-size: 0; scroll-margin-block-start: var(--tide-space-6); }
@@ -56,10 +64,20 @@
 
   /* Content decides the split: 390px results + a useful detail column + gap/insets. */
   @media (60rem <= width < 75rem) {
+    .tide-app__header-layout:has(> .tide-app__filter-trigger) {
+      grid-template-columns: minmax(0, 1fr) auto auto auto;
+    }
     /* Filters is a canonical 48px control; navigation-only rows stay 44px. */
     .tide-app-document:has(.tide-app__filter-trigger) {
       --tide-app-header-row-size: var(--tide-size-control);
     }
+  }
+  @media (width < 60rem) {
+    .tide-app__header-layout { grid-template-columns: minmax(0, 1fr) auto; }
+    .tide-app__header-primary { grid-column: 1 / -1; grid-row: 2; }
+    .tide-app__header-layout:has(> .tide-app__filter-trigger) > .tide-app__header-primary { grid-column: 1; }
+    .tide-app__header-utility { grid-column: 2; grid-row: 1; }
+    .tide-app__filter-trigger { grid-column: 2; grid-row: 2; align-self: start; justify-self: end; }
   }
   @media (width >= 60rem) {
     .tide-app__header { min-block-size: var(--tide-app-header-block-size); }
