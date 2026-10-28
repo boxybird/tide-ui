@@ -1,6 +1,8 @@
 /* List headings and calendar context at every width; kit cards remain shared. */
 @layer tide.app-lineup {
-  .tide-app-document { --tide-lineup-summary-gap: var(--tide-space-4); }
+  /* The external gap and Tide's unchanged month padding compose 16px of
+     divider-to-label clearance consistently at every screen size. */
+  .tide-app-document { --tide-lineup-summary-gap: var(--tide-space-2); }
   .tide-lineup__summary--utility { margin-block-end: var(--tide-lineup-summary-gap); }
   .tide-app__results {
     scroll-padding-block-start: calc(var(--tide-lineup-month-height, var(--tide-size-target)) + var(--tide-space-2));
@@ -31,11 +33,6 @@
   }
   @media (width >= 60rem) {
     .tide-app-document:has(.tide-lineup__month:target):has(.tide-app--venue) { --tide-lineup-context-height: calc(var(--tide-leading-body) + var(--tide-space-8)); }
-  }
-  @media (width >= 75rem) {
-    /* Tide's month header adds space-2 above its label. Compose an equal
-       desktop label spacing without changing that component or the filters. */
-    .tide-app-document { --tide-lineup-summary-gap: var(--tide-space-2); }
   }
   /* Isolate the complete feed beneath its sibling permanent summary. */
   .tide-lineup__feed { isolation: isolate; }

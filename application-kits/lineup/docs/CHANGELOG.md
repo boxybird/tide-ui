@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.2.3 · 2026-10-28
+
+- Extended the accepted desktop utility-summary spacing to mobile and tablet: the application gap is `space-2` at every width, yielding 16px from the divider to the first month title on unscoped browse pages. Removed the redundant desktop breakpoint override; venue context retains its information-jump allowance.
+- Kept native month-fragment reservation tied to the same private gap. Desktop, Saved, filter-drawer clearance and Tide 1.12.0 remain unchanged; no browser runtime is introduced.
+- Verified eighteen route/viewport comparisons, twenty theme/viewport comparisons, unchanged drawer geometry and native tablet month jumps. Build/check pass with all 124 tests; 135 protected files remain byte-identical. See [design QA](../design-qa.md) for measurements and browser limits.
+
 ## 2.2.2 · 2026-10-28
 
 - Aligned the first month title with Search Events from the 75rem permanent-filter breakpoint. Reduced only Lineup's external utility-summary gap from `space-4` to `space-2`, retaining Tide's calendar/header padding and the existing search placement.

@@ -146,3 +146,17 @@ In-app Chromium on Windows, 2026-10-28:
 Expanded evidence remains ignored under `build/qa/lineup-desktop-label-spacing/`. Firefox/Safari, physical devices, screen readers and changed system preferences were not exercised for this spacing patch.
 
 `npm run build` and `npm run check` pass, including all 124 tests (7 HTTP, 72 Tide and 45 application), ownership guards, documentation links, performance budgets and the browser-JavaScript prohibition. All 135 protected Tide/reference-site/shared-tooling files match the starting fingerprints. Canonical edits are confined to Lineup, with `main` as the only branch.
+
+## Consistent utility-summary spacing · Lineup 2.2.3 / Tide unchanged
+
+The accepted desktop fix was committed and pushed as `67f4b16` before extending its private 8px summary gap to every width. The first month title on unscoped browse pages now starts 16px below its divider on mobile, tablet and desktop. Shared Results/calendar padding and typography remain canonical; the application breakpoint override is removed.
+
+In-app Chromium on Windows, 2026-10-28:
+
+- Eighteen before/after cases cover index, Sunshine Theater and Saved at 320×500 and 390, 768, 1024, 1200 and 1440×900. Below 75rem, utility feeds start 8px earlier. Headers, utility rows and filter geometry are unchanged. Single-column venue information follows the shorter list by 8px in ordinary flow with identical dimensions; the split right document stays in place. All measured desktop and Saved rectangles match 2.2.2 exactly. No horizontal document overflow or scripts were found.
+- Twenty cases cover all ten theme/mode pairs at 390 and 1440×900. Phone browse clearance is 16px; every desktop measurement matches 2.2.2. Venue pages retain their existing information-jump allowance above the month feed.
+- The 390px drawer's heading, title, content and search label retain identical geometry and 24px heading-to-search clearance. Native November links on split-tablet index and venue align the target header to the feed top with outer document scroll zero. The permanent summary stays visible and bounded feed bottoms retain 24px clearance. Console warnings/errors: none recorded.
+
+Evidence remains ignored under `build/qa/lineup-summary-spacing/`. Firefox/Safari, physical devices, screen readers and changed system preferences were not exercised for this spacing patch.
+
+`npm run build` and `npm run check` pass, including all 124 tests (7 HTTP, 72 Tide and 45 application), ownership guards, performance budgets, documentation links and the browser-JavaScript prohibition. All 135 protected Tide/reference-site/shared-tooling files match their starting fingerprints. Canonical edits remain within Lineup, with `main` as the only branch.

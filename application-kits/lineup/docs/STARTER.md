@@ -1,6 +1,6 @@
 # Start from Lineup
 
-Lineup 2.2.2 is layout family option 1, derived from Tide UI 1.12.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
+Lineup 2.2.3 is layout family option 1, derived from Tide UI 1.12.0. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
 
 The [compact-header contract](COMPACT-HEADERS.md) covers the selected workspace and its canonical utility recipe.
 

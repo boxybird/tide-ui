@@ -1,4 +1,4 @@
-# Lineup application kit · 2.2.2
+# Lineup application kit · 2.2.3
 
 The primary menu consistently offers **Find Events**, **Venues** and **Add an Event**, with Saved separate and Help in the site footer. Below 34rem, a native Menu popover keeps the phone header to two rows; tablet/desktop keep inline navigation. The Venues directory links to Sunshine Theater using existing Tide recipes. See [mobile navigation](docs/MOBILE-NAVIGATION.md) and the [directory contract](docs/VENUES-NAVIGATION.md).
 
