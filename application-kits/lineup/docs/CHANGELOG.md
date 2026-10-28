@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.2.2 · 2026-10-28
+
+- Aligned the first month title with Search Events from the 75rem permanent-filter breakpoint. Reduced only Lineup's external utility-summary gap from `space-4` to `space-2`, retaining Tide's calendar/header padding and the existing search placement.
+- Shared the private gap input with native month-fragment reservation. Preserved mobile/tablet spacing, Saved composition, the natural right document, bounded pane bottoms and zero browser JavaScript. Tide remains 1.12.0 and unchanged.
+- Verified eighteen route/viewport comparisons, twenty theme/viewport comparisons, exact mobile drawer parity and native month jumps. Build/check pass with all 124 tests; 135 protected Tide/reference-site/shared-tooling files are byte-identical. See [compact headers](COMPACT-HEADERS.md) and [design QA](../design-qa.md) for measurements and browser limits.
+
 ## 2.2.1 · 2026-10-28
 
 - Added the native mobile Menu below a content-based 34rem breakpoint. Menu/Filters share row two; brand/Saved retain row one. Wider screens keep the accepted inline navigation.

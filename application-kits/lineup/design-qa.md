@@ -132,3 +132,17 @@ The [navigation/directory contract](docs/VENUES-NAVIGATION.md) records forty all
 Below 34rem, a native Menu popover replaces the inline primary presentation. Brand/Saved retain row one; Menu/Filters share row two. A registered partial authors the real links once for both presentations. Private CSS controls responsive mounting and anchored placement; existing Tide navigation buttons, Icon and unchanged Panel provide appearance. All 68 routes and the original filter control set remain.
 
 The [mobile navigation contract](docs/MOBILE-NAVIGATION.md) records ten phone theme/mode cases, twenty exact desktop header comparisons, 320×500 and breakpoint/tablet checks, keyboard/outside dismissal, native link journeys, Filters interaction and resizing. All 124 repository checks pass (7 HTTP, 72 Tide, 45 application). Protected sources and the four filter-panel files are unchanged. Expanded evidence stays ignored under `build/qa/lineup-mobile-menu/`; browser and fallback testing limits are explicit in the contract.
+
+## Desktop first-label alignment · Lineup 2.2.2 / Tide unchanged
+
+From 75rem, the private utility-summary gap is 8px instead of 16px. Together with Tide's unchanged 8px calendar-header padding, October 2026 starts 16px below its utility divider, level with Search Events. Native month-fragment reservation shares the gap input. Mobile/tablet keep the 16px external gap and 24px divider-to-month-title spacing. Saved continues to use its separate default Results composition.
+
+In-app Chromium on Windows, 2026-10-28:
+
+- Eighteen before/after cases cover index, Sunshine Theater and Saved at 390, 1024, 1199, 1200, 1440 and 1920×900. Index/venue labels align exactly at desktop widths. Their feed starts 8px earlier and retains its bottom edge; search controls, utility headers, filter rail and right event document rectangles are unchanged. Every measured rectangle below 75rem and on Saved is identical.
+- Twenty theme cases cover all ten theme/mode pairs at 390 and 1440×900. Phone measurements match the baseline exactly; desktop labels align. No horizontal overflow or browser scripts were found.
+- The opened 390px filter drawer retains exactly the same measured geometry, including 24px heading-to-search clearance. November links on desktop index/venue and split-tablet index align the target header to the feed top with outer document scroll zero. The permanent summary stays exposed and desktop pane bottoms retain 24px clearance.
+
+Expanded evidence remains ignored under `build/qa/lineup-desktop-label-spacing/`. Firefox/Safari, physical devices, screen readers and changed system preferences were not exercised for this spacing patch.
+
+`npm run build` and `npm run check` pass, including all 124 tests (7 HTTP, 72 Tide and 45 application), ownership guards, documentation links, performance budgets and the browser-JavaScript prohibition. All 135 protected Tide/reference-site/shared-tooling files match the starting fingerprints. Canonical edits are confined to Lineup, with `main` as the only branch.

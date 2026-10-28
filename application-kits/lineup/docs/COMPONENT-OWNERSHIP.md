@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.2.1
+# Native component ownership · Lineup 2.2.2
 
 The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -15,7 +15,7 @@ The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScri
 | Split-tablet header allowance | `base.css` uses the canonical 48px control input only where Filters is present between 60rem and 75rem; navigation-only/desktop rows retain the 44px input |
 | Canonical component typography | Tide recipes; `test_presentation.py` rejects private aliases that override shared type across rendered routes |
 | Event photo return availability | Private `tide-app__event-back` / `tide-app__event-tools` hosts in `event-detail.html` and `base.css`: hide the return link from 60rem when the list is beside the event; preserve optional Saved placement and omit an otherwise empty toolbar. Tide photo-control and toolbar appearance remain unchanged |
-| Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; canonical Results utility variant; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
+| Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; canonical Results utility variant; summary outside `.tide-app__feed-scroll`, isolated complete feed inside. The private summary gap is 8px from 75rem and 16px below it; native fragment reservation uses the same input. Tide's calendar padding remains unchanged |
 | Visible browse heading | `lineup-summary.html` authors the visible count heading outside the popover; `filter-heading.html` supplies the desktop utility label. Both use the canonical utility variant |
 | Venue result destinations and recovery | `data/pages.json` venue owner/result map, `html_templates.py`, scope/reset/empty partials; same venue information in populated and empty states |
 | Native responsive filter drawer | `filter-trigger.html`, `filter-rail.html`, `filters.css`; popover buttons, left slide/reduced motion, scrolling body/pinned footer and CSS return to the reserved desktop column; one form/control set, native disclosure/reset, browser-owned dismissal/focus |

@@ -1,6 +1,7 @@
 /* List headings and calendar context at every width; kit cards remain shared. */
 @layer tide.app-lineup {
-  .tide-lineup__summary--utility { margin-block-end: var(--tide-space-4); }
+  .tide-app-document { --tide-lineup-summary-gap: var(--tide-space-4); }
+  .tide-lineup__summary--utility { margin-block-end: var(--tide-lineup-summary-gap); }
   .tide-app__results {
     scroll-padding-block-start: calc(var(--tide-lineup-month-height, var(--tide-size-target)) + var(--tide-space-2));
   }
@@ -16,7 +17,7 @@
     .tide-app-document:has(.tide-lineup__month:target) {
       --tide-app-page-intro-height: calc(var(--tide-space-2) + var(--tide-leading-label) + var(--tide-space-2) + var(--tide-leading-page) + var(--tide-space-3) + var(--tide-leading-body) + var(--tide-space-6));
       --tide-lineup-context-height: 0px;
-      --tide-lineup-results-height: calc(3 * var(--tide-space-4) + var(--tide-leading-section) + var(--tide-border-width));
+      --tide-lineup-results-height: calc(2 * var(--tide-space-4) + var(--tide-leading-section) + var(--tide-border-width) + var(--tide-lineup-summary-gap));
       --tide-lineup-target-offset: calc(var(--tide-lineup-context-height) + var(--tide-lineup-results-height));
       scroll-padding-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6) + var(--tide-lineup-target-offset));
     }
@@ -30,6 +31,11 @@
   }
   @media (width >= 60rem) {
     .tide-app-document:has(.tide-lineup__month:target):has(.tide-app--venue) { --tide-lineup-context-height: calc(var(--tide-leading-body) + var(--tide-space-8)); }
+  }
+  @media (width >= 75rem) {
+    /* Tide's month header adds space-2 above its label. Compose an equal
+       desktop label spacing without changing that component or the filters. */
+    .tide-app-document { --tide-lineup-summary-gap: var(--tide-space-2); }
   }
   /* Isolate the complete feed beneath its sibling permanent summary. */
   .tide-lineup__feed { isolation: isolate; }

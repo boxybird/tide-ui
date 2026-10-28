@@ -1,10 +1,12 @@
-# Compact utility headers · Lineup 2.1.5
+# Compact utility headers · Lineup 2.2.2
 
 The selected visual target is [option three](design/compact-headers-target.png). The implementation starts from the clean 2.1.4 commit `8239327`. The user reviewed and accepted the Tide 1.11.0 recipe and Lineup 2.1.5 integration on 2026-10-27, then requested preservation on main.
 
 ## Composition
 
-Desktop uses two aligned compact utility rows: Search & filters over the left controls, and the authored count with Soonest first over the event feed. The Coming up intro, general tagline and The lineup kicker are removed. The right detail document and original 20/35/45 composition remain. Search controls and the first month header begin on the same row below the utility headers.
+Desktop uses two aligned compact utility rows: Search & Filters over the left controls, and the authored count with Soonest first over the event feed. The Coming up intro, general tagline and The lineup kicker are removed. The right detail document and original 20/35/45 composition remain. The Search Events label and first month title align below the utility headers.
+
+From 75rem, Lineup 2.2.2 uses an 8px external summary gap (`--tide-lineup-summary-gap`, `space-2`). Tide's unchanged month header contributes another 8px top padding, placing its title 16px below the divider, level with Search Events. Below 75rem the external gap remains 16px (`space-4`), preserving the current 24px divider-to-month-title spacing. Native fragment reservation uses the same private gap input. Search controls, shared header/calendar recipes, Saved and the natural right document retain their existing placement.
 
 Both rows consume the canonical `tide-results--utility` variant. The application does not override their type, colors, padding or divider. Private Grid rows and external gaps compose them. The static left utility label is a paragraph; the result count is the page h1, or a secondary h2 on native event documents whose event title remains h1. An inline screen-reader-only prefix supplies Albuquerque or venue context without another visible heading. Results keeps its original focusable region, labels and IDs; controls remain in the original aside.
 
@@ -18,7 +20,7 @@ The user separately authorized the small Tide extension required for the selecte
 
 The image mock is a header-layout target. The implementation preserves canonical 44px choice targets, original card/calendar typography and the supplied photographic asset rather than copying incidental generative changes to those existing components.
 
-## Verification
+## Historical 2.1.5 verification
 
 In-app Chromium on Windows, using viewport emulation:
 
