@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## Consumer integration documentation · 2026-10-28
+
+- Added a framework-neutral [consumer integration guide](CONSUMER-INTEGRATION.md) covering the existing document/form/region composition, native fallback, optional navigation, collection loading, focus/history, failures, motion and upgrade responsibilities.
+- Linked the guide from the README, handoff, starter, runtime and ownership documents. Distinguished current private markup from a public integration API and kept the external consumer experiment separate.
+- Documentation-only clarification: Lineup remains 2.1.8 with Tide 1.12.0. Application sources, fixtures, styles, assets, tests, manifests and browser behavior are unchanged; no runtime dependency or Tide recipe is added.
+- Verified `npm run build` and `npm run check`, including 72 Tide tests, 42 application tests and the local HTTP suite. The first HTTP run was blocked by sandbox loopback access; the final run passed with local access. Documentation links resolve, and source/output fingerprints match. No browser interactions were changed or newly exercised for this documentation update; the external experiment's browser limits remain as stated in the guide.
+
 ## 2.1.8 · 2026-10-28
 
 - Hid the event photo's top-left return link from 60rem, matching the breakpoint where the event list and detail appear together. Retained the working native link on smaller event documents.

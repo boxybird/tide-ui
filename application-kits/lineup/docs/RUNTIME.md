@@ -17,3 +17,7 @@ The build creates all, Music, Comedy, Workshop and empty result documents from t
 Custom scroll-to-top delays, reading-position stores, session preferences, fetched first-result previews, draft result counters and photo/inspection parameters are retired. Existing file paths still load native pages; old query parameters have no browser behavior. No application service replaces the removed scripts.
 
 Build/check reject script files/imports, inline handlers and JavaScript URLs at browser boundaries. Tooling may use Node/Python, but is not shipped to the browser. Actual browser coverage and limits are recorded in the desktop contract and policy.
+
+## Independent consumers
+
+The zero-script boundary describes the delivered kit. An independent consuming website may add its own navigation/search runtime while retaining complete direct documents and native fallback. Requests, partial replacement, history/cache coordination, loading/error feedback, additional motion and return-state preservation then belong to that consumer. See the [consumer integration guide](CONSUMER-INTEGRATION.md); no runtime, endpoint or test client is added to Lineup by that documentation.

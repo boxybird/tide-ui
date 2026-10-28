@@ -14,6 +14,8 @@ Links, browser history, month fragments, details/summary, form reset, required/t
 
 This is an HTML/CSS application kit, not an operating events service. Removing tutorial presentation does not add search matching, persistence, booking or submission services.
 
+For optional enhanced navigation, replacement regions, search/collection state, pagination, loading/motion, return context and upgrade verification, use the [consumer integration guide](CONSUMER-INTEGRATION.md). Complete native documents remain the foundation; an independent consumer chooses its runtime and response protocol. The guide adds no application scripts, framework requirement or public selector API.
+
 - The search form sends a native GET request with `q`, `from`, `to`, repeated `category` values and `venue`. Its global action is `search.html`; venue actions remain at `sunshine-theater.html`. The local static preview serves those documents without evaluating query parameters, so changed input values do not change the result set or count. The recipient can connect this form contract to its own server. CSS is not a text/date search engine.
 - Saved contains an authored shortlist. Links open that page; they do not store a selection.
 - The submission layout preserves labels, required/type constraints, hints, permission and local file selection. It has Reset and Back actions, with no operational submission/upload endpoint or submit control.

@@ -23,6 +23,7 @@ The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScri
 | Document, browse, results and filter body/footer | Registered `document.html`, `workspace*.html`, `filter-rail.html`, `filter-status.html`, `filter-actions.html` |
 | Eleven submission fields | Registered `form-*.html`, `data/submission-fields.json` and build-time form renderer |
 | Browser runtime | None. `behaviorHome` is empty; checks reject browser executables and script hooks. |
+| Independent consumer enhancements | Consumer-owned runtime/server and styles outside Lineup/Tide; navigation, matching, pagination, loading/error feedback, additional motion and return-state coordination. See the [integration guide](CONSUMER-INTEGRATION.md); its private-markup map adds no public selector API. |
 
 The [2.1.4 handoff contract](HANDOFF.md) removes tutorial result-state navigation and example wording from customer-facing templates. Native form fields remain; reference layouts, fixture provenance and integration limits live outside the product interface. This does not alter shared components or add service behavior.
 
