@@ -28,6 +28,9 @@
 
     .tide-app--columns {
       --tide-app-content-width: 92rem;
+      --tide-app-filter-offset: calc(3 * var(--tide-space-4) + var(--tide-leading-section) + var(--tide-border-width) + var(--tide-app-venue-context-height, 0px));
+      --tide-app-filter-top: calc(var(--tide-app-panel-top) + var(--tide-app-filter-offset));
+      --tide-app-filter-height: max(0px, calc(var(--tide-app-panel-height) - var(--tide-app-filter-offset)));
       display: grid; grid-template-columns: var(--tide-app-desktop-columns);
       grid-template-rows: var(--tide-app-header-block-size) auto auto;
       gap: var(--tide-app-pane-gap); align-content: start;
@@ -49,13 +52,15 @@
       position: sticky; inset-block-start: var(--tide-app-panel-top);
       block-size: var(--tide-app-panel-height); min-inline-size: 0;
       display: grid; grid-template-columns: subgrid;
-      grid-template-rows: auto minmax(0, 1fr); column-gap: var(--tide-app-pane-gap);
+      grid-template-rows: auto minmax(0, 1fr); gap: var(--tide-space-4) var(--tide-app-pane-gap);
     }
     .tide-app__browse-heading {
-      grid-column: 1; grid-row: 1; margin-inline-start: calc(-1 * var(--tide-layout-inset));
+      display: block; grid-column: 1; grid-row: 1; margin-inline-start: calc(var(--tide-space-2) - var(--tide-layout-inset));
       max-block-size: calc(var(--tide-app-panel-height) * .4);
-      overflow-y: auto; scrollbar-width: thin;
+      overflow-y: auto; scrollbar-width: thin; scrollbar-gutter: stable;
     }
+    .tide-app--venue { --tide-app-venue-context-height: calc(var(--tide-leading-body) + var(--tide-space-8)); }
+    .tide-app--venue .tide-app__browse-heading { padding-block-end: var(--tide-app-venue-context-height); }
     .tide-app--columns .tide-app__results {
       position: relative; inset-block-start: auto;
       grid-column: 2; grid-row: 1 / -1;

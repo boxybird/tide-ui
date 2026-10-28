@@ -12,14 +12,14 @@
     .tide-app__filter-rail:popover-open {
       position: fixed;
       position-anchor: --tide-app-filter-column;
-      inset-block-start: var(--tide-app-panel-top);
+      inset-block-start: var(--tide-app-filter-top);
       inset-inline-start: var(--tide-app-content-inset);
       inline-size: calc((100cqw - 2 * var(--tide-app-content-inset) - 2 * var(--tide-app-pane-gap)) * .2);
-      block-size: var(--tide-app-panel-height);
-      inset-block-start: anchor(top, var(--tide-app-panel-top));
+      block-size: var(--tide-app-filter-height);
+      inset-block-start: anchor(top, var(--tide-app-filter-top));
       inset-inline-start: anchor(left, var(--tide-app-content-inset));
       inline-size: anchor-size(width, calc((100cqw - 2 * var(--tide-app-content-inset) - 2 * var(--tide-app-pane-gap)) * .2));
-      block-size: anchor-size(height, var(--tide-app-panel-height));
+      block-size: anchor-size(height, var(--tide-app-filter-height));
     }
     .tide-app__filter-rail::backdrop { display: none; }
   }

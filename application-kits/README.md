@@ -4,9 +4,9 @@ Application kits are named, independently versioned starting points composed fro
 
 | Kit | Layout family | Application version | UI dependency | Canonical home |
 | --- | --- | --- | --- | --- |
-| [Lineup](lineup/README.md) | Option 1: responsive event discovery with a list/detail workspace | 2.0.4 | Tide 1.10.0 | `application-kits/lineup/` |
+| [Lineup](lineup/README.md) | Option 1: responsive event discovery with a list/detail workspace | 2.1.5 | Tide 1.11.0 | `application-kits/lineup/` |
 
-“Option 1” identifies this layout family, not a semantic version. The existing application history continues at 2.0.4. Future alternatives get their own meaningful sibling names, independent application versions and ownership contracts; they consume the same canonical UI kit. Release snapshots belong in Git tags/artifacts, not copied version folders. No second kit is created by this move.
+“Option 1” identifies this layout family, not a semantic version. The existing application history continues at 2.1.5. Future alternatives get their own meaningful sibling names, independent application versions and ownership contracts; they consume the same canonical UI kit. Release snapshots belong in Git tags/artifacts, not copied version folders. No second kit is created by this move.
 
 Work on an application kit must not modify Tide's component sources, recipes, tokens, palettes or registry. Adopt documented UI-kit options in application markup; record missing options as application audit findings. Extending the source of truth requires a separately authorized UI-kit task. Shared integration checks may follow a source relocation without changing the UI-kit API or distribution.
 

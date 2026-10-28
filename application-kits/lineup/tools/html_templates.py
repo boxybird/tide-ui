@@ -160,7 +160,11 @@ class AppTemplates:
             'RESET_TAG':'a' if venue else 'button',
             'RESET_ATTRIBUTES':attribute('href', collection_href) if venue else Html(attribute('type','reset')+attribute('form','event-search-form')),
             'SCOPE_EXIT':self.partial('scope-link', {'LINK_HREF':'index.html', 'LINK_LABEL':'All events across Albuquerque'}) if venue else Html(''),
-            'SUMMARY_KICKER':Html('') if saved else self.partial('summary-kicker', {'KICKER':'Sunshine Theater' if venue else 'The lineup'}),
+            'RESULT_VARIANT':Html('' if saved else ' tide-results--utility'),
+            'SUMMARY_VARIANT':Html('' if saved else ' tide-lineup__summary--utility'),
+            'RESULT_LEVEL':2 if saved else page.get('headingLevel', 1),
+            'RESULT_CONTEXT':Html('') if saved else self.partial('result-context', {'RESULT_CONTEXT_LABEL':'Sunshine Theater events' if venue else 'Albuquerque events'}),
+            'RESULT_SCOPE':Html(''),
             'SUMMARY_BADGE':Html('') if saved else self.partial('summary-badge', {}),
             'SUMMARY_TOGGLE':Html(''),
             'EMPTY_HIDDEN':Html(' hidden' if events else ''),
@@ -183,6 +187,8 @@ class AppTemplates:
             'FOOTER_BACK_LABEL':'All events across Albuquerque' if venue else 'Back to all events',
             'FOOTER_NOTE':'Your saved events, all in one place.' if saved else 'You’re all caught up.',
         })
+        if venue:
+            values['RESULT_SCOPE'] = self.partial('result-scope', values)
         if selected and not venue:
             event = self.by_id[selected]
             values['EVENT_DETAIL'] = self.details.render(event, 1 if route in self.by_id else 2)

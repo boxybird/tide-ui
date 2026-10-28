@@ -52,7 +52,7 @@ def build(check=False):
     review = review_document(buttons)
     review=review.replace('</head>','<link rel="preload" href="../tide/assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin></head>')
     expected[OUT / 'index.html'] = review.encode('utf-8')
-    for p in [ROOT/'README.md',*(ROOT/'docs').rglob('*')]:
+    for p in [ROOT/'README.md',ROOT/'design-qa.md',*(ROOT/'docs').rglob('*')]:
         if not p.is_file():continue
         content=p.read_bytes()
         if p.suffix=='.md':

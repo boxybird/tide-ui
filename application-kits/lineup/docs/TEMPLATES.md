@@ -10,7 +10,7 @@ Only `{{UPPERCASE_VALUE}}` and `{{> registered-partial}}` are supported. Plain v
 | `document.html`, `workspace.html` | Native document and main browse/detail slots; stylesheets only |
 | `workspace-browse.html`, `workspace-results.html` | Static filter/list grouping and results region |
 | `filter-trigger.html`, `filter-rail.html`, `filters.html`, `filter-status.html`, `filter-actions.html` | Native popover trigger/close and one responsive panel/form/control set, disclosures, reset and venue context; no tutorial result-state menu |
-| `results-intro.html`, `lineup-summary.html`, `month-group.html` | Canonical Page intro, Results and calendar slots; private context wrapper beside Results, plain month/year text; no DOM rewriting or private type aliases |
+| `results-intro.html`, `lineup-summary.html`, `month-group.html` | Canonical Page intro, Results and calendar slots; canonical utility headers with a screen-reader context prefix, plain month/year text; no DOM rewriting or private type aliases |
 | `event-list.html`, `month-nav.html`, `month-jump.html` | Summary outside the native feed scroller, stable fragment destinations and complete-feed isolation |
 | `event-card.html`, `event-detail.html`, `detail-*.html` | Cards and all 54 native event details, with authored preview heading levels |
 | `data/events.json`, `data/detail-presentations.json` | The canonical 54 sample events and full/concise presentation defaults |
@@ -22,4 +22,4 @@ The builder emits 67 documents in the default app and all ten theme/mode combina
 
 Source/markup contracts verify event selection, one original form, labels/IDs, route contexts, category counts, escaping and zero script dependencies. See [native runtime boundary](RUNTIME.md) and [document composition](PAGES.md).
 
-`workspace-browse.html` now owns the single ordinary-document heading outside the popover. `scope-link.html` composes native context/exit links; `filter-reset.html` chooses a global native reset button or scoped venue navigation link. Venue owner/result destinations and empty recovery are documented in [heading and venue contracts](HEADINGS-VENUE-SCOPE.md).
+`lineup-summary.html` now owns the visible count heading outside the popover. `filter-heading.html` supplies its aligned desktop utility label; see the [compact-header contract](COMPACT-HEADERS.md). `scope-link.html` composes native context/exit links; `filter-reset.html` chooses a global native reset button or scoped venue navigation link. Venue owner/result destinations and empty recovery are documented in [heading and venue contracts](HEADINGS-VENUE-SCOPE.md).

@@ -65,7 +65,7 @@ class TemplateContracts(unittest.TestCase):
         self.assertEqual(saved.current, ['ink-after-dark'])
         self.assertNotIn('data-venue', saved.cards[0])  # Existing shortlist semantics.
 
-    def test_one_heading_stays_outside_the_popover_while_controls_remain_inside(self):
+    def test_count_heading_stays_exposed_while_controls_remain_in_the_popover(self):
         for route in set(self.app.by_id) | {name for name,page in self.app.routes.items() if page.get('collection') in ('all','venue')}:
             with self.subTest(route=route):
                 parsed=Elements(self.app.page(route))
@@ -73,7 +73,7 @@ class TemplateContracts(unittest.TestCase):
                     self.assertIn('lineup-filters', parsed.ancestors[identifier])
                     self.assertNotIn('results', parsed.ancestors[identifier])
                 self.assertNotIn('lineup-filters', parsed.ancestors['results-title'])
-                self.assertNotIn('results', parsed.ancestors['results-title'])
+                self.assertIn('results', parsed.ancestors['results-title'])
                 self.assertIn('results', parsed.ancestors['result-count'])
                 self.assertNotIn('lineup-filters', parsed.ancestors['result-count'])
                 self.assertEqual(parsed.inputs.count('event-query'), 1)

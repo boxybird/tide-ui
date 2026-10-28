@@ -1,10 +1,6 @@
 /* List headings and calendar context at every width; kit cards remain shared. */
 @layer tide.app-lineup {
-  /* The context is an application wrapper beside the canonical Results recipe.
-     Shared component type, padding, borders and internal layout stay in Tide. */
-  .tide-lineup__context {
-    padding: var(--tide-space-6) var(--tide-layout-inset) var(--tide-space-4);
-  }
+  .tide-lineup__summary--utility { margin-block-end: var(--tide-space-4); }
   .tide-app__results {
     scroll-padding-block-start: calc(var(--tide-lineup-month-height, var(--tide-size-target)) + var(--tide-space-2));
   }
@@ -15,30 +11,25 @@
     /* Saved has an intro before its permanent summary; only the feed grows. */
     .tide-app__results:has(> .tide-app__intro) { grid-template-rows: auto auto minmax(0, 1fr); }
     .tide-app__feed-scroll { min-block-size: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-gutter: stable; scroll-padding-block-start: 0; }
-    /* Native fragments scroll every ancestor. The context wrapper and the
-       canonical one-line Results row reserve space only in the outer page. */
+    /* Native fragments reserve the authored summary in the outer document.
+       The feed itself keeps zero target padding and native scrolling. */
     .tide-app-document:has(.tide-lineup__month:target) {
       --tide-app-page-intro-height: calc(var(--tide-space-2) + var(--tide-leading-label) + var(--tide-space-2) + var(--tide-leading-page) + var(--tide-space-3) + var(--tide-leading-body) + var(--tide-space-6));
-      --tide-app-browse-heading-height: 0px;
-      --tide-lineup-context-height: calc(var(--tide-space-6) + var(--tide-leading-label) + var(--tide-space-4));
-      --tide-lineup-results-height: calc(2 * var(--tide-space-4) + var(--tide-leading-body) + var(--tide-border-width));
-      --tide-lineup-target-offset: calc(var(--tide-app-browse-heading-height) + var(--tide-lineup-context-height) + var(--tide-lineup-results-height));
-      scroll-padding-block-start: calc(var(--tide-space-6) + var(--tide-lineup-target-offset));
+      --tide-lineup-context-height: 0px;
+      --tide-lineup-results-height: calc(3 * var(--tide-space-4) + var(--tide-leading-section) + var(--tide-border-width));
+      --tide-lineup-target-offset: calc(var(--tide-lineup-context-height) + var(--tide-lineup-results-height));
+      scroll-padding-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6) + var(--tide-lineup-target-offset));
     }
     /* Saved has the canonical Page intro instead of the context wrapper.
        Its authored title/supporting copy fit one line at split-layout widths. */
     .tide-app-document:has(.tide-lineup__month:target):has(.tide-app__results > .tide-app__intro) {
       --tide-lineup-context-height: var(--tide-app-page-intro-height);
+      --tide-lineup-results-height: calc(2 * var(--tide-space-4) + var(--tide-leading-body) + var(--tide-border-width));
     }
     .tide-app__filter-body { scrollbar-gutter: stable; }
   }
-  @media (60rem <= width < 75rem) {
-    .tide-app-document:has(.tide-lineup__month:target):has(.tide-app__browse-heading) {
-      --tide-app-browse-heading-height: var(--tide-app-page-intro-height);
-    }
-    .tide-app-document:has(.tide-lineup__month:target):has(.tide-app--venue) {
-      --tide-app-browse-heading-height: calc(var(--tide-app-page-intro-height) + var(--tide-space-3) + var(--tide-leading-body));
-    }
+  @media (width >= 60rem) {
+    .tide-app-document:has(.tide-lineup__month:target):has(.tide-app--venue) { --tide-lineup-context-height: calc(var(--tide-leading-body) + var(--tide-space-8)); }
   }
   /* Isolate the complete feed beneath its sibling permanent summary. */
   .tide-lineup__feed { isolation: isolate; }

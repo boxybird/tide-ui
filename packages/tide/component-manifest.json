@@ -1,5 +1,5 @@
 {
-  "version": "1.10.0",
+  "version": "1.11.0",
   "classConvention": "BEM with tide- prefix",
   "runtime": "HTML and CSS; native browser behavior only",
   "componentSource": "templates/library.html#components",
@@ -1343,7 +1343,7 @@
       ],
       "source": "css/layout.css",
       "styleOwnership": "kit",
-      "behavior": "Explicit count and order typography. Consumer supplies truthful singular/plural counts; static specimens are not live regions or sorting controls. Dynamic announcements belong to the consumer.",
+      "behavior": "Explicit count and order typography. Consumer supplies truthful singular/plural counts; static specimens are not live regions or sorting controls. Dynamic announcements belong to the consumer. The utility variant promotes the count to a 20px heading and moves the separator below the row; default Results presentation is unchanged.",
       "htmlSource": "templates/listings.html",
       "fixture": "listing-states.html",
       "contract": "docs/LISTINGS.md",
@@ -1353,11 +1353,17 @@
         "many",
         "long labels",
         "hidden",
-        "context isolation"
+        "context isolation",
+        "utility heading",
+        "utility long labels",
+        "utility context isolation"
       ],
       "supportingSources": [
         "css/components.css",
         "css/patterns.css"
+      ],
+      "variants": [
+        "utility"
       ]
     },
     "tide-screen": {

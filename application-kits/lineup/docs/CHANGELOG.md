@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.1.5 · 2026-10-27
+
+- Implemented the selected compact Search & filters / result-count headers using Tide 1.11.0's canonical utility variant. Removed the Coming up intro, general tagline and repeated The lineup context label.
+- Kept the count heading outside the drawer, one visible h1 per document, a contextual accessible name, the original form/controls, 20/35/45 desktop columns, permanent summary, complete isolated feed and natural detail document. Native event titles remain h1; Saved retains its default Results recipe.
+- Preserved venue information/recovery, native drawer/resize/reset/focus behavior and month navigation. Updated application geometry, heading contracts, visual comparison and responsive evidence in the [compact-header record](COMPACT-HEADERS.md).
+- The user reviewed and accepted both the authorized Tide recipe and application changes for preservation on main.
+
 ## 2.1.4 · 2026-10-27
 
 - Removed tutorial result-state navigation, duplicate sample counts, example search/category labels and explanatory demo text from the application. Retained the native search form, dates/categories, Reset, venue context and useful recovery links.

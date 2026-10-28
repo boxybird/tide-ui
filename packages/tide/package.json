@@ -1,6 +1,6 @@
 {
   "name": "tide-html-css-kit",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "private": true,
   "description": "BEM HTML recipes and semantic CSS tokens for Tide, Bumble, Slate, Grove and Iris",
   "license": "MIT",

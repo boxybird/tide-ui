@@ -1,4 +1,4 @@
-# Listing components · Tide 1.9.0
+# Listing components · Tide 1.11.0
 
 Event cards, prominent dates, calendar groups and result summaries own reusable presentation. Native links own navigation. Consumers render actual event/status/count/hidden state and own routing, matching, announcements and viewport placement. The kit ships no browser JavaScript and consumes no live event source.
 
@@ -23,6 +23,10 @@ Canonical recipes: `templates/listing-card.html`, `listing-date.html` and `listi
 Values use named rem-based type/spacing inputs. Date columns use font-relative minimums, not clipping widths. Family, style, weight, tracking and case are explicit on component roots; intentional category/title/date styles are explicit on slots. There is no viewport-driven density change. Useful long content wraps and can increase height.
 
 Fixed gaps delimit metadata fields. The legacy decorative `__separator` nodes are hidden and omitted from new recipes, so wrapping cannot leave orphan divider lines. Existing markup remains valid; visible inter-card separators retain their separate list contract.
+
+## Utility result headers
+
+The additive `tide-results--utility` option provides a 20px/28px count or utility label, primary text and an inset lower divider. Default Results stays at 14px/24px with its existing top divider. See the [full utility contract](RESULTS-UTILITY.md) for native heading semantics, geometry, specimens and review status.
 
 ## Event cards
 

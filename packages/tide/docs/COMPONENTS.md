@@ -136,6 +136,8 @@ For a paired preview, add `tide-event-card--in-view` and put the existing neutra
 
 `css/patterns.css` owns the adopted disclosure, calendar group, card preview outline and result-summary elements. `templates/adopted-patterns.html` is the shared source for their library specimens and the `app-patterns.html` frame in all ten theme/modes. A component's public class and its CSS source belong in the registry; supporting blocks and compositions are recorded there too. The app's ownership check rejects new shared blocks with no registered home.
 
+The [Results utility variant](RESULTS-UTILITY.md) adds compact 20px count/label headers while preserving default Results presentation.
+
 ## Semantic heading levels (reviewed copy 1.0.1)
 
 Use `.tide-event-hero__title`, `.tide-event-details__title`, `.tide-event-details__section-title` and `.tide-page-intro__title` on headings independently of their HTML level. An event title can be H1 on a standalone page or H2 in a browse preview. Typography is unchanged. Legacy level-specific selectors remain compatibility aliases. Choose one primary H1 per document and avoid skipped levels within each content outline.

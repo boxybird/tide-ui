@@ -22,7 +22,7 @@
     margin-inline: auto;
   }
   .tide-app__workspace { max-inline-size: var(--tide-app-reading-width); margin-inline: auto; }
-  .tide-app__browse-heading { min-inline-size: 0; }
+  .tide-app__browse-heading { display: none; min-inline-size: 0; }
   .tide-app__results { min-inline-size: 0; scroll-margin-block-start: var(--tide-space-6); }
   .tide-app__intro h1, .tide-app__intro h2 { max-inline-size: 20ch; }
   .tide-app__search { padding-inline: var(--tide-layout-inset); }
@@ -79,14 +79,13 @@
       min-inline-size: 0;
       display: grid;
       grid-template-columns: minmax(0, 1fr);
-      grid-template-rows: auto minmax(0, 1fr);
+      grid-template-rows: minmax(0, 1fr);
     }
-    .tide-app__browse-heading { grid-column: 1; grid-row: 1; }
     .tide-app__filter-clip { display: contents; }
     .tide-app__browse > .tide-app__results {
       position: relative;
       inset-block-start: auto;
-      grid-column: 1; grid-row: 2;
+      grid-column: 1; grid-row: 1;
       min-block-size: 0; block-size: 100%; max-block-size: 100%;
     }
     .tide-app__results {

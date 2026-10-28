@@ -1,5 +1,11 @@
 # Changelog
 
+## Tide kit 1.11.0 · 2026-10-27
+
+- Added the opt-in `tide-results--utility` recipe for 20px/28px utility labels/counts and an inset lower divider. Default Results, filter-panel titles, palette inputs, primitive tokens and assets are unchanged.
+- Registered the variant and added all-theme label/zero/one/many/long/hidden/context specimens, ownership/behavior documentation and regression guards. See the [utility contract](packages/tide/docs/RESULTS-UTILITY.md).
+- Lineup 2.1.5 consumes the recipe for the selected compact headers. The user authorized this narrow UI-kit extension, reviewed the implementation and accepted it for preservation on main.
+
 ## Repository · Lineup application-kit home and audit · 2026-10-27
 
 - Named the current application kit **Lineup**, layout family **option 1**, and moved its complete maintained sources from `examples/events/` to `application-kits/lineup/`. Preserved application version 2.0.4, all 64 native routes, `/events/` preview URLs and the generated `build/events/` home. Future application layouts get named sibling homes and independent versions; release history stays in tags/artifacts.

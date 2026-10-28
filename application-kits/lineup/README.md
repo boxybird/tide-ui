@@ -1,8 +1,8 @@
-# Lineup application kit · 2.1.4
+# Lineup application kit · 2.1.5
 
-**Lineup has a product-facing interface with no tutorial controls or browser JavaScript.** Version 2.1.4 removes sample-result navigation and example/design-study copy. The responsive drawer already uses native HTML popovers and modern CSS. See the [handoff and integration contract](docs/HANDOFF.md). The completed [Tide alignment](docs/TIDE-ALIGNMENT.md) remains the component baseline; Tide is unchanged.
+**Lineup uses the selected compact utility headers.** Version 2.1.5 aligns Search & filters with the result count and removes the Coming up intro, tagline and repeated The lineup label. Both rows consume Tide's new canonical utility variant. The [implementation contract](docs/COMPACT-HEADERS.md) and [design QA](design-qa.md) record composition and verification. The user reviewed and accepted the Tide and Lineup changes on 2026-10-27. The [handoff boundary](docs/HANDOFF.md) still applies; no browser JavaScript or service behavior is introduced.
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.10.0**. Burque Events is its authored sample website. The application version is **2.1.4**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus the four global result references and three scoped venue empty views: 67 documents in the default app and each of ten theme/mode combinations.
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.11.0**. Burque Events is its authored sample website. The application version is **2.1.5**; option 1 does not reset its release history. All 54 events are authored samples. The original 60 routes remain, plus the four global result references and three scoped venue empty views: 67 documents in the default app and each of ten theme/mode combinations.
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 

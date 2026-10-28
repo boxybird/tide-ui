@@ -56,6 +56,23 @@ class ListingContracts(unittest.TestCase):
             self.assertEqual(decl['font-style'],'normal')
             self.assertEqual(decl['text-transform'],'none')
 
+    def test_utility_variant_is_additive_and_registered(self):
+        layout=list(rules((ROOT/'css/layout.css').read_text(encoding='utf-8')))
+        default=next(d for s,d,c in layout if s=='.tide-results')
+        utility=next(d for s,d,c in layout if s=='.tide-results--utility')
+        self.assertEqual(default['border-block-start'],'var(--tide-border-hairline)')
+        self.assertNotIn('border-block-end',default)
+        self.assertEqual(utility['border-block-start'],'0')
+        self.assertEqual(utility['border-block-end'],'var(--tide-border-hairline)')
+        patterns=list(rules((ROOT/'css/patterns.css').read_text(encoding='utf-8')))
+        title=next(d for s,d,c in patterns if s=='.tide-results--utility .tide-results__count')
+        self.assertEqual(title['font-size'],'var(--tide-font-size-section)')
+        self.assertEqual(title['line-height'],'var(--tide-leading-section)')
+        self.assertIn('utility',self.manifest['compositionContracts']['tide-results']['variants'])
+        expected={'utility-label','utility-zero','utility-one','utility-many','utility-long','utility-context','utility-hidden'}
+        actual={n['attrs'].get('data-listing-result') for n in self.nodes if 'tide-results--utility' in n['attrs'].get('class','').split()}
+        self.assertEqual(actual,expected)
+
     def test_dates_have_valid_full_labels_and_decorative_fragments(self):
         dates=[n for n in self.nodes if 'tide-date' in n['attrs'].get('class','').split()]
         self.assertGreaterEqual(len(dates),20)

@@ -1,4 +1,6 @@
-# Tide HTML and CSS kit · 1.10.0
+# Tide HTML and CSS kit · 1.11.0
+
+The additive [Results utility variant](docs/RESULTS-UTILITY.md) supplies the 20px header treatment reviewed and accepted on 2026-10-27. Default Results and other component recipes remain unchanged.
 
 All public blocks have required [ownership contracts](docs/OWNERSHIP.md). The [final normalization pass](docs/KIT-CLOSEOUT.md) covers remaining components and page rhythm, with an all-theme `frames/kit-closeout.html` matrix. See [completion and verification limits](docs/NORMALIZATION-STATUS.md).
 

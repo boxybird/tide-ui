@@ -1,6 +1,6 @@
-# Native component ownership · Lineup 2.1.4
+# Native component ownership · Lineup 2.1.5
 
-The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
+The Lineup application kit consumes Tide 1.11.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
 | Responsibility | Canonical home |
 | --- | --- |
@@ -12,8 +12,8 @@ The Lineup application kit consumes Tide 1.10.0 and contains no browser JavaScri
 | Filter footer and status internals | Tide owns rail padding/gap, flex/wrapping status row, count alignment and Reset text flow; private child wrappers supply narrow drawer clearance without aliasing public slots |
 | Split-tablet header allowance | `base.css` uses the canonical 48px control input only where Filters is present between 60rem and 75rem; navigation-only/desktop rows retain the 44px input |
 | Canonical component typography | Tide recipes; `test_presentation.py` rejects private aliases that override shared type across rendered routes |
-| Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; private context wrapper beside canonical Results; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
-| Visible browse heading | `workspace-browse.html` authors one canonical intro outside the popover; private grid placement keeps it visible on phone/tablet/desktop |
+| Permanent summary and native scrolling feed | `event-list.html`, `lineup-summary.html`, `lineup.css`; canonical Results utility variant; summary outside `.tide-app__feed-scroll`, isolated complete feed inside |
+| Visible browse heading | `lineup-summary.html` authors the visible count heading outside the popover; `filter-heading.html` supplies the desktop utility label. Both use the canonical utility variant |
 | Venue result destinations and recovery | `data/pages.json` venue owner/result map, `html_templates.py`, scope/reset/empty partials; same venue information in populated and empty states |
 | Native responsive filter drawer | `filter-trigger.html`, `filter-rail.html`, `filters.css`; popover buttons, left slide/reduced motion, scrolling body/pinned footer and CSS return to the reserved desktop column; one form/control set, native disclosure/reset, browser-owned dismissal/focus |
 | Result/card/month counts and label spans | Build-time `tools/html_templates.py`, `data/events.json`, `data/pages.json` and registered partials |
