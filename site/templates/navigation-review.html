@@ -1,0 +1,91 @@
+<body class="tide">
+<main class="tide-doc-navigation" id="navigation-review">
+  <header class="tide-doc-navigation__intro">
+    <p class="tide-eyebrow">Tide 1.11.0 · navigation proposal</p>
+    <h1>Navigation that belongs to Tide.</h1>
+    <p>Before and after, beside the controls we already ship. The proposed header uses existing compact actions; its current-page treatment is the only new control appearance.</p>
+    <p><a class="tide-link" href="../index.html#components">Component sheet</a> · <a class="tide-link" href="button-states.html">All button states</a> · <a class="tide-link" href="navigation.html">Current navigation specimen</a> · <a class="tide-link" href="../../docs/NAVIGATION-REVIEW.md">Review contract</a></p>
+    <nav class="tide-row" aria-label="Review theme and appearance">{{REVIEW_THEMES}}</nav>
+  </header>
+
+  <section class="tide-doc-navigation__section" aria-labelledby="before-title">
+    <h2 id="before-title">Before · the current site header</h2>
+    <div class="tide-doc-navigation__example" data-navigation-case="before">
+      <header class="tide-site-header" id="before-header">
+        <a class="tide-brand" href="navigation-review.html" aria-label="Burque specimen home">BURQUE<span aria-hidden="true">.</span></a>
+        <nav aria-label="Before primary"><ul class="tide-site-header__links">
+          <li><a class="tide-site-header__link" id="before-current" href="#before-current" aria-current="page">Find events</a></li>
+          <li><a class="tide-site-header__link" href="venues.html">Sunshine Theater</a></li>
+          <li><a class="tide-site-header__link" href="saved.html">Saved</a></li>
+        </ul></nav>
+      </header>
+    </div>
+    <p class="tide-caption">Existing 14px / 24px navigation text, 44px minimum targets and permanent underlines. Current page uses stronger text and a thicker underline.</p>
+  </section>
+
+  <section class="tide-doc-navigation__section" aria-labelledby="after-title">
+    <h2 id="after-title">After · the proposed centered header</h2>
+    <div class="tide-doc-navigation__example" data-navigation-case="after">
+      <header class="tide-site-header tide-doc-navigation__header" id="after-header">
+        <a class="tide-brand" href="navigation-review.html" aria-label="Burque specimen home">BURQUE<span aria-hidden="true">.</span></a>
+        <nav aria-label="After primary"><ul class="tide-doc-navigation__links">
+          <li><a class="tide-button tide-button--quiet tide-button--compact tide-doc-navigation__link" id="after-current" href="#after-current" aria-current="page">Find events</a></li>
+          <li><a class="tide-button tide-button--quiet tide-button--compact tide-doc-navigation__link" id="after-other" href="venues.html">Sunshine Theater</a></li>
+        </ul></nav>
+        <a class="tide-button tide-button--secondary tide-button--compact" id="after-saved" href="saved.html">{{REVIEW_BOOKMARK}}Saved</a>
+      </header>
+    </div>
+    <p class="tide-caption">Existing compact geometry: 44px minimum, 10px block / 16px inline padding, 14px / 22px type, weight 550 and 2px control radius. The current link uses Tide’s existing selected surface/text pair.</p>
+  </section>
+
+  <section class="tide-doc-navigation__section" aria-labelledby="relatives-title">
+    <h2 id="relatives-title">The proposed links, beside their closest relatives</h2>
+    <div class="tide-doc-navigation__comparison">
+      <section class="tide-doc-navigation__group" aria-labelledby="quiet-title"><h3 id="quiet-title">Existing quiet compact action</h3><a class="tide-button tide-button--quiet tide-button--compact" id="relative-quiet" href="#relative-quiet">Find events</a><p class="tide-caption">The inactive navigation link reuses this exact recipe.</p></section>
+      <section class="tide-doc-navigation__group" aria-labelledby="current-title"><h3 id="current-title">Proposed current-page link</h3><a class="tide-button tide-button--quiet tide-button--compact tide-doc-navigation__link" id="relative-current" href="#relative-current" aria-current="page">Find events</a><p class="tide-caption">Same geometry. Current page has a selected fill and text; its reserved border stays quiet at rest.</p></section>
+      <section class="tide-doc-navigation__group" aria-labelledby="selected-title"><h3 id="selected-title">Existing selected quiet button</h3><button class="tide-button tide-button--quiet tide-button--compact" id="relative-selected" type="button" aria-pressed="true">Selected action</button><p class="tide-caption">Same selected color pair and interaction keylines. A toggle also has Tide’s selected border at rest.</p></section>
+      <section class="tide-doc-navigation__group" aria-labelledby="saved-title"><h3 id="saved-title">Existing secondary compact link</h3><a class="tide-button tide-button--secondary tide-button--compact" id="relative-saved" href="#relative-saved">{{REVIEW_BOOKMARK}}Saved</a><p class="tide-caption">The proposed Saved utility is this exact component, including the 18px source icon.</p></section>
+    </div>
+  </section>
+
+  <section class="tide-doc-navigation__section" aria-labelledby="live-title" id="live-states">
+    <h2 id="live-title">Live state lab · hover, hold and Tab</h2>
+    <p>These are real native controls. Hover over either column, hold a pointer down, then Tab through them to see the actual state rules. The links below keep this lab in view so state inspection stays on this sheet.</p>
+    <div class="tide-doc-navigation__lab">
+      <section class="tide-doc-navigation__group" aria-labelledby="existing-lab-title"><h3 id="existing-lab-title">Existing Tide controls</h3>
+        <a class="tide-button tide-button--quiet tide-button--compact" id="lab-quiet" href="#live-states">Quiet compact link</a>
+        <button class="tide-button tide-button--quiet tide-button--compact" id="lab-selected" type="button" aria-pressed="true">Selected quiet button</button>
+        <a class="tide-button tide-button--secondary tide-button--compact" id="lab-secondary" href="#live-states">{{REVIEW_BOOKMARK}}Saved</a>
+        <button class="tide-button tide-button--quiet tide-button--compact" id="lab-disabled" type="button" aria-pressed="true" disabled>Unavailable action</button>
+      </section>
+      <section class="tide-doc-navigation__group" aria-labelledby="proposed-lab-title"><h3 id="proposed-lab-title">Proposed navigation</h3>
+        <a class="tide-button tide-button--quiet tide-button--compact tide-doc-navigation__link" id="lab-nav-rest" href="#live-states">Other destination</a>
+        <a class="tide-button tide-button--quiet tide-button--compact tide-doc-navigation__link" id="lab-nav-current" href="#live-states" aria-current="page">Current destination</a>
+        <a class="tide-button tide-button--secondary tide-button--compact" id="lab-nav-saved" href="#live-states">{{REVIEW_BOOKMARK}}Saved</a>
+        <a class="tide-button tide-button--quiet tide-button--compact tide-doc-navigation__link" id="lab-nav-disabled" role="link" aria-disabled="true" aria-current="page">Unavailable destination</a>
+      </section>
+    </div>
+    <p class="tide-caption">Current page uses aria-current, not aria-pressed. These links do not become toggle buttons. An unavailable link omits href; CSS does not disable navigation.</p>
+  </section>
+
+  <section class="tide-doc-navigation__section" aria-labelledby="system-title">
+    <h2 id="system-title">The same system around them</h2>
+    <div class="tide-row" data-navigation-case="system-controls">
+      <button class="tide-button" type="button">Primary action · 48px</button>
+      <button class="tide-button tide-button--secondary" type="button">Secondary action · 48px</button>
+      <button class="tide-button tide-button--quiet" type="button">Quiet action · 48px</button>
+      <a class="tide-chip" href="#system-title">Compact chip · 44px</a>
+    </div>
+    <div class="tide-field"><label class="tide-field__label" for="review-query">Existing field · 48px</label><input class="tide-field__control" id="review-query" type="search" placeholder="Event, artist or venue"></div>
+    <table class="tide-doc-navigation__table"><thead><tr><th scope="col">Property</th><th scope="col">Existing compact action</th><th scope="col">Proposed navigation</th></tr></thead><tbody>
+      <tr><th scope="row">Target and padding</th><td>44px minimum; 10px / 16px padding</td><td>Unchanged, including wrapping and zoom</td></tr>
+      <tr><th scope="row">Type, border and radius</th><td>Manrope 14px / 22px, weight 550; reserved 1px border; 2px radius</td><td>Unchanged</td></tr>
+      <tr><th scope="row">Other-link hover / held</th><td>Raised surface / selected pair</td><td>Inherited from the quiet action</td></tr>
+      <tr><th scope="row">Current-link hover / held</th><td>Selected controls use 1px / 2px inset feedback</td><td>Same keylines; current-page fill and text remain visible</td></tr>
+      <tr><th scope="row">Keyboard focus</th><td>2px focus outline, 3px outside offset</td><td>Inherited unchanged; independent of current page</td></tr>
+      <tr><th scope="row">Meaning</th><td>Actions use button semantics; toggle state uses aria-pressed</td><td>Destinations remain anchors; location uses aria-current</td></tr>
+    </tbody></table>
+  </section>
+  <footer class="tide-doc-navigation__destination tide-stack"><p>This proposal is isolated to the review stylesheet. Tide’s distributed components and the Lineup application have not been changed.</p><p><a class="tide-link" href="../index.html#components">Return to components</a> · <a class="tide-link" href="button-states.html">Inspect the full button matrix</a></p></footer>
+</main>
+</body>

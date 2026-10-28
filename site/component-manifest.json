@@ -1,5 +1,6 @@
 {
   "styleHome": "css/docs.css",
+  "reviewStyles": ["css/navigation-review.css"],
   "privateBlocks": [
     "tide-doc-actions",
     "tide-doc-anchor",
@@ -17,6 +18,7 @@
     "tide-doc-label",
     "tide-doc-listing",
     "tide-doc-nav",
+    "tide-doc-navigation",
     "tide-doc-panel",
     "tide-doc-rules",
     "tide-doc-screen",

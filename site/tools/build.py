@@ -63,6 +63,18 @@ def buttons(level):
     return (ROOT/'templates/buttons.html').read_text(encoding='utf-8').replace('{{BUTTON_LEVEL}}', str(level)).replace('{{BUTTON_SUBLEVEL}}', str(level+1))
 
 
+def navigation_review(themes):
+    """Isolated proposal using existing action recipes; not a kit API release."""
+    fragment=(SITE/'templates/navigation-review.html').read_text(encoding='utf-8')
+    svg=(ROOT/'assets/icons/BookmarkIcon.svg').read_text(encoding='utf-8')
+    svg=re.sub(r'<svg[^>]*>', '<svg class="tide-icon" viewBox="0 0 15 15" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">', svg)
+    links=[]
+    for theme,meta in themes.items():
+        for appearance in ('light','dark'):
+            links.append(f'<a class="tide-link" href="../../{theme}-{appearance}/frames/navigation-review.html">{escape(meta["name"])} / {appearance}</a>')
+    return fragment.replace('{{REVIEW_BOOKMARK}}',svg).replace('{{REVIEW_THEMES}}',''.join(links))
+
+
 def controls(level):
     fragment=(ROOT/'templates/controls.html').read_text(encoding='utf-8')
     svg=(ROOT/'assets/icons/ChevronDownIcon.svg').read_text(encoding='utf-8')
@@ -185,6 +197,9 @@ def outputs(themes, resolved, audit):
                 html = document(body,title,key,mode,'../../',docs=source.name in ('app-patterns.html','filter-panel.html','button-states.html','form-states.html','feedback-states.html','listing-states.html','kit-closeout.html'))
                 if source.name=='kit-closeout.html':html=html.replace('</head>','<link rel="stylesheet" href="../../extensions/panel.css">\n</head>')
                 result[ROOT/f'{key}-{mode}'/'frames'/source.name] = html
+            review=document(navigation_review(themes),'Navigation review · '+theme['name']+' / '+mode,key,mode,'../../',docs=True)
+            review=review.replace('</head>','<link rel="stylesheet" href="../../css/navigation-review.css">\n</head>')
+            result[ROOT/f'{key}-{mode}'/'frames/navigation-review.html']=review
     system = '<body class="tide tide-screen tide-screen--kit"><main class="tide-page-body tide-page-body--spaced tide-stack"><p class="tide-eyebrow">System appearance</p><h1>Day or night.</h1><p>This page has no mode-switching JavaScript. Change your operating system appearance to test it.</p><div class="tide-notice"><strong>The same roles, in both modes.</strong><p>Native form controls and page surfaces use the active color scheme.</p></div><div class="tide-field"><label class="tide-field__label" for="sample">A native control</label><input class="tide-field__control" id="sample" value="Ink After Dark"></div><a class="tide-button" href="index.html#themes">Back to the kit</a></main></body>'
     result[ROOT/'system.html'] = document(system,'Tide · System appearance','tide','system','')
     panel=(ROOT/'templates/panel.html').read_text(encoding='utf-8')
@@ -215,12 +230,17 @@ def build(check=False):
             content=re.sub(r'((?:href|src)=")((?:\.\./)*)(css/tide\.css|assets/[^"<>]+)(")',lambda m:m[1]+os.path.relpath(PROJECT/'build/tide'/m[3],target.parent).replace('\\','/')+m[4],content)
         files[target]=content.encode('utf-8')
     files[OUT/'css/docs.css']=(SITE/'css/docs.css').read_bytes()
-    scripts=json.loads((SITE/'component-manifest.json').read_text(encoding='utf-8'))['behaviorHome']
+    site_manifest=json.loads((SITE/'component-manifest.json').read_text(encoding='utf-8'))
+    review_styles=site_manifest['reviewStyles']
+    assert {SITE/name for name in review_styles}==set((SITE/'css').glob('*-review.css')), 'Register each isolated review stylesheet.'
+    for name in review_styles:files[OUT/name]=(SITE/name).read_bytes()
+    scripts=site_manifest['behaviorHome']
     assert {SITE/name for name in scripts}==set((SITE/'scripts').glob('*.js')), 'Register every documentation demonstration script.'
     for name in scripts:files[OUT/name]=(SITE/name).read_bytes()
     files[OUT/'extensions/panel.css']=(ROOT/'extensions/panel.css').read_bytes()
     for p in (ROOT/'docs').glob('*.md'):files[OUT/'docs'/p.name]=p.read_bytes()
     files[OUT/'README.md']=(ROOT/'README.md').read_bytes()
+    files[OUT/'design-qa.md']=(ROOT/'design-qa.md').read_bytes()
     files[OUT/'tokens/resolved.json']=(PROJECT/'build/tide/tokens/resolved.json').read_bytes()
     files[OUT/'screen-map.json']=(SITE/'screen-map.json').read_bytes()
     for path,content in files.items():

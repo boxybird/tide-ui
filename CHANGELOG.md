@@ -1,5 +1,11 @@
 # Changelog
 
+## Documentation · Tide navigation review · 2026-10-27
+
+- Added an isolated all-theme before/after navigation sheet beside the existing button specimens. It compares the proposed centered header with Tide’s compact quiet/secondary actions and their native states, geometry and semantics.
+- Kept the proposal outside the distributed kit CSS and public API. Tide remains 1.11.0; Lineup sources and output are unchanged. See the [review contract](packages/tide/docs/NAVIGATION-REVIEW.md).
+- The user accepted the navigation comparison and requested a commit and push. The accepted scope includes only navigation-review sources and their documentation, registration and checks; unrelated components remain unchanged.
+
 ## Tide kit 1.11.0 · 2026-10-27
 
 - Added the opt-in `tide-results--utility` recipe for 20px/28px utility labels/counts and an inset lower divider. Default Results, filter-panel titles, palette inputs, primitive tokens and assets are unchanged.
