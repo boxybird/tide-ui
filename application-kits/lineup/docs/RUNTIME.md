@@ -22,3 +22,7 @@ Build/check reject script files/imports, inline handlers and JavaScript URLs at 
 ## Independent consumers
 
 The zero-script boundary describes the delivered kit. An independent consuming website may add its own navigation/search runtime while retaining complete direct documents and native fallback. Requests, partial replacement, history/cache coordination, loading/error feedback, additional motion and return-state preservation then belong to that consumer. See the [consumer integration guide](CONSUMER-INTEGRATION.md); no runtime, endpoint or test client is added to Lineup by that documentation.
+
+## Venue directory · 2.3.0
+
+[Venue navigation](VENUE-DIRECTORY.md) uses native fragments, focus, scrolling and popovers. The separate prototype runtime is not imported. Live venue search, provider maps, fetched content and persistence remain consumer integrations; the native venue search form uses the same GET integration contract as event search, while matching stays consumer-owned. No simulated zoom controls are shipped.

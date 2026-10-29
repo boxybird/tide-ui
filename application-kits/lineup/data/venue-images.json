@@ -1,0 +1,88 @@
+{
+  "images": [
+    {
+      "id": "albuquerque-map",
+      "sourceSha256": "2619236a49ea867e5f0eaa3bece33fb7d311e3fe3cf32c932b2220e00dba470e",
+      "served": "assets/venues/albuquerque-map.webp",
+      "servedSha256": "b471461d73ddd108fcb9608bb7d1a3df277dd50f057e163beb98e2cff4cd4e83",
+      "width": 1295,
+      "height": 1214,
+      "bytes": 148700,
+      "encoding": "WebP, quality 86",
+      "kind": "AI-generated concept illustration; not documentary or geospatial evidence",
+      "sourceImageId": "exec-fd3314ec-d49e-4669-80a8-4aa4b44f85b4.png"
+    },
+    {
+      "id": "sunshine-theater",
+      "sourceSha256": "0e3a78a6b048a64469108ec3bbac1f8ca29a353181ffc0a070a56e4b20e619bb",
+      "served": "assets/venues/sunshine-theater.webp",
+      "servedSha256": "362e7f077e2b235b9c4f033287132c6eb7f52b2750b9f2849f3d93786ebc8720",
+      "width": 880,
+      "height": 495,
+      "bytes": 63898,
+      "encoding": "WebP, quality 86",
+      "kind": "AI-generated concept illustration; not documentary or geospatial evidence",
+      "sourceImageId": "exec-cb40f0dc-2487-45f3-b8c3-fec0b289934b.png"
+    },
+    {
+      "id": "sister",
+      "sourceSha256": "3155371f2bd4e290d41ff6b2cb4cb48ceb4ee23de69b547971c8bd6e2b5d3e65",
+      "served": "assets/venues/sister.webp",
+      "servedSha256": "91bcb1f01ae510332f7267dc98eb15732b81eef155e043961c4b01a4265a412a",
+      "width": 880,
+      "height": 495,
+      "bytes": 58800,
+      "encoding": "WebP, quality 86",
+      "kind": "AI-generated concept illustration; not documentary or geospatial evidence",
+      "sourceImageId": "exec-55b9f6b3-5eac-4e3a-ae95-25ac1d62d9f8.png"
+    },
+    {
+      "id": "barelas-print-studio",
+      "sourceSha256": "b1cc5bc9ca5210a3424adc808e735bf0e59ad9c41067b25556f09489f54b652b",
+      "served": "assets/venues/barelas-print-studio.webp",
+      "servedSha256": "3d20eef39eec83768557d2f0d51986cba5d362b02f9e69ab9ce71967a2b7c3b0",
+      "width": 880,
+      "height": 495,
+      "bytes": 96822,
+      "encoding": "WebP, quality 86",
+      "kind": "AI-generated concept illustration; not documentary or geospatial evidence",
+      "sourceImageId": "exec-a1b513d8-37cd-4c1e-90db-8a5e971dca3f.png"
+    },
+    {
+      "id": "the-paper-table",
+      "sourceSha256": "c3aa3bc3ca3fa257ac2fb990b64527f2ab54c9391bc4a0413ce45509b17066b7",
+      "served": "assets/venues/the-paper-table.webp",
+      "servedSha256": "7c295b9ab44521118e76f8b70166ea8897503bc36c4f2eedc9cf5e39e9807dad",
+      "width": 880,
+      "height": 495,
+      "bytes": 118274,
+      "encoding": "WebP, quality 86",
+      "kind": "AI-generated concept illustration; not documentary or geospatial evidence",
+      "sourceImageId": "exec-5981a673-42ea-442a-b1d2-80d1dab17498.png"
+    },
+    {
+      "id": "dry-heat",
+      "sourceSha256": "f88c3f5491901c14a6bb41e09e6122296e397b9a843c5bce70a8570180b0e38a",
+      "served": "assets/venues/dry-heat.webp",
+      "servedSha256": "d376f4289d92b77d483138ce276c88969674c4a5df1658ba43c8201851326f2f",
+      "width": 880,
+      "height": 495,
+      "bytes": 35424,
+      "encoding": "WebP, quality 86",
+      "kind": "AI-generated concept illustration; not documentary or geospatial evidence",
+      "sourceImageId": "exec-9436602c-19ba-4e42-af51-14c9ba759658.png"
+    },
+    {
+      "id": "warehouse-room",
+      "sourceSha256": "2d48d97df2a1574a4e8f0651033656cd14fdabd33f76da82e2586e4da6bab846",
+      "served": "assets/venues/warehouse-room.webp",
+      "servedSha256": "be98ebda77ac128a45a7422d53c50311a878442fb1bd6402bdc267e34c5e568e",
+      "width": 880,
+      "height": 495,
+      "bytes": 77934,
+      "encoding": "WebP, quality 86",
+      "kind": "AI-generated concept illustration; not documentary or geospatial evidence",
+      "sourceImageId": "exec-cd5bb8e3-f8c0-4254-85e9-5f221b30d832.png"
+    }
+  ]
+}

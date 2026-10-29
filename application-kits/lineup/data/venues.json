@@ -1,0 +1,56 @@
+[
+  {
+    "id": "sunshine-theater",
+    "name": "Sunshine Theater",
+    "kind": "Live music",
+    "alt": "A live band under warm red lights in an intimate concert room.",
+    "image": "assets/venues/sunshine-theater.webp",
+    "width": 880,
+    "height": 495
+  },
+  {
+    "id": "sister",
+    "name": "Sister",
+    "kind": "Live music",
+    "alt": "A small music room glowing with blue and magenta stage lights.",
+    "image": "assets/venues/sister.webp",
+    "width": 880,
+    "height": 495
+  },
+  {
+    "id": "dry-heat",
+    "name": "Dry Heat",
+    "kind": "Comedy",
+    "alt": "An intimate comedy stage with a microphone, stool and warm amber lights.",
+    "image": "assets/venues/dry-heat.webp",
+    "width": 880,
+    "height": 495
+  },
+  {
+    "id": "barelas-print-studio",
+    "name": "Barelas Print Studio",
+    "kind": "Printmaking & workshops",
+    "alt": "An ink press and paper in a warm, inviting printmaking studio.",
+    "image": "assets/venues/barelas-print-studio.webp",
+    "width": 880,
+    "height": 495
+  },
+  {
+    "id": "the-paper-table",
+    "name": "The Paper Table",
+    "kind": "Creative workshops",
+    "alt": "Wooden making tables, paper, tools and plants in a light-filled workshop.",
+    "image": "assets/venues/the-paper-table.webp",
+    "width": 880,
+    "height": 495
+  },
+  {
+    "id": "warehouse-room",
+    "name": "Warehouse Room",
+    "kind": "Community events",
+    "alt": "Rows of chairs facing a small warmly lit stage in a community event room.",
+    "image": "assets/venues/warehouse-room.webp",
+    "width": 880,
+    "height": 495
+  }
+]

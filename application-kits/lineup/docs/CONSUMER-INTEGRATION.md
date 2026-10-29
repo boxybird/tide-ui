@@ -84,3 +84,7 @@ Record the Lineup release, its Tide dependency and the consumer adapter version 
 Verify the consumer against direct visits/refreshes, native and enhanced links, modified clicks, history/return, fragments, one h1, scope/count/selection, form-associated controls, native drawer focus, responsive scroll containers, empty/end states, pending/error/retry, stale responses and reduced motion. Include relevant themes, keyboards, browsers, devices and assistive technology; record what was actually exercised rather than treating source checks as accessibility certification.
 
 An isolated external consumer exercised enhanced navigation, live matching, paginated/infinite collections, loading feedback and return-state handling against this release without requiring Lineup or Tide source changes. That feasibility evidence is Chromium on Windows; it does not make the external adapter a kit dependency or establish cross-browser, screen-reader or production-service coverage. The experiment and its runtime remain separate from this repository.
+
+## Venue directory search · 2.3.0 refinement
+
+`venue-search-form` is a native GET form to `venues.html`; its `venue-query` search control submits `q`. It uses the unchanged Tide Field recipe. The static kit preview does not match query text or update its six-entry fixture count; the consuming server or optional enhancement supplies matching/results, URL handling and any return state. The field remains part of the delivered UI. See [venue directory](VENUE-DIRECTORY.md) for the native map/fragment and provider boundary.

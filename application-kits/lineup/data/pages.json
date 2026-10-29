@@ -112,5 +112,35 @@
     "sampleFilter": {
       "empty": true
     }
+  },
+  "sister": {
+    "documentTitle": "Sister · Venue & upcoming events · Burque",
+    "layout": "content",
+    "source": "venues.html",
+    "venueEntry": "sister"
+  },
+  "dry-heat": {
+    "documentTitle": "Dry Heat · Venue & upcoming events · Burque",
+    "layout": "content",
+    "source": "venues.html",
+    "venueEntry": "dry-heat"
+  },
+  "barelas-print-studio": {
+    "documentTitle": "Barelas Print Studio · Venue & upcoming events · Burque",
+    "layout": "content",
+    "source": "venues.html",
+    "venueEntry": "barelas-print-studio"
+  },
+  "the-paper-table": {
+    "documentTitle": "The Paper Table · Venue & upcoming events · Burque",
+    "layout": "content",
+    "source": "venues.html",
+    "venueEntry": "the-paper-table"
+  },
+  "warehouse-room": {
+    "documentTitle": "Warehouse Room · Venue & upcoming events · Burque",
+    "layout": "content",
+    "source": "venues.html",
+    "venueEntry": "warehouse-room"
   }
 }

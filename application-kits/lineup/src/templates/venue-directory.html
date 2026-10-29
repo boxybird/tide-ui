@@ -1,0 +1,14 @@
+<main class="tide-venue__directory" id="main-content" tabindex="-1">
+  <header class="tide-venue__intro">
+    <div class="tide-results tide-results--utility"><h1 class="tide-results__count" id="venue-directory-title">Venues</h1><p class="tide-results__order">Albuquerque</p></div>
+    <div class="tide-venue__intro-body"><div class="tide-stack">
+      <form class="tide-field" id="venue-search-form" action="venues.html" method="get" role="search" aria-label="Search venues"><label class="tide-field__label" for="venue-query">Search venues</label><input class="tide-field__control" id="venue-query" name="q" type="search" placeholder="Venue name or type" maxlength="160"></form>
+      <div class="tide-venue__views"><nav class="tide-row" aria-label="Venue views"><a class="tide-button tide-button--secondary tide-button--compact" href="#venue-list">List</a><a class="tide-button tide-button--secondary tide-button--compact" href="#venue-map">Map</a></nav></div>
+    </div></div>
+  </header>
+  <section class="tide-venue__list" id="venue-list" tabindex="0" aria-label="Venue list"><div class="tide-event-list">{{VENUE_ROWS}}</div></section>
+  <figure class="tide-venue__map" id="venue-map" tabindex="0" aria-label="Illustrated venue map">
+    <div class="tide-venue__map-frame"><div class="tide-venue__map-world"><img class="tide-venue__map-image" src="assets/venues/albuquerque-map.webp" width="1295" height="1214" alt="Illustration of central Albuquerque, with venue controls overlaid." decoding="async"><div role="group" aria-label="Venue locations">{{VENUE_POINTS}}</div></div></div>
+    <figcaption class="tide-caption">Illustrative venue locations.</figcaption>
+  </figure>
+</main>

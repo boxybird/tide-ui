@@ -5,6 +5,7 @@ import json
 import os
 import re
 from html_templates import AppTemplates
+from css_distribution import compact_css
 
 ROOT = Path(__file__).resolve().parents[1]
 PROJECT=ROOT.parents[1]
@@ -32,7 +33,7 @@ def build(check=False):
     assert not behavior_sources and not list((ROOT/'src/runtime').rglob('*.js')), 'Browser JavaScript is forbidden in the native example.'
     css_sources = [ROOT/name for name in manifest['styleHome']]
     assert set(css_sources) == set((ROOT/'src/styles').glob('*.css')), 'Register every app stylesheet in consumer-manifest.json, in cascade order.'
-    css = '/* App composition only; generated from src/styles/. */\n' + '\n'.join(source.read_text(encoding='utf-8') for source in css_sources)
+    css = '/* App composition only; generated from src/styles/. */\n' + compact_css('\n'.join(source.read_text(encoding='utf-8') for source in css_sources))
     expected[OUT/'runtime/css/app.css'] = css.encode('utf-8')
     # Consume the existing public extension byte-for-byte. Its source remains in
     # Tide; only this application's generated dependency copy is emitted here.

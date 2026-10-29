@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.2.3
+# Native component ownership · Lineup 2.3.0
 
 The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -8,7 +8,7 @@ The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScri
 | 20/35/45 centered desktop layout, bounded left panes and natural right document | `src/styles/desktop.css`, static `tide-app--columns` body modifier and authored workspace templates |
 | Saved desktop tracks | `desktop.css`: results in column 1, detail in column 2; scoped browse overrides keep their three-column placement |
 | Navigation and skip-link presentation | Tide's Site header shell, compact navigation actions and `tide-skip-link`; Lineup authors destinations, list semantics, current-page context and focusable IDs |
-| Primary destinations and venue directory | Consistent Find Events / Venues / Add an Event, separate Saved, footer Help, and authored `src/pages/venues.html` adopting Content page/Venue card; see [navigation and directory](VENUES-NAVIGATION.md). |
+| Primary destinations and venue directory | Consistent Find Events / Venues / Add an Event, separate Saved, footer Help, and registered venue templates adopting unchanged Event list/card slots for photo-free directory rows; private CSS owns pane geometry. See [venue directory](VENUE-DIRECTORY.md). |
 | Native mobile Menu | `header.html`, shared `navigation-items.html` and `base.css` own responsive availability, private mounting and CSS anchor placement. Tide's existing Button, navigation and Panel recipes own appearance. Canonical Panel CSS is emitted byte-for-byte as a generated dependency; see [mobile navigation](MOBILE-NAVIGATION.md). |
 | Header geometry and optional preview skip | Private inner `tide-app__header-layout` grid groups primary links beside Saved with a 24px external gap; below 60rem, Saved is on row one and Filters ends row two. Outer width/insets/sticky placement and `tide-app__detail-skip` visibility remain app-owned; no private navigation/helper appearance |
 | Filter footer and status internals | Tide owns rail padding/gap, flex/wrapping status row, count alignment and Reset text flow; private child wrappers supply narrow drawer clearance without aliasing public slots |
@@ -41,3 +41,7 @@ The [strict HTML/CSS alignment closeout](TIDE-ALIGNMENT.md) supersedes sampled a
 Historical [footer/tablet verification](FILTER-FOOTER-TABLET.md) resolves the fresh audit findings. Application guards cover shared typography plus all properties on rendered footer/status/count aliases and the Reset data hook. Shared sources remain read-only.
 
 Historical [heading/venue verification](HEADINGS-VENUE-SCOPE.md) covers the original control set, unique heading, scoped native routes and exact venue ID. Tide remains unchanged.
+
+## Venue composition · 2.3.0
+
+The [venue directory contract](VENUE-DIRECTORY.md) records unchanged Tide card/Panel/control adoption, native fragment/popover behavior, five additional venue destinations and the distinction from the isolated React consumer. No Tide component API is added or privately restyled.

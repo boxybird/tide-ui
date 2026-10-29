@@ -22,3 +22,7 @@ Native skip links retain event/detail/results/main targets and focusable destina
 `data/submission-fields.json` retains IDs/names, required/optional markers, hint associations, native types, maxlength and autocomplete. File chooser, permission markup and unique prose remain authored HTML. Native reset restores source defaults; browser validation supplies native required/type checks. There is no JavaScript validation summary controller.
 
 See [template grammar](TEMPLATES.md), [event content](DETAILS.md), [runtime boundary](RUNTIME.md) and [desktop composition](DESKTOP-LAYOUT.md). Build/check generate and inspect all ten modes; browser evidence is Chromium on Windows, with other browsers/devices/screen readers deferred.
+
+## Venue routes · 2.3.0
+
+Five generic venue documents join the existing 68 routes: 73 per mode, 803 generated documents. The existing venues.html content slot delegates to registered directory/profile partials. Venue counts and event links derive from structured fixtures; unique Sunshine visitor prose stays in its existing authored HTML. See [venue directory](VENUE-DIRECTORY.md).

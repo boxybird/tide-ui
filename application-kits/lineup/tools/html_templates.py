@@ -32,9 +32,16 @@ class AppTemplates:
         self.routes = json.loads((ROOT/manifest['dataHome']['routes']).read_text(encoding='utf-8'))
         self.submission_fields = json.loads((ROOT/manifest['dataHome']['submissionFields']).read_text(encoding='utf-8'))
         self.fields = FormFields(self.partial)
+        self.venues = json.loads((ROOT/manifest['dataHome']['venues']).read_text(encoding='utf-8'))
+        self.venues_by_id = {venue['id']:venue for venue in self.venues}
         self.by_id = {event['id']:event for event in self.events}
         if len(self.by_id) != len(self.events):
             raise ValueError('Sample event IDs must be unique')
+        if len(self.venues_by_id)!=len(self.venues) or set(self.venues_by_id)!={e['venue'] for e in self.events}:
+            raise ValueError('Directory venues must match the authored event venue IDs')
+        for venue in self.venues:
+            if not re.fullmatch(r'assets/venues/[a-z-]+\.webp', venue['image']):
+                raise ValueError('Invalid venue image source')
         for event in self.events:
             for key in ('id', 'venue'):
                 if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', event[key]):
@@ -78,6 +85,28 @@ class AppTemplates:
 
     def partial(self, name, values):
         return Html(expand('{{> ' + name + '}}', values, self.templates))
+
+    def venue_values(self, venue):
+        entries = [event for event in self.events if event['venue']==venue['id']]
+        return {
+            'VENUE_ID':venue['id'], 'VENUE_NAME':venue['name'], 'VENUE_KIND':venue['kind'],
+            'VENUE_IMAGE':venue['image'], 'VENUE_ALT':venue['alt'],
+            'VENUE_IMAGE_WIDTH':venue['width'], 'VENUE_IMAGE_HEIGHT':venue['height'],
+            'VENUE_EVENT_COUNT':len(entries), 'VENUE_HREF':venue['id']+'.html',
+            'VENUE_INFORMATION_LINK':self.partial('detail-venue-link', {'HREF':'sunshine-theater.html#venue-information', 'TEXT':'Venue information'}) if venue['id']=='sunshine-theater' else Html(''),
+        }
+
+    def venue_page(self, venue_id=None):
+        if venue_id:
+            venue = self.venues_by_id[venue_id]
+            entries = sorted((event for event in self.events if event['venue']==venue_id), key=lambda event:(event['date'], event.get('start',''), event['id']))
+            return self.partial('venue-directory-profile', {**self.venue_values(venue),
+                'VENUE_EVENTS':Html(''.join(self.card(event, '') for event in entries))})
+        values = [self.venue_values(venue) for venue in self.venues]
+        return self.partial('venue-directory', {
+            'VENUE_ROWS':Html(''.join(self.partial('venue-directory-row', value) for value in values)),
+            'VENUE_POINTS':Html(''.join(self.partial('venue-map-point', value) for value in values)),
+        })
 
     def card(self, event, selected, saved=False):
         day = date.fromisoformat(event['date'])
@@ -208,12 +237,16 @@ class AppTemplates:
             skips = [('main-content', 'Skip to content', '')]
         state_key = 'margin-aligned' if saved or not collection else 'app-release-1.1.0'
         body_class = 'tide-app--venue tide tide-app' if venue else 'tide tide-app tide-app--event' if event else 'tide tide-app'
+        if route=='venues':
+            body_class += ' tide-app--directory'
         if collection and not saved:
             body_class += ' tide-app--columns'
         body_attributes = str(attribute('data-venue-scope', 'sunshine-theater')) if venue else ''
         body_attributes += attribute('data-state-key', state_key)+attribute('class', body_class)
         return {
             'BODY_ATTRIBUTES':Html(body_attributes),
+            'VIEWPORT_OPEN':Html('<div class="tide-venue__viewport">') if route=='venues' else Html(''),
+            'VIEWPORT_CLOSE':Html('</div>') if route=='venues' else Html(''),
             'VENUE_SCRIPT':Html(''),
             'SKIP_LINKS':Html(''.join(self.partial('skip-link', {'SKIP_TARGET':target, 'SKIP_LABEL':label, 'SKIP_MODIFIER':Html(modifier)}) for target, label, modifier in skips)),
             'SITE_FOOTER':Html('') if route=='help' else self.partial('site-footer', {}),
@@ -232,6 +265,8 @@ class AppTemplates:
         if route=='submit':
             values.update({'FIELD_'+key.replace('-', '_').upper():self.fields.render(field) for key, field in self.submission_fields.items()})
             values['SUBMISSION_BACK_ICON'] = self.partial('detail-icon-back', {'ICON_EXTRA':Html(' fill="none" xmlns="http://www.w3.org/2000/svg"')})
+        if page.get('source')=='venues.html':
+            values['VENUE_PAGE'] = self.venue_page(page.get('venueEntry'))
         content = Html(expand((ROOT/'src/pages'/page['source']).read_text(encoding='utf-8'), values, self.templates)) if page.get('source') else values['EVENT_DETAIL']
         if page['layout']=='workspace':
             results = self.partial('workspace-results', {

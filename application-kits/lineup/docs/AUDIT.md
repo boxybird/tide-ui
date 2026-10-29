@@ -98,3 +98,9 @@ Run root `npm run build` and `npm run check`; the [verification record](audit/ve
 Browser measurements/screenshots are in-app Chromium on Windows with CSS viewport emulation. The matrices measure geometry, headings, control count and image/script presence; most cases are not full interaction tests. Pointer/keyboard interactions were exercised only where explicitly stated above. Firefox/Safari, physical touch devices/software keyboards, screen readers, forced colors, zoom/text enlargement, current-run reduced-motion interaction, print, and a complete state/contrast audit remain unverified. Source theme/contrast checks are not assistive-technology evidence. No WCAG conformance claim is made.
 
 L01/L02 are resolved by the [2.0.5 application patch](SAVED-TYPOGRAPHY.md), with rendered comparisons and application regression guards. L03/L04 are resolved by the [2.1.0 heading/venue patch](HEADINGS-VENUE-SCOPE.md). L05/L06 remain application follow-ups. Tide remains the source of truth.
+
+## Venue composition review · 2.3.0
+
+The [native venue directory](VENUE-DIRECTORY.md) adopts existing Tide components without a kit extension. The earlier experimental compact media-row padding and map-specific Panel decoration are not carried into canonical sources. Possible reusable media-card/place-marker APIs remain optional design-system proposals requiring separate authorization; they are not required to complete this layout.
+
+The 2026-10-29 directory-list refinement replaces photo rows with the unchanged home-page listing-card treatment. Tide and individual venue documents remain unchanged. A separate tall-tablet map check at 1024x1058 shows the Warehouse Room marker partly clipped by the existing cover fit; the map rules at that size were not changed by this list task. Retain this concrete issue for the map refinement. Evidence: ignored `build/qa/lineup-venues/list-refactor/map-regression.json`.

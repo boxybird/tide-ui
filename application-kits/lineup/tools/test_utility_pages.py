@@ -119,7 +119,7 @@ class UtilityContracts(unittest.TestCase):
     def test_directory_links_to_complete_venue_and_information_destinations(self):
         directory=Document(self.app.page('venues'))
         self.assertEqual(sum(tag=='h1' for tag,attrs in directory.nodes),1)
-        self.assertTrue(any('tide-venue-card' in attrs.get('class','').split() for tag,attrs in directory.nodes))
+        self.assertEqual(sum('tide-event-card' in attrs.get('class','').split() for tag,attrs in directory.nodes),6)
         links={attrs['href'] for tag,attrs in directory.nodes if tag=='a'}
         for destination in ('sunshine-theater.html','sunshine-theater.html#results','sunshine-theater.html#venue-information','help.html'):
             self.assertIn(destination,links)

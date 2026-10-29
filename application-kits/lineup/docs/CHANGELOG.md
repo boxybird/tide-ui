@@ -1,5 +1,18 @@
 # Lineup application-kit changelog
 
+## 2.3.0 · 2026-10-29
+
+- Preserved the user-approved venue list/map foundation at tag `lineup-v2.3.0`. This checkpoint is the starting point for further iteration; individual venue-page refinement and the recorded tall-tablet map clipping issue remain separate work. Tide stays at 1.12.0 with no shared-source change.
+
+- Adopted the reviewed list/map venue direction using unchanged Tide Utility results, Event list/card, Panel, Photo control, Button and Link recipes. The directory owns its responsive grid and native list scrolling and a fitted map frame; its header uses the existing 20px utility type.
+- Refactored directory rows on 2026-10-29 after user review: removed list photos and adopted Find Events' canonical card category/title/support/metadata roles, surface, texture, 24px padding and separators. Venue type/name/city and the authored-event count replace event-specific content; each card links to its real venue document with a separate native map action. The desktop list track follows the event feed's 35% width calculation and thin scrollbar. Individual venue documents and map behavior remain unchanged.
+- Condensed the directory's top area: retained the Venues / Albuquerque utility heading and native labelled search, removed the tagline and separate venue-count line, and used named 16px external spacing above/below the search area. The desktop heading-to-search gap now matches Find Events, and the search no longer touches the list surface. Mobile List/Map controls retain the same header height in both views. No card or Tide appearance changes.
+- Added six venue entries and five native venue/event documents; Sunshine Theater retains its existing factual profile and six scoped events. All original 68 routes and 54 event records remain unchanged; 73 routes now render in each mode.
+- Refined the translation after user review: matched the exact Find Events frame/header insets, restored the native venue search field/GET contract, and replaced two-axis map scrolling with a fitted preview. The natural footer stays below the initial viewport.
+- Used native fragments for list/map switching and place navigation, and native popovers for map information, Escape dismissal and focus return. No React, HTMX, browser script, live search or map-provider dependency is imported from the separate prototype.
+- Added seven optimized concept-image assets with provenance and the Phosphor Square icon license. Each image stays below the existing 200KB limit. Conservative application CSS distribution compaction preserves declarations and the existing 22KB/5KB budgets; canonical styles remain readable.
+- Added venue destination/count/escape/popover/asset tests and CSS rule/value parity checks. Browser verification covers 30 theme/state cases, 16 responsive cases, all new venue destinations, native event navigation and Panel parity. See [venue directory](VENUE-DIRECTORY.md). Tide, the reference site, shared tooling and the independent consumer projects remain unchanged.
+
 ## 2.2.3 · 2026-10-28
 
 - Extended the accepted desktop utility-summary spacing to mobile and tablet: the application gap is `space-2` at every width, yielding 16px from the divider to the first month title on unscoped browse pages. Removed the redundant desktop breakpoint override; venue context retains its information-jump allowance.
