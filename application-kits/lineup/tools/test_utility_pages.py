@@ -121,7 +121,7 @@ class UtilityContracts(unittest.TestCase):
         self.assertEqual(sum(tag=='h1' for tag,attrs in directory.nodes),1)
         self.assertEqual(sum('tide-event-card' in attrs.get('class','').split() for tag,attrs in directory.nodes),6)
         links={attrs['href'] for tag,attrs in directory.nodes if tag=='a'}
-        for destination in ('sunshine-theater.html','sunshine-theater.html#results','sunshine-theater.html#venue-information','help.html'):
+        for destination in ('sunshine-theater.html','help.html'):
             self.assertIn(destination,links)
         venue_ids={attrs['id'] for tag,attrs in Document(self.app.page('sunshine-theater')).nodes if attrs.get('id')}
         self.assertTrue({'results','venue-information'}<=venue_ids)

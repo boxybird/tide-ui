@@ -34,15 +34,21 @@ class VenueDirectoryContracts(unittest.TestCase):
         ids = [node['attrs']['id'] for node in nodes if node['attrs'].get('id')]
         self.assertEqual(len(ids), len(set(ids)))
         for venue_id in self.app.venues_by_id:
-            target = 'venue-map-card-'+venue_id
-            triggers = [node for node in nodes if node['attrs'].get('popovertarget')==target and node['attrs'].get('popovertargetaction')!='hide']
-            self.assertEqual(len(triggers), 1)
-            self.assertTrue(any(node["attrs"].get("href")=="#map-"+venue_id for node in nodes))
-            self.assertTrue(all(node['tag']=='button' for node in triggers))
-            panel = next(node for node in nodes if node['attrs'].get('id')==target)
-            self.assertIn('tide-panel', panel['classes'])
-            self.assertEqual(panel['attrs']['popover'], 'auto')
-            self.assertIn(venue_id+'.html#results', html)
+            row = next(node for node in nodes if node['attrs'].get('id')=='venue-'+venue_id)
+            point = next(node for node in nodes if node['attrs'].get('id')=='map-'+venue_id)
+            row_links = [node for node in nodes if node['tag']=='a' and row in node['parents']]
+            point_links = [node for node in nodes if node['tag']=='a' and point in node['parents']]
+            primary = next(node for node in row_links if 'tide-event-card__link' in node['classes'])
+            self.assertEqual(primary['attrs']['href'], '#map-'+venue_id)
+            self.assertEqual(point_links[0]['attrs']['href'], '#venue-'+venue_id)
+            self.assertIn('tide-photo-control', point_links[0]['classes'])
+            self.assertEqual(row['attrs']['tabindex'], '-1')
+            self.assertEqual(point['attrs']['tabindex'], '-1')
+            self.assertTrue(any(node['attrs']['href']==venue_id+'.html' for node in row_links))
+            self.assertTrue(any('tide-badge' in node['classes'] and row in node['parents'] for node in nodes))
+            # Page-context Badge colors must not be placed on a dark map image.
+            # Map selection text inherits the Photo control's reading role.
+            self.assertFalse(any('tide-badge' in node['classes'] and point in node['parents'] for node in nodes))
         self.assertFalse(any(node['tag']=='script' for node in nodes))
         self.assertNotIn('style=', html)
 

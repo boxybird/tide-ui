@@ -1,4 +1,4 @@
-# Native component ownership · Lineup 2.3.0
+# Native component ownership · Lineup 2.3.1
 
 The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
@@ -42,6 +42,6 @@ Historical [footer/tablet verification](FILTER-FOOTER-TABLET.md) resolves the fr
 
 Historical [heading/venue verification](HEADINGS-VENUE-SCOPE.md) covers the original control set, unique heading, scoped native routes and exact venue ID. Tide remains unchanged.
 
-## Venue composition · 2.3.0
+## Venue composition · 2.3.1
 
-The [venue directory contract](VENUE-DIRECTORY.md) records unchanged Tide card/Panel/control adoption, native fragment/popover behavior, five additional venue destinations and the distinction from the isolated React consumer. No Tide component API is added or privately restyled.
+The [venue directory contract](VENUE-DIRECTORY.md) records unchanged Tide card/Badge/Photo-control adoption, bidirectional native fragment selection, explicit venue-detail links, five additional venue destinations and the distinction from the isolated React consumer. Application wrappers own selection visibility, marker/label placement, map fitting and native scroll targeting. Map selection replaces the former marker popovers; shared Menu and filter behavior remain unchanged. No Tide component API is added or privately restyled.

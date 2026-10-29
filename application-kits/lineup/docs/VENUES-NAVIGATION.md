@@ -31,6 +31,6 @@ Root build/check pass: 748 application documents, 72 Tide tests, 43 application 
 
 Measurements and screenshots remain ignored under `build/qa/lineup-real-navigation/`. Browser evidence is in-app Chromium on Windows with viewport emulation. Firefox/Safari, physical devices, screen readers, text zoom and changed system reduced-motion/forced-color settings remain unverified. Canonical component CSS is unchanged; no new hover/focus styling is claimed.
 
-## Current directory · 2.3.0
+## Current directory · 2.3.1
 
-The one-entry baseline above is superseded by the six-entry native [list/map directory](VENUE-DIRECTORY.md). Rows consume the same photo-free Tide listing treatment as Find Events; individual venue documents retain their images. Five additional venue documents expose existing fixture events without adding new factual profiles. Shared navigation, exact current-page behavior, Sunshine Theater information and all original destinations remain.
+The one-entry baseline above is superseded by the six-entry native [list/map directory](VENUE-DIRECTORY.md). Rows consume the same photo-free Tide listing treatment as Find Events. Cards now select their map point, markers reveal the matching row, and a separate View venue details link opens the document. Individual venue documents retain their images. Five additional venue documents expose existing fixture events without adding new factual profiles. Shared navigation, exact current-page behavior, Sunshine Theater information and all original destinations remain.

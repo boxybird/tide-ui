@@ -1,9 +1,9 @@
-<article class="tide-event-card" id="venue-{{VENUE_ID}}" aria-labelledby="venue-title-{{VENUE_ID}}">
-  <a class="tide-event-card__link" href="{{VENUE_HREF}}" aria-label="View {{VENUE_NAME}}"></a>
+<article class="tide-event-card" id="venue-{{VENUE_ID}}" tabindex="-1" aria-labelledby="venue-title-{{VENUE_ID}}">
+  <a class="tide-event-card__link" href="#map-{{VENUE_ID}}" aria-label="Show {{VENUE_NAME}} on map"></a>
   <div class="tide-event-card__content"><div class="tide-event-card__copy">
-    <div class="tide-event-card__heading"><span class="tide-event-card__category">{{VENUE_KIND}}</span></div>
+    <div class="tide-event-card__heading"><span class="tide-event-card__category">{{VENUE_KIND}}</span><span class="tide-venue__state" data-select="{{VENUE_ID}}"><span class="tide-venue__return"><span class="tide-badge">Selected</span></span></span></div>
     <h2 class="tide-event-card__title" id="venue-title-{{VENUE_ID}}">{{VENUE_NAME}}</h2>
     <p class="tide-event-card__venue">Albuquerque</p>
   </div>
-  <div class="tide-event-card__meta"><span class="tide-event-card__price">{{VENUE_EVENT_COUNT}} listed events</span><a class="tide-link tide-event-card__save" href="#map-{{VENUE_ID}}" aria-label="Show {{VENUE_NAME}} on map">Show on map</a></div></div>
+  <div class="tide-event-card__meta"><span class="tide-event-card__price">{{VENUE_EVENT_COUNT}} listed events</span><a class="tide-link tide-event-card__save" href="{{VENUE_HREF}}" aria-label="View {{VENUE_NAME}} venue details">View venue details</a></div></div>
 </article>

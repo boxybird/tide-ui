@@ -1,5 +1,15 @@
 # Lineup application-kit changelog
 
+## 2.3.1 · 2026-10-29
+
+- Preserved the user-approved selection refactor at `lineup-v2.3.1` before real-map integration work. The 2.3.0 foundation remains separately tagged. Tide is unchanged; the native kit still ships no browser JavaScript or map-provider dependency.
+
+- Made venue cards select their map point with native fragments; View venue details is now the deliberate document link. Map markers reveal their corresponding row in the bounded list. Selected map-caption links provide direct details and a return to the same row.
+- Used unchanged Tide Badge, Event card, Link and 44px Photo control recipes. A single native target identifies the selected venue in both views; other map labels temporarily hide to keep selection readable. The earlier marker popovers are replaced by this selection/caption treatment. Menu and filter popovers remain unchanged.
+- Fitted the complete illustration at every width so selected points remain reachable, resolving the known tall-tablet clipped marker. Native root scroll padding keeps fragment selection inside the panes while preserving keyboard access to the footer. Smooth list movement honors reduced motion. Progressive `scroll-initial-target` restores the selected row on document return in supporting browsers; exact cross-browser restoration is not promised.
+- Preserved the 2.3.0 foundation at `lineup-v2.3.0`, all venue/event IDs, the compact heading/search, individual venue documents and Tide 1.12.0. No geographic camera, map provider, browser JavaScript or consumer-test runtime is added.
+- Updated bidirectional-link/selection contracts. Chromium checks cover all six selections at seven viewport sizes, all ten theme/mode pairs on phone/desktop, keyboard selection, offscreen row reveal and direct details/Back journeys. See [venue directory](VENUE-DIRECTORY.md) for evidence and limits.
+
 ## 2.3.0 · 2026-10-29
 
 - Preserved the user-approved venue list/map foundation at tag `lineup-v2.3.0`. This checkpoint is the starting point for further iteration; individual venue-page refinement and the recorded tall-tablet map clipping issue remain separate work. Tide stays at 1.12.0 with no shared-source change.

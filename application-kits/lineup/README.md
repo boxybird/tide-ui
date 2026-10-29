@@ -1,8 +1,10 @@
-# Lineup application kit · 2.3.0
+# Lineup application kit · 2.3.1
 
 Version 2.3.0 preserves the user-approved venue list/map foundation at Git tag `lineup-v2.3.0`. Further venue and map refinements continue from this checkpoint; the [directory contract](docs/VENUE-DIRECTORY.md) records the remaining limits. Tide remains 1.12.0 and unchanged.
 
-The primary menu consistently offers **Find Events**, **Venues** and **Add an Event**, with Saved separate and Help in the site footer. Below 34rem, a native Menu popover keeps the phone header to two rows; tablet/desktop keep inline navigation. The Venues directory pairs six photo-free listings with a map illustration, native marker popovers and complete venue/event destinations. Its rows consume the same Tide listing-card appearance as Find Events, with venue type/name/city, fixture-derived event counts and separate map links. See [venue directory](docs/VENUE-DIRECTORY.md). See [mobile navigation](docs/MOBILE-NAVIGATION.md) and the [directory contract](docs/VENUES-NAVIGATION.md).
+The approved native selection refactor is preserved at `lineup-v2.3.1`. This checkpoint keeps cards and markers linked within the directory, with deliberate venue-detail navigation, before real-map integration work begins.
+
+The primary menu consistently offers **Find Events**, **Venues** and **Add an Event**, with Saved separate and Help in the site footer. Below 34rem, a native Menu popover keeps the phone header to two rows; tablet/desktop keep inline navigation. The Venues directory pairs six photo-free listings with a map illustration and complete venue/event destinations. Cards select map points, markers reveal the corresponding row, and View venue details deliberately opens the venue document. The row uses Tide's Badge for selection; the map uses the Photo control's photographic text role. The selected map caption also offers direct details and Back to list links. See [venue directory](docs/VENUE-DIRECTORY.md). See [mobile navigation](docs/MOBILE-NAVIGATION.md) and the [directory contract](docs/VENUES-NAVIGATION.md).
 
 The filter headings now read **Search & Filters**. The mobile/tablet drawer has 24px of top content clearance, while desktop search placement is preserved. Category choices adopt Tide's compact filter-disclosure grouping with 44px rows and no added Stack gap. Tide remains unchanged; see the [filter-panel spacing contract](docs/FILTER-PANEL-SPACING.md).
 
@@ -12,7 +14,7 @@ The primary navigation now sits beside the separate Saved utility on the right, 
 
 **Lineup uses the selected compact utility headers.** Version 2.1.5 aligns Search & filters with the result count and removes the Coming up intro, tagline and repeated The lineup label. Both rows consume Tide's new canonical utility variant. The [implementation contract](docs/COMPACT-HEADERS.md) and [design QA](design-qa.md) record composition and verification. The user reviewed and accepted the Tide and Lineup changes on 2026-10-27. The [handoff boundary](docs/HANDOFF.md) still applies; no browser JavaScript or service behavior is introduced.
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.3.0**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.3.1**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 

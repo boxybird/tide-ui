@@ -1,77 +1,52 @@
-# Venue directory · Lineup 2.3.0
+# Venue directory · Lineup 2.3.1
 
-The reviewed venue concept is now a native Lineup composition. Tide UI remains 1.12.0 with no source, token, recipe, registry, theme or distribution change.
+Lineup owns this composition and its native selection behavior. Tide UI remains 1.12.0 with no source, token, recipe, registry, palette or distribution change. The approved 2.3.0 foundation remains preserved at `lineup-v2.3.0`; this iteration changes which action happens first.
 
-## Preserved foundation · 2026-10-29
+The user-approved selection refactor is preserved at `lineup-v2.3.1` before real-map integration work. Its map image and CSS percentage positions are illustrative, not verified geographic coordinates.
 
-The user approved the current photo-free list, compact heading/search and list/map composition as the foundation for continued iteration. Git tag `lineup-v2.3.0` preserves this Lineup 2.3.0 checkpoint. The individual venue pages remain available for further refinement, and the tall-tablet map clipping finding in [the audit](AUDIT.md) remains open. The map is still illustrative and live matching/provider behavior remains consumer-owned. This checkpoint does not claim those future refinements are complete.
+## Interaction contract
 
-Earlier review notes below describe their measurement-time state; this checkpoint supersedes their pending-review and uncommitted status.
+- A venue card's covering link targets `#map-{venue-id}` in the same document. It selects the corresponding point instead of opening the venue page.
+- The row's separate View venue details link opens `{venue-id}.html` directly. It remains available without using the map.
+- Each 44px map control is a native link to `#venue-{venue-id}`. The browser reveals and focuses the corresponding row, scrolling the bounded list when necessary.
+- Both targets identify the same venue. The row uses an existing neutral Selected badge; the map label uses the Photo control's own photographic text role for Selected, including in light themes. Other labels temporarily hide while all six marker controls remain available; the selected label is positioned away from neighboring glyphs. Compact illustrations use Selected text at the marker and identify the venue in the caption, keeping neighboring glyphs clear. No selection color, private card outline or new Tide state is introduced.
+- A selected map caption provides a direct venue-details link and Back to list, which targets the same row. The overview List/Map links remain available below 60rem; they show the overview without a selected venue. Map selection exposes the phone map, and a row target exposes the list.
+- This selection/caption treatment replaces the former marker-information popovers. There is no map dialog, focus trap or hover-only action. Header Menu and filter popovers remain unchanged. Sunshine Theater's attributed visitor information and schedule remain on its unchanged venue document.
 
-## Existing kit and application ownership
+Fragments preserve native links, modified clicks, direct visits and browser history. Focusable target IDs stay stable. The directory reserves most of the root scrollport for its bounded panes, leaving one target-sized region for native footer focus; selecting an internal point/row does not shift the application frame. The list uses native smooth scrolling only when reduced motion is not requested.
 
-| Surface | Existing Tide recipe | Lineup composition |
+The selected badge's private wrapper uses progressive `scroll-initial-target: nearest` with external scroll margin. Supporting browsers can reveal the selected row when the document is first rendered or restored. The current Chromium phone/desktop checks retain the entered search value and selected URL target, and reveal the selected row again after a details-page visit and Back. Exact arbitrary pixel restoration across engines is a consumer responsibility. Unsupported engines retain the native links and visible selection. See the [CSS Scroll Snap specification](https://drafts.csswg.org/css-scroll-snap-2/#scroll-initial-target) and [MDN availability notes](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-initial-target).
+
+## Existing Tide components
+
+| Surface | Existing recipe | Lineup responsibility |
 | --- | --- | --- |
-| Venues heading | Results utility, 20px/28px/580 | Native h1, directory region and adjacent city label |
-| Venue entries | Event list/card category, title, support, metadata, accent and independent-action slots; Link | Venue type/name/city, fixture-derived event count and native venue/map destinations; no list photos |
-| Map point | 44px Photo control, Icon, photo-accent token | Standard filled Phosphor Square glyph, label placement, illustration-relative positions |
-| Map information | Panel/title, Caption, Button, Link | Native popover IDs, external width/placement and close-control wrapper |
-| Mobile menu | Existing shared header and Panel | Unchanged menu composition |
-| Venue documents | Content page, Results utility, Event list/card | Venue-specific fixture selection and native routes |
+| Venues / Albuquerque | Results utility, 20px/28px | Heading semantics and directory placement |
+| Search venues | Field, visible label, 48px control | Native GET/q contract, external 16px clearance |
+| Venue rows | Event list/card category, title, support, metadata, accent and independent-action slots | Venue type/name/city, fixture-derived count, selection target and document link |
+| Selection | Badge | Target-dependent availability in private wrappers |
+| Map points | Photo control, Icon, photo-accent token | Native fragment destination, position, stacking and name label |
+| Selected map actions | Link, Row | Direct details and return-to-row destinations |
 
-No private component type, color, border, background, internal padding/gap or focus override is added. The photo-free venue rows consume the unchanged Event card recipe: 24px padding, 12px uppercase category, 24px/32px title, 14px supporting text and metadata, texture and inter-card separators. The existing accent metadata slot displays the count, not a fabricated price or date. The existing independent-control layer (`tide-event-card__save`) keeps the plain Show on map anchor above the card's covering venue link; there is no save behavior or save claim. Map controls retain Tide's photo-control backing and 44px targets. The map callout and mobile Menu compute identically for Panel surface, border, radius, padding (24px), gap (12px) and body type. Ordinary underlined links retain canonical 14px regular type and have no added arrows.
+Card padding, texture, typography, colors, separators and focus/hover/active states remain canonical. The independent-control layer (`tide-event-card__save`) keeps the row's details link above its covering map-selection link; it implements no saving. No public component is privately restyled or extended.
 
-`src/styles/venue.css` owns external grid placement, sizes, scrolling, profile-image crops, marker positions and responsive availability. The other four registered style modules, shared header and original event/filter templates stay unchanged. From 75rem the list track uses the same 35% calculation after two pane gaps as Find Events' middle track; its native thin scrollbar and canonical card insets leave the same usable card width. A directory-only viewport wrapper uses native CSS Grid for the natural header and bounded main, with the existing footer below the viewport as on Find Events. It does not measure header height. The directory reuses the same content-width/inset calculation and native root scrollbar gutter as Find Events; both panes retain at least 24px bottom clearance. Short-height windows use normal document scrolling with a usable directory minimum.
+## Composition and map boundary
 
-## Native interaction and integration boundary
+The directory retains Find Events' frame/header insets, the 35% desktop list-track calculation, native thin scrollbar, compact heading/search and at least 24px pane-bottom clearance. Existing CSS Grid supplies the natural header and bounded main; short-height windows use normal document scrolling. The five registered application stylesheet modules remain the only style owners.
 
-- Desktop (60rem and above): venue list and map remain beside each other. The illustration is centered and fitted inside a non-scrolling frame, with no X/Y map scrollbars. Desktop uses a centered cover fit; the single-column view fits the complete illustration inside its available frame so markers remain reachable. There are no inactive zoom or pan controls.
-- Below 60rem: List/Map are native fragment links. Each row's Map link targets its exact `map-{venue-id}` point, exposes the map and lets the browser scroll/focus that point. Marker buttons open one native auto popover per venue. Escape, light dismissal and focus return belong to the browser. Focus within the map keeps it available when an open desktop map is resized to phone.
-- Popovers consume the unchanged Panel. CSS anchor positioning places them near points in the current Chromium preview, clamped to the viewport. Browsers without anchor positioning keep the native centered-popover fallback. Cross-browser behavior has not been verified.
-- The full venue row and View events are real document/fragment links. The five new venue pages list the matching authored event records, sorted soonest first; individual links retain the existing event URLs. Sunshine Theater keeps its original information page, fact attribution, `#results` and `#venue-information`.
-- The left-column Search venues form consumes the existing Tide Field recipe and uses a native GET to `venues.html` with `q`, matching the event search integration pattern. The static preview does not evaluate arbitrary query strings, so all six entries remain on a text query; a consumer supplies actual matching. The kit does not import React state, provider map pan/zoom, dialogs or routing. Consumers may integrate real matching, a map provider, geographic data and enhanced navigation using [the existing integration boundary](CONSUMER-INTEGRATION.md).
+The map illustration is fitted completely inside its non-scrolling frame at every width. This prevents the formerly clipped tall-tablet marker and keeps native targets reachable. The image, approximate point coordinates and square Phosphor glyph are unchanged. This is not a geographic camera: provider panning, zoom, real coordinates, live matching and fetched content remain [consumer integrations](CONSUMER-INTEGRATION.md). No provider, browser JavaScript, HTMX or independent prototype runtime is imported.
 
-There is no new required Tide component or kit extension. A future reusable media-card or provider-neutral place-marker API would require its own separately authorized Tide task; this composition does not advertise either API.
+## Data, routes and sources
 
-## Photo-free list refinement · 2026-10-29
+Six stable venue IDs/names, kinds and concept-photo metadata live in `data/venues.json`; counts derive from the unchanged 54 authored events. The 73 native routes per mode render 803 application documents. All original paths survive. Five generic venue documents retain their photos and matching event lists; Sunshine Theater retains its authored facts, attribution, `#results` and `#venue-information`. No new venue facts are asserted.
 
-The user replaced the earlier photo-row direction with the existing home-page listing treatment. Directory entries now use venue type as the category, the venue name as a level-two title, the authored Albuquerque scope as supporting text, and the derived listed-event count beside Show on map as metadata. No event date or admission value is inferred for a venue. Profile photos and individual venue documents are unchanged; the map image, points and popover templates are unchanged. The map's available width follows the wider list track.
+Registered partials own the directory, rows, map points, selected caption links and generic profiles. The renderer escapes text and rejects invalid includes and image paths. Concept-image provenance, source/served hashes and explicit lossy WebP settings remain in `data/venue-images.json`; all seven served assets stay below 200KB. The Phosphor Square license remains beside the assets. Application CSS distribution compaction preserves selectors/declarations and the existing performance budgets; shared build tools and Tide are unchanged.
 
-Chromium verification compares all six card roles against Find Events in all ten theme/mode pairs at phone and desktop sizes, with no computed-style differences. At 1488px the desktop list and event feed widths differ by less than 0.02px of browser track rounding. Seven responsive cases from 320 to 1920px retain all six rows and have no horizontal document overflow or list photos. Native keyboard card navigation, the separate map fragment, and marker Escape/focus return pass. Evidence: ignored `build/qa/lineup-venues/list-refactor/`; current desktop image below. Root build/check passes all 130 tests. The user accepted this list treatment before the foundation checkpoint.
+## Verification and limits · Chromium on Windows
 
-## Data, assets and routes
+- All six map selections at seven viewport sizes: 42 cases from 320x700 through 1920x1080, including 1024x1058. Exactly one selected venue/label, no clipped marker or selected label, no horizontal document overflow and zero scripts.
+- All ten theme/mode combinations at phone and desktop: 20 selected-state cases without clipping, overflow or scripts.
+- Native keyboard card-to-map and marker-to-row selection, offscreen-row reveal, direct details links and phone/desktop Back journeys. Entered search text and selected-row restoration are checked; source/native reduced-motion behavior is retained.
+- Original non-directory documents and 133 Tide/reference-site/shared-tool source fingerprints remain unchanged. Updated source contracts cover bidirectional destinations, focusable targets and existing Badge/Photo-control adoption. Root build/check passes all 130 tests.
 
-### Compact directory header · 2026-10-29
-
-The accepted Venues / Albuquerque utility heading is unchanged. Its only supporting UI is the native labelled Search venues field and, below 60rem, the existing List/Map controls. The filler tagline and separate six-venue count are removed. The private intro wrapper uses `space-4` (16px) block spacing: the divider-to-label distance matches Search events on the home page, and the search area has 16px clearance before the list surface. Card padding remains unchanged. On phone the view controls have their normal Stack gap and 16px clearance before the content; switching views no longer changes the header height.
-
-At 1488x1058 the intro shrinks from 228.67px to 168.67px, while its title coordinates and list width remain unchanged. Five responsive cases (320, 390, 768, 1024, 1488px) retain all six rows without horizontal document overflow; all ten desktop theme/mode pairs have the same 16px gaps. Phone List/Map switching keeps the search available and the header at 228.67px. Root build/check passes all 130 tests. The approved row template, map templates/assets and all individual venue documents remain unchanged. Evidence: ignored `build/qa/lineup-venues/compact-intro/`. Tide remains read-only; this treatment is included in the accepted foundation.
-
-`data/venues.json` owns six stable IDs/names, category descriptions and concept-photo metadata. Counts are derived from the unchanged 54 event fixtures at build time. It contains no raw HTML or newly claimed venue facts. Sunshine Theater remains the only separately attributed visitor-information page; the other venue documents make no address, facilities, accessibility or operational claims.
-
-`venue-directory*.html`, `venue-map-point.html` and `venue-icon-square.html` are registered partials. `src/pages/venues.html` remains the registered content slot for directory and generic venue documents. The 65 workspace routes are unchanged; eight content routes bring the total to 73 per mode and 803 rendered application documents. Exact original event/venue IDs and all previous native paths survive.
-
-`src/runtime/assets/venues/` contains seven generated illustrations, not documentary venue photography or geographic survey data. The map is an illustration with approximate points. `data/venue-images.json` records generation image IDs, source/served hashes, served dimensions and explicit lossy WebP encoding. All images remain below 200,000 bytes; no existing lossless asset is replaced. The standard filled Square glyph comes from Phosphor Icons 2.1.10; its MIT license is retained beside these assets.
-
-The application CSS build removes ordinary comments and separator whitespace outside protected strings/URLs. Tests compare every canonical CSS selector/declaration before and after compaction and protect quoted whitespace, escaped newlines, URLs and license comments. This keeps the existing shared performance budgets unchanged without changing shared build tools or Tide.
-
-## Verification · Chromium on Windows
-
-- Root build/check: 803 app documents; 72 Tide, 51 application and 7 HTTP tests. HTTP tests require loopback permission; the restricted run failed to connect, then the approved loopback-enabled run passed.
-- 30 theme/state cases: all five themes in light/dark, phone list, phone map/callout and desktop/callout. One visible h1, zero scripts, no horizontal document overflow and bounded callouts.
-- 16 responsive cases span 320x500 through 1920x1080 and both native views below 60rem; long Barelas name included. Short-height pages intentionally scroll naturally.
-- All five new venue documents expose correct event counts (9/13/10/8/8), no scripts and no phone overflow. Native directory → Sister → Desert Frequencies → browser Back returns to the nine-event venue document. Phone fragment focus, marker Escape/focus return and mobile Menu Panel parity are recorded.
-- Source hashes protect all 133 Tide/reference-site/shared-tool files; comparison of previous rendered routes confirms the 67 non-directory documents are byte-identical. Browser console errors/warnings are checked separately.
-
-Detailed measurements and current screenshots are ignored under `build/qa/lineup-venues/`. The retained desktop evidence is [the reviewed native layout](verification/venue-directory-desktop.jpg). Physical devices, Firefox/Safari, screen readers, text zoom, and changed system forced-colors/reduced-motion settings remain untested. Generated illustration coordinates are not a real map-provider contract.
-
-## Refinement after user review · 2026-10-28
-
-The first native translation was rejected for mismatched application width/header insets, omitted search UI and two-axis map scrolling. Its earlier visual acceptance is superseded. These three issues are now corrected, with broader user review still pending and no commit/push.
-
-- Seven direct Find Events ↔ Venues comparisons at 390, 768, 1024, 1200, 1488, 1920 and 2560 CSS pixels have exactly zero difference in header left/width, brand left and main left/width. The viewport wrapper keeps the native footer outside the initial frame; no duplicate header inset or independent 92rem wrapper remains.
-- Search venues is restored in the left intro, before the scrollable rows, with a visible native label, canonical 48px control and `q` GET contract. It is available in both native phone views. Enter submits the expected query; fixture matching remains consumer-owned, as with Find Events.
-- Container queries separate close map labels on smaller illustrations without moving the points. Nineteen responsive list/map states have no document horizontal overflow, zero horizontal/vertical map scrollbar dimensions, no clipped 44px marker controls and at least 24px bottom clearance. Thirty fresh theme/state cases cover the same properties across all ten theme/mode combinations. A phone marker popover returns focus to its visible native control on Escape.
-- The illustration remains a concept image with approximate positions. A live map/provider is a separate integration choice, not a workaround for the corrected frame geometry.
-
-Current measurements: ignored `build/qa/lineup-venues/refinement-{widths,responsive,themes,search,anchor}.json`. Current screenshots use the same `refinement-` prefix; the retained desktop screenshot is refreshed. This is a scoped refinement, not a claim of final user approval for the complete venue experience.
+Current screenshot: [selected venue on desktop](verification/venue-selection-desktop.jpg). Detailed measurements/screenshots are ignored under `build/qa/lineup-venues/map-selection/`. Firefox/Safari, physical devices, screen readers, text zoom and changed system motion/forced-color settings remain unverified. No dynamic screen-reader selection-announcement or cross-browser restoration guarantee is claimed. The 2.3.0 checkpoint retains the earlier photo/list/header studies and verification history.

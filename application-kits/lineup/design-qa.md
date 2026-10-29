@@ -1,3 +1,21 @@
+# Venue map selection · accepted checkpoint · Lineup 2.3.1
+
+final result: passed
+
+Scope: make card selection stay in the directory and make venue-detail navigation deliberate. The user approved this iteration as the next saved checkpoint, preserved at `lineup-v2.3.1`. The original foundation remains at `lineup-v2.3.0`. Real geographic map integration remains separate work.
+
+Cards now target their native map point; Photo-control marker links reveal the matching row. The existing row Badge and the Photo control's photographic Selected text identify the same venue in both views. Other labels hide while a venue is selected, and the selected label is positioned away from neighboring glyphs. Separate details links remain in the row and selected map caption; Back to list returns to the selected row. The former marker popovers are replaced by this nonmodal selection treatment; no popup-content redesign or geographic camera is included.
+
+Forty-two selection cases cover all six venues at seven viewports from 320x700 through 1920x1080, including tall-tablet 1024x1058. No clipped marker or selected label, horizontal document overflow or script is present. Twenty theme/state cases cover all five light/dark themes on phone and desktop. Native keyboard selection, offscreen row reveal, direct venue details and Back retain selection and entered search text. The progressive CSS initial target restores the selected row in current Chromium. The illustration now fits completely, resolving the earlier tall-tablet clipping finding.
+
+The heading/search and row recipes retain their canonical geometry/type/colors. Root scroll padding keeps selection in the bounded panes and leaves a target-sized region for footer focus. Motion uses the native list scroller and honors the existing reduced-motion rule. No private shared-component appearance or Tide source changes are present. All 130 root checks pass; original non-directory documents remain unchanged.
+
+Evidence: ignored `build/qa/lineup-venues/map-selection/` contains source fingerprints, responsive/theme cases, phone/desktop details/Back state and screenshots. Current retained image: [desktop selection](docs/verification/venue-selection-desktop.jpg). Browser coverage is Chromium on Windows. Other engines, physical devices, screen readers, text zoom and changed system motion/forced-color settings remain untested. `scroll-initial-target` is progressive; exact cross-browser scroll restoration remains consumer-owned. No screen-reader announcement guarantee is claimed.
+
+---
+
+## Preserved 2.3.0 foundation review
+
 # Compact venue heading and search · accepted foundation · 2026-10-29
 
 final result: passed

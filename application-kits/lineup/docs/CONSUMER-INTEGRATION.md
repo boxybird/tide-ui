@@ -88,3 +88,9 @@ An isolated external consumer exercised enhanced navigation, live matching, pagi
 ## Venue directory search · 2.3.0 refinement
 
 `venue-search-form` is a native GET form to `venues.html`; its `venue-query` search control submits `q`. It uses the unchanged Tide Field recipe. The static kit preview does not match query text or update its six-entry fixture count; the consuming server or optional enhancement supplies matching/results, URL handling and any return state. The field remains part of the delivered UI. See [venue directory](VENUE-DIRECTORY.md) for the native map/fragment and provider boundary.
+
+## Venue selection · 2.3.1
+
+The directory card's covering link now targets `#map-{venue-id}`; its separate View venue details link retains `{venue-id}.html`. Marker links target `#venue-{venue-id}` and reveal the corresponding row. Both native targets identify the same selected venue through the row Badge and photographic map-control text; selected caption links expose details and return-to-row actions. Consumers adapting the previous card/document or marker/popover hooks must update those assumptions. These private markup references are not a version-independent public API.
+
+The kit keeps an illustrated map completely fitted so every native target is reachable. Geographic camera movement and provider lifecycle remain consumer responsibilities. A real integration should move only enough to reveal the selected location, synchronize record identity across both views, retain keyboard access/direct document links, and respect reduced motion. Native URL selection survives direct visits and history; `scroll-initial-target` progressively reveals the selected row on initial rendering in supporting browsers. A consumer requiring exact arbitrary scroll offsets and consistent restoration across engines must supply and verify that behavior. No runtime or provider requirement is introduced into Lineup or Tide.

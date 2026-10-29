@@ -1,6 +1,8 @@
 /* Private viewport composition; profile rhythm comes from the shared kit. */
 @layer tide.app-venue {
-  .tide-app-document:has(.tide-app--directory) { scrollbar-gutter: stable; }
+  /* Keep fragment selection inside the panes; leave a target-sized root
+     scroll region so keyboard navigation can still reveal the site footer. */
+  .tide-app-document:has(.tide-app--directory) { scrollbar-gutter: stable; scroll-padding-block-start: calc(100dvh - var(--tide-size-target)); }
   .tide-venue__viewport { display: grid; grid-template-rows: auto minmax(0, 1fr); block-size: 100dvh; }
   .tide-venue__profile { display: block; }
   .tide-venue__visit { scroll-margin-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6)); }
@@ -26,43 +28,47 @@
   .tide-venue__profile-photo { inline-size: 100%; max-block-size: 24rem; object-fit: cover; }
   .tide-venue__map { min-inline-size: 0; min-block-size: 0; grid-column: 2; grid-row: 1 / span 2; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: var(--tide-space-2); }
   .tide-venue__map-frame { position: relative; min-block-size: 0; overflow: clip; container-type: size; }
-  .tide-venue__map-world { position: absolute; inset-inline-start: 50%; inset-block-start: 50%; transform: translate(-50%, -50%); inline-size: max(100cqw, calc(100cqh * 1295 / 1214)); aspect-ratio: 1295 / 1214; container-type: inline-size; }
+  .tide-venue__map-world { position: absolute; inset-inline-start: 50%; inset-block-start: 50%; transform: translate(-50%, -50%); inline-size: min(100cqw, calc(100cqh * 1295 / 1214)); aspect-ratio: 1295 / 1214; container-type: inline-size; }
   .tide-venue__map-image { display: block; inline-size: 100%; block-size: auto; }
-  .tide-venue__point { position: absolute; inline-size: var(--tide-size-target); block-size: var(--tide-size-target); transform: translate(-50%, -50%); }
+  .tide-venue__point { position: absolute; inline-size: var(--tide-size-target); block-size: var(--tide-size-target); margin-inline-start: calc(-.5 * var(--tide-size-target)); margin-block-start: calc(-.5 * var(--tide-size-target)); }
   .tide-venue__map-label { position: absolute; inset-inline-start: calc(100% + var(--tide-space-1)); inline-size: max-content; pointer-events: none; }
-  .tide-venue__point--warehouse-room .tide-venue__map-label { inset-inline-start: auto; inset-inline-end: calc(100% + var(--tide-space-1)); }
-  .tide-venue__popover-host { display: none; }
-  .tide-venue__popover-host:has(> :popover-open) { display: contents; }
-  .tide-venue__callout { inset: auto; inline-size: 16rem; max-inline-size: calc(100dvw - var(--tide-space-12)); max-block-size: calc(100dvh - var(--tide-space-12)); margin: auto; overflow-y: auto; }
-  .tide-venue__callout-title { margin-inline-end: var(--tide-space-6); }
-  .tide-venue__callout-close { position: absolute; inset-block-start: 0; inset-inline-end: 0; }
-  .tide-venue__point--sunshine-theater { inset-inline-start: 44.1%; inset-block-start: 53.4%; anchor-name: --venue-sunshine; }
-  .tide-venue__point--sister { inset-inline-start: 46%; inset-block-start: 33.6%; anchor-name: --venue-sister; }
-  .tide-venue__point--dry-heat { inset-inline-start: 68.3%; inset-block-start: 55.9%; anchor-name: --venue-dry-heat; }
-  .tide-venue__point--barelas-print-studio { inset-inline-start: 23.3%; inset-block-start: 85.1%; anchor-name: --venue-barelas; }
-  .tide-venue__point--the-paper-table { inset-inline-start: 55.5%; inset-block-start: 35.8%; anchor-name: --venue-paper; }
-  .tide-venue__point--warehouse-room { inset-inline-start: 84%; inset-block-start: 60%; anchor-name: --venue-warehouse; }
+  .tide-venue__point--warehouse-room .tide-venue__map-label--rest { inset-inline-start: auto; inset-inline-end: calc(100% + var(--tide-space-1)); }
+  .tide-venue__state { display: none; }
+  /* Progressive native return positioning; unsupported engines retain links. */
+  .tide-venue__return { scroll-initial-target: nearest; scroll-margin-block-start: var(--tide-space-8); }
+  .tide-venue__directory:has(.tide-venue__point:target, .tide-venue__list :target) .tide-venue__map-label--rest { display: none; }
+  body:has(#map-sunshine-theater:target, #venue-sunshine-theater:target) [data-select="sunshine-theater"],
+  body:has(#map-sister:target, #venue-sister:target) [data-select="sister"],
+  body:has(#map-dry-heat:target, #venue-dry-heat:target) [data-select="dry-heat"],
+  body:has(#map-barelas-print-studio:target, #venue-barelas-print-studio:target) [data-select="barelas-print-studio"],
+  body:has(#map-the-paper-table:target, #venue-the-paper-table:target) [data-select="the-paper-table"],
+  body:has(#map-warehouse-room:target, #venue-warehouse-room:target) [data-select="warehouse-room"] { display: contents; }
+  .tide-venue__point--sunshine-theater .tide-venue__state > .tide-venue__map-label,
+  .tide-venue__point--warehouse-room .tide-venue__state > .tide-venue__map-label { inset-inline-start: 50%; inset-block-start: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
+  .tide-venue__point--sister .tide-venue__state > .tide-venue__map-label,
+  .tide-venue__point--dry-heat .tide-venue__state > .tide-venue__map-label { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
+  .tide-venue__point--sunshine-theater { inset-inline-start: 44.1%; inset-block-start: 53.4%; }
+  .tide-venue__point--sister { inset-inline-start: 46%; inset-block-start: 33.6%; }
+  .tide-venue__point--dry-heat { inset-inline-start: 68.3%; inset-block-start: 55.9%; }
+  .tide-venue__point--barelas-print-studio { inset-inline-start: 23.3%; inset-block-start: 85.1%; }
+  .tide-venue__point--the-paper-table { inset-inline-start: 55.5%; inset-block-start: 35.8%; }
+  .tide-venue__point--warehouse-room { inset-inline-start: 84%; inset-block-start: 60%; }
   @container (width < 60rem) {
-    .tide-venue__point--sister .tide-venue__map-label { inset-inline-start: 50%; inset-block-start: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
+    .tide-venue__point--sister .tide-venue__map-label--rest { inset-inline-start: 50%; inset-block-start: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
     .tide-venue__point--the-paper-table .tide-venue__map-label { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
   }
-  @supports (inset-block-start: anchor(--venue-sister bottom)) {
-    .tide-venue__callout { margin: var(--tide-space-2) 0 0; inset-block-start: clamp(var(--tide-space-6), anchor(var(--tide-app-map-anchor) bottom), calc(100dvh - 16rem)); inset-inline-start: clamp(var(--tide-space-6), anchor(var(--tide-app-map-anchor) left), calc(100dvw - 18rem)); }
-    .tide-venue__callout--sunshine-theater { --tide-app-map-anchor: --venue-sunshine; }
-    .tide-venue__callout--sister { --tide-app-map-anchor: --venue-sister; }
-    .tide-venue__callout--dry-heat { --tide-app-map-anchor: --venue-dry-heat; }
-    .tide-venue__callout--barelas-print-studio { --tide-app-map-anchor: --venue-barelas; }
-    .tide-venue__callout--the-paper-table { --tide-app-map-anchor: --venue-paper; }
-    .tide-venue__callout--warehouse-room { --tide-app-map-anchor: --venue-warehouse; }
+  @container (width < 21rem) {
+    .tide-venue__state .tide-venue__map-name, .tide-venue__state > .tide-venue__map-label > br { display: none; }
+    .tide-venue__point--dry-heat .tide-venue__state > .tide-venue__map-label { inset-block-start: calc(100% + var(--tide-space-2)); inset-block-end: auto; }
   }
+  @media (prefers-reduced-motion: no-preference) { .tide-venue__list { scroll-behavior: smooth; } }
   @media (width < 60rem) {
     .tide-venue__directory { max-inline-size: var(--tide-app-reading-width); grid-template-columns: minmax(0, 1fr); padding: var(--tide-space-3) 0 var(--tide-space-6); }
     .tide-venue__views { display: block; }
     .tide-venue__list { grid-column: 1; grid-row: 2; }
     .tide-venue__map { display: none; grid-column: 1; grid-row: 2; }
-    .tide-venue__map-world { inline-size: min(100cqw, calc(100cqh * 1295 / 1214)); }
-    .tide-venue__directory:has(#venue-map:target, .tide-venue__point:target, .tide-venue__map:focus-within) .tide-venue__list { display: none; }
-    .tide-venue__directory:has(#venue-map:target, .tide-venue__point:target, .tide-venue__map:focus-within) .tide-venue__map { display: grid; }
+    .tide-venue__directory:has(#venue-map:target, .tide-venue__point:target, .tide-venue__map:focus-within):not(:has(.tide-venue__list :target)) .tide-venue__list { display: none; }
+    .tide-venue__directory:has(#venue-map:target, .tide-venue__point:target, .tide-venue__map:focus-within):not(:has(.tide-venue__list :target)) .tide-venue__map { display: grid; }
   }
   @media (width >= 75rem) {
     .tide-app--directory { --tide-app-content-width: 92rem; padding-inline: var(--tide-app-content-inset); }

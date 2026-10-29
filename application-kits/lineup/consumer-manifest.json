@@ -2,7 +2,7 @@
   "id": "lineup",
   "name": "Lineup",
   "layoutFamily": "option-1",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "kitVersion": "1.12.0",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
@@ -91,6 +91,7 @@
     "src/templates/venue-directory.html",
     "src/templates/venue-icon-square.html",
     "src/templates/venue-map-point.html",
+    "src/templates/venue-selection-links.html",
     "src/templates/workspace-browse.html",
     "src/templates/workspace-results.html",
     "src/templates/workspace.html"

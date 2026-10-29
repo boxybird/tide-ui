@@ -93,7 +93,6 @@ class AppTemplates:
             'VENUE_IMAGE':venue['image'], 'VENUE_ALT':venue['alt'],
             'VENUE_IMAGE_WIDTH':venue['width'], 'VENUE_IMAGE_HEIGHT':venue['height'],
             'VENUE_EVENT_COUNT':len(entries), 'VENUE_HREF':venue['id']+'.html',
-            'VENUE_INFORMATION_LINK':self.partial('detail-venue-link', {'HREF':'sunshine-theater.html#venue-information', 'TEXT':'Venue information'}) if venue['id']=='sunshine-theater' else Html(''),
         }
 
     def venue_page(self, venue_id=None):
@@ -106,6 +105,7 @@ class AppTemplates:
         return self.partial('venue-directory', {
             'VENUE_ROWS':Html(''.join(self.partial('venue-directory-row', value) for value in values)),
             'VENUE_POINTS':Html(''.join(self.partial('venue-map-point', value) for value in values)),
+            'VENUE_SELECTION_LINKS':Html(''.join(self.partial('venue-selection-links', value) for value in values)),
         })
 
     def card(self, event, selected, saved=False):
