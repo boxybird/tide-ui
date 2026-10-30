@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.4.1 · 2026-10-29
+
+- Compact map markers now open a native, non-modal venue preview instead of navigating to the hidden list. Each uses the existing Tide Panel, name/type/count roles, Close control and direct venue-details link. Native Escape, outside dismissal and keyboard focus return stay browser-owned.
+- Private CSS anchors the panel above its marker with viewport-edge placement fallbacks. At 60rem and above, the existing marker link selects the visible list; no popup is exposed. Open previews close on entry to the split layout or a native fragment change.
+- Preserved compact list-to-venue navigation, the real dark map, all fixture IDs/counts, desktop selection and Tide 1.12.0. The same native preview works over the illustrated map fallback.
+- Registered one shared preview partial and extended the existing venue contract test. The map stylesheet now uses the existing lossless CSS compactor at build time, keeping the original asset budgets and pinned vendor bytes unchanged. See [behavior and verification](MOBILE-MAP-PREVIEW.md).
+
 ## 2.4.0 · 2026-10-29
 
 - Consolidated the approved Consumer Lab 0.4.2 map into this application kit; the normal build now combines the current 2.3.2 source and the map, with no copied snapshot. Preserved pinned MapLibre bytes, the dark style and demonstration coordinates.

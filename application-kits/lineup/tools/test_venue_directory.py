@@ -49,6 +49,16 @@ class VenueDirectoryContracts(unittest.TestCase):
             self.assertEqual(open_venue['attrs']['aria-label'], f'View {name} and its {count} events')
             self.assertEqual(point_links[0]['attrs']['href'], '#venue-'+venue_id)
             self.assertIn('tide-photo-control', point_links[0]['classes'])
+            panel_id='map-panel-'+venue_id
+            trigger=next(node for node in nodes if node['tag']=='button' and point in node['parents'] and node['attrs'].get('popovertarget')==panel_id and not node['attrs'].get('popovertargetaction'))
+            self.assertEqual(trigger['attrs']['aria-label'], 'Preview '+name)
+            panel=next(node for node in nodes if node['attrs'].get('id')==panel_id)
+            self.assertEqual(panel['attrs']['popover'], 'auto')
+            self.assertEqual(panel['attrs']['role'], 'dialog')
+            self.assertEqual(panel['attrs']['aria-labelledby'], 'map-panel-title-'+venue_id)
+            self.assertTrue(any(node['classes']=={'tide-panel'} and panel in node['parents'] for node in nodes))
+            self.assertTrue(any(node['tag']=='button' and node['attrs'].get('popovertarget')==panel_id and node['attrs'].get('popovertargetaction')=='hide' and panel in node['parents'] for node in nodes))
+            self.assertTrue(any(node['tag']=='a' and node['attrs']['href']==venue_id+'.html' and panel in node['parents'] for node in nodes))
             self.assertEqual(row['attrs']['tabindex'], '-1')
             self.assertEqual(point['attrs']['tabindex'], '-1')
             self.assertTrue(any(node['attrs']['href']==venue_id+'.html' for node in row_links))
@@ -109,6 +119,8 @@ class VenueDirectoryContracts(unittest.TestCase):
                                 for declaration in body.split(';')])
                     for selector, body in style_rules(source)]
         self.assertEqual(declarations(css), declarations(compact_css(css)))
+        map_css=(ROOT/'src/map/venue-map.css').read_text(encoding='utf-8')
+        self.assertEqual(declarations(map_css), declarations(compact_css(map_css)))
         source = '''/*! license */ .x { content: "a;  b\\\n    c"; background: url("a  b.svg"); /* omitted */ width: calc(100% - 1rem); }'''
         result = compact_css(source)
         self.assertIn('/*! license */', result)

@@ -1,5 +1,7 @@
 # Venue directory · Lineup 2.3.2
 
+**2.4.1 compact behavior:** below 60rem, markers open the [native venue preview](MOBILE-MAP-PREVIEW.md) on the map instead of revealing the hidden list. At wider sizes, the existing marker-to-list and card-to-map selection stays unchanged. This supersedes the earlier compact marker-to-list behavior described below.
+
 **Current 2.4.0 boundary:** the approved map is now in `src/map/` and builds from the current Lineup templates. Review `/events/app/venues.html` on port 4187. There is no active separate consumer or copied source snapshot. Only the venue directory loads browser modules; prior no-script/map-provider-exclusion statements below describe the earlier native baseline. The current [source-of-truth contract](SOURCE-OF-TRUTH.md) takes precedence. Native event/search journeys and service limits are unchanged.
 
 

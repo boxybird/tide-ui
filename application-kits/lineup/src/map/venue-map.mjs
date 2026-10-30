@@ -6,6 +6,10 @@ const frame=figure?.querySelector('.tide-venue__map-frame');
 const list=document.querySelector('#venue-list');
 const points=[...figure.querySelectorAll('.tide-venue__point')];
 const origins=points.map(point=>[point,point.parentElement]);
+// Native popovers own opening, dismissal and focus; none may survive a
+// transition to the split layout where the venue list is already visible.
+function closePanels(){for(const panel of figure.querySelectorAll('.tide-venue-map__popup:popover-open'))panel.hidePopover();}
+matchMedia('(width < 60rem)').addEventListener('change',event=>{if(!event.matches)closePanels();});
 const status=document.createElement('p');
 status.className='tide-caption tide-venue-map__status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');
 figure.append(status);
@@ -49,7 +53,7 @@ function fail(message){
   canvas.remove();
   status.textContent=message+' The illustrated map and venue links remain available.';
 }
-window.addEventListener('hashchange',()=>requestAnimationFrame(()=>syncSelection(true)));
+window.addEventListener('hashchange',()=>{closePanels();requestAnimationFrame(()=>syncSelection(true));});
 window.addEventListener('pagehide',()=>{
   if(!ready)return;
   try{sessionStorage.setItem(storageKey,JSON.stringify({hash:location.hash,center:map.getCenter().toArray(),zoom:map.getZoom(),listTop:list.scrollTop}));}catch{}

@@ -1,5 +1,7 @@
 # Lineup source of truth · 2.4.0
 
+The next increment is **2.4.1**, adding [compact map previews](MOBILE-MAP-PREVIEW.md) on this same source and `main` branch. The original `lineup-v2.4.0` consolidation tag remains unchanged.
+
 The user approved consolidation on October 29, 2026: one repository, one `main` branch, one current application and an incremental commit after each accepted change. The previous two-repository workflow caused visible regressions because the map preview used an older immutable application snapshot. This checkpoint removes that split.
 
 ## Current application

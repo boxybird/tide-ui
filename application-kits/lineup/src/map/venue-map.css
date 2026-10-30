@@ -82,3 +82,22 @@ body[data-lineup-venue-workspace="fixed"] .tide-venue__map-frame {
   padding-block-end:0;
  }
 }
+
+/* A native popover mounts the unchanged Tide Panel above its marker. */
+.tide-venue-map__compact { display:none; }
+.tide-venue-map__popup {
+ display:none; border:0; padding:0; background:none; color:inherit;
+ inline-size:min(18rem,calc(100dvw - var(--tide-space-8)));
+ max-block-size:calc(100dvh - var(--tide-space-8)); overflow:auto;
+}
+.tide-venue-map__popup-heading { display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:start; gap:var(--tide-space-2); }
+@supports (position-area:top) {
+ .tide-venue-map__popup { inset:auto; margin:0 var(--tide-space-4) var(--tide-space-2); position-area:top; position-try-fallbacks:flip-block,top span-right,top span-left,bottom span-right,bottom span-left; }
+}
+@supports selector(:popover-open) {
+ @media (width < 60rem) {
+  .tide-venue-map__popup:popover-open { display:block; }
+  .tide-venue-map__compact { display:contents; }
+  .tide-venue-map__split { display:none; }
+ }
+}

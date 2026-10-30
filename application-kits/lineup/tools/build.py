@@ -35,7 +35,7 @@ def build(check=False):
     assert not any(p.suffix in ('.js','.mjs','.cjs') for p in (ROOT/'src/runtime').rglob('*')), 'Only the map owns browser code.'
     for source in sorted((ROOT/'src/map').rglob('*')):
         if source.is_file():
-            expected[OUT/'runtime/map'/source.relative_to(ROOT/'src/map')] = source.read_bytes()
+            expected[OUT/'runtime/map'/source.relative_to(ROOT/'src/map')] = compact_css(source.read_text(encoding='utf-8')).encode('utf-8') if source.name=='venue-map.css' else source.read_bytes()
     css_sources = [ROOT/name for name in manifest['styleHome']]
     assert set(css_sources) == set((ROOT/'src/styles').glob('*.css')), 'Register every app stylesheet in consumer-manifest.json, in cascade order.'
     css = '/* App composition only; generated from src/styles/. */\n' + compact_css('\n'.join(source.read_text(encoding='utf-8') for source in css_sources))
