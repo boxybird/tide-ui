@@ -3,7 +3,8 @@
   /* Keep fragment selection inside the panes; leave a target-sized root
      scroll region so keyboard navigation can still reveal the site footer. */
   .tide-app-document:has(.tide-app--directory) { scrollbar-gutter: stable; scroll-padding-block-start: calc(100dvh - var(--tide-size-target)); }
-  .tide-venue__viewport { display: grid; grid-template-rows: auto minmax(0, 1fr); block-size: 100dvh; }
+  /* Short windows scroll the document instead of compressing 44px map targets. */
+  .tide-venue__viewport { display: grid; grid-template-rows: auto minmax(0,1fr); block-size: max(100dvh,48rem); }
   .tide-venue__profile { display: block; }
   .tide-venue__visit { scroll-margin-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6)); }
   .tide-app__review { max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-10) var(--tide-layout-inset); }
@@ -15,69 +16,71 @@
   @media (width < 60rem) {
     .tide-venue__profile { margin-block-start: var(--tide-space-8); }
   }
-}
 
 /* Venue directory: host geometry only. Tide owns every card/control/panel. */
-@layer tide.app-venue {
   .tide-app--directory .tide-app__header { inline-size: 100%; }
-  .tide-venue__directory { inline-size: 100%; max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-6); display: grid; grid-template-columns: minmax(17rem, 32%) minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 0 var(--tide-space-5); min-block-size: 0; }
+  .tide-venue__directory { inline-size: 100%; max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-6); display: grid; grid-template-columns: minmax(17rem,32%) minmax(0,1fr); grid-template-rows: auto minmax(0,1fr); gap: 0 var(--tide-space-5); min-block-size: 0; }
   .tide-venue__intro { min-inline-size: 0; }
   .tide-venue__intro-body { padding: var(--tide-space-4) var(--tide-layout-inset); }
   .tide-venue__views { display: none; }
   .tide-venue__list { min-block-size: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-gutter: stable; scroll-padding-block: var(--tide-space-2); }
   .tide-venue__profile-photo { inline-size: 100%; max-block-size: 24rem; object-fit: cover; }
-  .tide-venue__map { min-inline-size: 0; min-block-size: 0; grid-column: 2; grid-row: 1 / span 2; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: var(--tide-space-2); }
+  .tide-venue__map { min-inline-size: 0; min-block-size: 0; grid-area: 1/2/span 2; display: grid; grid-template-rows: minmax(0,1fr) auto; gap: var(--tide-space-2); }
   .tide-venue__map-frame { position: relative; min-block-size: 0; overflow: clip; container-type: size; }
-  .tide-venue__map-world { position: absolute; inset-inline-start: 50%; inset-block-start: 50%; transform: translate(-50%, -50%); inline-size: min(100cqw, calc(100cqh * 1295 / 1214)); aspect-ratio: 1295 / 1214; container-type: inline-size; }
+  .tide-venue__map-world { position: absolute; inset-inline-start: 50%; inset-block-start: 50%; transform: translate(-50%,-50%); inline-size: min(100cqw,calc(100cqh * 1295/1214)); aspect-ratio: 1295/1214; container-type: inline-size; }
   .tide-venue__map-image { display: block; inline-size: 100%; block-size: auto; }
-  .tide-venue__point { position: absolute; inline-size: var(--tide-size-target); block-size: var(--tide-size-target); margin-inline-start: calc(-.5 * var(--tide-size-target)); margin-block-start: calc(-.5 * var(--tide-size-target)); }
-  .tide-venue__map-label { position: absolute; inset-inline-start: calc(100% + var(--tide-space-1)); inline-size: max-content; pointer-events: none; }
-  .tide-venue__point--warehouse-room .tide-venue__map-label--rest { inset-inline-start: auto; inset-inline-end: calc(100% + var(--tide-space-1)); }
+  .tide-venue__point { position: absolute; inline-size: var(--tide-size-target); block-size: var(--tide-size-target); translate: -50% -50%; }
+  .tide-venue__label { position: absolute; inset-inline-start: calc(100% + var(--tide-space-1)); inline-size: max-content; pointer-events: none; }
+  #map-warehouse-room .tide-venue__label--rest { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
   .tide-venue__state { display: none; }
   /* Progressive native return positioning; unsupported engines retain links. */
   .tide-venue__return { scroll-initial-target: nearest; scroll-margin-block-start: var(--tide-space-8); }
-  .tide-venue__directory:has(.tide-venue__point:target, .tide-venue__list :target) .tide-venue__map-label--rest { display: none; }
-  body:has(#map-sunshine-theater:target, #venue-sunshine-theater:target) [data-select="sunshine-theater"],
-  body:has(#map-sister:target, #venue-sister:target) [data-select="sister"],
-  body:has(#map-dry-heat:target, #venue-dry-heat:target) [data-select="dry-heat"],
-  body:has(#map-barelas-print-studio:target, #venue-barelas-print-studio:target) [data-select="barelas-print-studio"],
-  body:has(#map-the-paper-table:target, #venue-the-paper-table:target) [data-select="the-paper-table"],
-  body:has(#map-warehouse-room:target, #venue-warehouse-room:target) [data-select="warehouse-room"] { display: contents; }
-  .tide-venue__point--sunshine-theater .tide-venue__state > .tide-venue__map-label,
-  .tide-venue__point--warehouse-room .tide-venue__state > .tide-venue__map-label { inset-inline-start: 50%; inset-block-start: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
-  .tide-venue__point--sister .tide-venue__state > .tide-venue__map-label,
-  .tide-venue__point--dry-heat .tide-venue__state > .tide-venue__map-label { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
-  .tide-venue__point--sunshine-theater { inset-inline-start: 44.1%; inset-block-start: 53.4%; }
-  .tide-venue__point--sister { inset-inline-start: 46%; inset-block-start: 33.6%; }
-  .tide-venue__point--dry-heat { inset-inline-start: 68.3%; inset-block-start: 55.9%; }
-  .tide-venue__point--barelas-print-studio { inset-inline-start: 23.3%; inset-block-start: 85.1%; }
-  .tide-venue__point--the-paper-table { inset-inline-start: 55.5%; inset-block-start: 35.8%; }
-  .tide-venue__point--warehouse-room { inset-inline-start: 84%; inset-block-start: 60%; }
-  @container (width < 60rem) {
-    .tide-venue__point--sister .tide-venue__map-label--rest { inset-inline-start: 50%; inset-block-start: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
-    .tide-venue__point--the-paper-table .tide-venue__map-label { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
-  }
-  @container (width < 21rem) {
-    .tide-venue__state .tide-venue__map-name, .tide-venue__state > .tide-venue__map-label > br { display: none; }
-    .tide-venue__point--dry-heat .tide-venue__state > .tide-venue__map-label { inset-block-start: calc(100% + var(--tide-space-2)); inset-block-end: auto; }
+  .tide-venue__directory:has(.tide-venue__point:target,.tide-venue__list :target) .tide-venue__label--rest { display: none; }
+  body:has(#map-sunshine-theater:target,#venue-sunshine-theater:target) [data-select="sunshine-theater"],
+  body:has(#map-sister:target,#venue-sister:target) [data-select="sister"],
+  body:has(#map-dry-heat:target,#venue-dry-heat:target) [data-select="dry-heat"],
+  body:has(#map-barelas-print-studio:target,#venue-barelas-print-studio:target) [data-select="barelas-print-studio"],
+  body:has(#map-the-paper-table:target,#venue-the-paper-table:target) [data-select="the-paper-table"],
+  body:has(#map-warehouse-room:target,#venue-warehouse-room:target) [data-select="warehouse-room"] { display: contents; }
+  :is(#map-sunshine-theater,#map-warehouse-room) .tide-venue__state > .tide-venue__label { inset-inline-start: 50%; inset-block-start: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
+  :is(#map-sister,#map-dry-heat) .tide-venue__state > .tide-venue__label { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
+  #map-sunshine-theater { inset-inline-start: 44.1%; inset-block-start: 53.4%; }
+  #map-sister { inset-inline-start: 46%; inset-block-start: 33.6%; }
+  #map-dry-heat { inset-inline-start: 68.3%; inset-block-start: 55.9%; }
+  #map-barelas-print-studio { inset-inline-start: 23.3%; inset-block-start: 85.1%; }
+  #map-the-paper-table { inset-inline-start: 55.5%; inset-block-start: 35.8%; }
+  #map-warehouse-room { inset-inline-start: 84%; inset-block-start: 60%; }
+  #map-sunshine-theater .tide-venue__label--rest { inset-inline: auto calc(100% + var(--tide-space-1)); }
+  #map-dry-heat .tide-venue__label--rest { inset-inline: auto 50%; inset-block-start: calc(100% + var(--tide-space-2)); }
+  #map-sister .tide-venue__label--rest { inset-inline-start: 50%; inset-block-start: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
+  #map-the-paper-table .tide-venue__label { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-4)); transform: translateX(-50%); }
+  /* Compact illustrative positions and labels preserve distinct hit areas. */
+  @container (width < 36rem) {
+    .tide-venue__state :is(.tide-venue__map-name,br) { display: none; }
+    #map-dry-heat .tide-venue__state > .tide-venue__label { inset-block-start: calc(100% + var(--tide-space-2)); inset-block-end: auto; }
+    #map-the-paper-table { inset-inline-start: 64%; }
+    #map-dry-heat { inset-inline-start: 62%; }
+    #map-warehouse-room { inset-inline-start: 88%; inset-block-start: 80%; }
+    #map-sunshine-theater .tide-venue__label--rest { inline-size: 6rem; }
+    #map-sister .tide-venue__label--rest { inset-block: auto calc(100% + var(--tide-space-2)); }
+    #map-the-paper-table .tide-venue__label--rest { inline-size: 5rem; inset-inline-start: calc(100% + var(--tide-space-1)); inset-block-end: auto; transform: none; }
+    #map-warehouse-room .tide-venue__label--rest { inline-size: 5rem; inset-inline: auto calc(-1 * var(--tide-space-2)); transform: none; }
+    #map-barelas-print-studio .tide-venue__label--rest { inline-size: 6rem; }
   }
   @media (prefers-reduced-motion: no-preference) { .tide-venue__list { scroll-behavior: smooth; } }
   @media (width < 60rem) {
-    .tide-venue__directory { max-inline-size: var(--tide-app-reading-width); grid-template-columns: minmax(0, 1fr); padding: var(--tide-space-3) 0 var(--tide-space-6); }
-    .tide-venue__views { display: block; }
-    .tide-venue__list { grid-column: 1; grid-row: 2; }
-    .tide-venue__map { display: none; grid-column: 1; grid-row: 2; }
-    .tide-venue__directory:has(#venue-map:target, .tide-venue__point:target, .tide-venue__map:focus-within):not(:has(.tide-venue__list :target)) .tide-venue__list { display: none; }
-    .tide-venue__directory:has(#venue-map:target, .tide-venue__point:target, .tide-venue__map:focus-within):not(:has(.tide-venue__list :target)) .tide-venue__map { display: grid; }
+    .tide-venue__directory { max-inline-size: var(--tide-app-reading-width); grid-template-columns: minmax(0,1fr); padding: var(--tide-space-3) 0 var(--tide-space-6); }
+    .tide-venue__directory { --tide-app-list: block; --tide-app-map: none; }
+    .tide-venue__list,.tide-venue__views--list { display: var(--tide-app-list); }
+    .tide-venue__map,.tide-venue__views--map { display: var(--tide-app-map); }
+    .tide-venue__list,.tide-venue__map { grid-area: 2/1; }
+    /* One native state selects the panel and its exposed current-view links. */
+    .tide-venue__directory:has(#venue-map:target,.tide-venue__point:target) { --tide-app-list: none; --tide-app-map: grid; }
   }
   @media (width >= 75rem) {
     .tide-app--directory { --tide-app-content-width: 92rem; padding-inline: var(--tide-app-content-inset); }
     .tide-app--directory .tide-app__header { max-inline-size: none; padding-inline: 0; margin-inline: 0; }
     /* Match Find Events' middle track: 35% after its two 24px pane gaps. */
-    .tide-venue__directory { max-inline-size: none; grid-template-columns: minmax(0, calc((100% - 2 * var(--tide-app-pane-gap)) * .35)) minmax(0, 1fr); padding-inline: 0; }
-  }
-  @media (height < 40rem) {
-    .tide-venue__viewport { block-size: auto; min-block-size: 100svh; }
-    .tide-venue__directory { min-block-size: 32rem; }
+    .tide-venue__directory { max-inline-size: none; grid-template-columns: minmax(0,calc((100% - 2 * var(--tide-app-pane-gap)) * .35)) minmax(0,1fr); padding-inline: 0; }
   }
 }

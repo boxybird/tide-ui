@@ -1,8 +1,14 @@
-# Venue directory · Lineup 2.3.1
+# Venue directory · Lineup 2.3.2
 
 Lineup owns this composition and its native selection behavior. Tide UI remains 1.12.0 with no source, token, recipe, registry, palette or distribution change. The approved 2.3.0 foundation remains preserved at `lineup-v2.3.0`; this iteration changes which action happens first.
 
 The user-approved selection refactor is preserved at `lineup-v2.3.1` before real-map integration work. Its map image and CSS percentage positions are illustrative, not verified geographic coordinates.
+
+## Audit corrections · 2.3.2
+
+The illustration still fits completely in its frame. The frame reserves at least 48rem of document height; shorter viewports scroll the document rather than compressing markers. Below a 36rem map width, three illustrative marker positions and the label placements separate the 44px targets. Overview labels wrap where needed; a compact selected marker says Selected and its caption supplies the full venue name. These are illustrative placement changes, not geographic corrections.
+
+Below 60rem, exactly one authored List/Map navigation is exposed, with a check icon and `aria-current="location"` on the current view. The fragment selects both the panel and navigation; stale focus cannot keep Map open after Back returns to List. Native row/marker fragments and detail destinations are unchanged. The private map-label host is now named `tide-venue__label`. See [audit correction verification](AUDIT-CORRECTIONS-2026-10-29.md).
 
 ## Interaction contract
 
@@ -32,7 +38,7 @@ Card padding, texture, typography, colors, separators and focus/hover/active sta
 
 ## Composition and map boundary
 
-The directory retains Find Events' frame/header insets, the 35% desktop list-track calculation, native thin scrollbar, compact heading/search and at least 24px pane-bottom clearance. Existing CSS Grid supplies the natural header and bounded main; short-height windows use normal document scrolling. The five registered application stylesheet modules remain the only style owners.
+The directory retains Find Events' frame/header insets, the 35% desktop list-track calculation, native thin scrollbar, compact heading/search and at least 24px pane-bottom clearance. Existing CSS Grid supplies the natural header and bounded main; short-height windows use normal document scrolling around the minimum frame. The five registered application stylesheet modules remain the only style owners.
 
 The map illustration is fitted completely inside its non-scrolling frame at every width. This prevents the formerly clipped tall-tablet marker and keeps native targets reachable. The image, approximate point coordinates and square Phosphor glyph are unchanged. This is not a geographic camera: provider panning, zoom, real coordinates, live matching and fetched content remain [consumer integrations](CONSUMER-INTEGRATION.md). No provider, browser JavaScript, HTMX or independent prototype runtime is imported.
 

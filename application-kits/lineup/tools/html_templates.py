@@ -100,17 +100,21 @@ class AppTemplates:
             venue = self.venues_by_id[venue_id]
             entries = sorted((event for event in self.events if event['venue']==venue_id), key=lambda event:(event['date'], event.get('start',''), event['id']))
             return self.partial('venue-directory-profile', {**self.venue_values(venue),
-                'VENUE_EVENTS':Html(''.join(self.card(event, '') for event in entries))})
+                'VENUE_EVENTS':Html(''.join(self.card(event, '', heading_level=3) for event in entries))})
         values = [self.venue_values(venue) for venue in self.venues]
         return self.partial('venue-directory', {
             'VENUE_ROWS':Html(''.join(self.partial('venue-directory-row', value) for value in values)),
             'VENUE_POINTS':Html(''.join(self.partial('venue-map-point', value) for value in values)),
             'VENUE_SELECTION_LINKS':Html(''.join(self.partial('venue-selection-links', value) for value in values)),
+            'VIEW_CURRENT_ICON':self.partial('detail-icon-check', {'ICON_EXTRA':Html('')}),
         })
 
-    def card(self, event, selected, saved=False):
+    def card(self, event, selected, saved=False, heading_level=4):
+        if heading_level not in (3, 4):
+            raise ValueError('Card heading level must follow its collection or month heading')
         day = date.fromisoformat(event['date'])
         values = {
+            'CARD_LEVEL':heading_level,
             'ID':event['id'], 'TITLE':event['title'], 'CATEGORY':event['category'],
             'CATEGORY_LABEL':event['categoryLabel'], 'VENUE_LABEL':event['venueLabel'],
             'VENUE_ATTRIBUTE':Html('') if saved else attribute('data-venue', event['venue']),
@@ -201,6 +205,8 @@ class AppTemplates:
             'EMPTY_RECOVERY_HREF':collection_href+'#results' if venue else 'index.html',
             'EMPTY_RECOVERY_LABEL':'Show all venue events' if venue else 'Clear search and filters',
             'PREVIEW_HIDDEN':Html(' hidden' if events or venue else ''),
+            'PREVIEW_TITLE':'Choose an evening.' if events else 'No event to preview.',
+            'PREVIEW_COPY':'Open a result to see the full event.' if events else 'Clear your search and filters to browse events again.',
             'MUSIC_CHECKED':Html(' checked' if sample.get('category')=='music' else ''),
             'COMEDY_CHECKED':Html(' checked' if sample.get('category')=='comedy' else ''),
             'WORKSHOP_CHECKED':Html(' checked' if sample.get('category')=='workshop' else ''),
@@ -213,7 +219,8 @@ class AppTemplates:
             'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'About Sunshine Theater' if venue else 'Explore Sunshine Theater and its upcoming events.',
             'FOOTER_BACK_HIDDEN':Html('') if saved or venue else Html(' hidden'),
             'FOOTER_BACK_LABEL':'All events across Albuquerque' if venue else 'Back to all events',
-            'FOOTER_NOTE':'Your saved events, all in one place.' if saved else 'You’re all caught up.',
+            'FOOTER_NOTE':'You’re all caught up.' if events and not saved else '',
+            'FOOTER_NOTE_HIDDEN':Html(' hidden' if saved or not events else ''),
         })
         if venue:
             values['RESULT_SCOPE'] = self.partial('result-scope', values)

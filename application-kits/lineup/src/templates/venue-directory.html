@@ -3,7 +3,8 @@
     <div class="tide-results tide-results--utility"><h1 class="tide-results__count" id="venue-directory-title">Venues</h1><p class="tide-results__order">Albuquerque</p></div>
     <div class="tide-venue__intro-body"><div class="tide-stack">
       <form class="tide-field" id="venue-search-form" action="venues.html" method="get" role="search" aria-label="Search venues"><label class="tide-field__label" for="venue-query">Search venues</label><input class="tide-field__control" id="venue-query" name="q" type="search" placeholder="Venue name or type" maxlength="160"></form>
-      <div class="tide-venue__views"><nav class="tide-row" aria-label="Venue views"><a class="tide-button tide-button--secondary tide-button--compact" href="#venue-list">List</a><a class="tide-button tide-button--secondary tide-button--compact" href="#venue-map">Map</a></nav></div>
+      <div class="tide-venue__views tide-venue__views--list"><nav class="tide-row" aria-label="Venue views"><a class="tide-button tide-button--compact" href="#venue-list" aria-current="location">{{VIEW_CURRENT_ICON}}List</a><a class="tide-button tide-button--secondary tide-button--compact" href="#venue-map">Map</a></nav></div>
+      <div class="tide-venue__views tide-venue__views--map"><nav class="tide-row" aria-label="Venue views"><a class="tide-button tide-button--secondary tide-button--compact" href="#venue-list">List</a><a class="tide-button tide-button--compact" href="#venue-map" aria-current="location">{{VIEW_CURRENT_ICON}}Map</a></nav></div>
     </div></div>
   </header>
   <section class="tide-venue__list" id="venue-list" tabindex="0" aria-label="Venue list"><div class="tide-event-list">{{VENUE_ROWS}}</div></section>

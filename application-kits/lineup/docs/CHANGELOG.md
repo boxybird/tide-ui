@@ -1,5 +1,15 @@
 # Lineup application-kit changelog
 
+## 2.3.2 · 2026-10-29
+
+- Corrected the seven actionable findings from the October 29 UI/UX audit, with Tide 1.12.0 unchanged. Missing live information and the intentional submission endpoint remain sample/integration boundaries.
+- Separated the 44px map targets at compact sizes and repositioned their labels. The directory has a 48rem minimum document frame so short windows scroll instead of shrinking the illustration until controls collide. Compact selected labels retain the venue name in the existing caption.
+- Added authored native List/Map states with a check icon and `aria-current="location"`; only the matching navigation is exposed. The URL fragment controls the panel and state together. Removed the focus-based map override that prevented Back from restoring the list.
+- Added the existing Saved navigation utility to concise details and existing venue destinations to all 54 event details. No save persistence or new venue information is introduced.
+- Made the zero-result preview agree with the empty collection and omitted populated-feed completion text there. Removed redundant Saved footer reassurance.
+- Rendered H3 event-card titles below H2 collections on the five standalone venue profiles while preserving H4 titles within month groups and the unchanged Tide typography.
+- Consolidated application CSS rules within the existing asset budget; no public component styling or shared build tool changed. Extended regression contracts for navigation destinations, heading contexts and empty/Saved copy. See [verification and consumer notes](AUDIT-CORRECTIONS-2026-10-29.md).
+
 ## 2.3.1 · 2026-10-29
 
 - Preserved the user-approved selection refactor at `lineup-v2.3.1` before real-map integration work. The 2.3.0 foundation remains separately tagged. Tide is unchanged; the native kit still ships no browser JavaScript or map-provider dependency.

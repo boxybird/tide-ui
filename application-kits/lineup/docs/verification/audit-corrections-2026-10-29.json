@@ -1,0 +1,441 @@
+{
+  "date": "2026-10-29",
+  "lineup_version": "2.3.2",
+  "tide_version": "1.12.0",
+  "source_baseline": "203c7e2e853365ab1ea7665ea7320fda59ce9660",
+  "engine": "Chromium on Windows",
+  "resolved_findings": [
+    "L04",
+    "L01",
+    "L05",
+    "L07",
+    "L09",
+    "L02",
+    "L08"
+  ],
+  "context_only": [
+    "L03",
+    "L06"
+  ],
+  "map": {
+    "cases": 91,
+    "viewports": [
+      [
+        320,
+        480
+      ],
+      [
+        320,
+        800
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        543,
+        900
+      ],
+      [
+        544,
+        900
+      ],
+      [
+        844,
+        390
+      ],
+      [
+        959,
+        900
+      ],
+      [
+        960,
+        900
+      ],
+      [
+        1024,
+        1058
+      ],
+      [
+        1199,
+        640
+      ],
+      [
+        1200,
+        640
+      ],
+      [
+        1440,
+        400
+      ],
+      [
+        1440,
+        900
+      ]
+    ],
+    "target_overlaps": 0,
+    "label_collisions": 0,
+    "clipped_labels": 0,
+    "minimum_control": [
+      44,
+      44
+    ]
+  },
+  "themes": {
+    "cases": 140,
+    "theme_modes": 10,
+    "page_states": 7,
+    "widths": [
+      390,
+      1440
+    ],
+    "layout_failures": 0
+  },
+  "event_phone": {
+    "routes": 54,
+    "saved_and_venue_links_passed": 54
+  },
+  "card_type": [
+    [
+      "24px",
+      "32px",
+      "580"
+    ]
+  ],
+  "native_journeys": [
+    {
+      "name": "Sunshine Theater",
+      "step": "row-to-map",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#map-sunshine-theater",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Sunshine Theater",
+      "step": "marker-to-list",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-sunshine-theater",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Sister",
+      "step": "row-to-map",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#map-sister",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Sister",
+      "step": "marker-to-list",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-sister",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Dry Heat",
+      "step": "row-to-map",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#map-dry-heat",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Dry Heat",
+      "step": "marker-to-list",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-dry-heat",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Barelas Print Studio",
+      "step": "row-to-map",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#map-barelas-print-studio",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Barelas Print Studio",
+      "step": "marker-to-list",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-barelas-print-studio",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "The Paper Table",
+      "step": "row-to-map",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#map-the-paper-table",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "The Paper Table",
+      "step": "marker-to-list",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-the-paper-table",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Warehouse Room",
+      "step": "row-to-map",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#map-warehouse-room",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "Warehouse Room",
+      "step": "marker-to-list",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-warehouse-room",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    }
+  ],
+  "final_keyboard_history": [
+    {
+      "step": "initial",
+      "url": "http://127.0.0.1:4187/events/app/venues.html",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "step": "Map",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-map",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "step": "Back to initial",
+      "url": "http://127.0.0.1:4187/events/app/venues.html",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "step": "Forward",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-map",
+      "navs": [
+        [
+          {
+            "current": null,
+            "text": "List"
+          },
+          {
+            "current": "location",
+            "text": "Map"
+          }
+        ]
+      ]
+    },
+    {
+      "step": "Back to explicit List",
+      "url": "http://127.0.0.1:4187/events/app/venues.html#venue-list",
+      "navs": [
+        [
+          {
+            "current": "location",
+            "text": "List"
+          },
+          {
+            "current": null,
+            "text": "Map"
+          }
+        ]
+      ]
+    }
+  ],
+  "native_destinations": [
+    {
+      "step": "concise Saved",
+      "url": "http://127.0.0.1:4187/events/app/saved.html",
+      "copy": true
+    },
+    {
+      "step": "concise venue",
+      "url": "http://127.0.0.1:4187/events/app/sunshine-theater.html",
+      "title": "Sunshine Theater · Venue & upcoming events · Burque"
+    },
+    {
+      "step": "full venue",
+      "url": "http://127.0.0.1:4187/events/app/sister.html",
+      "title": "Sister · Venue & upcoming events · Burque"
+    },
+    {
+      "step": "empty recovery",
+      "url": "http://127.0.0.1:4187/events/app/index.html",
+      "cards": 54
+    }
+  ],
+  "build_check": {
+    "build": "pass",
+    "check": "pass",
+    "tide_tests": 72,
+    "lineup_tests": 54,
+    "http_tests": 7,
+    "total_tests": 133,
+    "http_loopback_access": "approved execution context",
+    "raw_application_css_bytes": 21900,
+    "gzip_application_css_bytes": 4037
+  },
+  "ownership": {
+    "protected_files": 196,
+    "changed_protected_files": [],
+    "canonical_scope": "application-kits/lineup/",
+    "branch": "main"
+  },
+  "limits": [
+    "Firefox/Safari",
+    "physical touch/software keyboard",
+    "screen readers",
+    "actual text/zoom and text-spacing overrides",
+    "runtime forced colors/reduced motion",
+    "exhaustive photographic/native-control contrast"
+  ],
+  "intermediate_results": "Initial map label collisions, selected-label clipping, focus-based history bug and CSS budget overrun were corrected; intermediate captures are not final evidence."
+}

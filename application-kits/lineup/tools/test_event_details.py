@@ -53,11 +53,20 @@ class DetailContracts(unittest.TestCase):
         full=DetailDocument(self.app.details.render(self.app.by_id['ink-after-dark'], 1))
         concise=DetailDocument(self.app.details.render(self.app.by_id['high-desert-signal'], 1))
         self.assertTrue(any(attrs.get('href')=='saved.html' for tag, attrs in full.nodes))
-        self.assertFalse(any(attrs.get('href')=='saved.html' for tag, attrs in concise.nodes))
+        self.assertTrue(any(attrs.get('href')=='saved.html' for tag, attrs in concise.nodes))
         self.assertIn('venue-information', concise.by_id)
         self.assertTrue(any(attrs.get('href')=='sunshine-theater.html' for tag, attrs in concise.nodes))
         self.assertNotIn('tabindex', full.by_id['event-title'][1])
         self.assertEqual(concise.by_id['event-title'][1]['tabindex'], '-1')
+
+    def test_every_event_keeps_saved_and_its_existing_venue_destination(self):
+        for event in self.app.events:
+            with self.subTest(event=event['id']):
+                nodes=DetailDocument(self.app.details.render(event, 1)).nodes
+                links=[attrs for tag, attrs in nodes if tag=='a']
+                self.assertTrue(any(link.get('href')=='saved.html' and link.get('aria-label')=='View saved events' for link in links))
+                self.assertTrue(any(link.get('href')==event['venue']+'.html' for link in links))
+                self.assertIn(event['venue'], self.app.routes)
 
     def test_only_real_details_prioritize_photos_and_previews_are_lazy(self):
         for slug in self.app.by_id:

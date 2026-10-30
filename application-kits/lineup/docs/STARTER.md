@@ -1,11 +1,11 @@
 # Start from Lineup
 
-Lineup 2.3.1 is layout family option 1, derived from Tide UI 1.12.0. Tag `lineup-v2.3.0` preserves the approved venue list/map foundation for further iteration. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
+Lineup 2.3.2 is layout family option 1, derived from Tide UI 1.12.0. Tag `lineup-v2.3.0` preserves the approved venue list/map foundation for further iteration. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
 
 The [compact-header contract](COMPACT-HEADERS.md) covers the selected workspace and its canonical utility recipe.
 
 1. From the repository root, run `npm run build`, `npm run check` and `npm run dev`. Open `/events/app/index.html`; `/events/index.html` exposes all five themes in light/dark modes.
-2. Start with `data/pages.json` for route/collection context and `src/templates/document.html` / `workspace*.html` for composition. All 68 documents are generated from those sources. Venue profile, venue directory, Help and submission use the four authored `src/pages/` fragments.
+2. Start with `data/pages.json` for route/collection context and `src/templates/document.html` / `workspace*.html` for composition. All 73 documents are generated from those sources. Venue profile, venue directory, Help and submission use the four authored `src/pages/` fragments.
 3. Replace sample content in `data/events.json`, detail presentations, submission-field definitions and authored fragments as appropriate. The renderer escapes text; do not put raw HTML in sample JSON. Preserve valid native links, labels, IDs and associated field hints.
 4. Adjust private layout in the five registered `src/styles/` modules. Use Tide's semantic roles and named type/spacing inputs. Adopt public kit recipes and supported modifiers in markup; do not redefine public component type/spacing or change `packages/tide/` while working on Lineup.
 5. Start from the completed [Tide alignment baseline](TIDE-ALIGNMENT.md). Personalization is a separate task and must preserve canonical component adoption. Review the [responsive audit](AUDIT.md), [ownership](COMPONENT-OWNERSHIP.md), [desktop layout](DESKTOP-LAYOUT.md) and [native drawer](FILTER-DRAWER.md) before changing pane geometry or responsive behavior. Rebuild and run normal checks; record the actual browsers/devices/states exercised.

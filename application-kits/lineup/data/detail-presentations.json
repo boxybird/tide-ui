@@ -13,7 +13,7 @@
   },
   "concise": {
     "fullIconAttributes": false,
-    "savedControl": false,
+    "savedControl": true,
     "focusTitle": true,
     "yearNote": false,
     "priceUnit": null,

@@ -1,4 +1,6 @@
-# Lineup application kit · 2.3.1
+# Lineup application kit · 2.3.2
+
+Version **2.3.2** implements the seven October 29 audit corrections: distinct map targets and labels, truthful native List/Map state including Back/Forward, consistent Saved and venue links, coherent empty-state guidance, contextual venue-card headings and one Saved reassurance. It retains Tide 1.12.0, 73 routes, all 54 fictional events and zero browser JavaScript. See [corrections and verification](docs/AUDIT-CORRECTIONS-2026-10-29.md).
 
 Version 2.3.0 preserves the user-approved venue list/map foundation at Git tag `lineup-v2.3.0`. Further venue and map refinements continue from this checkpoint; the [directory contract](docs/VENUE-DIRECTORY.md) records the remaining limits. Tide remains 1.12.0 and unchanged.
 
@@ -14,7 +16,7 @@ The primary navigation now sits beside the separate Saved utility on the right, 
 
 **Lineup uses the selected compact utility headers.** Version 2.1.5 aligns Search & filters with the result count and removes the Coming up intro, tagline and repeated The lineup label. Both rows consume Tide's new canonical utility variant. The [implementation contract](docs/COMPACT-HEADERS.md) and [design QA](design-qa.md) record composition and verification. The user reviewed and accepted the Tide and Lineup changes on 2026-10-27. The [handoff boundary](docs/HANDOFF.md) still applies; no browser JavaScript or service behavior is introduced.
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.3.1**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.3.2**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 
@@ -32,6 +34,6 @@ Saved uses two populated desktop columns and reserves separate intro, canonical 
 
 Run `npm run build`, `npm run check`, `npm run dev` from the root. Open `/events/app/index.html`; `/events/index.html` links to all modes. Canonical sources moved from `examples/events/` to `application-kits/lineup/`; generated `build/events/` output and native preview URLs remain unchanged. Node/Python are development tools only. See [zero-browser-JavaScript policy](../../docs/NO-BROWSER-JAVASCRIPT.md).
 
-Canonical sources are `src/templates/`, four unique fragments in `src/pages/`, the five `src/styles/` modules and structured `data/` fixtures. `data/events.json` owns events, `data/pages.json` owns fourteen non-event routes and typed authored result states, and `data/submission-fields.json` owns eleven submission fields. The renderer escapes text and rejects unknown/missing/cyclic includes. Never edit generated copies.
+Canonical sources are `src/templates/`, four unique fragments in `src/pages/`, the five `src/styles/` modules and structured `data/` fixtures. `data/events.json` owns events, `data/pages.json` owns nineteen non-event routes and typed authored result states, and `data/submission-fields.json` owns eleven submission fields. The renderer escapes text and rejects unknown/missing/cyclic includes. Never edit generated copies.
 
 See [runtime boundary](docs/RUNTIME.md), [desktop composition](docs/DESKTOP-LAYOUT.md), [template ownership](docs/TEMPLATES.md), [document composition](docs/PAGES.md) and [performance observations](docs/PERFORMANCE.md). Browser evidence remains Chromium; other browser/device/assistive-technology checks are deferred.

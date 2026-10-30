@@ -116,6 +116,17 @@ class UtilityContracts(unittest.TestCase):
         finally:
             self.app.routes['help']['documentTitle']=title
 
+    def test_empty_and_saved_pages_do_not_reuse_populated_feed_guidance(self):
+        empty=self.app.page('search-empty')
+        self.assertIn('No event to preview.', empty)
+        self.assertNotIn('Open a result to see the full event.', empty)
+        self.assertNotIn('You’re all caught up.', empty)
+        self.assertIn('Clear search and filters', empty)
+        self.assertIn('You’re all caught up.', self.app.page('index'))
+        saved=self.app.page('saved')
+        self.assertIn('Your shortlist, all in one place.', saved)
+        self.assertNotIn('Your saved events, all in one place.', saved)
+
     def test_directory_links_to_complete_venue_and_information_destinations(self):
         directory=Document(self.app.page('venues'))
         self.assertEqual(sum(tag=='h1' for tag,attrs in directory.nodes),1)
