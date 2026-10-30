@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.4.4 · 2026-10-30
+
+- Applied the accepted Sunshine/Midnight composition to all six venue pages and all 54 event pages. Lists, counts, visible venue context, search actions, Reset and venue-detail links stay within the current venue; Find Events remains global.
+- Reused the original 20/35/45 desktop shell, header width and responsive drawer. Preserved every event hero/detail and the accepted Sunshine/Midnight documents exactly. Five former standalone venue pages now share the same workspace/profile partials; their names, types, photos and directory return links remain. Removed the superseded standalone width CSS.
+- Kept Sunshine visitor facts in authored HTML. No invented venue facts, demo disclosures, new runtime behavior or Tide changes. Updated the previously authorized shared fixture-count check to derive each route’s expected venue membership count, with independent exact-membership application tests.
+- Build/check pass with all 139 tests. Browser checks cover all 60 venue/event routes, 120 theme/mode cases, responsive geometry and native venue/event/reset/drawer journeys. See [verification and limits](VENUE-CONTEXT.md).
+
 ## 2.4.3 · 2026-10-30
 
 - Restored Sunshine Theater’s original three-column desktop shell and header width, retaining its name and photo. Scoped Midnight Electric’s existing list and filter controls to Sunshine’s six events, preserving the selected card and unchanged event hero/details. This accepted checkpoint covers the pair plus Sunshine’s existing result states; other events retain their prior behavior. See [Sunshine / Midnight review](SUNSHINE-REVIEW.md).

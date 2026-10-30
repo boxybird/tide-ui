@@ -87,9 +87,8 @@ class VenueDirectoryContracts(unittest.TestCase):
         for venue_id in self.app.venues_by_id:
             nodes=Tree(self.app.page(venue_id)).nodes
             titles=[node for node in nodes if 'tide-event-card__title' in node['classes']]
-            expected='h4' if venue_id=='sunshine-theater' else 'h3'
             self.assertTrue(titles)
-            self.assertTrue(all(node['tag']==expected for node in titles), venue_id)
+            self.assertTrue(all(node['tag']=='h4' for node in titles), venue_id)
         for route in ('index', 'saved'):
             titles=[node for node in Tree(self.app.page(route)).nodes if 'tide-event-card__title' in node['classes']]
             self.assertTrue(all(node['tag']=='h4' for node in titles), route)

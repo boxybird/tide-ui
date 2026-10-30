@@ -90,8 +90,10 @@ def main():
         if 'event-search-form' in s.ids:
             fixture_routes=json.loads((ROOT/'application-kits/lineup/data/pages.json').read_text(encoding='utf-8'))
             fixture_events=json.loads((ROOT/'application-kits/lineup/data/events.json').read_text(encoding='utf-8'))
-            state=fixture_routes.get(path.stem,{}).get('sampleFilter',{})
-            expected=0 if state.get('empty') else sum(e['category']==state['category'] for e in fixture_events) if state.get('category') else 6 if path.name in ('sunshine-theater.html', 'midnight-electric.html') else 54
+            route=fixture_routes.get(path.stem,{})
+            state=route.get('sampleFilter',{})
+            venue=route.get('venue') or next((e['venue'] for e in fixture_events if e['id']==path.stem),None)
+            expected=0 if state.get('empty') else sum((not venue or e['venue']==venue) and (not state.get('category') or e['category']==state['category']) for e in fixture_events)
             if s.classes.count('tide-event-card')!=expected:failures.append(name+': sample count drift')
             if s.ids.count('event-query')!=1 or 'tide-lineup__feed' not in s.classes:failures.append(name+': control/stacking owner missing')
     for name in ('base','layout','components','patterns','content','filter-panel','page-patterns','utilities'):

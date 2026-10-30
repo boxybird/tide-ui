@@ -1,10 +1,10 @@
-# Native document composition · App 2.0.0
+# Native document composition · Lineup 2.4.4
 
-Every one of the 68 native routes uses `document.html`. Sixty-five event/list/search/saved/venue/result-state routes share `workspace.html`; Help, submission and the Venues directory retain their own main layouts. There are four unique fragments in `src/pages/`. Browser script inventories are empty.
+Every one of the 73 native routes uses `document.html`. Seventy event/list/search/saved/venue/result-state routes share `workspace.html`; Help, submission and the Venues directory retain their own main layouts. There are four registered fragments in `src/pages/`. Only the directory loads the registered map runtime; other routes are native HTML/CSS.
 
 | Source | Contract |
 | --- | --- |
-| `document.html` | Doctype, language/theme/mode, metadata, escaped title, stylesheets and header; no scripts |
+| `document.html` | Doctype, language/theme/mode, metadata, escaped title, stylesheets and header; registered map script only on the directory |
 | `workspace.html` | Complete browse/detail slots and preview placeholder |
 | `workspace-browse.html`, `workspace-results.html` | Authored browse grouping and results region; saved omits the filter column |
 | `filter-rail.html`, `filter-status.html`, `filter-actions.html` | Initial panel/body/footer, one native form and native reset |
@@ -13,7 +13,7 @@ Every one of the 68 native routes uses `document.html`. Sixty-five event/list/se
 | `form-field.html`, `form-input.html`, `form-textarea.html`, `form-select.html` | Native submission field markup from the eleven registered definitions |
 | `form-hint.html`, `form-optional.html`, `form-option.html` | Associated hints, optional labels and native choices |
 
-`data/pages.json` owns fourteen non-event routes. Three category specimens and an empty-result specimen use a restricted `sampleFilter` object; the build rejects unknown categories/keys. Event titles and facts come from the 54 canonical records. Context values are escaped and script/HTML injection is not accepted in sample data.
+`data/pages.json` owns nineteen non-event routes. Three category specimens and an empty-result specimen use a restricted `sampleFilter` object; the build rejects unknown categories/keys. Event titles and facts come from the 54 canonical records. Context values are escaped and script/HTML injection is not accepted in sample data.
 
 `header.html` consumes Tide's Site header/navigation list recipe; `skip-link.html` consumes its native Skip link helper. Only an exact route/destination match receives `aria-current="page"`. The utility-page titles name Saved events, Help & guidance and Add an event, followed by Burque; 48 event metadata titles also drop the same retired prefix. Retired study names remain only in historical provenance/evidence.
 
@@ -23,6 +23,8 @@ Native skip links retain event/detail/results/main targets and focusable destina
 
 See [template grammar](TEMPLATES.md), [event content](DETAILS.md), [runtime boundary](RUNTIME.md) and [desktop composition](DESKTOP-LAYOUT.md). Build/check generate and inspect all ten modes; browser evidence is Chromium on Windows, with other browsers/devices/screen readers deferred.
 
-## Venue routes · 2.3.0
+## Venue routes · 2.4.4
 
-Five generic venue documents join the existing 68 routes: 73 per mode, 803 generated documents. The existing venues.html content slot delegates to registered directory/profile partials. Venue counts and event links derive from structured fixtures; unique Sunshine visitor prose stays in its existing authored HTML. See [venue directory](VENUE-DIRECTORY.md).
+Six venue documents use the shared three-column workspace and `venue-directory-profile.html` shell. `venue-profile-title.html` and `venue-profile-photo.html` are shared by Sunshine’s authored information and the five other profiles’ `venue-profile-summary.html`. The unique Sunshine prose remains in `src/pages/sunshine-theater.html`; the other profiles use the existing structured name/type/photo data. The directory’s `venues.html` slot now renders the directory alone.
+
+All 54 individual event routes derive their venue scope from the canonical event record. Global browsing/search and Saved retain their existing collections. The nineteen non-event routes plus 54 event routes remain 73 per mode, 803 generated application documents. See [venue context and verification](VENUE-CONTEXT.md).

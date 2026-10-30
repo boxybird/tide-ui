@@ -21,14 +21,16 @@ class UtilityContracts(unittest.TestCase):
         cls.app=AppTemplates()
 
     def test_only_directory_loads_the_map_and_routes_keep_native_metadata(self):
-        for route in ['index', 'search', 'sunshine-theater', 'venues', 'saved', 'help', 'submit', 'ink-after-dark']:
+        for route in set(self.app.routes) | set(self.app.by_id):
             with self.subTest(route=route):
                 doc=Document(self.app.page(route))
-                scoped=route in ('index', 'search', 'sunshine-theater', 'ink-after-dark')
+                page=self.app.routes.get(route,{})
+                venue=self.app.by_id[route]['venue'] if route in self.app.by_id else page.get('venue')
+                scoped=route in self.app.by_id or page.get('collection') in ('all','venue')
                 self.assertEqual([attrs for tag,attrs in doc.nodes if tag=='script'], [{'type':'module','src':'{{MAP_ROOT}}/venue-map.mjs'}] if route=='venues' else [])
                 body=next(attrs for tag,attrs in doc.nodes if tag=='body')
                 self.assertEqual(body['data-state-key'], 'app-release-1.1.0' if scoped else 'margin-aligned')
-                self.assertEqual(body.get('data-venue-scope'), 'sunshine-theater' if route=='sunshine-theater' else None)
+                self.assertEqual(body.get('data-venue-scope'), venue)
 
     def test_saved_and_content_pages_do_not_gain_filter_controls(self):
         for route in ('saved', 'help', 'submit', 'venues'):

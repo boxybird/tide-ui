@@ -7,7 +7,6 @@
   .tide-venue__viewport { display: grid; grid-template-rows: auto minmax(0,1fr); block-size: max(100dvh,48rem); }
   .tide-venue__profile { display: block; }
   .tide-venue__photo { block-size: auto; }
-  .tide-venue__page { --tide-app-venue-width: 48rem; max-inline-size: calc(var(--tide-app-venue-width) + 2 * var(--tide-layout-inset)); margin-inline: auto; }
   .tide-venue__visit { scroll-margin-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6)); }
   .tide-app__review { max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-10) var(--tide-layout-inset); }
   @media (width < 75rem) {
@@ -23,7 +22,6 @@
   .tide-venue__intro-body { padding: var(--tide-space-4) var(--tide-layout-inset); }
   .tide-venue__views,.tide-venue__open,.tide-venue__state { display: none; }
   .tide-venue__list { min-block-size: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-gutter: stable; scroll-padding-block: var(--tide-space-2); }
-  .tide-venue__profile-photo { inline-size: 100%; max-block-size: 24rem; object-fit: cover; }
   .tide-venue__map { min-inline-size: 0; min-block-size: 0; grid-area: 1/2/span 2; display: grid; grid-template-rows: minmax(0,1fr) auto; gap: var(--tide-space-2); }
   .tide-venue__map-frame { position: relative; min-block-size: 0; overflow: clip; container-type: size; }
   .tide-venue__map-world { position: absolute; inset-inline-start: 50%; inset-block-start: 50%; transform: translate(-50%,-50%); inline-size: min(100cqw,calc(100cqh * 1295/1214)); aspect-ratio: 1295/1214; container-type: inline-size; }

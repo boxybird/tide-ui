@@ -1,6 +1,6 @@
 # Lineup source of truth · 2.4.0
 
-The current checkpoint is **2.4.3**, preserving the accepted [Sunshine / Midnight venue context](SUNSHINE-REVIEW.md). Versions 2.4.1–2.4.2 preserve [compact map previews and marker highlighting](MOBILE-MAP-PREVIEW.md). All work continues on the same `main` branch; the original `lineup-v2.4.0` consolidation tag remains unchanged.
+The current checkpoint is **2.4.4**, applying [venue context](VENUE-CONTEXT.md) to all six venues and 54 events. The accepted Sunshine / Midnight pair is separately preserved in `lineup-v2.4.3` ([record](SUNSHINE-REVIEW.md)). Versions 2.4.1–2.4.2 preserve [compact map previews and marker highlighting](MOBILE-MAP-PREVIEW.md). All work continues on the same `main` branch; the original `lineup-v2.4.0` consolidation tag remains unchanged.
 
 The user approved consolidation on October 29, 2026: one repository, one `main` branch, one current application and an incremental commit after each accepted change. The previous two-repository workflow caused visible regressions because the map preview used an older immutable application snapshot. This checkpoint removes that split.
 

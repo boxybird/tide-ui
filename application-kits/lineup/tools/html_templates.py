@@ -18,10 +18,6 @@ WEEKDAYS = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 
 
 
 class AppTemplates:
-    # Incremental venue-context review. Other event routes remain global until
-    # the Sunshine Theater / Midnight Electric journey has been accepted.
-    VENUE_EVENT_ROUTES = frozenset({'midnight-electric'})
-
     def __init__(self):
         manifest = json.loads((ROOT/'consumer-manifest.json').read_text(encoding='utf-8'))
         sources = [ROOT/name for name in manifest['templateHome']]
@@ -66,9 +62,15 @@ class AppTemplates:
                 raise ValueError('Content pages need an explicit source')
             if page.get('collection')=='venue':
                 owner = self.routes.get(page.get('venue'), {})
-                if owner.get('collection')!='venue' or page.get('source')!=owner.get('source'):
+                if page.get('venue') not in self.venues_by_id or owner.get('collection')!='venue' or owner.get('venue')!=page['venue'] or page.get('source')!=owner.get('source'):
                     raise ValueError('Venue results must retain their venue owner and information source')
-                links = owner.get('resultRoutes', {})
+                # Authored category/empty specimens are optional per venue.
+                # When registered, their complete recovery contract is required.
+                links = owner.get('resultRoutes')
+                if links is None:
+                    if page.get('sampleFilter'):
+                        raise ValueError('Register result-state destinations for authored venue filters')
+                    continue
                 if set(links)!={'all','music','comedy','workshop','empty'}:
                     raise ValueError('Register every venue result-state destination')
                 for target in links.values():
@@ -99,12 +101,7 @@ class AppTemplates:
             'VENUE_EVENT_COUNT':len(entries), 'VENUE_HREF':venue['id']+'.html',
         }
 
-    def venue_page(self, venue_id=None):
-        if venue_id:
-            venue = self.venues_by_id[venue_id]
-            entries = sorted((event for event in self.events if event['venue']==venue_id), key=lambda event:(event['date'], event.get('start',''), event['id']))
-            return self.partial('venue-directory-profile', {**self.venue_values(venue),
-                'VENUE_EVENTS':Html(''.join(self.card(event, '', heading_level=3) for event in entries))})
+    def venue_page(self):
         values = [self.venue_values(venue) for venue in self.venues]
         return self.partial('venue-directory', {
             'VENUE_ROWS':Html(''.join(self.partial('venue-directory-row', value) for value in values)),
@@ -135,10 +132,7 @@ class AppTemplates:
 
     def route_page(self, route):
         if route in self.by_id:
-            page = {'layout':'workspace', 'collection':'all', 'selected':route, 'headingLevel':2}
-            if route in self.VENUE_EVENT_ROUTES:
-                page.update(collection='venue', venue=self.by_id[route]['venue'])
-            return page
+            return {'layout':'workspace', 'collection':'venue', 'venue':self.by_id[route]['venue'], 'selected':route, 'headingLevel':2}
         if route in self.routes:
             return self.routes[route]
         raise ValueError('Unknown app route: ' + route)
@@ -162,6 +156,7 @@ class AppTemplates:
         saved = collection=='saved'
         venue = collection=='venue'
         venue_id = page.get('venue') if venue else None
+        venue_name = self.venues_by_id[venue_id]['name'] if venue else ''
         collection_href = venue_id+'.html' if venue else 'index.html'
         search_href = route+'.html' if venue and event_route else collection_href if venue else 'search.html'
         venue_info_href = collection_href+'#venue-information' if event_route else '#venue-information'
@@ -191,8 +186,8 @@ class AppTemplates:
             }))
         values.update({
             'INTRO_LABEL':'Saved' if saved else 'Albuquerque',
-            'INTRO_TITLE':'For another evening.' if saved else 'Sunshine Theater' if venue else 'Coming up.',
-            'INTRO_COPY':'Your shortlist, all in one place.' if saved else '120 Central Ave SW · Downtown Albuquerque' if venue else 'Good things happening close to home.',
+            'INTRO_TITLE':'For another evening.' if saved else venue_name if venue else 'Coming up.',
+            'INTRO_COPY':'Your shortlist, all in one place.' if saved else self.venues_by_id[venue_id]['kind'] if venue else 'Good things happening close to home.',
             'INTRO_LINKS':self.partial('scope-link', {'LINK_HREF':'#venue-information', 'LINK_LABEL':'About this venue'}) if venue else Html(''),
             'HEADING_LEVEL':page.get('headingLevel', 1), 'EVENT_COUNT':len(events),
             'COUNT_LABEL':str(len(events))+' '+('event' if len(events)==1 else 'events'),
@@ -209,12 +204,12 @@ class AppTemplates:
             'RESULT_VARIANT':Html('' if saved else ' tide-results--utility'),
             'SUMMARY_VARIANT':Html('' if saved else ' tide-lineup__summary--utility'),
             'RESULT_LEVEL':2 if saved else page.get('headingLevel', 1),
-            'RESULT_CONTEXT':Html('') if saved else self.partial('result-context', {'RESULT_CONTEXT_LABEL':'Sunshine Theater events' if venue else 'Albuquerque events'}),
+            'RESULT_CONTEXT':Html('') if saved else self.partial('result-context', {'RESULT_CONTEXT_LABEL':venue_name+' events' if venue else 'Albuquerque events'}),
             'RESULT_SCOPE':Html(''),
             'SUMMARY_BADGE':Html('') if saved else self.partial('summary-badge', {}),
             'SUMMARY_TOGGLE':Html(''),
             'EMPTY_HIDDEN':Html(' hidden' if events else ''),
-            'EMPTY_TITLE':f"No {sample.get('category', 'matching')} events at Sunshine Theater." if venue else 'No events found.',
+            'EMPTY_TITLE':f"No {sample.get('category', 'matching')} events at {venue_name}." if venue else 'No events found.',
             'EMPTY_COPY':'Browse all venue events or read the venue information below.' if venue else 'Try a different search, change the dates or clear your filters.',
             'EMPTY_RECOVERY_HREF':collection_href+'#results' if venue else 'index.html',
             'EMPTY_RECOVERY_LABEL':'Show all venue events' if venue else 'Clear search and filters',
@@ -230,7 +225,7 @@ class AppTemplates:
             'FEED_ID':Html('') if saved else attribute('id', 'venue-feed'),
             'MONTH_GROUPS':Html(''.join(group_html)),
             'FOOTER_HREF':'submit.html' if saved else venue_info_href if venue else 'sunshine-theater.html',
-            'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'About Sunshine Theater' if venue else 'Explore Sunshine Theater and its upcoming events.',
+            'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'About '+venue_name if venue else 'Explore Sunshine Theater and its upcoming events.',
             'FOOTER_BACK_HIDDEN':Html('') if saved or venue else Html(' hidden'),
             'FOOTER_BACK_LABEL':'All events across Albuquerque' if venue else 'Back to all events',
             'FOOTER_NOTE':'You’re all caught up.' if events and not saved else '',
@@ -291,8 +286,11 @@ class AppTemplates:
             values.update({'FIELD_'+key.replace('-', '_').upper():self.fields.render(field) for key, field in self.submission_fields.items()})
             values['SUBMISSION_BACK_ICON'] = self.partial('detail-icon-back', {'ICON_EXTRA':Html(' fill="none" xmlns="http://www.w3.org/2000/svg"')})
         if page.get('source')=='venues.html':
-            values['VENUE_PAGE'] = self.venue_page(page.get('venueEntry'))
+            values['VENUE_PAGE'] = self.venue_page()
         content = Html(expand((ROOT/'src/pages'/page['source']).read_text(encoding='utf-8'), values, self.templates)) if page.get('source') else values['EVENT_DETAIL']
+        if collection=='venue' and not event:
+            information = content.strip() if page.get('source') else self.partial('venue-profile-summary', values)
+            content = Html(self.partial('venue-directory-profile', {**values, 'VENUE_INFORMATION':Html(information)})+'\n')
         if page['layout']=='workspace':
             results = self.partial('workspace-results', {
                 **values, 'RESULTS_INTRO':self.partial('results-intro', values) if saved else Html(''),

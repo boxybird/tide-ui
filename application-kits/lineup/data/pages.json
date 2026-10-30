@@ -115,32 +115,32 @@
   },
   "sister": {
     "documentTitle": "Sister · Venue & upcoming events · Burque",
-    "layout": "content",
-    "source": "venues.html",
-    "venueEntry": "sister"
+    "layout": "workspace",
+    "collection": "venue",
+    "venue": "sister"
   },
   "dry-heat": {
     "documentTitle": "Dry Heat · Venue & upcoming events · Burque",
-    "layout": "content",
-    "source": "venues.html",
-    "venueEntry": "dry-heat"
+    "layout": "workspace",
+    "collection": "venue",
+    "venue": "dry-heat"
   },
   "barelas-print-studio": {
     "documentTitle": "Barelas Print Studio · Venue & upcoming events · Burque",
-    "layout": "content",
-    "source": "venues.html",
-    "venueEntry": "barelas-print-studio"
+    "layout": "workspace",
+    "collection": "venue",
+    "venue": "barelas-print-studio"
   },
   "the-paper-table": {
     "documentTitle": "The Paper Table · Venue & upcoming events · Burque",
-    "layout": "content",
-    "source": "venues.html",
-    "venueEntry": "the-paper-table"
+    "layout": "workspace",
+    "collection": "venue",
+    "venue": "the-paper-table"
   },
   "warehouse-room": {
     "documentTitle": "Warehouse Room · Venue & upcoming events · Burque",
-    "layout": "content",
-    "source": "venues.html",
-    "venueEntry": "warehouse-room"
+    "layout": "workspace",
+    "collection": "venue",
+    "venue": "warehouse-room"
   }
 }

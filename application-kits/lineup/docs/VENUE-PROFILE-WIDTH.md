@@ -1,12 +1,12 @@
-# Venue page width review · 2026-10-30
+# Historical venue page width review · 2026-10-30
 
-Status: user review, based on the committed and pushed Lineup 2.4.2 checkpoint. The current source shows the middle option; no new release is assigned until the width is accepted.
+Status: superseded by the accepted three-column [venue-context rollout](VENUE-CONTEXT.md) in Lineup 2.4.4. The earlier standalone width study is preserved at `lineup-v2.4.3`; its wrapper is removed from current sources. The following describes that historical review, not the current application.
 
 The quoted disclosure belongs to the five standalone venue pages (Sister, Dry Heat, Barelas Print Studio, The Paper Table and Warehouse Room). It has been removed from their shared partial. Sunshine Theater retains its distinct factual profile/workspace; individual event details are unchanged. Authored fixture provenance remains in project documentation rather than customer-facing disclosure text.
 
 The private `tide-venue__page` wrapper constrains the existing Tide Content page. It caps the image and event collection at `--tide-app-venue-width`, adding the existing two page insets outside that content width. Heading, image and list start at the same edge. The wrapper centers on wide screens and fits available width on smaller screens. Tide controls, card padding, type, colors and content-page internals remain unchanged.
 
-Three alternatives were rendered sequentially from the same canonical template and stylesheet at 1440×1100: 40rem/640px, 48rem/768px and 56rem/896px. These are image/list widths, excluding the shared page insets. Screenshots are review evidence in ignored `build/qa/venue-profile-width/`; they are not separate application sources. The current live page uses 48rem/768px.
+Three alternatives were rendered sequentially from the same canonical template and stylesheet at 1440×1100: 40rem/640px, 48rem/768px and 56rem/896px. These are image/list widths, excluding the shared page insets. Screenshots are review evidence in ignored `build/qa/venue-profile-width/`; they are not separate application sources. The draft used 48rem/768px.
 
 ## Verification
 
@@ -15,4 +15,4 @@ Three alternatives were rendered sequentially from the same canonical template a
 - All ten theme/mode versions of Barelas preserve the same 768px column at 1440×1100. Ink After Dark opens its existing event route; browser Back returns to the venue page.
 - Tide, shared tooling, map code and fixtures are unchanged. Firefox, Safari, physical touch devices and screen readers have not been verified.
 
-The screenshot comparison at `/qa/venue-profile-width/index.html` uses native radio controls and links back to the live page. The current draft remains on `main` awaiting the user's width choice; no release tag or push is part of this review.
+The screenshot comparison at `/qa/venue-profile-width/index.html` uses native radio controls and links back to the live page. The draft was retained in the 2.4.3 checkpoint before the user chose the shared three-column venue layout.

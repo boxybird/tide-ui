@@ -12,7 +12,7 @@ class VenueScopeContracts(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.app = AppTemplates()
-        cls.routes = {name:page for name,page in cls.app.routes.items() if page.get('collection')=='venue'}
+        cls.routes = {name:page for name,page in cls.app.routes.items() if page.get('venue')=='sunshine-theater'}
 
     def test_reference_result_routes_stay_scoped_without_a_tutorial_menu(self):
         for route,page in self.routes.items():
@@ -65,25 +65,37 @@ class VenueScopeContracts(unittest.TestCase):
         for route in ('search-music', 'search-comedy', 'search-workshop', 'search-empty'):
             self.assertNotIn('href="'+route+'.html"', source)
 
-    def test_midnight_review_keeps_sunshine_context_and_its_original_detail(self):
-        expected = {event['id'] for event in self.app.events if event['venue']=='sunshine-theater'}
-        for route in ('sunshine-theater', 'midnight-electric'):
+    def test_all_venue_and_event_journeys_keep_their_scope_and_original_detail(self):
+        for route in set(self.app.venues_by_id) | set(self.app.by_id):
+            event = self.app.by_id.get(route)
+            venue_id = event['venue'] if event else route
+            venue = self.app.venues_by_id[venue_id]
+            expected = {item['id'] for item in self.app.events if item['venue']==venue_id}
             source = self.app.page(route)
             parsed = Elements(source)
-            self.assertEqual({card['aria-labelledby'].removeprefix('card-') for card in parsed.cards}, expected)
-            self.assertEqual({card['data-venue'] for card in parsed.cards}, {'sunshine-theater'})
+            self.assertEqual({card['aria-labelledby'].removeprefix('card-') for card in parsed.cards}, expected, route)
+            self.assertEqual(len(parsed.cards), len(expected), route)
+            self.assertEqual({card['data-venue'] for card in parsed.cards}, {venue_id}, route)
             ids = {attrs['id']:(tag,attrs) for tag,attrs in Document(source).nodes if 'id' in attrs}
-            self.assertEqual(ids['venue-scope'][1]['value'], 'sunshine-theater')
+            self.assertEqual(ids['venue-scope'][1]['value'], venue_id)
             self.assertEqual(ids['event-search-form'][1]['action'], route+'.html')
             self.assertEqual(ids['event-query'][1]['placeholder'], 'Event or artist')
-            self.assertIn('Events at Sunshine Theater', source)
+            self.assertIn('Events at '+venue['name'], source)
             self.assertIn('tide-app--columns', source)
-        midnight = self.app.page('midnight-electric')
-        self.assertEqual(Elements(midnight).current, ['midnight-electric'])
-        self.assertIn(self.app.details.render(self.app.by_id['midnight-electric'], 1), midnight)
-        self.assertIn('href="sunshine-theater.html#venue-information">Venue details</a>', midnight)
-        reset = next(attrs for tag,attrs in Document(midnight).nodes if 'data-filter-reset' in attrs)
-        self.assertEqual(reset['href'], 'midnight-electric.html')
+            self.assertIn('href="'+venue_id+'.html">All venue events</a>', source)
+            self.assertIn('href="index.html">All events across Albuquerque</a>', source)
+            reset = next(attrs for tag,attrs in Document(source).nodes if 'data-filter-reset' in attrs)
+            self.assertEqual(reset['href'], route+'.html')
+            if event:
+                self.assertEqual(parsed.current, [route])
+                self.assertIn(self.app.details.render(event, 1), source)
+                self.assertIn('href="'+venue_id+'.html#venue-information">Venue details</a>', source)
+            else:
+                self.assertEqual(parsed.current, [])
+                self.assertIn('venue-information', ids)
+                photo = next(attrs for tag,attrs in Document(source).nodes if tag=='img' and 'tide-venue__photo' in attrs.get('class',''))
+                self.assertEqual(photo['src'], venue['image'])
+                self.assertIn('href="#venue-information">Venue details</a>', source)
         self.assertEqual(len(Elements(self.app.page('index')).cards), 54)
 
 

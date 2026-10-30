@@ -1,6 +1,8 @@
-# Lineup application kit · 2.4.3
+# Lineup application kit · 2.4.4
 
-**Current increment: 2.4.3.** The accepted [Sunshine Theater / Midnight Electric checkpoint](docs/SUNSHINE-REVIEW.md) restores the original three-column shell with Sunshine’s six-event list and venue-scoped filters. Midnight retains its existing event hero and selected card. Preserved as `lineup-v2.4.3` before applying the pattern to other venues/events.
+**Current increment: 2.4.4.** All six venue pages and all 54 event pages now share the accepted three-column layout and venue-scoped event list. Event details remain unchanged, and Find Events remains the global collection. See [rollout and verification](docs/VENUE-CONTEXT.md).
+
+**Previous increment: 2.4.3.** The accepted [Sunshine Theater / Midnight Electric checkpoint](docs/SUNSHINE-REVIEW.md) restores the original three-column shell with Sunshine’s six-event list and venue-scoped filters. Midnight retains its existing event hero and selected card. Preserved as `lineup-v2.4.3` before applying the pattern to other venues/events.
 
 **Previous increment: 2.4.2.** Below 60rem, the marker stays highlighted while its native venue preview is open and clears when it closes. The preview uses the existing Tide Panel, and the map stays visible. Split layouts retain their existing marker-to-list selection and highlight with no preview popup. See [compact map previews](docs/MOBILE-MAP-PREVIEW.md). The 2.4.0 consolidation record below remains the recovery baseline.
 
@@ -25,7 +27,7 @@ The primary navigation now sits beside the separate Saved utility on the right, 
 
 **Lineup uses the selected compact utility headers.** Version 2.1.5 aligns Search & filters with the result count and removes the Coming up intro, tagline and repeated The lineup label. Both rows consume Tide's new canonical utility variant. The [implementation contract](docs/COMPACT-HEADERS.md) and [design QA](design-qa.md) record composition and verification. The user reviewed and accepted the Tide and Lineup changes on 2026-10-27. The [handoff boundary](docs/HANDOFF.md) still applies; no browser JavaScript or service behavior is introduced.
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.4.2**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.4.4**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 
