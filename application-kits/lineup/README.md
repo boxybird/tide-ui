@@ -1,6 +1,8 @@
-# Lineup application kit · 2.4.2
+# Lineup application kit · 2.4.3
 
-**Current increment: 2.4.2.** Below 60rem, the marker stays highlighted while its native venue preview is open and clears when it closes. The preview uses the existing Tide Panel, and the map stays visible. Split layouts retain their existing marker-to-list selection and highlight with no preview popup. See [compact map previews](docs/MOBILE-MAP-PREVIEW.md). The 2.4.0 consolidation record below remains the recovery baseline.
+**Current increment: 2.4.3.** The accepted [Sunshine Theater / Midnight Electric checkpoint](docs/SUNSHINE-REVIEW.md) restores the original three-column shell with Sunshine’s six-event list and venue-scoped filters. Midnight retains its existing event hero and selected card. Preserved as `lineup-v2.4.3` before applying the pattern to other venues/events.
+
+**Previous increment: 2.4.2.** Below 60rem, the marker stays highlighted while its native venue preview is open and clears when it closes. The preview uses the existing Tide Panel, and the map stays visible. Split layouts retain their existing marker-to-list selection and highlight with no preview popup. See [compact map previews](docs/MOBILE-MAP-PREVIEW.md). The 2.4.0 consolidation record below remains the recovery baseline.
 
 **Consolidation baseline: 2.4.0.** The approved dark MapLibre/OpenFreeMap map and fixed venue workspace now live in this kit alongside all 2.3.2 audit fixes, mobile summary spacing and responsive card navigation. Use [the canonical preview](http://127.0.0.1:4187/events/app/venues.html). Work directly on `main` and commit each accepted increment. There is no active separate Consumer Lab or copied Lineup snapshot.
 

@@ -1,5 +1,7 @@
 # Component ownership · Lineup 2.4.0
 
+The [Sunshine / Midnight review](SUNSHINE-REVIEW.md) restores the original three-column workspace and shared responsive filter rail/drawer. The application renderer owns the venue-scoped list, filter wording/destinations and explicit Midnight-only review opt-in. Tide retains all component appearance; Midnight’s event hero/detail markup is unchanged. Sunshine’s photo and visitor facts remain application-owned.
+
 The 2.4.1 [compact map preview](MOBILE-MAP-PREVIEW.md) adds a private native-popover host around the unchanged Tide Panel. `venue-map-panel.html` owns fixture content and native dismissal controls; `venue-map.css` owns responsive availability and marker anchoring. No shared component appearance, token or contract is changed.
 
 The approved geographic map, fixed directory viewport, list footer and map action overlay are now Lineup-owned. `src/map/` is an additional application source module, not a Tide extension. See [source of truth](SOURCE-OF-TRUTH.md).

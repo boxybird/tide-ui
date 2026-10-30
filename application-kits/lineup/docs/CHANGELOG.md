@@ -1,5 +1,13 @@
 # Lineup application-kit changelog
 
+## 2.4.3 · 2026-10-30
+
+- Restored Sunshine Theater’s original three-column desktop shell and header width, retaining its name and photo. Scoped Midnight Electric’s existing list and filter controls to Sunshine’s six events, preserving the selected card and unchanged event hero/details. This accepted checkpoint covers the pair plus Sunshine’s existing result states; other events retain their prior behavior. See [Sunshine / Midnight review](SUNSHINE-REVIEW.md).
+- With explicit authorization, updated the shared repository fixture-count check to expect six cards on Midnight Electric; the new application contract also verifies their exact venue membership.
+- Removed the illustrative-photo/authored-sample disclosure from the five standalone venue pages. Fixture and image provenance remain in developer documentation.
+- Added one private width wrapper around the unchanged Tide Content page. The current review uses a centered 48rem (768px) image/event-list column with the existing responsive insets. Captured 40rem and 56rem alternatives for comparison from this same source; width choice is awaiting user review. See [venue page width review](VENUE-PROFILE-WIDTH.md).
+- The application CSS compactor omits optional final declaration semicolons and compacts whitespace across removed comments outside protected strings/URLs. Declaration-parity checks and the original asset budget remain unchanged.
+
 ## 2.4.2 · 2026-10-29
 
 - Below 60rem, outline the marker whose native venue preview is open. The application-owned marker host uses the existing map selection accent; native close, Escape, outside dismissal and switching previews clear or transfer it automatically.

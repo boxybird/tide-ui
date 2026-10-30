@@ -6,6 +6,8 @@
   /* Short windows scroll the document instead of compressing 44px map targets. */
   .tide-venue__viewport { display: grid; grid-template-rows: auto minmax(0,1fr); block-size: max(100dvh,48rem); }
   .tide-venue__profile { display: block; }
+  .tide-venue__photo { block-size: auto; }
+  .tide-venue__page { --tide-app-venue-width: 48rem; max-inline-size: calc(var(--tide-app-venue-width) + 2 * var(--tide-layout-inset)); margin-inline: auto; }
   .tide-venue__visit { scroll-margin-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6)); }
   .tide-app__review { max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-10) var(--tide-layout-inset); }
   @media (width < 75rem) {

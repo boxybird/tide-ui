@@ -18,6 +18,10 @@ WEEKDAYS = ('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 
 
 
 class AppTemplates:
+    # Incremental venue-context review. Other event routes remain global until
+    # the Sunshine Theater / Midnight Electric journey has been accepted.
+    VENUE_EVENT_ROUTES = frozenset({'midnight-electric'})
+
     def __init__(self):
         manifest = json.loads((ROOT/'consumer-manifest.json').read_text(encoding='utf-8'))
         sources = [ROOT/name for name in manifest['templateHome']]
@@ -129,13 +133,19 @@ class AppTemplates:
         }
         return self.partial('event-card', values)
 
-    def context(self, route):
+    def route_page(self, route):
         if route in self.by_id:
-            page = {'collection':'all', 'selected':route, 'headingLevel':2}
-        elif route in self.routes:
-            page = self.routes[route]
-        else:
-            raise ValueError('Unknown app route: ' + route)
+            page = {'layout':'workspace', 'collection':'all', 'selected':route, 'headingLevel':2}
+            if route in self.VENUE_EVENT_ROUTES:
+                page.update(collection='venue', venue=self.by_id[route]['venue'])
+            return page
+        if route in self.routes:
+            return self.routes[route]
+        raise ValueError('Unknown app route: ' + route)
+
+    def context(self, route):
+        page = self.route_page(route)
+        event_route = route in self.by_id
         values = {
             'FIND_CURRENT':attribute('aria-current', 'page') if route=='index' else Html(''),
             'VENUES_CURRENT':attribute('aria-current', 'page') if route=='venues' else Html(''),
@@ -153,6 +163,8 @@ class AppTemplates:
         venue = collection=='venue'
         venue_id = page.get('venue') if venue else None
         collection_href = venue_id+'.html' if venue else 'index.html'
+        search_href = route+'.html' if venue and event_route else collection_href if venue else 'search.html'
+        venue_info_href = collection_href+'#venue-information' if event_route else '#venue-information'
         events = [event for event in self.events if (not venue or event['venue']==venue_id) and (not saved or event['id']=='ink-after-dark')]
         sample = page.get('sampleFilter', {})
         if set(sample)-{'category','empty'} or sample.get('category') not in (None,'music','comedy','workshop'):
@@ -184,13 +196,15 @@ class AppTemplates:
             'INTRO_LINKS':self.partial('scope-link', {'LINK_HREF':'#venue-information', 'LINK_LABEL':'About this venue'}) if venue else Html(''),
             'HEADING_LEVEL':page.get('headingLevel', 1), 'EVENT_COUNT':len(events),
             'COUNT_LABEL':str(len(events))+' '+('event' if len(events)==1 else 'events'),
-            'SEARCH_ACTION':collection_href if venue else 'search.html',
+            'SEARCH_ACTION':search_href,
+            'SEARCH_LABEL':'Search this venue' if venue else 'Search events',
+            'SEARCH_PLACEHOLDER':'Event or artist' if venue else 'Event, artist or venue',
             'VENUE_SCOPE':venue_id if venue else '',
             'COLLECTION_HREF':collection_href,
             'COLLECTION_LABEL':'All venue events' if venue else 'All events',
             'RESULTS_ACTION_LABEL':'Search this venue' if venue else 'Search events',
             'RESET_TAG':'a' if venue else 'button',
-            'RESET_ATTRIBUTES':attribute('href', collection_href) if venue else Html(attribute('type','reset')+attribute('form','event-search-form')),
+            'RESET_ATTRIBUTES':attribute('href', search_href) if venue else Html(attribute('type','reset')+attribute('form','event-search-form')),
             'SCOPE_EXIT':self.partial('scope-link', {'LINK_HREF':'index.html', 'LINK_LABEL':'All events across Albuquerque'}) if venue else Html(''),
             'RESULT_VARIANT':Html('' if saved else ' tide-results--utility'),
             'SUMMARY_VARIANT':Html('' if saved else ' tide-lineup__summary--utility'),
@@ -215,7 +229,7 @@ class AppTemplates:
             'FEED_CLASS':'tide-event-list' if saved else 'tide-event-list tide-lineup__feed',
             'FEED_ID':Html('') if saved else attribute('id', 'venue-feed'),
             'MONTH_GROUPS':Html(''.join(group_html)),
-            'FOOTER_HREF':'submit.html' if saved else '#venue-information' if venue else 'sunshine-theater.html',
+            'FOOTER_HREF':'submit.html' if saved else venue_info_href if venue else 'sunshine-theater.html',
             'FOOTER_LINK':'Have something happening? Add an event.' if saved else 'About Sunshine Theater' if venue else 'Explore Sunshine Theater and its upcoming events.',
             'FOOTER_BACK_HIDDEN':Html('') if saved or venue else Html(' hidden'),
             'FOOTER_BACK_LABEL':'All events across Albuquerque' if venue else 'Back to all events',
@@ -223,8 +237,10 @@ class AppTemplates:
             'FOOTER_NOTE_HIDDEN':Html(' hidden' if saved or not events else ''),
         })
         if venue:
+            values.update(self.venue_values(self.venues_by_id[venue_id]))
+            values['VENUE_INFO_HREF'] = venue_info_href
             values['RESULT_SCOPE'] = self.partial('result-scope', values)
-        if selected and not venue:
+        if selected:
             event = self.by_id[selected]
             values['EVENT_DETAIL'] = self.details.render(event, 1 if route in self.by_id else 2)
             values['DOCUMENT_TITLE'] = event['detail']['documentTitle']
@@ -243,12 +259,12 @@ class AppTemplates:
         else:
             skips = [('main-content', 'Skip to content', '')]
         state_key = 'margin-aligned' if saved or not collection else 'app-release-1.1.0'
-        body_class = 'tide-app--venue tide tide-app' if venue else 'tide tide-app tide-app--event' if event else 'tide tide-app'
+        body_class = ('tide-app--venue ' if venue else '') + ('tide tide-app tide-app--event' if event else 'tide tide-app')
         if route=='venues':
             body_class += ' tide-app--directory'
         if collection and not saved:
             body_class += ' tide-app--columns'
-        body_attributes = str(attribute('data-venue-scope', 'sunshine-theater')) if venue else ''
+        body_attributes = str(attribute('data-venue-scope', page['venue'])) if venue else ''
         body_attributes += attribute('data-state-key', state_key)+attribute('class', body_class)
         if route=='venues':
             body_attributes += attribute('data-lineup-venue-workspace', 'fixed')
@@ -266,7 +282,7 @@ class AppTemplates:
         route = Path(source).stem
         values = self.context(route)
         event = route in self.by_id
-        page = {'layout':'workspace', 'collection':'all'} if event else self.routes[route]
+        page = self.route_page(route)
         collection = page.get('collection')
         saved = collection=='saved'
         if not event:
@@ -285,7 +301,8 @@ class AppTemplates:
                 **values, 'WORKSPACE_DETAIL':content,
                 'WORKSPACE_BROWSE':results if saved else self.partial('workspace-browse', {**values, 'WORKSPACE_RESULTS':results}),
             })
-        return self.partial('document', {**values, **self.document_context(route, page, event), 'PAGE_CONTENT':content})
+        document = self.document_context(route, page, event)
+        return self.partial('document', {**values, **document, 'PAGE_CONTENT':content})
 
     def pages(self):
         return {route+'.html':self.page(route) for route in sorted(set(self.by_id) | set(self.routes))}
