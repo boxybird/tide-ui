@@ -1,5 +1,13 @@
 # Lineup application-kit changelog
 
+## 2.4.5 · 2026-10-30
+
+- Sunshine Theater adopts the existing Tide photo hero: full-column image, canonical scrim, eyebrow/title/subtitle and venue facts/visit links over the photo. Seating, access and venue guidance remain below. No Tide changes.
+- A venue-owned `profilePresentation` setting keeps the markup composition scoped to Sunshine and its three existing authored result states. All other 69 HTML routes remain byte-identical, including all event pages. The accepted hero and height treatment is preserved as `lineup-v2.4.5` on `main`.
+- Sunshine and its six event pages share a screen-only 52rem preferred hero height. The application owns this outer geometry; intrinsic content may exceed the target so facts, actions and enlarged text are never clipped. Other venue scopes and global previews keep their existing sizing.
+- Build/check pass with all 139 tests. Chromium checks cover 1440/960/390/320px widths, all ten theme/mode variants and the native venue-information link. No horizontal overflow; the photo meets the detail column’s top and side edges. Firefox, Safari, physical devices and screen readers are unverified. Evidence: `build/qa/sunshine-venue-hero/`.
+- Height follow-up: Chromium checks all seven populated Sunshine pages at 1440×1000, 1200×800, 960×800, 390×844 and 320×568: every hero is 832px high, with no content clipping or horizontal overflow. The venue/Midnight pair also passes all ten theme/mode variants. At 1440×1400, the retained Tide viewport-based photo reserve requires 912px for venue content and 976px for events; the intrinsic safety fallback intentionally allows these heights. This is a common preferred height, not a hard maximum. Other venue/global preview geometry remains unchanged. Evidence: `build/qa/sunshine-hero-height/`.
+
 ## 2.4.4 · 2026-10-30
 
 - Applied the accepted Sunshine/Midnight composition to all six venue pages and all 54 event pages. Lists, counts, visible venue context, search actions, Reset and venue-detail links stay within the current venue; Find Events remains global.

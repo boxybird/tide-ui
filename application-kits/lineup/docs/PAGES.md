@@ -1,4 +1,4 @@
-# Native document composition · Lineup 2.4.4
+# Native document composition · Lineup 2.4.5
 
 Every one of the 73 native routes uses `document.html`. Seventy event/list/search/saved/venue/result-state routes share `workspace.html`; Help, submission and the Venues directory retain their own main layouts. There are four registered fragments in `src/pages/`. Only the directory loads the registered map runtime; other routes are native HTML/CSS.
 
@@ -25,6 +25,6 @@ See [template grammar](TEMPLATES.md), [event content](DETAILS.md), [runtime boun
 
 ## Venue routes · 2.4.4
 
-Six venue documents use the shared three-column workspace and `venue-directory-profile.html` shell. `venue-profile-title.html` and `venue-profile-photo.html` are shared by Sunshine’s authored information and the five other profiles’ `venue-profile-summary.html`. The unique Sunshine prose remains in `src/pages/sunshine-theater.html`; the other profiles use the existing structured name/type/photo data. The directory’s `venues.html` slot now renders the directory alone.
+Six venue documents use the shared three-column workspace and `venue-directory-profile.html` shell. The five standard profiles use `venue-profile-title.html` and `venue-profile-photo.html` through `venue-profile-summary.html`. In 2.4.5, Sunshine's owner selects `profilePresentation: "hero"`; registered `venue-hero-open.html` and `venue-hero-close.html` compose Tide's photo hero around its authored venue information. Unique prose remains in `src/pages/sunshine-theater.html`; the other profiles use the existing structured name/type/photo data. The directory’s `venues.html` slot renders the directory alone.
 
 All 54 individual event routes derive their venue scope from the canonical event record. Global browsing/search and Saved retain their existing collections. The nineteen non-event routes plus 54 event routes remain 73 per mode, 803 generated application documents. See [venue context and verification](VENUE-CONTEXT.md).

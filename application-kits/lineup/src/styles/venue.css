@@ -8,6 +8,13 @@
   .tide-venue__profile { display: block; }
   .tide-venue__photo { block-size: auto; }
   .tide-venue__visit { scroll-margin-block-start: calc(var(--tide-app-header-block-size) + var(--tide-space-6)); }
+  /* Sunshine: one preferred height for venue/event photo openings.
+     Intrinsic content can exceed it; never clip facts, actions or enlarged text. */
+  @media screen {
+    .tide-app--event[data-venue-scope="sunshine-theater"] .tide-app__detail,
+    .tide-app__hero-host { display: grid; grid-template-rows: minmax(52rem,auto) auto; }
+    .tide-app[data-venue-scope="sunshine-theater"] .tide-event-hero { min-block-size: 0; }
+  }
   .tide-app__review { max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-10) var(--tide-layout-inset); }
   @media (width < 75rem) {
     /* The existing flyout host already reserves the sticky header in html's

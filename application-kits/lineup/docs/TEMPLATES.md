@@ -1,4 +1,4 @@
-# Build-time templates · Lineup 2.4.4
+# Build-time templates · Lineup 2.4.5
 
 The browser receives complete native HTML/CSS. There is no browser template engine or router. Only the venue directory loads the registered map runtime. Every partial is registered in `consumer-manifest.json` and rendered by `tools/html_templates.py`.
 
@@ -13,6 +13,7 @@ Only `{{UPPERCASE_VALUE}}` and `{{> registered-partial}}` are supported. Plain v
 | `results-intro.html`, `lineup-summary.html`, `month-group.html` | Canonical Page intro, Results and calendar slots; canonical utility headers with a screen-reader context prefix, plain month/year text; no DOM rewriting or private type aliases |
 | `event-list.html`, `month-nav.html`, `month-jump.html` | Summary outside the native feed scroller, stable fragment destinations and complete-feed isolation |
 | `event-card.html`, `event-detail.html`, `detail-*.html` | Cards and all 54 native event details, with authored preview heading levels |
+| `venue-hero-open.html`, `venue-hero-close.html` | Tide photo-hero composition around Sunshine's authored venue information; owner-selected private host keeps its height aligned with Sunshine event heroes |
 | `data/events.json`, `data/detail-presentations.json` | The canonical 54 sample events and full/concise presentation defaults |
 | `data/pages.json` | Nineteen non-event routes, including the directory, global result fixtures and three venue-owned empty views |
 | `form-*.html`, `data/submission-fields.json` | Eleven native submission fields with original IDs, hints and constraints |

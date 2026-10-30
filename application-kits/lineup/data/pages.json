@@ -16,6 +16,7 @@
     "documentTitle": "Sunshine Theater \u00b7 Venue & upcoming events \u00b7 Burque",
     "layout": "workspace",
     "source": "sunshine-theater.html",
+    "profilePresentation": "hero",
     "venue": "sunshine-theater",
     "resultRoutes": {
       "all": "sunshine-theater",

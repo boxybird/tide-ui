@@ -64,6 +64,8 @@ class AppTemplates:
                 owner = self.routes.get(page.get('venue'), {})
                 if page.get('venue') not in self.venues_by_id or owner.get('collection')!='venue' or owner.get('venue')!=page['venue'] or page.get('source')!=owner.get('source'):
                     raise ValueError('Venue results must retain their venue owner and information source')
+                if owner.get('profilePresentation', 'standard') not in ('standard', 'hero'):
+                    raise ValueError('Unsupported venue profile presentation')
                 # Authored category/empty specimens are optional per venue.
                 # When registered, their complete recovery contract is required.
                 links = owner.get('resultRoutes')
@@ -290,7 +292,9 @@ class AppTemplates:
         content = Html(expand((ROOT/'src/pages'/page['source']).read_text(encoding='utf-8'), values, self.templates)) if page.get('source') else values['EVENT_DETAIL']
         if collection=='venue' and not event:
             information = content.strip() if page.get('source') else self.partial('venue-profile-summary', values)
-            content = Html(self.partial('venue-directory-profile', {**values, 'VENUE_INFORMATION':Html(information)})+'\n')
+            hero = self.routes[page['venue']].get('profilePresentation')=='hero'
+            profile_class = 'tide-venue__visit tide-app__hero-host' if hero else 'tide-venue-profile tide-venue__visit'
+            content = Html(self.partial('venue-directory-profile', {**values, 'VENUE_PROFILE_CLASS':profile_class, 'VENUE_INFORMATION':Html(information)})+'\n')
         if page['layout']=='workspace':
             results = self.partial('workspace-results', {
                 **values, 'RESULTS_INTRO':self.partial('results-intro', values) if saved else Html(''),

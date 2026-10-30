@@ -39,7 +39,7 @@ class VenueScopeContracts(unittest.TestCase):
             self.assertIn('hidden', ids['preview-state'][1])
             self.assertEqual('hidden' in ids['empty-results'][1], bool(parsed.cards))
             self.assertIn('href="#venue-information">Venue details</a>', source)
-            photo = next(attrs for tag,attrs in doc.nodes if tag=='img' and 'tide-venue__photo' in attrs.get('class',''))
+            photo = next(attrs for tag,attrs in doc.nodes if tag=='img' and 'tide-event-hero__photo' in attrs.get('class',''))
             self.assertEqual(photo['src'], self.app.venues_by_id['sunshine-theater']['image'])
             reset = next((tag,attrs) for tag,attrs in doc.nodes if 'data-filter-reset' in attrs)
             self.assertEqual((reset[0], reset[1]['href']), ('a', 'sunshine-theater.html'))
@@ -93,7 +93,8 @@ class VenueScopeContracts(unittest.TestCase):
             else:
                 self.assertEqual(parsed.current, [])
                 self.assertIn('venue-information', ids)
-                photo = next(attrs for tag,attrs in Document(source).nodes if tag=='img' and 'tide-venue__photo' in attrs.get('class',''))
+                photo_class = 'tide-event-hero__photo' if venue_id=='sunshine-theater' else 'tide-venue__photo'
+                photo = next(attrs for tag,attrs in Document(source).nodes if tag=='img' and photo_class in attrs.get('class',''))
                 self.assertEqual(photo['src'], venue['image'])
                 self.assertIn('href="#venue-information">Venue details</a>', source)
         self.assertEqual(len(Elements(self.app.page('index')).cards), 54)
