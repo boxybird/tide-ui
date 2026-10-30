@@ -1,5 +1,10 @@
 # Lineup application-kit changelog
 
+## 2.4.2 · 2026-10-29
+
+- Below 60rem, outline the marker whose native venue preview is open. The application-owned marker host uses the existing map selection accent; native close, Escape, outside dismissal and switching previews clear or transfer it automatically.
+- Keep fragment-based marker highlighting on the split-layout link, so a previous desktop selection cannot leave a second compact marker highlighted. Desktop interaction and appearance are unchanged. No runtime, fixture, template or Tide changes. See [verification](MOBILE-MAP-PREVIEW.md).
+
 ## 2.4.1 · 2026-10-29
 
 - Compact map markers now open a native, non-modal venue preview instead of navigating to the hidden list. Each uses the existing Tide Panel, name/type/count roles, Close control and direct venue-details link. Native Escape, outside dismissal and keyboard focus return stay browser-owned.

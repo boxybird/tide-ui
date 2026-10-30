@@ -1,8 +1,10 @@
-# Compact map previews · Lineup 2.4.1
+# Compact map previews · Lineup 2.4.2
 
 When List and Map are separate views (below 60rem), a marker opens a small venue preview while the map remains visible. The preview contains the venue name, type, authored event count and a native View venue details link. Close, Escape or a pointer press outside dismisses it. Keyboard dismissal returns focus to the invoking marker. Opening a preview does not change the URL fragment or map camera.
 
 At 60rem and above, both panes are visible: markers remain native links to their venue row, and cards remain native links to the adjacent map point. No preview popup is exposed. Crossing into that layout closes an open preview. Fragment changes also dismiss open previews, including leaving Map for List. Compact list cards continue to open the venue and its events directly.
+
+Below 60rem, the application-owned marker host has the existing map accent outline exactly while its child preview matches `:popover-open`. Close, Escape, outside dismissal and switching previews clear or transfer this indication with native state. The same rule covers the illustrated fallback. Fragment selection continues to outline only the split-layout link, preventing a previous desktop selection from leaving a second compact marker highlighted. Native keyboard focus indicators remain independent of preview selection. No additional browser script or shared component appearance override is added.
 
 ## Component ownership and positioning
 
@@ -12,7 +14,18 @@ Native `popover="auto"` supplies non-modal dismissal and focus behavior. The but
 
 The map module only closes popovers when entering the split layout or changing the fragment. It does not intercept marker clicks, construct panel content, rewrite destinations, create a modal focus trap or change camera behavior. The native preview also remains available over the illustrated map when map enhancement is disabled or fails. Pinned map dependencies and geographic fixtures are unchanged.
 
-## Verification
+## Marker highlight verification · 2.4.2
+
+- `npm run build` and `npm run check` pass: all 138 tests, 1,107 generated documents and no contract failures.
+- Windows Chromium at 390×844: all six previews show exactly one matching marker outline, preserve `#venue-map`, clear the outline after Escape and return keyboard focus to the invoking marker. Pointer Close, outside dismissal, switching from Sister to Dry Heat and leaving Map for List also clear or transfer the outline correctly.
+- At 959×800, the preview marker is highlighted. At 960×800, entering the split layout closes the preview and removes its outline. Desktop card-to-marker and marker-to-list links retain their native destinations with no popup.
+- At 1280×720, computed outlines and offsets for every marker and desktop control match the pre-change baseline exactly. Resizing a selected desktop Dry Heat marker to mobile, then opening Sister, highlights only Sister; the old fragment does not highlight Dry Heat's compact control.
+- All ten theme/mode pairs show the matching marker outline at 390×844. The illustrated `?map=off` fallback also highlights Sister and clears it on Close.
+- All 133 tracked files in Tide, the reference site and shared tooling are byte-identical to the starting checkpoint. The map runtime, dependencies, fixture content and templates are unchanged.
+
+Evidence is retained under ignored `build/qa/mobile-marker-highlight/`. Firefox, Safari, physical touch devices and screen-reader behavior were not tested in this increment.
+
+## Original panel verification · 2.4.1
 
 - `npm run build` and `npm run check` pass: all 138 tests and generated-document checks. The existing venue test now checks native popup invokers, dialog labels, unchanged Panel ownership, Close targets and correct per-venue links; CSS compaction parity covers the map stylesheet too.
 - At 390×844, all six keyboard-opened previews preserve `#venue-map`, leave the list hidden, expose exactly one popup, fit the viewport and return focus to their marker after Escape. Pointer Close and outside dismissal also pass.

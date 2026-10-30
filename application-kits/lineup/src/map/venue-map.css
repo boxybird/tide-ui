@@ -32,7 +32,7 @@ body[data-lineup-venue-workspace="fixed"] .tide-venue__directory {
 .tide-venue-map__canvas .tide-venue__point .tide-venue__label { inset-inline-start:calc(100% + var(--tide-space-2)); inset-inline-end:auto; inset-block-start:50%; inset-block-end:auto; transform:translateY(-50%); font-family:var(--tide-font-family-body,Manrope,sans-serif); }
 .tide-venue-map__canvas .tide-venue__label--rest { display:none; }
 .tide-venue-map__canvas .tide-venue__point.tide-venue-map__selected { z-index:3; }
-.tide-venue-map__canvas .tide-venue__point.tide-venue-map__selected .tide-photo-control { outline:1px solid var(--tide-color-photo-accent); outline-offset:3px; }
+.tide-venue-map__canvas .tide-venue__point.tide-venue-map__selected .tide-venue-map__split .tide-photo-control { outline:1px solid var(--tide-color-photo-accent); outline-offset:3px; }
 .tide-venue-map__canvas .tide-venue__point.tide-venue-map__label-left .tide-venue__label { inset-inline-start:auto; inset-inline-end:calc(100% + var(--tide-space-2)); }
 .tide-venue-map__canvas .tide-venue__map-name { display:inline; }
 .tide-venue-map__canvas .tide-venue__state > .tide-venue__label > br { display:block; }
@@ -97,6 +97,8 @@ body[data-lineup-venue-workspace="fixed"] .tide-venue__map-frame {
 @supports selector(:popover-open) {
  @media (width < 60rem) {
   .tide-venue-map__popup:popover-open { display:block; }
+  /* The marker host reflects the native preview state, including dismissal. */
+  .tide-venue__point:has(> .tide-venue-map__popup:popover-open) { z-index:3; outline:1px solid var(--tide-color-photo-accent); outline-offset:3px; }
   .tide-venue-map__compact { display:contents; }
   .tide-venue-map__split { display:none; }
  }
