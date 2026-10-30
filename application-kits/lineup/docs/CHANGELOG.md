@@ -1,5 +1,9 @@
 # Lineup application-kit changelog
 
+## Unreleased
+
+- Matched the venue directory summary's mobile spacing to Find Events below the 34rem dropdown-menu breakpoint by removing its extra 12px top gap. Both rows continue to use the unchanged Tide Results utility recipe for typography, alignment, padding and divider. Wider layouts retain their existing spacing.
+
 ## 2.3.2 · 2026-10-29
 
 - Corrected the seven actionable findings from the October 29 UI/UX audit, with Tide 1.12.0 unchanged. Missing live information and the intentional submission endpoint remain sample/integration boundaries.

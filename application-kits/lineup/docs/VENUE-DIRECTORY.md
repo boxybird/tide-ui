@@ -4,6 +4,12 @@ Lineup owns this composition and its native selection behavior. Tide UI remains 
 
 The user-approved selection refactor is preserved at `lineup-v2.3.1` before real-map integration work. Its map image and CSS percentage positions are illustrative, not verified geographic coordinates.
 
+## Mobile summary spacing · unreleased
+
+Below the 34rem Menu breakpoint, the directory starts directly beneath the site header, matching Find Events. The previous 12px directory top gap is removed only in this range. Both summaries retain Tide's Results utility typography, baseline alignment, 16px vertical padding and bottom divider; no shared component is restyled. Wider layouts keep their existing spacing.
+
+Chromium on Windows, October 29, 2026: computed summary typography, colors, padding, margins, borders, alignment and row height match at 320, 390 and 543px; both rows have zero extra header gap. The 544px breakpoint and 960/1440px layouts retain their prior spacing. All ten theme/mode pairs match at 390px, with no horizontal overflow; native Menu opens and dismisses with Escape. Build and all 133 repository checks pass. Physical devices, other engines and screen readers were not exercised for this change.
+
 ## Audit corrections · 2.3.2
 
 The illustration still fits completely in its frame. The frame reserves at least 48rem of document height; shorter viewports scroll the document rather than compressing markers. Below a 36rem map width, three illustrative marker positions and the label placements separate the 44px targets. Overview labels wrap where needed; a compact selected marker says Selected and its caption supplies the full venue name. These are illustrative placement changes, not geographic corrections.

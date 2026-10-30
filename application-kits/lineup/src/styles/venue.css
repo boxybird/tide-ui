@@ -77,6 +77,9 @@
     /* One native state selects the panel and its exposed current-view links. */
     .tide-venue__directory:has(#venue-map:target,.tide-venue__point:target) { --tide-app-list: none; --tide-app-map: grid; }
   }
+  @media (width < 34rem) {
+    .tide-venue__directory { padding-block-start: 0; }
+  }
   @media (width >= 75rem) {
     .tide-app--directory { --tide-app-content-width: 92rem; padding-inline: var(--tide-app-content-inset); }
     .tide-app--directory .tide-app__header { max-inline-size: none; padding-inline: 0; margin-inline: 0; }
