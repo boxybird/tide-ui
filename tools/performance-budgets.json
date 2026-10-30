@@ -1,8 +1,36 @@
 {
   "files": {
-    "build/tide/css/tide.css": {"maxBytes": 100000, "maxGzipBytes": 14000},
-    "build/events/runtime/css/app.css": {"maxBytes": 22000, "maxGzipBytes": 5000},
-    "build/tide/assets/fonts/manrope-latin-wght-normal.woff2": {"maxBytes": 26000}
+    "build/tide/css/tide.css": {
+      "maxBytes": 100000,
+      "maxGzipBytes": 14000
+    },
+    "build/events/runtime/css/app.css": {
+      "maxBytes": 22000,
+      "maxGzipBytes": 5000
+    },
+    "build/tide/assets/fonts/manrope-latin-wght-normal.woff2": {
+      "maxBytes": 26000
+    },
+    "build/events/runtime/map/venue-map.css": {
+      "maxBytes": 5600,
+      "maxGzipBytes": 1600
+    },
+    "build/events/runtime/map/venue-map.mjs": {
+      "maxBytes": 8500,
+      "maxGzipBytes": 3300
+    },
+    "build/events/runtime/map/vendor/maplibre-6.16.0/maplibre-gl.mjs": {
+      "maxBytes": 1110000,
+      "maxGzipBytes": 300000
+    },
+    "build/events/runtime/map/vendor/maplibre-6.16.0/maplibre-gl-worker.mjs": {
+      "maxBytes": 520000,
+      "maxGzipBytes": 160000
+    },
+    "build/events/runtime/map/vendor/maplibre-6.16.0/maplibre-gl.css": {
+      "maxBytes": 72000,
+      "maxGzipBytes": 12000
+    }
   },
   "maxPageGzipBytes": 18000,
   "maxServedImageBytes": 200000,

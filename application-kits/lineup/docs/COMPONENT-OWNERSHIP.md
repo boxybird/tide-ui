@@ -1,6 +1,8 @@
-# Native component ownership · Lineup 2.3.2
+# Component ownership · Lineup 2.4.0
 
-The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScript. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
+The approved geographic map, fixed directory viewport, list footer and map action overlay are now Lineup-owned. `src/map/` is an additional application source module, not a Tide extension. See [source of truth](SOURCE-OF-TRUTH.md).
+
+The Lineup application kit consumes Tide 1.12.0. Only the venue directory loads the registered map runtime; all other documents remain script-free. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
 | Responsibility | Canonical home |
 | --- | --- |
@@ -25,8 +27,8 @@ The Lineup application kit consumes Tide 1.12.0 and contains no browser JavaScri
 | Venue information and exact IDs | Authored venue fragment and native route context; no DOM rewriting |
 | Document, browse, results and filter body/footer | Registered `document.html`, `workspace*.html`, `filter-rail.html`, `filter-status.html`, `filter-actions.html` |
 | Eleven submission fields | Registered `form-*.html`, `data/submission-fields.json` and build-time form renderer |
-| Browser runtime | None. `behaviorHome` is empty; checks reject browser executables and script hooks. |
-| Independent consumer enhancements | Consumer-owned runtime/server and styles outside Lineup/Tide; navigation, matching, pagination, loading/error feedback, additional motion and return-state coordination. See the [integration guide](CONSUMER-INTEGRATION.md); its private-markup map adds no public selector API. |
+| Browser runtime | `src/map/venue-map.mjs`, map-specific CSS/data and pinned MapLibre modules. Only the directory loads these; exact inventory, integrity and route checks reject unrelated browser code. |
+| Additional service enhancements (not implemented) | Any future content/service integration must start from the current application source; navigation, matching, pagination, loading/error feedback, additional motion and return-state coordination. See the [integration guide](CONSUMER-INTEGRATION.md); its private-markup map adds no public selector API. |
 
 The [2.1.4 handoff contract](HANDOFF.md) removes tutorial result-state navigation and example wording from customer-facing templates. Native form fields remain; reference layouts, fixture provenance and integration limits live outside the product interface. This does not alter shared components or add service behavior.
 

@@ -20,12 +20,12 @@ class UtilityContracts(unittest.TestCase):
     def setUpClass(cls):
         cls.app=AppTemplates()
 
-    def test_documents_are_script_free_and_keep_native_route_metadata(self):
+    def test_only_directory_loads_the_map_and_routes_keep_native_metadata(self):
         for route in ['index', 'search', 'sunshine-theater', 'venues', 'saved', 'help', 'submit', 'ink-after-dark']:
             with self.subTest(route=route):
                 doc=Document(self.app.page(route))
                 scoped=route in ('index', 'search', 'sunshine-theater', 'ink-after-dark')
-                self.assertFalse(any(tag=='script' for tag,attrs in doc.nodes))
+                self.assertEqual([attrs for tag,attrs in doc.nodes if tag=='script'], [{'type':'module','src':'{{MAP_ROOT}}/venue-map.mjs'}] if route=='venues' else [])
                 body=next(attrs for tag,attrs in doc.nodes if tag=='body')
                 self.assertEqual(body['data-state-key'], 'app-release-1.1.0' if scoped else 'margin-aligned')
                 self.assertEqual(body.get('data-venue-scope'), 'sunshine-theater' if route=='sunshine-theater' else None)

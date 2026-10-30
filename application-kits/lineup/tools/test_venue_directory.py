@@ -56,7 +56,8 @@ class VenueDirectoryContracts(unittest.TestCase):
             # Page-context Badge colors must not be placed on a dark map image.
             # Map selection text inherits the Photo control's reading role.
             self.assertFalse(any('tide-badge' in node['classes'] and point in node['parents'] for node in nodes))
-        self.assertFalse(any(node['tag']=='script' for node in nodes))
+        scripts=[node['attrs'] for node in nodes if node['tag']=='script']
+        self.assertEqual(scripts, [{'type':'module','src':'{{MAP_ROOT}}/venue-map.mjs'}])
         self.assertNotIn('style=', html)
 
     def test_search_uses_the_native_field_and_get_contract(self):

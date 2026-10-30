@@ -1,5 +1,8 @@
 # Native runtime boundary · Lineup 2.1.4
 
+**Current 2.4.0 boundary:** the approved map is now in `src/map/` and builds from the current Lineup templates. Review `/events/app/venues.html` on port 4187. There is no active separate consumer or copied source snapshot. Only the venue directory loads browser modules; prior no-script/map-provider-exclusion statements below describe the earlier native baseline. The current [source-of-truth contract](SOURCE-OF-TRUTH.md) takes precedence. Native event/search journeys and service limits are unchanged.
+
+
 There is no browser JavaScript. `behaviorHome` is empty; `document.html` loads stylesheets only. The old search/runtime/navigation/headings/filter/rail/preview scripts and their script partials are removed. The reference site and canonical kit specimens are script-free as well. See the [repository policy and audit](../../../docs/NO-BROWSER-JAVASCRIPT.md).
 
 ## Native behavior

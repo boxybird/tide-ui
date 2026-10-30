@@ -30,7 +30,12 @@ def build(check=False):
     kit_manifest = json.loads((PROJECT/'packages/tide/component-manifest.json').read_text(encoding='utf-8'))
     assert manifest['kitVersion'] == kit_manifest['version'], 'Review the application against the current Tide version and update kitVersion.'
     behavior_sources = [ROOT/name for name in manifest['behaviorHome']]
-    assert not behavior_sources and not list((ROOT/'src/runtime').rglob('*.js')), 'Browser JavaScript is forbidden in the native example.'
+    actual_scripts = {p for p in (ROOT/'src/map').rglob('*') if p.suffix in ('.js','.mjs','.cjs')}
+    assert set(behavior_sources) == actual_scripts, 'Register every Lineup map module; no other browser runtime is allowed.'
+    assert not any(p.suffix in ('.js','.mjs','.cjs') for p in (ROOT/'src/runtime').rglob('*')), 'Only the map owns browser code.'
+    for source in sorted((ROOT/'src/map').rglob('*')):
+        if source.is_file():
+            expected[OUT/'runtime/map'/source.relative_to(ROOT/'src/map')] = source.read_bytes()
     css_sources = [ROOT/name for name in manifest['styleHome']]
     assert set(css_sources) == set((ROOT/'src/styles').glob('*.css')), 'Register every app stylesheet in consumer-manifest.json, in cascade order.'
     css = '/* App composition only; generated from src/styles/. */\n' + compact_css('\n'.join(source.read_text(encoding='utf-8') for source in css_sources))
@@ -49,6 +54,7 @@ def build(check=False):
             text = text.replace('{{KIT_NAV_CSS}}', relative(KIT/'extensions/navigation.css', directory))
             text = text.replace('{{KIT_PANEL_CSS}}', relative(OUT/'runtime/css/tide-panel.css', directory))
             text = text.replace('{{APP_CSS}}', relative(OUT / 'runtime/css/app.css', directory))
+            text = text.replace('{{MAP_ROOT}}', relative(OUT/'runtime/map', directory))
             text = text.replace('{{KIT_ASSETS}}', relative(KIT/'assets', directory))
             text = re.sub(r'((?:href|src)=")(js/[^"<>]+|assets/[^"<>]+)(")',
                           lambda m:m[1]+relative(OUT / 'runtime' / m[2], directory)+m[3], text)

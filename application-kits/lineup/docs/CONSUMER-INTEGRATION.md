@@ -1,5 +1,8 @@
 # Consumer integration · Lineup 2.1.8
 
+**Current 2.4.0 boundary:** the approved map is now in `src/map/` and builds from the current Lineup templates. Review `/events/app/venues.html` on port 4187. There is no active separate consumer or copied source snapshot. Only the venue directory loads browser modules; prior no-script/map-provider-exclusion statements below describe the earlier native baseline. The current [source-of-truth contract](SOURCE-OF-TRUTH.md) takes precedence. Native event/search journeys and service limits are unchanged.
+
+
 Lineup 2.1.9 retains the integration points below. Its private filter-content wrapper and compact Category grouping are documented in [filter-panel spacing](FILTER-PANEL-SPACING.md); field names, native routes and runtime boundaries are unchanged. The external consumer experiment described here consumed 2.1.8.
 
 Lineup 2.2.0 adds `venues.html` and a consistent primary menu. Template consumers should adopt the new Venues/submission current-page values and remove the retired route-dependent secondary navigation. The [navigation/directory contract](VENUES-NAVIGATION.md) records that migration. Existing event/filter integration points remain unchanged.

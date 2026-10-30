@@ -1,8 +1,10 @@
 # Tide UI
 
+Lineup has one source of truth: `application-kits/lineup/` on `main`. Review the [current venue map](http://127.0.0.1:4187/events/app/venues.html). See the [checkpoint and consolidation record](application-kits/lineup/docs/SOURCE-OF-TRUTH.md).
+
 A framework-free HTML and CSS UI kit with semantic OKLCH colors, BEM components and five themes—Tide, Bumble, Slate, Grove and Iris—each with light, dark and system appearance. The reference site and derived application kits consume the same generated stylesheet.
 
-Tide UI kit **1.12.0** · [Lineup application kit](application-kits/lineup/README.md) **2.1.6**, layout family **option 1** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
+Tide UI kit **1.12.0** · [Lineup application kit](application-kits/lineup/README.md) **2.4.0**, layout family **option 1** · MIT licensed. This is a local sample interface, without live event data, submissions, accounts or booking.
 
 Kit normalization contracts: [buttons](packages/tide/docs/BUTTONS.md), [fields, choices, chips, disclosures and file/error states](packages/tide/docs/FORMS.md), and [badges, notices, toast specimens and empty states](packages/tide/docs/FEEDBACK.md). [Cards, dates, calendar groups and results](packages/tide/docs/LISTINGS.md) have a dedicated matrix too. Each has all-theme specimens and regression checks. See [completion status and verification limits](packages/tide/docs/NORMALIZATION-STATUS.md) for completed scope and browser-testing limits.
 
@@ -41,7 +43,7 @@ Open the [UI kit](http://127.0.0.1:4187/site/index.html), [events example](http:
 
 Tide is the UI source of truth; application-kit work does not change its component sources, recipes or tokens. The application has one canonical home and keeps its existing `/events/` preview URLs. See the [Lineup audit](application-kits/lineup/docs/AUDIT.md).
 
-Edit named sources and rebuild. Generated theme/mode copies are never edited or committed. The kit, reference specimens and events example contain zero browser JavaScript, enforced by checks. Python and Node are development tools, not browser dependencies. See [browser policy and audit](docs/NO-BROWSER-JAVASCRIPT.md).
+Edit named sources and rebuild. Generated theme/mode copies are never edited or committed. Tide and reference specimens contain zero browser JavaScript. Lineup 2.4.0 has one registered exception: its venue directory loads the approved MapLibre map. All other routes remain script-free. The map and current templates build from this repository; no separate Consumer Lab or copied application snapshot is maintained. See [browser policy and audit](docs/NO-BROWSER-JAVASCRIPT.md).
 
 ## Use the CSS
 

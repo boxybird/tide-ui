@@ -131,7 +131,8 @@ def main():
     markdown+=list((ROOT/'docs').rglob('*.md'))+list((KIT/'docs').glob('*.md'))+list((ROOT/'application-kits/lineup/docs').glob('*.md'))
     markdown+=list((ROOT/'build').rglob('*.md'))
     for path in markdown:
-        for ref in re.findall(r'\]\(([^)]+)\)',path.read_text(encoding='utf-8')):
+        for ref in re.findall(r'\]\((<[^>]+>|[^)]+)\)',path.read_text(encoding='utf-8')):
+            ref=ref.removeprefix('<').removesuffix('>')
             url=urlsplit(ref)
             if url.scheme or url.netloc or not url.path:continue
             markdown_refs+=1
@@ -170,14 +171,29 @@ def main():
     runs.append({'name':'palette-and-contract-tests','pass':tests.returncode==0,'output':(tests.stdout+tests.stderr).strip()})
     templates=subprocess.run([sys.executable,'-B','-m','unittest','discover','-s','tools','-p','test_*.py'],cwd=ROOT/'application-kits/lineup',capture_output=True,text=True)
     runs.append({'name':'app-template-contracts','pass':templates.returncode==0,'output':(templates.stdout+templates.stderr).strip()})
-    # Browsers consume native HTML/CSS only. Node remains development tooling.
+    map_tests=subprocess.run([shutil.which('node') or 'node','--test','application-kits/lineup/tools/test-map.cjs'],cwd=ROOT,capture_output=True,text=True)
+    runs.append({'name':'lineup-map-contracts','pass':map_tests.returncode==0,'output':(map_tests.stdout+map_tests.stderr).strip()})
+    # The approved Lineup map is the only browser-runtime exception. Tide,
+    # reference specimens and every other Lineup route remain script-free.
+    app=ROOT/'application-kits/lineup'
+    consumer=json.loads((app/'consumer-manifest.json').read_text(encoding='utf-8'))
+    allowed_scripts={app/name for name in consumer['behaviorHome']}
+    allowed_scripts.update(ROOT/'build/events/runtime/map'/p.relative_to(app/'src/map') for p in list(allowed_scripts))
     for folder in (KIT/'templates', KIT/'css', KIT/'assets', ROOT/'site', ROOT/'application-kits/lineup/src', ROOT/'build/tide', ROOT/'build/site', ROOT/'build/events'):
         for p in folder.rglob('*'):
             if not p.is_file():continue
-            if p.suffix.lower() in ('.js','.mjs','.cjs'):
-                failures.append(str(p.relative_to(ROOT))+': browser JavaScript is forbidden')
+            if p.suffix.lower() in ('.js','.mjs','.cjs') and p not in allowed_scripts:
+                failures.append(str(p.relative_to(ROOT))+': unregistered browser JavaScript is forbidden')
             if p.suffix.lower() in ('.html','.svg'):
                 text=p.read_text(encoding='utf-8')
+                if p.is_relative_to(ROOT/'build/events') and p.name=='venues.html':
+                    expected=(p.parent/'../runtime/map/venue-map.mjs').resolve() if p.parent.name=='app' else (p.parent/'../../runtime/map/venue-map.mjs').resolve()
+                    tags=re.findall(r'<script\b[^>]*>.*?</script>',text,re.S|re.I)
+                    for tag in tags:
+                        match=re.fullmatch(r'<script type="module" src="([^"]+)"></script>',tag)
+                        if match and (p.parent/match[1]).resolve()==expected:
+                            text=text.replace(tag,'',1)
+                    if len(tags)!=1:failures.append(str(p.relative_to(ROOT))+': exactly one registered map entry module required')
                 if re.search(r'<script\b|\son[a-z]+\s*=|(?:href|src)\s*=\s*[\"\']\s*javascript:',text,re.I):
                     failures.append(str(p.relative_to(ROOT))+': executable browser dependency is forbidden')
     failures.extend(run['name']+' failed: '+run['output'] for run in runs if not run['pass'])

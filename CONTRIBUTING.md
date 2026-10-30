@@ -1,6 +1,8 @@
 # Contributing
 
-Browser deliverables must contain zero JavaScript: no script files, script imports, inline handlers or JavaScript URLs in the kit, documentation specimens or events example. Node/Python are development tools only. Prefer native HTML and CSS; author static UI states where behavior would require an application engine. See [browser policy](docs/NO-BROWSER-JAVASCRIPT.md).
+For Lineup, work directly on `main` in `application-kits/lineup/`, build the ordinary `/events/` preview, verify and commit each accepted incremental change. Do not create a separate Consumer Lab, source snapshot, alternate preview tree or working branch. Historical experiments belong in archive tags. See [source of truth](application-kits/lineup/docs/SOURCE-OF-TRUTH.md).
+
+Tide and documentation specimens must contain zero JavaScript. Lineup has one explicit exception: the registered venue-map modules in `application-kits/lineup/src/map/`, loaded only by `venues.html`. All other application routes remain script-free; inline handlers and JavaScript URLs remain forbidden. Node/Python are development tools only. Prefer native HTML and CSS; author static UI states where behavior would require an application engine. See [browser policy](docs/NO-BROWSER-JAVASCRIPT.md).
 
 Preserve the [loading and performance contracts](docs/LOADING-PERFORMANCE.md). Budget changes require review; replacing a lossless asset requires decoded pixel verification and updated provenance. Normal checks include local HTTP regression tests.
 

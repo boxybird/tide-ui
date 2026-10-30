@@ -1,12 +1,17 @@
 # Tide UI and derived application kits
 
+## Lineup source of truth · 2026-10-29
+
+Work directly on `main`; do not create working branches or a separate Consumer Lab. `application-kits/lineup/` owns the approved real map and all current application changes. The only active preview is port 4187 from the root build. Never restore `snapshot/` or `map-snapshot/` as current code. After each accepted change, verify and commit it before the next change. Old consumer code is preserved at archive tag `archive/consumer-v0.4.2`, not an active checkout. See `application-kits/lineup/docs/SOURCE-OF-TRUTH.md`.
+
+
 The complete earlier project is preserved at tag `design-history/2026-10-25`, commit `60864d0`, and `.git/design-history-2026-10-25.bundle`. Archived studies stay in tagged history; do not recreate version folders or run historical writers against current sources.
 
 ## Scope and ownership
 
-- `packages/tide/`: Tide UI kit 1.10.0, the source of truth for components, CSS, tokens, themes, recipes, registry, assets and contracts. Theme research lives in `packages/tide/docs/COLOR-DESIGN.md`; preserve the accepted Bumble Dark palette.
+- `packages/tide/`: Tide UI kit 1.12.0, the source of truth for components, CSS, tokens, themes, recipes, registry, assets and contracts. Theme research lives in `packages/tide/docs/COLOR-DESIGN.md`; preserve the accepted Bumble Dark palette.
 - `site/`: UI-kit documentation and reference presentation; Foundations / Components / Screens / Coverage / Tokens / Themes / Extend.
-- `application-kits/lineup/`: Lineup application kit 2.0.4, layout family option 1. Burque Events is its authored sample website. Owns application composition, responsive layout, templates, fixtures, assets, docs and tests. This replaces the former `examples/events/` source home.
+- `application-kits/lineup/`: Lineup application kit 2.4.0, layout family option 1. Burque Events is its authored sample website. Owns application composition, responsive layout, templates, fixtures, assets, docs and tests. This replaces the former `examples/events/` source home.
 - `application-kits/README.md`: application-kit index and independent-version rules. Future layout alternatives get named siblings, not copied version directories.
 - `tools/`: portable build/check/dev/package integration. `build/` and `dist/` are ignored generated output; never edit or commit generated theme copies.
 
@@ -16,17 +21,19 @@ Hosting, deployment, production launch, ingestion, backend services, operational
 
 ## Development
 
-Run `npm run build`, `npm run check`, `npm run dev` from the root. Node18+ and Python3.10+ are required; no dependencies need installation. `PYTHON` selects the interpreter. Port4187 serves `/site/index.html`, `/events/app/index.html` and `/events/index.html`. `/events/` URLs and `build/events/` output intentionally survive the Lineup source move. Query parameters do not activate runtime behavior. `npm run verify:history` is optional and separate.
+Run `npm run build`, `npm run check`, `npm run dev` from the root. Node18+ and Python3.10+ are required; no dependencies need installation. `PYTHON` selects the interpreter. Port4187 serves `/site/index.html`, `/events/app/index.html` and `/events/index.html`. `/events/` URLs and `build/events/` output intentionally survive the Lineup source move. Only the map diagnostic parameters `map=off` and `map=fail` affect the registered map runtime; event/search query parameters do not activate matching. `npm run verify:history` is optional and separate.
 
-Browser deliverables ship zero JavaScript: no scripts, inline handlers or JavaScript URLs. Node/Python are development tools only. Native links, fragments, history, controls, reset, validation, file selection and popovers remain; authored result pages replace live matching and counts. See CONTRIBUTING.md and docs/NO-BROWSER-JAVASCRIPT.md. Historical JavaScript/session/preview notes are provenance, not current requirements.
+Tide and reference specimens ship zero JavaScript. Lineup 2.4.0 has one approved exception: the registered MapLibre venue-map modules in `application-kits/lineup/src/map/`, loaded only by `venues.html`. All other routes remain script-free. Inline handlers and JavaScript URLs remain forbidden. Node/Python are development tools only. Native links, fragments, history, controls, reset, validation, file selection and popovers remain; authored result pages replace live matching and counts. See CONTRIBUTING.md and docs/NO-BROWSER-JAVASCRIPT.md. Historical JavaScript/session/preview notes are provenance, not current requirements.
 
 ## Contracts
+
+The approved map-only exception includes camera resizing, synchronization with native URL fragments and scoped session restoration inside `src/map/`. Preserve these when working on Lineup; the restrictions on application-wide scripted geometry, navigation history and storage below still apply outside the map.
 
 Use BEM `tide-` names, semantic roles, named type/spacing/radius inputs, modern supported CSS and accessible native HTML. Tide, Bumble, Slate, Grove and Iris each require light/dark modes. Summer is removed. Preserve Manrope, square controls, neutral notice borders and unframed event panes; no colored left callout stripe.
 
 Lineup preserves bounded left panes, the natural right document, native scrollbar gutters, minimum 24px bottom clearance, centered 20/35/45 desktop columns and one original filter control set. The complete isolated feed sits below its permanent summary. Below 75rem use the native non-modal left popover, browser-owned dismissal/focus return, scrolling body/pinned footer and reduced motion. Do not restore script-based geometry, custom history or storage. Retain exact venue/event IDs, native paths and useful venue information. All 54 events are authored samples; venue facts are separately attributed. See the application desktop/drawer/ownership contracts and docs/AUDIT.md.
 
-Five registered `src/styles/` modules own application styling. All 64 routes use `document.html`; 62 workspace routes share `workspace.html`. Only venue information, help and submission remain as three unique `src/pages/` fragments. All 54 event details use structured `data/events.json`, shared `event-detail.html` and `data/detail-presentations.json`. Eleven submission fields use registered `form-*.html` partials and `data/submission-fields.json`. Preserve native labels, validation, hints and reset. Keep unique prose, venue facts, uploads and permissions in authored HTML; no raw HTML in sample JSON or duplicated shared fragments. The build renderer escapes text and rejects invalid includes. No browser templating/framework is needed.
+Five registered `src/styles/` modules own native application styling; `src/map/` owns only the approved map enhancement and its pinned dependencies. All 73 routes use `document.html`; 65 workspace routes share `workspace.html`. Four unique `src/pages/` fragments supply Sunshine Theater information, venue composition, help and submission. All 54 event details use structured `data/events.json`, shared `event-detail.html` and `data/detail-presentations.json`. Eleven submission fields use registered `form-*.html` partials and `data/submission-fields.json`. Preserve native labels, validation, hints and reset. Keep unique prose, venue facts, uploads and permissions in authored HTML; no raw HTML in sample JSON or duplicated shared fragments. The build renderer escapes text and rejects invalid includes. No browser templating/framework is needed.
 
 Current browser evidence is Chromium on Windows. Firefox/Safari, physical devices and screen-reader checks remain deferred unless a new record explicitly covers them. When asked what is next, use a specific UI need or documented audit gap; Coverage is an inventory, not a product/service roadmap.
 

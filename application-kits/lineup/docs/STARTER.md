@@ -1,6 +1,9 @@
 # Start from Lineup
 
-Lineup 2.3.2 is layout family option 1, derived from Tide UI 1.12.0. Tag `lineup-v2.3.0` preserves the approved venue list/map foundation for further iteration. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
+**Current 2.4.0 boundary:** the approved map is now in `src/map/` and builds from the current Lineup templates. Review `/events/app/venues.html` on port 4187. There is no active separate consumer or copied source snapshot. Only the venue directory loads browser modules; prior no-script/map-provider-exclusion statements below describe the earlier native baseline. The current [source-of-truth contract](SOURCE-OF-TRUTH.md) takes precedence. Native event/search journeys and service limits are unchanged.
+
+
+Lineup 2.4.0 is layout family option 1, derived from Tide UI 1.12.0. Tag `lineup-v2.3.0` preserves the approved venue list/map foundation for further iteration. Burque Events supplies realistic authored sample content for evaluating the interface. Both kits remain separate, with independent versions. Start with the [handoff contract](HANDOFF.md) for product-copy, native CSS behavior, fixture provenance and service integration boundaries.
 
 The [compact-header contract](COMPACT-HEADERS.md) covers the selected workspace and its canonical utility recipe.
 

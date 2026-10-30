@@ -1,5 +1,8 @@
 # Lineup interface and handoff · 2.1.4
 
+**Current 2.4.0 boundary:** the approved map is now in `src/map/` and builds from the current Lineup templates. Review `/events/app/venues.html` on port 4187. There is no active separate consumer or copied source snapshot. Only the venue directory loads browser modules; prior no-script/map-provider-exclusion statements below describe the earlier native baseline. The current [source-of-truth contract](SOURCE-OF-TRUTH.md) takes precedence. Native event/search journeys and service limits are unchanged.
+
+
 Lineup's application interface uses ordinary product language. It contains no tutorial result-state menu, forced “No results” link, control-example labels or design-study notices. Search, dates and categories remain a single native form. Reference layouts remain available to kit reviewers outside the application journey; their paths and event/venue IDs are preserved.
 
 ## Native HTML and modern CSS

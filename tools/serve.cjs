@@ -6,8 +6,8 @@ const crypto=require('node:crypto');
 const zlib=require('node:zlib');
 const {promisify}=require('node:util');
 const gzip=promisify(zlib.gzip),brotli=promisify(zlib.brotliCompress);
-const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/plain; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.woff2':'font/woff2'};
-const textTypes=new Set(['.html','.css','.json','.md','.svg']);
+const types={'.mjs':'text/javascript; charset=utf-8','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/plain; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.woff2':'font/woff2'};
+const textTypes=new Set(['.html','.css','.json','.md','.svg','.mjs']);
 
 function encodingFor(header,compressible){
   if(!header)return 'identity';

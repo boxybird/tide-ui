@@ -7,3 +7,6 @@
 *.woff binary
 *.woff2 binary
 *.zip binary
+# Preserve imported map-provider dependencies and provenance byte-for-byte.
+application-kits/lineup/src/map/vendor/** -text
+application-kits/lineup/src/map/maps/** -text

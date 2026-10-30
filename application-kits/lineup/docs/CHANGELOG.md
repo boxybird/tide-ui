@@ -1,6 +1,10 @@
 # Lineup application-kit changelog
 
-## Unreleased
+## 2.4.0 · 2026-10-29
+
+- Consolidated the approved Consumer Lab 0.4.2 map into this application kit; the normal build now combines the current 2.3.2 source and the map, with no copied snapshot. Preserved pinned MapLibre bytes, the dark style and demonstration coordinates.
+- Preserved the fixed venue workspace, list-owned footer, map/list bottom alignment and overlaid selection actions. All other document scrolling remains unchanged.
+- Registered the map as the only browser-JavaScript exception, updated module MIME/asset budgets and added current-build/dependency/route checks. Archived the old consumer history, retired its separate preview and checkout, and recorded one-source/incremental-commit rules. See [source of truth](SOURCE-OF-TRUTH.md).
 
 - Venue cards open the venue and its event collection below 60rem, where List and Map are separate views. At 60rem and above, cards still select the adjacent map point. Private responsive hosts expose exactly one native covering link per card; the separate venue-details link and map controls retain their destinations.
 - Matched the venue directory summary's mobile spacing to Find Events below the 34rem dropdown-menu breakpoint by removing its extra 12px top gap. Both rows continue to use the unchanged Tide Results utility recipe for typography, alignment, padding and divider. Wider layouts retain their existing spacing.

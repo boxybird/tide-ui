@@ -1,5 +1,8 @@
 # Venue directory · Lineup 2.3.2
 
+**Current 2.4.0 boundary:** the approved map is now in `src/map/` and builds from the current Lineup templates. Review `/events/app/venues.html` on port 4187. There is no active separate consumer or copied source snapshot. Only the venue directory loads browser modules; prior no-script/map-provider-exclusion statements below describe the earlier native baseline. The current [source-of-truth contract](SOURCE-OF-TRUTH.md) takes precedence. Native event/search journeys and service limits are unchanged.
+
+
 Lineup owns this composition and its native selection behavior. Tide UI remains 1.12.0 with no source, token, recipe, registry, palette or distribution change. The approved 2.3.0 foundation remains preserved at `lineup-v2.3.0`; this iteration changes which action happens first.
 
 The user-approved selection refactor is preserved at `lineup-v2.3.1` before real-map integration work. Its map image and CSS percentage positions are illustrative, not verified geographic coordinates.

@@ -1,5 +1,12 @@
 # Changelog
 
+## Lineup 2.4.0 · single source of truth · 2026-10-29
+
+- Consolidated the approved Consumer Lab dark map and fixed venue workspace into the current Lineup sources, preserving the 2.3.2 audit corrections, mobile summary spacing and responsive card destinations. Tide 1.12.0 is unchanged.
+- Retired the snapshot-based preview and separate checkout. The map is built and served at the ordinary `/events/app/venues.html` route. Historical consumer code is retained only at `archive/consumer-v0.4.2`.
+- Added a narrowly registered map runtime, local dependency integrity checks, MIME support, and application regression checks. Updated the browser policy for this approved Lineup-only exception. See [source of truth](application-kits/lineup/docs/SOURCE-OF-TRUTH.md).
+
+
 ## Tide kit 1.12.0 · 2026-10-27
 
 - Promoted the reviewed centered header and current-page treatment into opt-in `extensions/navigation.css`, with canonical HTML, ownership/variant registration and the existing all-theme comparison sheet. Existing compact geometry, action states and source icons are reused; default CSS modules, palettes, primitives and assets are unchanged.

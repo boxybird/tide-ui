@@ -2,7 +2,7 @@
   "id": "lineup",
   "name": "Lineup",
   "layoutFamily": "option-1",
-  "version": "2.3.2",
+  "version": "2.4.0",
   "kitVersion": "1.12.0",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
@@ -10,7 +10,8 @@
     "tide-app",
     "tide-app-document",
     "tide-lineup",
-    "tide-venue"
+    "tide-venue",
+    "tide-venue-map"
   ],
   "styleHome": [
     "src/styles/base.css",
@@ -19,9 +20,14 @@
     "src/styles/filters.css",
     "src/styles/venue.css"
   ],
-  "behaviorHome": [],
+  "behaviorHome": [
+    "src/map/venue-map.mjs",
+    "src/map/vendor/maplibre-6.16.0/maplibre-gl.mjs",
+    "src/map/vendor/maplibre-6.16.0/maplibre-gl-worker.mjs",
+    "src/map/vendor/maplibre-6.16.0/maplibre-gl-shared.mjs"
+  ],
   "contract": "docs/COMPONENT-OWNERSHIP.md",
-  "notes": "Native HTML/CSS application kit with a CSS-driven popover drawer and one permanent desktop control set. Product UI excludes tutorial navigation; static result references and integration boundaries are documented in docs/HANDOFF.md. No browser JavaScript.",
+  "notes": "One canonical Lineup source and preview. Native HTML/CSS routes with a registered venue-map-only MapLibre enhancement; Tide and all other routes remain script-free. See docs/SOURCE-OF-TRUTH.md.",
   "acceptedInputs": [
     "Sticky hierarchy and venue journey, integrated in App 1.1.0"
   ],
@@ -102,5 +108,6 @@
     "detailPresentations": "data/detail-presentations.json",
     "submissionFields": "data/submission-fields.json",
     "venues": "data/venues.json"
-  }
+  },
+  "mapHome": "src/map"
 }

@@ -250,13 +250,15 @@ class AppTemplates:
             body_class += ' tide-app--columns'
         body_attributes = str(attribute('data-venue-scope', 'sunshine-theater')) if venue else ''
         body_attributes += attribute('data-state-key', state_key)+attribute('class', body_class)
+        if route=='venues':
+            body_attributes += attribute('data-lineup-venue-workspace', 'fixed')
         return {
             'BODY_ATTRIBUTES':Html(body_attributes),
             'VIEWPORT_OPEN':Html('<div class="tide-venue__viewport">') if route=='venues' else Html(''),
             'VIEWPORT_CLOSE':Html('</div>') if route=='venues' else Html(''),
-            'VENUE_SCRIPT':Html(''),
+            'VENUE_SCRIPT':Html('<link rel="stylesheet" href="{{MAP_ROOT}}/vendor/maplibre-6.16.0/maplibre-gl.css"><link rel="stylesheet" href="{{MAP_ROOT}}/venue-map.css"><script type="module" src="{{MAP_ROOT}}/venue-map.mjs"></script>') if route=='venues' else Html(''),
             'SKIP_LINKS':Html(''.join(self.partial('skip-link', {'SKIP_TARGET':target, 'SKIP_LABEL':label, 'SKIP_MODIFIER':Html(modifier)}) for target, label, modifier in skips)),
-            'SITE_FOOTER':Html('') if route=='help' else self.partial('site-footer', {}),
+            'SITE_FOOTER':Html('') if route in ('help','venues') else self.partial('site-footer', {}),
             'FILTER_DIALOG':Html(''),
         }
 

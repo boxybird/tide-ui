@@ -1,5 +1,14 @@
 # Zero browser JavaScript
 
+## Current exception · Lineup 2.4.0
+
+The user requested one canonical Lineup application retaining the approved real map on 2026-10-29. The venue directory now loads its registered `venue-map.mjs` and pinned MapLibre modules from `application-kits/lineup/src/map/`. This is the only exception to the original policy below. The map uses current native venue links, markers and templates; no old snapshot or separate consumer is involved. Tide, the reference site and all other Lineup pages remain script-free. No inline executable markup is allowed.
+
+The build checks the exact module inventory. Checks allow exactly one local module entry on each generated `venues.html` and reject executable markup elsewhere. Local dependency hashes and integration tests run with `npm run check`. The map-specific diagnostic query values and camera/session restoration belong to this exception; no event search, custom navigation or service runtime is introduced. See [consolidation](../application-kits/lineup/docs/SOURCE-OF-TRUTH.md).
+
+## Original native policy and history
+
+
 The Tide kit, its canonical HTML specimens, the reference site and the events example must ship and load zero browser JavaScript. This policy covers external or inline scripts, JavaScript modules, inline event handlers, JavaScript URLs and executable SVG hooks. Node.js and Python remain local development/build/test tools only; their presence does not make them browser dependencies.
 
 `npm run check` scans browser source/output boundaries for executable script hooks and `.js`/`.mjs`/`.cjs` files. Kit packaging runs these checks before creating an archive. Canonical kit HTML cannot import documentation-site scripts. Behavior inventories for the site and example are empty.

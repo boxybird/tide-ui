@@ -1,0 +1,59 @@
+{
+  "coordinatePolicy": "Every location is a demonstration coordinate for interaction testing, not a verified business location. Do not use for directions.",
+  "venues": [
+    {
+      "id": "sunshine-theater",
+      "name": "Sunshine Theater",
+      "coordinates": [
+        -106.6506,
+        35.0835
+      ],
+      "demonstration": true
+    },
+    {
+      "id": "sister",
+      "name": "Sister",
+      "coordinates": [
+        -106.6584,
+        35.0918
+      ],
+      "demonstration": true
+    },
+    {
+      "id": "dry-heat",
+      "name": "Dry Heat",
+      "coordinates": [
+        -106.6415,
+        35.0802
+      ],
+      "demonstration": true
+    },
+    {
+      "id": "barelas-print-studio",
+      "name": "Barelas Print Studio",
+      "coordinates": [
+        -106.6595,
+        35.0694
+      ],
+      "demonstration": true
+    },
+    {
+      "id": "the-paper-table",
+      "name": "The Paper Table",
+      "coordinates": [
+        -106.6215,
+        35.0903
+      ],
+      "demonstration": true
+    },
+    {
+      "id": "warehouse-room",
+      "name": "Warehouse Room",
+      "coordinates": [
+        -106.6305,
+        35.0725
+      ],
+      "demonstration": true
+    }
+  ]
+}
