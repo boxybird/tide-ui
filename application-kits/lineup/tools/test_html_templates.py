@@ -79,18 +79,36 @@ class TemplateContracts(unittest.TestCase):
         self.assertEqual(saved.current, ['ink-after-dark'])
         self.assertNotIn('data-venue', saved.cards[0])  # Existing shortlist semantics.
 
-    def test_count_heading_stays_exposed_while_controls_remain_in_the_popover(self):
+    def test_count_heading_and_search_placement_keep_one_control_set(self):
         for route in set(self.app.by_id) | {name for name,page in self.app.routes.items() if page.get('collection') in ('all','venue')}:
             with self.subTest(route=route):
                 parsed=Elements(self.app.page(route))
                 for identifier in ('event-search-form','event-from','event-to'):
-                    self.assertIn('lineup-filters', parsed.ancestors[identifier])
+                    if identifier=='event-search-form' and route in ('index','search'):
+                        self.assertNotIn('lineup-filters', parsed.ancestors[identifier])
+                    else:
+                        self.assertIn('lineup-filters', parsed.ancestors[identifier])
                     self.assertNotIn('results', parsed.ancestors[identifier])
                 self.assertNotIn('lineup-filters', parsed.ancestors['results-title'])
                 self.assertIn('results', parsed.ancestors['results-title'])
                 self.assertIn('results', parsed.ancestors['result-count'])
                 self.assertNotIn('lineup-filters', parsed.ancestors['result-count'])
                 self.assertEqual(parsed.inputs.count('event-query'), 1)
+
+    def test_find_events_trial_keeps_external_filters_associated_with_one_form(self):
+        from presentation_contract import Tree
+        for route in ('index','search'):
+            nodes=Tree(self.app.page(route)).nodes
+            forms=[n for n in nodes if n['tag']=='form']
+            self.assertEqual(len(forms),1)
+            self.assertEqual(forms[0]['attrs']['id'],'event-search-form')
+            self.assertEqual(forms[0]['attrs']['action'],'search.html')
+            controls=[n for n in nodes if n['tag']=='input' and n['attrs'].get('name') in ('from','to','category')]
+            self.assertEqual(len(controls),5)
+            self.assertTrue(all(n['attrs'].get('form')=='event-search-form' for n in controls))
+            openers=[n for n in nodes if n['attrs'].get('popovertarget')=='lineup-filters' and n['attrs'].get('popovertargetaction')!='hide']
+            self.assertEqual(len(openers),1)
+        self.assertEqual({name for name,page in self.app.routes.items() if page.get('workspacePresentation')=='split'}, {'index','search'})
 
     def test_authored_result_pages_match_their_declared_category(self):
         for category in ('music','comedy','workshop'):

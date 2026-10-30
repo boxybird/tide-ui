@@ -1,5 +1,7 @@
 # Native responsive filter drawer · Lineup 2.1.9
 
+**Accepted 2.4.6 homepage behavior:** on Find Events (`index` and `search`), search and the Filters launcher appear above the list, and the panel remains a drawer even on desktop. The original form is outside the panel; date/category controls, submit and Reset retain native form association. Other routes keep the behavior below. See [the two-column review](HOME-SPLIT-REVIEW.md).
+
 The current [filter-panel spacing contract](FILTER-PANEL-SPACING.md) adds a private content wrapper with `space-6` top clearance below 75rem and adopts Tide's compact Category grouping. The public rail body/footer, native lifecycle and desktop search placement retain their existing contracts. Earlier behavior verification below remains historical evidence.
 
 The same `filter-rail.html` aside and original form/control set serve both layouts. `filter-trigger.html` is rendered by the shared header only on routes with a filter panel. The kit owns Filter panel internals, Button, Icon, fields and native Expandable; app-owned `filters.css` owns responsive placement and motion. `consumer-manifest.json` registers the templates and stylesheet. No browser JavaScript is shipped or needed.

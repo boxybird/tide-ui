@@ -1,6 +1,6 @@
 # Lineup source of truth · 2.4.0
 
-The current checkpoint is **2.4.5**, preserving the accepted Sunshine Theater photo hero and the shared 52rem preferred height for Sunshine and its six event pages as `lineup-v2.4.5`. See [changes and verification limits](CHANGELOG.md#245--2026-10-30). Version 2.4.4 applies [venue context](VENUE-CONTEXT.md) to all six venues and 54 events. The accepted Sunshine / Midnight pair is separately preserved in `lineup-v2.4.3` ([record](SUNSHINE-REVIEW.md)). Versions 2.4.1–2.4.2 preserve [compact map previews and marker highlighting](MOBILE-MAP-PREVIEW.md). All work continues on the same `main` branch; the original `lineup-v2.4.0` consolidation tag remains unchanged.
+The current checkpoint is **2.4.6**, preserving the accepted 50/50 Find Events homepage, visible search and native Filters drawer as `lineup-v2.4.6` ([scope and verification](HOME-SPLIT-REVIEW.md)). Version 2.4.5 preserves the accepted Sunshine Theater photo hero and the shared 52rem preferred height for Sunshine and its six event pages as `lineup-v2.4.5`. See [changes and verification limits](CHANGELOG.md#245--2026-10-30). Version 2.4.4 applies [venue context](VENUE-CONTEXT.md) to all six venues and 54 events. The accepted Sunshine / Midnight pair is separately preserved in `lineup-v2.4.3` ([record](SUNSHINE-REVIEW.md)). Versions 2.4.1–2.4.2 preserve [compact map previews and marker highlighting](MOBILE-MAP-PREVIEW.md). All work continues on the same `main` branch; the original `lineup-v2.4.0` consolidation tag remains unchanged.
 
 The user approved consolidation on October 29, 2026: one repository, one `main` branch, one current application and an incremental commit after each accepted change. The previous two-repository workflow caused visible regressions because the map preview used an older immutable application snapshot. This checkpoint removes that split.
 
@@ -12,7 +12,7 @@ The user approved consolidation on October 29, 2026: one repository, one `main` 
 - Preview: [venues](http://127.0.0.1:4187/events/app/venues.html) and [Find Events](http://127.0.0.1:4187/events/app/index.html).
 - Commands from the repository root: `npm run build`, `npm run check`, `npm run dev`.
 - Generated output: `build/events/`. Never edit it as source; never use a frozen snapshot to supply current routes.
-- Checkpoint: `lineup-v2.4.0`. Subsequent accepted changes are committed directly on `main`; release tags are immutable.
+- Current checkpoint: `lineup-v2.4.6`; consolidation baseline: `lineup-v2.4.0`. Subsequent accepted changes are committed directly on `main`; release tags are immutable.
 
 The map is built from `src/map/` alongside the current templates, fixtures and styles. Its relative asset paths work on the default route and every generated theme route. There is no adapter server, HTML response rewriting, alternate map URL, copied Tide tree, `snapshot/` or `map-snapshot/` in the maintained application. The former port 4198 Consumer Lab is retired.
 
@@ -34,7 +34,7 @@ Only `venues.html` loads `venue-map.mjs` and the pinned MapLibre 6.16.0 modules.
 
 The local MapLibre distribution and licenses are preserved byte-for-byte, with hashes in `data/map-dependencies.json`. The approved dark style and coordinate fixture are unchanged. Public OpenFreeMap tiles and glyphs require network access. The illustrated map and native links remain the fallback when the map fails or scripts are unavailable; `?map=off` and `?map=fail` are diagnostic states. Camera/list restoration is scoped to the map module. Reduced-motion preferences are retained.
 
-The original native CSS budget remains 22,000 raw / 5,000 gzip bytes. Map-only CSS, application module and pinned dependency budgets are separately recorded; they are requested only on the directory. No dependency installation is required.
+The native application CSS budget is 25,000 raw / 5,000 gzip bytes. The user explicitly approved the raw-only increase from 22,000 bytes for the two-column homepage in 2.4.6. Map-only CSS, application module and pinned dependency budgets are separately recorded; they are requested only on the directory. No dependency installation is required.
 
 ## Recovery and retired work
 

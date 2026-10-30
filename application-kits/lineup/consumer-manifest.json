@@ -2,7 +2,7 @@
   "id": "lineup",
   "name": "Lineup",
   "layoutFamily": "option-1",
-  "version": "2.4.5",
+  "version": "2.4.6",
   "kitVersion": "1.12.0",
   "approvedInput": "design-history/2026-10-25: tide-desktop-studies/app-release-1.1.0",
   "publicComponent": "tide-filter-panel",
@@ -32,6 +32,7 @@
     "Sticky hierarchy and venue journey, integrated in App 1.1.0"
   ],
   "templateHome": [
+    "src/templates/browse-search.html",
     "src/templates/detail-age.html",
     "src/templates/detail-attendance.html",
     "src/templates/detail-cue-label.html",
@@ -67,6 +68,7 @@
     "src/templates/filter-heading.html",
     "src/templates/filter-rail.html",
     "src/templates/filter-reset.html",
+    "src/templates/filter-search.html",
     "src/templates/filter-status.html",
     "src/templates/filter-trigger.html",
     "src/templates/filters.html",

@@ -5,7 +5,7 @@
       "maxGzipBytes": 14000
     },
     "build/events/runtime/css/app.css": {
-      "maxBytes": 22000,
+      "maxBytes": 25000,
       "maxGzipBytes": 5000
     },
     "build/tide/assets/fonts/manrope-latin-wght-normal.woff2": {

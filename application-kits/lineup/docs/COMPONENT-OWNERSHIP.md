@@ -1,4 +1,6 @@
-# Component ownership · Lineup 2.4.5
+# Component ownership · Lineup 2.4.6
+
+**Find Events checkpoint · 2.4.6:** `workspacePresentation: "split"` on `index` and `search` selects private equal desktop tracks. `browse-search.html` places the original `filter-search.html` form above the list; secondary controls retain native form association in the existing panel. `desktop.css` and `filters.css` own placement/availability only. Tide appearances and the other routes remain unchanged. See [scope and verification](HOME-SPLIT-REVIEW.md).
 
 **Sunshine checkpoint · 2.4.5:** the route owner selects `profilePresentation: "hero"`. Its authored HTML composes the unchanged Tide Event hero, Stack, Summary and Button recipes, followed by a Venue profile for visitor guidance. The shared outer wrapper omits its profile padding only for that composition; other venues keep their existing wrapper. `venue.css` gives the private venue/event hosts a screen-only `minmax(52rem,auto)` first grid row, scoped by `data-venue-scope` for events and the venue's private hero host. The hero uses its existing permitted `min-block-size: 0` host placement exception and stretches into that row. Intrinsic content permits growth; print retains the existing natural sizing. Tide's padding, photo crop, scrim, type and controls remain unchanged.
 
@@ -13,7 +15,7 @@ The Lineup application kit consumes Tide 1.12.0. Only the venue directory loads 
 | Responsibility | Canonical home |
 | --- | --- |
 | Event cards, hero/details, fields, notices, badges, prose, native controls and filter-panel internals | `packages/tide/` component recipes and CSS |
-| 20/35/45 centered desktop layout, bounded left panes and natural right document | `src/styles/desktop.css`, static `tide-app--columns` body modifier and authored workspace templates |
+| Equal homepage list/detail tracks; 20/35/45 on other browse routes; bounded left panes and natural right document | `src/styles/desktop.css`, static `tide-app--columns` body modifier and authored workspace templates |
 | Saved desktop tracks | `desktop.css`: results in column 1, detail in column 2; scoped browse overrides keep their three-column placement |
 | Navigation and skip-link presentation | Tide's Site header shell, compact navigation actions and `tide-skip-link`; Lineup authors destinations, list semantics, current-page context and focusable IDs |
 | Primary destinations and venue directory | Consistent Find Events / Venues / Add an Event, separate Saved, footer Help, and registered venue templates adopting unchanged Event list/card slots for photo-free directory rows; private CSS owns pane geometry and exposes either the direct venue link below 60rem or the adjacent-map selection link at wider sizes. See [venue directory](VENUE-DIRECTORY.md). |
@@ -27,7 +29,7 @@ The Lineup application kit consumes Tide 1.12.0. Only the venue directory loads 
 | Visible browse heading | `lineup-summary.html` authors the visible count heading outside the popover; `filter-heading.html` supplies the desktop utility label. Both use the canonical utility variant |
 | Venue result destinations and recovery | `data/pages.json` venue owner/result map, `html_templates.py`, scope/reset/empty partials; same venue information in populated and empty states |
 | Native responsive filter drawer | `filter-trigger.html`, `filter-rail.html`, `filters.css`; popover buttons, left slide/reduced motion, scrolling body/pinned footer and CSS return to the reserved desktop column; one form/control set, native disclosure/reset, browser-owned dismissal/focus |
-| Filter content clearance and choice grouping | Private `tide-app__filter-content` adds `space-6` top clearance only below 75rem, leaving the public rail body/footer and desktop search untouched. Category adopts Tide's plain fieldset/choice recipe; When retains Stack. See [filter-panel spacing](FILTER-PANEL-SPACING.md). |
+| Filter content clearance and choice grouping | Private `tide-app__filter-content` adds `space-6` top clearance in drawers: at every width on Find Events and below 75rem elsewhere. The public rail body/footer remains untouched. Category adopts Tide's plain fieldset/choice recipe; When retains Stack. See [filter-panel spacing](FILTER-PANEL-SPACING.md). |
 | Result/card/month counts and label spans | Build-time `tools/html_templates.py`, `data/events.json`, `data/pages.json` and registered partials |
 | Category/empty specimens and complete previews | Typed `sampleFilter` route context; four authored result pages, never browser matching or fetching |
 | Venue information and exact IDs | Authored venue fragment and native route context; no DOM rewriting |

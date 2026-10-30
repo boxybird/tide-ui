@@ -1,12 +1,14 @@
 {
   "index": {
     "collection": "all",
+    "workspacePresentation": "split",
     "selected": "high-desert-signal",
     "documentTitle": "High Desert Signal \u00b7 Burque",
     "layout": "workspace"
   },
   "search": {
     "collection": "all",
+    "workspacePresentation": "split",
     "selected": "high-desert-signal",
     "documentTitle": "High Desert Signal \u00b7 Burque",
     "layout": "workspace"

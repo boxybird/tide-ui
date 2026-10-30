@@ -56,6 +56,8 @@ class AppTemplates:
         for page in self.routes.values():
             if page['layout'] not in ('workspace', 'content'):
                 raise ValueError('Unsupported app page layout')
+            if page.get('workspacePresentation', 'columns') not in ('columns', 'split'):
+                raise ValueError('Unsupported workspace presentation')
             if page.get('source') and not re.fullmatch(r'[a-z]+(?:-[a-z]+)*\.html', page['source']):
                 raise ValueError('Invalid app content source')
             if page['layout']=='content' and not page.get('source'):
@@ -241,6 +243,13 @@ class AppTemplates:
             event = self.by_id[selected]
             values['EVENT_DETAIL'] = self.details.render(event, 1 if route in self.by_id else 2)
             values['DOCUMENT_TITLE'] = event['detail']['documentTitle']
+        split = page.get('workspacePresentation')=='split'
+        search = self.partial('filter-search', values)
+        values['DRAWER_SEARCH'] = Html('') if split else search
+        values['INLINE_SEARCH'] = self.partial('browse-search', {**values, 'FILTER_SEARCH':search}) if split else Html('')
+        values['FILTER_TITLE'] = 'Date & category' if split else 'Search & Filters'
+        if split:
+            values['FILTER_TRIGGER'] = Html('')
         return values
 
     def document_context(self, route, page, event):
@@ -261,6 +270,8 @@ class AppTemplates:
             body_class += ' tide-app--directory'
         if collection and not saved:
             body_class += ' tide-app--columns'
+        if page.get('workspacePresentation')=='split':
+            body_class += ' tide-app--split'
         body_attributes = str(attribute('data-venue-scope', page['venue'])) if venue else ''
         body_attributes += attribute('data-state-key', state_key)+attribute('class', body_class)
         if route=='venues':

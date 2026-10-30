@@ -1,6 +1,18 @@
 /* Centered desktop composition: persistent filters, bounded event list and a
    naturally scrolling detail column. Authored HTML needs no layout script. */
 @layer tide.app-layout {
+  /* Find Events: one search form above the list, with secondary filters
+     in the native drawer. Other workspaces keep their accepted composition. */
+  .tide-app__browse-search { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: var(--tide-space-3); padding: 0 var(--tide-layout-inset) var(--tide-space-4); }
+  .tide-app__browse-search .tide-app__search { min-inline-size: 0; padding: 0; }
+  .tide-app__browse-search-actions { display: flex; align-items: center; gap: var(--tide-space-2); }
+  @media (width < 34rem) { .tide-app__browse-search { grid-template-columns: minmax(0, 1fr); } }
+  @media (60rem <= width < 75rem) { .tide-app__browse-search { grid-template-columns: minmax(0, 1fr); } }
+  @media (width >= 60rem) {
+    .tide-app--split .tide-app__browse { grid-template-rows: auto minmax(0, 1fr); gap: var(--tide-space-4); }
+    .tide-app--split .tide-app__results { grid-column: 1; grid-row: 2; }
+    .tide-app__browse-search { grid-column: 1; grid-row: 1; padding-block-end: 0; }
+  }
   @media (width >= 75rem) {
     .tide-app-document {
       container-type: inline-size;
@@ -76,6 +88,12 @@
     /* External clearance lets Tide's outward focus rings remain visible. */
     .tide-app--columns .tide-app__filter-rail :where(.tide-app__search, .tide-app__filter-row) { padding-inline-start: var(--tide-space-2); }
     .tide-app--columns .tide-app__filter-rail .tide-app__filters { margin-inline-start: var(--tide-space-2); }
+    .tide-app--split { --tide-app-desktop-columns: repeat(2, minmax(0, 1fr)); }
+    .tide-app--split .tide-app__browse { grid-column: 1; grid-template-columns: minmax(0, 1fr); }
+    .tide-app--split .tide-app__browse-heading { display: none; }
+    .tide-app--split .tide-app__filter-clip { display: contents; }
+    .tide-app--split .tide-app__results { grid-column: 1; grid-row: 2; max-inline-size: none; }
+    .tide-app--split .tide-app__detail, .tide-app--split .tide-app__preview-state, .tide-app--split .tide-app__site-footer { grid-column: 2; }
   }
   @media (width >= 90rem) { .tide-app__workspace:not(:has(.tide-app__filter-rail)) { grid-template-columns: var(--tide-app-list-width) minmax(0, 1fr); } }
   @media (width >= 100rem) { .tide-app { --tide-app-outer-inset: var(--tide-space-12); } }
@@ -84,5 +102,6 @@
     .tide-app, .tide-app .tide-app__workspace { display: block; padding: 0; }
     .tide-app .tide-app__header { position: static; }
     .tide-app__filter-clip { display: none; }
+    .tide-app__browse-search { display: none; }
   }
 }

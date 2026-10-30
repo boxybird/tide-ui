@@ -1,5 +1,7 @@
 # Desktop composition · Lineup 2.2.3
 
+**Accepted 2.4.6 homepage layout:** Find Events (`index` and `search`) uses two equal desktop tracks with search above the list and a native Filters drawer. The header maximum and list/detail scrolling contracts remain. Other routes retain the three-column contract below. See [the two-column review](HOME-SPLIT-REVIEW.md).
+
 In Lineup 2.1.8 the event photo's return link hides from 60rem, where the list and detail appear side by side. Below that breakpoint it remains a native link to all events on full-screen event documents. Private application hosts control availability; the optional Saved action retains its existing position and appearance. An otherwise empty toolbar is omitted. Event/pane dimensions and the story's lower return link remain unchanged. See the current [design QA](../design-qa.md).
 
 The [selected compact-header implementation](COMPACT-HEADERS.md) replaces the previous browse intro and The lineup kicker with two utility rows. The user separately authorized the small Tide 1.11.0 Results variant and accepted both that recipe and the application change on 2026-10-27.

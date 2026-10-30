@@ -1,5 +1,12 @@
 # Lineup application-kit changelog
 
+## 2.4.6 · 2026-10-30
+
+- Scope `index` and `search` to a 50/50 desktop list/detail layout. Preserve the header maximum, event card, permanent result summary, bounded list and natural right document.
+- Move the original search form above the list, with Search and Filters controls. Keep date/category controls in the existing native drawer at every width; native submit/reset and browser-owned dismissal remain.
+- Register two shared partials and verify single-form association and route scope. All 71 other rendered routes remain byte-identical; no Tide or runtime changes. The accepted homepage is preserved as `lineup-v2.4.6` on `main`.
+- With explicit user authorization, raise only Lineup's raw application CSS budget from 22,000 to 25,000 bytes. The 5,000-byte compressed budget remains unchanged. Build and the full repository check pass, including all 140 tests. See [review evidence and limitations](HOME-SPLIT-REVIEW.md).
+
 ## 2.4.5 · 2026-10-30
 
 - Sunshine Theater adopts the existing Tide photo hero: full-column image, canonical scrim, eyebrow/title/subtitle and venue facts/visit links over the photo. Seating, access and venue guidance remain below. No Tide changes.

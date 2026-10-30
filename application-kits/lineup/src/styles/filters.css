@@ -22,6 +22,21 @@
       block-size: anchor-size(height, var(--tide-app-filter-height));
     }
     .tide-app__filter-rail::backdrop { display: none; }
+    /* Find Events retains the native drawer at desktop widths. */
+    .tide-app--split .tide-app__filter-trigger { display: inline-flex; }
+    .tide-app--split .tide-app__filter-header { display: grid; }
+    .tide-app--split .tide-app__filter-rail[popover]:not(:popover-open) { display: none; }
+    .tide-app--split .tide-app__filter-rail:popover-open {
+      position: fixed; position-anchor: auto; inset: 0 auto 0 0;
+      inline-size: min(24rem, calc(100dvw - var(--tide-space-8))); block-size: 100dvh;
+    }
+    .tide-app--split .tide-app__filter-body { overflow-y: auto; }
+    .tide-app--split .tide-app__filter-content { padding-block-start: var(--tide-space-6); }
+    .tide-app--split .tide-app__filter-footer-slot { padding-inline-start: var(--tide-layout-inset); }
+    .tide-app--split .tide-app__filter-footer-slot--actions { padding-block-end: max(var(--tide-space-6), env(safe-area-inset-bottom, 0px)); }
+    .tide-app--split .tide-app__filter-rail .tide-app__filter-row { padding-inline-start: var(--tide-layout-inset); }
+    .tide-app--split .tide-app__filter-rail .tide-app__filters { margin-inline-start: var(--tide-layout-inset); }
+    html:has(.tide-app--split .tide-app__filter-rail:popover-open) { overflow: hidden; scrollbar-gutter: stable; }
   }
   @media (width < 75rem) {
     .tide-app__filter-trigger { display: inline-flex; }
