@@ -38,8 +38,15 @@ class VenueDirectoryContracts(unittest.TestCase):
             point = next(node for node in nodes if node['attrs'].get('id')=='map-'+venue_id)
             row_links = [node for node in nodes if node['tag']=='a' and row in node['parents']]
             point_links = [node for node in nodes if node['tag']=='a' and point in node['parents']]
-            primary = next(node for node in row_links if 'tide-event-card__link' in node['classes'])
-            self.assertEqual(primary['attrs']['href'], '#map-'+venue_id)
+            primary = [node for node in row_links if 'tide-event-card__link' in node['classes']]
+            self.assertEqual(len(primary), 2)
+            select = next(node for node in primary if any('tide-venue__select' in p['classes'] for p in node['parents']))
+            open_venue = next(node for node in primary if any('tide-venue__open' in p['classes'] for p in node['parents']))
+            self.assertEqual(select['attrs']['href'], '#map-'+venue_id)
+            self.assertEqual(open_venue['attrs']['href'], venue_id+'.html')
+            name = self.app.venues_by_id[venue_id]['name']
+            count = sum(event['venue']==venue_id for event in self.app.events)
+            self.assertEqual(open_venue['attrs']['aria-label'], f'View {name} and its {count} events')
             self.assertEqual(point_links[0]['attrs']['href'], '#venue-'+venue_id)
             self.assertIn('tide-photo-control', point_links[0]['classes'])
             self.assertEqual(row['attrs']['tabindex'], '-1')

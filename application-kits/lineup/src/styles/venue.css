@@ -13,16 +13,13 @@
        scroll-padding. Add only a small target gap, rather than counting it twice. */
     .tide-venue__visit { scroll-margin-block-start: var(--tide-space-2); }
   }
-  @media (width < 60rem) {
-    .tide-venue__profile { margin-block-start: var(--tide-space-8); }
-  }
 
 /* Venue directory: host geometry only. Tide owns every card/control/panel. */
   .tide-app--directory .tide-app__header { inline-size: 100%; }
   .tide-venue__directory { inline-size: 100%; max-inline-size: var(--tide-app-max-width); margin-inline: auto; padding: var(--tide-space-6); display: grid; grid-template-columns: minmax(17rem,32%) minmax(0,1fr); grid-template-rows: auto minmax(0,1fr); gap: 0 var(--tide-space-5); min-block-size: 0; }
   .tide-venue__intro { min-inline-size: 0; }
   .tide-venue__intro-body { padding: var(--tide-space-4) var(--tide-layout-inset); }
-  .tide-venue__views { display: none; }
+  .tide-venue__views,.tide-venue__open,.tide-venue__state { display: none; }
   .tide-venue__list { min-block-size: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-gutter: stable; scroll-padding-block: var(--tide-space-2); }
   .tide-venue__profile-photo { inline-size: 100%; max-block-size: 24rem; object-fit: cover; }
   .tide-venue__map { min-inline-size: 0; min-block-size: 0; grid-area: 1/2/span 2; display: grid; grid-template-rows: minmax(0,1fr) auto; gap: var(--tide-space-2); }
@@ -32,7 +29,6 @@
   .tide-venue__point { position: absolute; inline-size: var(--tide-size-target); block-size: var(--tide-size-target); translate: -50% -50%; }
   .tide-venue__label { position: absolute; inset-inline-start: calc(100% + var(--tide-space-1)); inline-size: max-content; pointer-events: none; }
   #map-warehouse-room .tide-venue__label--rest { inset-inline-start: 50%; inset-block-end: calc(100% + var(--tide-space-2)); transform: translateX(-50%); }
-  .tide-venue__state { display: none; }
   /* Progressive native return positioning; unsupported engines retain links. */
   .tide-venue__return { scroll-initial-target: nearest; scroll-margin-block-start: var(--tide-space-8); }
   .tide-venue__directory:has(.tide-venue__point:target,.tide-venue__list :target) .tide-venue__label--rest { display: none; }
@@ -69,8 +65,10 @@
   }
   @media (prefers-reduced-motion: no-preference) { .tide-venue__list { scroll-behavior: smooth; } }
   @media (width < 60rem) {
-    .tide-venue__directory { max-inline-size: var(--tide-app-reading-width); grid-template-columns: minmax(0,1fr); padding: var(--tide-space-3) 0 var(--tide-space-6); }
-    .tide-venue__directory { --tide-app-list: block; --tide-app-map: none; }
+    .tide-venue__profile { margin-block-start: var(--tide-space-8); }
+    .tide-venue__open { display: contents; }
+    .tide-venue__select { display: none; }
+    .tide-venue__directory { max-inline-size: var(--tide-app-reading-width); grid-template-columns: minmax(0,1fr); padding: var(--tide-space-3) 0 var(--tide-space-6); --tide-app-list: block; --tide-app-map: none; }
     .tide-venue__list,.tide-venue__views--list { display: var(--tide-app-list); }
     .tide-venue__map,.tide-venue__views--map { display: var(--tide-app-map); }
     .tide-venue__list,.tide-venue__map { grid-area: 2/1; }

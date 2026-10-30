@@ -18,7 +18,10 @@ Below 60rem, exactly one authored List/Map navigation is exposed, with a check i
 
 ## Interaction contract
 
-- A venue card's covering link targets `#map-{venue-id}` in the same document. It selects the corresponding point instead of opening the venue page.
+The responsive card destination below is an unreleased refinement after the preserved `lineup-v2.3.2` checkpoint. Chromium on Windows verification on October 29 covers all six compact card-to-document and split-layout card-to-map journeys, Sister keyboard activation and native Back, unchanged secondary details/marker links, and exactly one full-card covering link at 320, 390, 543, 544, 959, 960, 1024 and 1440px. All ten theme/mode pairs pass at 390 and 1440px without horizontal overflow. Build and all 133 repository checks pass; application CSS is 21996 bytes within the unchanged 22000-byte budget. Other engines, physical devices and screen-reader operation remain unverified. Expanded evidence is under ignored `build/qa/responsive-venue-cards/`.
+
+- Below 60rem, List and Map are separate views. A venue card's covering link opens `{venue-id}.html` and its event collection. At 60rem and above, the list and map are visible together and the covering link selects `#map-{venue-id}` in the same document.
+- Private `tide-venue__open` / `tide-venue__select` hosts expose exactly one of these native links at the same breakpoint as the split layout; the other is absent from layout, keyboard traversal and the accessibility tree. Shared Card styling remains unchanged, with no script, runtime href mutation or duplicated card content.
 - The row's separate View venue details link opens `{venue-id}.html` directly. It remains available without using the map.
 - Each 44px map control is a native link to `#venue-{venue-id}`. The browser reveals and focuses the corresponding row, scrolling the bounded list when necessary.
 - Both targets identify the same venue. The row uses an existing neutral Selected badge; the map label uses the Photo control's own photographic text role for Selected, including in light themes. Other labels temporarily hide while all six marker controls remain available; the selected label is positioned away from neighboring glyphs. Compact illustrations use Selected text at the marker and identify the venue in the caption, keeping neighboring glyphs clear. No selection color, private card outline or new Tide state is introduced.
@@ -40,7 +43,7 @@ The selected badge's private wrapper uses progressive `scroll-initial-target: ne
 | Map points | Photo control, Icon, photo-accent token | Native fragment destination, position, stacking and name label |
 | Selected map actions | Link, Row | Direct details and return-to-row destinations |
 
-Card padding, texture, typography, colors, separators and focus/hover/active states remain canonical. The independent-control layer (`tide-event-card__save`) keeps the row's details link above its covering map-selection link; it implements no saving. No public component is privately restyled or extended.
+Card padding, texture, typography, colors, separators and focus/hover/active states remain canonical. The independent-control layer (`tide-event-card__save`) keeps the row's details link above its active covering link; it implements no saving. No public component is privately restyled or extended.
 
 ## Composition and map boundary
 

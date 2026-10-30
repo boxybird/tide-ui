@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Venue cards open the venue and its event collection below 60rem, where List and Map are separate views. At 60rem and above, cards still select the adjacent map point. Private responsive hosts expose exactly one native covering link per card; the separate venue-details link and map controls retain their destinations.
 - Matched the venue directory summary's mobile spacing to Find Events below the 34rem dropdown-menu breakpoint by removing its extra 12px top gap. Both rows continue to use the unchanged Tide Results utility recipe for typography, alignment, padding and divider. Wider layouts retain their existing spacing.
 
 ## 2.3.2 · 2026-10-29
