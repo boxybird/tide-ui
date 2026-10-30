@@ -1,6 +1,16 @@
-# Native responsive filter drawer · Lineup 2.1.9
+# Native responsive filter drawer · Lineup 2.4.7
 
 **Accepted 2.4.6 homepage behavior:** on Find Events (`index` and `search`), search and the Filters launcher appear above the list, and the panel remains a drawer even on desktop. The original form is outside the panel; date/category controls, submit and Reset retain native form association. Other routes keep the behavior below. See [the two-column review](HOME-SPLIT-REVIEW.md).
+
+## Desktop motion follow-up · 2026-10-30
+
+The accepted `lineup-v2.4.7` checkpoint restores the same 240ms `cubic-bezier(.22, 1, .36, 1)` entry/exit slide on desktop Find Events and search. The desktop panel keeps fixed geometry in both open and closing states; discrete `display` and `overlay` transitions preserve its top-layer exit. Motion is enabled only for `prefers-reduced-motion: no-preference`. Mobile rules and other pages' permanent desktop filter columns are unchanged.
+
+Chromium on Windows verifies opening/closing transforms at 1440px, the search drawer at 1200px, mobile motion at 390px and the venue drawer at 320px. Escape/outside dismissal, launcher focus return and values retained while resizing an open drawer pass. Sunshine's desktop rail remains visible, relative and unanimated. No horizontal overflow was observed. Reduced-motion gating was source-checked; the browser's reduced-motion preference was not emulated. Firefox, Safari, physical devices and screen readers remain unverified. Evidence is in ignored `build/qa/desktop-filter-motion/`.
+
+Build and the full repository check pass, including all 140 tests. Generated application CSS is 24,618 bytes and remains within the existing budgets; no shared configuration changes were needed.
+
+The following sections describe the established shared drawer behavior and earlier verification.
 
 The current [filter-panel spacing contract](FILTER-PANEL-SPACING.md) adds a private content wrapper with `space-6` top clearance below 75rem and adopts Tide's compact Category grouping. The public rail body/footer, native lifecycle and desktop search placement retain their existing contracts. Earlier behavior verification below remains historical evidence.
 

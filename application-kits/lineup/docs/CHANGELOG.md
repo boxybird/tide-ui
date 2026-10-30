@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.4.7 · 2026-10-30
+
+- Restore the existing 240ms drawer slide on the two-column homepage and search page at desktop widths. Keep fixed drawer geometry during the native top-layer exit so closing slides out cleanly.
+- Preserve the existing mobile motion, native popover dismissal/focus return, reduced-motion gating and permanent filter columns on other desktop pages. No markup, runtime or Tide changes. See [verification and limits](FILTER-DRAWER.md#desktop-motion-follow-up--2026-10-30).
+- Preserve the accepted motion as `lineup-v2.4.7` on `main`. Build and the full repository check pass, including all 140 tests and the existing asset budgets.
+
 ## 2.4.6 · 2026-10-30
 
 - Scope `index` and `search` to a 50/50 desktop list/detail layout. Preserve the header maximum, event card, permanent result summary, bounded list and natural right document.

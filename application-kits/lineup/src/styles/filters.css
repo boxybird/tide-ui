@@ -1,5 +1,5 @@
-/* One native popover/control set: a left drawer below 75rem, the permanent
-   filter column above it. Opening, dismissal and focus return are browser-owned. */
+/* One native popover/control set: Find Events keeps its drawer at every width;
+   other routes expose a permanent column from 75rem. The browser owns dismissal. */
 @layer tide.app-filters {
   .tide-app__filter-trigger, .tide-app__filter-header { display: none; }
   .tide-app__filter-rail[popover] { inset: auto; max-inline-size: none; max-block-size: none; }
@@ -26,9 +26,20 @@
     .tide-app--split .tide-app__filter-trigger { display: inline-flex; }
     .tide-app--split .tide-app__filter-header { display: grid; }
     .tide-app--split .tide-app__filter-rail[popover]:not(:popover-open) { display: none; }
-    .tide-app--split .tide-app__filter-rail:popover-open {
+    /* Keep fixed geometry through the native top-layer exit transition. */
+    .tide-app--split .tide-app__filter-rail[popover] {
       position: fixed; position-anchor: auto; inset: 0 auto 0 0;
       inline-size: min(24rem, calc(100dvw - var(--tide-space-8))); block-size: 100dvh;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .tide-app--split .tide-app__filter-rail[popover] {
+        transform: translateX(-100%);
+        transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
+      }
+      .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(0); }
+      @starting-style {
+        .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
+      }
     }
     .tide-app--split .tide-app__filter-body { overflow-y: auto; }
     .tide-app--split .tide-app__filter-content { padding-block-start: var(--tide-space-6); }
