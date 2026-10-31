@@ -1,4 +1,10 @@
-# Native responsive filter drawer · Lineup 2.4.9
+# Native responsive filter drawer · Lineup 2.4.10
+
+## Visible filter controls · 2026-10-31
+
+Accepted as `lineup-v2.4.10`, the shared Lineup filter template presents When and Category directly, without a disclosure wrapper. Global panels omit the All events link and its row entirely. The registered `filter-navigation.html` partial retains the existing All venue events and All events across Albuquerque links on venue-scoped pages. Original fieldsets, labels, input IDs and form associations remain. Tide Stack supplies the same 16px inter-group gap; global panels that contain their search field retain 16px between search and the fieldsets. Tide source and shared tooling are unchanged.
+
+Build and all 140 repository tests pass; application CSS is 24,882 bytes raw within the existing budget. Chromium on Windows checks the homepage at 320px and 1440px in all ten theme/mode combinations: no disclosure or panel links remain, the fields start 24px below the header, groups have a 16px gap and checkbox rows remain 44px apart. Native Reset, Escape/focus return, values retained across resizing and the pinned footer pass. Sunshine at 390/1440px retains its venue navigation and original form; the music result specimen has a 16px search-to-fields gap. Evidence is in ignored `build/qa/filter-controls-direct/`. Firefox, Safari, physical devices and screen readers remain unverified.
 
 **Shared title checkpoint · 2.4.9:** Lineup consumes Tide 1.12.1's brand-size Filter panel title without a local override. Weight, line height, tracking, spacing and drawer behavior are preserved. The accepted change is tagged `lineup-v2.4.9` and `tide-v1.12.1`; see [verification](../../../packages/tide/docs/SEARCH-FILTERS.md#title-size-verification--2026-10-31).
 

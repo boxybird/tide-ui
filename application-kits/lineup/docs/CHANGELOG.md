@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.4.10 · 2026-10-31
+
+- Remove the Date and category disclosure and global All events link from the shared Lineup filter template. Present the original fieldsets directly using Tide Stack's existing 16px gap.
+- Keep venue-specific navigation, original form associations, Reset, native dismissal, drawer geometry and the homepage push behavior. Tide remains 1.12.1, unchanged.
+- Build and all 140 tests pass; Chromium verifies desktop/mobile spacing in all ten theme/mode combinations and native reset/dismissal. See [evidence and limits](FILTER-DRAWER.md#visible-filter-controls--2026-10-31). Preserve the accepted simplified panel as `lineup-v2.4.10` on `main`.
+
 ## 2.4.9 · 2026-10-31
 
 - Adopt Tide 1.12.1's shared Filter panel title at the existing brand font size (1.1875rem). Preserve its weight, line height, tracking and spacing; no local typography override or application layout change.

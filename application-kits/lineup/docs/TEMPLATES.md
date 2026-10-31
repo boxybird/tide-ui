@@ -1,4 +1,4 @@
-# Build-time templates · Lineup 2.4.8
+# Build-time templates · Lineup 2.4.10
 
 The browser receives complete native HTML/CSS. There is no browser template engine or router. Only the venue directory loads the registered map runtime. Every partial is registered in `consumer-manifest.json` and rendered by `tools/html_templates.py`.
 
@@ -9,7 +9,7 @@ Only `{{UPPERCASE_VALUE}}` and `{{> registered-partial}}` are supported. Plain v
 | `header.html`, `skip-link.html` | Canonical Tide Site header/list/link and Skip link recipes; native destinations, exact current page and route-appropriate focusable fragments |
 | `document.html`, `workspace.html` | Native document and main browse/detail slots; stylesheets and the directory-only registered map runtime |
 | `workspace-browse.html`, `workspace-results.html`, `browse-search.html` | Static filter/list grouping, results region and the single search form above the list on Find Events |
-| `filter-trigger.html`, `filter-rail.html`, `filter-search.html`, `filters.html`, `filter-status.html`, `filter-actions.html` | Native popover trigger/close and one responsive panel/form/control set, disclosures, reset and venue context; no tutorial result-state menu |
+| `filter-trigger.html`, `filter-rail.html`, `filter-search.html`, `filters.html`, `filter-navigation.html`, `filter-status.html`, `filter-actions.html` | Native popover trigger/close and one responsive panel/form/control set, visible fieldsets, reset and venue-only navigation; no tutorial result-state menu |
 | `results-intro.html`, `lineup-summary.html`, `month-group.html` | Canonical Page intro, Results and calendar slots; canonical utility headers with a screen-reader context prefix, plain month/year text; no DOM rewriting or private type aliases |
 | `event-list.html`, `month-nav.html`, `month-jump.html` | Summary outside the native feed scroller, stable fragment destinations and complete-feed isolation |
 | `event-card.html`, `event-detail.html`, `detail-*.html` | Cards and all 54 native event details, with authored preview heading levels |

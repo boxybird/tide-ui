@@ -1,10 +1,8 @@
 {{DRAWER_SEARCH}}
-<div class="tide-app__filter-row"><a class="tide-link" href="{{COLLECTION_HREF}}">{{COLLECTION_LABEL}}</a>{{SCOPE_EXIT}}</div>
-<details class="tide-expandable tide-app__filters" open><summary class="tide-expandable__summary tide-app__filter-disclosure">Date and category</summary>
-  <div class="tide-expandable__body tide-app__filter-form">
+{{FILTER_NAVIGATION}}
+<div class="tide-stack tide-app__filters">
     <fieldset class="tide-fieldset tide-stack"><legend class="tide-fieldset__legend">When</legend><p class="tide-field__hint" id="date-hint">Choose a start and end date.</p>
       <div class="tide-app__date-fields"><div class="tide-field"><label class="tide-field__label" for="event-from">From</label><input class="tide-field__control" id="event-from" type="date" name="from" form="event-search-form" aria-describedby="date-hint"></div><div class="tide-field"><label class="tide-field__label" for="event-to">Through</label><input class="tide-field__control" id="event-to" type="date" name="to" form="event-search-form" aria-describedby="date-hint"></div></div>
     </fieldset>
     <fieldset class="tide-fieldset"><legend class="tide-fieldset__legend">Category</legend><label class="tide-choice"><input type="checkbox" name="category" value="music" form="event-search-form"{{MUSIC_CHECKED}}> Music</label><label class="tide-choice"><input type="checkbox" name="category" value="comedy" form="event-search-form"{{COMEDY_CHECKED}}> Comedy</label><label class="tide-choice"><input type="checkbox" name="category" value="workshop" form="event-search-form"{{WORKSHOP_CHECKED}}> Workshops</label></fieldset>
-  </div>
-</details>
+</div>

@@ -39,6 +39,7 @@
   .tide-app__search { padding-inline: var(--tide-layout-inset); }
   .tide-app__filter-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--tide-space-3); padding: var(--tide-space-4) var(--tide-layout-inset) var(--tide-space-5); }
   .tide-app__filters { margin-inline: var(--tide-layout-inset); margin-block-end: var(--tide-space-5); }
+  .tide-app__search + .tide-app__filters { margin-block-start: var(--tide-space-4); }
   .tide-app__date-fields { display: grid; gap: var(--tide-space-3); }
   .tide-app__filter-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--tide-space-4); }
   .tide-app__results .tide-event-card__status { display: none; }
