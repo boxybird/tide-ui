@@ -10,7 +10,7 @@ The 2.4.1 [compact map preview](MOBILE-MAP-PREVIEW.md) adds a private native-pop
 
 The approved geographic map, fixed directory viewport, list footer and map action overlay are now Lineup-owned. `src/map/` is an additional application source module, not a Tide extension. See [source of truth](SOURCE-OF-TRUTH.md).
 
-The Lineup application kit consumes Tide 1.12.0. Only the venue directory loads the registered map runtime; all other documents remain script-free. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
+The Lineup application kit consumes Tide 1.12.1. The explicitly authorized shared Filter panel title now uses the brand font size; Lineup adds no local type override. Only the venue directory loads the registered map runtime; all other documents remain script-free. Shared component CSS/HTML remains kit-owned; private composition and authored result states remain app-owned.
 
 | Responsibility | Canonical home |
 | --- | --- |

@@ -1,4 +1,4 @@
-# Search and filters — kit 1.3.0
+# Search and filters — kit 1.12.1
 
 The Filter panel is the only new block. Field, Fieldset, Choice, Button, Badge, Result summary, Empty state, Notice and native Expandable keep their existing definitions. No primitive, palette seed, type size, radius or target size changes.
 
@@ -16,7 +16,11 @@ Use `.tide-filter-panel` on an aside, section or native dialog. Give the region 
 
 The `--rail` modifier removes the body inset and gives the footer a flush start, 24px end inset, 16px top inset and zero bottom inset. This supports existing rail sections that already own their end padding. Header-gutter alignment, column gaps and list/footer bottom alignment remain host geometry. No negative-margin correction or per-control padding reset is required.
 
-Default body spacing is 32px, padding 24px. Footer gap is 16px with 20px top and 24px side/bottom padding (safe-area-aware). The optional header uses the existing page type and a neutral separator. There is no decorative panel frame or colored left border. Native scrollbars remain available; thin is the existing panel preference, not a guaranteed pixel width. The app measures occupied list gutter space separately.
+Default body spacing is 32px, padding 24px. Footer gap is 16px with 20px top and 24px side/bottom padding (safe-area-aware). The optional header title uses the existing brand font size (1.1875rem, 19px at the default root size), heading weight, page leading and title tracking. Only its font size changes in 1.12.1; the neutral separator and header spacing remain. There is no decorative panel frame or colored left border. Native scrollbars remain available; thin is the existing panel preference, not a guaranteed pixel width. The app measures occupied list gutter space separately.
+
+## Title-size verification · 2026-10-31
+
+Build and all 140 repository checks pass for Tide 1.12.1. Chromium on Windows verifies the Lineup homepage drawer at 320px and 1440px in all ten theme/mode combinations: the title is 19px, weight 580, line height 36px and remains on one line. The Tide Bumble Dark Filter panel specimen resolves the same typography. Native Escape dismissal and launcher focus return pass; desktop retains its 384px drawer/page shift and mobile retains its overlay. Evidence is in ignored `build/qa/filter-title-brand/`. Firefox, Safari, physical devices and screen readers were not tested.
 
 ## Combined form
 

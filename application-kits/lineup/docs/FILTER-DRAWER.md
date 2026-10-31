@@ -1,4 +1,6 @@
-# Native responsive filter drawer · Lineup 2.4.8
+# Native responsive filter drawer · Lineup 2.4.9
+
+**Shared title checkpoint · 2.4.9:** Lineup consumes Tide 1.12.1's brand-size Filter panel title without a local override. Weight, line height, tracking, spacing and drawer behavior are preserved. The accepted change is tagged `lineup-v2.4.9` and `tide-v1.12.1`; see [verification](../../../packages/tide/docs/SEARCH-FILTERS.md#title-size-verification--2026-10-31).
 
 **Accepted 2.4.6 homepage behavior:** on Find Events (`index` and `search`), search and the Filters launcher appear above the list, and the panel remains a drawer even on desktop. The original form is outside the panel; date/category controls, submit and Reset retain native form association. Other routes keep the behavior below. See [the two-column review](HOME-SPLIT-REVIEW.md).
 

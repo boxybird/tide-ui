@@ -1,5 +1,12 @@
 # Changelog
 
+## Tide kit 1.12.1 · 2026-10-31
+
+- With explicit authorization for this shared-component change, use `--tide-font-size-brand` for the Filter panel title. Preserve its heading weight, line height, tracking, spacing and native semantics.
+- Lineup consumes the updated shared kit without a local typography override. The existing drawer width, motion and homepage push behavior remain unchanged.
+- Preserve the accepted shared change and Lineup dependency update as `tide-v1.12.1` and `lineup-v2.4.9` on the same `main` commit.
+- Build and all 140 checks pass. Chromium verifies the shared specimen and Lineup's title at desktop/mobile widths across all ten theme/mode combinations; see [verification and limits](packages/tide/docs/SEARCH-FILTERS.md#title-size-verification--2026-10-31).
+
 ## Repository · GitHub Actions removal · 2026-10-31
 
 - Removed the build, contract-check and packaging workflow. Verification and packaging remain available through the root npm commands and run locally.

@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.4.9 · 2026-10-31
+
+- Adopt Tide 1.12.1's shared Filter panel title at the existing brand font size (1.1875rem). Preserve its weight, line height, tracking and spacing; no local typography override or application layout change.
+- Preserve the accepted dependency update as `lineup-v2.4.9`, paired with `tide-v1.12.1` on the same `main` commit. Existing desktop push/overlay behavior and mobile drawer behavior remain unchanged.
+- Build and all 140 repository tests pass. Chromium verified the title at 320px and 1440px across all ten theme/mode combinations and in the shared Tide specimen; see [verification and limits](../../../packages/tide/docs/SEARCH-FILTERS.md#title-size-verification--2026-10-31).
+
 ## 2.4.8 · 2026-10-31
 
 - On the homepage only, move the desktop page right by the drawer's 24rem width using its existing 240ms timing. Preserve column widths, native popover behavior and the overlay below 75rem.

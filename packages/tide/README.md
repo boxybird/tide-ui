@@ -1,4 +1,6 @@
-# Tide HTML and CSS kit · 1.12.0
+# Tide HTML and CSS kit · 1.12.1
+
+The Filter panel title uses the existing brand font-size token (1.1875rem), with its heading weight, line height and tracking preserved. The accepted change is preserved as `tide-v1.12.1`, consumed by Lineup 2.4.9; see [the filter-panel contract](docs/SEARCH-FILTERS.md).
 
 The [optional navigation recipe](docs/NAVIGATION.md) provides the reviewed centered header and current-page treatment. Load `extensions/navigation.css` after the core stylesheet to opt in. Existing defaults are unchanged.
 

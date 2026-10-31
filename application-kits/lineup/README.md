@@ -1,6 +1,8 @@
-# Lineup application kit · 2.4.8
+# Lineup application kit · 2.4.9
 
-**Current increment: 2.4.8.** The accepted homepage moves with its desktop filter drawer. The 24rem panel and existing 240ms slide are preserved; mobile/tablet retain the overlay. Preserved as `lineup-v2.4.8`; see [behavior and verification](docs/FILTER-DRAWER.md#homepage-push-checkpoint--2026-10-31).
+**Current increment: 2.4.9.** Lineup consumes the accepted Tide 1.12.1 Filter panel title, using the brand font size without an application typography override. Preserved as `lineup-v2.4.9` alongside `tide-v1.12.1`; see [verification and limits](../../packages/tide/docs/SEARCH-FILTERS.md#title-size-verification--2026-10-31). Earlier checkpoint records describe their original Tide dependency.
+
+**Previous increment: 2.4.8.** The accepted homepage moves with its desktop filter drawer. The 24rem panel and existing 240ms slide are preserved; mobile/tablet retain the overlay. Preserved as `lineup-v2.4.8`; see [behavior and verification](docs/FILTER-DRAWER.md#homepage-push-checkpoint--2026-10-31).
 
 **Previous increment: 2.4.7.** Restore the existing 240ms filter-drawer slide on desktop Find Events, with mobile motion and reduced-motion gating preserved. Accepted as `lineup-v2.4.7`; see [motion verification](docs/FILTER-DRAWER.md#desktop-motion-follow-up--2026-10-30).
 
@@ -16,7 +18,7 @@
 
 **Consolidation baseline: 2.4.0.** The approved dark MapLibre/OpenFreeMap map and fixed venue workspace now live in this kit alongside all 2.3.2 audit fixes, mobile summary spacing and responsive card navigation. Use [the canonical preview](http://127.0.0.1:4187/events/app/venues.html). Work directly on `main` and commit each accepted increment. There is no active separate Consumer Lab or copied Lineup snapshot.
 
-The only browser runtime is the registered map under `src/map/`, loaded on the venue directory alone. Other pages remain native HTML/CSS and Tide remains 1.12.0. The preserved earlier native checkpoints and their behavior are described below. The [source-of-truth record](docs/SOURCE-OF-TRUTH.md) supersedes earlier statements that the whole application is script-free or that the map lives in a separate consumer.
+The only browser runtime is the registered map under `src/map/`, loaded on the venue directory alone. Other pages remain native HTML/CSS and consume Tide 1.12.1. The preserved earlier native checkpoints and their behavior are described below. The [source-of-truth record](docs/SOURCE-OF-TRUTH.md) supersedes earlier statements that the whole application is script-free or that the map lives in a separate consumer.
 
 
 Version **2.3.2** implements the seven October 29 audit corrections: distinct map targets and labels, truthful native List/Map state including Back/Forward, consistent Saved and venue links, coherent empty-state guidance, contextual venue-card headings and one Saved reassurance. It retains Tide 1.12.0, 73 routes, all 54 fictional events and zero browser JavaScript. See [corrections and verification](docs/AUDIT-CORRECTIONS-2026-10-29.md).
@@ -35,7 +37,7 @@ The primary navigation now sits beside the separate Saved utility on the right, 
 
 **Lineup uses the selected compact utility headers.** Version 2.1.5 aligns Search & filters with the result count and removes the Coming up intro, tagline and repeated The lineup label. Both rows consume Tide's new canonical utility variant. The [implementation contract](docs/COMPACT-HEADERS.md) and [design QA](design-qa.md) record composition and verification. The user reviewed and accepted the Tide and Lineup changes on 2026-10-27. The [handoff boundary](docs/HANDOFF.md) still applies; no browser JavaScript or service behavior is introduced.
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.0**. Burque Events is its authored sample website. The application version is **2.4.8**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.1**. Burque Events is its authored sample website. The application version is **2.4.9**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 

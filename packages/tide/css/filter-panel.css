@@ -25,7 +25,7 @@
   border-block-end: var(--tide-border-hairline);
 }
 .tide-filter-panel__title {
-  font-size: var(--tide-font-size-page);
+  font-size: var(--tide-font-size-brand);
   line-height: var(--tide-leading-page);
   font-weight: var(--tide-font-weight-heading);
   letter-spacing: var(--tide-tracking-title);
