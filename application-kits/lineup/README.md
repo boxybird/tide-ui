@@ -1,6 +1,8 @@
-# Lineup application kit · 2.4.13
+# Lineup application kit · 2.4.14
 
-**Current increment: 2.4.13.** Consume Tide 1.12.2's global 4px Fieldset legend bottom margin. The 24px gap between When and Category remains. Preserved as `lineup-v2.4.13` alongside `tide-v1.12.2`; see [form controls](../../packages/tide/docs/FORMS.md).
+**Current increment: 2.4.14.** The homepage now pushes the page with its filter drawer at mobile and tablet widths as well as desktop. Existing widths and 240ms motion remain. Preserved as `lineup-v2.4.14`; see [responsive verification](docs/FILTER-DRAWER.md#responsive-homepage-push-checkpoint--2026-10-31).
+
+**Previous increment: 2.4.13.** Consume Tide 1.12.2's global 4px Fieldset legend bottom margin. The 24px gap between When and Category remains. Preserved as `lineup-v2.4.13` alongside `tide-v1.12.2`; see [form controls](../../packages/tide/docs/FORMS.md).
 
 **Previous increment: 2.4.12.** The accepted filter panel uses `space-6` (24px) between When and Category, with fieldset interiors and choice rows unchanged. Preserved as `lineup-v2.4.12`; see [spacing and verification](docs/FILTER-PANEL-SPACING.md#fieldset-group-gap-checkpoint--2026-10-31).
 

@@ -1,5 +1,10 @@
 # Lineup application-kit changelog
 
+## 2.4.14 · 2026-10-31
+
+- Extend the homepage push drawer to every screen width. Below 75rem, the page moves by the existing compact drawer width; desktop keeps its 24rem offset and zero-gap sizing through 1920px. Preserve column widths, native controls, dismissal, pinned footer and reduced-motion gating. Keep page translation screen-only.
+- Build and all 140 tests pass within existing CSS budgets. Chromium checks cover phone, tablet, desktop, all ten theme/mode combinations and native interactions. See [evidence and limits](FILTER-DRAWER.md#responsive-homepage-push-checkpoint--2026-10-31). Only Lineup composition CSS changes; preserve the accepted responsive homepage drawer as `lineup-v2.4.14` on `main`.
+
 ## 2.4.13 · 2026-10-31
 
 - Consume Tide 1.12.2's shared 4px Fieldset legend bottom margin. Preserve the 24px gap between When and Category, their internal layout and native form controls. No application CSS or markup changes.

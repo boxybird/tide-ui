@@ -3,11 +3,23 @@
 @layer tide.app-filters {
   .tide-app__filter-trigger, .tide-app__filter-header { display: none; }
   .tide-app__filter-rail[popover] { inset: auto; max-inline-size: none; max-block-size: none; }
-  @media (width >= 75rem) {
-    /* The native top-layer drawer stays at the viewport edge while the
-       homepage moves by its desktop width. Clip horizontal overflow on return. */
+  /* Keep the top-layer drawer at the viewport edge while the homepage moves.
+     Match its compact width; desktop retains the existing 24rem page offset. */
+  @media screen {
     html:has(.tide-app--push) { overflow-x: clip; }
-    .tide-app--push:has(#lineup-filters:popover-open) { transform: translateX(24rem); }
+    .tide-app--push:has(#lineup-filters:popover-open) { transform: translateX(min(24rem, 100dvw - var(--tide-space-8))); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .tide-app--split .tide-app__filter-rail[popover] { transform: translateX(-100%); }
+    .tide-app--push, .tide-app--split .tide-app__filter-rail[popover] {
+      transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
+    }
+    .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(0); }
+    @starting-style {
+      .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
+    }
+  }
+  @media (width >= 75rem) {
     .tide-app__filter-clip { anchor-name: --tide-app-filter-column; }
     .tide-app__filter-rail[popover] { display: grid; }
     /* An already-open popover stays in the top layer when the viewport widens.
@@ -39,18 +51,6 @@
        Cap the available layout width at 1920px; cqw excludes the native gutter. */
     .tide-app--push .tide-app__filter-rail[popover] {
       inline-size: calc(24rem + max(var(--tide-app-outer-inset), (min(100cqw, 1920px) - var(--tide-app-content-width)) / 2));
-    }
-    @media (prefers-reduced-motion: no-preference) {
-      .tide-app--split .tide-app__filter-rail[popover] {
-        transform: translateX(-100%);
-      }
-      .tide-app--push, .tide-app--split .tide-app__filter-rail[popover] {
-        transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
-      }
-      .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(0); }
-      @starting-style {
-        .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
-      }
     }
     .tide-app--split .tide-app__filter-content { padding-block-start: var(--tide-space-6); }
     .tide-app--split .tide-app__filter-footer-slot { padding-inline-start: var(--tide-layout-inset); }

@@ -1,4 +1,14 @@
-# Native responsive filter drawer · Lineup 2.4.11
+# Native responsive filter drawer · Lineup
+
+## Responsive homepage push checkpoint · 2026-10-31
+
+The homepage now pushes its page at every screen width. Below 75rem, the offset matches the existing drawer width, `min(24rem, 100dvw - var(--tide-space-8))`; the page keeps its normal width and moves off the right edge. Desktop retains the 24rem offset and accepted drawer sizing. The shared 240ms timing applies to both page and panel on entry and exit, gated by `prefers-reduced-motion: no-preference`. Page translation is screen-only. Native popover dismissal, the original form/control set, scrolling body, pinned footer and existing narrow-screen backdrop remain. Search and other routes keep their existing presentation.
+
+Chromium on Windows verifies widths 320, 390, 768, 960, 1199, 1200, 1440 and 1920px. Phone offsets match the drawer: 273px at 320px and 343px at 390px with the native gutter. Tablet and desktop offsets are 384px. Header and event list move together, with unchanged list widths. Desktop drawer-to-list gaps remain zero through 1920px; existing tablet page insets remain. Horizontal overflow is hidden while open and clipped during return, with the original position restored on dismissal.
+
+All ten theme/mode combinations pass phone/tablet geometry checks at 390/960px. Close, Escape with launcher focus return, outside dismissal, native Reset and values retained during an open-drawer resize between phone and desktop pass. At 320×568, keyboard scrolling reaches the end of the filter body while the footer remains at the viewport bottom. Search retains its mobile/desktop overlay and Sunshine retains its unanimated permanent desktop rail.
+
+Build and all 140 repository tests pass. Application CSS is 24,999 bytes raw and 4,325 bytes gzip, within the existing 25,000/5,000 budgets. Evidence lives in ignored `build/qa/mobile-push-drawer/`. Reduced-motion and print gating are source-checked, not emulated. Firefox, Safari, physical devices and screen readers remain unverified. The user accepted this checkpoint as `lineup-v2.4.14` on `main`. Earlier checkpoint records below describe their original behavior; their homepage mobile/tablet overlay statements are superseded by this checkpoint.
 
 ## Homepage drawer width checkpoint · 2026-10-31
 
