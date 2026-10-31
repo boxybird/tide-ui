@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.4.13 · 2026-10-31
+
+- Consume Tide 1.12.2's shared 4px Fieldset legend bottom margin. Preserve the 24px gap between When and Category, their internal layout and native form controls. No application CSS or markup changes.
+- Build and all 140 tests pass; see [shared verification and limits](../../../packages/tide/docs/FORMS.md#legend-spacing-checkpoint--2026-10-31).
+- Preserve the accepted dependency update as `lineup-v2.4.13`, paired with `tide-v1.12.2` on the same `main` commit.
+
 ## 2.4.12 · 2026-10-31
 
 - Increase the gap between When and Category from `space-4` (16px) to `space-6` (24px). The existing private wrapper owns this grid composition; remove its fixed-gap Tide Stack class. Fieldset interiors, choice rows and shared Tide styles remain unchanged. See [spacing record](FILTER-PANEL-SPACING.md#fieldset-group-gap-checkpoint--2026-10-31).

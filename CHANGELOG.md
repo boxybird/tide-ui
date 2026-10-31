@@ -1,5 +1,12 @@
 # Changelog
 
+## Tide kit 1.12.2 · 2026-10-31
+
+- Set every shared Fieldset legend's `margin-block-end` to `--tide-space-1` (4px), replacing `space-3` (12px). Typography, fieldset semantics and spacing inside the control groups remain unchanged.
+- Lineup consumes the shared change through its Tide dependency; no application-specific legend override is added. See [form controls](packages/tide/docs/FORMS.md).
+- Build and all 140 tests pass; Chromium verifies the global margin and unchanged typography across ten theme/mode combinations at desktop and mobile widths. See [verification and limits](packages/tide/docs/FORMS.md#legend-spacing-checkpoint--2026-10-31).
+- Preserve the accepted shared change and Lineup dependency update as `tide-v1.12.2` and `lineup-v2.4.13` on the same `main` commit.
+
 ## Tide kit 1.12.1 · 2026-10-31
 
 - With explicit authorization for this shared-component change, use `--tide-font-size-brand` for the Filter panel title. Preserve its heading weight, line height, tracking, spacing and native semantics.

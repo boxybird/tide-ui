@@ -1,4 +1,6 @@
-# Tide HTML and CSS kit · 1.12.1
+# Tide HTML and CSS kit · 1.12.2
+
+Shared Fieldset legends use `--tide-space-1` (4px) for their bottom margin in every composition. Typography and control spacing remain unchanged. The accepted change is preserved as `tide-v1.12.2`, consumed by Lineup 2.4.13; see [form controls](docs/FORMS.md).
 
 The Filter panel title uses the existing brand font-size token (1.1875rem), with its heading weight, line height and tracking preserved. The accepted change is preserved as `tide-v1.12.1`, consumed by Lineup 2.4.9; see [the filter-panel contract](docs/SEARCH-FILTERS.md).
 

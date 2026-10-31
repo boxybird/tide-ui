@@ -1,4 +1,10 @@
-# Form controls · Tide 1.7.1
+# Form controls · Tide 1.12.2
+
+## Legend spacing checkpoint · 2026-10-31
+
+The shared `.tide-fieldset__legend` uses `margin-block-end: var(--tide-space-1)` (4px), replacing the former 12px margin. This rule applies across Tide's recipes and Lineup without contextual overrides. Legend typography and the layouts inside and between fieldsets remain unchanged.
+
+Build and all 140 repository tests pass. Chromium on Windows verifies 4px margins and unchanged 16px/24px/550 legend typography in Tide's form-state specimen and Lineup at 1440×900 and 320×568 across all ten theme/mode combinations (40 cases). Lineup retains its 24px inter-fieldset gap. Evidence is in ignored `build/qa/fieldset-legend-space-one/`. Firefox, Safari, physical devices and screen readers remain unverified. The accepted shared change is preserved as `tide-v1.12.2`, paired with `lineup-v2.4.13` on the same `main` commit.
 
 The kit owns control geometry, typography and visual states. Native HTML owns typing, selection, disclosure toggling, required validation and form reset. A consumer renders reviewed errors and owns any application validation, summary focus or announcements. These specimens ship no browser JavaScript.
 
@@ -12,7 +18,7 @@ CSS lives in `css/components.css` (fields, choices, chips and upload), `css/patt
 | Textarea | 120px minimum height; same padding/border; vertical resize | Same field values |
 | Field label | 8px field stack gap | 14px / 20px, weight 500 |
 | Hint or error | Same stack; both may remain visible | 12px / 20px, weight 400 |
-| Fieldset legend | 12px gap below legend | 16px / 24px, weight 550 |
+| Fieldset legend | `space-1` (4px) margin below legend | 16px / 24px, weight 550 |
 | Checkbox/radio choice label | 44px minimum target; 12px gap; 18px native input | 14px / 24px, weight 400 |
 | Chip | 44px minimum height; 10px / 16px padding; 8px gap; 18px input | 14px / 22px, weight 550 |
 | Disclosure summary | 48px regular height; 11px / 16px padding; 18px chevron | 14px / 24px, weight 550 |

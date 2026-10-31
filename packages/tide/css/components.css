@@ -128,7 +128,7 @@ textarea.tide-field__control { min-block-size: var(--tide-field-textarea-min); r
 .tide-choice:where(:has(input[aria-invalid='true']), :has(input:user-invalid)) { color: var(--tide-color-status-danger-text); }
 .tide-choice:where(:has(input:disabled)) { color: var(--tide-color-text-muted); cursor: not-allowed; }
 .tide-choice input { margin: 0; inline-size: var(--tide-size-icon-action); block-size: var(--tide-size-icon-action); flex-shrink: 0; }
-.tide-fieldset__legend { margin-block-end: var(--tide-space-3); font-size: var(--tide-font-size-control); line-height: var(--tide-leading-body); font-weight: var(--tide-font-weight-label); }
+.tide-fieldset__legend { margin-block-end: var(--tide-space-1); font-size: var(--tide-font-size-control); line-height: var(--tide-leading-body); font-weight: var(--tide-font-weight-label); }
 .tide-chip-list { display: flex; flex-wrap: wrap; gap: var(--tide-space-2); }
 .tide-chip { display: inline-flex; align-items: center; justify-content: center; gap: var(--tide-space-2); min-block-size: var(--tide-size-target); padding: var(--tide-button-compact-padding-block) var(--tide-button-compact-padding-inline); border: var(--tide-border-control); border-radius: var(--tide-radius-control); background: transparent; color: var(--tide-color-text-secondary); font-size: var(--tide-button-font-size); line-height: var(--tide-button-leading); font-weight: var(--tide-button-font-weight); text-decoration: none; }
 .tide-chip:where(label:has(input:enabled), button:enabled, a[href]):not(:where([aria-disabled='true'])) { cursor: pointer; }
