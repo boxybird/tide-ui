@@ -1,5 +1,10 @@
 # Lineup application-kit changelog
 
+## 2.4.15 · 2026-10-31
+
+- Show the homepage filter backdrop at desktop widths and add a root-level pointer shield while the drawer is open. Outside clicks dismiss the native popover without activating covered links. Keep native controls, Escape, page translation and the existing 240ms motion; consolidate duplicate drawer motion rules within the existing CSS budget.
+- Consume the explicitly authorized Tide 1.12.3 backdrop: a fixed dark tint at 40% opacity in every theme/mode. Build and all 140 tests pass; 31 Chromium cases verify consistent tint and dismissal without navigation across phone, tablet and desktop sizes. See [verification and limits](FILTER-DRAWER.md#backdrop-dismissal-checkpoint--2026-10-31). Preserve the accepted behavior as `lineup-v2.4.15`, paired with `tide-v1.12.3` on the same `main` commit.
+
 ## 2.4.14 · 2026-10-31
 
 - Extend the homepage push drawer to every screen width. Below 75rem, the page moves by the existing compact drawer width; desktop keeps its 24rem offset and zero-gap sizing through 1920px. Preserve column widths, native controls, dismissal, pinned footer and reduced-motion gating. Keep page translation screen-only.

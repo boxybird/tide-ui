@@ -1,4 +1,13 @@
-# Search and filters — kit 1.12.1
+# Search and filters — kit 1.12.3
+
+## Backdrop refinement · 2026-10-31
+
+The explicitly authorized shared backdrop uses `color-mix(in oklch, var(--tide-color-photo-canvas) 40%, transparent)`. The existing photographic-canvas role is fixed at `#111517`, so this treatment darkens the background consistently in light and dark themes. The former rule used the theme's canvas at 76%, producing a much stronger veil in dark mode and a light veil in light mode. The opacity is now 40%; no token definitions or panel interiors change.
+
+The host still owns breakpoint visibility and dismissal. A native popover backdrop does not intercept pointer input by itself; Lineup's homepage adds a transparent root-level pointer shield for dismissal without activating covered links. It remains a non-modal popover with native Close and Escape, not a focus trap. See [application behavior and testing limits](../../../application-kits/lineup/docs/FILTER-DRAWER.md#backdrop-dismissal-checkpoint--2026-10-31).
+
+Build and all 140 repository checks pass. Chromium on Windows verifies 31 cases: the default homepage at 320px plus all ten theme/mode combinations at 390, 960 and 1440px. The backdrop resolves to the same `oklch(0.19234 0.007425 229.317 / 0.4)` in every case, and covered-card pointer clicks close Lineup's drawer without navigation or checkbox changes. Evidence is in ignored `build/qa/filter-backdrop/final-tint-and-dismissal.json`. Reduced-motion behavior is source-checked; Firefox, Safari, physical touch and screen readers remain unverified. The user accepted this shared change as `tide-v1.12.3`, paired with `lineup-v2.4.15` on `main`.
+
 
 The Filter panel is the only new block. Field, Fieldset, Choice, Button, Badge, Result summary, Empty state, Notice and native Expandable keep their existing definitions. No primitive, palette seed, type size, radius or target size changes.
 

@@ -7,17 +7,12 @@
      Match its compact width; desktop retains the existing 24rem page offset. */
   @media screen {
     html:has(.tide-app--push) { overflow-x: clip; }
+    /* A root-level shield stays outside the translated page and below the
+       native top layer. Outside pointer clicks land here, never on a link. */
+    html:has(.tide-app--push #lineup-filters:popover-open)::after {
+      content: ""; position: fixed; inset: 0; z-index: var(--tide-z-skip-link);
+    }
     .tide-app--push:has(#lineup-filters:popover-open) { transform: translateX(min(24rem, 100dvw - var(--tide-space-8))); }
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .tide-app--split .tide-app__filter-rail[popover] { transform: translateX(-100%); }
-    .tide-app--push, .tide-app--split .tide-app__filter-rail[popover] {
-      transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
-    }
-    .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(0); }
-    @starting-style {
-      .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
-    }
   }
   @media (width >= 75rem) {
     .tide-app__filter-clip { anchor-name: --tide-app-filter-column; }
@@ -37,7 +32,8 @@
       inline-size: anchor-size(width, calc((100cqw - 2 * var(--tide-app-content-inset) - 2 * var(--tide-app-pane-gap)) * .2));
       block-size: anchor-size(height, var(--tide-app-filter-height));
     }
-    .tide-app__filter-rail::backdrop { display: none; }
+    .tide-app:not(.tide-app--push) .tide-app__filter-rail::backdrop { display: none; }
+    .tide-app:not(.tide-app--split) .tide-app__filter-rail[popover] { transform: none; transition: none; }
     /* Find Events retains the native drawer at desktop widths. */
     .tide-app--split .tide-app__filter-trigger { display: inline-flex; }
     .tide-app--split .tide-app__filter-header { display: grid; }
@@ -79,14 +75,17 @@
     .tide-app__filter-footer-slot { padding-inline-start: var(--tide-layout-inset); }
     .tide-app__filter-footer-slot--actions { padding-block-end: max(var(--tide-space-6), env(safe-area-inset-bottom, 0px)); }
     html:has(.tide-app__filter-rail:popover-open) { overflow: hidden; scrollbar-gutter: stable; }
-    @media (prefers-reduced-motion: no-preference) {
-      .tide-app__filter-rail[popover] {
-        transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
-      }
-      @starting-style {
-        .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
-      }
-    }
   }
   @media (width < 60rem) { .tide-app--event .tide-app__browse { display: none; } }
+  /* One motion definition for every drawer; permanent desktop rails opt out. */
+  @media (prefers-reduced-motion: no-preference) {
+    .tide-app__filter-rail[popover] { transform: translateX(-100%); }
+    .tide-app--push, .tide-app__filter-rail[popover] {
+      transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
+    }
+    .tide-app__filter-rail:popover-open { transform: translateX(0); }
+    @starting-style {
+      .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
+    }
+  }
 }

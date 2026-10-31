@@ -1,6 +1,8 @@
-# Lineup application kit · 2.4.14
+# Lineup application kit · 2.4.15
 
-**Current increment: 2.4.14.** The homepage now pushes the page with its filter drawer at mobile and tablet widths as well as desktop. Existing widths and 240ms motion remain. Preserved as `lineup-v2.4.14`; see [responsive verification](docs/FILTER-DRAWER.md#responsive-homepage-push-checkpoint--2026-10-31).
+**Current increment: 2.4.15.** The homepage uses Tide 1.12.3's lighter 40% dark filter backdrop at every screen size. A native dismissal shield absorbs outside pointer clicks without following covered links. Preserved as `lineup-v2.4.15` alongside `tide-v1.12.3`; see [verification and limits](docs/FILTER-DRAWER.md#backdrop-dismissal-checkpoint--2026-10-31).
+
+**Previous increment: 2.4.14.** The homepage now pushes the page with its filter drawer at mobile and tablet widths as well as desktop. Existing widths and 240ms motion remain. Preserved as `lineup-v2.4.14`; see [responsive verification](docs/FILTER-DRAWER.md#responsive-homepage-push-checkpoint--2026-10-31).
 
 **Previous increment: 2.4.13.** Consume Tide 1.12.2's global 4px Fieldset legend bottom margin. The 24px gap between When and Category remains. Preserved as `lineup-v2.4.13` alongside `tide-v1.12.2`; see [form controls](../../packages/tide/docs/FORMS.md).
 
@@ -28,7 +30,7 @@
 
 **Consolidation baseline: 2.4.0.** The approved dark MapLibre/OpenFreeMap map and fixed venue workspace now live in this kit alongside all 2.3.2 audit fixes, mobile summary spacing and responsive card navigation. Use [the canonical preview](http://127.0.0.1:4187/events/app/venues.html). Work directly on `main` and commit each accepted increment. There is no active separate Consumer Lab or copied Lineup snapshot.
 
-The only browser runtime is the registered map under `src/map/`, loaded on the venue directory alone. Other pages remain native HTML/CSS and consume Tide 1.12.2. The preserved earlier native checkpoints and their behavior are described below. The [source-of-truth record](docs/SOURCE-OF-TRUTH.md) supersedes earlier statements that the whole application is script-free or that the map lives in a separate consumer.
+The only browser runtime is the registered map under `src/map/`, loaded on the venue directory alone. Other pages remain native HTML/CSS and consume Tide 1.12.3. The preserved earlier native checkpoints and their behavior are described below. The [source-of-truth record](docs/SOURCE-OF-TRUTH.md) supersedes earlier statements that the whole application is script-free or that the map lives in a separate consumer.
 
 
 Version **2.3.2** implements the seven October 29 audit corrections: distinct map targets and labels, truthful native List/Map state including Back/Forward, consistent Saved and venue links, coherent empty-state guidance, contextual venue-card headings and one Saved reassurance. It retains Tide 1.12.0, 73 routes, all 54 fictional events and zero browser JavaScript. See [corrections and verification](docs/AUDIT-CORRECTIONS-2026-10-29.md).

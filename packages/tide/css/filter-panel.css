@@ -14,7 +14,7 @@
   background: var(--tide-color-canvas);
 }
 .tide-filter-panel[hidden], dialog.tide-filter-panel:not([open]) { display: none; }
-.tide-filter-panel::backdrop { background: color-mix(in oklch, var(--tide-color-canvas) 76%, transparent); }
+.tide-filter-panel::backdrop { background: color-mix(in oklch, var(--tide-color-photo-canvas) 40%, transparent); }
 .tide-filter-panel__header {
   grid-row: 1;
   display: grid;

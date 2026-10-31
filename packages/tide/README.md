@@ -1,4 +1,6 @@
-# Tide HTML and CSS kit · 1.12.2
+# Tide HTML and CSS kit · 1.12.3
+
+The accepted Filter panel backdrop uses the fixed dark photographic-canvas role at 40% opacity. It is lighter than the earlier 76% tint and remains dark in every theme/mode. Preserved as `tide-v1.12.3`, consumed by Lineup 2.4.15; see [the backdrop contract and verification](docs/SEARCH-FILTERS.md#backdrop-refinement--2026-10-31).
 
 Shared Fieldset legends use `--tide-space-1` (4px) for their bottom margin in every composition. Typography and control spacing remain unchanged. The accepted change is preserved as `tide-v1.12.2`, consumed by Lineup 2.4.13; see [form controls](docs/FORMS.md).
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## Tide kit 1.12.3 · 2026-10-31
+
+- With explicit authorization, change the shared Filter panel backdrop from a 76% theme-canvas tint to the fixed dark photographic-canvas role at 40%. Keep one appearance across every theme and mode; no palette token or panel interior changes.
+- Lineup consumes the shared update. Its homepage composes the desktop backdrop and pointer-dismissal shield without overriding Tide appearance. See [verification and limits](packages/tide/docs/SEARCH-FILTERS.md#backdrop-refinement--2026-10-31). Build and all 140 tests pass.
+- Preserve the accepted shared backdrop and application behavior as `tide-v1.12.3` and `lineup-v2.4.15` on the same `main` commit.
+
 ## Tide kit 1.12.2 · 2026-10-31
 
 - Set every shared Fieldset legend's `margin-block-end` to `--tide-space-1` (4px), replacing `space-3` (12px). Typography, fieldset semantics and spacing inside the control groups remain unchanged.
