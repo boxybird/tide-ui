@@ -1,5 +1,10 @@
 # Lineup application-kit changelog
 
+## 2.4.12 · 2026-10-31
+
+- Increase the gap between When and Category from `space-4` (16px) to `space-6` (24px). The existing private wrapper owns this grid composition; remove its fixed-gap Tide Stack class. Fieldset interiors, choice rows and shared Tide styles remain unchanged. See [spacing record](FILTER-PANEL-SPACING.md#fieldset-group-gap-checkpoint--2026-10-31).
+- Preserve the accepted spacing as `lineup-v2.4.12` on `main`. Build and all 140 tests pass; Chromium verifies desktop/mobile spacing across all ten theme/mode combinations.
+
 ## 2.4.11 · 2026-10-31
 
 - Size the homepage's desktop push drawer from the centered layout inset, meeting the event list with no gap through 1920px. Cap the available-width input at 1920px to limit growth on larger displays.

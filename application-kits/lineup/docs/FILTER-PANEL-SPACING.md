@@ -1,4 +1,12 @@
-# Filter-panel spacing · Lineup 2.1.9
+# Filter-panel spacing · Lineup 2.4.12
+
+## Fieldset group gap checkpoint · 2026-10-31
+
+The shared Lineup filter composition uses `--tide-space-6` (24px) between When and Category, replacing the 16px inter-group gap recorded in checkpoint 2.4.10. The existing `tide-app__filters` wrapper now owns `display: grid` and its gap; its fixed-gap `tide-stack` class is removed. The When fieldset retains Tide Stack's 16px internal gap, and Category choice rows remain 44px apart. Tide source and tokens are unchanged. The earlier sections below record the original 2.1.9 work.
+
+Build and all 140 tests pass. Chromium on Windows verifies the 24px group gap, unchanged 16px When spacing and 44px choice rows at 1440×900 and 320×568 in all ten theme/mode combinations, with the footer visible. Sunshine's permanent desktop rail also measures 24px. Evidence is in ignored `build/qa/filter-group-gap/`. Firefox, Safari, physical devices and screen readers remain unverified. The accepted spacing is preserved as `lineup-v2.4.12` on `main`.
+
+## Original 2.1.9 behavior
 
 This application patch capitalizes the visible Search & Filters headings, restores mobile/tablet drawer content clearance, and adopts Tide's existing compact Category grouping. Tide UI stays at 1.12.0. No browser scripts, new shared recipe or consumer runtime is introduced.
 
