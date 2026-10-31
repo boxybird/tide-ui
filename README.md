@@ -66,6 +66,8 @@ The complete earlier project is preserved at Git tag **`design-history/2026-10-2
 
 ## Verification
 
+Run verification locally; this repository has no GitHub Actions workflows.
+
 `npm run check` validates generated output, HTML associations, component ownership, local references, theme parity, contrast, authored result states and the zero-browser-script boundary. It does not require old study directories. App JavaScript cleanup is recorded in [runtime verification](docs/refactors/app-javascript/VERIFICATION.md). Venue and utility extraction is recorded in [page verification](docs/refactors/utility-pages/VERIFICATION.md). Individual event template extraction is recorded in [detail verification](docs/refactors/event-details/VERIFICATION.md). Shared app HTML extraction is recorded in [template verification](docs/refactors/app-html/VERIFICATION.md). App-only CSS cleanup is recorded in [refactor verification](docs/refactors/app-css/VERIFICATION.md). Browser observations and limits are recorded in [migration verification](docs/migration/VERIFICATION.md) and the kit's [compatibility contract](packages/tide/docs/COMPATIBILITY.md). Support targets current Chrome, Firefox and Safari; current visual evidence is Chromium on Windows. Native Firefox/Safari checks remain deferred, rather than reported as passing.
 
 Regular and compact action geometry, typography, native states and compatibility aliases are documented in [the button contract](packages/tide/docs/BUTTONS.md).

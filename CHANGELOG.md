@@ -1,5 +1,10 @@
 # Changelog
 
+## Repository · GitHub Actions removal · 2026-10-31
+
+- Removed the build, contract-check and packaging workflow. Verification and packaging remain available through the root npm commands and run locally.
+- Updated verification documentation to reflect the removal. Tide and Lineup versions are unchanged.
+
 ## Lineup 2.4.0 · single source of truth · 2026-10-29
 
 - Consolidated the approved Consumer Lab dark map and fixed venue workspace into the current Lineup sources, preserving the 2.3.2 audit corrections, mobile summary spacing and responsive card destinations. Tide 1.12.0 is unchanged.
