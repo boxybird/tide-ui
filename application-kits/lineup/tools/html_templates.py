@@ -58,6 +58,8 @@ class AppTemplates:
                 raise ValueError('Unsupported app page layout')
             if page.get('workspacePresentation', 'columns') not in ('columns', 'split'):
                 raise ValueError('Unsupported workspace presentation')
+            if page.get('filterPresentation', 'overlay') not in ('overlay', 'push') or (page.get('filterPresentation')=='push' and page.get('workspacePresentation')!='split'):
+                raise ValueError('Push filters require a split workspace')
             if page.get('source') and not re.fullmatch(r'[a-z]+(?:-[a-z]+)*\.html', page['source']):
                 raise ValueError('Invalid app content source')
             if page['layout']=='content' and not page.get('source'):
@@ -272,6 +274,8 @@ class AppTemplates:
             body_class += ' tide-app--columns'
         if page.get('workspacePresentation')=='split':
             body_class += ' tide-app--split'
+        if page.get('filterPresentation')=='push':
+            body_class += ' tide-app--push'
         body_attributes = str(attribute('data-venue-scope', page['venue'])) if venue else ''
         body_attributes += attribute('data-state-key', state_key)+attribute('class', body_class)
         if route=='venues':

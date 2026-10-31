@@ -1,6 +1,16 @@
-# Native responsive filter drawer · Lineup 2.4.7
+# Native responsive filter drawer · Lineup 2.4.8
 
 **Accepted 2.4.6 homepage behavior:** on Find Events (`index` and `search`), search and the Filters launcher appear above the list, and the panel remains a drawer even on desktop. The original form is outside the panel; date/category controls, submit and Reset retain native form association. Other routes keep the behavior below. See [the two-column review](HOME-SPLIT-REVIEW.md).
+
+## Homepage push checkpoint · 2026-10-31
+
+Accepted as `lineup-v2.4.8`, `index` alone opts into `filterPresentation: push`. At 75rem and above, its page body translates 24rem while the native top-layer drawer remains fixed at the viewport's left edge. Header, list and event detail move together without narrowing or reflowing the columns; the right edge temporarily leaves the viewport. The page and drawer share the existing 240ms `cubic-bezier(.22, 1, .36, 1)` motion. Horizontal overflow is clipped during the return. Below 75rem the existing overlay remains. Search, venue and event pages retain their accepted presentation.
+
+Chromium on Windows verifies the 384px desktop offset at 1200/1440/1920px, unchanged column widths, fixed drawer placement, matching opening/closing transforms and the return to the original horizontal position. At 320/390/960px the page remains unshifted. Close, Escape, outside dismissal, launcher focus return, native Reset and values retained across breakpoint changes pass. Search retains its desktop overlay; Sunshine retains its permanent filter column. The scrolled-page check shows the same vertical repositioning in the existing search drawer and this preview, with sticky header/list geometry retained; it is not evidence of preserved scroll offset.
+
+Build and the full repository check pass, including all 140 tests. All 72 non-homepage documents from `AppTemplates.pages()` remain byte-identical to the pre-change baseline. Generated application CSS is 24,804 bytes raw and 4,278 bytes gzip, within the existing 25,000/5,000 limits. Measurements, parity results and screenshots are in ignored `build/qa/home-push-drawer/`.
+
+Motion remains gated by `prefers-reduced-motion: no-preference`; reduced-motion behavior was source-checked, not emulated in this browser. Firefox, Safari, physical devices and screen readers remain unverified. Browser evidence was captured on October 30; the user accepted this homepage-only checkpoint on October 31. Other routes retain their prior behavior.
 
 ## Desktop motion follow-up · 2026-10-30
 

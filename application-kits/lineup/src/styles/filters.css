@@ -4,6 +4,10 @@
   .tide-app__filter-trigger, .tide-app__filter-header { display: none; }
   .tide-app__filter-rail[popover] { inset: auto; max-inline-size: none; max-block-size: none; }
   @media (width >= 75rem) {
+    /* The native top-layer drawer stays at the viewport edge while the
+       homepage moves by its desktop width. Clip horizontal overflow on return. */
+    html:has(.tide-app--push) { overflow-x: clip; }
+    .tide-app--push:has(#lineup-filters:popover-open) { transform: translateX(24rem); }
     .tide-app__filter-clip { anchor-name: --tide-app-filter-column; }
     .tide-app__filter-rail[popover] { display: grid; }
     /* An already-open popover stays in the top layer when the viewport widens.
@@ -34,6 +38,8 @@
     @media (prefers-reduced-motion: no-preference) {
       .tide-app--split .tide-app__filter-rail[popover] {
         transform: translateX(-100%);
+      }
+      .tide-app--push, .tide-app--split .tide-app__filter-rail[popover] {
         transition: transform 240ms cubic-bezier(.22, 1, .36, 1), display 240ms allow-discrete, overlay 240ms allow-discrete;
       }
       .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(0); }

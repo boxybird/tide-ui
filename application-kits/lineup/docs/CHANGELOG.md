@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.4.8 · 2026-10-31
+
+- On the homepage only, move the desktop page right by the drawer's 24rem width using its existing 240ms timing. Preserve column widths, native popover behavior and the overlay below 75rem.
+- Add a validated route presentation setting; all 72 other composed documents remain byte-identical. No Tide, browser runtime or shared configuration changes. Preserve the accepted homepage push drawer as `lineup-v2.4.8` on `main`.
+- Build and all 140 repository tests pass within existing asset budgets. Chromium checks cover 320/390/960/1200/1440/1920px widths, native dismissal/reset and resizing. See [evidence and limitations](FILTER-DRAWER.md#homepage-push-checkpoint--2026-10-31).
+
 ## 2.4.7 · 2026-10-30
 
 - Restore the existing 240ms drawer slide on the two-column homepage and search page at desktop widths. Keep fixed drawer geometry during the native top-layer exit so closing slides out cleanly.

@@ -2,6 +2,7 @@
   "index": {
     "collection": "all",
     "workspacePresentation": "split",
+    "filterPresentation": "push",
     "selected": "high-desert-signal",
     "documentTitle": "High Desert Signal \u00b7 Burque",
     "layout": "workspace"
