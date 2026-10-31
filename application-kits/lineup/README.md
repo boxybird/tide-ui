@@ -1,6 +1,8 @@
-# Lineup application kit · 2.4.10
+# Lineup application kit · 2.4.11
 
-**Current increment: 2.4.10.** The accepted filter panel shows When and Category directly, without the Date and category disclosure or the global All events link. Native form controls and venue navigation remain. Preserved as `lineup-v2.4.10`; see [verification](docs/FILTER-DRAWER.md#visible-filter-controls--2026-10-31).
+**Current increment: 2.4.11.** The accepted homepage desktop drawer fills the centered page's outside inset, meeting the event list with no gap through 1920px. The existing page offset, slide timing and narrower overlay remain. Preserved as `lineup-v2.4.11`; see [sizing and verification](docs/FILTER-DRAWER.md#homepage-drawer-width-checkpoint--2026-10-31).
+
+**Previous increment: 2.4.10.** The accepted filter panel shows When and Category directly, without the Date and category disclosure or the global All events link. Native form controls and venue navigation remain. Preserved as `lineup-v2.4.10`; see [verification](docs/FILTER-DRAWER.md#visible-filter-controls--2026-10-31).
 
 **Previous increment: 2.4.9.** Lineup consumes the accepted Tide 1.12.1 Filter panel title, using the brand font size without an application typography override. Preserved as `lineup-v2.4.9` alongside `tide-v1.12.1`; see [verification and limits](../../packages/tide/docs/SEARCH-FILTERS.md#title-size-verification--2026-10-31). Earlier checkpoint records describe their original Tide dependency.
 
@@ -39,7 +41,7 @@ The primary navigation now sits beside the separate Saved utility on the right, 
 
 **Lineup uses the selected compact utility headers.** Version 2.1.5 aligns Search & filters with the result count and removes the Coming up intro, tagline and repeated The lineup label. Both rows consume Tide's new canonical utility variant. The [implementation contract](docs/COMPACT-HEADERS.md) and [design QA](design-qa.md) record composition and verification. The user reviewed and accepted the Tide and Lineup changes on 2026-10-27. The [handoff boundary](docs/HANDOFF.md) still applies; no browser JavaScript or service behavior is introduced.
 
-Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.1**. Burque Events is its authored sample website. The application version is **2.4.10**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
+Lineup is layout family **option 1**, an independently versioned HTML/CSS application kit derived from **Tide UI 1.12.1**. Burque Events is its authored sample website. The application version is **2.4.11**; option 1 does not reset its release history. All 54 events are authored samples. All previous 68 routes remain; five new venue documents bring the total to 73 per mode (803 documents across the default and ten theme/mode combinations).
 
 The UI kit at `packages/tide/` is the source of truth for public components, type, spacing, colors and recipes. This directory owns application composition and sample content. Application work does not modify the UI kit. See the [ownership contract](docs/COMPONENT-OWNERSHIP.md), [audit](docs/AUDIT.md) and [consumer starting point](docs/STARTER.md).
 

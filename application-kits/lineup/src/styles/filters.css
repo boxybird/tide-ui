@@ -33,7 +33,12 @@
     /* Keep fixed geometry through the native top-layer exit transition. */
     .tide-app--split .tide-app__filter-rail[popover] {
       position: fixed; position-anchor: auto; inset: 0 auto 0 0;
-      inline-size: min(24rem, calc(100dvw - var(--tide-space-8))); block-size: 100dvh;
+      inline-size: 24rem; block-size: 100dvh;
+    }
+    /* Fill the pushed page's outside inset, meeting the list with no gap.
+       Cap the available layout width at 1920px; cqw excludes the native gutter. */
+    .tide-app--push .tide-app__filter-rail[popover] {
+      inline-size: calc(24rem + max(var(--tide-app-outer-inset), (min(100cqw, 1920px) - var(--tide-app-content-width)) / 2));
     }
     @media (prefers-reduced-motion: no-preference) {
       .tide-app--split .tide-app__filter-rail[popover] {
@@ -47,7 +52,6 @@
         .tide-app--split .tide-app__filter-rail:popover-open { transform: translateX(-100%); }
       }
     }
-    .tide-app--split .tide-app__filter-body { overflow-y: auto; }
     .tide-app--split .tide-app__filter-content { padding-block-start: var(--tide-space-6); }
     .tide-app--split .tide-app__filter-footer-slot { padding-inline-start: var(--tide-layout-inset); }
     .tide-app--split .tide-app__filter-footer-slot--actions { padding-block-end: max(var(--tide-space-6), env(safe-area-inset-bottom, 0px)); }
@@ -67,7 +71,6 @@
     }
     .tide-app__filter-rail[popover]:not(:popover-open) { display: none; }
     .tide-app__filter-rail:popover-open { display: grid; transform: translateX(0); }
-    .tide-app__filter-body { overflow-y: auto; }
     /* The flush rail recipe also serves the drawer. A private content wrapper
        restores its top clearance without changing Tide's body or desktop rail. */
     .tide-app__filter-content { padding-block-start: var(--tide-space-6); }

@@ -1,4 +1,14 @@
-# Native responsive filter drawer · Lineup 2.4.10
+# Native responsive filter drawer · Lineup 2.4.11
+
+## Homepage drawer width checkpoint · 2026-10-31
+
+Accepted as `lineup-v2.4.11`, the homepage desktop drawer fills the centered page's outside inset and meets the shifted event list with no gap. The page still translates 24rem; list/detail widths and the 240ms motion are unchanged. The width calculation uses the layout's container width, which excludes the native scrollbar gutter, and caps that available-width input at 1920px. With the default 16px root size, the resulting drawer ceiling is 608px; larger displays may have a wider gap. Below 75rem the existing overlay remains. This checkpoint supersedes the fixed drawer width recorded in 2.4.8, without changing its page translation.
+
+Following the requested removal of the initial 16px gap, Chromium on Windows measures an exact 0px gap at 1200, 1440, 1600, 1919 and 1920px. Drawer widths are 416px at 1200/1440, 440.32px at 1600 and 600.32px at 1920 with the native gutter. At 1921px the gap remains 0px; at 2560px the drawer is capped at 608px. Both columns remain 724.01px at 1920px. All ten theme/mode combinations verify the zero-gap 1920px geometry within 0.1px.
+
+At 320/390/960/1199px, the page is unshifted and the original overlay width remains. All ten theme/mode combinations verify the 320×568 overlay, scrolling body and footer at the viewport bottom. Values survive desktop-to-mobile resizing; native Reset, Close and Escape/focus return pass. Search retains its 384px desktop overlay and Sunshine retains its permanent desktop rail. The removed private `overflow-y: auto` declarations duplicate Tide's canonical Filter panel body and do not change its computed scrolling behavior.
+
+Build and all 140 repository tests pass after the zero-gap refinement. Application CSS is 24,912 bytes raw and 4,313 bytes gzip, within the existing 25,000/5,000 budgets. Evidence is in ignored `build/qa/filter-drawer-list-gap/`; the zero-gap files record the latest refinement, and the earlier files retain the first preview's interaction checks. Reduced-motion gating is unchanged and source-checked, not emulated. Firefox, Safari, physical devices and screen readers remain unverified. Tide and shared tooling are unchanged; the accepted checkpoint is preserved on `main`.
 
 ## Visible filter controls · 2026-10-31
 

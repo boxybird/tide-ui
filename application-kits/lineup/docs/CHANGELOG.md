@@ -1,5 +1,11 @@
 # Lineup application-kit changelog
 
+## 2.4.11 · 2026-10-31
+
+- Size the homepage's desktop push drawer from the centered layout inset, meeting the event list with no gap through 1920px. Cap the available-width input at 1920px to limit growth on larger displays.
+- Preserve the 24rem page translation, column widths, 240ms slide and mobile/tablet overlay. Remove redundant application body-overflow declarations; Tide already supplies the same scrolling behavior. No Tide, template, runtime or shared-tooling changes.
+- Build and all 140 tests pass within existing asset budgets. Chromium checks cover desktop sizing, all ten theme/mode combinations, compact layouts and native filter interactions. See [measurements and testing limits](FILTER-DRAWER.md#homepage-drawer-width-checkpoint--2026-10-31). Preserve the accepted zero-gap homepage drawer as `lineup-v2.4.11` on `main`.
+
 ## 2.4.10 · 2026-10-31
 
 - Remove the Date and category disclosure and global All events link from the shared Lineup filter template. Present the original fieldsets directly using Tide Stack's existing 16px gap.
